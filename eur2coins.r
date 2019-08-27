@@ -9,7 +9,7 @@ read_delim("eur2coins_celex.txt", delim ="|", locale = locale(encoding = "WINDOW
   unnest() %>% 
   add_column(cs = 1) %>% 
   group_by(Land, Münzart, Prägejahr) %>% 
-  mutate(ID = paste0(Prägejahr, Land, tolower(substr(Münzart, 1, 1)), cumsum(cs))) %>% 
+  mutate(ID = paste0(Prägejahr, Land, tolower(substr(Münzart, 1, 1)), cumsum(cs) %>% sprintf("%02d", .))) %>% 
   ungroup() %>% 
   mutate(Prägejahr = as.integer(Prägejahr),
          Land = toupper(Land), 
