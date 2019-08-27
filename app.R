@@ -4,7 +4,7 @@ ui <- fluidPage(
   includeCSS(path = "style.css"),
   h1("Identifikation von EUR 2 Münzen"),
   textInput(inputId = "text", label = "Suche in ID"),
-  p("Suchstrings beziehen sich auf eine beliebige Übereinstimmung mit deneindeutigen IDs, deren Aufbau wie folgt aussieht '",strong("J J J J L L A 0"), "'. Dabei steht ", em("JJJJ fürs Prägejahr"), ", ", em("LL fürs Land"), ", ", em("A für die Münzart"), " und ", em("0 für die fortlaufende Nummer"), "."),
+  p("Suchstrings beziehen sich auf eine beliebige Übereinstimmung mit deneindeutigen IDs, deren Aufbau wie folgt aussieht '",strong("J J J J L L A 0 0"), "'. Dabei steht ", em("JJJJ fürs Prägejahr"), ", ", em("LL fürs Land"), ", ", em("A für die Münzart"), " und ", em("0 für die fortlaufende Nummer"), "."),
   tableOutput(outputId = "auswahl")
 )
 
