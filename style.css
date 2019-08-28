@@ -1,7 +1,25 @@
 body {
-  background-color: linen;
+  background-color: snow;
 }
 
 h1 {
-  color: #3F4788;
+  color: #375b8d;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+h2 {
+  color: #277e8e;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+h3 {
+  color: #1fa188;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+code {
+  color: #440154;
 }
