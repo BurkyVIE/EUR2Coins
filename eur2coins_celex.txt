@@ -356,13 +356,13 @@ C2019/057/12|ie|2019|2019-1-2|g|100 Jahre Dáil Éireann (irisches Parlament)|
 C2019/130/06|ad|2019|2019-3-11|g|Ski-Weltcup-Finale 2019|
 C2019/189/08|sk|2019|2019-4-25|g|100. Todestag von Milan Rastislav Štefánik|
 C2019/189/09|fr|2019|2019-6-6|g|60. Jahrestag von Asterix|
-C2019/189/10|mc|2019|NA|g|200. Jahrestag der Thronbesteigung von Fürst Honoré V|
 C2019/189/11|gr|2019|2019-7-11|g|100. Geburtstag von Manolis Andronicos|
 C2019/189/12|gr|2019|2019-7-11|g|150. Todestag des Dichters Andreas Kalvos|
 C2019/192/10|ee|2019|2019-5-29|g|150-jähriges Bestehen des Liederfests|
 C2019/192/11|sm|2019|2019-4-4|g|500. Todestag von Leonardo da Vinci|
 C2019/192/12|va|2019|2019-5-7|g|90. Jahrestag der Gründung des Staates Vatikanstadt|
-NA|lu|2019|2018-2-27|g|Großherzogin Charlotte - CELEX fehlt|
+
+C2019/189/10|mc|2019|NA|g|200. Jahrestag der Thronbesteigung von Fürst Honoré V - DATUM fehlt|
 NA|pt|2019|2019-5-8|g|Magellan - CELEX fehlt|
 NA|mt|2019|2019-5-13|g|Hagrat - CELEX fehlt|
 NA|pt|2019|2019-6-6|g|Madeira - CELEX fehlt|
