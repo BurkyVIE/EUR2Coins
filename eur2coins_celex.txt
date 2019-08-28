@@ -710,7 +710,7 @@ C2001/373/01|va|2002|NA|u|Papst Johannes Paul II. (2002 - 2005)|
 C2001/373/01|va|2003|NA|u|Papst Johannes Paul II. (2002 - 2005)|
 C2001/373/01|va|2004|NA|u|Papst Johannes Paul II. (2002 - 2005)|
 C2001/373/01|va|2005|NA|u|Papst Johannes Paul II. (2002 - 2005)|
-C2005/308/08|va|2005|NA|u|Sedisvakanz 2005|
+C2005/308/08|va|2005|NA|u|Sedisvakanz 2005 (2005)|
 C2007/233/08|va|2006|NA|u|Papst Benedikt XVI. (2006 - 2013)|
 C2007/233/08|va|2007|NA|u|Papst Benedikt XVI. (2006 - 2013)|
 C2007/233/08|va|2008|NA|u|Papst Benedikt XVI. (2006 - 2013)|
