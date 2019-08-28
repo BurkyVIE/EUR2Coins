@@ -362,10 +362,11 @@ C2019/189/12|gr|2019|2019-7-11|g|150. Todestag des Dichters Andreas Kalvos|
 C2019/192/10|ee|2019|2019-5-29|g|150-jähriges Bestehen des Liederfests|
 C2019/192/11|sm|2019|2019-4-4|g|500. Todestag von Leonardo da Vinci|
 C2019/192/12|va|2019|2019-5-7|g|90. Jahrestag der Gründung des Staates Vatikanstadt|
-NA|pt|2019|2019-5-8|g|???MAGELLAN|
-NA|mt|2019|2019-5-13|g|???HAGRAT|
-NA|pt|2019|2019-6-6|g|???MADEIRA|
-NA|lt|2019|2019-6-10|g|???SUTARTINES|
+NA|lu|2019|2018-2-27|g|Großherzogin Charlotte - CELEX fehlt|
+NA|pt|2019|2019-5-8|g|Magellan - CELEX fehlt|
+NA|mt|2019|2019-5-13|g|Hagrat - CELEX fehlt|
+NA|pt|2019|2019-6-6|g|Madeira - CELEX fehlt|
+NA|lt|2019|2019-6-10|g|Sutartines - CELEX fehlt|
 
 
 
