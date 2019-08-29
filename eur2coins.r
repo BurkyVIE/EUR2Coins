@@ -17,5 +17,5 @@ read_delim("eur2coins_celex.txt", delim ="|", locale = locale(encoding = "WINDOW
   mutate(ID = paste0(Prägejahr, Land, tolower(substr(Münzart, 1, 1)), cumsum(cs) %>% sprintf("%02d", .))) %>% 
   ungroup() %>% 
   mutate(Land = toupper(Land), 
-         Münzzeichen = na_if(Münzzeichen, "_")) %>% 
+         Münzzeichen = coalesce(Münzzeichen, "")) %>% 
   select(Ausgabe, Münzart, Prägejahr, Land, Abbildung, Münzzeichen, Amtsblatt, ID) -> coins
