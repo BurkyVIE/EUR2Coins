@@ -2,6 +2,7 @@ library(shiny)
 
 source("eur2coins.r")
 
+### UI
 ui <- fluidPage(
   includeCSS(path = "style.css"),
   h1("Identifikation von EUR 2 Münzen"),
@@ -29,43 +30,50 @@ ui <- fluidPage(
     ),
     column(9,
            h2("Suchergebnisse"),
-           h3("Umlaufmünzen"),
-           tableOutput(outputId = "auswahl_u"),
            h3("Gedenkmünzen"),
-           tableOutput(outputId = "auswahl_g")
+           htmlOutput(outputId = "suche_g"),
+           h3("Umlaufmünzen"),
+           tableOutput(outputId = "suche_u")
            )
     )
   )
 
+### Server
 server <- function(input, output, session) {
-  output$auswahl_u <- renderTable({
-      coins %>%
-       filter(Münzart == "Umlaufmünze", str_detect(ID, tolower(input$id)), str_detect(tolower(Abbildung), tolower(input$abb))) %>% 
-       arrange(ID) %>%
-       unnest() %>% 
-       mutate(Ausgabe = as.character(Ausgabe)) %>% 
-       rename(Mzz = Münzzeichen) %>% 
-       select(-Ausgabe, -Münzart)
-     })
-  
-  output$auswahl_g <- renderTable({
+  output$suche_g <- renderTable(spacing = "xs", {
     coins %>%
       filter(Münzart == "Gedenkmünze", str_detect(ID, tolower(input$id)), str_detect(tolower(Abbildung), tolower(input$abb))) %>% 
       arrange(ID) %>%
       unnest() %>% 
-      mutate(Ausgabe = as.character(Ausgabe)) %>% 
-      rename(Mzz = Münzzeichen) %>% 
+      mutate(Amtsblatt = paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:", Amtsblatt, "', target = '_blank'>", Amtsblatt, "</a>"),
+             Land = paste0("<img src='https://www.crwflags.com/fotw/images/", tolower(substr(Land, 1, 1)), "/", tolower(Land), ".gif', height='15', alt='", Land, "'/>"),
+             ID = paste0("<div class='tbl'>", ID, "</div>")) %>% 
+      rename(Jahr = Prägejahr,
+             Mzz = Münzzeichen) %>% 
       select(-Ausgabe, -Münzart)
-  })
+  }, sanitize.text.function = function(x) x)
   
-  observeEvent(input$abb_reset, {
-    updateTextInput(session, inputId = "abb", value = character(0))
-    })
+  output$suche_u <- renderTable(spacing = "xs", {
+      coins %>%
+       filter(Münzart == "Umlaufmünze", str_detect(ID, tolower(input$id)), str_detect(tolower(Abbildung), tolower(input$abb))) %>% 
+       arrange(ID) %>%
+       unnest() %>% 
+      mutate(Amtsblatt = paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:", Amtsblatt, "', target = '_blank'>", Amtsblatt, "</a>"),
+             Land = paste0("<img src='https://www.crwflags.com/fotw/images/", tolower(substr(Land, 1, 1)), "/", tolower(Land), ".gif', height='15', alt='", Land, "'/>")) %>% 
+      rename(Jahr = Prägejahr,
+             Mzz = Münzzeichen) %>% 
+      select(-Ausgabe, -Münzart)
+     }, sanitize.text.function = function(x) x)
+  
+    observeEvent(input$abb_reset, {
+      updateTextInput(session, inputId = "abb", value = character(0))
+      })
 
     observeEvent(input$id_reset, {
-    updateTextInput(session, inputId = "id", value = character(0))
+      updateTextInput(session, inputId = "id", value = character(0))
       })
-}
+    
+    }
 
 # Run the application 
 shinyApp(ui = ui, server = server)
