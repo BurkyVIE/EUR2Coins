@@ -3,23 +3,27 @@ body {
 }
 
 h1 {
-  color: #375b8d;
+  color: #3f4788;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 h2 {
   color: #277e8e;
   font-weight: bold;
-  font-size: 19px;
+  font-size: 21px;
 }
 
 h3 {
-  color: #1fa188;
+  color: #2bb17f;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 code {
   color: #440154;
+}
+
+.tbl {
+  font-family: monospace, sans-serif;
 }
