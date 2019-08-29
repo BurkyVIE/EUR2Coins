@@ -208,12 +208,12 @@ C2015/093/05|pt|2015|2015-4-25|g|150. Jahrestag der Gründung des portugiesische
 C2015/093/06|pt|2015|2015-7-15|g|Erste Kontakte mit Timor, heute ein unabhängiges portugiesischsprachiges Land (Timor-Leste), vor nunmehr 500 Jahren|
 C2015/143/05|de|2015|2015-1-30|g|Hessen aus der Reihe „Bundesländer“|A,D,F,G,J
 C2015/143/06|sm|2015|2015-4-8|g|750. Geburtstag von Dante Alighieri|
-C2015/143/07|mt|2015|2015-5-25|g|Erster Flug von Malta|_,N
+C2015/143/07|mt|2015|2015-5-25|g|Erster Flug von Malta|,N
 C2015/150/03|mt|2015|2015-6-23|g|Republik Malta 1974|
 C2015/215/04|fr|2015|2015-7-22|g|225. Jahrestag des Föderationsfestes|
 C2015/220/03|be|2015|2015-9-17|g|2015 — Europäisches Jahr für Entwicklung|
 C2015/232/05|lu|2015|2015-10-15|g|125. Jahrestag der Dynastie Nassau-Weilburg|
-C2015/241/03|sk|2015|2015-10-23|g|200. Jahrestag der Geburt von Ludovít Štúr|
+C2015/241/03|sk|2015|2015-10-23|g|200. Jahrestag der Geburt von Ľudovít Štúr|
 C2015/253/07|fi|2015|2015-8-6|g|Dreißigjähriges Bestehen der EU-Flagge|
 C2015/253/08|de|2015|2015-11-5|g|Dreißigjähriges Bestehen der EU-Flagge|A,D,F,G,J
 C2015/253/09|si|2015|2015-12-7|g|Dreißigjähriges Bestehen der EU-Flagge|
@@ -269,7 +269,7 @@ C2016/146/08|sm|2016|2016-4-5|g|550. Todestag von Donatello|
 C2016/146/09|va|2016|2016-6-2|g|200 Jahre Gendarmeriekorps der Vatikanstadt|
 C2016/146/10|va|2016|2016-10-13|g|Heiliges Jahr der Barmherzigkeit|
 C2016/153/05|sm|2016|2016-9-22|g|400. Todestag von William Shakespeare|
-C2016/281/10|mt|2016|2016-8-22|g|Tempel von Ggantija|
+C2016/281/10|mt|2016|2016-8-22|g|Tempel von Ġgantija|
 C2016/396/02|gr|2016|2016-12-16|g|150. Jahrestag der Brandstiftung im Arkadi-Kloster|
 C2016/396/03|mt|2016|2016-12-5|g|Die gesellschaftliche Bedeutung des „Malta Community Chest Fund“|
 C2016/396/04|gr|2016|2016-12-16|g|120. Geburtstag von Dimitri Mitropoulos|
@@ -439,6 +439,11 @@ C2001/373/01|de|2016|NA|u|Bundesadler (2002 -)|A,D,F,G,J
 C2001/373/01|de|2017|NA|u|Bundesadler (2002 -)|A,D,F,G,J
 C2001/373/01|de|2019|NA|u|Bundesadler (2002 -)|A,D,F,G,J
 
+C2010/309/04|ee|2011|NA|u|Landesumriss (2011 -)|
+C2010/309/04|ee|2016|NA|u|Landesumriss (2011 -)|
+C2010/309/04|ee|2018|NA|u|Landesumriss (2011 -)|
+C2010/309/04|ee|2019|NA|u|Landesumriss (2011 -)|
+
 C2001/373/01|es|1999|NA|u|König Juan Carlos I. (1999 - 2009)|
 C2001/373/01|es|2000|NA|u|König Juan Carlos I. (1999 - 2009)|
 C2001/373/01|es|2001|NA|u|König Juan Carlos I. (1999 - 2009)|
@@ -505,7 +510,7 @@ C2001/373/01|fr|2017|NA|u|Stilisierter Baum (1999 -)|
 C2001/373/01|fr|2018|NA|u|Stilisierter Baum (1999 -)|
 C2001/373/01|fr|2019|NA|u|Stilisierter Baum (1999 -)|
 
-C2001/373/01|gr|2002|NA|u|Entführung der Europa durch Zeus (2002 -)|_,S
+C2001/373/01|gr|2002|NA|u|Entführung der Europa durch Zeus (2002 -)|,S
 C2001/373/01|gr|2003|NA|u|Entführung der Europa durch Zeus (2002 -)|
 C2001/373/01|gr|2004|NA|u|Entführung der Europa durch Zeus (2002 -)|
 C2001/373/01|gr|2005|NA|u|Entführung der Europa durch Zeus (2002 -)|
@@ -596,18 +601,18 @@ C2001/373/01|mc|2001|NA|u|Fürst Rainier III. (2001 - 2004)|
 C2001/373/01|mc|2002|NA|u|Fürst Rainier III. (2001 - 2004)|
 C2001/373/01|mc|2003|NA|u|Fürst Rainier III. (2001 - 2004)|
 C2001/373/01|mc|2004|NA|u|Fürst Rainier III. (2001 - 2004)|
-NA|mc|2006|NA|u|Fürst Albert II. (2006 -)|
-NA|mc|2009|NA|u|Fürst Albert II. (2006 -)|
-NA|mc|2010|NA|u|Fürst Albert II. (2006 -)|
-NA|mc|2011|NA|u|Fürst Albert II. (2006 -)|
-NA|mc|2012|NA|u|Fürst Albert II. (2006 -)|
-NA|mc|2013|NA|u|Fürst Albert II. (2006 -)|
-NA|mc|2014|NA|u|Fürst Albert II. (2006 -)|
-NA|mc|2015|NA|u|Fürst Albert II. (2006 -)|
-NA|mc|2016|NA|u|Fürst Albert II. (2006 -)|
-NA|mc|2017|NA|u|Fürst Albert II. (2006 -)|
-NA|mc|2018|NA|u|Fürst Albert II. (2006 -)|
-NA|mc|2019|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2006|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2009|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2010|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2011|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2012|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2013|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2014|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2015|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2016|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2017|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2018|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2019|NA|u|Fürst Albert II. (2006 -)|
 
 C2007/248/08|mt|2008|NA|u|Malteserkreuz (2008 -)|
 C2007/248/08|mt|2010|NA|u|Malteserkreuz (2008 -)|
@@ -637,9 +642,9 @@ C2001/373/01|nl|2011|NA|u|Königin Beatrix (1999 - 2013)|
 C2001/373/01|nl|2012|NA|u|Königin Beatrix (1999 - 2013)|
 C2001/373/01|nl|2013|NA|u|Königin Beatrix (1999 - 2013)|
 C2014/046/08|nl|2014|NA|u|König Willem-Alexander (2014 -)|
-C2014/046/08|nl|2015|NA|u|König Willem-Alexander (2014 -)|_,s
+C2014/046/08|nl|2015|NA|u|König Willem-Alexander (2014 -)|,s
 C2014/046/08|nl|2016|NA|u|König Willem-Alexander (2014 -)|
-C2014/046/08|nl|2017|NA|u|König Willem-Alexander (2014 -)|_,b
+C2014/046/08|nl|2017|NA|u|König Willem-Alexander (2014 -)|,b
 C2014/046/08|nl|2018|NA|u|König Willem-Alexander (2014 -)|
 C2014/046/08|nl|2019|NA|u|König Willem-Alexander (2014 -)|
 
