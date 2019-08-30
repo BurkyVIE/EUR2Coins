@@ -3,8 +3,8 @@ Amtsblatt|Land|Prägejahr|Ausgabe|Münzart|Abbildung|Münzzeichen
 C2004/091/06|gr|2004|2004-5-14|g|Olympische Spiele 2004 in Athen|
 C2004/243/03|fi|2004|2004-6-24|g|Erweiterung der Europäischen Union um zehn neue Mitgliedstaaten|
 C2004/243/05|lu|2004|2004-7-26|g|Bildnis und Monogramm des Großherzogs Henri|
-C2004/313/03|it|2004|2004-12-13|g|Fünftes Jahrzehnt des Bestehens des Welternährungsprogramms|
 C2004/298/02|sm|2004|2004-12-16|g|Bartolomeo Borghesi (Historiker, Numismatiker)|
+C2004/313/03|it|2004|2004-12-13|g|Fünftes Jahrzehnt des Bestehens des Welternährungsprogramms|
 C2004/321/03|va|2004|2004-12-16|g|75. Jahrestag der Gründung des Staates Vatikanstadt|
 
 C2005/011/03|lu|2005|2005-2-15|g|50. Geburtstag von Großherzog Henri, 5. Jahrestag seines Amtsantritts und 100. Todestag von Großherzog Adolphe|
@@ -24,7 +24,6 @@ C2006/248/02|fi|2006|2006-10-4|g|100 Jahre allgemeine, gleiche, geheime und frei
 C2006/248/03|sm|2006|2006-10-17|g|500. Todestag von Christoph Kolumbus|
 C2006/260/06|va|2006|2006-11-9|g|500 Jahre Päpstliche Schweizergarde|
 
-C2007/076/02|de|2007|2007-2-2|g|Mecklenburg-Vorpommern|A,D,F,G,J
 C2007/053/02|lu|2007|2007-2-2|g|Großherzoglicher Palast|
 C2007/065/03|be|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
 C2007/065/03|de|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|A,D,F,G,J
@@ -39,6 +38,7 @@ C2007/065/03|at|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags v
 C2007/065/03|pt|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
 C2007/065/03|si|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
 C2007/065/03|fi|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
+C2007/076/02|de|2007|2007-2-2|g|Mecklenburg-Vorpommern|A,D,F,G,J
 C2007/110/06|pt|2007|2007-7-2|g|Portugiesischer Vorsitz im Rat der Europäischen Union|
 C2007/172/06|mc|2007|2007-7-12|g|25. Todestag von Fürstin Gracia Patricia|
 C2007/233/07|sm|2007|2007-10-9|g|Zweihundertster Geburtstag von Giuseppe Garibaldi|
@@ -79,8 +79,8 @@ C2009/116/09|sm|2009|2009-9-5|g|2009 — Europäisches Jahr der Kreativität und
 C2009/196/06|be|2009|2009-9-25|g|Zweihundertster Geburtstag der Geburt von Louis Braille (1809—1852)|
 C2009/196/07|sk|2009|2009-11-10|g|20. Jahrestag des Tags der Freiheit und der Demokratie|
 C2009/196/08|it|2009|2009-10-15|g|Zweihundertster Geburtstag der Geburt von Louis Braille (1809—1852)|
-C2009/227/03|fi|2009|2009-10-23|g|200. Jahrestag des ersten finnischen Landtags und der Gründung zentraler staatlicher Einrichtungen in Finnland|
 C2009/204/05|va|2009|2009-11-18|g|Internationales Jahr der Astronomie|
+C2009/227/03|fi|2009|2009-10-23|g|200. Jahrestag des ersten finnischen Landtags und der Gründung zentraler staatlicher Einrichtungen in Finnland|
 
 C2009/311/05|si|2010|2010-5-10|g|200-jähriges Bestehen des Botanischen Gartens in Ljubljana|
 C2009/311/06|lu|2010|2010-1-14|g|Das Wappen des Großherzogs|
@@ -213,7 +213,7 @@ C2015/150/03|mt|2015|2015-6-23|g|Republik Malta 1974|
 C2015/215/04|fr|2015|2015-7-22|g|225. Jahrestag des Föderationsfestes|
 C2015/220/03|be|2015|2015-9-17|g|2015 — Europäisches Jahr für Entwicklung|
 C2015/232/05|lu|2015|2015-10-15|g|125. Jahrestag der Dynastie Nassau-Weilburg|
-C2015/241/03|sk|2015|2015-10-23|g|200. Jahrestag der Geburt von Ľudovít Štúr|
+C2015/241/03|sk|2015|2015-10-23|g|200. Jahrestag der Geburt von Ludovít Štúr|
 C2015/253/07|fi|2015|2015-8-6|g|Dreißigjähriges Bestehen der EU-Flagge|
 C2015/253/08|de|2015|2015-11-5|g|Dreißigjähriges Bestehen der EU-Flagge|A,D,F,G,J
 C2015/253/09|si|2015|2015-12-7|g|Dreißigjähriges Bestehen der EU-Flagge|
@@ -269,7 +269,7 @@ C2016/146/08|sm|2016|2016-4-5|g|550. Todestag von Donatello|
 C2016/146/09|va|2016|2016-6-2|g|200 Jahre Gendarmeriekorps der Vatikanstadt|
 C2016/146/10|va|2016|2016-10-13|g|Heiliges Jahr der Barmherzigkeit|
 C2016/153/05|sm|2016|2016-9-22|g|400. Todestag von William Shakespeare|
-C2016/281/10|mt|2016|2016-8-22|g|Tempel von Ġgantija|
+C2016/281/10|mt|2016|2016-8-22|g|Tempel von Ggantija|
 C2016/396/02|gr|2016|2016-12-16|g|150. Jahrestag der Brandstiftung im Arkadi-Kloster|
 C2016/396/03|mt|2016|2016-12-5|g|Die gesellschaftliche Bedeutung des „Malta Community Chest Fund“|
 C2016/396/04|gr|2016|2016-12-16|g|120. Geburtstag von Dimitri Mitropoulos|
