@@ -9,9 +9,8 @@ read_delim("eur2coins_celex.txt", delim ="|", locale = locale(encoding = "WINDOW
                             Abbildung = col_character(),
                             Münzzeichen = col_character())) %>% 
   mutate(Münzart = factor(Münzart, levels = c("g", "u"), labels = c("Gedenkmünze", "Umlaufmünze")),
-         Münzzeichen = str_split(Münzzeichen, pattern = ",")
-         ) %>% 
-  unnest() %>% 
+         Münzzeichen = str_split(Münzzeichen, pattern = ",")) %>% 
+  unnest() %>%   # Erweitern um die Münzzeichen
   add_column(cs = 1) %>% 
   group_by(Land, Münzart, Prägejahr) %>% 
   mutate(ID = paste0(Prägejahr, Land, tolower(substr(Münzart, 1, 1)), cumsum(cs) %>% sprintf("%02d", .))) %>% 
