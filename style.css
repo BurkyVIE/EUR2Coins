@@ -24,6 +24,10 @@ code {
   color: #440154;
 }
 
-.tbl {
+.mono {
   font-family: monospace, sans-serif;
+}
+
+.bar {
+  color: #9ad93c;
 }
