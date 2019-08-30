@@ -139,8 +139,8 @@ server <- function(input, output, session) {
       })
     
     observeEvent(input$coll_aend, {
-      updateTextInput(session, inputId = "coll_id", value = character(0))
       source("eur2collection.r")
+      updateTextInput(session, inputId = "coll_id", value = character(0))
       })
     
     output$zsf_jahr <- renderTable(spacing = "xs", {
