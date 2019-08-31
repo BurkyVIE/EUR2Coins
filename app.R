@@ -3,7 +3,7 @@ library(shiny)
 source("eur2coins.r")
 
 ### UI
-ui <- navbarPage(title = "EUR 2",
+ui <- navbarPage(title = "EUR 2", id = "EUR2",
                  tabPanel("identifizieren",
                           includeCSS(path = "style.css"),
                           fluidPage(
@@ -16,7 +16,8 @@ ui <- navbarPage(title = "EUR 2",
                                        fluidRow(
                                          column(9, textInput(inputId = "id", label = NULL)),
                                          column(3, actionButton(inputId = "id_reset", label = "X"))
-                                       )
+                                       ),
+                                       actionButton(inputId = "id_ueber", label = "ID übernehmen")
                                      ),
                                      p("Beliebige Übereinstimmung mit Feld", em("ID"), "; Aufbau ID: ", code("JJJJLLA00"),
                                        ", wobei ", code("JJJJ"), " = Prägejahr", ", ", code("LL"), " = Land", ", ", code("A"),
@@ -40,7 +41,7 @@ ui <- navbarPage(title = "EUR 2",
                             )
                           )
                  ),
-                 tabPanel("sammeln",
+                 tabPanel("sammeln", value = "sammeln",
                           fluidPage(
                             h1("EUR 2 Münzen - Sammlung"),
                             fluidRow(
@@ -118,6 +119,13 @@ server <- function(input, output, session) {
   })
   
   observeEvent(input$id_reset, {
+    updateTextInput(session, inputId = "id", value = character(0))
+  })
+  
+  observeEvent(input$id_ueber, {
+    updateTextInput(session, inputId = "coll_id", value = input$id)
+    writeClipboard(input$id)
+    updateTabsetPanel(session, inputId = "EUR2", selected = "sammeln")
     updateTextInput(session, inputId = "id", value = character(0))
   })
   
