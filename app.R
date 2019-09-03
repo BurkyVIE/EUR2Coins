@@ -130,25 +130,25 @@ server <- function(input, output, session) {
   })
   
   output$coll_suche <- renderTable(spacing = "xs", {coll_tbl()}, sanitize.text.function = function(x) x)
-    coll_tbl <- eventReactive(c(input$coll_id, input$coll_aend), {
-      source("eur2collection.r")
-      collection %>% 
-        filter(str_detect(ID, input$coll_id)) %>% 
-        arrange(ID) %>% 
-        mutate(Zeilennummer = paste0("<div class='mono'>", Zeilennummer, "</div>"),
-               Jahr = str_sub(ID, 1, 4),
-               Land = toupper(str_sub(ID, 5, 6)),
-               ID = paste0("<div class='mono'>", ID, "</div>"),
-               Qualität = case_when(Qualität == 0 ~ "<div style='color: goldenrod;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
-                                    Qualität == 1 ~ "<div style='color: goldenrod;'>(1)&nbsp;&#9733;&#9733;</div>",
-                                    Qualität == 2 ~ "<div style='color: green;'>(2)&nbsp;&#10004;&#10004;</div>",
-                                    Qualität == 3 ~ "<div style='color: green;'>(3)&nbsp;&#10004;</div>",
-                                    TRUE ~ "<div style='color: red;'>FEHLER</div>"),
-               Land = paste0("<img src='https://www.crwflags.com/fotw/images/", tolower(substr(Land, 1, 1)), "/", tolower(Land), ".gif', height='14', alt='", Land, "'/>")) %>% 
-        rename(Mzz = Münzzeichen,
-               ZNr = Zeilennummer) %>% 
-        select(ID, Qualität, Jahr, Land, Abbildung, Mzz, ZNr)
-      }, ignoreNULL = FALSE)
+  coll_tbl <- eventReactive(c(input$coll_id, input$coll_aend), {
+    source("eur2collection.r")
+    collection %>% 
+      filter(str_detect(ID, input$coll_id)) %>% 
+      arrange(ID) %>% 
+      mutate(Zeilennummer = paste0("<div class='mono'>", Zeilennummer, "</div>"),
+             Jahr = str_sub(ID, 1, 4),
+             Land = toupper(str_sub(ID, 5, 6)),
+             ID = paste0("<div class='mono'>", ID, "</div>"),
+             Qualität = case_when(Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
+                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
+                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
+                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
+                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
+             Land = paste0("<img src='https://www.crwflags.com/fotw/images/", tolower(substr(Land, 1, 1)), "/", tolower(Land), ".gif', height='14', alt='", Land, "'/>")) %>% 
+      rename(Mzz = Münzzeichen,
+             ZNr = Zeilennummer) %>% 
+      select(ID, Qualität, Jahr, Land, Abbildung, Mzz, ZNr)
+  }, ignoreNULL = FALSE)
   
   observeEvent(input$coll_id_reset, {
     updateTextInput(session, inputId = "coll_id", value = character(0))
@@ -178,15 +178,15 @@ server <- function(input, output, session) {
       mutate(Land = paste0("<img src='https://www.crwflags.com/fotw/images/", substr(Land, 1, 1), "/", tolower(Land), ".gif', height='14', alt='", toupper(Land), "'/>"),
              Graph = paste0("<div class='bar'>", Graph, "</div>"))
   }, ignoreNULL = FALSE)
-
+  
   output$zsf_qual <- renderTable(spacing = "xs", {zsf_tbl_qual()}, sanitize.text.function = function(x) x)
   zsf_tbl_qual <- eventReactive(input$coll_aend, {
     collection %>%
       group_by(Qualität = Qualität %>% ordered(levels = 0:3,
-                                    labels = c("<div style='color: goldenrod;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
-                                               "<div style='color: goldenrod;'>(1)&nbsp;&#9733;&#9733;</div>",
-                                               "<div style='color: green;'>(2)&nbsp;&#10004;&#10004;</div>",
-                                               "<div style='color: green;'>(3)&nbsp;&#10004;</div>")),
+                                               labels = c("<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
+                                                          "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
+                                                          "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
+                                                          "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>")),
                .drop = FALSE) %>%
       count() %>%
       transmute(Erfolg = paste0(coalesce(n, 0L), " / ", count(collection)),
@@ -195,8 +195,8 @@ server <- function(input, output, session) {
       ungroup() %>% 
       mutate(Graph = paste0("<div class='bar'>", Graph, "</div>"))
   }, ignoreNULL = FALSE)
-
-  }
+  
+}
 
 # Run the application 
 shinyApp(ui = ui, server = server)
