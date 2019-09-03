@@ -136,15 +136,18 @@ server <- function(input, output, session) {
         filter(str_detect(ID, input$coll_id)) %>% 
         arrange(ID) %>% 
         mutate(Zeilennummer = paste0("<div class='mono'>", Zeilennummer, "</div>"),
+               Jahr = str_sub(ID, 1, 4),
+               Land = toupper(str_sub(ID, 5, 6)),
                ID = paste0("<div class='mono'>", ID, "</div>"),
                Qualität = case_when(Qualität == 0 ~ "<div style='color: goldenrod;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
                                     Qualität == 1 ~ "<div style='color: goldenrod;'>(1)&nbsp;&#9733;&#9733;</div>",
                                     Qualität == 2 ~ "<div style='color: green;'>(2)&nbsp;&#10004;&#10004;</div>",
                                     Qualität == 3 ~ "<div style='color: green;'>(3)&nbsp;&#10004;</div>",
-                                    TRUE ~ "<div style='color: red;'>FEHLER</div>")) %>% 
-        rename(ZNr = Zeilennummer,
-               Mzz = Münzzeichen) %>% 
-        select(ID, Qualität, Abbildung, Mzz, ZNr)
+                                    TRUE ~ "<div style='color: red;'>FEHLER</div>"),
+               Land = paste0("<img src='https://www.crwflags.com/fotw/images/", tolower(substr(Land, 1, 1)), "/", tolower(Land), ".gif', height='14', alt='", Land, "'/>")) %>% 
+        rename(Mzz = Münzzeichen,
+               ZNr = Zeilennummer) %>% 
+        select(ID, Qualität, Jahr, Land, Abbildung, Mzz, ZNr)
       }, ignoreNULL = FALSE)
   
   observeEvent(input$coll_id_reset, {
