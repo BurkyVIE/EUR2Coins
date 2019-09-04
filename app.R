@@ -53,7 +53,9 @@ ui <- navbarPage(title = "EUR 2", id = "EUR2",
                                      h2("Änderung"),
                                      h3("Qualität"),
                                      sliderInput(inputId = "qual", label = NULL, min = 0, max = 3, value = 2),
-                                     actionButton(inputId = "do", label = "Ausführen"),
+                                     actionButton(inputId = "do", label = "Zwischenablage"),
+                                     p(HTML("<div class = 'beschr'>"), "Kopiere Markierung ergänzt um Qualität in die Zwischenablage.",
+                                       HTML('</div>')),
                                      h3("eur2collection.txt"),
                                      actionButton(inputId = "aenderung", label = "Änderung durchgeführt")
                               ),
@@ -104,12 +106,6 @@ server <- function(input, output, session) {
       writeClipboard()
   })
  
-#  output$eintrag <- renderPrint(selection())
-#  selection <- eventReactive(input$do, {
-#    paste(input$mydata, input$qual, sep = "-") %>% 
-#      writeClipboard()
-#  })
-
   observeEvent(input$aenderung, {
     source("eur2collection.r")
   })
