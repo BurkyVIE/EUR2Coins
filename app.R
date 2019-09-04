@@ -4,21 +4,21 @@ source("eur2coins.r")
 
 # JS Funktion um Markierung zu kopieren
 highlight <- '
-             function getSelectionText() {
-               var text = "";
-               if (window.getSelection) {
-                 text = window.getSelection().toString();
-               } else if (document.selection) {
-                 text = document.selection.createRange().text;
-               }
-               return text;
-               }
+function getSelectionText() {
+var text = "";
+if (window.getSelection) {
+text = window.getSelection().toString();
+} else if (document.selection) {
+text = document.selection.createRange().text;
+}
+return text;
+}
 
-               document.onmouseup = document.onkeyup = document.onselectionchange = function() {
-                 var selection = getSelectionText();
-                 Shiny.onInputChange("mydata", selection);
-               };
-               '
+document.onmouseup = document.onkeyup = document.onselectionchange = function() {
+var selection = getSelectionText();
+Shiny.onInputChange("mydata", selection);
+};
+'
 
 ### UI
 ui <- navbarPage(title = "EUR 2", id = "EUR2",
@@ -52,6 +52,12 @@ ui <- navbarPage(title = "EUR 2", id = "EUR2",
                                      hr(),
                                      h2("Änderung"),
                                      h3("Qualität"),
+                                     fluidRow(
+                                       column(3, actionButton(inputId = "q0", label = "0")),
+                                       column(3, actionButton(inputId = "q1", label = "1")),
+                                       column(3, actionButton(inputId = "q2", label = "2")),
+                                       column(3, actionButton(inputId = "q3", label = "3"))
+                                     ),
                                      sliderInput(inputId = "qual", label = NULL, min = 0, max = 3, value = 2),
                                      actionButton(inputId = "do", label = "Zwischenablage"),
                                      p(HTML("<div class = 'beschr'>"), "Kopiere Markierung ergänzt um Qualität in die Zwischenablage.",
@@ -92,7 +98,7 @@ ui <- navbarPage(title = "EUR 2", id = "EUR2",
 
 ### Server
 server <- function(input, output, session) {
-
+  
   observeEvent(input$id_reset, {
     updateTextInput(session, inputId = "id", value = character(0))
   })
@@ -100,12 +106,12 @@ server <- function(input, output, session) {
   observeEvent(input$abb_reset, {
     updateTextInput(session, inputId = "abb", value = character(0))
   })
-
+  
   observeEvent(input$do, {
     paste(input$mydata, input$qual, sep = "-") %>% 
       writeClipboard()
   })
- 
+  
   observeEvent(input$aenderung, {
     source("eur2collection.r")
   })
@@ -133,7 +139,7 @@ server <- function(input, output, session) {
              ZNr = Zeilennummer) %>% 
       select(-Ausgabe, -Münzart)
   }, ignoreNULL = FALSE)
-
+  
   output$suche_u <- renderTable(spacing = "xs", {tbl_u()}, sanitize.text.function = function(x) x)
   tbl_u <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung), {
     coins %>%
@@ -182,22 +188,22 @@ server <- function(input, output, session) {
       mutate(Land = paste0("<img src='https://www.crwflags.com/fotw/images/", substr(Land, 1, 1), "/", tolower(Land), ".gif', height='14', alt='", toupper(Land), "'/>"),
              Graph = paste0("<div class='bar'>", Graph, "</div>"))
   }, ignoreNULL = FALSE)
-
+  
   output$zsf_qual <- renderTable(spacing = "xs", {zsf_tbl_qual()}, sanitize.text.function = function(x) x)
   zsf_tbl_qual <- eventReactive(input$coll_aend, {
     collection %>%
       group_by(Qualität = Qualität %>% ordered(levels = 0:3,
-                                    labels = c("<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
-                                               "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
-                                               "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
-                                               "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>")),
+                                               labels = c("<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
+                                                          "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
+                                                          "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
+                                                          "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>")),
                .drop = FALSE) %>%
       count() %>%
       transmute(Anzahl = n,
                 Anteil = Anzahl / dim(collection)[1] * 100)
   }, ignoreNULL = FALSE)
-
-  }
+  
+}
 
 # Run the application 
 shinyApp(ui = ui, server = server)
