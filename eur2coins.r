@@ -3,18 +3,18 @@ library(tidyverse)
 read_delim("eur2coins_celex.txt", delim ="|", locale = locale(encoding = "WINDOWS-1252"),
            col_types = cols(Amtsblatt = col_character(),
                             Land = col_character(),
-                            PrÃ¤gejahr = col_integer(),
+                            Prägejahr = col_integer(),
                             Ausgabe = col_date(format = "%F"),
-                            MÃ¼nzart = col_character(),
+                            Münzart = col_character(),
                             Abbildung = col_character(),
-                            MÃ¼nzzeichen = col_character())) %>% 
-  mutate(MÃ¼nzart = factor(MÃ¼nzart, levels = c("g", "u"), labels = c("GedenkmÃ¼nze", "UmlaufmÃ¼nze")),
-         MÃ¼nzzeichen = str_split(MÃ¼nzzeichen, pattern = ",")) %>% 
-  unnest() %>%   # Erweitern um die MÃ¼nzzeichen
+                            Münzzeichen = col_character())) %>% 
+  mutate(Münzart = factor(Münzart, levels = c("g", "u"), labels = c("Gedenkmünze", "Umlaufmünze")),
+         Münzzeichen = str_split(Münzzeichen, pattern = ",")) %>% 
+  unnest() %>%   # Erweitern um die Münzzeichen
   add_column(cs = 1) %>% 
-  group_by(Land, MÃ¼nzart, PrÃ¤gejahr) %>% 
-  mutate(ID = paste0(PrÃ¤gejahr, Land, tolower(substr(MÃ¼nzart, 1, 1)), cumsum(cs) %>% sprintf("%02d", .))) %>% 
+  group_by(Land, Münzart, Prägejahr) %>% 
+  mutate(ID = paste0(Prägejahr, Land, tolower(substr(Münzart, 1, 1)), cumsum(cs) %>% sprintf("%02d", .))) %>% 
   ungroup() %>% 
   mutate(Land = toupper(Land), 
-         MÃ¼nzzeichen = coalesce(MÃ¼nzzeichen, "")) %>% 
-  select(Ausgabe, MÃ¼nzart, PrÃ¤gejahr, Land, Abbildung, MÃ¼nzzeichen, Amtsblatt, ID) -> coins
+         Münzzeichen = coalesce(Münzzeichen, "")) %>% 
+  select(Ausgabe, Münzart, Prägejahr, Land, Abbildung, Münzzeichen, Amtsblatt, ID) -> coins
