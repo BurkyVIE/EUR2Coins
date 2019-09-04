@@ -1,30 +1,30 @@
-Amtsblatt|Land|PrÃ¤gejahr|Ausgabe|MÃ¼nzart|Abbildung|MÃ¼nzzeichen
+Amtsblatt|Land|Prägejahr|Ausgabe|Münzart|Abbildung|Münzzeichen
 
 C2004/091/06|gr|2004|2004-5-14|g|Olympische Spiele 2004 in Athen|
-C2004/243/03|fi|2004|2004-6-24|g|Erweiterung der EuropÃ¤ischen Union um zehn neue Mitgliedstaaten|
-C2004/243/05|lu|2004|2004-7-26|g|Bildnis und Monogramm des GroÃŸherzogs Henri|
+C2004/243/03|fi|2004|2004-6-24|g|Erweiterung der Europäischen Union um zehn neue Mitgliedstaaten|
+C2004/243/05|lu|2004|2004-7-26|g|Bildnis und Monogramm des Großherzogs Henri|
 C2004/298/02|sm|2004|2004-12-16|g|Bartolomeo Borghesi (Historiker, Numismatiker)|
-C2004/313/03|it|2004|2004-12-13|g|FÃ¼nftes Jahrzehnt des Bestehens des WelternÃ¤hrungsprogramms|
-C2004/321/03|va|2004|2004-12-16|g|75. Jahrestag der GrÃ¼ndung des Staates Vatikanstadt|
+C2004/313/03|it|2004|2004-12-13|g|Fünftes Jahrzehnt des Bestehens des Welternährungsprogramms|
+C2004/321/03|va|2004|2004-12-16|g|75. Jahrestag der Gründung des Staates Vatikanstadt|
 
-C2005/011/03|lu|2005|2005-2-15|g|50. Geburtstag von GroÃŸherzog Henri, 5. Jahrestag seines Amtsantritts und 100. Todestag von GroÃŸherzog Adolphe|
-C2005/061/07|at|2005|2005-5-11|g|50. Jahrestag der Unterzeichnung des Ã–sterreichischen Staatsvertrages|
+C2005/011/03|lu|2005|2005-2-15|g|50. Geburtstag von Großherzog Henri, 5. Jahrestag seines Amtsantritts und 100. Todestag von Großherzog Adolphe|
+C2005/061/07|at|2005|2005-5-11|g|50. Jahrestag der Unterzeichnung des Österreichischen Staatsvertrages|
 C2005/061/08|be|2005|2005-5-20|g|Belgisch-Luxemburgische Wirtschaftsunion|
-C2005/131/09|es|2005|2005-6-30|g|400. Jahrestag der ErstverÃ¶ffentlichung von â€Leben und Taten des scharfsinnigen edlen Don Quixote von la Manchaâ€œ|
+C2005/131/09|es|2005|2005-6-30|g|400. Jahrestag der Erstveröffentlichung von „Leben und Taten des scharfsinnigen edlen Don Quixote von la Mancha“|
 C2005/244/03|sm|2005|2005-10-14|g|Internationales Jahr der Physik 2005|
 C2005/244/04|fi|2005|2005-10-25|g|60 Jahre Vereinte Nationen und 50 Jahre UN-Mitgliedschaft Finnlands|
-C2005/283/06|it|2005|2005-10-29|g|1. Jahrestag der Unterzeichnung der EuropÃ¤ischen Verfassung|
-C2005/283/07|va|2005|2005-12-6|g|20. Weltjugendtag in KÃ¶ln (August 2005)|
+C2005/283/06|it|2005|2005-10-29|g|1. Jahrestag der Unterzeichnung der Europäischen Verfassung|
+C2005/283/07|va|2005|2005-12-6|g|20. Weltjugendtag in Köln (August 2005)|
 
-C2006/020/10|lu|2006|2006-2-1|g|25. Geburtstag von ErbgroÃŸherzog Guillaume|
+C2006/020/10|lu|2006|2006-2-1|g|25. Geburtstag von Erbgroßherzog Guillaume|
 C2006/033/04|de|2006|2006-2-3|g|Schleswig-Holstein|A,D,F,G,J
-C2006/033/05|it|2006|2006-2-10|g|XX. Olympische Winterspiele â€” Turin 2006|
+C2006/033/05|it|2006|2006-2-10|g|XX. Olympische Winterspiele — Turin 2006|
 C2006/053/03|be|2006|2006-4-10|g|Atomium|
 C2006/248/02|fi|2006|2006-10-4|g|100 Jahre allgemeine, gleiche, geheime und freie Wahlen|
 C2006/248/03|sm|2006|2006-10-17|g|500. Todestag von Christoph Kolumbus|
-C2006/260/06|va|2006|2006-11-9|g|500 Jahre PÃ¤pstliche Schweizergarde|
+C2006/260/06|va|2006|2006-11-9|g|500 Jahre Päpstliche Schweizergarde|
 
-C2007/053/02|lu|2007|2007-2-2|g|GroÃŸherzoglicher Palast|
+C2007/053/02|lu|2007|2007-2-2|g|Großherzoglicher Palast|
 C2007/065/03|be|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
 C2007/065/03|de|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|A,D,F,G,J
 C2007/065/03|ie|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
@@ -39,120 +39,120 @@ C2007/065/03|pt|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags v
 C2007/065/03|si|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
 C2007/065/03|fi|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
 C2007/076/02|de|2007|2007-2-2|g|Mecklenburg-Vorpommern|A,D,F,G,J
-C2007/110/06|pt|2007|2007-7-2|g|Portugiesischer Vorsitz im Rat der EuropÃ¤ischen Union|
-C2007/172/06|mc|2007|2007-7-12|g|25. Todestag von FÃ¼rstin Gracia Patricia|
+C2007/110/06|pt|2007|2007-7-2|g|Portugiesischer Vorsitz im Rat der Europäischen Union|
+C2007/172/06|mc|2007|2007-7-12|g|25. Todestag von Fürstin Gracia Patricia|
 C2007/233/07|sm|2007|2007-10-9|g|Zweihundertster Geburtstag von Giuseppe Garibaldi|
 C2007/233/08|va|2007|2007-10-23|g|80. Geburtstag von Papst Benedikt XVI.|
-C2007/289/10|fi|2007|2007-12-3|g|90. Jahrestag der UnabhÃ¤ngigkeitserklÃ¤rung|
+C2007/289/10|fi|2007|2007-12-3|g|90. Jahrestag der Unabhängigkeitserklärung|
 
 C2008/013/02|de|2008|2008-2-1|g|Hamburg|A,D,F,G,J
-C2008/021/09|lu|2008|2008-2-1|g|GroÃŸherzog Henri und die Residenz Schlossberg|
-C2008/089/04|it|2008|2008-12-10|g|60. Jahrestag der Annahme der Allgemeinen ErklÃ¤rung der Menschenrechte|
-C2008/089/05|sm|2008|2008-5-20|g|2008 â€” EuropÃ¤isches Jahr des interkulturellen Dialogs|
-C2008/125/05|be|2008|2008-5-30|g|60. Jahrestag der Annahme der Allgemeinen ErklÃ¤rung der Menschenrechte|
-C2008/125/06|si|2008|2008-5-26|g|500. Geburtstag von PrimoÅ¾ Trubar|
-C2008/165/03|fr|2008|2008-7-1|g|FranzÃ¶sischer Ratsvorsitz der EuropÃ¤ischen Union im zweiten Halbjahr 2008|
-C2008/165/04|pt|2008|2008-9-15|g|60. Jahrestag der Annahme der Allgemeinen ErklÃ¤rung der Menschenrechte|
+C2008/021/09|lu|2008|2008-2-1|g|Großherzog Henri und die Residenz Schlossberg|
+C2008/089/04|it|2008|2008-12-10|g|60. Jahrestag der Annahme der Allgemeinen Erklärung der Menschenrechte|
+C2008/089/05|sm|2008|2008-5-20|g|2008 — Europäisches Jahr des interkulturellen Dialogs|
+C2008/125/05|be|2008|2008-5-30|g|60. Jahrestag der Annahme der Allgemeinen Erklärung der Menschenrechte|
+C2008/125/06|si|2008|2008-5-26|g|500. Geburtstag von Primo Trubar|
+C2008/165/03|fr|2008|2008-7-1|g|Französischer Ratsvorsitz der Europäischen Union im zweiten Halbjahr 2008|
+C2008/165/04|pt|2008|2008-9-15|g|60. Jahrestag der Annahme der Allgemeinen Erklärung der Menschenrechte|
 C2008/228/06|va|2008|2008-10-16|g|Paulusjahr 2008|
-C2008/246/06|fi|2008|2008-10-24|g|60. Jahrestag der Allgemeinen ErklÃ¤rung der Menschenrechte|
+C2008/246/06|fi|2008|2008-10-24|g|60. Jahrestag der Allgemeinen Erklärung der Menschenrechte|
 
-C2008/315/04|be|2009|2009-1-27|g|Zehn Jahre Wirtschafts- und WÃ¤hrungsunion (WWU) und die Schaffung des Euro|
-C2008/315/04|de|2009|2009-1-2|g|Zehn Jahre Wirtschafts- und WÃ¤hrungsunion (WWU) und die Schaffung des Euro|A,D,F,G,J
-C2008/315/04|ie|2009|2009-1-1|g|Zehn Jahre Wirtschafts- und WÃ¤hrungsunion (WWU) und die Schaffung des Euro|
-C2008/315/04|gr|2009|2009-1-2|g|Zehn Jahre Wirtschafts- und WÃ¤hrungsunion (WWU) und die Schaffung des Euro|
-C2008/315/04|es|2009|2009-2-2|g|Zehn Jahre Wirtschafts- und WÃ¤hrungsunion (WWU) und die Schaffung des Euro|s,S
-C2008/315/04|fr|2009|2009-1-23|g|Zehn Jahre Wirtschafts- und WÃ¤hrungsunion (WWU) und die Schaffung des Euro|
-C2008/315/04|it|2009|2009-3-26|g|Zehn Jahre Wirtschafts- und WÃ¤hrungsunion (WWU) und die Schaffung des Euro|
-C2008/315/04|cy|2009|2009-1-5|g|Zehn Jahre Wirtschafts- und WÃ¤hrungsunion (WWU) und die Schaffung des Euro|
-C2008/315/04|lu|2009|2009-1-15|g|Zehn Jahre Wirtschafts- und WÃ¤hrungsunion (WWU) und die Schaffung des Euro|
-C2008/315/04|mt|2009|2009-1-5|g|Zehn Jahre Wirtschafts- und WÃ¤hrungsunion (WWU) und die Schaffung des Euro|
-C2008/315/04|nl|2009|2009-1-7|g|Zehn Jahre Wirtschafts- und WÃ¤hrungsunion (WWU) und die Schaffung des Euro|
-C2008/315/04|at|2009|2009-1-2|g|Zehn Jahre Wirtschafts- und WÃ¤hrungsunion (WWU) und die Schaffung des Euro|
-C2008/315/04|pt|2009|2009-1-5|g|Zehn Jahre Wirtschafts- und WÃ¤hrungsunion (WWU) und die Schaffung des Euro|
-C2008/315/04|si|2009|2009-1-5|g|Zehn Jahre Wirtschafts- und WÃ¤hrungsunion (WWU) und die Schaffung des Euro|
-C2008/315/04|sk|2009|2009-1-7|g|Zehn Jahre Wirtschafts- und WÃ¤hrungsunion (WWU) und die Schaffung des Euro|
-C2008/315/04|fi|2009|2009-1-15|g|Zehn Jahre Wirtschafts- und WÃ¤hrungsunion (WWU) und die Schaffung des Euro|
-C2009/005/02|lu|2009|2009-1-15|g|GroÃŸherzog Henri und GroÃŸherzogin Charlotte|
+C2008/315/04|be|2009|2009-1-27|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|
+C2008/315/04|de|2009|2009-1-2|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|A,D,F,G,J
+C2008/315/04|ie|2009|2009-1-1|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|
+C2008/315/04|gr|2009|2009-1-2|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|
+C2008/315/04|es|2009|2009-2-2|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|s,S
+C2008/315/04|fr|2009|2009-1-23|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|
+C2008/315/04|it|2009|2009-3-26|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|
+C2008/315/04|cy|2009|2009-1-5|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|
+C2008/315/04|lu|2009|2009-1-15|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|
+C2008/315/04|mt|2009|2009-1-5|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|
+C2008/315/04|nl|2009|2009-1-7|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|
+C2008/315/04|at|2009|2009-1-2|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|
+C2008/315/04|pt|2009|2009-1-5|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|
+C2008/315/04|si|2009|2009-1-5|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|
+C2008/315/04|sk|2009|2009-1-7|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|
+C2008/315/04|fi|2009|2009-1-15|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|
+C2009/005/02|lu|2009|2009-1-15|g|Großherzog Henri und Großherzogin Charlotte|
 C2009/031/06|de|2009|2009-2-6|g|Saarland|A,D,F,G,J
-C2009/116/08|pt|2009|2009-6-9|g|Zum zweiten Mal finden die Spiele fÃ¼r Sportler aus portugiesischsprachigen LÃ¤ndern statt|
-C2009/116/09|sm|2009|2009-9-5|g|2009 â€” EuropÃ¤isches Jahr der KreativitÃ¤t und der Innovation|
-C2009/196/06|be|2009|2009-9-25|g|Zweihundertster Geburtstag der Geburt von Louis Braille (1809â€”1852)|
+C2009/116/08|pt|2009|2009-6-9|g|Zum zweiten Mal finden die Spiele für Sportler aus portugiesischsprachigen Ländern statt|
+C2009/116/09|sm|2009|2009-9-5|g|2009 — Europäisches Jahr der Kreativität und der Innovation|
+C2009/196/06|be|2009|2009-9-25|g|Zweihundertster Geburtstag der Geburt von Louis Braille (1809—1852)|
 C2009/196/07|sk|2009|2009-11-10|g|20. Jahrestag des Tags der Freiheit und der Demokratie|
-C2009/196/08|it|2009|2009-10-15|g|Zweihundertster Geburtstag der Geburt von Louis Braille (1809â€”1852)|
+C2009/196/08|it|2009|2009-10-15|g|Zweihundertster Geburtstag der Geburt von Louis Braille (1809—1852)|
 C2009/204/05|va|2009|2009-11-18|g|Internationales Jahr der Astronomie|
-C2009/227/03|fi|2009|2009-10-23|g|200. Jahrestag des ersten finnischen Landtags und der GrÃ¼ndung zentraler staatlicher Einrichtungen in Finnland|
+C2009/227/03|fi|2009|2009-10-23|g|200. Jahrestag des ersten finnischen Landtags und der Gründung zentraler staatlicher Einrichtungen in Finnland|
 
-C2009/311/05|si|2010|2010-5-10|g|200-jÃ¤hriges Bestehen des Botanischen Gartens in Ljubljana|
-C2009/311/06|lu|2010|2010-1-14|g|Das Wappen des GroÃŸherzogs|
+C2009/311/05|si|2010|2010-5-10|g|200-jähriges Bestehen des Botanischen Gartens in Ljubljana|
+C2009/311/06|lu|2010|2010-1-14|g|Das Wappen des Großherzogs|
 C2010/012/05|de|2010|2010-1-29|g|Bremen|A,D,F,G,J
-C2010/047/07|es|2010|2010-3-3|g|Historisches Zentrum von CÃ³rdoba, UNESCO-Welterbe|
+C2010/047/07|es|2010|2010-3-3|g|Historisches Zentrum von Córdoba, UNESCO-Welterbe|
 C2010/062/02|it|2010|2010-9-24|g|200. Geburtstag von Camillo Benso, Graf von Cavour|
-C2010/137/10|fr|2010|2010-5-25|g|Aufruf General de Gaulles vom 18. Juni 1940 (wurde von London aus Ã¼ber die BBC ausgestrahlt und begrÃ¼ndete den franzÃ¶sischen Widerstand)|
+C2010/137/10|fr|2010|2010-5-25|g|Aufruf General de Gaulles vom 18. Juni 1940 (wurde von London aus über die BBC ausgestrahlt und begründete den französischen Widerstand)|
 C2010/137/11|pt|2010|2010-9-7|g|100. Jahrestag der Republik Portugal|
-C2010/137/12|be|2010|2010-6-11|g|Belgischer Vorsitz des Rats der EuropÃ¤ischen Union 2010|
+C2010/137/12|be|2010|2010-6-11|g|Belgischer Vorsitz des Rats der Europäischen Union 2010|
 C2010/212/02|sm|2010|2010-9-7|g|500. Todestag von Sandro Botticelli|
 C2010/212/03|va|2010|2010-10-12|g|Priesterjahr|
-C2010/256/04|fi|2010|2010-11-11|g|WÃ¤hrungserlass von 1860, durch den Finnland das Recht gewÃ¤hrt wurde, Banknoten und MÃ¼nzen auszugeben|
+C2010/256/04|fi|2010|2010-11-11|g|Währungserlass von 1860, durch den Finnland das Recht gewährt wurde, Banknoten und Münzen auszugeben|
 C2010/270/04|gr|2010|2010-10-25|g|Der 2 500. Jahrestag der Schlacht von Marathon|
 
-C2010/349/03|lu|2011|2011-2-3|g|50. Jahrestag der Ernennung ihres Sohnes Jean zum â€lieutenant-reprÃ©sentantâ€œ durch GroÃŸherzogin Charlotte|
-C2011/005/06|sk|2011|2011-1-10|g|20. Jahrestag der GrÃ¼ndung der VisegrÃ¡d-Gruppe|
-C2011/019/04|nl|2011|2011-1-24|g|500. Jahrestag des Erscheinens des weltbekannten Buchs â€Laus Stultitiaeâ€œ (Lob der Torheit) des niederlÃ¤ndischen Philosophen, Humanisten und Theologen Desiderus Erasmus|
+C2010/349/03|lu|2011|2011-2-3|g|50. Jahrestag der Ernennung ihres Sohnes Jean zum „lieutenant-représentant“ durch Großherzogin Charlotte|
+C2011/005/06|sk|2011|2011-1-10|g|20. Jahrestag der Gründung der Visegrád-Gruppe|
+C2011/019/04|nl|2011|2011-1-24|g|500. Jahrestag des Erscheinens des weltbekannten Buchs „Laus Stultitiae“ (Lob der Torheit) des niederländischen Philosophen, Humanisten und Theologen Desiderus Erasmus|
 C2011/019/05|fr|2011|2011-6-21|g|30 Jahre Musikfest|
 C2011/024/04|de|2011|2011-1-28|g|Nordrhein-Westfalen|A,D,F,G,J
-C2011/050/02|es|2011|2011-2-21|g|StÃ¤tten des UNESCO Kultur- und Naturerbes der Welt â€” die Alhambra mit dem Patio de los Leones, Generalife und Albayzin in Granada|
+C2011/050/02|es|2011|2011-2-21|g|Stätten des UNESCO Kultur- und Naturerbes der Welt — die Alhambra mit dem Patio de los Leones, Generalife und Albayzin in Granada|
 C2011/057/05|si|2011|2011-3-21|g|100. Geburtstag des Nationalhelden Franc Rozman-Stane|
 C2011/057/06|be|2011|2011-5-3|g|100. Jahrestag des Weltfrauentags|
 C2011/085/05|it|2011|2011-4-22|g|150. Jahrestag der Einigung Italiens|
-C2011/091/03|gr|2011|2011-5-30|g|Veranstaltung der Weltsommerspiele der Special Olympics â€” Athen 2011|
-C2011/091/04|sm|2011|2011-6-4|g|500. Geburtstag des italienischen Malers Giorgio Vasari (30. Juli 1511-27. Juni 1574). Vasari, der sich auch als Schriftsteller, Historiker und Architekt betÃ¤tigte, war fÃ¼r seine Biografien italienischer KÃ¼nstler berÃ¼hmt und gilt mittlerweile als geistiger GrÃ¼ndervater kunsthistorischer Schriften|
+C2011/091/03|gr|2011|2011-5-30|g|Veranstaltung der Weltsommerspiele der Special Olympics — Athen 2011|
+C2011/091/04|sm|2011|2011-6-4|g|500. Geburtstag des italienischen Malers Giorgio Vasari (30. Juli 1511-27. Juni 1574). Vasari, der sich auch als Schriftsteller, Historiker und Architekt betätigte, war für seine Biografien italienischer Künstler berühmt und gilt mittlerweile als geistiger Gründervater kunsthistorischer Schriften|
 C2011/189/07|mc|2011|2011-7-2|g|Hochzeit von Prinz Albert und Charlene|
-C2011/273/04|pt|2011|2011-9-15|g|500. Geburtstag des portugiesischen Entdeckers FernÃ£o Mendes Pinto, der die Meere und LÃ¤nder Asiens erforschte|
+C2011/273/04|pt|2011|2011-9-15|g|500. Geburtstag des portugiesischen Entdeckers Fernão Mendes Pinto, der die Meere und Länder Asiens erforschte|
 C2011/291/03|fi|2011|2011-10-17|g|200 Jahre Finnische Nationalbank|
-C2011/299/08|mt|2011|2011-10-17|g|Erste gewÃ¤hlte Vertreter|
+C2011/299/08|mt|2011|2011-10-17|g|Erste gewählte Vertreter|
 C2011/301/06|va|2011|2011-10-18|g|26. Weltjugendtag|
 
-C2011/373/06|lu|2012|2012-2-9|g|GroÃŸherzog Henri und GroÃŸherzog Wilhem IV. der Reihe â€GroÃŸherzogliche Dynastieâ€œ|
-C2012/010/02|de|2012|2012-2-3|g|Bayern aus der Serie â€BundeslÃ¤nderâ€œ|A,D,F,G,J
-C2012/017/05|be|2012|2012-1-30|g|Zehnter Jahrestag der EinfÃ¼hrung des Euro|
-C2012/017/05|de|2012|2012-1-2|g|Zehnter Jahrestag der EinfÃ¼hrung des Euro|A,D,F,G,J
-C2012/017/05|ee|2012|2012-1-2|g|Zehnter Jahrestag der EinfÃ¼hrung des Euro|
-C2012/017/05|ie|2012|2012-1-3|g|Zehnter Jahrestag der EinfÃ¼hrung des Euro|
-C2012/017/05|gr|2012|2012-1-2|g|Zehnter Jahrestag der EinfÃ¼hrung des Euro|
-C2012/017/05|es|2012|2012-1-2|g|Zehnter Jahrestag der EinfÃ¼hrung des Euro|
-C2012/017/05|fr|2012|2012-1-5|g|Zehnter Jahrestag der EinfÃ¼hrung des Euro|
-C2012/017/05|it|2012|2012-3-20|g|Zehnter Jahrestag der EinfÃ¼hrung des Euro|
-C2012/017/05|cy|2012|2012-2-13|g|Zehnter Jahrestag der EinfÃ¼hrung des Euro|
-C2012/017/05|lu|2012|2012-1-31|g|Zehnter Jahrestag der EinfÃ¼hrung des Euro|
-C2012/017/05|mt|2012|2012-3-30|g|Zehnter Jahrestag der EinfÃ¼hrung des Euro|
-C2012/017/05|nl|2012|2012-2-13|g|Zehnter Jahrestag der EinfÃ¼hrung des Euro|
-C2012/017/05|at|2012|2012-1-2|g|Zehnter Jahrestag der EinfÃ¼hrung des Euro|
-C2012/017/05|pt|2012|2012-2-24|g|Zehnter Jahrestag der EinfÃ¼hrung des Euro|
-C2012/017/05|si|2012|2012-1-3|g|Zehnter Jahrestag der EinfÃ¼hrung des Euro|
-C2012/017/05|sk|2012|2012-1-2|g|Zehnter Jahrestag der EinfÃ¼hrung des Euro|
-C2012/017/05|fi|2012|2012-1-12|g|Zehnter Jahrestag der EinfÃ¼hrung des Euro|
-C2012/057/03|es|2012|2012-3-1|g|StÃ¤tten des UNESCO Kultur- und Naturerbes der Welt â€” Die Kathedrale von Burgos|
-C2012/103/03|fr|2012|2012-6-24|g|100. Geburtstag von AbbÃ© Pierre, einem in Frankreich berÃ¼hmten FÃ¼rsprecher der Armen|
-C2012/103/04|sm|2012|2012-6-19|g|Zehnter Jahrestag der EinfÃ¼hrung des Euro|
-C2012/160/06|pt|2012|2012-6-21|g|EuropÃ¤ische Kulturhauptstadt 2012 â€” GuimarÃ£es im Norden Portugals|
-C2012/223/02|mc|2012|2012-6-28|g|500. Jahrestag der UnabhÃ¤ngigkeit Monacos, Ehrung von Lucien I. GRIMALDI|
-C2012/231/02|be|2012|2012-6-6|g|75 Jahre â€Concours Reine Elisabethâ€œ (â€KÃ¶nigin-Elisabeth-Wettbewerbâ€œ)|
-C2012/231/03|fi|2012|2012-10-5|g|150. Geburtstag der KÃ¼nstlerin Helene SCHJERFBECK|
+C2011/373/06|lu|2012|2012-2-9|g|Großherzog Henri und Großherzog Wilhem IV. der Reihe „Großherzogliche Dynastie“|
+C2012/010/02|de|2012|2012-2-3|g|Bayern aus der Serie „Bundesländer“|A,D,F,G,J
+C2012/017/05|be|2012|2012-1-30|g|Zehnter Jahrestag der Einführung des Euro|
+C2012/017/05|de|2012|2012-1-2|g|Zehnter Jahrestag der Einführung des Euro|A,D,F,G,J
+C2012/017/05|ee|2012|2012-1-2|g|Zehnter Jahrestag der Einführung des Euro|
+C2012/017/05|ie|2012|2012-1-3|g|Zehnter Jahrestag der Einführung des Euro|
+C2012/017/05|gr|2012|2012-1-2|g|Zehnter Jahrestag der Einführung des Euro|
+C2012/017/05|es|2012|2012-1-2|g|Zehnter Jahrestag der Einführung des Euro|
+C2012/017/05|fr|2012|2012-1-5|g|Zehnter Jahrestag der Einführung des Euro|
+C2012/017/05|it|2012|2012-3-20|g|Zehnter Jahrestag der Einführung des Euro|
+C2012/017/05|cy|2012|2012-2-13|g|Zehnter Jahrestag der Einführung des Euro|
+C2012/017/05|lu|2012|2012-1-31|g|Zehnter Jahrestag der Einführung des Euro|
+C2012/017/05|mt|2012|2012-3-30|g|Zehnter Jahrestag der Einführung des Euro|
+C2012/017/05|nl|2012|2012-2-13|g|Zehnter Jahrestag der Einführung des Euro|
+C2012/017/05|at|2012|2012-1-2|g|Zehnter Jahrestag der Einführung des Euro|
+C2012/017/05|pt|2012|2012-2-24|g|Zehnter Jahrestag der Einführung des Euro|
+C2012/017/05|si|2012|2012-1-3|g|Zehnter Jahrestag der Einführung des Euro|
+C2012/017/05|sk|2012|2012-1-2|g|Zehnter Jahrestag der Einführung des Euro|
+C2012/017/05|fi|2012|2012-1-12|g|Zehnter Jahrestag der Einführung des Euro|
+C2012/057/03|es|2012|2012-3-1|g|Stätten des UNESCO Kultur- und Naturerbes der Welt — Die Kathedrale von Burgos|
+C2012/103/03|fr|2012|2012-6-24|g|100. Geburtstag von Abbé Pierre, einem in Frankreich berühmten Fürsprecher der Armen|
+C2012/103/04|sm|2012|2012-6-19|g|Zehnter Jahrestag der Einführung des Euro|
+C2012/160/06|pt|2012|2012-6-21|g|Europäische Kulturhauptstadt 2012 — Guimarães im Norden Portugals|
+C2012/223/02|mc|2012|2012-6-28|g|500. Jahrestag der Unabhängigkeit Monacos, Ehrung von Lucien I. GRIMALDI|
+C2012/231/02|be|2012|2012-6-6|g|75 Jahre „Concours Reine Elisabeth“ („Königin-Elisabeth-Wettbewerb“)|
+C2012/231/03|fi|2012|2012-10-5|g|150. Geburtstag der Künstlerin Helene SCHJERFBECK|
 C2012/313/04|va|2012|2012-10-16|g|7. Weltfamilientag|
 C2012/375/06|mt|2012|2012-8-20|g|Mehrheitswahlrecht 1887|
-C2013/021/05|lu|2012|2012-12-20|g|Hochzeit von ErbgroÃŸherzog Guillaume mit GrÃ¤fin StÃ©phanie de Lannoy|
+C2013/021/05|lu|2012|2012-12-20|g|Hochzeit von Erbgroßherzog Guillaume mit Gräfin Stéphanie de Lannoy|
 C2013/102/03|it|2012|2012-7-18|g|100. Todestag von Giovanni PASCOLI|
 
-C2013/018/05|fr|2013|2013-1-21|g|50. Jahrestag der Unterzeichnung des Ã‰lysÃ©e-Vertrags|
-C2013/021/04|de|2013|2013-1-22|g|50. Jahrestag der Unterzeichnung des Ã‰lysÃ©e-Vertrags|A,D,F,G,J
-C2013/023/06|si|2013|2013-2-4|g|800. Jahrestag des ersten Besuchs der HÃ¶hlen von Postojna|
-C2013/050/04|es|2013|2013-3-2|g|StÃ¤tten des UNESCO-Weltnatur- und Kulturerbes â€” Kloster von San Lorenzo de El Escorial|
-C2013/165/08|fr|2013|2013-6-3|g|150. Jahrestag der Geburt von Pierre de Coubertin, Initiator der Olympischen Spiele der Neuzeit, GrÃ¼nder und erster PrÃ¤sident des Internationalen Olympischen Komitees|
-C2013/200/05|sk|2013|2013-7-5|g|1150. Jahrestag der Ankunft der Mission von Konstantin und Method in GroÃŸmÃ¤hren|
-C2013/214/06|nl|2013|2013-2-7|g|AnkÃ¼ndigung der Abdankung Ihrer MajestÃ¤t KÃ¶nigin Beatrix|
-C2013/219/05|be|2013|2013-9-18|g|100. Jahrestag der GrÃ¼ndung des KÃ¶niglichen Meteorologischen Instituts|
-C2013/219/06|lu|2013|2013-10-16|g|Nationalhymne des GroÃŸherzogtums Luxemburg|
-C2013/219/07|pt|2013|2013-6-20|g|250. Jahrestag der Erbauung des â€Torre dos ClÃ©rigosâ€œ|
+C2013/018/05|fr|2013|2013-1-21|g|50. Jahrestag der Unterzeichnung des Élysée-Vertrags|
+C2013/021/04|de|2013|2013-1-22|g|50. Jahrestag der Unterzeichnung des Élysée-Vertrags|A,D,F,G,J
+C2013/023/06|si|2013|2013-2-4|g|800. Jahrestag des ersten Besuchs der Höhlen von Postojna|
+C2013/050/04|es|2013|2013-3-2|g|Stätten des UNESCO-Weltnatur- und Kulturerbes — Kloster von San Lorenzo de El Escorial|
+C2013/165/08|fr|2013|2013-6-3|g|150. Jahrestag der Geburt von Pierre de Coubertin, Initiator der Olympischen Spiele der Neuzeit, Gründer und erster Präsident des Internationalen Olympischen Komitees|
+C2013/200/05|sk|2013|2013-7-5|g|1150. Jahrestag der Ankunft der Mission von Konstantin und Method in Großmähren|
+C2013/214/06|nl|2013|2013-2-7|g|Ankündigung der Abdankung Ihrer Majestät Königin Beatrix|
+C2013/219/05|be|2013|2013-9-18|g|100. Jahrestag der Gründung des Königlichen Meteorologischen Instituts|
+C2013/219/06|lu|2013|2013-10-16|g|Nationalhymne des Großherzogtums Luxemburg|
+C2013/219/07|pt|2013|2013-6-20|g|250. Jahrestag der Erbauung des „Torre dos Clérigos“|
 C2013/222/07|sm|2013|2013-9-13|g|500. Todestag des italienischen Malers Pinturicchio|
 C2013/265/05|va|2013|2013-10-15|g|28. Weltjugendtag in Rio de Janeiro im Juli 2013|
 C2013/265/06|va|2013|2013-6-3|g|Sedisvakanz 2013|
@@ -160,110 +160,110 @@ C2013/266/02|it|2013|2013-7-25|g|700. Jahrestag der Geburt von Giovanni BOCCACCI
 C2013/266/03|it|2013|2013-5-20|g|200. Jahrestag der Geburt von Giuseppe VERDI|
 C2013/266/04|mc|2013|2013-6-17|g|20. Jahrestag des UNO-Beitritts|
 C2013/272/06|gr|2013|2013-10-1|g|100. Jahrestag der Vereinigung Kretas mit Griechenland|
-C2013/272/05|gr|2013|2013-10-1|g|2 400. Jahrestag der GrÃ¼ndung der Platonischen Akademie|
+C2013/272/05|gr|2013|2013-10-1|g|2 400. Jahrestag der Gründung der Platonischen Akademie|
 C2013/363/08|fi|2013|2013-9-4|g|150 Jahre Sitzung des Parlaments|
-C2013/366/05|fi|2013|2013-11-4|g|125. Geburtstag des LiteraturnobelpreistrÃ¤gers F. E. SILLANPÃ„Ã„|
-C2013/379/08|de|2013|2013-2-1|g|â€LÃ¤nderserieâ€œ â€” Baden-WÃ¼rttemberg|A,D,F,G,J
-C2013/379/09|mt|2013|2013-6-24|g|Selbstverwaltung â€” Verfassung von 1921|
-C2013/379/10|nl|2013|2013-11-25|g|200 Jahre KÃ¶nigreich der Niederlande|
+C2013/366/05|fi|2013|2013-11-4|g|125. Geburtstag des Literaturnobelpreisträgers F. E. SILLANPÄÄ|
+C2013/379/08|de|2013|2013-2-1|g|„Länderserie“ — Baden-Württemberg|A,D,F,G,J
+C2013/379/09|mt|2013|2013-6-24|g|Selbstverwaltung — Verfassung von 1921|
+C2013/379/10|nl|2013|2013-11-25|g|200 Jahre Königreich der Niederlande|
 
-C2014/020/06|lu|2014|2014-1-6|g|175. Jahrestag der UnabhÃ¤ngigkeit des GroÃŸherzogtums Luxemburg|
-C2014/051/05|es|2014|2014-2-7|g|StÃ¤tten des UNESCO-Weltkultur- und Weltnaturerbes â€” Park GÃ¼ell|
-C2014/062/08|si|2014|2014-11-17|g|600. Jahrestag der KrÃ¶nung von Barbara Celjska|
-C2014/088/03|lv|2014|2014-8-12|g|Riga â€” Kulturhauptstadt Europas 2014|
+C2014/020/06|lu|2014|2014-1-6|g|175. Jahrestag der Unabhängigkeit des Großherzogtums Luxemburg|
+C2014/051/05|es|2014|2014-2-7|g|Stätten des UNESCO-Weltkultur- und Weltnaturerbes — Park Güell|
+C2014/062/08|si|2014|2014-11-17|g|600. Jahrestag der Krönung von Barbara Celjska|
+C2014/088/03|lv|2014|2014-8-12|g|Riga — Kulturhauptstadt Europas 2014|
 C2014/088/05|pt|2014|2014-10-31|g|Internationales Jahr der familienbetriebenen Landwirtschaft|
 C2014/088/04|pt|2014|2014-4-23|g|40. Jahrestag der Nelkenrevolution|
-C2014/089/04|sk|2014|2014-4-1|g|10. Jahrestag des Beitritts der Slowakischen Republik zur EuropÃ¤ischen Union|
-C2014/160/03|it|2014|2014-3-25|g|200. Jahrestag der GrÃ¼ndung der Arma dei Carabinieri|
+C2014/089/04|sk|2014|2014-4-1|g|10. Jahrestag des Beitritts der Slowakischen Republik zur Europäischen Union|
+C2014/160/03|it|2014|2014-3-25|g|200. Jahrestag der Gründung der Arma dei Carabinieri|
 C2014/160/04|it|2014|2014-6-17|g|450. Geburtstag von Galileo Galilei (geboren 1564)|
 C2014/160/05|be|2014|2014-4-24|g|100 Jahre Beginn des Ersten Weltkrieges (1914-1918)|
-C2014/163/06|fi|2014|2014-6-16|g|100. Geburtstag der Schriftstellerin und KÃ¼nstlerin Tove Jansson|
+C2014/163/06|fi|2014|2014-6-16|g|100. Geburtstag der Schriftstellerin und Künstlerin Tove Jansson|
 C2014/168/02|fr|2014|2014-6-11|g|70. Jahrestag der Landung der Alliierten in der Normandie am 6. Juni 1944|
-C2014/185/04|fr|2014|2014-11-24|g|Kampf gegen Aids anlÃ¤sslich des Welt-Aids-Tages|
-C2014/252/03|nl|2014|2014-5-22|g|Offizielle Abschiedsfeier zu Ehren der frÃ¼heren KÃ¶nigin Beatrix|
+C2014/185/04|fr|2014|2014-11-24|g|Kampf gegen Aids anlässlich des Welt-Aids-Tages|
+C2014/252/03|nl|2014|2014-5-22|g|Offizielle Abschiedsfeier zu Ehren der früheren Königin Beatrix|
 C2014/262/02|be|2014|2014-9-18|g|150 Jahre Belgisches Rotes Kreuz|
-C2014/225/06|mt|2014|2014-7-16|g|ZweihundertjÃ¤hriges Bestehen der maltesischen Polizei|
+C2014/225/06|mt|2014|2014-7-16|g|Zweihundertjähriges Bestehen der maltesischen Polizei|
 C2014/262/03|gr|2014|2014-9-24|g|150. Jahrestag der Vereinigung der Ionischen Inseln mit Griechenland (1864-2014)|
 C2014/262/04|gr|2014|2014-9-24|g|400. Todestag von Dominikos Theotokopoulos (1614-2014)|
-C2014/262/05|lu|2014|2014-11-6|g|50. Jahrestag der Thronbesteigung von GroÃŸherzog Jean|
+C2014/262/05|lu|2014|2014-11-6|g|50. Jahrestag der Thronbesteigung von Großherzog Jean|
 C2014/360/03|va|2014|2014-10-14|g|25. Jahrestag des Falls der Berliner Mauer|
-C2014/383/05|mt|2014|2014-6-3|g|UnabhÃ¤ngigkeit Maltas im Jahr 1964|
+C2014/383/05|mt|2014|2014-6-3|g|Unabhängigkeit Maltas im Jahr 1964|
 C2014/396/04|es|2014|2014-12-10|g|Thronwechsel|
 C2014/397/05|fi|2014|2014-11-10|g|100. Geburtstag des Designers und Innenarchitekten Ilmari Tapiovaara|
-C2014/417/04|de|2014|2014-2-6|g|â€LÃ¤nderserieâ€œ â€” Niedersachsen|A,D,F,G,J
+C2014/417/04|de|2014|2014-2-6|g|„Länderserie“ — Niedersachsen|A,D,F,G,J
 C2015/084/04|sm|2014|2014-9-29|g|90. Todestag von Giacomo Puccini|
 C2015/086/02|sm|2014|2014-6-23|g|500. Todestag von Bramante Lazzari delle Penne di San Marino|
 C2016/105/08|ad|2014|2016-2-16|g|20 Jahre Mitgliedschaft im Europarat|
 
 C2014/374/03|lv|2015|2015-2-10|g|Vorsitz Lettlands im Rat der EU|
-C2014/397/04|es|2015|2015-1-30|g|Unesco-Weltkultur- und -naturerbe â€” HÃ¶hle von Altamira|
+C2014/397/04|es|2015|2015-1-30|g|Unesco-Weltkultur- und -naturerbe — Höhle von Altamira|
 C2014/410/05|si|2015|2015-11-9|g|Emona-Ljubljana|
 C2014/417/05|de|2015|2015-1-30|g|25 Jahre deutsche Einheit|A,D,F,G,J
 C2015/010/02|fr|2015|2015-1-30|g|Seit dem Jahr 1945 stiftet Europa Frieden und Sicherheit|
 C2015/058/05|fi|2015|2015-2-18|g|Der 150. Geburtstag des Komponisten Jean Sibelius|
-C2015/086/03|lu|2015|2015-6-8|g|15. Jahrestag der Thronbesteigung Seiner KÃ¶niglichen Hoheit des GroÃŸherzogs|
+C2015/086/03|lu|2015|2015-6-8|g|15. Jahrestag der Thronbesteigung Seiner Königlichen Hoheit des Großherzogs|
 C2015/086/04|it|2015|2015-4-29|g|EXPO Milano 2015|
 C2015/093/04|it|2015|2015-6-26|g|750. Geburtstag von Dante Alighieri (1265-2015)|
-C2015/093/05|pt|2015|2015-4-25|g|150. Jahrestag der GrÃ¼ndung des portugiesischen Roten Kreuzes|
-C2015/093/06|pt|2015|2015-7-15|g|Erste Kontakte mit Timor, heute ein unabhÃ¤ngiges portugiesischsprachiges Land (Timor-Leste), vor nunmehr 500 Jahren|
-C2015/143/05|de|2015|2015-1-30|g|Hessen aus der Reihe â€BundeslÃ¤nderâ€œ|A,D,F,G,J
+C2015/093/05|pt|2015|2015-4-25|g|150. Jahrestag der Gründung des portugiesischen Roten Kreuzes|
+C2015/093/06|pt|2015|2015-7-15|g|Erste Kontakte mit Timor, heute ein unabhängiges portugiesischsprachiges Land (Timor-Leste), vor nunmehr 500 Jahren|
+C2015/143/05|de|2015|2015-1-30|g|Hessen aus der Reihe „Bundesländer“|A,D,F,G,J
 C2015/143/06|sm|2015|2015-4-8|g|750. Geburtstag von Dante Alighieri|
 C2015/143/07|mt|2015|2015-5-25|g|Erster Flug von Malta|,N
 C2015/150/03|mt|2015|2015-6-23|g|Republik Malta 1974|
-C2015/215/04|fr|2015|2015-7-22|g|225. Jahrestag des FÃ¶derationsfestes|
-C2015/220/03|be|2015|2015-9-17|g|2015 â€” EuropÃ¤isches Jahr fÃ¼r Entwicklung|
+C2015/215/04|fr|2015|2015-7-22|g|225. Jahrestag des Föderationsfestes|
+C2015/220/03|be|2015|2015-9-17|g|2015 — Europäisches Jahr für Entwicklung|
 C2015/232/05|lu|2015|2015-10-15|g|125. Jahrestag der Dynastie Nassau-Weilburg|
-C2015/241/03|sk|2015|2015-10-23|g|200. Jahrestag der Geburt von LudovÃ­t Å tÃºr|
-C2015/253/07|fi|2015|2015-8-6|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|
-C2015/253/08|de|2015|2015-11-5|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|A,D,F,G,J
-C2015/253/09|si|2015|2015-12-7|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|
-C2015/253/10|sk|2015|2015-9-24|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|
+C2015/241/03|sk|2015|2015-10-23|g|200. Jahrestag der Geburt von Ludovít Štúr|
+C2015/253/07|fi|2015|2015-8-6|g|Dreißigjähriges Bestehen der EU-Flagge|
+C2015/253/08|de|2015|2015-11-5|g|Dreißigjähriges Bestehen der EU-Flagge|A,D,F,G,J
+C2015/253/09|si|2015|2015-12-7|g|Dreißigjähriges Bestehen der EU-Flagge|
+C2015/253/10|sk|2015|2015-9-24|g|Dreißigjähriges Bestehen der EU-Flagge|
 C2015/255/02|va|2015|2015-10-6|g|Das VIII. Welttreffen der Familien|
-C2015/255/03|es|2015|2015-12-1|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|
-C2015/256/06|mt|2015|2015-12-18|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|
-C2015/257/04|gr|2015|2015-12-23|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|
-C2015/257/05|nl|2015|2015-10-13|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|
-C2015/257/06|cy|2015|2015-11-30|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|
-C2015/257/07|lt|2015|2015-11-17|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|
-C2015/257/08|lv|2015|2015-11-3|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|
-C2015/257/09|pt|2015|2015-11-30|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|
-C2015/290/04|fr|2015|2015-11-16|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|
+C2015/255/03|es|2015|2015-12-1|g|Dreißigjähriges Bestehen der EU-Flagge|
+C2015/256/06|mt|2015|2015-12-18|g|Dreißigjähriges Bestehen der EU-Flagge|
+C2015/257/04|gr|2015|2015-12-23|g|Dreißigjähriges Bestehen der EU-Flagge|
+C2015/257/05|nl|2015|2015-10-13|g|Dreißigjähriges Bestehen der EU-Flagge|
+C2015/257/06|cy|2015|2015-11-30|g|Dreißigjähriges Bestehen der EU-Flagge|
+C2015/257/07|lt|2015|2015-11-17|g|Dreißigjähriges Bestehen der EU-Flagge|
+C2015/257/08|lv|2015|2015-11-3|g|Dreißigjähriges Bestehen der EU-Flagge|
+C2015/257/09|pt|2015|2015-11-30|g|Dreißigjähriges Bestehen der EU-Flagge|
+C2015/290/04|fr|2015|2015-11-16|g|Dreißigjähriges Bestehen der EU-Flagge|
 C2015/293/03|fi|2015|2015-10-22|g|150. Geburtstag des Malers Akseli Gallen-Kallela|
-C2015/308/04|it|2015|2015-11-9|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|
+C2015/308/04|it|2015|2015-11-9|g|Dreißigjähriges Bestehen der EU-Flagge|
 C2015/324/11|sm|2015|2015-9-29|g|25. Jahrestag der deutschen Wiedervereinigung|
 C2015/324/12|gr|2015|2015-12-23|g|75 Jahre des Gedenkens an Spyros Louis|
-C2015/327/05|at|2015|2015-10-30|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|
-C2015/327/06|be|2015|2015-11-18|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|
-C2015/327/07|ie|2015|2015-10-16|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|
-C2015/327/08|lv|2015|2015-12-1|g|Natur in Gefahr â€” der Schwarzstorch|
-C2015/356/05|ee|2015|2015-12-10|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|
-C2015/356/07|lu|2015|2015-12-3|g|DreiÃŸigjÃ¤hriges Bestehen der EU-Flagge|
+C2015/327/05|at|2015|2015-10-30|g|Dreißigjähriges Bestehen der EU-Flagge|
+C2015/327/06|be|2015|2015-11-18|g|Dreißigjähriges Bestehen der EU-Flagge|
+C2015/327/07|ie|2015|2015-10-16|g|Dreißigjähriges Bestehen der EU-Flagge|
+C2015/327/08|lv|2015|2015-12-1|g|Natur in Gefahr — der Schwarzstorch|
+C2015/356/05|ee|2015|2015-12-10|g|Dreißigjähriges Bestehen der EU-Flagge|
+C2015/356/07|lu|2015|2015-12-3|g|Dreißigjähriges Bestehen der EU-Flagge|
 C2015/357/02|mc|2015|2015-11-14|g|800. Jahrestag der Grundsteinlegung der ersten Befestigung auf dem Felsen|
 C2015/357/03|lt|2015|2015-12-14|g|Die litauische Sprache|
-C2015/380/04|ad|2015|2016-7-18|g|25. Jahrestag der Unterzeichnung des Zollabkommens mit der EuropÃ¤ischen Union|
-C2015/380/05|ad|2015|2016-7-18|g|30. Jahrestag der gesetzlichen Festlegung des VolljÃ¤hrigkeitsalters auf 18 Jahre und der damit einhergehenden politischen Rechte fÃ¼r MÃ¤nner und Frauen|
+C2015/380/04|ad|2015|2016-7-18|g|25. Jahrestag der Unterzeichnung des Zollabkommens mit der Europäischen Union|
+C2015/380/05|ad|2015|2016-7-18|g|30. Jahrestag der gesetzlichen Festlegung des Volljährigkeitsalters auf 18 Jahre und der damit einhergehenden politischen Rechte für Männer und Frauen|
 
 C2015/186/03|at|2016|2015-12-2|g|200 Jahre Oesterreichische Nationalbank|
-C2015/425/10|es|2016|2016-2-5|g|UNESCO-Weltkultur- und -naturerbe â€” Segovia|
-C2015/425/11|ee|2016|2016-1-7|g|100. Geburtstag des berÃ¼hmten estnischen SchachgroÃŸmeisters Paul Keres|
+C2015/425/10|es|2016|2016-2-5|g|UNESCO-Weltkultur- und -naturerbe — Segovia|
+C2015/425/11|ee|2016|2016-1-7|g|100. Geburtstag des berühmten estnischen Schachgroßmeisters Paul Keres|
 C2015/428/05|ie|2016|2016-1-20|g|Hundertster Jahrestag des Osteraufstands 1916 in Irland|
-C2015/428/04|de|2016|2016-2-5|g|Sachsen (â€BundeslÃ¤nder-Reiheâ€œ)|A,D,F,G,J
-C2016/023/05|sk|2016|2016-3-7|g|Erster slowakischer Vorsitz des Rates der EuropÃ¤ischen Union|
+C2015/428/04|de|2016|2016-2-5|g|Sachsen („Bundesländer-Reihe“)|A,D,F,G,J
+C2016/023/05|sk|2016|2016-3-7|g|Erster slowakischer Vorsitz des Rates der Europäischen Union|
 C2016/023/06|fr|2016|2016-2-5|g|UEFA-Europameisterschaft 2016|
 C2016/026/04|be|2016|2016-3-24|g|Olympische Spiele|
-C2016/028/04|lu|2016|2016-5-6|g|50-jÃ¤hriges Bestehen der GroÃŸherzogin-Charlotte-BrÃ¼cke|
+C2016/028/04|lu|2016|2016-5-6|g|50-jähriges Bestehen der Großherzogin-Charlotte-Brücke|
 C2016/028/05|it|2016|2016-4-29|g|550. Todestag von Donatello|
 C2016/030/06|it|2016|2016-5-16|g|2 200. Todestag von Titus Maccius Plautus|
 C2016/092/04|lv|2016|2016-7-19|g|Geschichte der lettischen Landwirtschaft|
-C2016/097/08|si|2016|2016-6-20|g|25. Jahrestag der UnabhÃ¤ngigkeit der Republik Slowenien|
-C2016/097/09|pt|2016|2016-7-19|g|50. Jahrestag der ErÃ¶ffnung der ersten BrÃ¼cke zwischen den beiden Ufern des Flusses Tejo|
-C2016/097/10|pt|2016|2016-5-3|g|Teilnahme der Mannschaft Portugals an den Olympischen Spielen â€” Rio 2016|
-C2016/101/03|mc|2016|2016-6-1|g|150. Jahrestag der GrÃ¼ndung Monte Carlos durch Charles III.|
+C2016/097/08|si|2016|2016-6-20|g|25. Jahrestag der Unabhängigkeit der Republik Slowenien|
+C2016/097/09|pt|2016|2016-7-19|g|50. Jahrestag der Eröffnung der ersten Brücke zwischen den beiden Ufern des Flusses Tejo|
+C2016/097/10|pt|2016|2016-5-3|g|Teilnahme der Mannschaft Portugals an den Olympischen Spielen — Rio 2016|
+C2016/101/03|mc|2016|2016-6-1|g|150. Jahrestag der Gründung Monte Carlos durch Charles III.|
 C2016/103/02|lt|2016|2016-5-3|g|Die baltische Kultur|
 C2016/146/03|be|2016|2016-5-25|g|Tag der vermissten Kinder|
 C2016/146/04|fi|2016|2016-4-25|g|Der finnische Schriftsteller und Lyriker Eino Leino|
 C2016/146/05|fi|2016|2016-10-17|g|100. Geburtstag des Philosophen Georg Henrik von Wright|
-C2016/146/06|fr|2016|2016-9-12|g|FranÃ§ois Mitterrand|
+C2016/146/06|fr|2016|2016-9-12|g|François Mitterrand|
 C2016/146/07|lv|2016|2016-11-15|g|Vidzeme|
 C2016/146/08|sm|2016|2016-4-5|g|550. Todestag von Donatello|
 C2016/146/09|va|2016|2016-6-2|g|200 Jahre Gendarmeriekorps der Vatikanstadt|
@@ -271,98 +271,98 @@ C2016/146/10|va|2016|2016-10-13|g|Heiliges Jahr der Barmherzigkeit|
 C2016/153/05|sm|2016|2016-9-22|g|400. Todestag von William Shakespeare|
 C2016/281/10|mt|2016|2016-8-22|g|Tempel von Ggantija|
 C2016/396/02|gr|2016|2016-12-16|g|150. Jahrestag der Brandstiftung im Arkadi-Kloster|
-C2016/396/03|mt|2016|2016-12-5|g|Die gesellschaftliche Bedeutung des â€Malta Community Chest Fundâ€œ|
+C2016/396/03|mt|2016|2016-12-5|g|Die gesellschaftliche Bedeutung des „Malta Community Chest Fund“|
 C2016/396/04|gr|2016|2016-12-16|g|120. Geburtstag von Dimitri Mitropoulos|
-C2016/409/04|ad|2016|2017-6-1|g|25 Jahre Ã¶ffentlich-rechtlicher Rundfunk in Andorra|
-C2016/409/05|ad|2016|2017-6-1|g|150-jÃ¤hriges JubilÃ¤um der Neuen Reform von 1866|
+C2016/409/04|ad|2016|2017-6-1|g|25 Jahre öffentlich-rechtlicher Rundfunk in Andorra|
+C2016/409/05|ad|2016|2017-6-1|g|150-jähriges Jubiläum der Neuen Reform von 1866|
 
-C2016/236/06|es|2017|2017-2-3|g|Unesco-Weltkultur- und -naturerbe â€” Kirchen des KÃ¶nigreichs Asturien|
-C2017/023/07|lu|2017|2017-1-2|g|50-jÃ¤hriges JubilÃ¤um der Freiwilligkeit der luxemburgischen Armee|
-C2017/023/03|sk|2017|2017-1-4|g|550. Jahrestag der GrÃ¼ndung der UniversitÃ¤t Istropolitana|
-C2017/021/02|si|2017|2017-2-2|g|10. Jahrestag der EinfÃ¼hrung des Euro in Slowenien|
-C2017/023/04|de|2017|2017-2-3|g|Rheinland-Pfalz (BundeslÃ¤nderserie)|A,D,F,G,J
+C2016/236/06|es|2017|2017-2-3|g|Unesco-Weltkultur- und -naturerbe — Kirchen des Königreichs Asturien|
+C2017/023/07|lu|2017|2017-1-2|g|50-jähriges Jubiläum der Freiwilligkeit der luxemburgischen Armee|
+C2017/023/03|sk|2017|2017-1-4|g|550. Jahrestag der Gründung der Universität Istropolitana|
+C2017/021/02|si|2017|2017-2-2|g|10. Jahrestag der Einführung des Euro in Slowenien|
+C2017/023/04|de|2017|2017-2-3|g|Rheinland-Pfalz (Bundesländerserie)|A,D,F,G,J
 C2017/023/05|fr|2017|2017-2-3|g|Hundertster Todestag Auguste Rodins|
 C2017/066/02|lv|2017|2017-11-14|g|Kurzeme|
 C2017/066/03|lv|2017|2017-11-14|g|Latgale|
 C2017/111/08|it|2017|2017-3-22|g|400. Jahrestag der Fertigstellung der Basilica di San Marco in Venedig|
 C2017/120/06|sm|2017|2017-3-30|g|750. Jahrestag der Geburt von Giotto|
-C2017/111/06|be|2017|2017-4-21|g|200. Jahrestag der GrÃ¼ndung der UniversitÃ¤t LÃ¼ttich|
-C2017/111/10|mt|2017|2017-5-31|g|Weltkulturerbe der Unesco: die prÃ¤historischen maltesischen Tempel von Hagar Qim|
-C2017/111/07|fi|2017|2017-6-1|g|100 Jahre unabhÃ¤ngiges Finnland|
+C2017/111/06|be|2017|2017-4-21|g|200. Jahrestag der Gründung der Universität Lüttich|
+C2017/111/10|mt|2017|2017-5-31|g|Weltkulturerbe der Unesco: die prähistorischen maltesischen Tempel von Hagar Qim|
+C2017/111/07|fi|2017|2017-6-1|g|100 Jahre unabhängiges Finnland|
 C2017/120/07|va|2017|2017-6-1|g|1950. Jahrestag des Martyriums der Heiligen Petrus und Paulus|
 C2017/111/09|it|2017|2017-6-23|g|Zweitausendster Todestag von Titus Livius|
-C2017/206/08|ee|2017|2017-6-26|g|UnabhÃ¤ngigkeit Estlands|
+C2017/206/08|ee|2017|2017-6-26|g|Unabhängigkeit Estlands|
 C2017/206/09|gr|2017|2017-7-10|g|60 Jahre des Gedenkens an Nikos Kazantzakis|
-C2017/120/08|pt|2017|2017-7-13|g|150-jÃ¤hriges Bestehen der portugiesischen Polizei, der PolÃ­cia de SeguranÃ§a PÃºblica|
-C2017/329/08|sm|2017|2017-8-31|g|Internationales Jahr des nachhaltigen Tourismus fÃ¼r Entwicklung|
-C2017/312/03|fr|2017|2017-9-25|g|25. Jahrestag der Rosa Schleife, des Symbols fÃ¼r die BekÃ¤mpfung von Brustkrebs|
-C2017/329/07|be|2017|2017-9-29|g|200. Jahrestag der GrÃ¼ndung der UniversitÃ¤t Gent|
+C2017/120/08|pt|2017|2017-7-13|g|150-jähriges Bestehen der portugiesischen Polizei, der Polícia de Segurança Pública|
+C2017/329/08|sm|2017|2017-8-31|g|Internationales Jahr des nachhaltigen Tourismus für Entwicklung|
+C2017/312/03|fr|2017|2017-9-25|g|25. Jahrestag der Rosa Schleife, des Symbols für die Bekämpfung von Brustkrebs|
+C2017/329/07|be|2017|2017-9-29|g|200. Jahrestag der Gründung der Universität Gent|
 C2017/320/05|ad|2017|2018-2-8|g|100 Jahre Hymne Andorras|
-C2017/321/05|ad|2017|2018-2-8|g|Andorra â€” Das Land in den PyrenÃ¤en|
+C2017/321/05|ad|2017|2018-2-8|g|Andorra — Das Land in den Pyrenäen|
 C2017/321/06|va|2017|2017-10-12|g|Hundertster Jahrestag der Erscheinungen von Fatima|
-C2017/206/10|gr|2017|2017-10-12|g|ArchÃ¤ologische AusgrabungsstÃ¤tte Philippi|
+C2017/206/10|gr|2017|2017-10-12|g|Archäologische Ausgrabungsstätte Philippi|
 C2017/327/03|fi|2017|2017-10-23|g|Die finnische Natur|
-C2017/320/04|lu|2017|2017-10-26|g|200. Geburtstag des GroÃŸherzogs Guillaume III|
-C2017/327/04|cy|2017|2017-11-3|g|Paphos 2017 â€” Kulturhauptstadt Europas|
+C2017/320/04|lu|2017|2017-10-26|g|200. Geburtstag des Großherzogs Guillaume III|
+C2017/327/04|cy|2017|2017-11-3|g|Paphos 2017 — Kulturhauptstadt Europas|
 C2017/329/09|lt|2017|2017-8-31|g|Vilnius|
-C2017/386/03|mt|2017|2017-11-13|g|SolidaritÃ¤t und Frieden|
-C2017/386/02|mc|2017|2017-11-13|g|Carabiniers du Prince (â€Carabiniersâ€œ des Prinzen)|
-C2017/386/04|pt|2017|2017-11-21|g|150. Jahrestag der Geburt des Schriftstellers Raul BrandÃ£o|
+C2017/386/03|mt|2017|2017-11-13|g|Solidarität und Frieden|
+C2017/386/02|mc|2017|2017-11-13|g|Carabiniers du Prince („Carabiniers“ des Prinzen)|
+C2017/386/04|pt|2017|2017-11-21|g|150. Jahrestag der Geburt des Schriftstellers Raul Brandão|
 
-C2017/388/06|at|2018|2017-12-6|g|100. Jahrestag der Republik Ã–sterreich|
+C2017/388/06|at|2018|2017-12-6|g|100. Jahrestag der Republik Österreich|
 C2017/438/10|lu|2018|2017-12-27|g|150. Jahrestag der luxemburgischen Verfassung|
 C2017/444/05|de|2018|2018-1-30|g|100. Jahrestag der Geburt des deutschen Staatsmannes und Kanzlers Helmut Schmidt (1918-2015)|A,D,F,G,J
 C2017/444/06|it|2018|2018-1-2|g|70. Jahrestag des Inkrafttretens der italienischen Verfassung|
-C2017/444/07|ee|2018|2018-2-19|g|100. Jahrestag der UnabhÃ¤ngigkeit Estlands|
-C2017/444/08|sk|2018|2018-1-3|g|25. JubilÃ¤um der GrÃ¼ndung der Slowakischen Republik|
-C2018/012/07|es|2018|2018-2-2|g|50. Geburtstag von KÃ¶nig FELIPE VI|
+C2017/444/07|ee|2018|2018-2-19|g|100. Jahrestag der Unabhängigkeit Estlands|
+C2017/444/08|sk|2018|2018-1-3|g|25. Jubiläum der Gründung der Slowakischen Republik|
+C2018/012/07|es|2018|2018-2-2|g|50. Geburtstag von König FELIPE VI|
 C2018/014/04|es|2018|2018-2-2|g|UNESCO-Weltkultur- und -naturerbe - Santiago de Compostela|
 C2018/014/05|ad|2018|2018-4-12|g|25. Jahrestag der Verfassung von Andorra|
-C2018/015/04|ee|2018|2018-1-31|g|Estland, Lettland und Litauen werden 2018 gemeinsam eine Euro-GedenkmÃ¼nze mit einem gemeinsamen Motiv herausgeben, um die GrÃ¼ndung der Staaten Estland und Lettland und die NeugrÃ¼ndung des Staates Litauen zu feiern|
-C2018/016/03|lv|2018|2018-1-31|g|Estland, Lettland und Litauen werden 2018 gemeinsam eine Euro-GedenkmÃ¼nze mit einem gemeinsamen Motiv herausgeben, um die GrÃ¼ndung der Staaten Estland und Lettland und die NeugrÃ¼ndung des Staates Litauen zu feiern|
-C2018/021/02|lt|2018|2018-1-31|g|Estland, Lettland und Litauen werden 2018 gemeinsam eine Euro-GedenkmÃ¼nze mit einem gemeinsamen Motiv herausgeben, um die GrÃ¼ndung der Staaten Estland und Lettland und die NeugrÃ¼ndung des Staates Litauen zu feiern|
-C2018/024/02|fr|2018|2018-2-19|g|â€Bleuet de Franceâ€œ (GedenkmÃ¼nze â€Kornblume Frankreichsâ€œ)|
+C2018/015/04|ee|2018|2018-1-31|g|Estland, Lettland und Litauen werden 2018 gemeinsam eine Euro-Gedenkmünze mit einem gemeinsamen Motiv herausgeben, um die Gründung der Staaten Estland und Lettland und die Neugründung des Staates Litauen zu feiern|
+C2018/016/03|lv|2018|2018-1-31|g|Estland, Lettland und Litauen werden 2018 gemeinsam eine Euro-Gedenkmünze mit einem gemeinsamen Motiv herausgeben, um die Gründung der Staaten Estland und Lettland und die Neugründung des Staates Litauen zu feiern|
+C2018/021/02|lt|2018|2018-1-31|g|Estland, Lettland und Litauen werden 2018 gemeinsam eine Euro-Gedenkmünze mit einem gemeinsamen Motiv herausgeben, um die Gründung der Staaten Estland und Lettland und die Neugründung des Staates Litauen zu feiern|
+C2018/024/02|fr|2018|2018-2-19|g|„Bleuet de France“ (Gedenkmünze „Kornblume Frankreichs“)|
 C2018/118/06|it|2018|2018-3-5|g|60. Jahrestag der Einrichtung des italienischen Gesundheitsministeriums|
 C2018/119/04|fi|2018|2018-5-28|g|Finnischer Nationalpark Koli|
-C2018/119/05|lt|2018|2018-6-26|g|Litauisches Chor- und Tanzfest (aufgenommen in die ReprÃ¤sentative Liste der Unesco des immateriellen Kulturerbes der Menschheit)|
+C2018/119/05|lt|2018|2018-6-26|g|Litauisches Chor- und Tanzfest (aufgenommen in die Repräsentative Liste der Unesco des immateriellen Kulturerbes der Menschheit)|
 C2018/120/05|si|2018|2018-5-14|g|Weltbienentag Slowenien|
 C2018/133/03|sm|2018|2018-4-5|g|500. Jahrestag der Geburt von Tintoretto|
-C2018/133/04|va|2018|2018-6-1|g|EuropÃ¤isches Jahr des Kulturerbes â€” Die Laokoon-Gruppe|
+C2018/133/04|va|2018|2018-6-1|g|Europäisches Jahr des Kulturerbes — Die Laokoon-Gruppe|
 C2018/133/05|fi|2018|2018-10-22|g|Finnische Saunakultur|
 C2018/155/02|be|2018|2018-6-19|g|50. Jahrestag der Ereignisse vom Mai 1968 in Belgien|
 C2018/155/03|fr|2018|2018-6-26|g|Simone Veil|
 C2018/173/04|gr|2018|2018-10-25|g|70. Jahrestag der Vereinigung des Dodekanes mit Griechenland|
 C2018/173/05|gr|2018|2018-10-25|g|75. Todestag von Kostis Palamas|
-C2018/174/08|mt|2018|2018-6-21|g|Weltkulturerbe der UNESCO â€” Tempel von Mnajdra|
+C2018/174/08|mt|2018|2018-6-21|g|Weltkulturerbe der UNESCO — Tempel von Mnajdra|
 C2018/234/03|lv|2018|2018-9-26|g|Zemgale|
-C2018/234/04|pt|2018|2018-7-25|g|250 Jahre Botanischer Garten Ajuda (â€Jardim BotÃ¢nico da Ajudaâ€œ)|
-C2018/234/05|pt|2018|2018-5-22|g|250 Jahre Nationale Druckerei (â€Imprensa Nacionalâ€œ)|
-C2018/305/06|lu|2018|2018-8-27|g|175. Todestag von GroÃŸherzog Guillaume I.|
-C2018/398/13|ad|2018|2018-11-26|g|70. Jahrestag der Allgemeinen ErklÃ¤rung der Menschenrechte|
-C2018/400/05|de|2018|2018-1-30|g|Berlin (â€BundeslÃ¤nder-Reiheâ€œ)|A,D,F,G,J
+C2018/234/04|pt|2018|2018-7-25|g|250 Jahre Botanischer Garten Ajuda („Jardim Botânico da Ajuda“)|
+C2018/234/05|pt|2018|2018-5-22|g|250 Jahre Nationale Druckerei („Imprensa Nacional“)|
+C2018/305/06|lu|2018|2018-8-27|g|175. Todestag von Großherzog Guillaume I.|
+C2018/398/13|ad|2018|2018-11-26|g|70. Jahrestag der Allgemeinen Erklärung der Menschenrechte|
+C2018/400/05|de|2018|2018-1-30|g|Berlin („Bundesländer-Reihe“)|A,D,F,G,J
 C2018/400/06|sm|2018|2018-9-20|g|420. Jahrestag der Geburt von Gian Lorenzo Bernini|
 C2018/400/07|va|2018|2018-10-4|g|50. Todestag von Pater Pio|
 C2018/401/06|be|2018|2018-9-20|g|50. Jahrestag des Starts des Forschungssatelliten ESRO 2B|
 C2018/401/07|mt|2018|2018-11-7|g|Kulturerbe|
-C2018/422/05|mc|2018|2018-6-25|g|FranÃ§ois Joseph Bosio|
+C2018/422/05|mc|2018|2018-6-25|g|François Joseph Bosio|
 
-C2018/466/06|be|2019|2019-1-24|g|450. Todestag von Pieter Bruegel dem Ã„lteren|
-C2018/466/07|be|2019|2019-5-9|g|25-jÃ¤hriges Bestehen des EuropÃ¤ischen WÃ¤hrungsinstituts (EWI)|
-C2018/466/08|de|2019|2019-1-29|g|70. Jahrestag der GrÃ¼ndung des Bundesrates|A,D,F,G,J
-C2018/466/09|es|2019|2019-2-1|g|Unesco-Welterbe â€” Avilas Altstadt und die Kirchen auÃŸerhalb ihrer Stadtmauer|
+C2018/466/06|be|2019|2019-1-24|g|450. Todestag von Pieter Bruegel dem Älteren|
+C2018/466/07|be|2019|2019-5-9|g|25-jähriges Bestehen des Europäischen Währungsinstituts (EWI)|
+C2018/466/08|de|2019|2019-1-29|g|70. Jahrestag der Gründung des Bundesrates|A,D,F,G,J
+C2018/466/09|es|2019|2019-2-1|g|Unesco-Welterbe — Avilas Altstadt und die Kirchen außerhalb ihrer Stadtmauer|
 C2018/466/10|it|2019|2019-1-25|g|500. Todestag von Leonardo da Vinci|
-C2018/466/11|lu|2019|2018-12-27|g|100. Jahrestag der Thronbesteigung von GroÃŸherzogin Charlotte|
-C2019/057/12|ie|2019|2019-1-2|g|100 Jahre DÃ¡il Ã‰ireann (irisches Parlament)|
+C2018/466/11|lu|2019|2018-12-27|g|100. Jahrestag der Thronbesteigung von Großherzogin Charlotte|
+C2019/057/12|ie|2019|2019-1-2|g|100 Jahre Dáil Éireann (irisches Parlament)|
 C2019/130/06|ad|2019|2019-3-11|g|Ski-Weltcup-Finale 2019|
-C2019/189/08|sk|2019|2019-4-25|g|100. Todestag von Milan Rastislav Å tefÃ¡nik|
+C2019/189/08|sk|2019|2019-4-25|g|100. Todestag von Milan Rastislav Štefánik|
 C2019/189/09|fr|2019|2019-6-6|g|60. Jahrestag von Asterix|
 C2019/189/11|gr|2019|2019-7-11|g|100. Geburtstag von Manolis Andronicos|
 C2019/189/12|gr|2019|2019-7-11|g|150. Todestag des Dichters Andreas Kalvos|
-C2019/192/10|ee|2019|2019-5-29|g|150-jÃ¤hriges Bestehen des Liederfests|
+C2019/192/10|ee|2019|2019-5-29|g|150-jähriges Bestehen des Liederfests|
 C2019/192/11|sm|2019|2019-4-4|g|500. Todestag von Leonardo da Vinci|
-C2019/192/12|va|2019|2019-5-7|g|90. Jahrestag der GrÃ¼ndung des Staates Vatikanstadt|
+C2019/192/12|va|2019|2019-5-7|g|90. Jahrestag der Gründung des Staates Vatikanstadt|
 
-C2019/189/10|mc|2019|NA|g|200. Jahrestag der Thronbesteigung von FÃ¼rst HonorÃ© V - DATUM fehlt|
+C2019/189/10|mc|2019|NA|g|200. Jahrestag der Thronbesteigung von Fürst Honoré V - DATUM fehlt|
 NA|pt|2019|2019-5-8|g|Magellan - CELEX fehlt|
 NA|mt|2019|2019-5-13|g|Hagrat - CELEX fehlt|
 NA|pt|2019|2019-6-6|g|Madeira - CELEX fehlt|
@@ -391,27 +391,27 @@ C2001/373/01|at|2015|NA|u|Bertha Freifrau von Suttner (2002 -)|
 C2001/373/01|at|2017|NA|u|Bertha Freifrau von Suttner (2002 -)|
 C2001/373/01|at|2019|NA|u|Bertha Freifrau von Suttner (2002 -)|
 
-C2001/373/01|be|1999|NA|u|KÃ¶nig Albert II. (1999 - 2007)|
-C2001/373/01|be|2000|NA|u|KÃ¶nig Albert II. (1999 - 2007)|
-C2001/373/01|be|2001|NA|u|KÃ¶nig Albert II. (1999 - 2007)|
-C2001/373/01|be|2002|NA|u|KÃ¶nig Albert II. (1999 - 2007)|
-C2001/373/01|be|2003|NA|u|KÃ¶nig Albert II. (1999 - 2007)|
-C2001/373/01|be|2004|NA|u|KÃ¶nig Albert II. (1999 - 2007)|
-C2001/373/01|be|2005|NA|u|KÃ¶nig Albert II. (1999 - 2007)|
-C2001/373/01|be|2006|NA|u|KÃ¶nig Albert II. (1999 - 2007)|
-C2001/373/01|be|2007|NA|u|KÃ¶nig Albert II. (1999 - 2007)|
-C2007/302/08|be|2008|NA|u|KÃ¶nig Albert II. (2008)|
-C2007/302/08|be|2009|NA|u|KÃ¶nig Albert II. (2009 - 2013)|
-C2007/302/08|be|2010|NA|u|KÃ¶nig Albert II. (2009 - 2013)|
-C2007/302/08|be|2011|NA|u|KÃ¶nig Albert II. (2009 - 2013)|
-C2007/302/08|be|2012|NA|u|KÃ¶nig Albert II. (2009 - 2013)|
-C2007/302/08|be|2013|NA|u|KÃ¶nig Albert II. (2009 - 2013)|
-C2014/075/02|be|2014|NA|u|KÃ¶nig Philippe (2014 -)|
-C2014/075/02|be|2015|NA|u|KÃ¶nig Philippe (2014 -)|
-C2014/075/02|be|2016|NA|u|KÃ¶nig Philippe (2014 -)|
-C2014/075/02|be|2017|NA|u|KÃ¶nig Philippe (2014 -)|
-C2014/075/02|be|2018|NA|u|KÃ¶nig Philippe (2014 -)|
-C2014/075/02|be|2019|NA|u|KÃ¶nig Philippe (2014 -)|
+C2001/373/01|be|1999|NA|u|König Albert II. (1999 - 2007)|
+C2001/373/01|be|2000|NA|u|König Albert II. (1999 - 2007)|
+C2001/373/01|be|2001|NA|u|König Albert II. (1999 - 2007)|
+C2001/373/01|be|2002|NA|u|König Albert II. (1999 - 2007)|
+C2001/373/01|be|2003|NA|u|König Albert II. (1999 - 2007)|
+C2001/373/01|be|2004|NA|u|König Albert II. (1999 - 2007)|
+C2001/373/01|be|2005|NA|u|König Albert II. (1999 - 2007)|
+C2001/373/01|be|2006|NA|u|König Albert II. (1999 - 2007)|
+C2001/373/01|be|2007|NA|u|König Albert II. (1999 - 2007)|
+C2007/302/08|be|2008|NA|u|König Albert II. (2008)|
+C2007/302/08|be|2009|NA|u|König Albert II. (2009 - 2013)|
+C2007/302/08|be|2010|NA|u|König Albert II. (2009 - 2013)|
+C2007/302/08|be|2011|NA|u|König Albert II. (2009 - 2013)|
+C2007/302/08|be|2012|NA|u|König Albert II. (2009 - 2013)|
+C2007/302/08|be|2013|NA|u|König Albert II. (2009 - 2013)|
+C2014/075/02|be|2014|NA|u|König Philippe (2014 -)|
+C2014/075/02|be|2015|NA|u|König Philippe (2014 -)|
+C2014/075/02|be|2016|NA|u|König Philippe (2014 -)|
+C2014/075/02|be|2017|NA|u|König Philippe (2014 -)|
+C2014/075/02|be|2018|NA|u|König Philippe (2014 -)|
+C2014/075/02|be|2019|NA|u|König Philippe (2014 -)|
 
 C2007/248/07|cy|2008|NA|u|Idol von Pomos (2008 -)|
 C2007/248/07|cy|2009|NA|u|Idol von Pomos (2008 -)|
@@ -444,27 +444,27 @@ C2010/309/04|ee|2016|NA|u|Landesumriss (2011 -)|
 C2010/309/04|ee|2018|NA|u|Landesumriss (2011 -)|
 C2010/309/04|ee|2019|NA|u|Landesumriss (2011 -)|
 
-C2001/373/01|es|1999|NA|u|KÃ¶nig Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2000|NA|u|KÃ¶nig Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2001|NA|u|KÃ¶nig Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2002|NA|u|KÃ¶nig Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2003|NA|u|KÃ¶nig Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2004|NA|u|KÃ¶nig Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2005|NA|u|KÃ¶nig Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2006|NA|u|KÃ¶nig Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2007|NA|u|KÃ¶nig Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2008|NA|u|KÃ¶nig Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2009|NA|u|KÃ¶nig Juan Carlos I. (1999 - 2009)|
-C2009/300/02|es|2010|NA|u|KÃ¶nig Juan Carlos I. (2010 - 2014)|
-C2009/300/02|es|2011|NA|u|KÃ¶nig Juan Carlos I. (2010 - 2014)|
-C2009/300/02|es|2012|NA|u|KÃ¶nig Juan Carlos I. (2010 - 2014)|
-C2009/300/02|es|2013|NA|u|KÃ¶nig Juan Carlos I. (2010 - 2014)|
-C2009/300/02|es|2014|NA|u|KÃ¶nig Juan Carlos I. (2010 - 2014)|
-C2014/410/06|es|2015|NA|u|KÃ¶nig Felipe VI. (2015 -)|
-C2014/410/06|es|2016|NA|u|KÃ¶nig Felipe VI. (2015 -)|
-C2014/410/06|es|2017|NA|u|KÃ¶nig Felipe VI. (2015 -)|
-C2014/410/06|es|2018|NA|u|KÃ¶nig Felipe VI. (2015 -)|
-C2014/410/06|es|2019|NA|u|KÃ¶nig Felipe VI. (2015 -)|
+C2001/373/01|es|1999|NA|u|König Juan Carlos I. (1999 - 2009)|
+C2001/373/01|es|2000|NA|u|König Juan Carlos I. (1999 - 2009)|
+C2001/373/01|es|2001|NA|u|König Juan Carlos I. (1999 - 2009)|
+C2001/373/01|es|2002|NA|u|König Juan Carlos I. (1999 - 2009)|
+C2001/373/01|es|2003|NA|u|König Juan Carlos I. (1999 - 2009)|
+C2001/373/01|es|2004|NA|u|König Juan Carlos I. (1999 - 2009)|
+C2001/373/01|es|2005|NA|u|König Juan Carlos I. (1999 - 2009)|
+C2001/373/01|es|2006|NA|u|König Juan Carlos I. (1999 - 2009)|
+C2001/373/01|es|2007|NA|u|König Juan Carlos I. (1999 - 2009)|
+C2001/373/01|es|2008|NA|u|König Juan Carlos I. (1999 - 2009)|
+C2001/373/01|es|2009|NA|u|König Juan Carlos I. (1999 - 2009)|
+C2009/300/02|es|2010|NA|u|König Juan Carlos I. (2010 - 2014)|
+C2009/300/02|es|2011|NA|u|König Juan Carlos I. (2010 - 2014)|
+C2009/300/02|es|2012|NA|u|König Juan Carlos I. (2010 - 2014)|
+C2009/300/02|es|2013|NA|u|König Juan Carlos I. (2010 - 2014)|
+C2009/300/02|es|2014|NA|u|König Juan Carlos I. (2010 - 2014)|
+C2014/410/06|es|2015|NA|u|König Felipe VI. (2015 -)|
+C2014/410/06|es|2016|NA|u|König Felipe VI. (2015 -)|
+C2014/410/06|es|2017|NA|u|König Felipe VI. (2015 -)|
+C2014/410/06|es|2018|NA|u|König Felipe VI. (2015 -)|
+C2014/410/06|es|2019|NA|u|König Felipe VI. (2015 -)|
 
 C2001/373/01|fi|1999|NA|u|Moltebeere (1999 -2006)|
 C2001/373/01|fi|2000|NA|u|Moltebeere (1999 -2006)|
@@ -510,24 +510,24 @@ C2001/373/01|fr|2017|NA|u|Stilisierter Baum (1999 -)|
 C2001/373/01|fr|2018|NA|u|Stilisierter Baum (1999 -)|
 C2001/373/01|fr|2019|NA|u|Stilisierter Baum (1999 -)|
 
-C2001/373/01|gr|2002|NA|u|EntfÃ¼hrung der Europa durch Zeus (2002 -)|,S
-C2001/373/01|gr|2003|NA|u|EntfÃ¼hrung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2004|NA|u|EntfÃ¼hrung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2005|NA|u|EntfÃ¼hrung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2006|NA|u|EntfÃ¼hrung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2007|NA|u|EntfÃ¼hrung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2008|NA|u|EntfÃ¼hrung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2009|NA|u|EntfÃ¼hrung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2010|NA|u|EntfÃ¼hrung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2011|NA|u|EntfÃ¼hrung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2012|NA|u|EntfÃ¼hrung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2013|NA|u|EntfÃ¼hrung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2014|NA|u|EntfÃ¼hrung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2015|NA|u|EntfÃ¼hrung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2016|NA|u|EntfÃ¼hrung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2017|NA|u|EntfÃ¼hrung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2018|NA|u|EntfÃ¼hrung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2019|NA|u|EntfÃ¼hrung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2002|NA|u|Entführung der Europa durch Zeus (2002 -)|,S
+C2001/373/01|gr|2003|NA|u|Entführung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2004|NA|u|Entführung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2005|NA|u|Entführung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2006|NA|u|Entführung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2007|NA|u|Entführung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2008|NA|u|Entführung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2009|NA|u|Entführung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2010|NA|u|Entführung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2011|NA|u|Entführung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2012|NA|u|Entführung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2013|NA|u|Entführung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2014|NA|u|Entführung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2015|NA|u|Entführung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2016|NA|u|Entführung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2017|NA|u|Entführung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2018|NA|u|Entführung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2019|NA|u|Entführung der Europa durch Zeus (2002 -)|
 
 C2001/373/01|ie|2002|NA|u|Keltische Harfe (2002 -)|
 C2001/373/01|ie|2003|NA|u|Keltische Harfe (2002 -)|
@@ -572,47 +572,47 @@ C2014/385/05|lt|2017|NA|u|Vytis (2015 -)|
 C2014/385/05|lt|2018|NA|u|Vytis (2015 -)|
 C2014/385/05|lt|2019|NA|u|Vytis (2015 -)|
 
-C2001/373/01|lu|2002|NA|u|GroÃŸherzog Henri (2002 -)|
-C2001/373/01|lu|2003|NA|u|GroÃŸherzog Henri (2002 -)|
-C2001/373/01|lu|2004|NA|u|GroÃŸherzog Henri (2002 -)|
-C2001/373/01|lu|2005|NA|u|GroÃŸherzog Henri (2002 -)|
-C2001/373/01|lu|2006|NA|u|GroÃŸherzog Henri (2002 -)|
-C2001/373/01|lu|2007|NA|u|GroÃŸherzog Henri (2002 -)|
-C2001/373/01|lu|2008|NA|u|GroÃŸherzog Henri (2002 -)|
-C2001/373/01|lu|2010|NA|u|GroÃŸherzog Henri (2002 -)|
-C2001/373/01|lu|2011|NA|u|GroÃŸherzog Henri (2002 -)|
-C2001/373/01|lu|2012|NA|u|GroÃŸherzog Henri (2002 -)|
-C2001/373/01|lu|2013|NA|u|GroÃŸherzog Henri (2002 -)|
-C2001/373/01|lu|2014|NA|u|GroÃŸherzog Henri (2002 -)|
-C2001/373/01|lu|2015|NA|u|GroÃŸherzog Henri (2002 -)|
-C2001/373/01|lu|2016|NA|u|GroÃŸherzog Henri (2002 -)|
-C2001/373/01|lu|2017|NA|u|GroÃŸherzog Henri (2002 -)|
-C2001/373/01|lu|2018|NA|u|GroÃŸherzog Henri (2002 -)|
-C2001/373/01|lu|2019|NA|u|GroÃŸherzog Henri (2002 -)|
+C2001/373/01|lu|2002|NA|u|Großherzog Henri (2002 -)|
+C2001/373/01|lu|2003|NA|u|Großherzog Henri (2002 -)|
+C2001/373/01|lu|2004|NA|u|Großherzog Henri (2002 -)|
+C2001/373/01|lu|2005|NA|u|Großherzog Henri (2002 -)|
+C2001/373/01|lu|2006|NA|u|Großherzog Henri (2002 -)|
+C2001/373/01|lu|2007|NA|u|Großherzog Henri (2002 -)|
+C2001/373/01|lu|2008|NA|u|Großherzog Henri (2002 -)|
+C2001/373/01|lu|2010|NA|u|Großherzog Henri (2002 -)|
+C2001/373/01|lu|2011|NA|u|Großherzog Henri (2002 -)|
+C2001/373/01|lu|2012|NA|u|Großherzog Henri (2002 -)|
+C2001/373/01|lu|2013|NA|u|Großherzog Henri (2002 -)|
+C2001/373/01|lu|2014|NA|u|Großherzog Henri (2002 -)|
+C2001/373/01|lu|2015|NA|u|Großherzog Henri (2002 -)|
+C2001/373/01|lu|2016|NA|u|Großherzog Henri (2002 -)|
+C2001/373/01|lu|2017|NA|u|Großherzog Henri (2002 -)|
+C2001/373/01|lu|2018|NA|u|Großherzog Henri (2002 -)|
+C2001/373/01|lu|2019|NA|u|Großherzog Henri (2002 -)|
 
-C2013/309/03|lv|2014|NA|u|TrachtenmÃ¤dchen (2014 - )|
-C2013/309/03|lv|2015|NA|u|TrachtenmÃ¤dchen (2014 - )|
-C2013/309/03|lv|2016|NA|u|TrachtenmÃ¤dchen (2014 - )|
-C2013/309/03|lv|2017|NA|u|TrachtenmÃ¤dchen (2014 - )|
-C2013/309/03|lv|2018|NA|u|TrachtenmÃ¤dchen (2014 - )|
-C2013/309/03|lv|2019|NA|u|TrachtenmÃ¤dchen (2014 - )|
+C2013/309/03|lv|2014|NA|u|Trachtenmädchen (2014 - )|
+C2013/309/03|lv|2015|NA|u|Trachtenmädchen (2014 - )|
+C2013/309/03|lv|2016|NA|u|Trachtenmädchen (2014 - )|
+C2013/309/03|lv|2017|NA|u|Trachtenmädchen (2014 - )|
+C2013/309/03|lv|2018|NA|u|Trachtenmädchen (2014 - )|
+C2013/309/03|lv|2019|NA|u|Trachtenmädchen (2014 - )|
 
-C2001/373/01|mc|2001|NA|u|FÃ¼rst Rainier III. (2001 - 2004)|
-C2001/373/01|mc|2002|NA|u|FÃ¼rst Rainier III. (2001 - 2004)|
-C2001/373/01|mc|2003|NA|u|FÃ¼rst Rainier III. (2001 - 2004)|
-C2001/373/01|mc|2004|NA|u|FÃ¼rst Rainier III. (2001 - 2004)|
-C2006/316/09|mc|2006|NA|u|FÃ¼rst Albert II. (2006 -)|
-C2006/316/09|mc|2009|NA|u|FÃ¼rst Albert II. (2006 -)|
-C2006/316/09|mc|2010|NA|u|FÃ¼rst Albert II. (2006 -)|
-C2006/316/09|mc|2011|NA|u|FÃ¼rst Albert II. (2006 -)|
-C2006/316/09|mc|2012|NA|u|FÃ¼rst Albert II. (2006 -)|
-C2006/316/09|mc|2013|NA|u|FÃ¼rst Albert II. (2006 -)|
-C2006/316/09|mc|2014|NA|u|FÃ¼rst Albert II. (2006 -)|
-C2006/316/09|mc|2015|NA|u|FÃ¼rst Albert II. (2006 -)|
-C2006/316/09|mc|2016|NA|u|FÃ¼rst Albert II. (2006 -)|
-C2006/316/09|mc|2017|NA|u|FÃ¼rst Albert II. (2006 -)|
-C2006/316/09|mc|2018|NA|u|FÃ¼rst Albert II. (2006 -)|
-C2006/316/09|mc|2019|NA|u|FÃ¼rst Albert II. (2006 -)|
+C2001/373/01|mc|2001|NA|u|Fürst Rainier III. (2001 - 2004)|
+C2001/373/01|mc|2002|NA|u|Fürst Rainier III. (2001 - 2004)|
+C2001/373/01|mc|2003|NA|u|Fürst Rainier III. (2001 - 2004)|
+C2001/373/01|mc|2004|NA|u|Fürst Rainier III. (2001 - 2004)|
+C2006/316/09|mc|2006|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2009|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2010|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2011|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2012|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2013|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2014|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2015|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2016|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2017|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2018|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2019|NA|u|Fürst Albert II. (2006 -)|
 
 C2007/248/08|mt|2008|NA|u|Malteserkreuz (2008 -)|
 C2007/248/08|mt|2010|NA|u|Malteserkreuz (2008 -)|
@@ -626,60 +626,60 @@ C2007/248/08|mt|2017|NA|u|Malteserkreuz (2008 -)|
 C2007/248/08|mt|2018|NA|u|Malteserkreuz (2008 -)|
 C2007/248/08|mt|2019|NA|u|Malteserkreuz (2008 -)|
 
-C2001/373/01|nl|1999|NA|u|KÃ¶nigin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2000|NA|u|KÃ¶nigin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2001|NA|u|KÃ¶nigin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2002|NA|u|KÃ¶nigin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2003|NA|u|KÃ¶nigin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2004|NA|u|KÃ¶nigin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2005|NA|u|KÃ¶nigin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2006|NA|u|KÃ¶nigin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2007|NA|u|KÃ¶nigin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2008|NA|u|KÃ¶nigin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2009|NA|u|KÃ¶nigin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2010|NA|u|KÃ¶nigin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2011|NA|u|KÃ¶nigin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2012|NA|u|KÃ¶nigin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2013|NA|u|KÃ¶nigin Beatrix (1999 - 2013)|
-C2014/046/08|nl|2014|NA|u|KÃ¶nig Willem-Alexander (2014 -)|
-C2014/046/08|nl|2015|NA|u|KÃ¶nig Willem-Alexander (2014 -)|,s
-C2014/046/08|nl|2016|NA|u|KÃ¶nig Willem-Alexander (2014 -)|
-C2014/046/08|nl|2017|NA|u|KÃ¶nig Willem-Alexander (2014 -)|,b
-C2014/046/08|nl|2018|NA|u|KÃ¶nig Willem-Alexander (2014 -)|
-C2014/046/08|nl|2019|NA|u|KÃ¶nig Willem-Alexander (2014 -)|
+C2001/373/01|nl|1999|NA|u|Königin Beatrix (1999 - 2013)|
+C2001/373/01|nl|2000|NA|u|Königin Beatrix (1999 - 2013)|
+C2001/373/01|nl|2001|NA|u|Königin Beatrix (1999 - 2013)|
+C2001/373/01|nl|2002|NA|u|Königin Beatrix (1999 - 2013)|
+C2001/373/01|nl|2003|NA|u|Königin Beatrix (1999 - 2013)|
+C2001/373/01|nl|2004|NA|u|Königin Beatrix (1999 - 2013)|
+C2001/373/01|nl|2005|NA|u|Königin Beatrix (1999 - 2013)|
+C2001/373/01|nl|2006|NA|u|Königin Beatrix (1999 - 2013)|
+C2001/373/01|nl|2007|NA|u|Königin Beatrix (1999 - 2013)|
+C2001/373/01|nl|2008|NA|u|Königin Beatrix (1999 - 2013)|
+C2001/373/01|nl|2009|NA|u|Königin Beatrix (1999 - 2013)|
+C2001/373/01|nl|2010|NA|u|Königin Beatrix (1999 - 2013)|
+C2001/373/01|nl|2011|NA|u|Königin Beatrix (1999 - 2013)|
+C2001/373/01|nl|2012|NA|u|Königin Beatrix (1999 - 2013)|
+C2001/373/01|nl|2013|NA|u|Königin Beatrix (1999 - 2013)|
+C2014/046/08|nl|2014|NA|u|König Willem-Alexander (2014 -)|
+C2014/046/08|nl|2015|NA|u|König Willem-Alexander (2014 -)|,s
+C2014/046/08|nl|2016|NA|u|König Willem-Alexander (2014 -)|
+C2014/046/08|nl|2017|NA|u|König Willem-Alexander (2014 -)|,b
+C2014/046/08|nl|2018|NA|u|König Willem-Alexander (2014 -)|
+C2014/046/08|nl|2019|NA|u|König Willem-Alexander (2014 -)|
 
-C2001/373/01|pt|2002|NA|u|KÃ¶nigliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2003|NA|u|KÃ¶nigliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2004|NA|u|KÃ¶nigliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2005|NA|u|KÃ¶nigliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2006|NA|u|KÃ¶nigliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2007|NA|u|KÃ¶nigliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2008|NA|u|KÃ¶nigliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2009|NA|u|KÃ¶nigliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2010|NA|u|KÃ¶nigliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2011|NA|u|KÃ¶nigliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2012|NA|u|KÃ¶nigliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2013|NA|u|KÃ¶nigliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2014|NA|u|KÃ¶nigliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2015|NA|u|KÃ¶nigliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2016|NA|u|KÃ¶nigliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2017|NA|u|KÃ¶nigliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2018|NA|u|KÃ¶nigliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2019|NA|u|KÃ¶nigliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2002|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2003|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2004|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2005|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2006|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2007|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2008|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2009|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2010|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2011|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2012|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2013|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2014|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2015|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2016|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2017|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2018|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2019|NA|u|Königliches Siegel von 1144 (2002 -)|
 
-C2006/254/04|si|2007|NA|u|France PreÅ¡eren (2007 -)|
-C2006/254/04|si|2008|NA|u|France PreÅ¡eren (2007 -)|
-C2006/254/04|si|2009|NA|u|France PreÅ¡eren (2007 -)|
-C2006/254/04|si|2010|NA|u|France PreÅ¡eren (2007 -)|
-C2006/254/04|si|2011|NA|u|France PreÅ¡eren (2007 -)|
-C2006/254/04|si|2012|NA|u|France PreÅ¡eren (2007 -)|
-C2006/254/04|si|2013|NA|u|France PreÅ¡eren (2007 -)|
-C2006/254/04|si|2014|NA|u|France PreÅ¡eren (2007 -)|
-C2006/254/04|si|2015|NA|u|France PreÅ¡eren (2007 -)|
-C2006/254/04|si|2016|NA|u|France PreÅ¡eren (2007 -)|
-C2006/254/04|si|2017|NA|u|France PreÅ¡eren (2007 -)|
-C2006/254/04|si|2018|NA|u|France PreÅ¡eren (2007 -)|
-C2006/254/04|si|2019|NA|u|France PreÅ¡eren (2007 -)|
+C2006/254/04|si|2007|NA|u|France Prešeren (2007 -)|
+C2006/254/04|si|2008|NA|u|France Prešeren (2007 -)|
+C2006/254/04|si|2009|NA|u|France Prešeren (2007 -)|
+C2006/254/04|si|2010|NA|u|France Prešeren (2007 -)|
+C2006/254/04|si|2011|NA|u|France Prešeren (2007 -)|
+C2006/254/04|si|2012|NA|u|France Prešeren (2007 -)|
+C2006/254/04|si|2013|NA|u|France Prešeren (2007 -)|
+C2006/254/04|si|2014|NA|u|France Prešeren (2007 -)|
+C2006/254/04|si|2015|NA|u|France Prešeren (2007 -)|
+C2006/254/04|si|2016|NA|u|France Prešeren (2007 -)|
+C2006/254/04|si|2017|NA|u|France Prešeren (2007 -)|
+C2006/254/04|si|2018|NA|u|France Prešeren (2007 -)|
+C2006/254/04|si|2019|NA|u|France Prešeren (2007 -)|
 
 C2008/273/06|sk|2009|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
 C2008/273/06|sk|2010|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
