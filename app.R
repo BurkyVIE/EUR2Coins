@@ -2,10 +2,29 @@ library(shiny)
 
 source("eur2coins.r")
 
+# JS Funktion um Markierung zu kopieren
+highlight <- '
+             function getSelectionText() {
+               var text = "";
+               if (window.getSelection) {
+                 text = window.getSelection().toString();
+               } else if (document.selection) {
+                 text = document.selection.createRange().text;
+               }
+               return text;
+               }
+
+               document.onmouseup = document.onkeyup = document.onselectionchange = function() {
+                 var selection = getSelectionText();
+                 Shiny.onInputChange("mydata", selection);
+               };
+               '
+
 ### UI
 ui <- navbarPage(title = "EUR 2", id = "EUR2",
                  tabPanel("identifizieren",
                           includeCSS(path = "style.css"),
+                          tags$script(highlight),
                           fluidPage(
                             h1("EUR 2 Münzen - Übersicht und Sammelerfolg"),
                             fluidRow(
@@ -32,15 +51,18 @@ ui <- navbarPage(title = "EUR 2", id = "EUR2",
                                        HTML('</div>')),
                                      hr(),
                                      h2("Änderung"),
+                                     h3("Qualität"),
+                                     sliderInput(inputId = "qual", label = NULL, min = 0, max = 3, value = 2),
+                                     actionButton(inputId = "do", label = "Ausführen"),
                                      h3("eur2collection.txt"),
                                      actionButton(inputId = "aenderung", label = "Änderung durchgeführt")
                               ),
-                                     column(9,
-                                            h2("Suchergebnisse"),
-                                            h3("Gedenkmünzen"),
-                                            tableOutput(outputId = "suche_g"),
-                                            h3("Umlaufmünzen"),
-                                            tableOutput(outputId = "suche_u")
+                              column(9,
+                                     h2("Suchergebnisse"),
+                                     h3("Gedenkmünzen"),
+                                     tableOutput(outputId = "suche_g"),
+                                     h3("Umlaufmünzen"),
+                                     tableOutput(outputId = "suche_u")
                               )
                             )
                           )
@@ -69,9 +91,31 @@ ui <- navbarPage(title = "EUR 2", id = "EUR2",
 ### Server
 server <- function(input, output, session) {
 
+  observeEvent(input$id_reset, {
+    updateTextInput(session, inputId = "id", value = character(0))
+  })
+  
+  observeEvent(input$abb_reset, {
+    updateTextInput(session, inputId = "abb", value = character(0))
+  })
+
+  observeEvent(input$do, {
+    paste(input$mydata, input$qual, sep = "-") %>% 
+      writeClipboard()
+  })
+ 
+#  output$eintrag <- renderPrint(selection())
+#  selection <- eventReactive(input$do, {
+#    paste(input$mydata, input$qual, sep = "-") %>% 
+#      writeClipboard()
+#  })
+
+  observeEvent(input$aenderung, {
+    source("eur2collection.r")
+  })
+  
   output$suche_g <- renderTable(spacing = "xs", {tbl_g()}, sanitize.text.function = function(x) x)
   tbl_g <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung), {
-    source("eur2collection.r")
     coins %>%
       left_join(collection %>% 
                   select(ID, Qualität, Zeilennummer),
@@ -118,15 +162,7 @@ server <- function(input, output, session) {
       select(-Ausgabe, -Münzart)
   }, ignoreNULL = FALSE)
   
-  observeEvent(input$id_reset, {
-    updateTextInput(session, inputId = "id", value = character(0))
-  })
-  
-  observeEvent(input$abb_reset, {
-    updateTextInput(session, inputId = "abb", value = character(0))
-  })
-
-  output$zsf_jahr <- renderTable(spacing = "xs", {zsf_tbl_jahr()}, sanitize.text.function = function(x) x)
+  output$zsf_jahr <- renderTable(spacing = "xs", align = c("rrrl"), {zsf_tbl_jahr()}, sanitize.text.function = function(x) x)
   zsf_tbl_jahr <- eventReactive(input$coll_aend, {
     left_join(coins %>% group_by(Jahr = str_sub(ID, 1, 4)) %>% count(),
               collection %>% group_by(Jahr = str_sub(ID, 1, 4)) %>% count(),
