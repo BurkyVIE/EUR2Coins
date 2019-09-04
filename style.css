@@ -24,6 +24,10 @@ code {
   color: #440154;
 }
 
+.beschr {
+  font-size: 90%;
+}
+
 .mono {
   font-family: monospace, sans-serif;
 }
