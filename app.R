@@ -1,6 +1,7 @@
 library(shiny)
 
 source("eur2coins.r")
+source("eur2collection.r")
 
 # JS Funktion um Markierung zu kopieren
 highlight <- '
@@ -16,20 +17,21 @@ return text;
 
 document.onmouseup = document.onkeyup = document.onselectionchange = function() {
 var selection = getSelectionText();
-Shiny.onInputChange("mydata", selection);
+Shiny.onInputChange("myselection", selection);
 };
 '
 
 ### UI
-ui <- navbarPage(title = "EUR 2", id = "EUR2",
+ui <- fluidPage(includeCSS(path = "style.css"),
+navbarPage(title = "EUR 2", id = "EUR2",
                  tabPanel("identifizieren",
-                          includeCSS(path = "style.css"),
+                          
                           tags$script(highlight),
                           fluidPage(
                             h1("EUR 2 Münzen - Übersicht und Sammelerfolg"),
                             fluidRow(
                               column(3,
-                                     h2("Suche"),
+                                     h2("Anzeige"),
                                      h3("Sammlung"),
                                      checkboxInput(inputId = "sammlung", label = "nur Sammlung"),
                                      h3("Münz ID"),
@@ -49,8 +51,7 @@ ui <- navbarPage(title = "EUR 2", id = "EUR2",
                                      ),
                                      p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld Abbildung. Groß-/ Kleinschreibung wird ignoriert.",
                                        HTML('</div>')),
-                                     hr(),
-                                     h2("Änderung"),
+                                     h2("Anlage"),
                                      h3("Qualität"),
                                      fluidRow(
                                        column(3, actionButton(inputId = "q0", label = "0")),
@@ -58,12 +59,13 @@ ui <- navbarPage(title = "EUR 2", id = "EUR2",
                                        column(3, actionButton(inputId = "q2", label = "2")),
                                        column(3, actionButton(inputId = "q3", label = "3"))
                                      ),
-                                     sliderInput(inputId = "qual", label = NULL, min = 0, max = 3, value = 2),
-                                     actionButton(inputId = "do", label = "Zwischenablage"),
-                                     p(HTML("<div class = 'beschr'>"), "Kopiere Markierung ergänzt um Qualität in die Zwischenablage.",
+                                     p(HTML("<div class = 'beschr'>"), "Stelle Markierung ergänzt um Qualität ans Ende von ",em("eur2collection.txt"),
                                        HTML('</div>')),
+                                     h2("Änderung"),
                                      h3("eur2collection.txt"),
-                                     actionButton(inputId = "aenderung", label = "Änderung durchgeführt")
+                                     actionButton(inputId = "aenderung", label = "Änderung durchgeführt"),
+                                     p(HTML("<div class = 'beschr'>"), "Manuelle Änderung von ", em("eur2collection.txt"), ", zB Münztausch",
+                                     HTML('</div>'))
                               ),
                               column(9,
                                      h2("Suchergebnisse"),
@@ -94,7 +96,7 @@ ui <- navbarPage(title = "EUR 2", id = "EUR2",
                             )
                           )
                  )
-)
+))
 
 ### Server
 server <- function(input, output, session) {
@@ -108,16 +110,36 @@ server <- function(input, output, session) {
   })
   
   observeEvent(input$do, {
-    paste(input$mydata, input$qual, sep = "-") %>% 
+    paste(input$myselection, input$qual, sep = "-") %>% 
       writeClipboard()
   })
   
-  observeEvent(input$aenderung, {
+  observeEvent(input$q0, {
+    tmp <- paste0(input$myselection, "-0")
+    write(tmp, file = "eur2collection.txt", append = TRUE)
+  })
+  observeEvent(input$q1, {
+    tmp <- paste0(input$myselection, "-1")
+    write(tmp, file = "eur2collection.txt", append = TRUE)
+  })
+  
+  observeEvent(input$q2, {
+    tmp <- paste0(input$myselection, "-2")
+    write(tmp, file = "eur2collection.txt", append = TRUE)
+  })
+  
+  observeEvent(input$q3, {
+    tmp <- paste0(input$myselection, "-3")
+    write(tmp, file = "eur2collection.txt", append = TRUE)
+  })
+
+    
+  observeEvent(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     source("eur2collection.r")
   })
   
   output$suche_g <- renderTable(spacing = "xs", {tbl_g()}, sanitize.text.function = function(x) x)
-  tbl_g <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung), {
+  tbl_g <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     coins %>%
       left_join(collection %>% 
                   select(ID, Qualität, Zeilennummer),
@@ -136,12 +158,13 @@ server <- function(input, output, session) {
              Zeilennummer = paste0("<div class='mono'>", replace_na(Zeilennummer, " "), "</div>")) %>% 
       rename(Jahr = Prägejahr,
              Mzz = Münzzeichen,
+             'Münz ID' = ID,
              ZNr = Zeilennummer) %>% 
       select(-Ausgabe, -Münzart)
-  }, ignoreNULL = FALSE)
+  })
   
   output$suche_u <- renderTable(spacing = "xs", {tbl_u()}, sanitize.text.function = function(x) x)
-  tbl_u <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung), {
+  tbl_u <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     coins %>%
       left_join(collection %>% 
                   select(ID, Qualität, Zeilennummer),
@@ -160,9 +183,10 @@ server <- function(input, output, session) {
              Zeilennummer = paste0("<div class='mono'>", replace_na(Zeilennummer, " "), "</div>")) %>% 
       rename(Jahr = Prägejahr,
              Mzz = Münzzeichen,
+             'Münz ID' = ID,
              ZNr = Zeilennummer) %>% 
       select(-Ausgabe, -Münzart)
-  }, ignoreNULL = FALSE)
+  })
   
   output$zsf_jahr <- renderTable(spacing = "xs", align = c("rrrl"), {zsf_tbl_jahr()}, sanitize.text.function = function(x) x)
   zsf_tbl_jahr <- eventReactive(input$coll_aend, {
