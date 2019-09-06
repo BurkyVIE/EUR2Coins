@@ -76,6 +76,31 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                          )
                                        )
                                      ),
+                            tabPanel("ablegen",
+                                     fluidPage(
+                                       h1("EUR 2 Münzen - Ablage"),
+                                       fluidRow(
+                                         column(width = 3,
+                                                h2("Auswahl"),
+                                                h3("Box"),
+                                                sliderInput(inputId = "box", label = NULL, min = 1, max = 2, step = 1, value = 1),
+                                                h3("Tableau"),
+                                                sliderInput(inputId = "tableau", label = NULL, min = 1, max = 6, step = 1,  value = 1),
+                                                h2("Suche"),
+                                                h3("Zeilennummer"),
+                                                fluidRow(
+                                                  column(9, textInput(inputId = "znr", label = NULL, , value = pull(count(collection)))),
+                                                  column(3, actionButton(inputId = "gehe_znr", label = "OK"))
+                                                )
+                                                ),
+                                         column(width = 9,
+                                               h2("Ansicht"),
+                                               h3(textOutput(outputId = "adresse")),
+                                                  tableOutput(outputId = "tableau")
+                                               )
+                                         )
+                                       )
+                                     ),
                             tabPanel("zusammenfassen",
                                      fluidPage(
                                        h1("EUR 2 Münzen - Sammelerfolg"),
@@ -93,20 +118,6 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                 tableOutput(outputId = "zsf_qual")
                                                 )
                                          )
-                                       )
-                                     ),
-                            tabPanel("ablegen",
-                                     fluidPage(
-                                       h1("EUR 2 Münzen - Ablage"),
-                                       fluidRow(
-                                         column(width = 3,
-                                                h2("Auswahl"),
-                                                sliderInput(inputId = "tableau", label = NULL, min = 1, max = 6, value = 1)
-                                                ),
-                                         column(width = 9,
-                                               h2("Tableau"),
-                                                  tableOutput(outputId = "tableau"))
-                                               )
                                        )
                                      )
                             )
@@ -236,15 +247,39 @@ server <- function(input, output, session) {
                 Anteil = Anzahl / dim(collection)[1] * 100)
   }, ignoreNULL = FALSE)
   
+  observeEvent(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    updateSliderInput(session, inputId = "box", value = pull(count(collection)) %/% 144 + 1)
+    updateSliderInput(session, inputId = "tableau", value = pull(count(collection)) %/% 24 %% 6 + 1)
+    updateTextInput(session, inputId = "znr", value = pull(count(collection)))
+  })
+
+  observeEvent(input$gehe_znr, {
+    updateSliderInput(session, inputId = "box", value = as.integer(input$znr) %/% 144 + 1)
+    updateSliderInput(session, inputId = "tableau", value = as.integer(input$znr) %/% 24 %% 6 + 1)
+    updateTextInput(session, inputId = "znr", value = pull(count(collection)))
+  })
+  
+  output$adresse <- renderText({
+    paste0("Box ", input$box, ", Tableau ", input$tableau)
+  })
+  
   output$tableau <- renderTable({erst_tab()}, bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
-  erst_tab <- eventReactive(c(input$tableau, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+  erst_tab <- eventReactive(c(input$box, input$tableau, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     collection %>% 
-      filter(Zeilennummer >= (input$tableau - 1) * 24 + 1, Zeilennummer <= input$tableau * 24) %>% 
+      filter(Zeilennummer >= (input$box - 1) * 144 + (input$tableau - 1) * 24 + 1,
+             Zeilennummer <= (input$box - 1) * 144 + input$tableau * 24) %>% 
       arrange(Zeilennummer) %>%
-      mutate(ID = paste0("<div class = 'mono'>", str_sub(ID, 1, 4), " ", toupper(str_sub(ID, 5, 6)), "<br>", toupper(str_sub(ID, 7, 7)), " ", str_sub(ID, 8, 9), "</div>")) %>% 
+      mutate(Qualität = case_when(is.na(Qualität) ~ "",
+                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
+                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
+                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
+                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
+                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
+             ID = paste0("<div class='mono'>", str_sub(ID, 1, 4), " ", toupper(str_sub(ID, 5, 6)), "<br>", toupper(str_sub(ID, 7, 7)), " ", str_sub(ID, 8, 9), "<br></div>", Qualität)) %>% 
       pull(ID) -> tmp
     if(length(tmp) < 24) tmp <- c(tmp, rep("", 24 - length(tmp)))
-    matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE, dimnames = list(paste("<b>", ((input$tableau - 1) * 4 + 0:3) * 6, "+</b>"), 1:6))
+    matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE, dimnames = list(paste("<b>", ((input$box - 1) * 144 + (input$tableau - 1) * 24) + (0:3) * 6 + 1,
+                                                                        "+</b>"), 0:5))
   }, ignoreNULL = FALSE)
   
 }
