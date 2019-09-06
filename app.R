@@ -100,7 +100,7 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                        h1("EUR 2 Münzen - Ablage"),
                                        fluidRow(
                                          column(width = 3,
-                                                h2("..."),
+                                                h2("Auswahl"),
                                                 sliderInput(inputId = "tableau", label = NULL, min = 1, max = 6, value = 1)
                                                 ),
                                          column(width = 9,
@@ -236,13 +236,15 @@ server <- function(input, output, session) {
                 Anteil = Anzahl / dim(collection)[1] * 100)
   }, ignoreNULL = FALSE)
   
-  output$tableau <- renderTable({erst_tab()})
+  output$tableau <- renderTable({erst_tab()}, bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
   erst_tab <- eventReactive(c(input$tableau, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     collection %>% 
       filter(Zeilennummer >= (input$tableau - 1) * 24 + 1, Zeilennummer <= input$tableau * 24) %>% 
-      arrange(Zeilennummer) %>% 
-      pull(ID) %>% 
-      matrix(ncol = 6, byrow = TRUE)
+      arrange(Zeilennummer) %>%
+      mutate(ID = paste0("<div class = 'mono'>", str_sub(ID, 1, 4), " ", toupper(str_sub(ID, 5, 6)), "<br>", toupper(str_sub(ID, 7, 7)), " ", str_sub(ID, 8, 9), "</div>")) %>% 
+      pull(ID) -> tmp
+    if(length(tmp) < 24) tmp <- c(tmp, rep("", 24 - length(tmp)))
+    matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE, dimnames = list(paste("<b>", ((input$tableau - 1) * 4 + 0:3) * 6, "+</b>"), 1:6))
   }, ignoreNULL = FALSE)
   
 }
