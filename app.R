@@ -89,8 +89,8 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                 h2("Suche"),
                                                 h3("Zeilennummer"),
                                                 fluidRow(
-                                                  column(9, textInput(inputId = "znr", label = NULL, , value = pull(count(collection)))),
-                                                  column(3, actionButton(inputId = "gehe_znr", label = "OK"))
+                                                  column(9, textInput(inputId = "znr", label = NULL, value = pull(count(collection)))),
+                                                  column(3, actionButton(inputId = "gehe_znr", label = ">>"))
                                                 )
                                                 ),
                                          column(width = 9,
