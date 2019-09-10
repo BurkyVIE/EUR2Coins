@@ -279,7 +279,8 @@ server <- function(input, output, session) {
       pull(ID) -> tmp
     if(length(tmp) < 24) tmp <- c(tmp, rep("", 24 - length(tmp)))
     matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE, dimnames = list(paste("<b>", ((input$box - 1) * 144 + (input$tableau - 1) * 24) + (0:3) * 6 + 1,
-                                                                        "+</b>"), 0:5))
+                                                                        "</b>"),
+                                                                  paste("+", 0:5)))
   }, ignoreNULL = FALSE)
   
 }
