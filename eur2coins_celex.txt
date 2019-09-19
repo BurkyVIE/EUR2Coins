@@ -369,6 +369,7 @@ NA|pt|2019|2019-6-6|g|Madeira - CELEX fehlt|
 NA|lt|2019|2019-6-10|g|Sutartines - CELEX fehlt|
 NA|sm|2019|2019-8-29|g|550. Todestag Filippo Lippis - CELEX fehlt|
 NA|lt|2019|2019-9-10|g|Žemaitija - CELEX fehlt|
+NA|lv|2019|Ò2019-9-17|g|Die aufgehende Sonne - CELEX fehlt|
 
 
 
