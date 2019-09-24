@@ -1,6 +1,6 @@
 library(tidyverse)
 
-read_delim("eur2coins_celex.txt", delim ="|", locale = locale(encoding = "WINDOWS-1252"),
+read_delim("eur2coins_celex.txt", delim ="|", locale = locale(encoding = "UTF-8"),
            col_types = cols(Amtsblatt = col_character(),
                             Land = col_character(),
                             Prägejahr = col_integer(),
