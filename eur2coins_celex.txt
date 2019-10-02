@@ -371,6 +371,7 @@ NA|sm|2019|2019-8-29|g|550. Todestag Filippo Lippis - CELEX fehlt|
 NA|lt|2019|2019-9-10|g|Žemaitija - CELEX fehlt|
 NA|lv|2019|2019-9-17|g|Die aufgehende Sonne - CELEX fehlt|
 NA|lu|2019|2019-9-19|g|100 Jahre Allgemeines Wahlrecht in Luxemburg - CELEX fehlt|
+NA|va|2019|2019-10-1|g|25. Jahrestag der Restaurierung der Sixtinischen Kapelle - CELEX fehlt|
 
 
 
