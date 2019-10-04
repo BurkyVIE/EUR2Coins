@@ -1,28 +1,28 @@
 body {
-  background-color: #efeeee;
+  background-color: #faf0e6;
 }
 
 h1 {
-  color: #00b46e;
+  color: #3f4788;
   font-weight: bold;
   font-size: 26px;
   text-align: center;
 }
 
 h2 {
-  color: #77b790;
+  color: #277e8e;
   font-weight: bold;
   font-size: 21px;
 }
 
 h3 {
-  color: #9fc9ac;
+  color: #2bb17f;
   font-weight: bold;
   font-size: 16px;
 }
 
 code {
-  color: #001e50;
+  color: #440154;
 }
 
 .beschr {
@@ -35,5 +35,5 @@ code {
 }
 
 .bar {
-  color: #696485;
+  color: #2bb17f;
 }
