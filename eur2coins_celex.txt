@@ -352,6 +352,7 @@ C2018/466/08|de|2019|2019-1-29|g|70. Jahrestag der Gründung des Bundesrates|A,D
 C2018/466/09|es|2019|2019-2-1|g|Unesco-Welterbe — Avilas Altstadt und die Kirchen außerhalb ihrer Stadtmauer|
 C2018/466/10|it|2019|2019-1-25|g|500. Todestag von Leonardo da Vinci|
 C2018/466/11|lu|2019|2018-12-27|g|100. Jahrestag der Thronbesteigung von Großherzogin Charlotte|
+C2019/057/11|fr|2019|2019-10-10|g|30. Jahrestag des Falls der Berliner Mauer|
 C2019/057/12|ie|2019|2019-1-2|g|100 Jahre Dáil Éireann (irisches Parlament)|
 C2019/130/06|ad|2019|2019-3-11|g|Ski-Weltcup-Finale 2019|
 C2019/189/08|sk|2019|2019-4-25|g|100. Todestag von Milan Rastislav Štefánik|
@@ -372,6 +373,7 @@ NA|lt|2019|2019-9-10|g|Žemaitija - CELEX fehlt|
 NA|lv|2019|2019-9-17|g|Die aufgehende Sonne - CELEX fehlt|
 NA|lu|2019|2019-9-19|g|100 Jahre Allgemeines Wahlrecht in Luxemburg - CELEX fehlt|
 NA|va|2019|2019-10-1|g|25. Jahrestag der Restaurierung der Sixtinischen Kapelle - CELEX fehlt|
+NA|de|2019|2019-10-10|g|30. Jahrestag des Falls der Berliner Mauer|A,D,F,G,J
 
 
 
