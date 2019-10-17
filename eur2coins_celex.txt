@@ -363,17 +363,18 @@ C2019/189/12|gr|2019|2019-7-11|g|150. Todestag des Dichters Andreas Kalvos|
 C2019/192/10|ee|2019|2019-5-29|g|150-jähriges Bestehen des Liederfests|
 C2019/192/11|sm|2019|2019-4-4|g|500. Todestag von Leonardo da Vinci|
 C2019/192/12|va|2019|2019-5-7|g|90. Jahrestag der Gründung des Staates Vatikanstadt|
+C2019/351/08|de|2019|2019-10-10|g|30. Jahrestag des Falls der Berliner Mauer|A,D,F,G,J
+C2019/351/09|fi|2019|NA|g|Verfassungsgesetz Finnlands|
+C2019/351/10|lt|2019|2019-9-10|g|Samogitien (ethnografische Region Litauens)|
+C2019/351/11|lt|2019|2019-6-10|g|Sutartinės (litauische mehrteilige Lieder — aufgenommen in die Repräsentative Liste des Immateriellen Kulturerbes der Menschheit der Unesco)|
 
 NA|pt|2019|2019-5-8|g|500. Jahrestag der Weltumrundung durch Magellan - CELEX fehlt|
 NA|mt|2019|2019-5-13|g|Tempel von Ta’ Ħaġrat - CELEX fehlt|
 NA|pt|2019|2019-6-6|g|600. Jahrestag der Entdeckung Madeiras und Porto Santos - CELEX fehlt|
-NA|lt|2019|2019-6-10|g|Sutartinės, polyphone litauische Volkslieder - CELEX fehlt|
 NA|sm|2019|2019-8-29|g|550. Todestag Filippo Lippis - CELEX fehlt|
-NA|lt|2019|2019-9-10|g|Žemaitija - CELEX fehlt|
 NA|lv|2019|2019-9-17|g|Die aufgehende Sonne - CELEX fehlt|
 NA|lu|2019|2019-9-19|g|100 Jahre Allgemeines Wahlrecht in Luxemburg - CELEX fehlt|
 NA|va|2019|2019-10-1|g|25. Jahrestag der Restaurierung der Sixtinischen Kapelle - CELEX fehlt|
-NA|de|2019|2019-10-10|g|30. Jahrestag des Falls der Berliner Mauer - CELEX fehlt|A,D,F,G,J
 
 
 
