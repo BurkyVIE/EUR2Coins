@@ -373,8 +373,7 @@ C2019/352/15|mt|2019|2019-5-13|g|Unesco-Weltkulturerbe — prähistorische Tempe
 C2019/352/16|mt|2019|2019-10-21|g|Natur und Umwelt|
 C2019/352/17|si|2019|NA|g|100. Geburtstag der Gründung der Universität Ljubljana|
 C2019/356/03|pt|2019|2019-6-6|g|600 Jahre der Entdeckung des Archipels von Madeira durch die portugiesischen Seefahrer Bartolomeu Perestrelo und Tristão Vaz|
-C2019/356/04|pt|2019|2019-5-8|g|500 Jahre der ersten Weltumsegelung, die vom portugiesischen Entdecker und Navigator Fernão De Magalhães
-organisiert und geleitet wurde|
+C2019/356/04|pt|2019|2019-5-8|g|500 Jahre der ersten Weltumsegelung, die vom portugiesischen Entdecker und Navigator Fernão De Magalhães organisiert und geleitet wurde|
 C2019/356/05|sm|2019|2019-8-29|g|550. Todestag von Filippo Lippi|
 C2019/356/06|va|2019|2019-10-1|g|Sixtinische Kapelle — Ende der Restaurierung 1994-2019|
 
