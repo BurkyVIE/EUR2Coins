@@ -167,7 +167,7 @@ server <- function(input, output, session) {
     source("eur2collection.r")
   })
   
-  output$suche_g <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_g()}, sanitize.text.function = function(x) x)
+  output$suche_g <- renderTable(spacing = "xs", align = c("rllllrll"), {tbl_g()}, sanitize.text.function = function(x) x)
   tbl_g <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     coins %>%
       left_join(collection %>% 
@@ -192,7 +192,7 @@ server <- function(input, output, session) {
       select(-Ausgabe, -Münzart)
   })
   
-  output$suche_u <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_u()}, sanitize.text.function = function(x) x)
+  output$suche_u <- renderTable(spacing = "xs", align = c("rllllrll"), {tbl_u()}, sanitize.text.function = function(x) x)
   tbl_u <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     coins %>%
       left_join(collection %>% 
@@ -259,7 +259,7 @@ server <- function(input, output, session) {
   observeEvent(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     updateSliderInput(session, inputId = "box", value = (pull(count(collection)) -1) %/% 144 + 1)
     updateSliderInput(session, inputId = "tableau", value = (pull(count(collection)) -1) %/% 24 %% 6 + 1)
-    updateTextInput(session, inputId = "znr", value = paste0(tail(collection$Box, 1), ",", tail(collection$Tableau, 1)))
+    updateTextInput(session, inputId = "znr", value = paste0(tail(collection$Box, 1), ".", tail(collection$Tableau, 1)))
   })
   
   observeEvent(input$gehe_znr, {
