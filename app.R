@@ -93,8 +93,8 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                   column(3, actionButton(inputId = "gehe_znr", label = ">>"))
                                                 ),
                                                   p(HTML("<div class = 'beschr'>"), "Eingabe von Box und Tableau", 
-                                                    em("ID"), "; Aufbau: ", code("b*t"), ", wobei ", code("b"),
-                                                    " = Box", ", ", code("t"), " = Tableau und ",
+                                                    em("ID"), "; Aufbau: ", code("B*T"), ", wobei ", code("B"),
+                                                    " = Box", ", ", code("T"), " = Tableau und ",
                                                     code("*"), " = beliebiges Zeichen.", HTML('</div>'))
                                          ),
                                          column(width = 9,
