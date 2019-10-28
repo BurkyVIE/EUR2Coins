@@ -89,13 +89,17 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                 h2("Schnellwahl"),
                                                 h3("Box, Tableau"),
                                                 fluidRow(
+                                                  column(9, textInput(inputId = "boxtab", label = NULL, value = pull(count(collection)))),
+                                                  column(3, actionButton(inputId = "gehe_boxtab", label = ">>"))
+                                                ),
+                                                  p(HTML("<div class = 'beschr'>"), "Eingabe von Box und Tableau; Aufbau: ",
+                                                    code("BT"), ", wobei ", code("B"), " = Box und", code("T"), " = Tableau.",
+                                                    HTML('</div>')),
+                                                h3("Zeilennummer"),
+                                                fluidRow(
                                                   column(9, textInput(inputId = "znr", label = NULL, value = pull(count(collection)))),
                                                   column(3, actionButton(inputId = "gehe_znr", label = ">>"))
                                                 ),
-                                                  p(HTML("<div class = 'beschr'>"), "Eingabe von Box und Tableau", 
-                                                    em("ID"), "; Aufbau: ", code("B*T"), ", wobei ", code("B"),
-                                                    " = Box", ", ", code("T"), " = Tableau und ",
-                                                    code("*"), " = beliebiges Zeichen.", HTML('</div>'))
                                          ),
                                          column(width = 9,
                                                 h2("Ansicht"),
@@ -167,7 +171,7 @@ server <- function(input, output, session) {
     source("eur2collection.r")
   })
   
-  output$suche_g <- renderTable(spacing = "xs", align = c("rllllrll"), {tbl_g()}, sanitize.text.function = function(x) x)
+  output$suche_g <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_g()}, sanitize.text.function = function(x) x)
   tbl_g <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     coins %>%
       left_join(collection %>% 
@@ -187,12 +191,11 @@ server <- function(input, output, session) {
              Ablage = paste0("<div class='mono'>", replace_na(Ablage, " "), "</div>")) %>% 
       rename(Jahr = Prägejahr,
              Mzz = Münzzeichen,
-             'Münz ID' = ID,
-             Pos = Ablage) %>% 
+             'Münz ID' = ID) %>% 
       select(-Ausgabe, -Münzart)
   })
   
-  output$suche_u <- renderTable(spacing = "xs", align = c("rllllrll"), {tbl_u()}, sanitize.text.function = function(x) x)
+  output$suche_u <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_u()}, sanitize.text.function = function(x) x)
   tbl_u <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     coins %>%
       left_join(collection %>% 
@@ -212,8 +215,7 @@ server <- function(input, output, session) {
              Ablage = paste0("<div class='mono'>", replace_na(Ablage, " "), "</div>")) %>% 
       rename(Jahr = Prägejahr,
              Mzz = Münzzeichen,
-             'Münz ID' = ID,
-             Pos = Ablage) %>% 
+             'Münz ID' = ID) %>% 
       select(-Ausgabe, -Münzart)
   })
   
@@ -259,17 +261,28 @@ server <- function(input, output, session) {
   observeEvent(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     updateSliderInput(session, inputId = "box", value = (pull(count(collection)) -1) %/% 144 + 1)
     updateSliderInput(session, inputId = "tableau", value = (pull(count(collection)) -1) %/% 24 %% 6 + 1)
-    updateTextInput(session, inputId = "znr", value = paste0(tail(collection$Box, 1), ".", tail(collection$Tableau, 1)))
+    updateTextInput(session, inputId = "boxtab", value = paste0(tail(collection$Box, 1), tail(collection$Tableau, 1)))
+    updateTextInput(session, inputId = "znr", value = tail(collection$Zeilennummer, 1))
+  })
+  
+  observeEvent(input$gehe_boxtab, {
+    updateSliderInput(session, inputId = "box", value = as.integer(str_sub(input$boxtab, 1, 1)))
+    updateSliderInput(session, inputId = "tableau", value = as.integer(str_sub(input$boxtab, 2, 2)))
+    updateTextInput(session, inputId = "boxtab", value = paste0(tail(collection$Box, 1), tail(collection$Tableau, 1)))
+    updateTextInput(session, inputId = "znr", value = tail(collection$Zeilennummer, 1))
   })
   
   observeEvent(input$gehe_znr, {
-    updateSliderInput(session, inputId = "box", value = as.integer(str_sub(input$znr, 1, 1)))
-    updateSliderInput(session, inputId = "tableau", value = as.integer(str_sub(input$znr, 3, 3)))
-    updateTextInput(session, inputId = "znr", value = paste0(tail(collection$Box, 1), ",", tail(collection$Tableau, 1)))
+    updateSliderInput(session, inputId = "box", value = as.integer(input$znr) %/% 145 + 1)
+    updateSliderInput(session, inputId = "tableau", value = (as.integer(input$znr) - 1) %% 144 %/% 24 + 1)
+    updateTextInput(session, inputId = "boxtab", value = paste0(tail(collection$Box, 1), tail(collection$Tableau, 1)))
+    updateTextInput(session, inputId = "znr", value = tail(collection$Zeilennummer, 1))
   })
-  
-  output$adresse <- renderText({
-    paste0("Box ", input$box, ", Tableau ", input$tableau)
+
+    output$adresse <- renderText({
+    paste0(input$box, input$tableau, "11x", sprintf("%04d", (input$box - 1) * 144 + (input$tableau - 1) * 24 + 1),
+           " bis ",
+           input$box, input$tableau, "64x", sprintf("%04d", (input$box - 1) * 144 + input$tableau * 24))
   })
   
   output$tableau <- renderTable({erst_tab()}, bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
@@ -287,11 +300,17 @@ server <- function(input, output, session) {
              ID = paste0("<div class='mono'>", str_sub(ID, 1, 4), " ", toupper(str_sub(ID, 5, 6)), "<br>", toupper(str_sub(ID, 7, 7)), " ", str_sub(ID, 8, 9), "<br></div>", Qualität)) %>% 
       pull(ID) -> tmp
     if(length(tmp) < 24) tmp <- c(tmp, rep("", 24 - length(tmp)))
-    matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE, dimnames = list(paste0("<b>x", 1:4, "</b>"), paste0(1:6, "x")))
+    matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE,
+           dimnames = list(
+             paste0("<b>..", 1:4, "<br>x<br>",
+                    sprintf("%04d", (input$box - 1) * 144 + (input$tableau - 1) * 24 + (0:3) * 6, "</b>")
+                    ),
+             paste0(input$box, input$tableau, 1:6, "..<br>x<br>+", 1:6)
+             )
+           )
   }, ignoreNULL = FALSE)
   
 }
 
 # Run the application 
 shinyApp(ui = ui, server = server)
-                                
