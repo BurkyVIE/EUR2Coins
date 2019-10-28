@@ -42,14 +42,14 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                   em("ID"), "; Aufbau ID: ", code("JJJJLLA00"), ", wobei ", code("JJJJ"),
                                                   " = Prägejahr", ", ", code("LL"), " = Land", ", ", code("A"),
                                                   " = Münzart", " und ", code("0"), " = fortlaufende Nummer.", code("."),
-                                                  " als Joker ist zulässig.", HTML('</div>')),
+                                                  " als Joker ist zulässig.", HTML("</div>")),
                                                 h3("Abbildung"),
                                                 fluidRow(
                                                   column(9, textInput(inputId = "abb", label = NULL)),
                                                   column(3, actionButton(inputId = "abb_reset", label = "X"))
                                                 ),
                                                 p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld Abbildung. Groß-/ Kleinschreibung wird ignoriert.",
-                                                  HTML('</div>')),
+                                                  HTML("</div>")),
                                                 h2("Anlage"),
                                                 h3("Qualität"),
                                                 fluidRow(
@@ -58,13 +58,13 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                   column(width = 3, actionButton(inputId = "q2", label = "2")),
                                                   column(width = 3, actionButton(inputId = "q3", label = "3"))
                                                 ),
-                                                p(HTML("<div class = 'beschr'>"), "Stelle Markierung ergänzt um Qualität ans Ende von ",em("eur2collection.txt"),
-                                                  HTML('</div>')),
+                                                p(HTML("<div class = 'beschr'>"), "Stelle Markierung ergänzt um Qualität ans Ende von ", em("eur2collection.txt"),
+                                                  HTML("</div>")),
                                                 h2("Änderung"),
                                                 h3("eur2collection.txt"),
                                                 actionButton(inputId = "aenderung", label = "Änderung durchgeführt"),
                                                 p(HTML("<div class = 'beschr'>"), "Manuelle Änderung von ", em("eur2collection.txt"), ", zB Münztausch",
-                                                  HTML('</div>'))
+                                                  HTML("</div>"))
                                          ),
                                          column(width = 9,
                                                 h2("Ergebnisse"),
@@ -99,7 +99,7 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                 fluidRow(
                                                   column(9, textInput(inputId = "znr", label = NULL, value = pull(count(collection)))),
                                                   column(3, actionButton(inputId = "gehe_znr", label = ">>"))
-                                                ),
+                                                )
                                          ),
                                          column(width = 9,
                                                 h2("Ansicht"),
