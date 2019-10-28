@@ -94,7 +94,7 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                 ),
                                                   p(HTML("<div class = 'beschr'>"), "Eingabe von Box und Tableau; Aufbau: ",
                                                     code("BT"), ", wobei ", code("B"), " = Box und", code("T"), " = Tableau.",
-                                                    HTML('</div>')),
+                                                    HTML("</div>")),
                                                 h3("Zeilennummer"),
                                                 fluidRow(
                                                   column(9, textInput(inputId = "znr", label = NULL, value = pull(count(collection)))),
