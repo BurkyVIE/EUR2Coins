@@ -382,6 +382,7 @@ NA|ad|2019|2019-11-11|g|600 Jahre Consell de la Terra - CELEX fehlt|
 NA|ee|2019|2019-11-19|g|100. Jahrestag der Gründung der estnischsprachigen Universität Tartu - CELEX fehlt|
 
 
+
 C2014/062/07|ad|2014|NA|u|Staatswappen von Andorra (2014 -)|
 C2014/062/07|ad|2015|NA|u|Staatswappen von Andorra (2014 -)|
 C2014/062/07|ad|2016|NA|u|Staatswappen von Andorra (2014 -)|
