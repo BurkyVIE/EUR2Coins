@@ -150,20 +150,24 @@ server <- function(input, output, session) {
   observeEvent(input$q0, {
     tmp <- paste0(input$myselection, "-0")
     write(tmp, file = "eur2collection.txt", append = TRUE)
+    Sys.sleep(1)
   })
   observeEvent(input$q1, {
     tmp <- paste0(input$myselection, "-1")
     write(tmp, file = "eur2collection.txt", append = TRUE)
+    Sys.sleep(1)
   })
   
   observeEvent(input$q2, {
     tmp <- paste0(input$myselection, "-2")
     write(tmp, file = "eur2collection.txt", append = TRUE)
+    Sys.sleep(1)
   })
   
   observeEvent(input$q3, {
     tmp <- paste0(input$myselection, "-3")
     write(tmp, file = "eur2collection.txt", append = TRUE)
+    Sys.sleep(1)
   })
   
   
