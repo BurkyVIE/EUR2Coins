@@ -379,6 +379,9 @@ C2019/356/06|va|2019|2019-10-1|g|Sixtinische Kapelle — Ende der Restaurierung 
 C2019/409/06|ad|2019|2019-11-11|g|600 Jahre Landesrat|
 C2019/409/07|ee|2019|2019-11-19|g|Der 100. Jahrestag der Universität Tartu|
 
+NA|it|2020|2020-01-20|g|80. Jahrestag der Gründung des nationalen Feuerwehrkorps|
+NA|de|2020|2020-1-28|g|Brandenburg|A,D,F,G,J
+
 
 
 C2014/062/07|ad|2014|NA|u|Staatswappen von Andorra (2014 -)|
