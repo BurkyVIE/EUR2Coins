@@ -453,6 +453,7 @@ C2001/373/01|de|2014|NA|u|Bundesadler (2002 -)|A,D,F,G,J
 C2001/373/01|de|2016|NA|u|Bundesadler (2002 -)|A,D,F,G,J
 C2001/373/01|de|2017|NA|u|Bundesadler (2002 -)|A,D,F,G,J
 C2001/373/01|de|2019|NA|u|Bundesadler (2002 -)|A,D,F,G,J
+C2001/373/01|de|2020|NA|u|Bundesadler (2002 -)|A,D,F,G,J
 
 C2010/309/04|ee|2011|NA|u|Landesumriss (2011 -)|
 C2010/309/04|ee|2016|NA|u|Landesumriss (2011 -)|
