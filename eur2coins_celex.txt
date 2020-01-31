@@ -382,8 +382,8 @@ C2019/409/07|ee|2019|2019-11-19|g|Der 100. Jahrestag der Universität Tartu|
 NA|it|2020|2020-1-20|g|80. Jahrestag der Gründung des nationalen Feuerwehrkorps|
 NA|ee|2020|2020-1-27|g|200. Jahrestag der Entdeckung der Antarktis|
 NA|de|2020|2020-1-28|g|Brandenburg|A,D,F,G,J
+NA|fr|2020|2020-1-31|g|Charles de Gaulle|
 NA|ee|2020|2020-2-1|g|100. Jahrestag des Vertrages von Tartu|
-NA|fr|2020|2020-2-1|g|Charles de Gaulle|
 NA|es|2020|2020-2-1|g|Mudéjar Architecture of Aragon|
 
 
