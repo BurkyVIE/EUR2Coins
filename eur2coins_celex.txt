@@ -383,8 +383,8 @@ NA|it|2020|2020-1-20|g|80. Jahrestag der Gründung des nationalen Feuerwehrkorps
 NA|ee|2020|2020-1-27|g|200. Jahrestag der Entdeckung der Antarktis|
 NA|de|2020|2020-1-28|g|Brandenburg|A,D,F,G,J
 NA|fr|2020|2020-1-31|g|Charles de Gaulle|
+NA|es|2020|2020-1-31|g|Mudéjar Architecture of Aragon|
 NA|ee|2020|2020-2-1|g|100. Jahrestag des Vertrages von Tartu|
-NA|es|2020|2020-2-1|g|Mudéjar Architecture of Aragon|
 
 
 
