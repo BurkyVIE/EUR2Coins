@@ -444,6 +444,7 @@ C2007/248/07|cy|2016|NA|u|Idol von Pomos (2008 -)|
 C2007/248/07|cy|2017|NA|u|Idol von Pomos (2008 -)|
 C2007/248/07|cy|2018|NA|u|Idol von Pomos (2008 -)|
 C2007/248/07|cy|2019|NA|u|Idol von Pomos (2008 -)|
+C2007/248/07|cy|2020|NA|u|Idol von Pomos (2008 -)|
 
 C2001/373/01|de|2002|NA|u|Bundesadler (2002 -)|A,D,F,G,J
 C2001/373/01|de|2003|NA|u|Bundesadler (2002 -)|A,D,F,G,J
@@ -485,6 +486,7 @@ C2014/410/06|es|2016|NA|u|König Felipe VI. (2015 -)|
 C2014/410/06|es|2017|NA|u|König Felipe VI. (2015 -)|
 C2014/410/06|es|2018|NA|u|König Felipe VI. (2015 -)|
 C2014/410/06|es|2019|NA|u|König Felipe VI. (2015 -)|
+C2014/410/06|es|2020|NA|u|König Felipe VI. (2015 -)|
 
 C2001/373/01|fi|1999|NA|u|Moltebeere (1999 -2006)|
 C2001/373/01|fi|2000|NA|u|Moltebeere (1999 -2006)|
@@ -716,6 +718,7 @@ C2008/273/06|sk|2016|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
 C2008/273/06|sk|2017|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
 C2008/273/06|sk|2018|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
 C2008/273/06|sk|2019|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
+C2008/273/06|sk|2020|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
 
 C2001/373/01|sm|2002|NA|u|Regierungspalast (2002 - 2016)|
 C2001/373/01|sm|2003|NA|u|Regierungspalast (2002 - 2016)|
