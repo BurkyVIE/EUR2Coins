@@ -568,6 +568,7 @@ C2001/373/01|ie|2016|NA|u|Keltische Harfe (2002 -)|
 C2001/373/01|ie|2017|NA|u|Keltische Harfe (2002 -)|
 C2001/373/01|ie|2018|NA|u|Keltische Harfe (2002 -)|
 C2001/373/01|ie|2019|NA|u|Keltische Harfe (2002 -)|
+C2001/373/01|ie|2020|NA|u|Keltische Harfe (2002 -)|
 
 C2001/373/01|it|2002|NA|u|Dante Alighieri (2002 -)|
 C2001/373/01|it|2003|NA|u|Dante Alighieri (2002 -)|
@@ -592,6 +593,7 @@ C2014/385/05|lt|2015|NA|u|Vytis (2015 -)|
 C2014/385/05|lt|2017|NA|u|Vytis (2015 -)|
 C2014/385/05|lt|2018|NA|u|Vytis (2015 -)|
 C2014/385/05|lt|2019|NA|u|Vytis (2015 -)|
+C2014/385/05|lt|2020|NA|u|Vytis (2015 -)|
 
 C2001/373/01|lu|2002|NA|u|Großherzog Henri (2002 -)|
 C2001/373/01|lu|2003|NA|u|Großherzog Henri (2002 -)|
@@ -610,13 +612,14 @@ C2001/373/01|lu|2016|NA|u|Großherzog Henri (2002 -)|
 C2001/373/01|lu|2017|NA|u|Großherzog Henri (2002 -)|
 C2001/373/01|lu|2018|NA|u|Großherzog Henri (2002 -)|
 C2001/373/01|lu|2019|NA|u|Großherzog Henri (2002 -)|
+C2001/373/01|lu|2020|NA|u|Großherzog Henri (2002 -)|
 
 C2013/309/03|lv|2014|NA|u|Trachtenmädchen (2014 - )|
 C2013/309/03|lv|2015|NA|u|Trachtenmädchen (2014 - )|
 C2013/309/03|lv|2016|NA|u|Trachtenmädchen (2014 - )|
-C2013/309/03|lv|2017|NA|u|Trachtenmädchen (2014 - )|
 C2013/309/03|lv|2018|NA|u|Trachtenmädchen (2014 - )|
 C2013/309/03|lv|2019|NA|u|Trachtenmädchen (2014 - )|
+C2013/309/03|lv|2020|NA|u|Trachtenmädchen (2014 - )|
 
 C2001/373/01|mc|2001|NA|u|Fürst Rainier III. (2001 - 2004)|
 C2001/373/01|mc|2002|NA|u|Fürst Rainier III. (2001 - 2004)|
