@@ -412,6 +412,7 @@ C2001/373/01|at|2014|NA|u|Bertha Freifrau von Suttner (2002 -)|
 C2001/373/01|at|2015|NA|u|Bertha Freifrau von Suttner (2002 -)|
 C2001/373/01|at|2017|NA|u|Bertha Freifrau von Suttner (2002 -)|
 C2001/373/01|at|2019|NA|u|Bertha Freifrau von Suttner (2002 -)|
+C2001/373/01|at|2020|NA|u|Bertha Freifrau von Suttner (2002 -)|
 
 C2001/373/01|be|1999|NA|u|König Albert II. (1999 - 2007)|
 C2001/373/01|be|2000|NA|u|König Albert II. (1999 - 2007)|
@@ -434,6 +435,7 @@ C2014/075/02|be|2016|NA|u|König Philippe (2014 -)|
 C2014/075/02|be|2017|NA|u|König Philippe (2014 -)|
 C2014/075/02|be|2018|NA|u|König Philippe (2014 -)|
 C2014/075/02|be|2019|NA|u|König Philippe (2014 -)|
+C2014/075/02|be|2020|NA|u|König Philippe (2014 -)|
 
 C2007/248/07|cy|2008|NA|u|Idol von Pomos (2008 -)|
 C2007/248/07|cy|2009|NA|u|Idol von Pomos (2008 -)|
@@ -622,6 +624,7 @@ C2001/373/01|lu|2020|NA|u|Großherzog Henri (2002 -)|
 C2013/309/03|lv|2014|NA|u|Trachtenmädchen (2014 - )|
 C2013/309/03|lv|2015|NA|u|Trachtenmädchen (2014 - )|
 C2013/309/03|lv|2016|NA|u|Trachtenmädchen (2014 - )|
+C2013/309/03|lv|2017|NA|u|Trachtenmädchen (2014 - )|
 C2013/309/03|lv|2018|NA|u|Trachtenmädchen (2014 - )|
 C2013/309/03|lv|2019|NA|u|Trachtenmädchen (2014 - )|
 C2013/309/03|lv|2020|NA|u|Trachtenmädchen (2014 - )|
@@ -676,6 +679,7 @@ C2014/046/08|nl|2016|NA|u|König Willem-Alexander (2014 -)|
 C2014/046/08|nl|2017|NA|u|König Willem-Alexander (2014 -)|,b
 C2014/046/08|nl|2018|NA|u|König Willem-Alexander (2014 -)|
 C2014/046/08|nl|2019|NA|u|König Willem-Alexander (2014 -)|
+C2014/046/08|nl|2020|NA|u|König Willem-Alexander (2014 -)|
 
 C2001/373/01|pt|2002|NA|u|Königliches Siegel von 1144 (2002 -)|
 C2001/373/01|pt|2003|NA|u|Königliches Siegel von 1144 (2002 -)|
@@ -709,6 +713,7 @@ C2006/254/04|si|2016|NA|u|France Prešeren (2007 -)|
 C2006/254/04|si|2017|NA|u|France Prešeren (2007 -)|
 C2006/254/04|si|2018|NA|u|France Prešeren (2007 -)|
 C2006/254/04|si|2019|NA|u|France Prešeren (2007 -)|
+C2006/254/04|si|2020|NA|u|France Prešeren (2007 -)|
 
 C2008/273/06|sk|2009|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
 C2008/273/06|sk|2010|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
@@ -741,6 +746,7 @@ C2001/373/01|sm|2016|NA|u|Regierungspalast (2002 - 2016)|
 C2017/066/04|sm|2017|NA|u|Heiliger Marinus (2017 -)|
 C2017/066/04|sm|2018|NA|u|Heiliger Marinus (2017 -)|
 C2017/066/04|sm|2019|NA|u|Heiliger Marinus (2017 -)|
+C2017/066/04|sm|2020|NA|u|Heiliger Marinus (2017 -)|
 
 C2001/373/01|va|2002|NA|u|Papst Johannes Paul II. (2002 - 2005)|
 C2001/373/01|va|2003|NA|u|Papst Johannes Paul II. (2002 - 2005)|
