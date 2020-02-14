@@ -42,14 +42,14 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                   em("ID"), "; Aufbau ID: ", code("JJJJLLA00"), ", wobei ", code("JJJJ"),
                                                   " = Prägejahr", ", ", code("LL"), " = Land", ", ", code("A"),
                                                   " = Münzart", " und ", code("0"), " = fortlaufende Nummer.", code("."),
-                                                  " als Joker ist zulässig.", HTML("</div>")),
+                                                  " als Joker ist zulässig.", HTML('</div>')),
                                                 h3("Abbildung"),
                                                 fluidRow(
                                                   column(9, textInput(inputId = "abb", label = NULL)),
                                                   column(3, actionButton(inputId = "abb_reset", label = "X"))
                                                 ),
                                                 p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld Abbildung. Groß-/ Kleinschreibung wird ignoriert.",
-                                                  HTML("</div>")),
+                                                  HTML('</div>')),
                                                 h2("Anlage"),
                                                 h3("Qualität"),
                                                 fluidRow(
@@ -58,13 +58,13 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                   column(width = 3, actionButton(inputId = "q2", label = "2")),
                                                   column(width = 3, actionButton(inputId = "q3", label = "3"))
                                                 ),
-                                                p(HTML("<div class = 'beschr'>"), "Stelle Markierung ergänzt um Qualität ans Ende von ", em("eur2collection.txt"),
-                                                  HTML("</div>")),
+                                                p(HTML("<div class = 'beschr'>"), "Stelle Markierung ergänzt um Qualität ans Ende von ",em("eur2collection.txt"),
+                                                  HTML('</div>')),
                                                 h2("Änderung"),
                                                 h3("eur2collection.txt"),
                                                 actionButton(inputId = "aenderung", label = "Änderung durchgeführt"),
                                                 p(HTML("<div class = 'beschr'>"), "Manuelle Änderung von ", em("eur2collection.txt"), ", zB Münztausch",
-                                                  HTML("</div>"))
+                                                  HTML('</div>'))
                                          ),
                                          column(width = 9,
                                                 h2("Ergebnisse"),
@@ -94,7 +94,7 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                 ),
                                                   p(HTML("<div class = 'beschr'>"), "Eingabe von Box und Tableau; Aufbau: ",
                                                     code("BT"), ", wobei ", code("B"), " = Box und", code("T"), " = Tableau.",
-                                                    HTML("</div>")),
+                                                    HTML('</div>')),
                                                 h3("Zeilennummer"),
                                                 fluidRow(
                                                   column(9, textInput(inputId = "znr", label = NULL, value = pull(count(collection)))),
@@ -127,13 +127,20 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                          )
                                        )
                                      )
-                            )#,
-                            #tabPanel("Test",
-                            #         fluidPage(
-                            #           h1("Test")
-                            #         )
-                            #)
-                )
+                            ),
+                            tabPanel("DE BL-Serie",
+                                     fluidPage(
+                                       h1("DE - Bundesländerserie"),
+                                       h2("Ansicht"),
+                                       tableOutput(outputId = "debl_tab")
+                                     )#,
+                                     #tabPanel("Test",
+                                     #         fluidPage(
+                                     #           h1("Test")
+                                     #         )
+                                     #)
+                            )
+                            )
 )
 
 ### Server
@@ -150,24 +157,25 @@ server <- function(input, output, session) {
   observeEvent(input$q0, {
     tmp <- paste0(input$myselection, "-0")
     write(tmp, file = "eur2collection.txt", append = TRUE)
-    Sys.sleep(1)
+    Sys.sleep(1.5)
   })
-  observeEvent(input$q1, {
+
+    observeEvent(input$q1, {
     tmp <- paste0(input$myselection, "-1")
     write(tmp, file = "eur2collection.txt", append = TRUE)
-    Sys.sleep(1)
-  })
+    Sys.sleep(1.5)
+    })
   
   observeEvent(input$q2, {
     tmp <- paste0(input$myselection, "-2")
     write(tmp, file = "eur2collection.txt", append = TRUE)
-    Sys.sleep(1)
+    Sys.sleep(1.5)
   })
   
   observeEvent(input$q3, {
     tmp <- paste0(input$myselection, "-3")
     write(tmp, file = "eur2collection.txt", append = TRUE)
-    Sys.sleep(1)
+    Sys.sleep(1.5)
   })
   
   
@@ -312,6 +320,40 @@ server <- function(input, output, session) {
              paste0(input$box, input$tableau, 1:6, "..<br>x<br>+", 1:6)
              )
            )
+  }, ignoreNULL = FALSE)
+  
+  output$debl_tab <- renderTable({debl_tab()}, bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
+  debl_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    left_join(tibble(ID = paste0(rep(2006:2022, each = 5),
+                                 "deg",
+                                 sprintf("%02d",c(1:5, 6:10, 1:5, 6:10, 1:5, 1:5, 1:5, 6:10, 1:5, 6:10, 1:5, 1:5, 6:10, 1:5, 1:5, 1:5, 1:5)) # letzen beiden noch nicht klar!!!
+    )),
+    collection,
+    by = "ID") %>% 
+      select(ID, Ablage, Qualität) %>%
+      mutate(Ablage = coalesce(Ablage, ""),
+             Qualität = case_when(is.na(Qualität) ~ "",
+                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
+                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
+                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
+                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
+                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
+             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
+      pull(ID) -> tmp
+    matrix(tmp, ncol = 5, byrow = TRUE,
+           dimnames = list(
+             paste0("<b>", 2006:2022, ": ",
+                    c("Schleswig-Holstein", "Mecklenburg-Vorpommern", "Hamburg", "Saarland", "Bremen",
+                             "Nordrhein-Westfalen", "Bayern", "Baden-Würtemberg", "Niedersachsen", "Hessen",
+                             "Sachsen", "Rheinland-Pflaz", "Berlin", "Bundesrat", "Brandenburg"), "</b><br>(",
+                    c("Lübecker Holstentor", "Schloss Schwerin", "Hamburger St. Michaelis Kirche",
+                      "Saarbrücker Ludwigskirche", "Bremer Roland und Rathaus", "Kölner Dom",
+                      "Schloss Neuschwanstein", "Kloster Maulbronn", "St. Michaelis Kirche zu Hildesheim",
+                      "Frankfurter Paulskirche", "Dresdner Zwinger", "Porta Nigra",
+                      "Schloss Charlottenburg", "Preußisches Herrenhaus", "Schloss Sanssouci"), ")"),
+             paste0("<b>", c("A", "D", "F", "G", "J"), "</b><br>(", c("Berlin", "München", "Stuttgart", "Karlsruhe", "Hamburg"), ")")
+           )
+    )
   }, ignoreNULL = FALSE)
   
 }
