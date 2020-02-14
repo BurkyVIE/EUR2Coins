@@ -128,18 +128,23 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                        )
                                      )
                             ),
-                            tabPanel("DE BL-Serie",
-                                     fluidPage(
-                                       h1("DE - Bundesländerserie"),
-                                       h2("Ansicht"),
-                                       tableOutput(outputId = "debl_tab")
-                                     )#,
+                            tabPanel("Serien",
+                                     tabsetPanel(id = "Serien",
+                                                 tabPanel("DE",
+                                                          fluidPage(
+                                                            h1("Deutschland"),
+                                                            h2("Bundesländerserie"),
+                                                            tableOutput(outputId = "debl_tab")
+                                                            )
+                                                          )#,
+                                                          #tabPanel("...")
+                                                 )
+                                       )#,
                                      #tabPanel("Test",
                                      #         fluidPage(
                                      #           h1("Test")
                                      #         )
                                      #)
-                            )
                             )
 )
 
