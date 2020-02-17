@@ -382,13 +382,15 @@ C2019/409/07|ee|2019|2019-11-19|g|Der 100. Jahrestag der Universität Tartu|
 C2020/049/11|de|2020|2020-1-28|g|Brandenburg (Bundesländer-Serie)|A,D,F,G,J
 C2020/049/12|es|2020|2020-1-31|g|UNESCO-Weltkulturerbe – Aragón und seine Mudéjar-Architektur|
 C2020/049/14|ee|2020|2020-1-27|g|Der zweihundertjährige Jahrestag der Entdeckung der Antarktis|
+C2020/053/03|ee|2020|2020-2-1|g|100. Jahrestag des Friedens von Dorpat (Tartu)|
+C2020/053/06|it|2020|2020-1-20|g|80. Jahrestag der Gründung des „Corpo Nazionale dei Vigili del Fuoco“ (nationale Feuerwehr)|
 
-NA|it|2020|2020-1-20|g|80. Jahrestag der Gründung des nationalen Feuerwehrkorps|
 NA|fr|2020|2020-1-31|g|Charles de Gaulle|
-NA|ee|2020|2020-2-1|g|100. Jahrestag des Vertrages von Tartu|
 
 C2020/049/10|be|2020|NA|g|Internationales Jahr der Pflanzengesundheit 2020 (IYPH 2020)|
 C2020/049/13|lu|2020|NA|g|200. Geburtstag von Prinz Henri|
+C2020/053/04|lt|2020|NA|g|Aukštaitija/Oberlitauen (aus der Serie ethnografische Regionen Litauens)|
+C2020/053/05|it|2020|NA|g|150. Geburtstag von Maria Montessori|
 
 
 
