@@ -768,6 +768,7 @@ C2007/233/08|va|2013|NA|u|Papst Benedikt XVI. (2006 - 2013)|
 C2013/379/11|va|2014|NA|u|Papst Franziskus (2014 - 2016)|
 C2013/379/11|va|2015|NA|u|Papst Franziskus (2014 - 2016)|
 C2013/379/11|va|2016|NA|u|Papst Franziskus (2014 - 2016)|
-C2017/023/06|va|2017|NA|u|Wappen von Papst Franziskus (2017 - 2019)|
-C2017/023/06|va|2018|NA|u|Wappen von Papst Franziskus (2017 - 2019)|
-C2017/023/06|va|2019|NA|u|Wappen von Papst Franziskus (2017 - 2019)|
+C2017/023/06|va|2017|NA|u|Wappen von Papst Franziskus (2017 -)|
+C2017/023/06|va|2018|NA|u|Wappen von Papst Franziskus (2017 -)|
+C2017/023/06|va|2019|NA|u|Wappen von Papst Franziskus (2017 -)|
+C2017/023/06|va|2020|NA|u|Wappen von Papst Franziskus (2017 -)|
