@@ -387,7 +387,8 @@ C2020/053/03|ee|2020|2020-2-1|g|100. Jahrestag des Friedens von Dorpat (Tartu)|
 C2020/053/06|it|2020|2020-1-20|g|80. Jahrestag der Gründung des „Corpo Nazionale dei Vigili del Fuoco“ (nationale Feuerwehr)|
 
 NA|fr|2020|2020-1-31|g|Charles de Gaulle|
-NA|ms|2020|2020-3-3|g|500. Todestag Raffaels|
+NA|sm|2020|2020-3-3|g|500. Todestag Raffaels|
+NA|gr|2020|2020-3-31|g|2500. Jahrestag der Schlacht bei den Thermopylen|
 
 C2020/049/13|lu|2020|NA|g|200. Geburtstag von Prinz Henri|
 C2020/053/04|lt|2020|NA|g|Aukštaitija/Oberlitauen (aus der Serie ethnografische Regionen Litauens)|
