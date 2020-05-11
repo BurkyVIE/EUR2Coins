@@ -395,6 +395,7 @@ NA|fi|2020|2020-4-24|g|100 Jahre Universität Turku|
 C2020/053/04|lt|2020|NA|g|Aukštaitija/Oberlitauen (aus der Serie ethnografische Regionen Litauens)|
 C2020/053/05|it|2020|NA|g|150. Geburtstag von Maria Montessori|
 C2020/136/02|lv|2020|NA|g|Lettgallische Keramik|
+C2020/150/05|be|2020|NA|g|Jan van Eyck|
 
 
 
