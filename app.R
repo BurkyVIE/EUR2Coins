@@ -136,6 +136,13 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                             h2("Bundesländerserie"),
                                                             tableOutput(outputId = "debl_tab")
                                                             )
+                                                          ),
+                                                 tabPanel("ES",
+                                                          fluidPage(
+                                                            h1("Spanien"),
+                                                            h2("UNESCO-Welterbe"),
+                                                            tableOutput(outputId = "esun_tab")
+                                                            )
                                                           )#,
                                                           #tabPanel("...")
                                                  )
@@ -361,7 +368,45 @@ server <- function(input, output, session) {
     )
   }, ignoreNULL = FALSE)
   
+  output$esun_tab <- renderTable({esun_tab()}, bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
+  esun_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    left_join(tibble(ID = paste0(2010:2022,
+                                 "esg",
+                                 sprintf("%02d",c(1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 0, 0)) # letzen beiden noch nicht klar!!!
+    )),
+    collection,
+    by = "ID") %>% 
+      select(ID, Ablage, Qualität) %>%
+      mutate(Ablage = coalesce(Ablage, ""),
+             Qualität = case_when(is.na(Qualität) ~ "",
+                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
+                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
+                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
+                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
+                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
+             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
+      pull(ID) -> tmp
+    matrix(tmp, ncol = 1, byrow = TRUE,
+           dimnames = list(
+             paste0("<b>", 2010:2022, ": ",
+                    c("Altstadt von Córdoba", "Alhambra, Generalife und Albaicín in Granada", "Kathedrale von Burgos",
+                      "Königlicher Sitz Sankt Laurentius von El Escorial", "Arbeiten von Antoni Gaudí", "Höhle von Altamira / Paläolithische Höhlenmalerei im Norden Spaniens",
+                      "Altstadt und Aquädukt von Segovia", "Monumente von Oviedo und des Fürstentums Asturien", "Altstadt von Santiago de Compostela",
+                      "Altstadt von Ávila und Kirchen außerhalb der Stadtmauer", "Architektur der Mudéjares in Aragon", "Historische Altstadt von Toledo",
+                      "Nationalpark Garajonay auf La Gomera"), "</b><br>(",
+                    c("Innenraum der Mezquita de Córdoba", "Löwenhof der Alhambra", "Obere Westfassade und Vierungsturm",
+                      "Südansicht der Klosterresidenz auf Glockentürme und Kirchenkuppel", "Park Güell in Barcelona", "Wisent, Wandmalerei in der Höhle von Altamira",
+                      "Aquädukt von Segovia", "Santa María del Naranco", "Detail der Westfassade der Kathedrale von Santiago de Compostela",
+                      "Drei Wehrtürme der Stadtmauer Ávilas", "Turm von El Salvador in Teruel", "Unbekannt",
+                      "Unbekannt"), ")"),
+             " "
+           )
+    )
+  }, ignoreNULL = FALSE)
+  
 }
+
+
 
 # Run the application 
 shinyApp(ui = ui, server = server)
