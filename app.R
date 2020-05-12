@@ -143,7 +143,21 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                             h2("UNESCO-Welterbe"),
                                                             tableOutput(outputId = "esun_tab")
                                                             )
-                                                          )#,
+                                                          ),
+                                                 tabPanel("LT",
+                                                          fluidPage(
+                                                            h1("Litauen"),
+                                                            h2("Ethnographische Regionen"),
+                                                            tableOutput(outputId = "lter_tab")
+                                                          )
+                                                         ),
+                                                 tabPanel("LV",
+                                                          fluidPage(
+                                                            h1("Lettland"),
+                                                            h2("Historische Regionen"),
+                                                            tableOutput(outputId = "lvhr_tab")
+                                                          )
+                                                         )#,
                                                           #tabPanel("...")
                                                  )
                                        )#,
@@ -338,7 +352,7 @@ server <- function(input, output, session) {
   debl_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     left_join(tibble(ID = paste0(rep(2006:2022, each = 5),
                                  "deg",
-                                 sprintf("%02d",c(1:5, 6:10, 1:5, 6:10, 1:5, 1:5, 1:5, 6:10, 1:5, 6:10, 1:5, 1:5, 6:10, 1:5, 1:5, 1:5, 1:5)) # letzen beiden noch nicht klar!!!
+                                 sprintf("%02d", c(1:5, 6:10, 1:5, 6:10, 1:5, 1:5, 1:5, 6:10, 1:5, 6:10, 1:5, 1:5, 6:10, 1:5, 1:5, 1:5, 1:5)) # letzen beiden noch nicht klar!!!
     )),
     collection,
     by = "ID") %>% 
@@ -372,7 +386,7 @@ server <- function(input, output, session) {
   esun_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     left_join(tibble(ID = paste0(2010:2022,
                                  "esg",
-                                 sprintf("%02d",c(1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 0, 0)) # letzen beiden noch nicht klar!!!
+                                 sprintf("%02d", c(1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 0, 0)) # letzen beiden noch nicht klar!!!
     )),
     collection,
     by = "ID") %>% 
@@ -403,7 +417,63 @@ server <- function(input, output, session) {
            )
     )
   }, ignoreNULL = FALSE)
-  
+
+  output$lter_tab <- renderTable({lter_tab()}, bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
+  lter_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    left_join(tibble(ID = paste0(2019:2023,
+                                 "ltg",
+                                 sprintf("%02d", c(1, 1, 0, 0, 0)) # letzen vier noch nicht klar!!!
+    )),
+    collection,
+    by = "ID") %>% 
+      select(ID, Ablage, Qualität) %>%
+      mutate(Ablage = coalesce(Ablage, ""),
+             Qualität = case_when(is.na(Qualität) ~ "",
+                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
+                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
+                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
+                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
+                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
+             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
+      pull(ID) -> tmp
+    matrix(tmp, ncol = 1, byrow = TRUE,
+           dimnames = list(
+             paste0("<b>", 2019:2023, ": ",
+                    c("Žemaitija", "Aukschtaiten", "Dzukija", "Unbekannt", "Unbekannt"), "</b><br>(",
+                    c("Niederlitauen", "Oberlitauen", "Mittellitauen", "", ""), ")"),
+             " "
+           )
+    )
+  }, ignoreNULL = FALSE)
+
+  output$lvhr_tab <- renderTable({lvhr_tab()}, bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
+  lvhr_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    left_join(tibble(ID = paste0(c(2016, 2017, 2017, 2018),
+                                 "lvg",
+                                 sprintf("%02d", c(2, 1, 2, 1))
+    )),
+    collection,
+    by = "ID") %>% 
+      select(ID, Ablage, Qualität) %>%
+      mutate(Ablage = coalesce(Ablage, ""),
+             Qualität = case_when(is.na(Qualität) ~ "",
+                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
+                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
+                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
+                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
+                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
+             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
+      pull(ID) -> tmp
+    matrix(tmp, ncol = 1, byrow = TRUE,
+           dimnames = list(
+             paste0("<b>", c(2016, 2017, 2017, 2018), ": ",
+                    c("Vidzeme", "Kurzeme", "Latgale", "Zemgale"), "</b><br>(",
+                    c("Zentral-Livland", "Kurland", "Lettgallen", "Semgallen"), ")"),
+             " "
+           )
+    )
+  }, ignoreNULL = FALSE)  
+        
 }
 
 
