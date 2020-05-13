@@ -396,6 +396,9 @@ C2020/053/04|lt|2020|NA|g|Aukštaitija/Oberlitauen (aus der Serie ethnografische
 C2020/053/05|it|2020|NA|g|150. Geburtstag von Maria Montessori|
 C2020/136/02|lv|2020|NA|g|Lettgallische Keramik|
 C2020/150/05|be|2020|NA|g|Jan van Eyck|
+C2020/163/04|va|2020|NA|g|100. Jahrestag der Geburt von Papst Johannes Paul II|
+C2020/163/05|ad|2020|NA|g|Das 27. Iberoamerikanische Gipfeltreffen in Andorra|
+C2020/163/06|pt|2020|NA|g|75. Jahrestag der Vereinten Nationen|
 
 
 
