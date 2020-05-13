@@ -144,6 +144,13 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                             tableOutput(outputId = "lter_tab")
                                                           )
                                                  ),
+                                                 tabPanel("LU",
+                                                          fluidPage(
+                                                            h1("Luxemburg"),
+                                                            h2("Dynastieserie"),
+                                                            tableOutput(outputId = "ludy_tab")
+                                                          )
+                                                 ),
                                                  tabPanel("LV",
                                                           fluidPage(
                                                             h1("Lettland"),
@@ -365,6 +372,30 @@ server <- function(input, output, session) {
                                     '<b>Sachsen-Anhalt</b><br>(Magdeburger Dom)',
                                     '<b>Thüringen</b><br>(Wartburg)'))
     
+  output$debl_tab <- renderTable({debl_tab()}, bordered = T, spacing = "l", align = "c", rownames = FALSE, sanitize.text.function = function(x) x)
+  debl_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    debl <- tibble(Amtsblatt = c('C2006/033/04', 'C2007/076/02', 'C2008/013/02', 'C2009/031/06', 'C2010/012/05',
+                                 'C2011/024/04', 'C2012/010/02', 'C2013/379/08', 'C2014/417/04', 'C2015/143/05',
+                                 'C2015/428/04', 'C2017/023/04', 'C2018/400/05', 'C2018/466/08', 'C2020/049/11',
+                                 NA, NA),
+                   Beschreibung = c('<b>Schleswig-Holstein</b><br>(Lübecker Holstentor)',
+                                    '<b>Mecklenburg-Vorpommern</b><br>(Schloss Schwerin)',
+                                    '<b>Hamburg</b><br>(Hamburger Sankt-Michaelis-Kirche)',
+                                    '<b>Saarland</b><br>(Saarbrücker Ludwigskirche)',
+                                    '<b>Bremen</b><br>(Bremer Roland und Rathaus)',
+                                    '<b>Nordrhein-Westfalen</b><br>(Kölner Dom)',
+                                    '<b>Bayern</b><br>(Schloss Neuschwanstein)',
+                                    '<b>Baden-Württemberg</b><br>(Kloster Maulbronn)',
+                                    '<b>Niedersachsen</b><br>(St.-Michaelis-Kirche zu Hildesheim)',
+                                    '<b>Hessen</b><br>(Frankfurter Paulskirche)',
+                                    '<b>Sachsen</b><br>(Dresdner Zwinger)',
+                                    '<b>Rheinland-Pfalz</b><br>(Porta Nigra)',
+                                    '<b>Berlin</b><br>(Schloss Charlottenburg)',
+                                    '<b>Sitz des Bundesrates</b><br>(Preußisches Herrenhaus)',
+                                    '<b>Brandenburg</b><br>(Schloss Sanssouci)',
+                                    '<b>Sachsen-Anhalt</b><br>(Magdeburger Dom)',
+                                    '<b>Thüringen</b><br>(Wartburg)'))
+    
     left_join(debl %>% filter(!is.na(Amtsblatt)),
               coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
       left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
@@ -388,15 +419,16 @@ server <- function(input, output, session) {
              )
   }, ignoreNULL = FALSE)
   
-  output$lvhr_tab <- renderTable({lvhr_tab()}, bordered = T, spacing = "l", align = "c", rownames = FALSE, sanitize.text.function = function(x) x)
-  lvhr_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    lvhr <- tibble(Amtsblatt = c('C2016/146/07', 'C2017/066/02', 'C2017/066/03', 'C2018/234/03'),
-                   Beschreibung =c('<b>Vidzeme</b><br>(Zentral-Livland)',
-                                   '<b>Kurzemen</b><br>(Kurland)',
-                                   '<b>Latgale</b><br>(Lettgallen)',
-                                   '<b>Zemgale</b><br>(Semgallen)'))
-    
-    left_join(lvhr %>% filter(!is.na(Amtsblatt)),
+  output$lter_tab <- renderTable({lter_tab()}, bordered = T, spacing = "l", align = "c", rownames = FALSE, sanitize.text.function = function(x) x)
+  lter_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    lter <- lter <- tibble(Amtsblatt = c('C2019/351/10', 'C2020/053/04', NA, NA, NA),
+                           Beschreibung =c('<b>Žemaitija</b><br>(Niederlittauen)',
+                                           '<b>Aukschtaiten</b><br>(Oberlitauen)',
+                                           '<b>Dzukija</b><br>(Mittellitauen)',
+                                           '<b>Unbekannt</b><br>()',
+                                           '<b>Unbekannt</b><br>()'))
+
+    left_join(lter %>% filter(!is.na(Amtsblatt)),
               coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
       left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
       mutate(Jahr = str_sub(ID, 1, 4),
@@ -419,16 +451,73 @@ server <- function(input, output, session) {
       )
   }, ignoreNULL = FALSE)
   
+  output$ludy_tab <- renderTable({ludy_tab()}, bordered = T, spacing = "l", align = "c", rownames = FALSE, sanitize.text.function = function(x) x)
+  ludy_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    ludy <- ludy <- tibble(Amtsblatt = c('C2004/243/05', 'C2005/011/03', 'C2006/020/10', 'C2007/053/02', 'C2008/021/09',
+                                         'C2009/005/02', 'C2009/311/06', 'C2010/349/03', 'C2011/373/06', 'C2013/021/05',
+                                         'C2013/219/06', 'C2014/020/06', 'C2014/262/05', 'C2015/086/03', 'C2015/232/05',
+                                         'C2016/028/04', 'C2017/023/07', 'C2017/320/04', 'C2017/438/10', 'C2018/305/06',
+                                         'C2018/466/11', 'C2019/352/13', 'C2020/049/13', NA, NA,
+                                         NA),
+                           Beschreibung =c('<b>Monogramm Großherzog Henris</b>',
+                                           '<b>50. Geburtstag und 5. Jahrestag der Thronbesteigung Großherzog Henris, 100. Todestag Großherzog Adolphs</b>',
+                                           '<b>25. Geburtstag Erbgroßherzog Guillaumes</b>',
+                                           '<b>Großherzoglicher Palast</b>',
+                                           '<b>Schloss von Berg</b>',
+                                           '<b>90. Jahrestag der Thronbesteigung Großherzogin Charlottes</b>',
+                                           '<b>Wappen Großherzog Henris</b>',
+                                           '<b>50. Jahrestag der Ernennung ihres Sohnes Jean zum Statthalter durch Großherzogin Charlotte</b>',
+                                           '<b>100. Todestag Großherzog Wilhelms IV.</b>',
+                                           '<b>Hochzeit Erbgroßherzog Guillaumes mit Gräfin Stéphanie de Lannoy</b>',
+                                           '<b>Nationalhymne des Großherzogtums Luxemburg</b>',
+                                           '<b>175 Jahre Unabhängigkeit des Großherzogtums Luxemburg</b>',
+                                           '<b>50. Jahrestag der Thronbesteigung Großherzog Jeans</b>',
+                                           '<b>15. Jahrestag der Thronbesteigung Großherzog Henris</b>',
+                                           '<b>125. Jahrestag der Luxemburger Dynastie Nassau-Weilburg</b>',
+                                           '<b>50-jähriges Bestehen der Großherzogin-Charlotte-Brücke</b>',
+                                           '<b>50. Jahrestag der Gründung der Luxemburger Freiwilligenarmee</b>',
+                                           '<b>200. Geburtstag Großherzog Wilhelms III.</b>',
+                                           '<b>150 Jahre Luxemburgische Verfassung</b>',
+                                           '<b>175. Todestag Großherzog Wilhelms I.</b>',
+                                           '<b>100. Jahrestag der Thronbesteigung Großherzogin Charlottes</b>',
+                                           '<b>100. Jahrestag der Einführung des allgemeinen Wahlrechts</b>',
+                                           '<b>200. Geburtstag Heinrichs von Oranien-Nassau</b>',
+                                           '<b>Geburt eines Großherzogs</b>',
+                                           '<b>100. Geburtstag Großherzog Jeans</b>',
+                                           '<b>40. Geburtstag Erbgroßherzog Guillaumes</b>'))
+
+    left_join(ludy %>% filter(!is.na(Amtsblatt)),
+              coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
+      left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
+      mutate(Jahr = str_sub(ID, 1, 4),
+             Ablage = coalesce(Ablage, ""),
+             Qualität = case_when(is.na(Qualität) ~ "",
+                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
+                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
+                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
+                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
+                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
+             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
+      select(Jahr, Münzzeichen, Beschreibung, ID) -> tmp
+    
+    cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
+          tmp %>% pull(Beschreibung),
+          tmp %>% pull(ID)) %>% 
+      matrix(ncol = 3,
+             dimnames = list(NULL,
+                             c("Jahr", "Bezeichnung", " "))
+      )
+  }, ignoreNULL = FALSE)
   
-  output$lter_tab <- renderTable({lter_tab()}, bordered = T, spacing = "l", align = "c", rownames = FALSE, sanitize.text.function = function(x) x)
-  lter_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    ltehr <- tibble(Amtsblatt = c('C2016/146/07', 'C2017/066/02', 'C2017/066/03', 'C2018/234/03'),
+  output$lvhr_tab <- renderTable({lvhr_tab()}, bordered = T, spacing = "l", align = "c", rownames = FALSE, sanitize.text.function = function(x) x)
+  lvhr_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    lvhr <- tibble(Amtsblatt = c('C2016/146/07', 'C2017/066/02', 'C2017/066/03', 'C2018/234/03'),
                    Beschreibung =c('<b>Vidzeme</b><br>(Zentral-Livland)',
                                    '<b>Kurzemen</b><br>(Kurland)',
                                    '<b>Latgale</b><br>(Lettgallen)',
                                    '<b>Zemgale</b><br>(Semgallen)'))
     
-    left_join(lter %>% filter(!is.na(Amtsblatt)),
+    left_join(lvhr %>% filter(!is.na(Amtsblatt)),
               coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
       left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
       mutate(Jahr = str_sub(ID, 1, 4),
