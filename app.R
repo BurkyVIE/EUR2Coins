@@ -137,36 +137,29 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                             tableOutput(outputId = "debl_tab")
                                                             )
                                                           ),
-                                                 tabPanel("ES",
-                                                          fluidPage(
-                                                            h1("Spanien"),
-                                                            h2("UNESCO-Welterbe"),
-                                                            tableOutput(outputId = "esun_tab")
-                                                            )
-                                                          ),
                                                  tabPanel("LT",
                                                           fluidPage(
                                                             h1("Litauen"),
                                                             h2("Ethnographische Regionen"),
                                                             tableOutput(outputId = "lter_tab")
                                                           )
-                                                         ),
+                                                 ),
                                                  tabPanel("LV",
                                                           fluidPage(
                                                             h1("Lettland"),
                                                             h2("Historische Regionen"),
                                                             tableOutput(outputId = "lvhr_tab")
                                                           )
-                                                         )#,
-                                                          #tabPanel("...")
-                                                 )
-                                       )#,
-                                     #tabPanel("Test",
-                                     #         fluidPage(
-                                     #           h1("Test")
-                                     #         )
-                                     #)
-                            )
+                                                 )#,
+                                                 #tabPanel("...")
+                                     )
+                            )#,
+                            #tabPanel("Test",
+                            #         fluidPage(
+                            #           h1("Test")
+                            #         )
+                            #)
+                )
 )
 
 ### Server
@@ -348,16 +341,35 @@ server <- function(input, output, session) {
            )
   }, ignoreNULL = FALSE)
   
-  output$debl_tab <- renderTable({debl_tab()}, bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
+  output$debl_tab <- renderTable({debl_tab()}, bordered = T, spacing = "l", align = "c", rownames = FALSE, sanitize.text.function = function(x) x)
   debl_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    left_join(tibble(ID = paste0(rep(2006:2022, each = 5),
-                                 "deg",
-                                 sprintf("%02d", c(1:5, 6:10, 1:5, 6:10, 1:5, 1:5, 1:5, 6:10, 1:5, 6:10, 1:5, 1:5, 6:10, 1:5, 1:5, 1:5, 1:5)) # letzen beiden noch nicht klar!!!
-    )),
-    collection,
-    by = "ID") %>% 
-      select(ID, Ablage, Qualität) %>%
-      mutate(Ablage = coalesce(Ablage, ""),
+    debl <- tibble(Amtsblatt = c('C2006/033/04', 'C2007/076/02', 'C2008/013/02', 'C2009/031/06', 'C2010/012/05',
+                                 'C2011/024/04', 'C2012/010/02', 'C2013/379/08', 'C2014/417/04', 'C2015/143/05',
+                                 'C2015/428/04', 'C2017/023/04', 'C2018/400/05', 'C2018/466/08', 'C2020/049/11',
+                                 NA, NA),
+                   Beschreibung = c('<b>Schleswig-Holstein</b><br>(Lübecker Holstentor)',
+                                    '<b>Mecklenburg-Vorpommern</b><br>(Schloss Schwerin)',
+                                    '<b>Hamburg</b><br>(Hamburger Sankt-Michaelis-Kirche)',
+                                    '<b>Saarland</b><br>(Saarbrücker Ludwigskirche)',
+                                    '<b>Bremen</b><br>(Bremer Roland und Rathaus)',
+                                    '<b>Nordrhein-Westfalen</b><br>(Kölner Dom)',
+                                    '<b>Bayern</b><br>(Schloss Neuschwanstein)',
+                                    '<b>Baden-Württemberg</b><br>(Kloster Maulbronn)',
+                                    '<b>Niedersachsen</b><br>(St.-Michaelis-Kirche zu Hildesheim)',
+                                    '<b>Hessen</b><br>(Frankfurter Paulskirche)',
+                                    '<b>Sachsen</b><br>(Dresdner Zwinger)',
+                                    '<b>Rheinland-Pfalz</b><br>(Porta Nigra)',
+                                    '<b>Berlin</b><br>(Schloss Charlottenburg)',
+                                    '<b>Sitz des Bundesrates</b><br>(Preußisches Herrenhaus)',
+                                    '<b>Brandenburg</b><br>(Schloss Sanssouci)',
+                                    '<b>Sachsen-Anhalt</b><br>(Magdeburger Dom)',
+                                    '<b>Thüringen</b><br>(Wartburg)'))
+    
+    left_join(debl %>% filter(!is.na(Amtsblatt)),
+              coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
+      left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
+      mutate(Jahr = str_sub(ID, 1, 4),
+             Ablage = coalesce(Ablage, ""),
              Qualität = case_when(is.na(Qualität) ~ "",
                                   Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
                                   Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
@@ -365,97 +377,30 @@ server <- function(input, output, session) {
                                   Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
                                   TRUE ~ "<div style='color: red;'>FEHLER</div>"),
              ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
-      pull(ID) -> tmp
-    matrix(tmp, ncol = 5, byrow = TRUE,
-           dimnames = list(
-             paste0("<b>", 2006:2022, ": ",
-                    c("Schleswig-Holstein", "Mecklenburg-Vorpommern", "Hamburg", "Saarland", "Bremen",
-                             "Nordrhein-Westfalen", "Bayern", "Baden-Würtemberg", "Niedersachsen", "Hessen",
-                             "Sachsen", "Rheinland-Pflaz", "Berlin", "Bundesrat", "Brandenburg"), "</b><br>(",
-                    c("Lübecker Holstentor", "Schloss Schwerin", "Hamburger St. Michaelis Kirche",
-                      "Saarbrücker Ludwigskirche", "Bremer Roland und Rathaus", "Kölner Dom",
-                      "Schloss Neuschwanstein", "Kloster Maulbronn", "St. Michaelis Kirche zu Hildesheim",
-                      "Frankfurter Paulskirche", "Dresdner Zwinger", "Porta Nigra",
-                      "Schloss Charlottenburg", "Preußisches Herrenhaus", "Schloss Sanssouci"), ")"),
-             paste0("<b>", c("A", "D", "F", "G", "J"), "</b><br>(", c("Berlin", "München", "Stuttgart", "Karlsruhe", "Hamburg"), ")")
-           )
-    )
+      select(Jahr, Münzzeichen, Beschreibung, ID) -> tmp
+    
+    cbind(tmp %>% filter(Münzzeichen == "A") %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
+          tmp %>% filter(Münzzeichen == "A") %>% pull(Beschreibung),
+          matrix(tmp %>% pull(ID), ncol = 5, byrow = TRUE)) %>% 
+      matrix(ncol = 7,
+             dimnames = list(NULL,
+                             c("Jahr", "Bezeichnung", "A (Berlin)", "D (München)", "F (Stuttgart)", "G (Karlsruhe)", "J (Hamburg)"))
+             )
   }, ignoreNULL = FALSE)
   
-  output$esun_tab <- renderTable({esun_tab()}, bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
-  esun_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    left_join(tibble(ID = paste0(2010:2022,
-                                 "esg",
-                                 sprintf("%02d", c(1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 0, 0)) # letzen beiden noch nicht klar!!!
-    )),
-    collection,
-    by = "ID") %>% 
-      select(ID, Ablage, Qualität) %>%
-      mutate(Ablage = coalesce(Ablage, ""),
-             Qualität = case_when(is.na(Qualität) ~ "",
-                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
-                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
-                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
-                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
-                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
-             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
-      pull(ID) -> tmp
-    matrix(tmp, ncol = 1, byrow = TRUE,
-           dimnames = list(
-             paste0("<b>", 2010:2022, ": ",
-                    c("Altstadt von Córdoba", "Alhambra, Generalife und Albaicín in Granada", "Kathedrale von Burgos",
-                      "Königlicher Sitz Sankt Laurentius von El Escorial", "Arbeiten von Antoni Gaudí", "Höhle von Altamira / Paläolithische Höhlenmalerei im Norden Spaniens",
-                      "Altstadt und Aquädukt von Segovia", "Monumente von Oviedo und des Fürstentums Asturien", "Altstadt von Santiago de Compostela",
-                      "Altstadt von Ávila und Kirchen außerhalb der Stadtmauer", "Architektur der Mudéjares in Aragon", "Historische Altstadt von Toledo",
-                      "Nationalpark Garajonay auf La Gomera"), "</b><br>(",
-                    c("Innenraum der Mezquita de Córdoba", "Löwenhof der Alhambra", "Obere Westfassade und Vierungsturm",
-                      "Südansicht der Klosterresidenz auf Glockentürme und Kirchenkuppel", "Park Güell in Barcelona", "Wisent, Wandmalerei in der Höhle von Altamira",
-                      "Aquädukt von Segovia", "Santa María del Naranco", "Detail der Westfassade der Kathedrale von Santiago de Compostela",
-                      "Drei Wehrtürme der Stadtmauer Ávilas", "Turm von El Salvador in Teruel", "Unbekannt",
-                      "Unbekannt"), ")"),
-             " "
-           )
-    )
-  }, ignoreNULL = FALSE)
-
-  output$lter_tab <- renderTable({lter_tab()}, bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
-  lter_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    left_join(tibble(ID = paste0(2019:2023,
-                                 "ltg",
-                                 sprintf("%02d", c(1, 1, 0, 0, 0)) # letzen vier noch nicht klar!!!
-    )),
-    collection,
-    by = "ID") %>% 
-      select(ID, Ablage, Qualität) %>%
-      mutate(Ablage = coalesce(Ablage, ""),
-             Qualität = case_when(is.na(Qualität) ~ "",
-                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
-                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
-                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
-                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
-                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
-             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
-      pull(ID) -> tmp
-    matrix(tmp, ncol = 1, byrow = TRUE,
-           dimnames = list(
-             paste0("<b>", 2019:2023, ": ",
-                    c("Žemaitija", "Aukschtaiten", "Dzukija", "Unbekannt", "Unbekannt"), "</b><br>(",
-                    c("Niederlitauen", "Oberlitauen", "Mittellitauen", "", ""), ")"),
-             " "
-           )
-    )
-  }, ignoreNULL = FALSE)
-
-  output$lvhr_tab <- renderTable({lvhr_tab()}, bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
+  output$lvhr_tab <- renderTable({lvhr_tab()}, bordered = T, spacing = "l", align = "c", rownames = FALSE, sanitize.text.function = function(x) x)
   lvhr_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    left_join(tibble(ID = paste0(c(2016, 2017, 2017, 2018),
-                                 "lvg",
-                                 sprintf("%02d", c(2, 1, 2, 1))
-    )),
-    collection,
-    by = "ID") %>% 
-      select(ID, Ablage, Qualität) %>%
-      mutate(Ablage = coalesce(Ablage, ""),
+    lvhr <- tibble(Amtsblatt = c('C2016/146/07', 'C2017/066/02', 'C2017/066/03', 'C2018/234/03'),
+                   Beschreibung =c('<b>Vidzeme</b><br>(Zentral-Livland)',
+                                   '<b>Kurzemen</b><br>(Kurland)',
+                                   '<b>Latgale</b><br>(Lettgallen)',
+                                   '<b>Zemgale</b><br>(Semgallen)'))
+    
+    left_join(lvhr %>% filter(!is.na(Amtsblatt)),
+              coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
+      left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
+      mutate(Jahr = str_sub(ID, 1, 4),
+             Ablage = coalesce(Ablage, ""),
              Qualität = case_when(is.na(Qualität) ~ "",
                                   Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
                                   Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
@@ -463,16 +408,48 @@ server <- function(input, output, session) {
                                   Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
                                   TRUE ~ "<div style='color: red;'>FEHLER</div>"),
              ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
-      pull(ID) -> tmp
-    matrix(tmp, ncol = 1, byrow = TRUE,
-           dimnames = list(
-             paste0("<b>", c(2016, 2017, 2017, 2018), ": ",
-                    c("Vidzeme", "Kurzeme", "Latgale", "Zemgale"), "</b><br>(",
-                    c("Zentral-Livland", "Kurland", "Lettgallen", "Semgallen"), ")"),
-             " "
-           )
-    )
-  }, ignoreNULL = FALSE)  
+      select(Jahr, Münzzeichen, Beschreibung, ID) -> tmp
+    
+    cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
+          tmp %>% pull(Beschreibung),
+          tmp %>% pull(ID)) %>% 
+      matrix(ncol = 3,
+             dimnames = list(NULL,
+                             c("Jahr", "Bezeichnung", " "))
+      )
+  }, ignoreNULL = FALSE)
+  
+  
+  output$lter_tab <- renderTable({lter_tab()}, bordered = T, spacing = "l", align = "c", rownames = FALSE, sanitize.text.function = function(x) x)
+  lter_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    ltehr <- tibble(Amtsblatt = c('C2016/146/07', 'C2017/066/02', 'C2017/066/03', 'C2018/234/03'),
+                   Beschreibung =c('<b>Vidzeme</b><br>(Zentral-Livland)',
+                                   '<b>Kurzemen</b><br>(Kurland)',
+                                   '<b>Latgale</b><br>(Lettgallen)',
+                                   '<b>Zemgale</b><br>(Semgallen)'))
+    
+    left_join(lter %>% filter(!is.na(Amtsblatt)),
+              coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
+      left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
+      mutate(Jahr = str_sub(ID, 1, 4),
+             Ablage = coalesce(Ablage, ""),
+             Qualität = case_when(is.na(Qualität) ~ "",
+                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
+                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
+                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
+                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
+                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
+             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
+      select(Jahr, Münzzeichen, Beschreibung, ID) -> tmp
+    
+    cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
+          tmp %>% pull(Beschreibung),
+          tmp %>% pull(ID)) %>% 
+      matrix(ncol = 3,
+             dimnames = list(NULL,
+                             c("Jahr", "Bezeichnung", " "))
+      )
+  }, ignoreNULL = FALSE)
         
 }
 
