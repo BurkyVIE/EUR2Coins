@@ -569,7 +569,7 @@ server <- function(input, output, session) {
   
   output$mtps_tab <- renderTable({mtps_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   mtps_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    mtps <- tibble(Amtsblatt = c('C2016/281/10', 'C2017/111/10', 'C2018/174/08', 'C2019/352/15', NA,
+    mtps <- tibble(Amtsblatt = c('C2016/281/10', 'C2017/111/10', 'C2018/174/08', 'C2019/352/15', 'C2020/166/02',
                                  NA, NA),
                    Beschreibung =c('<b>Tempel von Ggantija</b>',
                                    '<b>Tempel von Hagar Qim</b>',
