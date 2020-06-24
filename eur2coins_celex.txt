@@ -388,6 +388,7 @@ C2020/053/03|ee|2020|2020-2-1|g|100. Jahrestag des Friedens von Dorpat (Tartu)|
 C2020/053/05|it|2020|2020-6-9|g|150. Geburtstag von Maria Montessori|
 C2020/053/06|it|2020|2020-1-20|g|80. Jahrestag der Gründung des „Corpo Nazionale dei Vigili del Fuoco“ (nationale Feuerwehr)|
 C2020/136/02|lv|2020|2020-6-5|g|Lettgallische Keramik (auch C2020/176/02)|
+C2020/163/04|va|2020|2020-6-23|g|100. Jahrestag der Geburt von Papst Johannes Paul II.|
 C2020/210/05|sm|2020|2020-3-5|g|500. Todestag Raffaels|
 
 NA|fr|2020|2020-1-31|g|Charles de Gaulle|
@@ -396,7 +397,6 @@ NA|fi|2020|2020-4-24|g|100 Jahre Universität Turku|
 
 C2020/053/04|lt|2020|NA|g|Aukštaitija/Oberlitauen (aus der Serie ethnografische Regionen Litauens)|
 C2020/150/05|be|2020|NA|g|Jan van Eyck|
-C2020/163/04|va|2020|NA|g|100. Jahrestag der Geburt von Papst Johannes Paul II.|
 C2020/163/05|ad|2020|NA|g|Das 27. Iberoamerikanische Gipfeltreffen in Andorra|
 C2020/163/06|pt|2020|NA|g|75. Jahrestag der Vereinten Nationen|
 C2020/166/02|mt|2020|NA|g|Unesco — Weltkulturerbe prähistorische Tempel von Skorba|
