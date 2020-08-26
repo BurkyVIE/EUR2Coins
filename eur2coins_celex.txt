@@ -393,7 +393,7 @@ C2020/166/02|mt|2020|2020-7-24|g|Unesco — Weltkulturerbe prähistorische Tempe
 C2020/210/05|sm|2020|2020-3-5|g|500. Todestag Raffaels|
 C2020/256/02|fr|2020|2020-1-31|g|Charles de Gaulle|
 
-NA|fi|2020|2020-4-24|g|100 Jahre Universität Turku|
+NA|fi|2020|2020-8-18|g|100 Jahre Universität Turku|
 NA|gr|2020|2020-6-30|g|2500. Jahrestag der Schlacht bei den Thermopylen|
 NA|gr|2020|2020-7-16|g|100. Jahrestag der Vereinigung Thrakiens mit Griechenland|
 
