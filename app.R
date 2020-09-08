@@ -92,9 +92,9 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                   column(9, textInput(inputId = "boxtab", label = NULL, value = pull(count(collection)))),
                                                   column(3, actionButton(inputId = "gehe_boxtab", label = ">>"))
                                                 ),
-                                                  p(HTML("<div class = 'beschr'>"), "Eingabe von Box und Tableau; Aufbau: ",
-                                                    code("BT"), ", wobei ", code("B"), " = Box und", code("T"), " = Tableau.",
-                                                    HTML('</div>')),
+                                                p(HTML("<div class = 'beschr'>"), "Eingabe von Box und Tableau; Aufbau: ",
+                                                  code("BT"), ", wobei ", code("B"), " = Box und", code("T"), " = Tableau.",
+                                                  HTML('</div>')),
                                                 h3("Zeilennummer"),
                                                 fluidRow(
                                                   column(9, textInput(inputId = "znr", label = NULL, value = pull(count(collection)))),
@@ -135,7 +135,7 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                             h1("Deutschland"),
                                                             h2("Bundesländerserie"),
                                                             tableOutput(outputId = "debl_tab")
-                                                            )
+                                                          )
                                                  ),
                                                  tabPanel("ES",
                                                           fluidPage(
@@ -175,6 +175,13 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                             h2("Von Kindern mit Solidarität"),
                                                             tableOutput(outputId = "mtks_tab")
                                                           )
+                                                 ),
+                                                 tabPanel("PT",
+                                                          fluidPage(
+                                                            h1("Portugal"),
+                                                            h2("Geschichte Portugals"),
+                                                            tableOutput(outputId = "ptgp_tab")
+                                                          )
                                                  )#,
                                                  #tabPanel("...")
                                      )
@@ -204,12 +211,12 @@ server <- function(input, output, session) {
     write(tmp, file = "eur2collection.txt", append = TRUE)
     Sys.sleep(1.5)
   })
-
-    observeEvent(input$q1, {
+  
+  observeEvent(input$q1, {
     tmp <- paste0(input$myselection, "-1")
     write(tmp, file = "eur2collection.txt", append = TRUE)
     Sys.sleep(1.5)
-    })
+  })
   
   observeEvent(input$q2, {
     tmp <- paste0(input$myselection, "-2")
@@ -335,8 +342,8 @@ server <- function(input, output, session) {
     updateTextInput(session, inputId = "boxtab", value = paste0(tail(collection$Box, 1), tail(collection$Tableau, 1)))
     updateTextInput(session, inputId = "znr", value = tail(collection$Zeilennummer, 1))
   })
-
-    output$adresse <- renderText({
+  
+  output$adresse <- renderText({
     paste0(input$box, input$tableau, "11x", sprintf("%04d", (input$box - 1) * 144 + (input$tableau - 1) * 24 + 1),
            " bis ",
            input$box, input$tableau, "64x", sprintf("%04d", (input$box - 1) * 144 + input$tableau * 24))
@@ -361,10 +368,10 @@ server <- function(input, output, session) {
            dimnames = list(
              paste0("<b>..", 1:4, "<br>x<br>",
                     sprintf("%04d", (input$box - 1) * 144 + (input$tableau - 1) * 24 + (0:3) * 6, "</b>")
-                    ),
+             ),
              paste0(input$box, input$tableau, 1:6, "..<br>x<br>+", 1:6)
-             )
            )
+    )
   }, ignoreNULL = FALSE)
   
   output$debl_tab <- renderTable({debl_tab()}, bordered = T, spacing = "l", align = "clccccc", rownames = FALSE, sanitize.text.function = function(x) x)
@@ -411,7 +418,7 @@ server <- function(input, output, session) {
       matrix(ncol = 7,
              dimnames = list(NULL,
                              c("Jahr", "Bezeichnung", "A (Berlin)", "D (München)", "F (Stuttgart)", "G (Karlsruhe)", "J (Hamburg)"))
-             )
+      )
   }, ignoreNULL = FALSE)
   
   output$lter_tab <- renderTable({lter_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
@@ -422,7 +429,7 @@ server <- function(input, output, session) {
                                            '<b>Dzukija</b><br>(Mittellitauen)',
                                            '<b>Unbekannt</b><br>()',
                                            '<b>Unbekannt</b><br>()'))
-
+    
     left_join(lter %>% filter(!is.na(Amtsblatt)),
               coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
       left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
@@ -480,7 +487,7 @@ server <- function(input, output, session) {
                                            '<b>Geburt eines Großherzogs</b>',
                                            '<b>100. Geburtstag Großherzog Jeans</b>',
                                            '<b>40. Geburtstag Erbgroßherzog Guillaumes</b>'))
-
+    
     left_join(ludy %>% filter(!is.na(Amtsblatt)),
               coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
       left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
@@ -534,7 +541,7 @@ server <- function(input, output, session) {
                              c("Jahr", "Bezeichnung", " "))
       )
   }, ignoreNULL = FALSE)
-        
+  
   output$mtvg_tab <- renderTable({mtvg_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   mtvg_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     mtvg <- tibble(Amtsblatt = c('C2011/299/08', 'C2012/375/06', 'C2013/379/09', 'C2014/383/05', 'C2015/150/03'),
@@ -612,6 +619,41 @@ server <- function(input, output, session) {
                                    '<b>Spiele</b>'))
     
     left_join(mtks %>% filter(!is.na(Amtsblatt)),
+              coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
+      left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
+      mutate(Jahr = str_sub(ID, 1, 4),
+             Ablage = coalesce(Ablage, ""),
+             Qualität = case_when(is.na(Qualität) ~ "",
+                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
+                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
+                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
+                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
+                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
+             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
+      select(Jahr, Münzzeichen, Beschreibung, ID) -> tmp
+    
+    cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
+          tmp %>% pull(Beschreibung),
+          tmp %>% pull(ID)) %>% 
+      matrix(ncol = 3,
+             dimnames = list(NULL,
+                             c("Jahr", "Bezeichnung", " "))
+      )
+  }, ignoreNULL = FALSE)
+  
+  output$ptgp_tab <- renderTable({ptgp_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
+  ptgp_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    ptgp <- tibble(Amtsblatt = c('C2017/120/08', 'C2017/386/04', 'C2018/234/05', 'C2018/234/04', 'C2019/356/04',
+                                 'C2019/356/03', NA),
+                   Beschreibung =c('<b>150 Jahre Polícia de Segurança Pública (PSP)</b>',
+                                   '<b>150. Geburtstag Raul Brandãos</b>',
+                                   '<b>250 Jahre Nationale Druckerei Imprensa Nacional</b>',
+                                   '<b>250 Jahre Botanischer Garten von Ajuda (Lissabon)</b>',
+                                   '<b>500. Jahrestag der Weltumrundung durch Magellan</b>',
+                                   '<b>600. Jahrestag der Entdeckung der Inselgruppe Madeira</b>',
+                                   '<b>730 Jahre Universität Coimbra</b>'))
+    
+    left_join(ptgp %>% filter(!is.na(Amtsblatt)),
               coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
       left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
       mutate(Jahr = str_sub(ID, 1, 4),
