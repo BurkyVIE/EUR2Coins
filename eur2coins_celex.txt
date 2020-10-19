@@ -388,6 +388,7 @@ C2020/053/03|ee|2020|2020-2-1|g|100. Jahrestag des Friedens von Dorpat (Tartu)|
 C2020/053/04|lt|2020|2020-9-16|g|Aukštaitija/Oberlitauen (aus der Serie ethnografische Regionen Litauens)|
 C2020/053/05|it|2020|2020-6-9|g|150. Geburtstag von Maria Montessori|
 C2020/053/06|it|2020|2020-1-20|g|80. Jahrestag der Gründung des „Corpo Nazionale dei Vigili del Fuoco“ (nationale Feuerwehr)|
+C2020/150/05|be|2020|2020-10-15|g|Jan van Eyck|
 C2020/136/02|lv|2020|2020-6-5|g|Lettgallische Keramik (auch C2020/176/02)|
 C2020/163/04|va|2020|2020-6-23|g|100. Jahrestag der Geburt von Papst Johannes Paul II.|
 C2020/163/06|pt|2020|2020-10-7|g|75. Jahrestag der Vereinten Nationen|
@@ -400,8 +401,8 @@ C2020/301/13|sm|2020|2020-8-27|g|250. Todestag von Giambattista Tiepolo|
 NA|gr|2020|2020-6-30|g|2500. Jahrestag der Schlacht bei den Thermopylen|
 NA|gr|2020|2020-7-16|g|100. Jahrestag der Vereinigung Thrakiens mit Griechenland|
 NA|pt|2020|2020-9-1|g|730 Jahre Universität Coimbra|
+NA|de|2020|2020-10-8|g|50 Jahre Kniefall von Warschau|A,D,F,G,J
 
-C2020/150/05|be|2020|NA|g|Jan van Eyck|
 C2020/163/05|ad|2020|NA|g|Das 27. Iberoamerikanische Gipfeltreffen in Andorra|
 C2020/167/15|mc|2020|NA|g|300. Geburtstag von Prince Honoré III.|
 C2020/301/10|ad|2020|NA|g|50 Jahre Allgemeines Frauenwahlrecht|
