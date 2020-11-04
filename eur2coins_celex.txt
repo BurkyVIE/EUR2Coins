@@ -404,6 +404,7 @@ NA|gr|2020|2020-6-30|g|2500. Jahrestag der Schlacht bei den Thermopylen|
 NA|gr|2020|2020-7-16|g|100. Jahrestag der Vereinigung Thrakiens mit Griechenland|
 NA|pt|2020|2020-9-1|g|730 Jahre Universität Coimbra|
 NA|de|2020|2020-10-8|g|50 Jahre Kniefall von Warschau|A,D,F,G,J
+NA|fr|2020|2020-10-27|g|Medizinische Forschung|
 
 C2020/163/05|ad|2020|NA|g|Das 27. Iberoamerikanische Gipfeltreffen in Andorra|
 C2020/301/10|ad|2020|NA|g|50 Jahre Allgemeines Frauenwahlrecht|
