@@ -414,6 +414,7 @@ C2020/301/10|ad|2020|NA|g|50 Jahre Allgemeines Frauenwahlrecht|
 C2020/301/12|si|2020|NA|g|500. Geburtstag von Adam Bohorič|
 C2020/380/04|mt|2020|NA|g|Kinderspiele|
 C2020/381/03|lu|2020|NA|g|Die Geburt von Prinz Charles|
+C2020/389/03|cy|2020|NA|g|30. Jahrestag des zyprischen Instituts für Neurologie und Genetik|
 
 
 
