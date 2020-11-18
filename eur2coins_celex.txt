@@ -408,6 +408,7 @@ NA|gr|2020|2020-7-16|g|100. Jahrestag der Vereinigung Thrakiens mit Griechenland
 NA|de|2020|2020-10-8|g|50 Jahre Kniefall von Warschau|A,D,F,G,J
 NA|fr|2020|2020-10-27|g|Medizinische Forschung|
 NA|lt|2020|2020-11-4|g|Hügel der Kreuze|
+NA|fi|2020|2020-11-15|g|100. Geburtstag Väinö Linnas|
 
 C2020/163/05|ad|2020|NA|g|Das 27. Iberoamerikanische Gipfeltreffen in Andorra|
 C2020/301/10|ad|2020|NA|g|50 Jahre Allgemeines Frauenwahlrecht|
