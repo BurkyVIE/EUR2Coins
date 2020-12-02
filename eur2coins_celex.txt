@@ -406,9 +406,8 @@ C2020/393/03|lt|2020|2020-11-4|g|UNESCO-Kulturerbe – Kryžių kalnas (Berg der
 C2020/393/04|fi|2020|2020-11-15|g|Väinö Linna 100 Jahre|
 C2020/393/05|de|2020|2020-10-8|g|50. Jahrestag des Kniefalls von Willy Brandt in Warschau|A,D,F,G,J
 C2020/395/03|fr|2020|2020-10-27|g|Medizinische Forschung|
-
-NA|gr|2020|2020-6-30|g|2500. Jahrestag der Schlacht bei den Thermopylen|
-NA|gr|2020|2020-7-16|g|100. Jahrestag der Vereinigung Thrakiens mit Griechenland|
+C2020/417/05|gr|2020|2020-6-30|g|2500. Jahrestag der Schlacht bei den Thermopylen|
+C2020/417/06|gr|2020|2020-7-16|g|100. Jahrestag der Vereinigung Thrakiens mit Griechenland|
 
 C2020/163/05|ad|2020|NA|g|Das 27. Iberoamerikanische Gipfeltreffen in Andorra|
 C2020/301/10|ad|2020|NA|g|50 Jahre Allgemeines Frauenwahlrecht|
