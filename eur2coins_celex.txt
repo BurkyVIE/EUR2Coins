@@ -388,17 +388,18 @@ C2020/053/03|ee|2020|2020-2-1|g|100. Jahrestag des Friedens von Dorpat (Tartu)|
 C2020/053/04|lt|2020|2020-9-16|g|Aukštaitija/Oberlitauen (aus der Serie ethnografische Regionen Litauens)|
 C2020/053/05|it|2020|2020-6-9|g|150. Geburtstag von Maria Montessori|
 C2020/053/06|it|2020|2020-1-20|g|80. Jahrestag der Gründung des „Corpo Nazionale dei Vigili del Fuoco“ (nationale Feuerwehr)|
-C2020/150/05|be|2020|2020-10-15|g|Jan van Eyck|
 C2020/136/02|lv|2020|2020-6-5|g|Lettgallische Keramik (auch C2020/176/02)|
+C2020/150/05|be|2020|2020-10-15|g|Jan van Eyck|
 C2020/163/04|va|2020|2020-6-23|g|100. Jahrestag der Geburt von Papst Johannes Paul II.|
+C2020/163/05|ad|2020|2020-12-09|g|Das 27. Iberoamerikanische Gipfeltreffen in Andorra|
 C2020/163/06|pt|2020|2020-10-7|g|75. Jahrestag der Vereinten Nationen|
 C2020/166/02|mt|2020|2020-7-24|g|Unesco — Weltkulturerbe prähistorische Tempel von Skorba|
 C2020/167/15|mc|2020|2020-10-20|g|300. Geburtstag von Prince Honoré III.|
 C2020/210/05|sm|2020|2020-3-5|g|500. Todestag Raffaels|
 C2020/256/02|fr|2020|2020-1-31|g|Charles de Gaulle|
+C2020/301/10|ad|2020|2020-12-09|g|50 Jahre Allgemeines Frauenwahlrecht|
 C2020/301/11|fi|2020|2020-8-18|g|Universitäten und Gesellschaft — 100 Jahre Universität Turku|
 C2020/301/13|sm|2020|2020-8-27|g|250. Todestag von Giambattista Tiepolo|
-C2020/301/14|va|2020|2020-10-16|g|500. Jahrestag des Todes von Raphael Sanzio|
 C2020/301/14|va|2020|2020-10-16|g|500. Jahrestag des Todes von Raphael Sanzio|
 C2020/377/12|sk|2020|2020-11-11|g|20. Jahrestag des Beitritts der Slowakei zur Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD)|
 C2020/380/05|pt|2020|2020-9-1|g|730-jähriges Bestehen der Universität Coimbra|
@@ -409,8 +410,6 @@ C2020/395/03|fr|2020|2020-10-27|g|Medizinische Forschung|
 C2020/417/05|gr|2020|2020-6-30|g|2500. Jahrestag der Schlacht bei den Thermopylen|
 C2020/417/06|gr|2020|2020-7-16|g|100. Jahrestag der Vereinigung Thrakiens mit Griechenland|
 
-C2020/163/05|ad|2020|NA|g|Das 27. Iberoamerikanische Gipfeltreffen in Andorra|
-C2020/301/10|ad|2020|NA|g|50 Jahre Allgemeines Frauenwahlrecht|
 C2020/301/12|si|2020|NA|g|500. Geburtstag von Adam Bohorič|
 C2020/380/04|mt|2020|NA|g|Kinderspiele|
 C2020/381/03|lu|2020|NA|g|Die Geburt von Prinz Charles|
