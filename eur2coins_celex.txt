@@ -413,6 +413,7 @@ C2020/417/06|gr|2020|2020-7-16|g|100. Jahrestag der Vereinigung Thrakiens mit Gr
 
 C2020/301/12|si|2020|NA|g|500. Geburtstag von Adam Bohorič|
 C2020/381/03|lu|2020|NA|g|Die Geburt von Prinz Charles|
+C2020/389/03|cy|2020|NA|g|30. Jahrestag des zyprischen Instituts für Neurologie und Genetik|
 
 
 
@@ -422,6 +423,7 @@ C2014/062/07|ad|2016|NA|u|Staatswappen von Andorra (2014 -)|
 C2014/062/07|ad|2017|NA|u|Staatswappen von Andorra (2014 -)|
 C2014/062/07|ad|2018|NA|u|Staatswappen von Andorra (2014 -)|
 C2014/062/07|ad|2019|NA|u|Staatswappen von Andorra (2014 -)|
+C2014/062/07|ad|2020|NA|u|Staatswappen von Andorra (2014 -)|
 
 C2001/373/01|at|2002|NA|u|Bertha Freifrau von Suttner (2002 -)|
 C2001/373/01|at|2003|NA|u|Bertha Freifrau von Suttner (2002 -)|
@@ -619,6 +621,7 @@ C2001/373/01|it|2016|NA|u|Dante Alighieri (2002 -)|
 C2001/373/01|it|2017|NA|u|Dante Alighieri (2002 -)|
 C2001/373/01|it|2018|NA|u|Dante Alighieri (2002 -)|
 C2001/373/01|it|2019|NA|u|Dante Alighieri (2002 -)|
+C2001/373/01|it|2020|NA|u|Dante Alighieri (2002 -)|
 
 C2014/385/05|lt|2015|NA|u|Vytis (2015 -)|
 C2014/385/05|lt|2017|NA|u|Vytis (2015 -)|
@@ -669,6 +672,7 @@ C2006/316/09|mc|2016|NA|u|Fürst Albert II. (2006 -)|
 C2006/316/09|mc|2017|NA|u|Fürst Albert II. (2006 -)|
 C2006/316/09|mc|2018|NA|u|Fürst Albert II. (2006 -)|
 C2006/316/09|mc|2019|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2020|NA|u|Fürst Albert II. (2006 -)|
 
 C2007/248/08|mt|2008|NA|u|Malteserkreuz (2008 -)|
 C2007/248/08|mt|2010|NA|u|Malteserkreuz (2008 -)|
@@ -681,6 +685,7 @@ C2007/248/08|mt|2016|NA|u|Malteserkreuz (2008 -)|
 C2007/248/08|mt|2017|NA|u|Malteserkreuz (2008 -)|
 C2007/248/08|mt|2018|NA|u|Malteserkreuz (2008 -)|
 C2007/248/08|mt|2019|NA|u|Malteserkreuz (2008 -)|
+C2007/248/08|mt|2020|NA|u|Malteserkreuz (2008 -)|
 
 C2001/373/01|nl|1999|NA|u|Königin Beatrix (1999 - 2013)|
 C2001/373/01|nl|2000|NA|u|Königin Beatrix (1999 - 2013)|
@@ -723,6 +728,7 @@ C2001/373/01|pt|2016|NA|u|Königliches Siegel von 1144 (2002 -)|
 C2001/373/01|pt|2017|NA|u|Königliches Siegel von 1144 (2002 -)|
 C2001/373/01|pt|2018|NA|u|Königliches Siegel von 1144 (2002 -)|
 C2001/373/01|pt|2019|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2020|NA|u|Königliches Siegel von 1144 (2002 -)|
 
 C2006/254/04|si|2007|NA|u|France Prešeren (2007 -)|
 C2006/254/04|si|2008|NA|u|France Prešeren (2007 -)|
