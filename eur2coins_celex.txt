@@ -402,6 +402,7 @@ C2020/301/11|fi|2020|2020-8-18|g|Universitäten und Gesellschaft — 100 Jahre U
 C2020/301/13|sm|2020|2020-8-27|g|250. Todestag von Giambattista Tiepolo|
 C2020/301/14|va|2020|2020-10-16|g|500. Jahrestag des Todes von Raphael Sanzio|
 C2020/377/12|sk|2020|2020-11-11|g|20. Jahrestag des Beitritts der Slowakei zur Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD)|
+C2020/380/04|mt|2020|2020-12-11|g|Kinderspiele|
 C2020/380/05|pt|2020|2020-9-1|g|730-jähriges Bestehen der Universität Coimbra|
 C2020/393/03|lt|2020|2020-11-4|g|UNESCO-Kulturerbe – Kryžių kalnas (Berg der Kreuze)|
 C2020/393/04|fi|2020|2020-11-15|g|Väinö Linna 100 Jahre|
@@ -411,9 +412,7 @@ C2020/417/05|gr|2020|2020-6-30|g|2500. Jahrestag der Schlacht bei den Thermopyle
 C2020/417/06|gr|2020|2020-7-16|g|100. Jahrestag der Vereinigung Thrakiens mit Griechenland|
 
 C2020/301/12|si|2020|NA|g|500. Geburtstag von Adam Bohorič|
-C2020/380/04|mt|2020|NA|g|Kinderspiele|
 C2020/381/03|lu|2020|NA|g|Die Geburt von Prinz Charles|
-C2020/389/03|cy|2020|NA|g|30. Jahrestag des zyprischen Instituts für Neurologie und Genetik|
 
 
 
