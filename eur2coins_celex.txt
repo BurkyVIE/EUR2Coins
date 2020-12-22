@@ -369,7 +369,7 @@ C2019/351/10|lt|2019|2019-9-10|g|Samogitien (ethnografische Region Litauens)|
 C2019/351/11|lt|2019|2019-6-10|g|Sutartinės (litauische mehrteilige Lieder — aufgenommen in die Repräsentative Liste des Immateriellen Kulturerbes der Menschheit der Unesco)|
 C2019/352/13|lu|2019|2019-9-19|g|100. Jahrestag der Einführung des allgemeinen Wahlrechts|
 C2019/352/14|lv|2019|2019-9-17|g|Aufgehende Sonne (Wappen)|
-C2019/352/15|mt|2019|2019-5-13|g|Unesco-Weltkulturerbe — prähistorische Tempel Ta‘ Haġrat|
+C2019/352/15|mt|2019|2019-5-13|g|Unesco-Weltkulturerbe — prähistorische Tempel Ta‘ Haġrat|,F
 C2019/352/16|mt|2019|2019-10-21|g|Natur und Umwelt|
 C2019/352/17|si|2019|2019-11-25|g|100. Geburtstag der Gründung der Universität Ljubljana|
 C2019/356/03|pt|2019|2019-6-6|g|600 Jahre der Entdeckung des Archipels von Madeira durch die portugiesischen Seefahrer Bartolomeu Perestrelo und Tristão Vaz|
@@ -388,20 +388,23 @@ C2020/053/03|ee|2020|2020-2-1|g|100. Jahrestag des Friedens von Dorpat (Tartu)|
 C2020/053/04|lt|2020|2020-9-16|g|Aukštaitija/Oberlitauen (aus der Serie ethnografische Regionen Litauens)|
 C2020/053/05|it|2020|2020-6-9|g|150. Geburtstag von Maria Montessori|
 C2020/053/06|it|2020|2020-1-20|g|80. Jahrestag der Gründung des „Corpo Nazionale dei Vigili del Fuoco“ (nationale Feuerwehr)|
-C2020/150/05|be|2020|2020-10-15|g|Jan van Eyck|
 C2020/136/02|lv|2020|2020-6-5|g|Lettgallische Keramik (auch C2020/176/02)|
+C2020/150/05|be|2020|2020-10-15|g|Jan van Eyck|
 C2020/163/04|va|2020|2020-6-23|g|100. Jahrestag der Geburt von Papst Johannes Paul II.|
+C2020/163/05|ad|2020|2020-12-09|g|Das 27. Iberoamerikanische Gipfeltreffen in Andorra|
 C2020/163/06|pt|2020|2020-10-7|g|75. Jahrestag der Vereinten Nationen|
 C2020/166/02|mt|2020|2020-7-24|g|Unesco — Weltkulturerbe prähistorische Tempel von Skorba|
 C2020/167/15|mc|2020|2020-10-20|g|300. Geburtstag von Prince Honoré III.|
 C2020/210/05|sm|2020|2020-3-5|g|500. Todestag Raffaels|
 C2020/256/02|fr|2020|2020-1-31|g|Charles de Gaulle|
+C2020/301/10|ad|2020|2020-12-09|g|50 Jahre Allgemeines Frauenwahlrecht|
 C2020/301/11|fi|2020|2020-8-18|g|Universitäten und Gesellschaft — 100 Jahre Universität Turku|
 C2020/301/13|sm|2020|2020-8-27|g|250. Todestag von Giambattista Tiepolo|
 C2020/301/14|va|2020|2020-10-16|g|500. Jahrestag des Todes von Raphael Sanzio|
-C2020/301/14|va|2020|2020-10-16|g|500. Jahrestag des Todes von Raphael Sanzio|
 C2020/377/12|sk|2020|2020-11-11|g|20. Jahrestag des Beitritts der Slowakei zur Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD)|
+C2020/380/04|mt|2020|2020-12-11|g|Kinderspiele|
 C2020/380/05|pt|2020|2020-9-1|g|730-jähriges Bestehen der Universität Coimbra|
+C2020/389/03|cy|2020|2020-12-14|g|30. Jahrestag des zyprischen Instituts für Neurologie und Genetik|
 C2020/393/03|lt|2020|2020-11-4|g|UNESCO-Kulturerbe – Kryžių kalnas (Berg der Kreuze)|
 C2020/393/04|fi|2020|2020-11-15|g|Väinö Linna 100 Jahre|
 C2020/393/05|de|2020|2020-10-8|g|50. Jahrestag des Kniefalls von Willy Brandt in Warschau|A,D,F,G,J
@@ -409,12 +412,11 @@ C2020/395/03|fr|2020|2020-10-27|g|Medizinische Forschung|
 C2020/417/05|gr|2020|2020-6-30|g|2500. Jahrestag der Schlacht bei den Thermopylen|
 C2020/417/06|gr|2020|2020-7-16|g|100. Jahrestag der Vereinigung Thrakiens mit Griechenland|
 
-C2020/163/05|ad|2020|NA|g|Das 27. Iberoamerikanische Gipfeltreffen in Andorra|
-C2020/301/10|ad|2020|NA|g|50 Jahre Allgemeines Frauenwahlrecht|
 C2020/301/12|si|2020|NA|g|500. Geburtstag von Adam Bohorič|
-C2020/380/04|mt|2020|NA|g|Kinderspiele|
 C2020/381/03|lu|2020|NA|g|Die Geburt von Prinz Charles|
-C2020/389/03|cy|2020|NA|g|30. Jahrestag des zyprischen Instituts für Neurologie und Genetik|
+
+C2020/444/04|lu|2021|NA|g|Der 100. Geburtstag von Großherzog Jean|
+C2020/444/05|pt|2021|NA|g|Portugiesischer Vorsitz im Rat der Europäischen Union|
 
 
 
@@ -424,6 +426,7 @@ C2014/062/07|ad|2016|NA|u|Staatswappen von Andorra (2014 -)|
 C2014/062/07|ad|2017|NA|u|Staatswappen von Andorra (2014 -)|
 C2014/062/07|ad|2018|NA|u|Staatswappen von Andorra (2014 -)|
 C2014/062/07|ad|2019|NA|u|Staatswappen von Andorra (2014 -)|
+C2014/062/07|ad|2020|NA|u|Staatswappen von Andorra (2014 -)|
 
 C2001/373/01|at|2002|NA|u|Bertha Freifrau von Suttner (2002 -)|
 C2001/373/01|at|2003|NA|u|Bertha Freifrau von Suttner (2002 -)|
@@ -621,6 +624,7 @@ C2001/373/01|it|2016|NA|u|Dante Alighieri (2002 -)|
 C2001/373/01|it|2017|NA|u|Dante Alighieri (2002 -)|
 C2001/373/01|it|2018|NA|u|Dante Alighieri (2002 -)|
 C2001/373/01|it|2019|NA|u|Dante Alighieri (2002 -)|
+C2001/373/01|it|2020|NA|u|Dante Alighieri (2002 -)|
 
 C2014/385/05|lt|2015|NA|u|Vytis (2015 -)|
 C2014/385/05|lt|2017|NA|u|Vytis (2015 -)|
@@ -671,6 +675,7 @@ C2006/316/09|mc|2016|NA|u|Fürst Albert II. (2006 -)|
 C2006/316/09|mc|2017|NA|u|Fürst Albert II. (2006 -)|
 C2006/316/09|mc|2018|NA|u|Fürst Albert II. (2006 -)|
 C2006/316/09|mc|2019|NA|u|Fürst Albert II. (2006 -)|
+C2006/316/09|mc|2020|NA|u|Fürst Albert II. (2006 -)|
 
 C2007/248/08|mt|2008|NA|u|Malteserkreuz (2008 -)|
 C2007/248/08|mt|2010|NA|u|Malteserkreuz (2008 -)|
@@ -683,6 +688,7 @@ C2007/248/08|mt|2016|NA|u|Malteserkreuz (2008 -)|
 C2007/248/08|mt|2017|NA|u|Malteserkreuz (2008 -)|
 C2007/248/08|mt|2018|NA|u|Malteserkreuz (2008 -)|
 C2007/248/08|mt|2019|NA|u|Malteserkreuz (2008 -)|
+C2007/248/08|mt|2020|NA|u|Malteserkreuz (2008 -)|
 
 C2001/373/01|nl|1999|NA|u|Königin Beatrix (1999 - 2013)|
 C2001/373/01|nl|2000|NA|u|Königin Beatrix (1999 - 2013)|
@@ -725,6 +731,7 @@ C2001/373/01|pt|2016|NA|u|Königliches Siegel von 1144 (2002 -)|
 C2001/373/01|pt|2017|NA|u|Königliches Siegel von 1144 (2002 -)|
 C2001/373/01|pt|2018|NA|u|Königliches Siegel von 1144 (2002 -)|
 C2001/373/01|pt|2019|NA|u|Königliches Siegel von 1144 (2002 -)|
+C2001/373/01|pt|2020|NA|u|Königliches Siegel von 1144 (2002 -)|
 
 C2006/254/04|si|2007|NA|u|France Prešeren (2007 -)|
 C2006/254/04|si|2008|NA|u|France Prešeren (2007 -)|
