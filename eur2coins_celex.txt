@@ -415,6 +415,9 @@ C2020/417/06|gr|2020|2020-7-16|g|100. Jahrestag der Vereinigung Thrakiens mit Gr
 C2020/301/12|si|2020|NA|g|500. Geburtstag von Adam Bohorič|
 C2020/381/03|lu|2020|NA|g|Die Geburt von Prinz Charles|
 
+C2020/444/04|lu|2021|NA|g|Der 100. Geburtstag von Großherzog Jean|
+C2020/444/05|pt|2021|NA|g|Portugiesischer Vorsitz im Rat der Europäischen Union|
+
 
 
 C2014/062/07|ad|2014|NA|u|Staatswappen von Andorra (2014 -)|
