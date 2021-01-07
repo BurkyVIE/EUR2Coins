@@ -414,10 +414,9 @@ C2020/395/03|fr|2020|2020-10-27|g|Medizinische Forschung|
 C2020/417/05|gr|2020|2020-6-30|g|2500. Jahrestag der Schlacht bei den Thermopylen|
 C2020/417/06|gr|2020|2020-7-16|g|100. Jahrestag der Vereinigung Thrakiens mit Griechenland|
 
-
+C2020/444/05|pt|2021|2021-1-4|g|Portugiesischer Vorsitz im Rat der Europäischen Union|
 
 C2020/444/04|lu|2021|NA|g|Der 100. Geburtstag von Großherzog Jean|
-C2020/444/05|pt|2021|NA|g|Portugiesischer Vorsitz im Rat der Europäischen Union|
 
 
 
