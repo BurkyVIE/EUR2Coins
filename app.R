@@ -379,7 +379,7 @@ server <- function(input, output, session) {
     debl <- tibble(Amtsblatt = c('C2006/033/04', 'C2007/076/02', 'C2008/013/02', 'C2009/031/06', 'C2010/012/05',
                                  'C2011/024/04', 'C2012/010/02', 'C2013/379/08', 'C2014/417/04', 'C2015/143/05',
                                  'C2015/428/04', 'C2017/023/04', 'C2018/400/05', 'C2018/466/08', 'C2020/049/11',
-                                 NA, NA),
+                                 'C2021/020/04', NA),
                    Beschreibung = c('<b>Schleswig-Holstein</b><br>(Lübecker Holstentor)',
                                     '<b>Mecklenburg-Vorpommern</b><br>(Schloss Schwerin)',
                                     '<b>Hamburg</b><br>(Hamburger Sankt-Michaelis-Kirche)',
@@ -459,8 +459,8 @@ server <- function(input, output, session) {
                                          'C2009/005/02', 'C2009/311/06', 'C2010/349/03', 'C2011/373/06', 'C2013/021/05',
                                          'C2013/219/06', 'C2014/020/06', 'C2014/262/05', 'C2015/086/03', 'C2015/232/05',
                                          'C2016/028/04', 'C2017/023/07', 'C2017/320/04', 'C2017/438/10', 'C2018/305/06',
-                                         'C2018/466/11', 'C2019/352/13', 'C2020/049/13', NA, NA,
-                                         NA),
+                                         'C2018/466/11', 'C2019/352/13', 'C2020/049/13', 'C2020/381/03', 'C2020/444/04',
+                                         'C2021/020/06'),
                            Beschreibung =c('<b>Monogramm Großherzog Henris</b>',
                                            '<b>50. Geburtstag und 5. Jahrestag der Thronbesteigung Großherzog Henris,<br>100. Todestag Großherzog Adolphs</b>',
                                            '<b>25. Geburtstag Erbgroßherzog Guillaumes</b>',
@@ -644,14 +644,16 @@ server <- function(input, output, session) {
   output$ptgp_tab <- renderTable({ptgp_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   ptgp_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     ptgp <- tibble(Amtsblatt = c('C2017/120/08', 'C2017/386/04', 'C2018/234/05', 'C2018/234/04', 'C2019/356/04',
-                                 'C2019/356/03', NA),
+                                 'C2019/356/03', 'C2020/380/05', 'C2020/163/06', 'C2020/444/05'),
                    Beschreibung =c('<b>150 Jahre Polícia de Segurança Pública (PSP)</b>',
                                    '<b>150. Geburtstag Raul Brandãos</b>',
                                    '<b>250 Jahre Nationale Druckerei Imprensa Nacional</b>',
                                    '<b>250 Jahre Botanischer Garten von Ajuda (Lissabon)</b>',
                                    '<b>500. Jahrestag der Weltumrundung durch Magellan</b>',
                                    '<b>600. Jahrestag der Entdeckung der Inselgruppe Madeira</b>',
-                                   '<b>730 Jahre Universität Coimbra</b>'))
+                                   '<b>730 Jahre Universität Coimbra</b>',
+                                   '<b>75 Jahre Vereinte Nationen</b>',
+                                   '<b>EU-Ratspräsidentschaft</b>'))
     
     left_join(ptgp %>% filter(!is.na(Amtsblatt)),
               coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
@@ -692,7 +694,7 @@ server <- function(input, output, session) {
                                    '<b>Altstadt von Santiago de Compostela</b><br>(Detail der Westfassade der Kathedrale von Santiago de Compostela)',
                                    '<b>Altstadt von Ávila und Kirchen außerhalb der Stadtmauer</b><br>(Drei Wehrtürme der Stadtmauer Ávilas)',
                                    '<b>Architektur der Mudéjares in Aragon</b><br>(Turm von El Salvador in Teruel)',
-                                   '<b>Historische Altstadt von Toledo</b><br>(Unbekannt)',
+                                   '<b>Historische Altstadt von Toledo</b><br>(Puerta del Sol und Detail der Synagoge El Tránsito in Toledo)',
                                    '<b>Nationalpark Garajonay auf La Gomera</b><br>(Unbekannt)'))
     
     left_join(esun %>% filter(!is.na(Amtsblatt)),
