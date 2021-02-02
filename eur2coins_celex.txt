@@ -420,6 +420,8 @@ C2021/020/05|lv|2021|2021-1-20|g|100. Jahrestag der völkerrechtlichen Anerkennu
 C2020/444/04|lu|2021|NA|g|Der 100. Geburtstag von Großherzog Jean|
 C2021/020/04|de|2021|NA|g|Sachsen-Anhalt (Bundesländer-Serie)|A,D,F,G,J
 C2021/020/06|lu|2021|NA|g|der 40. Hochzeitstag von Großherzog Henri|
+C2021/036/04|it|2021|NA|g|150. Jahrestag der Erklärung Roms zur Hauptstadt Italiens|
+C2021/036/05|it|2021|NA|g|Angehörige der Gesundheitsberufe|
 
 
 
