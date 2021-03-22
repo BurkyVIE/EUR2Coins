@@ -419,14 +419,15 @@ C2021/020/04|de|2021|2021-1-26|g|Sachsen-Anhalt (Bundesländer-Serie)|A,D,F,G,J
 C2021/020/05|lv|2021|2021-1-20|g|100. Jahrestag der völkerrechtlichen Anerkennung Lettlands|
 C2021/036/04|it|2021|2021-1-26|g|150. Jahrestag der Erklärung Roms zur Hauptstadt Italiens|
 C2021/093/04|fr|2021|2021-3-18|g|UNICEF|
+C2021/096/08|es|2021|2021-3-10|g|Historische Innenstadt von Toledo|
 
 C2020/444/04|lu|2021|NA|g|Der 100. Geburtstag von Großherzog Jean|
 C2021/020/06|lu|2021|NA|g|der 40. Hochzeitstag von Großherzog Henri|
 C2021/036/05|it|2021|NA|g|Angehörige der Gesundheitsberufe|
 C2021/059/05|ee|2021|NA|g|Der Wolf als estnisches Nationaltier|
+C2021/096/07|gr|2021|NA|g|200 Jahre seit der griechischen Revolution|
 
 NA|sm|2021|2021-3-1|g|450. Geburtstag Caravaggios|
-NA|es|2021|2021-3-10|g|Historische Innenstadt von Toledo|
 
 
 
