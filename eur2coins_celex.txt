@@ -426,6 +426,7 @@ C2021/020/06|lu|2021|NA|g|der 40. Hochzeitstag von Großherzog Henri|
 C2021/036/05|it|2021|NA|g|Angehörige der Gesundheitsberufe|
 C2021/059/05|ee|2021|NA|g|Der Wolf als estnisches Nationaltier|
 C2021/096/07|gr|2021|NA|g|200 Jahre seit der griechischen Revolution|
+C2021/103/05|fi|2021|NA|g|Journalismus und offene Kommunikation zur Unterstützung der finnischen Demokratie|
 
 NA|sm|2021|2021-3-1|g|450. Geburtstag Caravaggios|
 
