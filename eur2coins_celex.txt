@@ -414,19 +414,19 @@ C2020/395/03|fr|2020|2020-10-27|g|Medizinische Forschung|
 C2020/417/05|gr|2020|2020-6-30|g|2500. Jahrestag der Schlacht bei den Thermopylen|
 C2020/417/06|gr|2020|2020-7-16|g|100. Jahrestag der Vereinigung Thrakiens mit Griechenland|
 
+C2020/444/04|lu|2021|2021-4-19|g|Der 100. Geburtstag von Großherzog Jean|
 C2020/444/05|pt|2021|2021-1-4|g|Portugiesischer Vorsitz im Rat der Europäischen Union|
 C2021/020/04|de|2021|2021-1-26|g|Sachsen-Anhalt (Bundesländer-Serie)|A,D,F,G,J
 C2021/020/05|lv|2021|2021-1-20|g|100. Jahrestag der völkerrechtlichen Anerkennung Lettlands|
+C2021/020/06|lu|2021|2021-4-19|g|der 40. Hochzeitstag von Großherzog Henri|
 C2021/036/04|it|2021|2021-1-26|g|150. Jahrestag der Erklärung Roms zur Hauptstadt Italiens|
 C2021/093/04|fr|2021|2021-3-18|g|UNICEF|
+C2021/096/07|gr|2021|2021-4-22|g|200 Jahre seit der griechischen Revolution|
 C2021/096/08|es|2021|2021-3-10|g|Historische Innenstadt von Toledo|
 C2021/103/05|fi|2021|2021-4-14|g|Journalismus und offene Kommunikation zur Unterstützung der finnischen Demokratie|
 
-C2020/444/04|lu|2021|NA|g|Der 100. Geburtstag von Großherzog Jean|
-C2021/020/06|lu|2021|NA|g|der 40. Hochzeitstag von Großherzog Henri|
 C2021/036/05|it|2021|NA|g|Angehörige der Gesundheitsberufe|
 C2021/059/05|ee|2021|NA|g|Der Wolf als estnisches Nationaltier|
-C2021/096/07|gr|2021|NA|g|200 Jahre seit der griechischen Revolution|
 C2021/104/04|lt|2021|NA|g|UNESCO-Programm „Der Mensch und die Biosphäre“ - Biosphärenreservat Žuvintas|
 
 NA|sm|2021|2021-3-1|g|450. Geburtstag Caravaggios|
