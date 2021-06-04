@@ -369,7 +369,7 @@ C2019/351/10|lt|2019|2019-9-10|g|Samogitien (ethnografische Region Litauens)|
 C2019/351/11|lt|2019|2019-6-10|g|Sutartinės (litauische mehrteilige Lieder — aufgenommen in die Repräsentative Liste des Immateriellen Kulturerbes der Menschheit der Unesco)|
 C2019/352/13|lu|2019|2019-9-19|g|100. Jahrestag der Einführung des allgemeinen Wahlrechts|
 C2019/352/14|lv|2019|2019-9-17|g|Aufgehende Sonne (Wappen)|
-C2019/352/15|mt|2019|2019-5-13|g|Unesco-Weltkulturerbe — prähistorische Tempel Ta‘ Haġrat|,F
+C2019/352/15|mt|2019|2019-5-13|g|Unesco-Weltkulturerbe — prähistorische Tempel Ta‘ Haġrat|, F
 C2019/352/16|mt|2019|2019-10-21|g|Natur und Umwelt|
 C2019/352/17|si|2019|2019-11-25|g|100. Geburtstag der Gründung der Universität Ljubljana|
 C2019/356/03|pt|2019|2019-6-6|g|600 Jahre der Entdeckung des Archipels von Madeira durch die portugiesischen Seefahrer Bartolomeu Perestrelo und Tristão Vaz|
@@ -456,6 +456,7 @@ C2001/373/01|at|2015|NA|u|Bertha Freifrau von Suttner (2002 -)|
 C2001/373/01|at|2017|NA|u|Bertha Freifrau von Suttner (2002 -)|
 C2001/373/01|at|2019|NA|u|Bertha Freifrau von Suttner (2002 -)|
 C2001/373/01|at|2020|NA|u|Bertha Freifrau von Suttner (2002 -)|
+C2001/373/01|at|2021|NA|u|Bertha Freifrau von Suttner (2002 -)|
 
 C2001/373/01|be|1999|NA|u|König Albert II. (1999 - 2007)|
 C2001/373/01|be|2000|NA|u|König Albert II. (1999 - 2007)|
@@ -479,6 +480,7 @@ C2014/075/02|be|2017|NA|u|König Philippe (2014 -)|
 C2014/075/02|be|2018|NA|u|König Philippe (2014 -)|
 C2014/075/02|be|2019|NA|u|König Philippe (2014 -)|
 C2014/075/02|be|2020|NA|u|König Philippe (2014 -)|
+C2014/075/02|be|2021|NA|u|König Philippe (2014 -)|
 
 C2007/248/07|cy|2008|NA|u|Idol von Pomos (2008 -)|
 C2007/248/07|cy|2009|NA|u|Idol von Pomos (2008 -)|
@@ -493,6 +495,7 @@ C2007/248/07|cy|2017|NA|u|Idol von Pomos (2008 -)|
 C2007/248/07|cy|2018|NA|u|Idol von Pomos (2008 -)|
 C2007/248/07|cy|2019|NA|u|Idol von Pomos (2008 -)|
 C2007/248/07|cy|2020|NA|u|Idol von Pomos (2008 -)|
+C2007/248/07|cy|2021|NA|u|Idol von Pomos (2008 -)|
 
 C2001/373/01|de|2002|NA|u|Bundesadler (2002 -)|A,D,F,G,J
 C2001/373/01|de|2003|NA|u|Bundesadler (2002 -)|A,D,F,G,J
@@ -507,6 +510,7 @@ C2001/373/01|de|2016|NA|u|Bundesadler (2002 -)|A,D,F,G,J
 C2001/373/01|de|2017|NA|u|Bundesadler (2002 -)|A,D,F,G,J
 C2001/373/01|de|2019|NA|u|Bundesadler (2002 -)|A,D,F,G,J
 C2001/373/01|de|2020|NA|u|Bundesadler (2002 -)|A,D,F,G,J
+C2001/373/01|de|2021|NA|u|Bundesadler (2002 -)|A,D,F,G,J
 
 C2010/309/04|ee|2011|NA|u|Landesumriss (2011 -)|
 C2010/309/04|ee|2016|NA|u|Landesumriss (2011 -)|
@@ -535,6 +539,7 @@ C2014/410/06|es|2017|NA|u|König Felipe VI. (2015 -)|
 C2014/410/06|es|2018|NA|u|König Felipe VI. (2015 -)|
 C2014/410/06|es|2019|NA|u|König Felipe VI. (2015 -)|
 C2014/410/06|es|2020|NA|u|König Felipe VI. (2015 -)|
+C2014/410/06|es|2021|NA|u|König Felipe VI. (2015 -)|
 
 C2001/373/01|fi|1999|NA|u|Moltebeere (1999 -2006)|
 C2001/373/01|fi|2000|NA|u|Moltebeere (1999 -2006)|
@@ -557,6 +562,8 @@ C2001/373/01|fi|2016|NA|u|Moltebeere (2007 -)|
 C2001/373/01|fi|2017|NA|u|Moltebeere (2007 -)|
 C2001/373/01|fi|2018|NA|u|Moltebeere (2007 -)|
 C2001/373/01|fi|2019|NA|u|Moltebeere (2007 -)|
+C2001/373/01|fi|2020|NA|u|Moltebeere (2007 -)|
+C2001/373/01|fi|2021|NA|u|Moltebeere (2007 -)|
 
 C2001/373/01|fr|1999|NA|u|Stilisierter Baum (1999 -)|
 C2001/373/01|fr|2000|NA|u|Stilisierter Baum (1999 -)|
@@ -580,6 +587,7 @@ C2001/373/01|fr|2017|NA|u|Stilisierter Baum (1999 -)|
 C2001/373/01|fr|2018|NA|u|Stilisierter Baum (1999 -)|
 C2001/373/01|fr|2019|NA|u|Stilisierter Baum (1999 -)|
 C2001/373/01|fr|2020|NA|u|Stilisierter Baum (1999 -)|
+C2001/373/01|fr|2021|NA|u|Stilisierter Baum (1999 -)|
 
 C2001/373/01|gr|2002|NA|u|Entführung der Europa durch Zeus (2002 -)|,S
 C2001/373/01|gr|2003|NA|u|Entführung der Europa durch Zeus (2002 -)|
@@ -599,6 +607,8 @@ C2001/373/01|gr|2016|NA|u|Entführung der Europa durch Zeus (2002 -)|
 C2001/373/01|gr|2017|NA|u|Entführung der Europa durch Zeus (2002 -)|
 C2001/373/01|gr|2018|NA|u|Entführung der Europa durch Zeus (2002 -)|
 C2001/373/01|gr|2019|NA|u|Entführung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2020|NA|u|Entführung der Europa durch Zeus (2002 -)|
+C2001/373/01|gr|2021|NA|u|Entführung der Europa durch Zeus (2002 -)|
 
 C2001/373/01|ie|2002|NA|u|Keltische Harfe (2002 -)|
 C2001/373/01|ie|2003|NA|u|Keltische Harfe (2002 -)|
@@ -639,12 +649,14 @@ C2001/373/01|it|2017|NA|u|Dante Alighieri (2002 -)|
 C2001/373/01|it|2018|NA|u|Dante Alighieri (2002 -)|
 C2001/373/01|it|2019|NA|u|Dante Alighieri (2002 -)|
 C2001/373/01|it|2020|NA|u|Dante Alighieri (2002 -)|
+C2001/373/01|it|2021|NA|u|Dante Alighieri (2002 -)|
 
 C2014/385/05|lt|2015|NA|u|Vytis (2015 -)|
 C2014/385/05|lt|2017|NA|u|Vytis (2015 -)|
 C2014/385/05|lt|2018|NA|u|Vytis (2015 -)|
 C2014/385/05|lt|2019|NA|u|Vytis (2015 -)|
 C2014/385/05|lt|2020|NA|u|Vytis (2015 -)|
+C2014/385/05|lt|2021|NA|u|Vytis (2015 -)|
 
 C2001/373/01|lu|2002|NA|u|Großherzog Henri (2002 -)|
 C2001/373/01|lu|2003|NA|u|Großherzog Henri (2002 -)|
@@ -664,6 +676,7 @@ C2001/373/01|lu|2017|NA|u|Großherzog Henri (2002 -)|
 C2001/373/01|lu|2018|NA|u|Großherzog Henri (2002 -)|
 C2001/373/01|lu|2019|NA|u|Großherzog Henri (2002 -)|
 C2001/373/01|lu|2020|NA|u|Großherzog Henri (2002 -)|
+C2001/373/01|lu|2021|NA|u|Großherzog Henri (2002 -)|
 
 C2013/309/03|lv|2014|NA|u|Trachtenmädchen (2014 - )|
 C2013/309/03|lv|2015|NA|u|Trachtenmädchen (2014 - )|
@@ -703,6 +716,7 @@ C2007/248/08|mt|2017|NA|u|Malteserkreuz (2008 -)|
 C2007/248/08|mt|2018|NA|u|Malteserkreuz (2008 -)|
 C2007/248/08|mt|2019|NA|u|Malteserkreuz (2008 -)|
 C2007/248/08|mt|2020|NA|u|Malteserkreuz (2008 -)|
+C2007/248/08|mt|2021|NA|u|Malteserkreuz (2008 -)|
 
 C2001/373/01|nl|1999|NA|u|Königin Beatrix (1999 - 2013)|
 C2001/373/01|nl|2000|NA|u|Königin Beatrix (1999 - 2013)|
@@ -726,6 +740,7 @@ C2014/046/08|nl|2017|NA|u|König Willem-Alexander (2014 -)|,b
 C2014/046/08|nl|2018|NA|u|König Willem-Alexander (2014 -)|
 C2014/046/08|nl|2019|NA|u|König Willem-Alexander (2014 -)|
 C2014/046/08|nl|2020|NA|u|König Willem-Alexander (2014 -)|
+C2014/046/08|nl|2021|NA|u|König Willem-Alexander (2014 -)|
 
 C2001/373/01|pt|2002|NA|u|Königliches Siegel von 1144 (2002 -)|
 C2001/373/01|pt|2003|NA|u|Königliches Siegel von 1144 (2002 -)|
@@ -761,6 +776,7 @@ C2006/254/04|si|2017|NA|u|France Prešeren (2007 -)|
 C2006/254/04|si|2018|NA|u|France Prešeren (2007 -)|
 C2006/254/04|si|2019|NA|u|France Prešeren (2007 -)|
 C2006/254/04|si|2020|NA|u|France Prešeren (2007 -)|
+C2006/254/04|si|2021|NA|u|France Prešeren (2007 -)|
 
 C2008/273/06|sk|2009|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
 C2008/273/06|sk|2010|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
@@ -774,6 +790,7 @@ C2008/273/06|sk|2017|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
 C2008/273/06|sk|2018|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
 C2008/273/06|sk|2019|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
 C2008/273/06|sk|2020|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
+C2008/273/06|sk|2021|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
 
 C2001/373/01|sm|2002|NA|u|Regierungspalast (2002 - 2016)|
 C2001/373/01|sm|2003|NA|u|Regierungspalast (2002 - 2016)|
@@ -794,6 +811,7 @@ C2017/066/04|sm|2017|NA|u|Heiliger Marinus (2017 -)|
 C2017/066/04|sm|2018|NA|u|Heiliger Marinus (2017 -)|
 C2017/066/04|sm|2019|NA|u|Heiliger Marinus (2017 -)|
 C2017/066/04|sm|2020|NA|u|Heiliger Marinus (2017 -)|
+C2017/066/04|sm|2021|NA|u|Heiliger Marinus (2017 -)|
 
 C2001/373/01|va|2002|NA|u|Papst Johannes Paul II. (2002 - 2005)|
 C2001/373/01|va|2003|NA|u|Papst Johannes Paul II. (2002 - 2005)|
@@ -815,3 +833,4 @@ C2017/023/06|va|2017|NA|u|Wappen von Papst Franziskus (2017 -)|
 C2017/023/06|va|2018|NA|u|Wappen von Papst Franziskus (2017 -)|
 C2017/023/06|va|2019|NA|u|Wappen von Papst Franziskus (2017 -)|
 C2017/023/06|va|2020|NA|u|Wappen von Papst Franziskus (2017 -)|
+C2017/023/06|va|2021|NA|u|Wappen von Papst Franziskus (2017 -)|
