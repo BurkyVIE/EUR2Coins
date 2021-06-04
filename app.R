@@ -427,8 +427,8 @@ server <- function(input, output, session) {
                            Beschreibung =c('<b>Žemaitija</b><br>(Niederlittauen)',
                                            '<b>Aukschtaiten</b><br>(Oberlitauen)',
                                            '<b>Dzukija</b><br>(Mittellitauen)',
-                                           '<b>Unbekannt</b><br>()',
-                                           '<b>Unbekannt</b><br>()'))
+                                           '<b>Suvalkija (Sudauen)</b><br>()',
+                                           '<b>Mažoji Lietuva (Kleinlitauen)</b><br>()'))
     
     left_join(lter %>% filter(!is.na(Amtsblatt)),
               coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
@@ -460,7 +460,7 @@ server <- function(input, output, session) {
                                          'C2013/219/06', 'C2014/020/06', 'C2014/262/05', 'C2015/086/03', 'C2015/232/05',
                                          'C2016/028/04', 'C2017/023/07', 'C2017/320/04', 'C2017/438/10', 'C2018/305/06',
                                          'C2018/466/11', 'C2019/352/13', 'C2020/049/13', 'C2020/381/03', 'C2020/444/04',
-                                         'C2021/020/06'),
+                                         'C2021/020/06', NA, NA),
                            Beschreibung =c('<b>Monogramm Großherzog Henris</b>',
                                            '<b>50. Geburtstag und 5. Jahrestag der Thronbesteigung Großherzog Henris,<br>100. Todestag Großherzog Adolphs</b>',
                                            '<b>25. Geburtstag Erbgroßherzog Guillaumes</b>',
@@ -484,9 +484,11 @@ server <- function(input, output, session) {
                                            '<b>100. Jahrestag der Thronbesteigung Großherzogin Charlottes</b>',
                                            '<b>100. Jahrestag der Einführung des allgemeinen Wahlrechts</b>',
                                            '<b>200. Geburtstag Heinrichs von Oranien-Nassau</b>',
-                                           '<b>Geburt eines Großherzogs</b>',
+                                           '<b>Geburt von Prinz Charles von Luxemburg</b>',
                                            '<b>100. Geburtstag Großherzog Jeans</b>',
-                                           '<b>40. Geburtstag Erbgroßherzog Guillaumes</b>'))
+                                           '<b>40. Hochzeitstag Großherzog Henris und Großherzogin Maria Teresas</b>',
+                                           '<b>10. Hochzeitstag von Erbgroßherzog Guillaume und Erbgroßherzogin Stéphanie</b>',
+                                           '<b>50. Jahrestag der Flagge Luxemburgs</b>'))
     
     left_join(ludy %>% filter(!is.na(Amtsblatt)),
               coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
@@ -616,7 +618,7 @@ server <- function(input, output, session) {
                                    '<b>Frieden</b>',
                                    '<b>Kulturelles Erbe</b>',
                                    '<b>Natur / Umwelt</b>',
-                                   '<b>Spiele</b>'))
+                                   '<b>Kinderspiele</b>'))
     
     left_join(mtks %>% filter(!is.na(Amtsblatt)),
               coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
