@@ -6,13 +6,16 @@ read_delim("eur2coins_celex.txt",
     Amtsblatt = col_character(),
     Land = col_character(),
     Prägejahr = col_integer(),
-    Ausgabe = col_date(format = "%F"),
+    # Ausgabe = col_date(format = "%F"), # no leading zeros - problem with parsing
+    Ausgabe = col_character(),
     Münzart = col_character(),
     Abbildung = col_character(),
     Münzzeichen = col_character()
-  )
+  ),
+  lazy = FALSE
 ) %>%
   mutate(
+    Ausgabe = lubridate::ymd(Ausgabe),
     Münzart = factor(Münzart, levels = c("g", "u"), labels = c("Gedenkmünze", "Umlaufmünze")),
     Münzzeichen = str_split(Münzzeichen, pattern = ",")
   ) %>%
