@@ -367,8 +367,8 @@ server <- function(input, output, session) {
     matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE,
            dimnames = list(
              paste0("<b>..", 1:4, "<br>x<br>",
-                    sprintf("%04d", (input$box - 1) * 144 + (input$tableau - 1) * 24 + (0:3) * 6, "</b>")
-             ),
+                    sprintf("%04d", (input$box - 1) * 144 + (input$tableau - 1) * 24 + (0:3) * 6),
+                    "</b>"),
              paste0(input$box, input$tableau, 1:6, "..<br>x<br>+", 1:6)
            )
     )
