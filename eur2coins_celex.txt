@@ -435,6 +435,7 @@ NA|ee|2021|2021-6-16|g|Finno-ugrische Völker|
 NA|va|2021|2021-6-25|g|450. Geburtstag Caravaggios|
 NA|be|2021|2021-7-7|g|100. Jahrestag der Vereinbarung der Belgisch-Luxemburgischen Wirtschaftsunion|
 NA|mt|2021|2021-8-2|g|Helden der Corona-Pandemie|
+NA|fi|2021|2021-08-13|g|100 Jahre Selbstverwaltung der Region Åland|
 
 
 
