@@ -437,7 +437,9 @@ NA|be|2021|2021-7-7|g|100. Jahrestag der Vereinbarung der Belgisch-Luxemburgisch
 NA|mt|2021|2021-8-2|g|Helden der Corona-Pandemie|
 NA|fi|2021|2021-08-13|g|100 Jahre Selbstverwaltung der Region Åland|
 NA|sm|2021|2021-8-27|g|550. Geburtstag Albrecht Dürers|
-
+NA|lt|2021|2021-9-9|g|Dzūkija (Mittellitauen)|
+NA|fr|2021|2021-9-21|g|Die sprintende Marianne|
+NA|mc|2021|2021-10-6|g|10. Hochzeitstag von Fürst Albert II. und Fürstin Charlène|
 
 
 C2014/062/07|ad|2014|NA|u|Staatswappen von Andorra (2014 -)|
