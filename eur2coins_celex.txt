@@ -440,6 +440,8 @@ NA|lt|2021|2021-9-9|g|Dzūkija (Mittellitauen)|
 NA|fr|2021|2021-9-21|g|Die sprintende Marianne|
 NA|mc|2021|2021-10-6|g|10. Hochzeitstag von Fürst Albert II. und Fürstin Charlène|
 NA|si|2021|2021-10-25|g|200 Jahre krainisches Landesmuseum|
+NA|mt|2021|2021-10-26|g|Tempel von Tarxien|
+NA|va|2021|2021-10-26|g|700. Todestag Dante Alighieris|
 
 
 
