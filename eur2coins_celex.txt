@@ -442,6 +442,7 @@ NA|mc|2021|2021-10-6|g|10. Hochzeitstag von Fürst Albert II. und Fürstin Charl
 NA|si|2021|2021-10-25|g|200 Jahre krainisches Landesmuseum|
 NA|mt|2021|2021-10-26|g|Tempel von Tarxien|
 NA|va|2021|2021-10-26|g|700. Todestag Dante Alighieris|
+NA|be|2021|2021-10-27|g|500 Jahre Münzen Kaiser Karls V.|
 
 
 
