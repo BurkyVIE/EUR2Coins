@@ -444,6 +444,9 @@ NA|mt|2021|2021-10-26|g|Tempel von Tarxien|
 NA|va|2021|2021-10-26|g|700. Todestag Dante Alighieris|
 NA|be|2021|2021-10-27|g|500 Jahre Münzen Kaiser Karls V.|
 
+NA|ad|2021|NA|g|100. Jahrestag der Krönung Unserer Lieben Frau von Meritxell|
+NA|sk|2021|NA|g|100. Geburtstag Alexander Dubčeks|
+
 
 
 C2014/062/07|ad|2014|NA|u|Staatswappen von Andorra (2014 -)|
