@@ -427,6 +427,7 @@ C2021/096/07|gr|2021|2021-4-22|g|200 Jahre seit der griechischen Revolution|
 C2021/096/08|es|2021|2021-3-10|g|Historische Innenstadt von Toledo|
 C2021/103/05|fi|2021|2021-4-14|g|Journalismus und offene Kommunikation zur Unterstützung der finnischen Demokratie|
 C2021/104/04|lt|2021|2021-5-19|g|UNESCO-Programm „Der Mensch und die Biosphäre“ - Biosphärenreservat Žuvintas|
+C2021/466/04|be|2021|2021-10-27|g|500. Jahrestag des Erscheinens der Verordnung des zweiten Münzausgabezeitraums während der Herrschaft Karls V.|
 
 NA|sm|2021|2021-3-1|g|450. Geburtstag Caravaggios|
 NA|pt|2021|2021-5-18|g|Teilnahme an den Olympischen Spielen|
@@ -442,9 +443,9 @@ NA|mc|2021|2021-10-6|g|10. Hochzeitstag von Fürst Albert II. und Fürstin Charl
 NA|si|2021|2021-10-25|g|200 Jahre krainisches Landesmuseum|
 NA|mt|2021|2021-10-26|g|Tempel von Tarxien|
 NA|va|2021|2021-10-26|g|700. Todestag Dante Alighieris|
-NA|be|2021|2021-10-27|g|500 Jahre Münzen Kaiser Karls V.|
 
-NA|ad|2021|NA|g|100. Jahrestag der Krönung Unserer Lieben Frau von Meritxell|
+C2021/466/03|ad|2021|NA|g|Unsere Liebe Frau von Meritxell|
+
 NA|sk|2021|NA|g|100. Geburtstag Alexander Dubčeks|
 
 
