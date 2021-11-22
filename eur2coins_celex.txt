@@ -428,23 +428,24 @@ C2021/096/08|es|2021|2021-3-10|g|Historische Innenstadt von Toledo|
 C2021/103/05|fi|2021|2021-4-14|g|Journalismus und offene Kommunikation zur Unterstützung der finnischen Demokratie|
 C2021/104/04|lt|2021|2021-5-19|g|UNESCO-Programm „Der Mensch und die Biosphäre“ - Biosphärenreservat Žuvintas|
 C2021/466/04|be|2021|2021-10-27|g|500. Jahrestag des Erscheinens der Verordnung des zweiten Münzausgabezeitraums während der Herrschaft Karls V.|
+C2021/470/04|ee|2021|2021-6-16|g|Finno-ugrische Völker|
+C2021/470/05|be|2021|2021-7-7|g|100. Jahrestag der Gründung der belgisch-luxemburgischen Wirtschaftsunion (BLEU)|
+C2021/740/07|fr|2021|2021-9-21|g|Olympische Spiele Paris 2024|
 
 NA|sm|2021|2021-3-1|g|450. Geburtstag Caravaggios|
 NA|pt|2021|2021-5-18|g|Teilnahme an den Olympischen Spielen|
-NA|ee|2021|2021-6-16|g|Finno-ugrische Völker|
 NA|va|2021|2021-6-25|g|450. Geburtstag Caravaggios|
-NA|be|2021|2021-7-7|g|100. Jahrestag der Vereinbarung der Belgisch-Luxemburgischen Wirtschaftsunion|
 NA|mt|2021|2021-8-2|g|Helden der Corona-Pandemie|
 NA|fi|2021|2021-08-13|g|100 Jahre Selbstverwaltung der Region Åland|
 NA|sm|2021|2021-8-27|g|550. Geburtstag Albrecht Dürers|
 NA|lt|2021|2021-9-9|g|Dzūkija (Mittellitauen)|
-NA|fr|2021|2021-9-21|g|Die sprintende Marianne|
 NA|mc|2021|2021-10-6|g|10. Hochzeitstag von Fürst Albert II. und Fürstin Charlène|
 NA|si|2021|2021-10-25|g|200 Jahre krainisches Landesmuseum|
 NA|mt|2021|2021-10-26|g|Tempel von Tarxien|
 NA|va|2021|2021-10-26|g|700. Todestag Dante Alighieris|
 
 C2021/466/03|ad|2021|NA|g|Unsere Liebe Frau von Meritxell|
+C2021/470/06|ad|2021|NA|g|Wir kümmern uns um unsere Seniorinnen und Senioren|
 
 NA|sk|2021|NA|g|100. Geburtstag Alexander Dubčeks|
 
