@@ -431,17 +431,17 @@ C2021/466/04|be|2021|2021-10-27|g|500. Jahrestag des Erscheinens der Verordnung 
 C2021/470/04|ee|2021|2021-6-16|g|Finno-ugrische Völker|
 C2021/470/05|be|2021|2021-7-7|g|100. Jahrestag der Gründung der belgisch-luxemburgischen Wirtschaftsunion (BLEU)|
 C2021/740/07|fr|2021|2021-9-21|g|Olympische Spiele Paris 2024|
+C2021/473/05|lt|2021|2021-9-9|g|Dzūkija|
+C2021/473/06|fi|2021|2021-08-13|g|100 Jahre Selbstverwaltung der Ålandinseln|
+C2021/473/07|pt|2021|2021-5-18|g|Olympische Spiele von Tokio|
+C2021/473/08|mt|2021|2021-10-26|g|Megalithische Tempel von Tarxien|
 
 NA|sm|2021|2021-3-1|g|450. Geburtstag Caravaggios|
-NA|pt|2021|2021-5-18|g|Teilnahme an den Olympischen Spielen|
 NA|va|2021|2021-6-25|g|450. Geburtstag Caravaggios|
 NA|mt|2021|2021-8-2|g|Helden der Corona-Pandemie|
-NA|fi|2021|2021-08-13|g|100 Jahre Selbstverwaltung der Region Åland|
 NA|sm|2021|2021-8-27|g|550. Geburtstag Albrecht Dürers|
-NA|lt|2021|2021-9-9|g|Dzūkija (Mittellitauen)|
 NA|mc|2021|2021-10-6|g|10. Hochzeitstag von Fürst Albert II. und Fürstin Charlène|
 NA|si|2021|2021-10-25|g|200 Jahre krainisches Landesmuseum|
-NA|mt|2021|2021-10-26|g|Tempel von Tarxien|
 NA|va|2021|2021-10-26|g|700. Todestag Dante Alighieris|
 
 C2021/466/03|ad|2021|NA|g|Unsere Liebe Frau von Meritxell|
