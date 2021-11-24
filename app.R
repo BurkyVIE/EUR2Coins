@@ -144,7 +144,13 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                             tableOutput(outputId = "esun_tab")
                                                           )
                                                  ),
-                                                 tabPanel("LT",
+                                                 tabPanel("FR",
+                                                          fluidPage(
+                                                            h1("Frankreich"),
+                                                            h2("Olympische Sommerspiele 2024"),
+                                                            tableOutput(outputId = "fros_tab")
+                                                          )
+                                                 ),tabPanel("LT",
                                                           fluidPage(
                                                             h1("Litauen"),
                                                             h2("Ethnographische Regionen"),
@@ -367,8 +373,8 @@ server <- function(input, output, session) {
     matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE,
            dimnames = list(
              paste0("<b>..", 1:4, "<br>x<br>",
-                    sprintf("%04d", (input$box - 1) * 144 + (input$tableau - 1) * 24 + (0:3) * 6),
-                    "</b>"),
+                    sprintf("%04d", (input$box - 1) * 144 + (input$tableau - 1) * 24 + (0:3) * 6, "</b>")
+             ),
              paste0(input$box, input$tableau, 1:6, "..<br>x<br>+", 1:6)
            )
     )
@@ -421,9 +427,40 @@ server <- function(input, output, session) {
       )
   }, ignoreNULL = FALSE)
   
+  output$fros_tab <- renderTable({fros_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
+  fros_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    fros <- fros <- tibble(Amtsblatt = c('C2021/470/07', NA, NA, NA),
+                           Beschreibung =c('<b>Die sprintende Marianne',
+                                           '<b>Unbekannt',
+                                           '<b>Unbekannt',
+                                           '<b>Unbekannt</b><br>()'))
+    
+    left_join(fros %>% filter(!is.na(Amtsblatt)),
+              coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
+      left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
+      mutate(Jahr = str_sub(ID, 1, 4),
+             Ablage = coalesce(Ablage, ""),
+             Qualität = case_when(is.na(Qualität) ~ "",
+                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
+                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
+                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
+                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
+                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
+             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
+      select(Jahr, Münzzeichen, Beschreibung, ID) -> tmp
+    
+    cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
+          tmp %>% pull(Beschreibung),
+          tmp %>% pull(ID)) %>% 
+      matrix(ncol = 3,
+             dimnames = list(NULL,
+                             c("Jahr", "Bezeichnung", " "))
+      )
+  }, ignoreNULL = FALSE)
+  
   output$lter_tab <- renderTable({lter_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   lter_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    lter <- lter <- tibble(Amtsblatt = c('C2019/351/10', 'C2020/053/04', NA, NA, NA),
+    lter <- lter <- tibble(Amtsblatt = c('C2019/351/10', 'C2020/053/04', 'C2021/473/05', NA, NA),
                            Beschreibung =c('<b>Žemaitija</b><br>(Niederlittauen)',
                                            '<b>Aukschtaiten</b><br>(Oberlitauen)',
                                            '<b>Dzukija</b><br>(Mittellitauen)',
@@ -684,7 +721,8 @@ server <- function(input, output, session) {
   esun_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     esun <- tibble(Amtsblatt = c('C2010/047/07', 'C2011/050/02', 'C2012/057/03', 'C2013/050/04', 'C2014/051/05',
                                  'C2014/397/04', 'C2015/425/10', 'C2016/236/06', 'C2018/014/04', 'C2018/466/09',
-                                 'C2020/049/12', NA, NA),
+                                 'C2020/049/12', 'C2021/096/08', NA, NA, NA,
+                                 NA),
                    Beschreibung =c('<b>Altstadt von Córdoba</b><br>(Innenraum der Mezquita de Córdoba)',
                                    '<b>Alhambra, Generalife und Albaicín in Granada</b><br>(Löwenhof der Alhambra)',
                                    '<b>Kathedrale von Burgos</b><br>(Obere Westfassade und Vierungsturm)',
@@ -697,7 +735,10 @@ server <- function(input, output, session) {
                                    '<b>Altstadt von Ávila und Kirchen außerhalb der Stadtmauer</b><br>(Drei Wehrtürme der Stadtmauer Ávilas)',
                                    '<b>Architektur der Mudéjares in Aragon</b><br>(Turm von El Salvador in Teruel)',
                                    '<b>Historische Altstadt von Toledo</b><br>(Puerta del Sol und Detail der Synagoge El Tránsito in Toledo)',
-                                   '<b>Nationalpark Garajonay auf La Gomera</b><br>(Unbekannt)'))
+                                   '<b>Nationalpark Garajonay auf La Gomera</b><br>(Unbekannt)',
+                                   '<b>Altstadt von Cáceres</b>()<br>',
+                                   '<b>Kathedrale, Alcázar und Indienarchiv in Sevilla</b>()<br>',
+                                   '<b>Altstadt von Salamanca</b>()<br>'))
     
     left_join(esun %>% filter(!is.na(Amtsblatt)),
               coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
