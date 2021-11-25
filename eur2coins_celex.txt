@@ -435,10 +435,10 @@ C2021/473/05|lt|2021|2021-9-9|g|Dzūkija|
 C2021/473/06|fi|2021|2021-08-13|g|100 Jahre Selbstverwaltung der Ålandinseln|
 C2021/473/07|pt|2021|2021-5-18|g|Olympische Spiele von Tokio|
 C2021/473/08|mt|2021|2021-10-26|g|Megalithische Tempel von Tarxien|
+C2021/475/04|mt|2021|2021-8-2|g|Heldinnen und Helden der Pandemie|
 
 NA|sm|2021|2021-3-1|g|450. Geburtstag Caravaggios|
 NA|va|2021|2021-6-25|g|450. Geburtstag Caravaggios|
-NA|mt|2021|2021-8-2|g|Helden der Corona-Pandemie|
 NA|sm|2021|2021-8-27|g|550. Geburtstag Albrecht Dürers|
 NA|mc|2021|2021-10-6|g|10. Hochzeitstag von Fürst Albert II. und Fürstin Charlène|
 NA|si|2021|2021-10-25|g|200 Jahre krainisches Landesmuseum|
