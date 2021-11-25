@@ -430,10 +430,10 @@ server <- function(input, output, session) {
   output$fros_tab <- renderTable({fros_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   fros_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     fros <- fros <- tibble(Amtsblatt = c('C2021/470/07', NA, NA, NA),
-                           Beschreibung =c('<b>Die sprintende Marianne',
-                                           '<b>Unbekannt',
-                                           '<b>Unbekannt',
-                                           '<b>Unbekannt</b><br>()'))
+                           Beschreibung =c('<b>Die sprintende Marianne</b>',
+                                           '<b>Unbekannt</b>',
+                                           '<b>Unbekannt</b>',
+                                           '<b>Unbekannt</b>'))
     
     left_join(fros %>% filter(!is.na(Amtsblatt)),
               coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
