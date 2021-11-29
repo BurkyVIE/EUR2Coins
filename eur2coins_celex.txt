@@ -438,11 +438,11 @@ C2021/473/08|mt|2021|2021-10-26|g|Megalithische Tempel von Tarxien|
 C2021/475/04|mt|2021|2021-8-2|g|Heldinnen und Helden der Pandemie|
 C2021/476/02|mc|2021|2021-10-6|g|10. Hochzeitstag von Prinz Albert II und Prinzessin Charlene|
 C2021/476/04|si|2021|2021-10-25|g|200-jähriges Bestehen des Landesmuseums Krain, des ersten Museums Sloweniens|
+C2021/480/7|va|2021|2021-10-26|g|700. Todestag von Dante Alighieri|
+C2021/480/8|va|2021|2021-6-25|g|450. Geburtstag von Caravaggio|
 
 NA|sm|2021|2021-3-1|g|450. Geburtstag Caravaggios|
-NA|va|2021|2021-6-25|g|450. Geburtstag Caravaggios|
 NA|sm|2021|2021-8-27|g|550. Geburtstag Albrecht Dürers|
-NA|va|2021|2021-10-26|g|700. Todestag Dante Alighieris|
 
 C2021/466/03|ad|2021|NA|g|Unsere Liebe Frau von Meritxell|
 C2021/470/06|ad|2021|NA|g|Wir kümmern uns um unsere Seniorinnen und Senioren|
