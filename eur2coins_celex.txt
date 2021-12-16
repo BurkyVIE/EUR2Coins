@@ -580,29 +580,30 @@ C2001/373/01|fi|2019|NA|u|Moltebeere (2007 -)|
 C2001/373/01|fi|2020|NA|u|Moltebeere (2007 -)|
 C2001/373/01|fi|2021|NA|u|Moltebeere (2007 -)|
 
-C2001/373/01|fr|1999|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2000|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2001|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2002|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2003|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2004|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2005|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2006|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2007|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2008|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2009|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2010|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2011|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2012|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2013|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2014|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2015|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2016|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2017|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2018|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2019|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2020|NA|u|Stilisierter Baum (1999 -)|
-C2001/373/01|fr|2021|NA|u|Stilisierter Baum (1999 -)|
+C2001/373/01|fr|1999|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2000|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2001|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2002|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2003|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2004|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2005|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2006|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2007|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2008|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2009|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2010|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2011|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2012|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2013|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2014|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2015|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2016|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2017|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2018|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2019|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2020|NA|u|Stilisierter Baum (1999 - 2021)|
+C2001/373/01|fr|2021|NA|u|Stilisierter Baum (1999 - 2021)|
+C2021/507/05|fr|2022|NA|u|Stilisierter Baum – moderne Fassung (2022 -)|
 
 C2001/373/01|gr|2002|NA|u|Entführung der Europa durch Zeus (2002 -)|,S
 C2001/373/01|gr|2003|NA|u|Entführung der Europa durch Zeus (2002 -)|
