@@ -447,6 +447,9 @@ C2021/476/03|sk|2021|2021-11-26|g|100. Geburtstag Alexander Dubčeks|
 C2021/466/03|ad|2021|2021-12-15|g|100. Jahrestag der Krönung Unserer Liebe Frau von Meritxell|
 C2021/470/06|ad|2021|2021-12-15|g|Wir kümmern uns um unsere Seniorinnen und Senioren|
 
+NA|fr|2022|NA|NA|g|20 Jahre Euro-Bargeldeinführung – Jaques Chirac“|
+NA|es|2022|NA|NA|g|Nationalpark Garajonay|
+
 
 
 C2014/062/07|ad|2014|NA|u|Staatswappen von Andorra (2014 -)|
