@@ -443,9 +443,9 @@ C2021/480/8|va|2021|2021-6-25|g|450. Geburtstag von Caravaggio|
 C2021/482/2|sm|2021|2021-8-27|g|550. Geburtstag von Albrecht Dürer|
 C2021/482/3|sm|2021|2021-3-1|g|450. Geburtstag von Caravaggio|
 
-C2021/466/03|ad|2021|NA|g|Unsere Liebe Frau von Meritxell|
-C2021/470/06|ad|2021|NA|g|Wir kümmern uns um unsere Seniorinnen und Senioren|
-C2021/476/03|sk|2021|NA|g|100. Geburtstag Alexander Dubčeks|
+C2021/476/03|sk|2021|2021-11-26|g|100. Geburtstag Alexander Dubčeks|
+C2021/466/03|ad|2021|2021-12-15|g|100. Jahrestag der Krönung Unserer Liebe Frau von Meritxell|
+C2021/470/06|ad|2021|2021-12-15|g|Wir kümmern uns um unsere Seniorinnen und Senioren|
 
 
 
