@@ -427,9 +427,11 @@ C2021/096/07|gr|2021|2021-4-22|g|200 Jahre seit der griechischen Revolution|
 C2021/096/08|es|2021|2021-3-10|g|Historische Innenstadt von Toledo|
 C2021/103/05|fi|2021|2021-4-14|g|Journalismus und offene Kommunikation zur Unterstützung der finnischen Demokratie|
 C2021/104/04|lt|2021|2021-5-19|g|UNESCO-Programm „Der Mensch und die Biosphäre“ - Biosphärenreservat Žuvintas|
+C2021/466/03|ad|2021|2021-12-15|g|100. Jahrestag der Krönung Unserer Liebe Frau von Meritxell|
 C2021/466/04|be|2021|2021-10-27|g|500. Jahrestag des Erscheinens der Verordnung des zweiten Münzausgabezeitraums während der Herrschaft Karls V.|
 C2021/470/04|ee|2021|2021-6-16|g|Finno-ugrische Völker|
 C2021/470/05|be|2021|2021-7-7|g|100. Jahrestag der Gründung der belgisch-luxemburgischen Wirtschaftsunion (BLEU)|
+C2021/470/06|ad|2021|2021-12-15|g|Wir kümmern uns um unsere Seniorinnen und Senioren|
 C2021/470/07|fr|2021|2021-9-21|g|Olympische Spiele Paris 2024|
 C2021/473/05|lt|2021|2021-9-9|g|Dzūkija|
 C2021/473/06|fi|2021|2021-08-13|g|100 Jahre Selbstverwaltung der Ålandinseln|
@@ -437,15 +439,12 @@ C2021/473/07|pt|2021|2021-5-18|g|Olympische Spiele von Tokio|
 C2021/473/08|mt|2021|2021-10-26|g|Megalithische Tempel von Tarxien|
 C2021/475/04|mt|2021|2021-8-2|g|Heldinnen und Helden der Pandemie|
 C2021/476/02|mc|2021|2021-10-6|g|10. Hochzeitstag von Prinz Albert II und Prinzessin Charlene|
+C2021/476/03|sk|2021|2021-11-26|g|100. Geburtstag Alexander Dubčeks|
 C2021/476/04|si|2021|2021-10-25|g|200-jähriges Bestehen des Landesmuseums Krain, des ersten Museums Sloweniens|
 C2021/480/7|va|2021|2021-10-26|g|700. Todestag von Dante Alighieri|
 C2021/480/8|va|2021|2021-6-25|g|450. Geburtstag von Caravaggio|
 C2021/482/2|sm|2021|2021-8-27|g|550. Geburtstag von Albrecht Dürer|
 C2021/482/3|sm|2021|2021-3-1|g|450. Geburtstag von Caravaggio|
-
-C2021/476/03|sk|2021|2021-11-26|g|100. Geburtstag Alexander Dubčeks|
-C2021/466/03|ad|2021|2021-12-15|g|100. Jahrestag der Krönung Unserer Liebe Frau von Meritxell|
-C2021/470/06|ad|2021|2021-12-15|g|Wir kümmern uns um unsere Seniorinnen und Senioren|
 
 NA|fr|2022|NA|NA|g|20 Jahre Euro-Bargeldeinführung – Jaques Chirac“|
 NA|es|2022|NA|NA|g|Nationalpark Garajonay|
