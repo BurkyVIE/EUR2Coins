@@ -446,27 +446,27 @@ C2021/480/8|va|2021|2021-6-25|g|450. Geburtstag von Caravaggio|
 C2021/482/2|sm|2021|2021-8-27|g|550. Geburtstag von Albrecht Dürer|
 C2021/482/3|sm|2021|2021-3-1|g|450. Geburtstag von Caravaggio|
 
-NA|fr|2022|NA|NA|g|20 Jahre Euro-Bargeldeinführung – Jaques Chirac|
-NA|es|2022|NA|NA|g|Nationalpark Garajonay|
-NA|be|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|
-NA|de|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|A,D,F,G,J
-NA|ee|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|
-NA|fi|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|
-NA|fr|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|
-NA|gr|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|
-NA|ir|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|
-NA|it|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|
-NA|lv|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|
-NA|lt|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|
-NA|lu|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|
-NA|mt|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|
-NA|nl|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|
-NA|at|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|
-NA|po|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|
-NA|sk|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|
-NA|si|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|
-NA|es|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|
-NA|cy|2022|NA|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|fr|2022|NA|g|20 Jahre Euro-Bargeldeinführung – Jaques Chirac|
+NA|es|2022|NA|g|Nationalpark Garajonay|
+NA|be|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|de|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|A,D,F,G,J
+NA|ee|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|fi|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|fr|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|gr|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|ir|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|it|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|lv|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|lt|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|lu|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|mt|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|nl|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|at|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|po|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|sk|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|si|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|es|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|cy|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
 
 
 
