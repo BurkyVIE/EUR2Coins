@@ -441,12 +441,13 @@ C2021/475/04|mt|2021|2021-8-2|g|Heldinnen und Helden der Pandemie|
 C2021/476/02|mc|2021|2021-10-6|g|10. Hochzeitstag von Prinz Albert II und Prinzessin Charlene|
 C2021/476/03|sk|2021|2021-11-26|g|100. Geburtstag Alexander Dubčeks|
 C2021/476/04|si|2021|2021-10-25|g|200-jähriges Bestehen des Landesmuseums Krain, des ersten Museums Sloweniens|
-C2021/480/7|va|2021|2021-10-26|g|700. Todestag von Dante Alighieri|
-C2021/480/8|va|2021|2021-6-25|g|450. Geburtstag von Caravaggio|
-C2021/482/2|sm|2021|2021-8-27|g|550. Geburtstag von Albrecht Dürer|
-C2021/482/3|sm|2021|2021-3-1|g|450. Geburtstag von Caravaggio|
+C2021/480/07|va|2021|2021-10-26|g|700. Todestag von Dante Alighieri|
+C2021/480/08|va|2021|2021-6-25|g|450. Geburtstag von Caravaggio|
+C2021/482/02|sm|2021|2021-8-27|g|550. Geburtstag von Albrecht Dürer|
+C2021/482/03|sm|2021|2021-3-1|g|450. Geburtstag von Caravaggio|
 
-NA|fr|2022|NA|g|20 Jahre Euro-Bargeldeinführung – Jaques Chirac|
+C2022/100/04|fr|2022|NA|g|90. Jahrestag der Geburt des ehemaligen Staatspräsidenten Jacques Chirac|
+
 NA|es|2022|NA|g|Nationalpark Garajonay|
 NA|be|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
 NA|de|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|A,D,F,G,J
