@@ -452,8 +452,9 @@ NA|de|2022|2022-1-25|g|Thüringen|A,D,F,G,J
 NA|fi|2022|2022-2-11|g|100-jähriges Bestehen des finnischen Nationalballetts|
 NA|si|2022|2022-3-2|g|150. Geburtstag von Jože Plečnik|
 NA|ee|2022|2022-3-9|g|150. Jahrestag der Gründung des estnischen Literatenvereins|
+NA|es|2022|2022-3-23|g|Nationalpark Garajonay|
+NA|es|2022|2022-3-23|g|500. Jahrestag der Vollendung der ersten Weltumsegelung|
 
-NA|es|2022|NA|g|Nationalpark Garajonay|
 NA|be|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
 NA|de|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|A,D,F,G,J
 NA|ee|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
@@ -488,7 +489,6 @@ NA|pt|2022|NA|g|100. Jahrestag der Erstüberquerung des Südatlantiks mit dem Fl
 NA|sm|2022|NA|g|530. Todestag Piero della Francescas|
 NA|sm|2022|NA|g|200. Todestag Antonio Canovas|
 NA|sk|2022|NA|g|300. Jahrestag des Baus der ersten Dampfmaschine zum Pumpen von Grubenwasser|
-NA|es|2022|NA|g|500. Jahrestag der Vollendung der ersten Weltumsegelung|
 NA|va|2022|NA|g|125. Geburtstag von Papst Paul VI.|
 NA|va|2022|NA|g|25. Todestag von Mutter Teresa|
 
