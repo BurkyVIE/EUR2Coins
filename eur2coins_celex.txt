@@ -454,6 +454,7 @@ NA|si|2022|2022-3-2|g|150. Geburtstag von Jože Plečnik|
 NA|ee|2022|2022-3-9|g|150. Jahrestag der Gründung des estnischen Literatenvereins|
 NA|es|2022|2022-3-23|g|Nationalpark Garajonay|
 NA|es|2022|2022-3-23|g|500. Jahrestag der Vollendung der ersten Weltumsegelung|
+NA|pt|2022|2022-3-30|g|100. Jahrestag der Erstüberquerung des Südatlantiks mit dem Flugzeug|
 
 NA|be|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
 NA|de|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|A,D,F,G,J
@@ -469,7 +470,7 @@ NA|lu|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
 NA|mt|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
 NA|nl|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
 NA|at|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
-NA|po|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
+NA|pt|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
 NA|sk|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
 NA|si|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
 NA|es|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
@@ -485,7 +486,6 @@ NA|lt|2022|NA|g|100 Jahre Basketball in Litauen|
 NA|lu|2022|NA|g|10. Hochzeitstag von Erbgroßherzog Guillaume und Erbgroßherzogin Stéphanie|
 NA|lu|2022|NA|g|50. Jahrestag der Flagge Luxemburgs|
 NA|mt|2022|NA|g|Hypogäum von Ħal-Saflieni|
-NA|pt|2022|NA|g|100. Jahrestag der Erstüberquerung des Südatlantiks mit dem Flugzeug|
 NA|sm|2022|NA|g|530. Todestag Piero della Francescas|
 NA|sm|2022|NA|g|200. Todestag Antonio Canovas|
 NA|sk|2022|NA|g|300. Jahrestag des Baus der ersten Dampfmaschine zum Pumpen von Grubenwasser|
