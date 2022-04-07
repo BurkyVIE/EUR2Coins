@@ -447,10 +447,10 @@ C2021/482/02|sm|2021|2021-8-27|g|550. Geburtstag von Albrecht Dürer|
 C2021/482/03|sm|2021|2021-3-1|g|450. Geburtstag von Caravaggio|
 
 C2022/100/04|fr|2022|2022-1-25|g|90. Jahrestag der Geburt des ehemaligen Staatspräsidenten Jacques Chirac|
+C2022/145/06|it|2022|2022-4-6|g|170. Jahrestag der Gründung der Italienischen Nationalpolizei|
 C2022/145/07|si|2022|2022-3-2|g|150. Geburtstag des Architekten Jože Plečnik|
 C2022/145/08|de|2022|2022-1-25|g|Bundesländer-Serie – Thüringen|A,D,F,G,J
 
-C2022/145/06|it|2022|NA|g|170. Jahrestag der Gründung der Italienischen Nationalpolizei|
 C2020/145/09|it|2022|NA|g|30. Todestag von Giovanni Falcone und Paolo Borsellino|
 C2022/145/10|lu|2022|NA|g|50 Jahre gesetzlicher Schutz der luxemburgischen Flagge|
 
