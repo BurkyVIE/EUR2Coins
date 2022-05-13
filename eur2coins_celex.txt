@@ -461,6 +461,8 @@ NA|es|2022|2022-3-23|g|500. Jahrestag der Vollendung der ersten Weltumsegelung|
 NA|pt|2022|2022-3-30|g|100. Jahrestag der Erstüberquerung des Südatlantiks mit dem Flugzeug|
 NA|lv|2022|2022-4-12|g|100-jähriges Bestehen der Lettischen Bank|
 NA|lt|2022|2022-4-21|g|100 Jahre Basketball in Litauen|
+NA|sm|2022|2022-4-28|g|530. Todestag Piero della Francescas|
+NA|be|2022|2022-5-11|g|	Gesundheitswesen / Covid-19-Pandemie|
 
 NA|be|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
 NA|de|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|A,D,F,G,J
@@ -487,7 +489,6 @@ NA|gr|2022|NA|g|200. Jahrestag der ersten Verfassung von Griechenland|
 NA|lt|2022|NA|g|Suvalkija (Sudauen)|
 NA|lu|2022|NA|g|10. Hochzeitstag von Erbgroßherzog Guillaume und Erbgroßherzogin Stéphanie|
 NA|mt|2022|NA|g|Hypogäum von Ħal-Saflieni|
-NA|sm|2022|NA|g|530. Todestag Piero della Francescas|
 NA|sm|2022|NA|g|200. Todestag Antonio Canovas|
 NA|sk|2022|NA|g|300. Jahrestag des Baus der ersten Dampfmaschine zum Pumpen von Grubenwasser|
 NA|va|2022|NA|g|125. Geburtstag von Papst Paul VI.|
