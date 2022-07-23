@@ -3,7 +3,7 @@ library(tidyverse)
 read_lines(file = "eur2collection.txt",
            lazy = FALSE) %>%
   enframe(name = "Zeilennummer", value = "Sammlung") %>%
-  separate(Sammlung, into = c("ID", "Qualität"), sep = "-", convert = TRUE) %>%
+  separate(Sammlung, into = c("ID", "QualitÃ¤t"), sep = "-", convert = TRUE) %>%
   mutate(
     Box = (Zeilennummer - 1) %/% 144 + 1,
     Tableau = (Zeilennummer - 1) %/% 24 %% 6 + 1,
@@ -11,4 +11,4 @@ read_lines(file = "eur2collection.txt",
     Zeile = (Zeilennummer - 1) %/% 6 %% 4 + 1,
     Ablage = paste0(Box, Tableau, Spalte, Zeile, "x", sprintf("%04d", Zeilennummer))
   ) %>%
-  left_join(coins %>% select(ID, Abbildung, Münzzeichen), by = "ID") -> collection
+  left_join(coins %>% select(ID, Abbildung, MÃ¼nzzeichen), by = "ID") -> collection
