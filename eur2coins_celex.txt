@@ -462,7 +462,7 @@ NA|pt|2022|2022-3-30|g|100. Jahrestag der Erstüberquerung des Südatlantiks mit
 NA|lv|2022|2022-4-12|g|100-jähriges Bestehen der Lettischen Bank|
 NA|lt|2022|2022-4-21|g|100 Jahre Basketball in Litauen|
 NA|sm|2022|2022-4-28|g|530. Todestag Piero della Francescas|
-NA|be|2022|2022-5-11|g|	Gesundheitswesen / Covid-19-Pandemie|
+NA|be|2022|2022-5-11|g|Gesundheitswesen / Covid-19-Pandemie|
 
 NA|be|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|
 NA|de|2022|NA|g|35-jähriges Bestehen des Erasmus-Programms|A,D,F,G,J
