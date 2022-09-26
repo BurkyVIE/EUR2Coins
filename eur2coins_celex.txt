@@ -685,7 +685,7 @@ C2001/373/01|gr|2020|NA|u|Entführung der Europa durch Zeus (2002 -)|
 C2001/373/01|gr|2021|NA|u|Entführung der Europa durch Zeus (2002 -)|
 C2001/373/01|gr|2022|NA|u|Entführung der Europa durch Zeus (2002 -)|
 
-NA|hr|2023|NA|u|Geografische Landkarte Kroatiens (2023 -)|
+C2022/364/03|hr|2023|NA|u|Geografische Landkarte Kroatiens (2023 -)|
 
 C2001/373/01|ie|2002|NA|u|Keltische Harfe (2002 -)|
 C2001/373/01|ie|2003|NA|u|Keltische Harfe (2002 -)|
