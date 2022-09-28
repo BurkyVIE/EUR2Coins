@@ -487,9 +487,9 @@ NA|ee|2022|2022-7-8|g|Slava Ukraini|
 NA|va|2022|2022-9-6|g|125. Geburtstag von Papst Paul VI.|
 NA|va|2022|2022-9-6|g|25. Todestag von Mutter Teresa|
 NA|mc|2022|2022-9-7|g|100. Todestag Albert I.|
+NA|fr|2022|2022-9-22|g|Der Genius und das Diskuswerfen - Arc de Triomphe|
 
 NA|fi|2022|NA|g|Klimaforschung in Finnland|
-NA|fr|2022|NA|g|Olympische Sommerspiele 2024|
 NA|lt|2022|NA|g|Suvalkija (Sudauen)|
 NA|mt|2022|NA|g|Hypogäum von Ħal-Saflieni|
 NA|sm|2022|NA|g|200. Todestag Antonio Canovas|
