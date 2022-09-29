@@ -431,7 +431,7 @@ server <- function(input, output, session) {
   fros_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     fros <- fros <- tibble(Amtsblatt = c('C2021/470/07', NA, NA, NA),
                            Beschreibung =c('<b>Die sprintende Marianne</b>',
-                                           '<b>Unbekannt</b>',
+                                           '<b>Der Genius und das Diskuswerfen - Arc de Triomph</b>',
                                            '<b>Unbekannt</b>',
                                            '<b>Unbekannt</b>'))
     
