@@ -450,14 +450,12 @@ C2022/12/03|be|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/12/03|de|2022|2022-7-1|g|35 Jahre Erasmus-Programm|A,D,F,G,J
 C2022/12/03|ee|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/12/03|fi|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/12/03|fr|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/12/03|gr|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/12/03|ir|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/12/03|it|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/12/03|lv|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/12/03|lt|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/12/03|lu|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/12/03|mt|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/12/03|nl|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/12/03|at|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/12/03|pt|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
@@ -465,12 +463,15 @@ C2022/12/03|sk|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/12/03|si|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/12/03|es|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/12/03|cy|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/12/03|fr|2022|2022-7-6|g|35 Jahre Erasmus-Programm|
 C2022/100/04|fr|2022|2022-1-25|g|90. Jahrestag der Geburt des ehemaligen Staatspräsidenten Jacques Chirac|
 C2022/145/06|it|2022|2022-4-6|g|170. Jahrestag der Gründung der Italienischen Nationalpolizei|
 C2022/145/07|si|2022|2022-3-2|g|150. Geburtstag des Architekten Jože Plečnik|
 C2022/145/08|de|2022|2022-1-25|g|Bundesländer-Serie – Thüringen|A,D,F,G,J
 C2020/145/09|it|2022|2022-5-17|g|30. Todestag von Giovanni Falcone und Paolo Borsellino|
 C2022/145/10|lu|2022|2022-7-1|g|50 Jahre gesetzlicher Schutz der luxemburgischen Flagge|
+
+C2022/12/03|mt|2022|NA|g|35 Jahre Erasmus-Programm|
 
 NA|fi|2022|2022-2-11|g|100-jähriges Bestehen des finnischen Nationalballetts|
 NA|ee|2022|2022-3-9|g|150. Jahrestag der Gründung des estnischen Literatenvereins|
@@ -489,11 +490,13 @@ NA|va|2022|2022-9-6|g|25. Todestag von Mutter Teresa|
 NA|mc|2022|2022-9-7|g|100. Todestag Albert I.|
 NA|fr|2022|2022-9-22|g|Der Genius und das Diskuswerfen - Arc de Triomphe|
 NA|fi|2022|2022-9-30|g|Klimaforschung in Finnland|
+NA|sm|2022|2022-10-4|g|200. Todestag Antonio Canovas|
 NA|sk|2022|2022-10-5|g|300. Jahrestag des Baus der ersten Dampfmaschine zum Pumpen von Grubenwasser|
 
+NA|ad|2022|NA|g|Karl der Große|
+NA|ad|2022|NA|g|10-jährige Währungsvereinbarung zwischen Andorra und der EU|
 NA|lt|2022|NA|g|Suvalkija (Sudauen)|
 NA|mt|2022|NA|g|Hypogäum von Ħal-Saflieni|
-NA|sm|2022|NA|g|200. Todestag Antonio Canovas|
 
 
 
