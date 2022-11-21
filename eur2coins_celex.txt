@@ -492,11 +492,12 @@ NA|fr|2022|2022-9-22|g|Der Genius und das Diskuswerfen - Arc de Triomphe|
 NA|fi|2022|2022-9-30|g|Klimaforschung in Finnland|
 NA|sm|2022|2022-10-4|g|200. Todestag Antonio Canovas|
 NA|sk|2022|2022-10-5|g|300. Jahrestag des Baus der ersten Dampfmaschine zum Pumpen von Grubenwasser|
+NA|mt|2022|2022-11-17|g|Hypogäum von Ħal-Saflieni|
+NA|mt|2022|2022-11-17|g|Resolution 1325 des UN-Sicherheitsrates: Frieden und Sicherheit für Frauen|
 
 NA|ad|2022|NA|g|Karl der Große|
 NA|ad|2022|NA|g|10-jährige Währungsvereinbarung zwischen Andorra und der EU|
 NA|lt|2022|NA|g|Suvalkija (Sudauen)|
-NA|mt|2022|NA|g|Hypogäum von Ħal-Saflieni|
 
 
 
