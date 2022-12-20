@@ -471,32 +471,32 @@ C2022/145/07|si|2022|2022-3-2|g|150. Geburtstag des Architekten Jože Plečnik|
 C2022/145/08|de|2022|2022-1-25|g|Bundesländer-Serie – Thüringen|A,D,F,G,J
 C2020/145/09|it|2022|2022-5-17|g|30. Todestag von Giovanni Falcone und Paolo Borsellino|
 C2022/145/10|lu|2022|2022-7-1|g|50 Jahre gesetzlicher Schutz der luxemburgischen Flagge|
+C2022/484/07|be|2022|2022-5-11|g|Gesundheitswesen – Würdigung des außergewöhnlichen Engagements in der COVID-19-Pandemie|
+C2022/484/08|gr|2022|2022-7-1|g| 200. Jahrestag der ersten griechischen Verfassung|
+C2022/484/09|es|2022|2022-3-23|g|500. Jahrestag der ersten Weltumrundung|
+C2022/484/10|es|2022|2022-3-23|g|UNESCO-Welterbe – Nationalpark Garajonay|
+C2022/484/11|ee|2022|2022-3-9|g|150. Jahrestag der Gründung der Estnischen Literaturgesellschaft|
+C2022/484/12|pt|2022|2022-3-30|g|100. Jahrestag der Erstüberquerung des Südatlantiks mit dem Flugzeug durch Gago Coutinho und Sacadura Cabral im Jahr 1922|
+C2022/484/13|sk|2022|2022-10-5|g|300. Jahrestag des Baus der ersten Dampfmaschine für den Bergbau auf dem europäischen Festland|
+C2022/484/16|va|2022|2022-9-6|g|125. Geburtstag von Papst Paul VI.|
+C2022/484/17|va|2022|2022-9-6|g|25. Todestag von Mutter Teresa von Kalkutta|
+C2022/484/18|ee|2022|2022-7-8|g|Ukraine und Freiheit|
+C2022/484/19|fi|2022|2022-9-30|g|Klimaforschung in Finnland|
+C2022/484/20|fi|2022|2022-2-11|g|100 Jahre Finnisches Nationalballett|
+C2022/484/21|lu|2022|2022-7-1|g|10. Hochzeitstag von Erbgroßherzog Guillaume und Erbgroßherzogin Stéphanie|
+C2022/484/22|mt|2022|2022-11-17|g|UNESCO-Weltkulturerbe: Ħal-Saflieni-Hypogäum|
+C2022/484/23|mt|2022|2022-11-17|g|22. Jahrestag der Resolution 1325 des Sicherheitsrates der Vereinten Nationen zu Frauen, Frieden und Sicherheit|
+C2022/484/24|lt|2022|2022-4-21|g|100 Jahre Basketball in Litauen|
+C2022/484/26|lv|2022|2022-4-12|g|Hundertjähriges Bestehen der lettischen Zentralbank „Latvijas Banka“ – Finanzwissen|
 
-NA|fi|2022|2022-2-11|g|100-jähriges Bestehen des finnischen Nationalballetts|
-NA|ee|2022|2022-3-9|g|150. Jahrestag der Gründung des estnischen Literatenvereins|
-NA|es|2022|2022-3-23|g|Nationalpark Garajonay|
-NA|es|2022|2022-3-23|g|500. Jahrestag der Vollendung der ersten Weltumsegelung|
-NA|pt|2022|2022-3-30|g|100. Jahrestag der Erstüberquerung des Südatlantiks mit dem Flugzeug|
-NA|lv|2022|2022-4-12|g|100-jähriges Bestehen der Lettischen Bank|
-NA|lt|2022|2022-4-21|g|100 Jahre Basketball in Litauen|
 NA|sm|2022|2022-4-28|g|530. Todestag Piero della Francescas|
-NA|be|2022|2022-5-11|g|Gesundheitswesen / Covid-19-Pandemie|
-NA|gr|2022|2022-7-1|g|200. Jahrestag der ersten Verfassung von Griechenland|
-NA|lu|2022|2022-7-1|g|10. Hochzeitstag von Erbgroßherzog Guillaume und Erbgroßherzogin Stéphanie|
-NA|ee|2022|2022-7-8|g|Slava Ukraini|
-NA|va|2022|2022-9-6|g|125. Geburtstag von Papst Paul VI.|
-NA|va|2022|2022-9-6|g|25. Todestag von Mutter Teresa|
 NA|mc|2022|2022-9-7|g|100. Todestag Albert I.|
 NA|fr|2022|2022-9-22|g|Der Genius und das Diskuswerfen - Arc de Triomphe|
-NA|fi|2022|2022-9-30|g|Klimaforschung in Finnland|
 NA|sm|2022|2022-10-4|g|200. Todestag Antonio Canovas|
-NA|sk|2022|2022-10-5|g|300. Jahrestag des Baus der ersten Dampfmaschine zum Pumpen von Grubenwasser|
-NA|mt|2022|2022-11-17|g|Hypogäum von Ħal-Saflieni|
-NA|mt|2022|2022-11-17|g|Resolution 1325 des UN-Sicherheitsrates: Frieden und Sicherheit für Frauen|
 
-NA|ad|2022|NA|g|Karl der Große|
-NA|ad|2022|NA|g|10-jährige Währungsvereinbarung zwischen Andorra und der EU|
-NA|lt|2022|NA|g|Suvalkija (Sudauen)|
+C2022/484/14|ad|2022|NA|g|Die Legende von Karl dem Großen|
+C2022/484/15|ad|2022|NA|g|10. Jahrestag des Inkrafttretens der Währungsvereinbarung zwischen Andorra und der Europäischen Union|
+C2022/484/25|lt|2022|NA|g|Ethnographische Regionen Litauens – Suvalkija|
 
 
 
