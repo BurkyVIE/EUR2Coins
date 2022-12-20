@@ -431,7 +431,7 @@ server <- function(input, output, session) {
   fros_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     fros <- fros <- tibble(Amtsblatt = c('C2021/470/07', NA, NA, NA),
                            Beschreibung =c('<b>Die sprintende Marianne</b>',
-                                           '<b>Der Genius und das Diskuswerfen - Arc de Triomph</b>',
+                                           '<b>Der Genius und das Diskuswerfen - Arc de Triomphe</b>',
                                            '<b>Unbekannt</b>',
                                            '<b>Unbekannt</b>'))
     
@@ -497,7 +497,7 @@ server <- function(input, output, session) {
                                          'C2013/219/06', 'C2014/020/06', 'C2014/262/05', 'C2015/086/03', 'C2015/232/05',
                                          'C2016/028/04', 'C2017/023/07', 'C2017/320/04', 'C2017/438/10', 'C2018/305/06',
                                          'C2018/466/11', 'C2019/352/13', 'C2020/049/13', 'C2020/381/03', 'C2020/444/04',
-                                         'C2021/020/06', NA, NA),
+                                         'C2021/020/06', 'C2022/484/21', NA),
                            Beschreibung =c('<b>Monogramm Großherzog Henris</b>',
                                            '<b>50. Geburtstag und 5. Jahrestag der Thronbesteigung Großherzog Henris,<br>100. Todestag Großherzog Adolphs</b>',
                                            '<b>25. Geburtstag Erbgroßherzog Guillaumes</b>',
@@ -616,14 +616,14 @@ server <- function(input, output, session) {
   output$mtps_tab <- renderTable({mtps_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   mtps_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     mtps <- tibble(Amtsblatt = c('C2016/281/10', 'C2017/111/10', 'C2018/174/08', 'C2019/352/15', 'C2020/166/02',
-                                 'C2021/473/08', NA),
+                                 'C2021/473/08', 'C2022/484/22'),
                    Beschreibung =c('<b>Tempel von Ggantija</b>',
                                    '<b>Tempel von Hagar Qim</b>',
                                    '<b>Tempel von Mnajdra</b>',
                                    '<b>Tempel von Ta’ Hagrat</b>',
                                    '<b>Tempel von Skorba</b>',
                                    '<b>Tempel von Tarxien</b>',
-                                   '<b>Hypogäum von Hal-Saflieni</b>'))
+                                   '<b>Ħal-Saflieni-Hypogäum</b>'))
     
     left_join(mtps %>% filter(!is.na(Amtsblatt)),
               coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
@@ -683,7 +683,7 @@ server <- function(input, output, session) {
   output$ptgp_tab <- renderTable({ptgp_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   ptgp_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     ptgp <- tibble(Amtsblatt = c('C2017/120/08', 'C2017/386/04', 'C2018/234/05', 'C2018/234/04', 'C2019/356/04',
-                                 'C2019/356/03', 'C2020/380/05', 'C2020/163/06', 'C2020/444/05'),
+                                 'C2019/356/03', 'C2020/380/05', 'C2020/163/06', 'C2020/444/05', 'C2022/484/12'),
                    Beschreibung =c('<b>150 Jahre Polícia de Segurança Pública (PSP)</b>',
                                    '<b>150. Geburtstag Raul Brandãos</b>',
                                    '<b>250 Jahre Nationale Druckerei Imprensa Nacional</b>',
@@ -692,7 +692,8 @@ server <- function(input, output, session) {
                                    '<b>600. Jahrestag der Entdeckung der Inselgruppe Madeira</b>',
                                    '<b>730 Jahre Universität Coimbra</b>',
                                    '<b>75 Jahre Vereinte Nationen</b>',
-                                   '<b>EU-Ratspräsidentschaft</b>'))
+                                   '<b>EU-Ratspräsidentschaft</b>',
+                                   '<b>100. Jahrestag der Erstüberquerung des Südatlantiks mit dem Flugzeug durch Gago Coutinho und Sacadura Cabral im Jahr 1922</b>'))
     
     left_join(ptgp %>% filter(!is.na(Amtsblatt)),
               coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
@@ -721,7 +722,7 @@ server <- function(input, output, session) {
   esun_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     esun <- tibble(Amtsblatt = c('C2010/047/07', 'C2011/050/02', 'C2012/057/03', 'C2013/050/04', 'C2014/051/05',
                                  'C2014/397/04', 'C2015/425/10', 'C2016/236/06', 'C2018/014/04', 'C2018/466/09',
-                                 'C2020/049/12', 'C2021/096/08', NA, NA, NA,
+                                 'C2020/049/12', 'C2021/096/08', 'C2022/484/10', NA, NA,
                                  NA),
                    Beschreibung =c('<b>Altstadt von Córdoba</b><br>(Innenraum der Mezquita de Córdoba)',
                                    '<b>Alhambra, Generalife und Albaicín in Granada</b><br>(Löwenhof der Alhambra)',
