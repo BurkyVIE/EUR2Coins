@@ -35,7 +35,7 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                 checkboxInput(inputId = "sammlung", label = "nur Sammlung"),
                                                 h3("Münz ID"),
                                                 fluidRow(
-                                                  column(9, textInput(inputId = "id", label = NULL)),
+                                                  column(9, textInput(inputId = "id", value = ".", label = NULL)),
                                                   column(3, offset = 0, actionButton(inputId = "id_reset", label = "X"))
                                                 ),
                                                 p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld", 
@@ -45,7 +45,7 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                   " als Joker ist zulässig.", HTML('</div>')),
                                                 h3("Abbildung"),
                                                 fluidRow(
-                                                  column(9, textInput(inputId = "abb", label = NULL)),
+                                                  column(9, textInput(inputId = "abb", value = ".", label = NULL)),
                                                   column(3, actionButton(inputId = "abb_reset", label = "X"))
                                                 ),
                                                 p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld Abbildung. Groß-/ Kleinschreibung wird ignoriert.",
@@ -205,11 +205,11 @@ ui <- fluidPage(includeCSS(path = "style.css"),
 server <- function(input, output, session) {
   
   observeEvent(input$id_reset, {
-    updateTextInput(session, inputId = "id", value = character(0))
+    updateTextInput(session, inputId = "id", value = ".")
   })
   
   observeEvent(input$abb_reset, {
-    updateTextInput(session, inputId = "abb", value = character(0))
+    updateTextInput(session, inputId = "abb", value = ".")
   })
   
   observeEvent(input$q0, {
