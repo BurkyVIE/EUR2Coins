@@ -735,8 +735,8 @@ server <- function(input, output, session) {
                                    '<b>Altstadt von Ávila und Kirchen außerhalb der Stadtmauer</b><br>(Drei Wehrtürme der Stadtmauer Ávilas)',
                                    '<b>Architektur der Mudéjares in Aragon</b><br>(Turm von El Salvador in Teruel)',
                                    '<b>Historische Altstadt von Toledo</b><br>(Puerta del Sol und Detail der Synagoge El Tránsito in Toledo)',
-                                   '<b>Nationalpark Garajonay auf La Gomera</b><br>(Unbekannt)',
-                                   '<b>Altstadt von Cáceres</b>()<br>',
+                                   '<b>Nationalpark Garajonay auf La Gomera</b><br>(Roque de Agando mit Lorbeerwald)',
+                                   '<b>Altstadt von Cáceres</b>(Plaza Mayor)<br>',
                                    '<b>Kathedrale, Alcázar und Indienarchiv in Sevilla</b>()<br>',
                                    '<b>Altstadt von Salamanca</b>()<br>'))
     
