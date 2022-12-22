@@ -1,9 +1,12 @@
+# GLOBAL ----
+## Libraries ----
 library(shiny)
 
+## Externe Daten ----
 source("eur2coins.r")
 source("eur2collection.r")
 
-# JS Funktion um Markierung zu kopieren
+## JS Funktion um Markierung zu kopieren ----
 highlight <- '
 function getSelectionText() {
 var text = "";
@@ -21,7 +24,7 @@ Shiny.onInputChange("myselection", selection);
 };
 '
 
-### UI
+# UI (User Interface)
 ui <- fluidPage(includeCSS(path = "style.css"),
                 tabsetPanel(id = "EUR2",
                             tabPanel("identifizieren",
@@ -133,8 +136,10 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                  tabPanel("DE",
                                                           fluidPage(
                                                             h1("Deutschland"),
-                                                            h2("Bundesländerserie"),
-                                                            tableOutput(outputId = "debl_tab")
+                                                            h2("Bundesländerserie I (2006-2022)"),
+                                                            tableOutput(outputId = "debl_tab"),
+                                                            h2("Bundesländerserie II (2023-2038)"),
+                                                            tableOutput(outputId = "debl2_tab")
                                                           )
                                                  ),
                                                  tabPanel("ES",
@@ -181,13 +186,6 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                             h2("Von Kindern mit Solidarität"),
                                                             tableOutput(outputId = "mtks_tab")
                                                           )
-                                                 ),
-                                                 tabPanel("PT",
-                                                          fluidPage(
-                                                            h1("Portugal"),
-                                                            h2("Geschichte Portugals"),
-                                                            tableOutput(outputId = "ptgp_tab")
-                                                          )
                                                  )#,
                                                  #tabPanel("...")
                                      )
@@ -201,9 +199,10 @@ ui <- fluidPage(includeCSS(path = "style.css"),
 )
 
 
-### Server
+# Server ---
 server <- function(input, output, session) {
-  
+
+  ## Reset Buttons ----  
   observeEvent(input$id_reset, {
     updateTextInput(session, inputId = "id", value = ".")
   })
@@ -212,6 +211,7 @@ server <- function(input, output, session) {
     updateTextInput(session, inputId = "abb", value = ".")
   })
   
+  ## Bewertungs Buttons ----
   observeEvent(input$q0, {
     tmp <- paste0(input$myselection, "-0")
     write(tmp, file = "eur2collection.txt", append = TRUE)
@@ -236,11 +236,12 @@ server <- function(input, output, session) {
     Sys.sleep(1.5)
   })
   
-  
+  ## Reload ----
   observeEvent(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     source("eur2collection.r")
   })
   
+  ## Ausgabe Gedenkmünzen ----
   output$suche_g <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_g()}, sanitize.text.function = function(x) x)
   tbl_g <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     coins %>%
@@ -264,7 +265,7 @@ server <- function(input, output, session) {
              'Münz ID' = ID) %>% 
       select(-Ausgabe, -Münzart)
   })
-  
+  ## Ausgabe Umlaufmünzen ----
   output$suche_u <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_u()}, sanitize.text.function = function(x) x)
   tbl_u <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     coins %>%
@@ -289,6 +290,7 @@ server <- function(input, output, session) {
       select(-Ausgabe, -Münzart)
   })
   
+  ## Ausgabe Zusammenfassung Jahr ----
   output$zsf_jahr <- renderTable(spacing = "xs", align = c("rrrl"), {zsf_tbl_jahr()}, sanitize.text.function = function(x) x)
   zsf_tbl_jahr <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     left_join(coins %>% group_by(Jahr = str_sub(ID, 1, 4)) %>% count(),
@@ -301,6 +303,7 @@ server <- function(input, output, session) {
       mutate(Graph = paste0("<div class='bar'>", Graph, "</div>"))
   }, ignoreNULL = FALSE)
   
+  ## Ausgabe Zusammenfassung Land ----
   output$zsf_land <- renderTable(spacing = "xs", align = c("lrrl"), {zsf_tbl_land()}, sanitize.text.function = function(x) x)
   zsf_tbl_land <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     left_join(coins %>% group_by(Land = str_sub(ID, 5, 6)) %>% count(),
@@ -314,6 +317,7 @@ server <- function(input, output, session) {
              Graph = paste0("<div class='bar'>", Graph, "</div>"))
   }, ignoreNULL = FALSE)
   
+  ## Ausgabe Zusammenfassung Qualität ----
   output$zsf_qual <- renderTable(spacing = "xs", align = c("lrr"), {zsf_tbl_qual()}, sanitize.text.function = function(x) x)
   zsf_tbl_qual <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     collection %>%
@@ -328,6 +332,7 @@ server <- function(input, output, session) {
                 Anteil = Anzahl / dim(collection)[1] * 100)
   }, ignoreNULL = FALSE)
   
+  ## Auswahl Ablage ----
   observeEvent(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     updateSliderInput(session, inputId = "box", value = (pull(count(collection)) -1) %/% 144 + 1)
     updateSliderInput(session, inputId = "tableau", value = (pull(count(collection)) -1) %/% 24 %% 6 + 1)
@@ -355,6 +360,7 @@ server <- function(input, output, session) {
            input$box, input$tableau, "64x", sprintf("%04d", (input$box - 1) * 144 + input$tableau * 24))
   })
   
+  ## Ausgabe Ablage ----
   output$tableau <- renderTable({erst_tab()}, bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
   erst_tab <- eventReactive(c(input$box, input$tableau, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     collection %>% 
@@ -380,6 +386,8 @@ server <- function(input, output, session) {
     )
   }, ignoreNULL = FALSE)
   
+  ## Darstellung Serien ----
+  ### Deutschland - Bundesländerserie I ----
   output$debl_tab <- renderTable({debl_tab()}, bordered = T, spacing = "l", align = "clccccc", rownames = FALSE, sanitize.text.function = function(x) x)
   debl_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     debl <- tibble(Amtsblatt = c('C2006/033/04', 'C2007/076/02', 'C2008/013/02', 'C2009/031/06', 'C2010/012/05',
@@ -399,7 +407,7 @@ server <- function(input, output, session) {
                                     '<b>Sachsen</b><br>(Dresdner Zwinger)',
                                     '<b>Rheinland-Pfalz</b><br>(Porta Nigra)',
                                     '<b>Berlin</b><br>(Schloss Charlottenburg)',
-                                    '<b>Sitz des Bundesrates</b><br>(Preußisches Herrenhaus)',
+                                    '<b>Sitz des Bundesrates</b><br>(Preußisches Herrenhaus, Sitz des Bundesrates)',
                                     '<b>Brandenburg</b><br>(Schloss Sanssouci)',
                                     '<b>Sachsen-Anhalt</b><br>(Magdeburger Dom)',
                                     '<b>Thüringen</b><br>(Wartburg)'))
@@ -427,13 +435,61 @@ server <- function(input, output, session) {
       )
   }, ignoreNULL = FALSE)
   
+  ### Deutschland - Bundesländerserie II ----
+  # output$debl2_tab <- renderTable({debl2_tab()}, bordered = T, spacing = "l", align = "clccccc", rownames = FALSE, sanitize.text.function = function(x) x)
+  # debl2_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+  #   debl2 <- tibble(Amtsblatt = c(NA, NA, NA, NA, NA,
+  #                                 NA, NA, NA, NA, NA,
+  #                                 NA, NA, NA, NA, NA,
+  #                                 NA),
+  #                  Beschreibung = c('<b>Hamburg</b><br>(Elbphilharmonie)',
+  #                                   '<b>Mecklenburg-Vorpommern</b><br>(Königsstuhl)',
+  #                                   '<b>Saarland</b><br>(Saarschleife)',
+  #                                   '<b>Unbekannt</b><br>()',
+  #                                   '<b>Unbekannt</b><br>()',
+  #                                   '<b>Unbekannt</b><br>()',
+  #                                   '<b>Unbekannt</b><br>()',
+  #                                   '<b>Unbekannt</b><br>()',
+  #                                   '<b>Unbekannt</b><br>()',
+  #                                   '<b>Unbekannt</b><br>()',
+  #                                   '<b>Unbekannt</b><br>()',
+  #                                   '<b>Unbekannt</b><br>()',
+  #                                   '<b>Unbekannt</b><br>()',
+  #                                   '<b>Unbekannt</b><br>()',
+  #                                   '<b>Unbekannt</b><br>()',
+  #                                   '<b>Unbekannt</b><br>()'))
+  #   
+  #   left_join(debl2 %>% filter(!is.na(Amtsblatt)),
+  #             coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
+  #     left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
+  #     mutate(Jahr = str_sub(ID, 1, 4),
+  #            Ablage = coalesce(Ablage, ""),
+  #            Qualität = case_when(is.na(Qualität) ~ "",
+  #                                 Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
+  #                                 Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
+  #                                 Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
+  #                                 Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
+  #                                 TRUE ~ "<div style='color: red;'>FEHLER</div>"),
+  #            ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
+  #     select(Jahr, Münzzeichen, Beschreibung, ID) -> tmp
+  #   
+  #   cbind(tmp %>% filter(Münzzeichen == "A") %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
+  #         tmp %>% filter(Münzzeichen == "A") %>% pull(Beschreibung),
+  #         matrix(tmp %>% pull(ID), ncol = 5, byrow = TRUE)) %>% 
+  #     matrix(ncol = 7,
+  #            dimnames = list(NULL,
+  #                            c("Jahr", "Bezeichnung", "A (Berlin)", "D (München)", "F (Stuttgart)", "G (Karlsruhe)", "J (Hamburg)"))
+  #     )
+  # }, ignoreNULL = FALSE)
+
+    ### Frankreich - Olympische Sommerspiele 2024 ----
   output$fros_tab <- renderTable({fros_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   fros_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     fros <- fros <- tibble(Amtsblatt = c('C2021/470/07', NA, NA, NA),
                            Beschreibung =c('<b>Die sprintende Marianne</b>',
                                            '<b>Der Genius und das Diskuswerfen - Arc de Triomphe</b>',
-                                           '<b>Unbekannt</b>',
-                                           '<b>Unbekannt</b>'))
+                                           '<b>Die Säerin und der Faustkampf – Pont Neuf</b>',
+                                           '<b>Herkules und der Ringkampf</b>'))
     
     left_join(fros %>% filter(!is.na(Amtsblatt)),
               coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
@@ -458,6 +514,7 @@ server <- function(input, output, session) {
       )
   }, ignoreNULL = FALSE)
   
+  ### Litauen - Ethnografische Regionen ----
   output$lter_tab <- renderTable({lter_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   lter_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     lter <- lter <- tibble(Amtsblatt = c('C2019/351/10', 'C2020/053/04', 'C2021/473/05', NA, NA),
@@ -490,6 +547,7 @@ server <- function(input, output, session) {
       )
   }, ignoreNULL = FALSE)
   
+  ### Luxemburg - Dynastieserie ----
   output$ludy_tab <- renderTable({ludy_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   ludy_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     ludy <- ludy <- tibble(Amtsblatt = c('C2004/243/05', 'C2005/011/03', 'C2006/020/10', 'C2007/053/02', 'C2008/021/09',
@@ -550,6 +608,7 @@ server <- function(input, output, session) {
       )
   }, ignoreNULL = FALSE)
   
+  ### Lettland - Historische Regionen ----
   output$lvhr_tab <- renderTable({lvhr_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   lvhr_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     lvhr <- tibble(Amtsblatt = c('C2016/146/07', 'C2017/066/02', 'C2017/066/03', 'C2018/234/03'),
@@ -581,6 +640,7 @@ server <- function(input, output, session) {
       )
   }, ignoreNULL = FALSE)
   
+  ### Malta - Verfassungsgeschichte ----
   output$mtvg_tab <- renderTable({mtvg_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   mtvg_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     mtvg <- tibble(Amtsblatt = c('C2011/299/08', 'C2012/375/06', 'C2013/379/09', 'C2014/383/05', 'C2015/150/03'),
@@ -613,6 +673,7 @@ server <- function(input, output, session) {
       )
   }, ignoreNULL = FALSE)
   
+  ### Malta - Prähistorische Stättenn ----
   output$mtps_tab <- renderTable({mtps_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   mtps_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     mtps <- tibble(Amtsblatt = c('C2016/281/10', 'C2017/111/10', 'C2018/174/08', 'C2019/352/15', 'C2020/166/02',
@@ -648,6 +709,7 @@ server <- function(input, output, session) {
       )
   }, ignoreNULL = FALSE)
   
+  ### Malta - Von Kindern mit Solidarität ----
   output$mtks_tab <- renderTable({mtks_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   mtks_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     mtks <- tibble(Amtsblatt = c('C2016/396/03', 'C2017/386/03', 'C2018/401/07', 'C2019/352/16', NA),
@@ -680,44 +742,7 @@ server <- function(input, output, session) {
       )
   }, ignoreNULL = FALSE)
   
-  output$ptgp_tab <- renderTable({ptgp_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
-  ptgp_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    ptgp <- tibble(Amtsblatt = c('C2017/120/08', 'C2017/386/04', 'C2018/234/05', 'C2018/234/04', 'C2019/356/04',
-                                 'C2019/356/03', 'C2020/380/05', 'C2020/163/06', 'C2020/444/05', 'C2022/484/12'),
-                   Beschreibung =c('<b>150 Jahre Polícia de Segurança Pública (PSP)</b>',
-                                   '<b>150. Geburtstag Raul Brandãos</b>',
-                                   '<b>250 Jahre Nationale Druckerei Imprensa Nacional</b>',
-                                   '<b>250 Jahre Botanischer Garten von Ajuda (Lissabon)</b>',
-                                   '<b>500. Jahrestag der Weltumrundung durch Magellan</b>',
-                                   '<b>600. Jahrestag der Entdeckung der Inselgruppe Madeira</b>',
-                                   '<b>730 Jahre Universität Coimbra</b>',
-                                   '<b>75 Jahre Vereinte Nationen</b>',
-                                   '<b>EU-Ratspräsidentschaft</b>',
-                                   '<b>100. Jahrestag der Erstüberquerung des Südatlantiks mit dem Flugzeug durch Gago Coutinho und Sacadura Cabral im Jahr 1922</b>'))
-    
-    left_join(ptgp %>% filter(!is.na(Amtsblatt)),
-              coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
-      left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
-      mutate(Jahr = str_sub(ID, 1, 4),
-             Ablage = coalesce(Ablage, ""),
-             Qualität = case_when(is.na(Qualität) ~ "",
-                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
-                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
-                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
-                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
-                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
-             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
-      select(Jahr, Münzzeichen, Beschreibung, ID) -> tmp
-    
-    cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
-          tmp %>% pull(Beschreibung),
-          tmp %>% pull(ID)) %>% 
-      matrix(ncol = 3,
-             dimnames = list(NULL,
-                             c("Jahr", "Bezeichnung", " "))
-      )
-  }, ignoreNULL = FALSE)
-  
+  ### Spanien - UNESCO Welterbestätten ----
   output$esun_tab <- renderTable({esun_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   esun_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     esun <- tibble(Amtsblatt = c('C2010/047/07', 'C2011/050/02', 'C2012/057/03', 'C2013/050/04', 'C2014/051/05',
@@ -768,5 +793,5 @@ server <- function(input, output, session) {
 
 
 
-# Run the application 
+# Run the application ----
 shinyApp(ui = ui, server = server)
