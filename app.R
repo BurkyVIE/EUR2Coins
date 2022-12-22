@@ -57,7 +57,7 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                 checkboxInput(inputId = "sammlung", label = "nur Sammlung"),
                                                 h3("Münz ID"),
                                                 fluidRow(
-                                                  column(9, textInput(inputId = "id", value = ".", label = NULL)),
+                                                  column(9, textInput(inputId = "id", value = "", label = NULL)),
                                                   column(3, offset = 0, actionButton(inputId = "id_reset", label = "X"))
                                                 ),
                                                 p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld", 
@@ -67,7 +67,7 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                   " als Joker ist zulässig.", HTML('</div>')),
                                                 h3("Abbildung"),
                                                 fluidRow(
-                                                  column(9, textInput(inputId = "abb", value = ".", label = NULL)),
+                                                  column(9, textInput(inputId = "abb", value = "", label = NULL)),
                                                   column(3, actionButton(inputId = "abb_reset", label = "X"))
                                                 ),
                                                 p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld Abbildung. Groß-/ Kleinschreibung wird ignoriert.",
@@ -223,11 +223,11 @@ server <- function(input, output, session) {
 
   ## Reset Buttons ----  
   observeEvent(input$id_reset, {
-    updateTextInput(session, inputId = "id", value = ".")
+    updateTextInput(session, inputId = "id", value = "")
   })
   
   observeEvent(input$abb_reset, {
-    updateTextInput(session, inputId = "abb", value = ".")
+    updateTextInput(session, inputId = "abb", value = "")
   })
   
   ## Bewertungs Buttons ----
@@ -267,7 +267,7 @@ server <- function(input, output, session) {
       left_join(collection %>% 
                   select(ID, Qualität, Ablage),
                 by = "ID") %>%
-      filter((!is.na(Ablage) | !input$sammlung), Münzart == "Gedenkmünze", str_detect(ID, tolower(input$id)), str_detect(tolower(Abbildung), tolower(input$abb))) %>% 
+      filter((!is.na(Ablage) | !input$sammlung), Münzart == "Gedenkmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) %>% 
       arrange(ID) %>%
       mutate(Amtsblatt = paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:", Amtsblatt, "', target = '_blank'>", Amtsblatt, "</a>"),
              Land = paste0("<img src='https://www.crwflags.com/fotw/images/", tolower(substr(Land, 1, 1)), "/", tolower(Land), ".gif', height='14', alt='", Land, "'/>"),
@@ -291,7 +291,7 @@ server <- function(input, output, session) {
       left_join(collection %>% 
                   select(ID, Qualität, Ablage),
                 by = "ID") %>%
-      filter((!is.na(Ablage) | !input$sammlung), Münzart == "Umlaufmünze", str_detect(ID, tolower(input$id)), str_detect(tolower(Abbildung), tolower(input$abb))) %>% 
+      filter((!is.na(Ablage) | !input$sammlung), Münzart == "Umlaufmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) %>% 
       arrange(ID) %>%
       mutate(Amtsblatt = paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:", Amtsblatt, "', target = '_blank'>", Amtsblatt, "</a>"),
              Land = paste0("<img src='https://www.crwflags.com/fotw/images/", tolower(substr(Land, 1, 1)), "/", tolower(Land), ".gif', height='14', alt='", Land, "'>"),
@@ -489,7 +489,7 @@ server <- function(input, output, session) {
     tmp <- displ_serie(fros)
     
     cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
-          tmp %>% pull(Beschreibung),
+          tmp %>% pull(Beschreibung) %>% paste(., "&nbsp<i>", tmp %>% pull(Münzzeichen), "</i>"),
           tmp %>% pull(ID)) %>% 
       matrix(ncol = 3,
              dimnames = list(NULL,
@@ -510,7 +510,7 @@ server <- function(input, output, session) {
     tmp <- displ_serie(lter)
     
     cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
-          tmp %>% pull(Beschreibung),
+          tmp %>% pull(Beschreibung) %>% paste(., "&nbsp<i>", tmp %>% pull(Münzzeichen), "</i>"),
           tmp %>% pull(ID)) %>% 
       matrix(ncol = 3,
              dimnames = list(NULL,
@@ -559,7 +559,7 @@ server <- function(input, output, session) {
     tmp <- displ_serie(ludy)
     
     cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
-          tmp %>% pull(Beschreibung),
+          tmp %>% pull(Beschreibung) %>% paste(., "&nbsp<i>", tmp %>% pull(Münzzeichen), "</i>"),
           tmp %>% pull(ID)) %>% 
       matrix(ncol = 3,
              dimnames = list(NULL,
@@ -579,7 +579,7 @@ server <- function(input, output, session) {
     tmp <- displ_serie(lvhr)
     
     cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
-          tmp %>% pull(Beschreibung),
+          tmp %>% pull(Beschreibung) %>% paste(., "&nbsp<i>", tmp %>% pull(Münzzeichen), "</i>"),
           tmp %>% pull(ID)) %>% 
       matrix(ncol = 3,
              dimnames = list(NULL,
@@ -600,7 +600,7 @@ server <- function(input, output, session) {
     tmp <- displ_serie(mtvg)
 
         cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
-          tmp %>% pull(Beschreibung),
+          tmp %>% pull(Beschreibung) %>% paste(., "&nbsp<i>", tmp %>% pull(Münzzeichen), "</i>"),
           tmp %>% pull(ID)) %>% 
       matrix(ncol = 3,
              dimnames = list(NULL,
@@ -623,16 +623,8 @@ server <- function(input, output, session) {
     
     tmp <- displ_serie(mtps)
     
-    # cbind(tmp %>% filter(Münzzeichen == "A") %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
-    #       tmp %>% filter(Münzzeichen == "A") %>% pull(Beschreibung),
-    #       matrix(tmp %>% pull(ID), ncol = 5, byrow = TRUE)) %>% 
-    #   matrix(ncol = 7,
-    #          dimnames = list(NULL,
-    #                          c("Jahr", "Bezeichnung", "A (Berlin)", "D (München)", "F (Stuttgart)", "G (Karlsruhe)", "J (Hamburg)"))
-    #   )
-    
     cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
-          tmp %>% pull(Beschreibung) %>% paste0(., "<br>Version ", tmp %>% pull(Münzzeichen)),
+          tmp %>% pull(Beschreibung) %>% paste(., "&nbsp<i>", tmp %>% pull(Münzzeichen), "</i>"),
           tmp %>% pull(ID)) %>% 
       matrix(ncol = 3,
              dimnames = list(NULL,
@@ -653,7 +645,7 @@ server <- function(input, output, session) {
     tmp <- displ_serie(mtks)
     
     cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
-          tmp %>% pull(Beschreibung),
+          tmp %>% pull(Beschreibung) %>% paste(., "&nbsp<i>", tmp %>% pull(Münzzeichen), "</i>"),
           tmp %>% pull(ID)) %>% 
       matrix(ncol = 3,
              dimnames = list(NULL,
@@ -688,7 +680,7 @@ server <- function(input, output, session) {
     tmp <- displ_serie(esun)
 
     cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
-          tmp %>% pull(Beschreibung),
+          tmp %>% pull(Beschreibung) %>% paste(., "&nbsp<i>", tmp %>% pull(Münzzeichen), "</i>"),
           tmp %>% pull(ID)) %>% 
       matrix(ncol = 3,
              dimnames = list(NULL,
