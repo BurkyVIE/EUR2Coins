@@ -24,7 +24,26 @@ Shiny.onInputChange("myselection", selection);
 };
 '
 
-# UI (User Interface)
+## Funktion zum Erzeugen der Serien-Darstellung ----
+displ_serie <- function(df) {
+  res <- left_join(df |> filter(!is.na(Amtsblatt)),
+                   coins |> select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') |> 
+    left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') |> 
+    mutate(Jahr = str_sub(ID, 1, 4),
+           Ablage = coalesce(Ablage, ""),
+           Qualität = case_when(is.na(Qualität) ~ "",
+                                Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
+                                Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
+                                Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
+                                Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
+                                TRUE ~ "<div style='color: red;'>FEHLER</div>"),
+           ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
+    select(Jahr, Münzzeichen, Beschreibung, ID)
+  
+    return(res)
+}
+
+# UI (User Interface) ----
 ui <- fluidPage(includeCSS(path = "style.css"),
                 tabsetPanel(id = "EUR2",
                             tabPanel("identifizieren",
@@ -137,7 +156,7 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                           fluidPage(
                                                             h1("Deutschland"),
                                                             h2("Bundesländerserie I (2006-2022)"),
-                                                            tableOutput(outputId = "debl_tab"),
+                                                            tableOutput(outputId = "debl1_tab"),
                                                             h2("Bundesländerserie II (2023-2038)"),
                                                             tableOutput(outputId = "debl2_tab")
                                                           )
@@ -388,9 +407,9 @@ server <- function(input, output, session) {
   
   ## Darstellung Serien ----
   ### Deutschland - Bundesländerserie I ----
-  output$debl_tab <- renderTable({debl_tab()}, bordered = T, spacing = "l", align = "clccccc", rownames = FALSE, sanitize.text.function = function(x) x)
-  debl_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    debl <- tibble(Amtsblatt = c('C2006/033/04', 'C2007/076/02', 'C2008/013/02', 'C2009/031/06', 'C2010/012/05',
+  output$debl1_tab <- renderTable({debl1_tab()}, bordered = T, spacing = "l", align = "clccccc", rownames = FALSE, sanitize.text.function = function(x) x)
+  debl1_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    debl1 <- tibble(Amtsblatt = c('C2006/033/04', 'C2007/076/02', 'C2008/013/02', 'C2009/031/06', 'C2010/012/05',
                                  'C2011/024/04', 'C2012/010/02', 'C2013/379/08', 'C2014/417/04', 'C2015/143/05',
                                  'C2015/428/04', 'C2017/023/04', 'C2018/400/05', 'C2018/466/08', 'C2020/049/11',
                                  'C2021/020/04', NA),
@@ -411,20 +430,7 @@ server <- function(input, output, session) {
                                     '<b>Brandenburg</b><br>(Schloss Sanssouci)',
                                     '<b>Sachsen-Anhalt</b><br>(Magdeburger Dom)',
                                     '<b>Thüringen</b><br>(Wartburg)'))
-    
-    left_join(debl %>% filter(!is.na(Amtsblatt)),
-              coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
-      left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
-      mutate(Jahr = str_sub(ID, 1, 4),
-             Ablage = coalesce(Ablage, ""),
-             Qualität = case_when(is.na(Qualität) ~ "",
-                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
-                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
-                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
-                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
-                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
-             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
-      select(Jahr, Münzzeichen, Beschreibung, ID) -> tmp
+    tmp <- displ_serie(debl1)
     
     cbind(tmp %>% filter(Münzzeichen == "A") %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
           tmp %>% filter(Münzzeichen == "A") %>% pull(Beschreibung),
@@ -459,19 +465,8 @@ server <- function(input, output, session) {
   #                                   '<b>Unbekannt</b><br>()',
   #                                   '<b>Unbekannt</b><br>()'))
   #   
-  #   left_join(debl2 %>% filter(!is.na(Amtsblatt)),
-  #             coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
-  #     left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
-  #     mutate(Jahr = str_sub(ID, 1, 4),
-  #            Ablage = coalesce(Ablage, ""),
-  #            Qualität = case_when(is.na(Qualität) ~ "",
-  #                                 Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
-  #                                 Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
-  #                                 Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
-  #                                 Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
-  #                                 TRUE ~ "<div style='color: red;'>FEHLER</div>"),
-  #            ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
-  #     select(Jahr, Münzzeichen, Beschreibung, ID) -> tmp
+  #   tmp <- displ_serie(debl1)
+  #
   #   
   #   cbind(tmp %>% filter(Münzzeichen == "A") %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
   #         tmp %>% filter(Münzzeichen == "A") %>% pull(Beschreibung),
@@ -485,25 +480,13 @@ server <- function(input, output, session) {
     ### Frankreich - Olympische Sommerspiele 2024 ----
   output$fros_tab <- renderTable({fros_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   fros_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    fros <- fros <- tibble(Amtsblatt = c('C2021/470/07', NA, NA, NA),
-                           Beschreibung =c('<b>Die sprintende Marianne</b>',
-                                           '<b>Der Genius und das Diskuswerfen - Arc de Triomphe</b>',
-                                           '<b>Die Säerin und der Faustkampf – Pont Neuf</b>',
-                                           '<b>Herkules und der Ringkampf</b>'))
+    fros <- tibble(Amtsblatt = c('C2021/470/07', NA, NA, NA),
+                   Beschreibung =c('<b>Die sprintende Marianne</b>',
+                                   '<b>Der Genius und das Diskuswerfen - Arc de Triomphe</b>',
+                                   '<b>Die Säerin und der Faustkampf – Pont Neuf</b>',
+                                   '<b>Herkules und der Ringkampf</b>'))
     
-    left_join(fros %>% filter(!is.na(Amtsblatt)),
-              coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
-      left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
-      mutate(Jahr = str_sub(ID, 1, 4),
-             Ablage = coalesce(Ablage, ""),
-             Qualität = case_when(is.na(Qualität) ~ "",
-                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
-                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
-                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
-                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
-                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
-             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
-      select(Jahr, Münzzeichen, Beschreibung, ID) -> tmp
+    tmp <- displ_serie(fros)
     
     cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
           tmp %>% pull(Beschreibung),
@@ -517,26 +500,14 @@ server <- function(input, output, session) {
   ### Litauen - Ethnografische Regionen ----
   output$lter_tab <- renderTable({lter_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   lter_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    lter <- lter <- tibble(Amtsblatt = c('C2019/351/10', 'C2020/053/04', 'C2021/473/05', NA, NA),
-                           Beschreibung =c('<b>Žemaitija</b><br>(Niederlittauen)',
-                                           '<b>Aukschtaiten</b><br>(Oberlitauen)',
-                                           '<b>Dzukija</b><br>(Mittellitauen)',
-                                           '<b>Suvalkija (Sudauen)</b><br>()',
-                                           '<b>Mažoji Lietuva (Kleinlitauen)</b><br>()'))
+    lter <- tibble(Amtsblatt = c('C2019/351/10', 'C2020/053/04', 'C2021/473/05', 'C2022/484/25', NA),
+                   Beschreibung =c('<b>Žemaitija</b><br>(Niederlittauen)',
+                                   '<b>Aukschtaiten</b><br>(Oberlitauen)',
+                                   '<b>Dzukija</b><br>(Mittellitauen)',
+                                   '<b>Suvalkija</b><br>(Sudauen)',
+                                   '<b>Mažoji Lietuva</b><br>(Kleinlitauen)'))
     
-    left_join(lter %>% filter(!is.na(Amtsblatt)),
-              coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
-      left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
-      mutate(Jahr = str_sub(ID, 1, 4),
-             Ablage = coalesce(Ablage, ""),
-             Qualität = case_when(is.na(Qualität) ~ "",
-                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
-                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
-                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
-                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
-                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
-             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
-      select(Jahr, Münzzeichen, Beschreibung, ID) -> tmp
+    tmp <- displ_serie(lter)
     
     cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
           tmp %>% pull(Beschreibung),
@@ -550,54 +521,42 @@ server <- function(input, output, session) {
   ### Luxemburg - Dynastieserie ----
   output$ludy_tab <- renderTable({ludy_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   ludy_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    ludy <- ludy <- tibble(Amtsblatt = c('C2004/243/05', 'C2005/011/03', 'C2006/020/10', 'C2007/053/02', 'C2008/021/09',
-                                         'C2009/005/02', 'C2009/311/06', 'C2010/349/03', 'C2011/373/06', 'C2013/021/05',
-                                         'C2013/219/06', 'C2014/020/06', 'C2014/262/05', 'C2015/086/03', 'C2015/232/05',
-                                         'C2016/028/04', 'C2017/023/07', 'C2017/320/04', 'C2017/438/10', 'C2018/305/06',
-                                         'C2018/466/11', 'C2019/352/13', 'C2020/049/13', 'C2020/381/03', 'C2020/444/04',
-                                         'C2021/020/06', 'C2022/484/21', NA),
-                           Beschreibung =c('<b>Monogramm Großherzog Henris</b>',
-                                           '<b>50. Geburtstag und 5. Jahrestag der Thronbesteigung Großherzog Henris,<br>100. Todestag Großherzog Adolphs</b>',
-                                           '<b>25. Geburtstag Erbgroßherzog Guillaumes</b>',
-                                           '<b>Großherzoglicher Palast</b>',
-                                           '<b>Schloss von Berg</b>',
-                                           '<b>90. Jahrestag der Thronbesteigung Großherzogin Charlottes</b>',
-                                           '<b>Wappen Großherzog Henris</b>',
-                                           '<b>50. Jahrestag der Ernennung ihres Sohnes Jean zum Statthalter durch<br>Großherzogin Charlotte</b>',
-                                           '<b>100. Todestag Großherzog Wilhelms IV.</b>',
-                                           '<b>Hochzeit Erbgroßherzog Guillaumes mit Gräfin Stéphanie de Lannoy</b>',
-                                           '<b>Nationalhymne des Großherzogtums Luxemburg</b>',
-                                           '<b>175 Jahre Unabhängigkeit des Großherzogtums Luxemburg</b>',
-                                           '<b>50. Jahrestag der Thronbesteigung Großherzog Jeans</b>',
-                                           '<b>15. Jahrestag der Thronbesteigung Großherzog Henris</b>',
-                                           '<b>125. Jahrestag der Luxemburger Dynastie Nassau-Weilburg</b>',
-                                           '<b>50-jähriges Bestehen der Großherzogin-Charlotte-Brücke</b>',
-                                           '<b>50. Jahrestag der Gründung der Luxemburger Freiwilligenarmee</b>',
-                                           '<b>200. Geburtstag Großherzog Wilhelms III.</b>',
-                                           '<b>150 Jahre Luxemburgische Verfassung</b>',
-                                           '<b>175. Todestag Großherzog Wilhelms I.</b>',
-                                           '<b>100. Jahrestag der Thronbesteigung Großherzogin Charlottes</b>',
-                                           '<b>100. Jahrestag der Einführung des allgemeinen Wahlrechts</b>',
-                                           '<b>200. Geburtstag Heinrichs von Oranien-Nassau</b>',
-                                           '<b>Geburt von Prinz Charles von Luxemburg</b>',
-                                           '<b>100. Geburtstag Großherzog Jeans</b>',
-                                           '<b>40. Hochzeitstag Großherzog Henris und Großherzogin Maria Teresas</b>',
-                                           '<b>10. Hochzeitstag von Erbgroßherzog Guillaume und Erbgroßherzogin Stéphanie</b>',
-                                           '<b>50. Jahrestag der Flagge Luxemburgs</b>'))
+    ludy <- tibble(Amtsblatt = c('C2004/243/05', 'C2005/011/03', 'C2006/020/10', 'C2007/053/02', 'C2008/021/09',
+                                 'C2009/005/02', 'C2009/311/06', 'C2010/349/03', 'C2011/373/06', 'C2013/021/05',
+                                 'C2013/219/06', 'C2014/020/06', 'C2014/262/05', 'C2015/086/03', 'C2015/232/05',
+                                 'C2016/028/04', 'C2017/023/07', 'C2017/320/04', 'C2017/438/10', 'C2018/305/06',
+                                 'C2018/466/11', 'C2019/352/13', 'C2020/049/13', 'C2020/381/03', 'C2020/444/04',
+                                 'C2021/020/06', 'C2022/484/21', NA),
+                   Beschreibung =c('<b>Monogramm Großherzog Henris</b>',
+                                   '<b>50. Geburtstag und 5. Jahrestag der Thronbesteigung Großherzog Henris,<br>100. Todestag Großherzog Adolphs</b>',
+                                   '<b>25. Geburtstag Erbgroßherzog Guillaumes</b>',
+                                   '<b>Großherzoglicher Palast</b>',
+                                   '<b>Schloss von Berg</b>',
+                                   '<b>90. Jahrestag der Thronbesteigung Großherzogin Charlottes</b>',
+                                   '<b>Wappen Großherzog Henris</b>',
+                                   '<b>50. Jahrestag der Ernennung ihres Sohnes Jean zum Statthalter durch<br>Großherzogin Charlotte</b>',
+                                   '<b>100. Todestag Großherzog Wilhelms IV.</b>',
+                                   '<b>Hochzeit Erbgroßherzog Guillaumes mit Gräfin Stéphanie de Lannoy</b>',
+                                   '<b>Nationalhymne des Großherzogtums Luxemburg</b>',
+                                   '<b>175 Jahre Unabhängigkeit des Großherzogtums Luxemburg</b>',
+                                   '<b>50. Jahrestag der Thronbesteigung Großherzog Jeans</b>',
+                                   '<b>15. Jahrestag der Thronbesteigung Großherzog Henris</b>',
+                                   '<b>125. Jahrestag der Luxemburger Dynastie Nassau-Weilburg</b>',
+                                   '<b>50-jähriges Bestehen der Großherzogin-Charlotte-Brücke</b>',
+                                   '<b>50. Jahrestag der Gründung der Luxemburger Freiwilligenarmee</b>',
+                                   '<b>200. Geburtstag Großherzog Wilhelms III.</b>',
+                                   '<b>150 Jahre Luxemburgische Verfassung</b>',
+                                   '<b>175. Todestag Großherzog Wilhelms I.</b>',
+                                   '<b>100. Jahrestag der Thronbesteigung Großherzogin Charlottes</b>',
+                                   '<b>100. Jahrestag der Einführung des allgemeinen Wahlrechts</b>',
+                                   '<b>200. Geburtstag Heinrichs von Oranien-Nassau</b>',
+                                   '<b>Geburt von Prinz Charles von Luxemburg</b>',
+                                   '<b>100. Geburtstag Großherzog Jeans</b>',
+                                   '<b>40. Hochzeitstag Großherzog Henris und Großherzogin Maria Teresas</b>',
+                                   '<b>10. Hochzeitstag von Erbgroßherzog Guillaume und<br>Erbgroßherzogin Stéphanie</b>',
+                                   '<b>50. Jahrestag der Flagge Luxemburgs</b>'))
     
-    left_join(ludy %>% filter(!is.na(Amtsblatt)),
-              coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
-      left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
-      mutate(Jahr = str_sub(ID, 1, 4),
-             Ablage = coalesce(Ablage, ""),
-             Qualität = case_when(is.na(Qualität) ~ "",
-                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
-                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
-                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
-                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
-                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
-             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
-      select(Jahr, Münzzeichen, Beschreibung, ID) -> tmp
+    tmp <- displ_serie(ludy)
     
     cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
           tmp %>% pull(Beschreibung),
@@ -617,19 +576,7 @@ server <- function(input, output, session) {
                                    '<b>Latgale</b><br>(Lettgallen)',
                                    '<b>Zemgale</b><br>(Semgallen)'))
     
-    left_join(lvhr %>% filter(!is.na(Amtsblatt)),
-              coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
-      left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
-      mutate(Jahr = str_sub(ID, 1, 4),
-             Ablage = coalesce(Ablage, ""),
-             Qualität = case_when(is.na(Qualität) ~ "",
-                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
-                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
-                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
-                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
-                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
-             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
-      select(Jahr, Münzzeichen, Beschreibung, ID) -> tmp
+    tmp <- displ_serie(lvhr)
     
     cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
           tmp %>% pull(Beschreibung),
@@ -650,21 +597,9 @@ server <- function(input, output, session) {
                                    '<b>Unabhängigkeit von Großbritannien 1964</b>',
                                    '<b>Ausrufung der Republik Malta 1974</b>'))
     
-    left_join(mtvg %>% filter(!is.na(Amtsblatt)),
-              coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
-      left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
-      mutate(Jahr = str_sub(ID, 1, 4),
-             Ablage = coalesce(Ablage, ""),
-             Qualität = case_when(is.na(Qualität) ~ "",
-                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
-                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
-                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
-                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
-                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
-             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
-      select(Jahr, Münzzeichen, Beschreibung, ID) -> tmp
-    
-    cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
+    tmp <- displ_serie(mtvg)
+
+        cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
           tmp %>% pull(Beschreibung),
           tmp %>% pull(ID)) %>% 
       matrix(ncol = 3,
@@ -673,7 +608,7 @@ server <- function(input, output, session) {
       )
   }, ignoreNULL = FALSE)
   
-  ### Malta - Prähistorische Stättenn ----
+  ### Malta - Prähistorische Stätten ----
   output$mtps_tab <- renderTable({mtps_tab()}, bordered = T, spacing = "l", align = "clc", rownames = FALSE, sanitize.text.function = function(x) x)
   mtps_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     mtps <- tibble(Amtsblatt = c('C2016/281/10', 'C2017/111/10', 'C2018/174/08', 'C2019/352/15', 'C2020/166/02',
@@ -686,22 +621,18 @@ server <- function(input, output, session) {
                                    '<b>Tempel von Tarxien</b>',
                                    '<b>Ħal-Saflieni-Hypogäum</b>'))
     
-    left_join(mtps %>% filter(!is.na(Amtsblatt)),
-              coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
-      left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
-      mutate(Jahr = str_sub(ID, 1, 4),
-             Ablage = coalesce(Ablage, ""),
-             Qualität = case_when(is.na(Qualität) ~ "",
-                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
-                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
-                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
-                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
-                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
-             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
-      select(Jahr, Münzzeichen, Beschreibung, ID) -> tmp
+    tmp <- displ_serie(mtps)
+    
+    # cbind(tmp %>% filter(Münzzeichen == "A") %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
+    #       tmp %>% filter(Münzzeichen == "A") %>% pull(Beschreibung),
+    #       matrix(tmp %>% pull(ID), ncol = 5, byrow = TRUE)) %>% 
+    #   matrix(ncol = 7,
+    #          dimnames = list(NULL,
+    #                          c("Jahr", "Bezeichnung", "A (Berlin)", "D (München)", "F (Stuttgart)", "G (Karlsruhe)", "J (Hamburg)"))
+    #   )
     
     cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
-          tmp %>% pull(Beschreibung),
+          tmp %>% pull(Beschreibung) %>% paste0(., "<br>Version ", tmp %>% pull(Münzzeichen)),
           tmp %>% pull(ID)) %>% 
       matrix(ncol = 3,
              dimnames = list(NULL,
@@ -719,19 +650,7 @@ server <- function(input, output, session) {
                                    '<b>Natur / Umwelt</b>',
                                    '<b>Kinderspiele</b>'))
     
-    left_join(mtks %>% filter(!is.na(Amtsblatt)),
-              coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
-      left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
-      mutate(Jahr = str_sub(ID, 1, 4),
-             Ablage = coalesce(Ablage, ""),
-             Qualität = case_when(is.na(Qualität) ~ "",
-                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
-                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
-                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
-                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
-                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
-             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
-      select(Jahr, Münzzeichen, Beschreibung, ID) -> tmp
+    tmp <- displ_serie(mtks)
     
     cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
           tmp %>% pull(Beschreibung),
@@ -766,20 +685,8 @@ server <- function(input, output, session) {
                                    '<b>Kathedrale, Alcázar und Indienarchiv in Sevilla</b>()<br>',
                                    '<b>Altstadt von Salamanca</b>()<br>'))
     
-    left_join(esun %>% filter(!is.na(Amtsblatt)),
-              coins %>% select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') %>%
-      left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') %>%
-      mutate(Jahr = str_sub(ID, 1, 4),
-             Ablage = coalesce(Ablage, ""),
-             Qualität = case_when(is.na(Qualität) ~ "",
-                                  Qualität == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
-                                  Qualität == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
-                                  Qualität == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
-                                  Qualität == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
-                                  TRUE ~ "<div style='color: red;'>FEHLER</div>"),
-             ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
-      select(Jahr, Münzzeichen, Beschreibung, ID) -> tmp
-    
+    tmp <- displ_serie(esun)
+
     cbind(tmp %>% pull(Jahr) %>% paste0("<b>", ., "</b>"),
           tmp %>% pull(Beschreibung),
           tmp %>% pull(ID)) %>% 
