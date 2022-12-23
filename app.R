@@ -7,20 +7,22 @@ source("eur2coins.r")
 source("eur2collection.r")
 
 ## JS Funktion um Markierung zu kopieren ----
-highlight <- 'function getSelectionText() {
-var text = "";
-if (window.getSelection) {
-text = window.getSelection().toString();
-} else if (document.selection) {
-text = document.selection.createRange().text;
-}
-return text;
+highlight <- '
+function getSelectionText() {
+    var text = "";
+    if (window.getSelection) {
+        text = window.getSelection().toString();
+    } else if (document.selection) {
+        text = document.selection.createRange().text;
+    }
+    return text;
 }
 
 document.onmouseup = document.onkeyup = document.onselectionchange = function() {
-var selection = getSelectionText();
-Shiny.onInputChange("myselection", selection);
-};'
+    var selection = getSelectionText();
+    Shiny.onInputChange("myselection", selection);
+};
+'
 
 ## Funktion zum Formatieren Qualität ----
 form_quali <- function(x) {
@@ -38,6 +40,73 @@ form_land <- function(txt) {
   paste0("<img src='https://www.crwflags.com/fotw/images/", substr(txt, 1, 1), "/", txt, ".gif', height='14', alt='", toupper(txt), "'/>(", toupper(txt), ")")
 }
 
+## Funktion zum Formatieren Amtsblatt ----
+form_amtsbl <- function(txt) {
+  paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:", txt, "', target = '_blank'>", txt, "</a>")
+}
+
+## Funktion zum ergänzen und behübschen der Daten ----
+exp_data <- function() {
+  left_join(coins,
+            collection %>% select(ID, Qualität, Ablage),
+            by = 'ID') |> 
+    mutate(Jahr = Prägejahr,
+           Ablage = coalesce(Ablage, " "))
+}
+
+## Funktion zur Darstellung der Daten ----
+displ_data <- function(df, variation) {
+  df <- mutate(df,
+               Land = form_land(Land),
+               Amtsblatt = form_amtsbl(Amtsblatt),
+               ID = paste0("<div class='mono'>", ID, "</div>"),
+               Qualität = form_quali(Qualität),
+               Ablage = paste0("<div class='mono'>", Ablage, "</div>"),
+               AQ = paste0(Ablage, Qualität)) |> 
+    arrange(ID)
+  
+  # Darstellung identifikation
+  if(variation == "ident") {
+    res <- df |> 
+      transmute(Jahr,
+                Land,
+                Abbildung,
+                Mzz = Münzzeichen,
+                Amtsblatt,
+                'Münz ID' = ID,
+                Qualität,
+                Ablage)
+  }
+  
+  # Darstellung Serien - Standard
+  if(variation == "ser") {
+    res <- cbind(paste0("<b>", pull(df, Jahr), "</b>"),
+                 pull(df, Beschreibung), 
+                 pull(df, Münzzeichen),
+                 pull(df, AQ)) |>  
+      matrix(ncol = 4, dimnames = list(NULL, c("Jahr", "Bezeichnung", "Mzz", " ")))
+  }
+  
+  # Darstellung serien - Deutschland
+  if(variation == "serde") {
+    res <- cbind(paste0("<b>", df |> filter(Münzzeichen == "A") |> pull(Jahr), "</b>"),
+                 df |> filter(Münzzeichen == "A") |> pull(Beschreibung),
+                 matrix(df |> pull(AQ), ncol = 5, byrow = TRUE)) |> 
+      matrix(ncol = 7, dimnames = list(NULL, c("Jahr", "Bezeichnung", "A (Berlin)", "D (München)", "F (Stuttgart)", "G (Karlsruhe)", "J (Hamburg)")))  
+  }
+  
+  # Variation Gemeinschaftsausgabe
+  if(variation == "gem") {
+    res <- cbind(pull(df, Land), 
+                 pull(df, Münzzeichen),
+                 pull(df, ID),
+                 pull(df, AQ)) |>  
+      matrix(ncol = 4, dimnames = list(NULL, c("Land", "Mzz", "Münz ID", " ")))
+  }
+  
+  return(res)
+}
+
 ## Funktion zur Darstellung Statistik ----
 form_stat <- function(val, von, bis) {
   left_join(coins |> group_by(Grp = str_sub(ID, von, bis)) |> count(),
@@ -49,37 +118,6 @@ form_stat <- function(val, von, bis) {
     # ungroup() |> 
     rename(!!val := Grp) |> 
     mutate(Graph = paste0("<div class='bar'>", Graph, "</div>"))
-}
-
-## Funktion zum Erzeugen der Serien-Darstellung ----
-displ_serie <- function(df, variation) {
-  tmp <- left_join(df |> filter(!is.na(Amtsblatt)),
-                   coins |> select(Amtsblatt, ID, Münzzeichen), by = 'Amtsblatt') |> 
-    left_join(collection %>% select(ID, Qualität, Ablage), by = 'ID') |> 
-    mutate(Jahr = str_sub(ID, 1, 4),
-           Ablage = coalesce(Ablage, ""),
-           Qualität = form_quali(Qualität),
-           ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) |>  
-    select(Jahr, Münzzeichen, Beschreibung, ID)
-  
-  # Variation Standard
-  if(variation == "std") {
-  res <- cbind(paste0("<b>", pull(tmp, Jahr), "</b>"),
-               pull(tmp, Beschreibung), 
-               pull(tmp, Münzzeichen),
-               pull(tmp, ID)) |>  
-    matrix(ncol = 4, dimnames = list(NULL, c("Jahr", "Bezeichnung", "Mzz", " ")))
-  }
-  
-  # Variation Deutschland
-  if(variation == "de") {
-  res <-     cbind(paste0("<b>", tmp |> filter(Münzzeichen == "A") |> pull(Jahr), "</b>"),
-                   tmp |> filter(Münzzeichen == "A") |> pull(Beschreibung),
-                   matrix(tmp |> pull(ID), ncol = 5, byrow = TRUE)) |> 
-    matrix(ncol = 7, dimnames = list(NULL, c("Jahr", "Bezeichnung", "A (Berlin)", "D (München)", "F (Stuttgart)", "G (Karlsruhe)", "J (Hamburg)")))  
-  }
-
-  return(res)
 }
 
 
@@ -200,42 +238,43 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                             tableOutput(outputId = "debl1_tab"),
                                                             h2("Bundesländerserie II (2023-2038)"),
                                                             tableOutput(outputId = "debl2_tab")
-                                                          )
-                                                 ),
+                                                            )
+                                                          ),
                                                  tabPanel("ES",
                                                           fluidPage(
                                                             h1("Spanien"),
                                                             h2("UNESCO-Welterbestätten"),
                                                             tableOutput(outputId = "esun_tab")
-                                                          )
-                                                 ),
+                                                            )
+                                                          ),
                                                  tabPanel("FR",
                                                           fluidPage(
                                                             h1("Frankreich"),
                                                             h2("Olympische Sommerspiele 2024"),
                                                             tableOutput(outputId = "fros_tab")
-                                                          )
-                                                 ),tabPanel("LT",
+                                                            )
+                                                          ),
+                                                 tabPanel("LT",
                                                           fluidPage(
                                                             h1("Litauen"),
                                                             h2("Ethnographische Regionen"),
                                                             tableOutput(outputId = "lter_tab")
-                                                          )
-                                                 ),
+                                                            )
+                                                          ),
                                                  tabPanel("LU",
                                                           fluidPage(
                                                             h1("Luxemburg"),
                                                             h2("Dynastieserie"),
                                                             tableOutput(outputId = "ludy_tab")
-                                                          )
-                                                 ),
+                                                            )
+                                                          ),
                                                  tabPanel("LV",
                                                           fluidPage(
                                                             h1("Lettland"),
                                                             h2("Historische Regionen"),
                                                             tableOutput(outputId = "lvhr_tab")
-                                                          )
-                                                 ),
+                                                            )
+                                                          ),
                                                  tabPanel("MT",
                                                           fluidPage(
                                                             h1("Malta"),
@@ -245,9 +284,43 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                             tableOutput(outputId = "mtps_tab"),
                                                             h2("Von Kindern mit Solidarität"),
                                                             tableOutput(outputId = "mtks_tab")
-                                                          )
-                                                 )#,
+                                                            )
+                                                          )#,
                                                  #tabPanel("...")
+                                     )
+                            ),
+                            tabPanel("Gemeinschaftsausgaben",
+                                     tabsetPanel(id = "Gemeinschaftsausgaben",
+                                                 tabPanel("Vertrag v. Rom",
+                                                          fluidPage(
+                                                            h2("50. Jahrestag der Unterzeichnung des Vertrags von Rom - 2007"),
+                                                            tableOutput(outputId = "vvr_tab")
+                                                            )
+                                                          ),
+                                                 tabPanel("WWU",
+                                                          fluidPage(
+                                                            h2("Zehnjähriges Bestehen der Wirtschafts- und Währungsunion (WWU) - 2009"),
+                                                            tableOutput(outputId = "wwu_tab")
+                                                            )
+                                                          ),
+                                                 tabPanel("Euro-Einführung",
+                                                          fluidPage(
+                                                            h2("10. Jahrestag der Einführung des Euro-Bargelds - 2012"),
+                                                            tableOutput(outputId = "eur_tab")
+                                                            )
+                                                          ),
+                                                 tabPanel("EU-Flagge",
+                                                          fluidPage(
+                                                            h2("Dreißigjähriges Bestehen der EU-Flagge - 2015"),
+                                                            tableOutput(outputId = "euf_tab")
+                                                            )
+                                                          ),
+                                                 tabPanel("Erasmus-Programm",
+                                                          fluidPage(
+                                                            h2("35-jähriges Bestehen des Erasmus-Programms - 2022"),
+                                                            tableOutput(outputId = "era_tab")
+                                                            )
+                                                          )
                                      )
                             )#,
                             #tabPanel("Test",
@@ -304,41 +377,17 @@ server <- function(input, output, session) {
   ## Ausgabe Gedenkmünzen ----
   output$suche_g <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_g()}, sanitize.text.function = function(x) x)
   tbl_g <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    coins %>%
-      left_join(collection %>% 
-                  select(ID, Qualität, Ablage),
-                by = "ID") %>%
-      filter((!is.na(Ablage) | !input$sammlung), Münzart == "Gedenkmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) %>% 
-      arrange(ID) %>%
-      mutate(Amtsblatt = paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:", Amtsblatt, "', target = '_blank'>", Amtsblatt, "</a>"),
-             # Land = paste0("<img src='https://www.crwflags.com/fotw/images/", tolower(substr(Land, 1, 1)), "/", tolower(Land), ".gif', height='14', alt='", Land, "'/>"),
-             Land = form_land(Land),
-             ID = paste0("<div class='mono'>", ID, "</div>"),
-             Qualität = form_quali(Qualität),
-             Ablage = paste0("<div class='mono'>", replace_na(Ablage, " "), "</div>")) %>% 
-      rename(Jahr = Prägejahr,
-             Mzz = Münzzeichen,
-             'Münz ID' = ID) %>% 
-      select(-Ausgabe, -Münzart)
+    he <- exp_data() |> 
+      filter((!is.na(Ablage) | !input$sammlung), Münzart == "Gedenkmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) |>
+      displ_data(variation = "ident")
+    
   })
   ## Ausgabe Umlaufmünzen ----
   output$suche_u <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_u()}, sanitize.text.function = function(x) x)
   tbl_u <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    coins %>%
-      left_join(collection %>% 
-                  select(ID, Qualität, Ablage),
-                by = "ID") %>%
-      filter((!is.na(Ablage) | !input$sammlung), Münzart == "Umlaufmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) %>% 
-      arrange(ID) %>%
-      mutate(Amtsblatt = paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:", Amtsblatt, "', target = '_blank'>", Amtsblatt, "</a>"),
-             Land = form_land(Land),
-             ID = paste0("<div class='mono'>", ID, "</div>"),
-             Qualität = form_quali(Qualität),
-             Ablage = paste0("<div class='mono'>", replace_na(Ablage, " "), "</div>")) %>% 
-      rename(Jahr = Prägejahr,
-             Mzz = Münzzeichen,
-             'Münz ID' = ID) %>% 
-      select(-Ausgabe, -Münzart)
+    he <- exp_data() |>
+      filter((!is.na(Ablage) | !input$sammlung), Münzart == "Umlaufmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) |>
+      displ_data(variation = "ident")
   })
   
   ## Ausgabe Zusammenfassung Jahr ----
@@ -434,34 +483,38 @@ server <- function(input, output, session) {
                      'C2018/466/08', '<b>Sitz des Bundesrates</b><br>(Preußisches Herrenhaus, Sitz des Bundesrates)',
                      'C2020/049/11', '<b>Brandenburg</b><br>(Schloss Sanssouci)',
                      'C2021/020/04', '<b>Sachsen-Anhalt</b><br>(Magdeburger Dom)',
-                     NA, '<b>Thüringen</b><br>(Wartburg)')
-
-    displ_serie(debl1, "de")
+                     NA, '<b>Thüringen</b><br>(Wartburg)') |>
+      left_join(exp_data(), by = "Amtsblatt") |> 
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(debl1, "serde")
     }, ignoreNULL = FALSE)
   
   ### Deutschland - Bundesländerserie II ----
   # output$debl2_tab <- renderTable({debl2_tab()}, bordered = T, spacing = "l", align = "clccccc", rownames = FALSE, sanitize.text.function = function(x) x)
   # debl2_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    # debl2 <- tribble(~Amtsblatt, ~Beschreibung,
-    #                  NA, '<b>Hamburg</b><br>(Elbphilharmonie)',
-    #                  NA, '<b>Mecklenburg-Vorpommern</b><br>(Königsstuhl)',
-    #                  NA, '<b>Saarland</b><br>(Saarschleife)',
-    #                  NA, '<b>Unbekannt</b><br>()',
-    #                  NA, '<b>Unbekannt</b><br>()',
-    #                  NA, '<b>Unbekannt</b><br>()',
-    #                  NA, '<b>Unbekannt</b><br>()',
-    #                  NA, '<b>Unbekannt</b><br>()',
-    #                  NA, '<b>Unbekannt</b><br>()',
-    #                  NA, '<b>Unbekannt</b><br>()',
-    #                  NA, '<b>Unbekannt</b><br>()',
-    #                  NA, '<b>Unbekannt</b><br>()',
-    #                  NA, '<b>Unbekannt</b><br>()',
-    #                  NA, '<b>Unbekannt</b><br>()',
-    #                  NA, '<b>Unbekannt</b><br>()',
-    #                  NA, '<b>Unbekannt</b><br>()')
-  #   
-  #   displ_serie(debl1, "de")
-  #   }, ignoreNULL = FALSE)
+  # debl2 <- tribble(~Amtsblatt, ~Beschreibung,
+  #                  NA, '<b>Hamburg</b><br>(Elbphilharmonie)',
+  #                  NA, '<b>Mecklenburg-Vorpommern</b><br>(Königsstuhl)',
+  #                  NA, '<b>Saarland</b><br>(Saarschleife)',
+  #                  NA, '<b>Unbekannt</b><br>()',
+  #                  NA, '<b>Unbekannt</b><br>()',
+  #                  NA, '<b>Unbekannt</b><br>()',
+  #                  NA, '<b>Unbekannt</b><br>()',
+  #                  NA, '<b>Unbekannt</b><br>()',
+  #                  NA, '<b>Unbekannt</b><br>()',
+  #                  NA, '<b>Unbekannt</b><br>()',
+  #                  NA, '<b>Unbekannt</b><br>()',
+  #                  NA, '<b>Unbekannt</b><br>()',
+  #                  NA, '<b>Unbekannt</b><br>()',
+  #                  NA, '<b>Unbekannt</b><br>()',
+  #                  NA, '<b>Unbekannt</b><br>()',
+  #                  NA, '<b>Unbekannt</b><br>()') |>
+  #   left_join(exp_data(), by = "Amtsblatt") |> 
+  #   filter(!is.na(Amtsblatt))
+  # 
+  # displ_data(debl2, "serde")
+  # }, ignoreNULL = FALSE)
 
     ### Frankreich - Olympische Sommerspiele 2024 ----
   output$fros_tab <- renderTable({fros_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
@@ -470,9 +523,11 @@ server <- function(input, output, session) {
                     'C2021/470/07', '<b>Die sprintende Marianne</b>',
                     NA, '<b>Der Genius und das Diskuswerfen - Arc de Triomphe</b>',
                     NA, '<b>Die Säerin und der Faustkampf – Pont Neuf</b>',
-                    NA, '<b>Herkules und der Ringkampf</b>')
-
-    displ_serie(fros, "std")
+                    NA, '<b>Herkules und der Ringkampf</b>') |>
+      left_join(exp_data(), by = "Amtsblatt") |> 
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(fros, "ser")
     }, ignoreNULL = FALSE)
   
   ### Litauen - Ethnografische Regionen ----
@@ -483,9 +538,11 @@ server <- function(input, output, session) {
                     'C2020/053/04', '<b>Aukschtaiten</b><br>(Oberlitauen)',
                     'C2021/473/05', '<b>Dzukija</b><br>(Mittellitauen)',
                     'C2022/484/25', '<b>Suvalkija</b><br>(Sudauen)',
-                    NA, '<b>Mažoji Lietuva</b><br>(Kleinlitauen)')
-
-    displ_serie(lter, "std")
+                    NA, '<b>Mažoji Lietuva</b><br>(Kleinlitauen)') |>
+      left_join(exp_data(), by = "Amtsblatt") |> 
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(lter, "ser")
     }, ignoreNULL = FALSE)
   
   ### Luxemburg - Dynastieserie ----
@@ -521,9 +578,11 @@ server <- function(input, output, session) {
                     'C2022/145/10', '<b>50. Jahrestag der Flagge Luxemburgs</b>',
                     'C2022/484/21', '<b>10. Hochzeitstag von Erbgroßherzog Guillaume und Erbgroßherzogin Stéphanie</b>',
                     NA, '<b>175. Jahrestag der Abgeordnetenkammer und der ersten Verfassung (1848)</b>',
-                    NA, '<b>25. Jahrestag der Aufnahme von Großherzog Henri als Mitglied des Internationalen Olympischen Komitees</b>')
+                    NA, '<b>25. Jahrestag der Aufnahme von Großherzog Henri als Mitglied des Internationalen Olympischen Komitees</b>') |>
+      left_join(exp_data(), by = "Amtsblatt") |> 
+      filter(!is.na(Amtsblatt))
     
-    displ_serie(ludy, "std")
+    displ_data(ludy, "ser")
     }, ignoreNULL = FALSE)
   
   ### Lettland - Historische Regionen ----
@@ -533,9 +592,11 @@ server <- function(input, output, session) {
                     'C2016/146/07', '<b>Vidzeme</b><br>(Zentral-Livland)',
                     'C2017/066/02', '<b>Kurzemen</b><br>(Kurland)',
                     'C2017/066/03', '<b>Latgale</b><br>(Lettgallen)',
-                    'C2018/234/03', '<b>Zemgale</b><br>(Semgallen)')
-
-    displ_serie(lvhr, "std")
+                    'C2018/234/03', '<b>Zemgale</b><br>(Semgallen)') |>
+      left_join(exp_data(), by = "Amtsblatt") |> 
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(lvhr, "ser")
     }, ignoreNULL = FALSE)
   
   ### Malta - Verfassungsgeschichte ----
@@ -546,9 +607,11 @@ server <- function(input, output, session) {
                     'C2012/375/06', '<b>Mehrheitswahlrecht 1887</b>',
                     'C2013/379/09', '<b>Einrichtung der Selbstverwaltung 1921</b>',
                     'C2014/383/05', '<b>Unabhängigkeit von Großbritannien 1964</b>',
-                    'C2015/150/03', '<b>Ausrufung der Republik Malta 1974</b>')
-
-    displ_serie(mtvg, "std")
+                    'C2015/150/03', '<b>Ausrufung der Republik Malta 1974</b>') |>
+      left_join(exp_data(), by = "Amtsblatt") |> 
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(mtvg, "ser")
     }, ignoreNULL = FALSE)
   
   ### Malta - Prähistorische Stätten ----
@@ -561,9 +624,11 @@ server <- function(input, output, session) {
                     'C2019/352/15', '<b>Tempel von Ta’ Hagrat</b>',
                     'C2020/166/02', '<b>Tempel von Skorba</b>',
                     'C2021/473/08', '<b>Tempel von Tarxien</b>',
-                    'C2022/484/22', '<b>Ħal-Saflieni-Hypogäum</b>')
-
-    displ_serie(mtps, "std")
+                    'C2022/484/22', '<b>Ħal-Saflieni-Hypogäum</b>') |>
+      left_join(exp_data(), by = "Amtsblatt") |> 
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(mtps, "ser")
     }, ignoreNULL = FALSE)
   
   ### Malta - Von Kindern mit Solidarität ----
@@ -574,9 +639,11 @@ server <- function(input, output, session) {
                     'C2017/386/03', '<b>Frieden</b>',
                     'C2018/401/07', '<b>Kulturelles Erbe</b>',
                     'C2019/352/16', '<b>Natur / Umwelt</b>',
-                    'C2020/380/04', '<b>Kinderspiele</b>')
-
-    displ_serie(mtks, "std")
+                    'C2020/380/04', '<b>Kinderspiele</b>') |>
+      left_join(exp_data(), by = "Amtsblatt") |> 
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(mtks, "ser")
     }, ignoreNULL = FALSE)
   
   ### Spanien - UNESCO Welterbestätten ----
@@ -598,11 +665,85 @@ server <- function(input, output, session) {
                     'C2022/484/10', '<b>Nationalpark Garajonay auf La Gomera</b><br>(Roque de Agando mit Lorbeerwald)',
                     NA, '<b>Altstadt von Cáceres</b><br>(Plaza Mayor)',
                     NA, '<b>Kathedrale, Alcázar und Indienarchiv in Sevilla</b><br>()',
-                    NA, '<b>Altstadt von Salamanca</b><br>()')
-
-    displ_serie(esun, "std")
+                    NA, '<b>Altstadt von Salamanca</b><br>()') |>
+      left_join(exp_data(), by = "Amtsblatt") |> 
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(esun, "ser")
     }, ignoreNULL = FALSE)
   
+  ### Gemeinschaftsausgabe - Vertrag von Rom ----
+  output$vvr_tab <- renderTable({vvr_tab()}, bordered = T, spacing = "l", align = "lccc", rownames = FALSE, sanitize.text.function = function(x) x)
+  vvr_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    vvr <- tribble(~Amtsblatt, ~Beschreibung,
+                    'C2007/065/04', '...') |>
+      left_join(exp_data(), by = "Amtsblatt") |> 
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(vvr, "gem")
+  }, ignoreNULL = FALSE)
+
+  ### Gemeinschaftsausgabe - WWU ----
+  output$wwu_tab <- renderTable({wwu_tab()}, bordered = T, spacing = "l", align = "lccc", rownames = FALSE, sanitize.text.function = function(x) x)
+  wwu_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    wwu <- tribble(~Amtsblatt, ~Beschreibung,
+                   'C2008/315/04', '...') |>
+      left_join(exp_data(), by = "Amtsblatt") |> 
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(wwu, "gem")
+  }, ignoreNULL = FALSE)
+  
+  ### Gemeinschaftsausgabe - Euro-Einführung ----
+  output$eur_tab <- renderTable({eur_tab()}, bordered = T, spacing = "l", align = "lccc", rownames = FALSE, sanitize.text.function = function(x) x)
+  eur_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    eur <- tribble(~Amtsblatt, ~Beschreibung,
+                   'C2012/017/05', '...') |>
+      left_join(exp_data(), by = "Amtsblatt") |> 
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(eur, "gem")
+  }, ignoreNULL = FALSE)
+  
+  ### Gemeinschaftsausgabe - EU-Flagge ----
+  output$euf_tab <- renderTable({euf_tab()}, bordered = T, spacing = "l", align = "lccc", rownames = FALSE, sanitize.text.function = function(x) x)
+  euf_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    euf <- tribble(~Amtsblatt, ~Beschreibung,
+                   'C2015/253/07', '...',
+                   'C2015/253/08', '...',
+                   'C2015/253/09', '...',
+                   'C2015/253/10', '...',
+                   'C2015/255/03', '...',
+                   'C2015/256/06', '...',
+                   'C2015/257/04', '...',
+                   'C2015/257/05', '...',
+                   'C2015/257/06', '...',
+                   'C2015/257/07', '...',
+                   'C2015/257/08', '...',
+                   'C2015/257/09', '...',
+                   'C2015/290/04', '...',
+                   'C2015/308/04', '...',
+                   'C2015/327/05', '...',
+                   'C2015/327/06', '...',
+                   'C2015/327/07', '...',
+                   'C2015/356/05', '...',
+                   'C2015/356/07', '...') |>
+      left_join(exp_data(), by = "Amtsblatt") |> 
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(euf, "gem")
+  }, ignoreNULL = FALSE)
+
+  ### Gemeinschaftsausgabe - Erasmus-Programm ----
+  output$era_tab <- renderTable({era_tab()}, bordered = T, spacing = "l", align = "lccc", rownames = FALSE, sanitize.text.function = function(x) x)
+  era_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    era <- tribble(~Amtsblatt, ~Beschreibung,
+                   'C2022/012/03', '...') |>
+      left_join(exp_data(), by = "Amtsblatt") |> 
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(era, "gem")
+  }, ignoreNULL = FALSE)
 }
 
 

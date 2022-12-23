@@ -25,19 +25,19 @@ C2006/248/03|sm|2006|2006-10-17|g|500. Todestag von Christoph Kolumbus|
 C2006/260/06|va|2006|2006-11-9|g|500 Jahre Päpstliche Schweizergarde|
 
 C2007/053/02|lu|2007|2007-2-2|g|Großherzoglicher Palast|
-C2007/065/03|be|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
-C2007/065/03|de|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|A,D,F,G,J
-C2007/065/03|ie|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
-C2007/065/03|gr|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
-C2007/065/03|es|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
-C2007/065/03|fr|2007|2007-4-2|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
-C2007/065/03|it|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
-C2007/065/03|lu|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
-C2007/065/03|nl|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
-C2007/065/03|at|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
-C2007/065/03|pt|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
-C2007/065/03|si|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
-C2007/065/03|fi|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
+C2007/065/04|be|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
+C2007/065/04|de|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|A,D,F,G,J
+C2007/065/04|ie|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
+C2007/065/04|gr|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
+C2007/065/04|es|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
+C2007/065/04|fr|2007|2007-4-2|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
+C2007/065/04|it|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
+C2007/065/04|lu|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
+C2007/065/04|nl|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
+C2007/065/04|at|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
+C2007/065/04|pt|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
+C2007/065/04|si|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
+C2007/065/04|fi|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
 C2007/076/02|de|2007|2007-2-2|g|Mecklenburg-Vorpommern|A,D,F,G,J
 C2007/110/06|pt|2007|2007-7-2|g|Portugiesischer Vorsitz im Rat der Europäischen Union|
 C2007/172/06|mc|2007|2007-7-12|g|25. Todestag von Fürstin Gracia Patricia|
@@ -446,25 +446,25 @@ C2021/480/08|va|2021|2021-6-25|g|450. Geburtstag von Caravaggio|
 C2021/482/02|sm|2021|2021-8-27|g|550. Geburtstag von Albrecht Dürer|
 C2021/482/03|sm|2021|2021-3-1|g|450. Geburtstag von Caravaggio|
 
-C2022/12/03|be|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/12/03|de|2022|2022-7-1|g|35 Jahre Erasmus-Programm|A,D,F,G,J
-C2022/12/03|ee|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/12/03|fi|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/12/03|gr|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/12/03|ir|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/12/03|it|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/12/03|lv|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/12/03|lt|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/12/03|lu|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/12/03|nl|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/12/03|at|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/12/03|pt|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/12/03|sk|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/12/03|si|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/12/03|es|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/12/03|cy|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/12/03|fr|2022|2022-7-6|g|35 Jahre Erasmus-Programm|
-C2022/12/03|mt|2022|2022-11-17|g|35 Jahre Erasmus-Programm|
+C2022/012/03|be|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|de|2022|2022-7-1|g|35 Jahre Erasmus-Programm|A,D,F,G,J
+C2022/012/03|ee|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|fi|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|gr|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|ir|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|it|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|lv|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|lt|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|lu|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|nl|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|at|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|pt|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|sk|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|si|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|es|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|cy|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|fr|2022|2022-7-6|g|35 Jahre Erasmus-Programm|
+C2022/012/03|mt|2022|2022-11-17|g|35 Jahre Erasmus-Programm|
 C2022/100/04|fr|2022|2022-1-25|g|90. Jahrestag der Geburt des ehemaligen Staatspräsidenten Jacques Chirac|
 C2022/145/06|it|2022|2022-4-6|g|170. Jahrestag der Gründung der Italienischen Nationalpolizei|
 C2022/145/07|si|2022|2022-3-2|g|150. Geburtstag des Architekten Jože Plečnik|
@@ -510,34 +510,34 @@ C2014/062/07|ad|2020|NA|u|Staatswappen von Andorra (2014 -)|
 C2014/062/07|ad|2021|NA|u|Staatswappen von Andorra (2014 -)|
 C2014/062/07|ad|2022|NA|u|Staatswappen von Andorra (2014 -)|
 
-C2001/373/01|at|2002|NA|u|Bertha Freifrau von Suttner (2002 -)|
-C2001/373/01|at|2003|NA|u|Bertha Freifrau von Suttner (2002 -)|
-C2001/373/01|at|2004|NA|u|Bertha Freifrau von Suttner (2002 -)|
-C2001/373/01|at|2006|NA|u|Bertha Freifrau von Suttner (2002 -)|
-C2001/373/01|at|2008|NA|u|Bertha Freifrau von Suttner (2002 -)|
-C2001/373/01|at|2010|NA|u|Bertha Freifrau von Suttner (2002 -)|
-C2001/373/01|at|2011|NA|u|Bertha Freifrau von Suttner (2002 -)|
-C2001/373/01|at|2012|NA|u|Bertha Freifrau von Suttner (2002 -)|
-C2001/373/01|at|2013|NA|u|Bertha Freifrau von Suttner (2002 -)|
-C2001/373/01|at|2014|NA|u|Bertha Freifrau von Suttner (2002 -)|
-C2001/373/01|at|2015|NA|u|Bertha Freifrau von Suttner (2002 -)|
-C2001/373/01|at|2017|NA|u|Bertha Freifrau von Suttner (2002 -)|
-C2001/373/01|at|2019|NA|u|Bertha Freifrau von Suttner (2002 -)|
-C2001/373/01|at|2020|NA|u|Bertha Freifrau von Suttner (2002 -)|
-C2001/373/01|at|2021|NA|u|Bertha Freifrau von Suttner (2002 -)|
-C2001/373/01|at|2022|NA|u|Bertha Freifrau von Suttner (2002 -)|
-C2001/373/01|at|2023|NA|u|Bertha Freifrau von Suttner (2002 -)|
-C2001/373/01|at|2024|NA|u|Bertha Freifrau von Suttner (2002 -)|
+52001XC1228(04)|at|2002|NA|u|Bertha Freifrau von Suttner (2002 -)|
+52001XC1228(04)|at|2003|NA|u|Bertha Freifrau von Suttner (2002 -)|
+52001XC1228(04)|at|2004|NA|u|Bertha Freifrau von Suttner (2002 -)|
+52001XC1228(04)|at|2006|NA|u|Bertha Freifrau von Suttner (2002 -)|
+52001XC1228(04)|at|2008|NA|u|Bertha Freifrau von Suttner (2002 -)|
+52001XC1228(04)|at|2010|NA|u|Bertha Freifrau von Suttner (2002 -)|
+52001XC1228(04)|at|2011|NA|u|Bertha Freifrau von Suttner (2002 -)|
+52001XC1228(04)|at|2012|NA|u|Bertha Freifrau von Suttner (2002 -)|
+52001XC1228(04)|at|2013|NA|u|Bertha Freifrau von Suttner (2002 -)|
+52001XC1228(04)|at|2014|NA|u|Bertha Freifrau von Suttner (2002 -)|
+52001XC1228(04)|at|2015|NA|u|Bertha Freifrau von Suttner (2002 -)|
+52001XC1228(04)|at|2017|NA|u|Bertha Freifrau von Suttner (2002 -)|
+52001XC1228(04)|at|2019|NA|u|Bertha Freifrau von Suttner (2002 -)|
+52001XC1228(04)|at|2020|NA|u|Bertha Freifrau von Suttner (2002 -)|
+52001XC1228(04)|at|2021|NA|u|Bertha Freifrau von Suttner (2002 -)|
+52001XC1228(04)|at|2022|NA|u|Bertha Freifrau von Suttner (2002 -)|
+52001XC1228(04)|at|2023|NA|u|Bertha Freifrau von Suttner (2002 -)|
+52001XC1228(04)|at|2024|NA|u|Bertha Freifrau von Suttner (2002 -)|
 
-C2001/373/01|be|1999|NA|u|König Albert II. (1999 - 2007)|
-C2001/373/01|be|2000|NA|u|König Albert II. (1999 - 2007)|
-C2001/373/01|be|2001|NA|u|König Albert II. (1999 - 2007)|
-C2001/373/01|be|2002|NA|u|König Albert II. (1999 - 2007)|
-C2001/373/01|be|2003|NA|u|König Albert II. (1999 - 2007)|
-C2001/373/01|be|2004|NA|u|König Albert II. (1999 - 2007)|
-C2001/373/01|be|2005|NA|u|König Albert II. (1999 - 2007)|
-C2001/373/01|be|2006|NA|u|König Albert II. (1999 - 2007)|
-C2001/373/01|be|2007|NA|u|König Albert II. (1999 - 2007)|
+52001XC1228(04)|be|1999|NA|u|König Albert II. (1999 - 2007)|
+52001XC1228(04)|be|2000|NA|u|König Albert II. (1999 - 2007)|
+52001XC1228(04)|be|2001|NA|u|König Albert II. (1999 - 2007)|
+52001XC1228(04)|be|2002|NA|u|König Albert II. (1999 - 2007)|
+52001XC1228(04)|be|2003|NA|u|König Albert II. (1999 - 2007)|
+52001XC1228(04)|be|2004|NA|u|König Albert II. (1999 - 2007)|
+52001XC1228(04)|be|2005|NA|u|König Albert II. (1999 - 2007)|
+52001XC1228(04)|be|2006|NA|u|König Albert II. (1999 - 2007)|
+52001XC1228(04)|be|2007|NA|u|König Albert II. (1999 - 2007)|
 C2007/302/08|be|2008|NA|u|König Albert II. (2008)|
 C2007/302/08|be|2009|NA|u|König Albert II. (2009 - 2013)|
 C2007/302/08|be|2010|NA|u|König Albert II. (2009 - 2013)|
@@ -572,37 +572,37 @@ C2007/248/07|cy|2022|NA|u|Idol von Pomos (2008 -)|
 C2007/248/07|cy|2023|NA|u|Idol von Pomos (2008 -)|
 C2007/248/07|cy|2024|NA|u|Idol von Pomos (2008 -)|
 
-C2001/373/01|de|2002|NA|u|Bundesadler (2002 -)|A,D,F,G,J
-C2001/373/01|de|2003|NA|u|Bundesadler (2002 -)|A,D,F,G,J
-C2001/373/01|de|2004|NA|u|Bundesadler (2002 -)|A,D,F,G,J
-C2001/373/01|de|2005|NA|u|Bundesadler (2002 -)|A,D,F,G,J
-C2001/373/01|de|2006|NA|u|Bundesadler (2002 -)|A,D,F,G,J
-C2001/373/01|de|2008|NA|u|Bundesadler (2002 -)|A,D,F,G,J
-C2001/373/01|de|2010|NA|u|Bundesadler (2002 -)|A,D,F,G,J
-C2001/373/01|de|2011|NA|u|Bundesadler (2002 -)|A,D,F,G,J
-C2001/373/01|de|2014|NA|u|Bundesadler (2002 -)|A,D,F,G,J
-C2001/373/01|de|2016|NA|u|Bundesadler (2002 -)|A,D,F,G,J
-C2001/373/01|de|2017|NA|u|Bundesadler (2002 -)|A,D,F,G,J
-C2001/373/01|de|2019|NA|u|Bundesadler (2002 -)|A,D,F,G,J
-C2001/373/01|de|2020|NA|u|Bundesadler (2002 -)|A,D,F,G,J
-C2001/373/01|de|2021|NA|u|Bundesadler (2002 -)|A,D,F,G,J
-C2001/373/01|de|2022|NA|u|Bundesadler (2002 -)|A,D,F,G,J
+52001XC1228(04)|de|2002|NA|u|Bundesadler (2002 -)|A,D,F,G,J
+52001XC1228(04)|de|2003|NA|u|Bundesadler (2002 -)|A,D,F,G,J
+52001XC1228(04)|de|2004|NA|u|Bundesadler (2002 -)|A,D,F,G,J
+52001XC1228(04)|de|2005|NA|u|Bundesadler (2002 -)|A,D,F,G,J
+52001XC1228(04)|de|2006|NA|u|Bundesadler (2002 -)|A,D,F,G,J
+52001XC1228(04)|de|2008|NA|u|Bundesadler (2002 -)|A,D,F,G,J
+52001XC1228(04)|de|2010|NA|u|Bundesadler (2002 -)|A,D,F,G,J
+52001XC1228(04)|de|2011|NA|u|Bundesadler (2002 -)|A,D,F,G,J
+52001XC1228(04)|de|2014|NA|u|Bundesadler (2002 -)|A,D,F,G,J
+52001XC1228(04)|de|2016|NA|u|Bundesadler (2002 -)|A,D,F,G,J
+52001XC1228(04)|de|2017|NA|u|Bundesadler (2002 -)|A,D,F,G,J
+52001XC1228(04)|de|2019|NA|u|Bundesadler (2002 -)|A,D,F,G,J
+52001XC1228(04)|de|2020|NA|u|Bundesadler (2002 -)|A,D,F,G,J
+52001XC1228(04)|de|2021|NA|u|Bundesadler (2002 -)|A,D,F,G,J
+52001XC1228(04)|de|2022|NA|u|Bundesadler (2002 -)|A,D,F,G,J
 
 C2010/309/04|ee|2011|NA|u|Landesumriss (2011 -)|
 C2010/309/04|ee|2016|NA|u|Landesumriss (2011 -)|
 C2010/309/04|ee|2018|NA|u|Landesumriss (2011 -)|
 
-C2001/373/01|es|1999|NA|u|König Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2000|NA|u|König Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2001|NA|u|König Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2002|NA|u|König Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2003|NA|u|König Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2004|NA|u|König Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2005|NA|u|König Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2006|NA|u|König Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2007|NA|u|König Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2008|NA|u|König Juan Carlos I. (1999 - 2009)|
-C2001/373/01|es|2009|NA|u|König Juan Carlos I. (1999 - 2009)|
+52001XC1228(04)|es|1999|NA|u|König Juan Carlos I. (1999 - 2009)|
+52001XC1228(04)|es|2000|NA|u|König Juan Carlos I. (1999 - 2009)|
+52001XC1228(04)|es|2001|NA|u|König Juan Carlos I. (1999 - 2009)|
+52001XC1228(04)|es|2002|NA|u|König Juan Carlos I. (1999 - 2009)|
+52001XC1228(04)|es|2003|NA|u|König Juan Carlos I. (1999 - 2009)|
+52001XC1228(04)|es|2004|NA|u|König Juan Carlos I. (1999 - 2009)|
+52001XC1228(04)|es|2005|NA|u|König Juan Carlos I. (1999 - 2009)|
+52001XC1228(04)|es|2006|NA|u|König Juan Carlos I. (1999 - 2009)|
+52001XC1228(04)|es|2007|NA|u|König Juan Carlos I. (1999 - 2009)|
+52001XC1228(04)|es|2008|NA|u|König Juan Carlos I. (1999 - 2009)|
+52001XC1228(04)|es|2009|NA|u|König Juan Carlos I. (1999 - 2009)|
 C2009/300/02|es|2010|NA|u|König Juan Carlos I. (2010 - 2014)|
 C2009/300/02|es|2011|NA|u|König Juan Carlos I. (2010 - 2014)|
 C2009/300/02|es|2012|NA|u|König Juan Carlos I. (2010 - 2014)|
@@ -616,123 +616,123 @@ C2014/410/06|es|2019|NA|u|König Felipe VI. (2015 -)|
 C2014/410/06|es|2020|NA|u|König Felipe VI. (2015 -)|
 C2014/410/06|es|2021|NA|u|König Felipe VI. (2015 -)|
 
-C2001/373/01|fi|1999|NA|u|Moltebeere (1999 -2006)|
-C2001/373/01|fi|2000|NA|u|Moltebeere (1999 -2006)|
-C2001/373/01|fi|2001|NA|u|Moltebeere (1999 -2006)|
-C2001/373/01|fi|2002|NA|u|Moltebeere (1999 -2006)|
-C2001/373/01|fi|2003|NA|u|Moltebeere (1999 -2006)|
-C2001/373/01|fi|2004|NA|u|Moltebeere (1999 -2006)|
-C2001/373/01|fi|2005|NA|u|Moltebeere (1999 -2006)|
-C2001/373/01|fi|2006|NA|u|Moltebeere (1999 -2006)|
-C2001/373/01|fi|2007|NA|u|Moltebeere (2007 -)|
-C2001/373/01|fi|2008|NA|u|Moltebeere (2007 -)|
-C2001/373/01|fi|2009|NA|u|Moltebeere (2007 -)|
-C2001/373/01|fi|2010|NA|u|Moltebeere (2007 -)|
-C2001/373/01|fi|2011|NA|u|Moltebeere (2007 -)|
-C2001/373/01|fi|2012|NA|u|Moltebeere (2007 -)|
-C2001/373/01|fi|2013|NA|u|Moltebeere (2007 -)|
-C2001/373/01|fi|2014|NA|u|Moltebeere (2007 -)|
-C2001/373/01|fi|2015|NA|u|Moltebeere (2007 -)|
-C2001/373/01|fi|2016|NA|u|Moltebeere (2007 -)|
-C2001/373/01|fi|2017|NA|u|Moltebeere (2007 -)|
-C2001/373/01|fi|2018|NA|u|Moltebeere (2007 -)|
-C2001/373/01|fi|2019|NA|u|Moltebeere (2007 -)|
-C2001/373/01|fi|2020|NA|u|Moltebeere (2007 -)|
-C2001/373/01|fi|2021|NA|u|Moltebeere (2007 -)|
-C2001/373/01|fi|2022|NA|u|Moltebeere (2007 -)|
+52001XC1228(04)|fi|1999|NA|u|Moltebeere (1999 -2006)|
+52001XC1228(04)|fi|2000|NA|u|Moltebeere (1999 -2006)|
+52001XC1228(04)|fi|2001|NA|u|Moltebeere (1999 -2006)|
+52001XC1228(04)|fi|2002|NA|u|Moltebeere (1999 -2006)|
+52001XC1228(04)|fi|2003|NA|u|Moltebeere (1999 -2006)|
+52001XC1228(04)|fi|2004|NA|u|Moltebeere (1999 -2006)|
+52001XC1228(04)|fi|2005|NA|u|Moltebeere (1999 -2006)|
+52001XC1228(04)|fi|2006|NA|u|Moltebeere (1999 -2006)|
+52001XC1228(04)|fi|2007|NA|u|Moltebeere (2007 -)|
+52001XC1228(04)|fi|2008|NA|u|Moltebeere (2007 -)|
+52001XC1228(04)|fi|2009|NA|u|Moltebeere (2007 -)|
+52001XC1228(04)|fi|2010|NA|u|Moltebeere (2007 -)|
+52001XC1228(04)|fi|2011|NA|u|Moltebeere (2007 -)|
+52001XC1228(04)|fi|2012|NA|u|Moltebeere (2007 -)|
+52001XC1228(04)|fi|2013|NA|u|Moltebeere (2007 -)|
+52001XC1228(04)|fi|2014|NA|u|Moltebeere (2007 -)|
+52001XC1228(04)|fi|2015|NA|u|Moltebeere (2007 -)|
+52001XC1228(04)|fi|2016|NA|u|Moltebeere (2007 -)|
+52001XC1228(04)|fi|2017|NA|u|Moltebeere (2007 -)|
+52001XC1228(04)|fi|2018|NA|u|Moltebeere (2007 -)|
+52001XC1228(04)|fi|2019|NA|u|Moltebeere (2007 -)|
+52001XC1228(04)|fi|2020|NA|u|Moltebeere (2007 -)|
+52001XC1228(04)|fi|2021|NA|u|Moltebeere (2007 -)|
+52001XC1228(04)|fi|2022|NA|u|Moltebeere (2007 -)|
 
-C2001/373/01|fr|1999|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2000|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2001|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2002|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2003|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2004|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2005|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2006|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2007|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2008|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2009|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2010|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2011|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2012|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2013|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2014|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2015|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2016|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2017|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2018|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2019|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2020|NA|u|Stilisierter Baum (1999 - 2021)|
-C2001/373/01|fr|2021|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|1999|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2000|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2001|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2002|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2003|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2004|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2005|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2006|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2007|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2008|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2009|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2010|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2011|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2012|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2013|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2014|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2015|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2016|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2017|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2018|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2019|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2020|NA|u|Stilisierter Baum (1999 - 2021)|
+52001XC1228(04)|fr|2021|NA|u|Stilisierter Baum (1999 - 2021)|
 C2021/507/05|fr|2022|NA|u|Stilisierter Baum – moderne Fassung (2022 -)|
 
-C2001/373/01|gr|2002|NA|u|Entführung der Europa durch Zeus (2002 -)|,S
-C2001/373/01|gr|2003|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2004|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2005|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2006|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2007|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2008|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2009|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2010|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2011|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2012|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2013|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2014|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2015|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2016|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2017|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2018|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2019|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2020|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2021|NA|u|Entführung der Europa durch Zeus (2002 -)|
-C2001/373/01|gr|2022|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2002|NA|u|Entführung der Europa durch Zeus (2002 -)|,S
+52001XC1228(04)|gr|2003|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2004|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2005|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2006|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2007|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2008|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2009|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2010|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2011|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2012|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2013|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2014|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2015|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2016|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2017|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2018|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2019|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2020|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2021|NA|u|Entführung der Europa durch Zeus (2002 -)|
+52001XC1228(04)|gr|2022|NA|u|Entführung der Europa durch Zeus (2002 -)|
 
 C2022/364/03|hr|2023|NA|u|Geografische Landkarte Kroatiens (2023 -)|
 
-C2001/373/01|ie|2002|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2003|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2004|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2005|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2006|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2007|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2008|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2009|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2010|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2011|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2012|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2013|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2014|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2015|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2016|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2017|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2018|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2019|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2020|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2021|NA|u|Keltische Harfe (2002 -)|
-C2001/373/01|ie|2022|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2002|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2003|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2004|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2005|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2006|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2007|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2008|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2009|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2010|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2011|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2012|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2013|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2014|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2015|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2016|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2017|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2018|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2019|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2020|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2021|NA|u|Keltische Harfe (2002 -)|
+52001XC1228(04)|ie|2022|NA|u|Keltische Harfe (2002 -)|
 
-C2001/373/01|it|2002|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2003|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2004|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2005|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2006|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2007|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2008|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2009|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2010|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2011|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2012|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2013|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2014|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2015|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2016|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2017|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2018|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2019|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2020|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2021|NA|u|Dante Alighieri (2002 -)|
-C2001/373/01|it|2022|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2002|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2003|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2004|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2005|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2006|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2007|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2008|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2009|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2010|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2011|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2012|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2013|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2014|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2015|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2016|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2017|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2018|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2019|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2020|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2021|NA|u|Dante Alighieri (2002 -)|
+52001XC1228(04)|it|2022|NA|u|Dante Alighieri (2002 -)|
 
 C2014/385/05|lt|2015|NA|u|Vytis (2015 -)|
 C2014/385/05|lt|2017|NA|u|Vytis (2015 -)|
@@ -742,26 +742,26 @@ C2014/385/05|lt|2020|NA|u|Vytis (2015 -)|
 C2014/385/05|lt|2021|NA|u|Vytis (2015 -)|
 C2014/385/05|lt|2022|NA|u|Vytis (2015 -)|
 
-C2001/373/01|lu|2002|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2003|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2004|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2005|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2006|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2007|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2008|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2010|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2011|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2012|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2013|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2014|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2015|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2016|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2017|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2018|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2019|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2020|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2021|NA|u|Großherzog Henri (2002 -)|
-C2001/373/01|lu|2022|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2002|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2003|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2004|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2005|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2006|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2007|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2008|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2010|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2011|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2012|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2013|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2014|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2015|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2016|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2017|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2018|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2019|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2020|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2021|NA|u|Großherzog Henri (2002 -)|
+52001XC1228(04)|lu|2022|NA|u|Großherzog Henri (2002 -)|
 
 C2013/309/03|lv|2014|NA|u|Trachtenmädchen (2014 - )|
 C2013/309/03|lv|2015|NA|u|Trachtenmädchen (2014 - )|
@@ -772,10 +772,10 @@ C2013/309/03|lv|2020|NA|u|Trachtenmädchen (2014 - )|
 C2013/309/03|lv|2021|NA|u|Trachtenmädchen (2014 - )|
 C2013/309/03|lv|2022|NA|u|Trachtenmädchen (2014 - )|
 
-C2001/373/01|mc|2001|NA|u|Fürst Rainier III. (2001 - 2004)|
-C2001/373/01|mc|2002|NA|u|Fürst Rainier III. (2001 - 2004)|
-C2001/373/01|mc|2003|NA|u|Fürst Rainier III. (2001 - 2004)|
-C2001/373/01|mc|2004|NA|u|Fürst Rainier III. (2001 - 2004)|
+52001XC1228(04)|mc|2001|NA|u|Fürst Rainier III. (2001 - 2004)|
+52001XC1228(04)|mc|2002|NA|u|Fürst Rainier III. (2001 - 2004)|
+52001XC1228(04)|mc|2003|NA|u|Fürst Rainier III. (2001 - 2004)|
+52001XC1228(04)|mc|2004|NA|u|Fürst Rainier III. (2001 - 2004)|
 C2006/316/09|mc|2006|NA|u|Fürst Albert II. (2006 -)|
 C2006/316/09|mc|2009|NA|u|Fürst Albert II. (2006 -)|
 C2006/316/09|mc|2010|NA|u|Fürst Albert II. (2006 -)|
@@ -806,21 +806,21 @@ C2007/248/08|mt|2019|NA|u|Malteserkreuz (2008 -)|
 C2007/248/08|mt|2020|NA|u|Malteserkreuz (2008 -)|
 C2007/248/08|mt|2021|NA|u|Malteserkreuz (2008 -)|
 
-C2001/373/01|nl|1999|NA|u|Königin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2000|NA|u|Königin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2001|NA|u|Königin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2002|NA|u|Königin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2003|NA|u|Königin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2004|NA|u|Königin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2005|NA|u|Königin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2006|NA|u|Königin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2007|NA|u|Königin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2008|NA|u|Königin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2009|NA|u|Königin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2010|NA|u|Königin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2011|NA|u|Königin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2012|NA|u|Königin Beatrix (1999 - 2013)|
-C2001/373/01|nl|2013|NA|u|Königin Beatrix (1999 - 2013)|
+52001XC1228(04)|nl|1999|NA|u|Königin Beatrix (1999 - 2013)|
+52001XC1228(04)|nl|2000|NA|u|Königin Beatrix (1999 - 2013)|
+52001XC1228(04)|nl|2001|NA|u|Königin Beatrix (1999 - 2013)|
+52001XC1228(04)|nl|2002|NA|u|Königin Beatrix (1999 - 2013)|
+52001XC1228(04)|nl|2003|NA|u|Königin Beatrix (1999 - 2013)|
+52001XC1228(04)|nl|2004|NA|u|Königin Beatrix (1999 - 2013)|
+52001XC1228(04)|nl|2005|NA|u|Königin Beatrix (1999 - 2013)|
+52001XC1228(04)|nl|2006|NA|u|Königin Beatrix (1999 - 2013)|
+52001XC1228(04)|nl|2007|NA|u|Königin Beatrix (1999 - 2013)|
+52001XC1228(04)|nl|2008|NA|u|Königin Beatrix (1999 - 2013)|
+52001XC1228(04)|nl|2009|NA|u|Königin Beatrix (1999 - 2013)|
+52001XC1228(04)|nl|2010|NA|u|Königin Beatrix (1999 - 2013)|
+52001XC1228(04)|nl|2011|NA|u|Königin Beatrix (1999 - 2013)|
+52001XC1228(04)|nl|2012|NA|u|Königin Beatrix (1999 - 2013)|
+52001XC1228(04)|nl|2013|NA|u|Königin Beatrix (1999 - 2013)|
 C2014/046/08|nl|2014|NA|u|König Willem-Alexander (2014 -)|
 C2014/046/08|nl|2015|NA|u|König Willem-Alexander (2014 -)|,s
 C2014/046/08|nl|2016|NA|u|König Willem-Alexander (2014 -)|
@@ -831,27 +831,27 @@ C2014/046/08|nl|2020|NA|u|König Willem-Alexander (2014 -)|
 C2014/046/08|nl|2021|NA|u|König Willem-Alexander (2014 -)|
 C2014/046/08|nl|2022|NA|u|König Willem-Alexander (2014 -)|
 
-C2001/373/01|pt|2002|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2003|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2004|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2005|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2006|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2007|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2008|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2009|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2010|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2011|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2012|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2013|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2014|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2015|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2016|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2017|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2018|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2019|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2020|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2021|NA|u|Königliches Siegel von 1144 (2002 -)|
-C2001/373/01|pt|2022|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2002|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2003|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2004|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2005|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2006|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2007|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2008|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2009|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2010|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2011|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2012|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2013|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2014|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2015|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2016|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2017|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2018|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2019|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2020|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2021|NA|u|Königliches Siegel von 1144 (2002 -)|
+52001XC1228(04)|pt|2022|NA|u|Königliches Siegel von 1144 (2002 -)|
 
 C2006/254/04|si|2007|NA|u|France Prešeren (2007 -)|
 C2006/254/04|si|2008|NA|u|France Prešeren (2007 -)|
@@ -884,21 +884,21 @@ C2008/273/06|sk|2020|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
 C2008/273/06|sk|2021|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
 C2008/273/06|sk|2022|NA|u|Doppelkreuz auf drei Bergen (2009 -)|
 
-C2001/373/01|sm|2002|NA|u|Regierungspalast (2002 - 2016)|
-C2001/373/01|sm|2003|NA|u|Regierungspalast (2002 - 2016)|
-C2001/373/01|sm|2004|NA|u|Regierungspalast (2002 - 2016)|
-C2001/373/01|sm|2005|NA|u|Regierungspalast (2002 - 2016)|
-C2001/373/01|sm|2006|NA|u|Regierungspalast (2002 - 2016)|
-C2001/373/01|sm|2007|NA|u|Regierungspalast (2002 - 2016)|
-C2001/373/01|sm|2008|NA|u|Regierungspalast (2002 - 2016)|
-C2001/373/01|sm|2009|NA|u|Regierungspalast (2002 - 2016)|
-C2001/373/01|sm|2010|NA|u|Regierungspalast (2002 - 2016)|
-C2001/373/01|sm|2011|NA|u|Regierungspalast (2002 - 2016)|
-C2001/373/01|sm|2012|NA|u|Regierungspalast (2002 - 2016)|
-C2001/373/01|sm|2013|NA|u|Regierungspalast (2002 - 2016)|
-C2001/373/01|sm|2014|NA|u|Regierungspalast (2002 - 2016)|
-C2001/373/01|sm|2015|NA|u|Regierungspalast (2002 - 2016)|
-C2001/373/01|sm|2016|NA|u|Regierungspalast (2002 - 2016)|
+52001XC1228(04)|sm|2002|NA|u|Regierungspalast (2002 - 2016)|
+52001XC1228(04)|sm|2003|NA|u|Regierungspalast (2002 - 2016)|
+52001XC1228(04)|sm|2004|NA|u|Regierungspalast (2002 - 2016)|
+52001XC1228(04)|sm|2005|NA|u|Regierungspalast (2002 - 2016)|
+52001XC1228(04)|sm|2006|NA|u|Regierungspalast (2002 - 2016)|
+52001XC1228(04)|sm|2007|NA|u|Regierungspalast (2002 - 2016)|
+52001XC1228(04)|sm|2008|NA|u|Regierungspalast (2002 - 2016)|
+52001XC1228(04)|sm|2009|NA|u|Regierungspalast (2002 - 2016)|
+52001XC1228(04)|sm|2010|NA|u|Regierungspalast (2002 - 2016)|
+52001XC1228(04)|sm|2011|NA|u|Regierungspalast (2002 - 2016)|
+52001XC1228(04)|sm|2012|NA|u|Regierungspalast (2002 - 2016)|
+52001XC1228(04)|sm|2013|NA|u|Regierungspalast (2002 - 2016)|
+52001XC1228(04)|sm|2014|NA|u|Regierungspalast (2002 - 2016)|
+52001XC1228(04)|sm|2015|NA|u|Regierungspalast (2002 - 2016)|
+52001XC1228(04)|sm|2016|NA|u|Regierungspalast (2002 - 2016)|
 C2017/066/04|sm|2017|NA|u|Heiliger Marinus (2017 -)|
 C2017/066/04|sm|2018|NA|u|Heiliger Marinus (2017 -)|
 C2017/066/04|sm|2019|NA|u|Heiliger Marinus (2017 -)|
@@ -906,10 +906,10 @@ C2017/066/04|sm|2020|NA|u|Heiliger Marinus (2017 -)|
 C2017/066/04|sm|2021|NA|u|Heiliger Marinus (2017 -)|
 C2017/066/04|sm|2022|NA|u|Heiliger Marinus (2017 -)|
 
-C2001/373/01|va|2002|NA|u|Papst Johannes Paul II. (2002 - 2005)|
-C2001/373/01|va|2003|NA|u|Papst Johannes Paul II. (2002 - 2005)|
-C2001/373/01|va|2004|NA|u|Papst Johannes Paul II. (2002 - 2005)|
-C2001/373/01|va|2005|NA|u|Papst Johannes Paul II. (2002 - 2005)|
+52001XC1228(04)|va|2002|NA|u|Papst Johannes Paul II. (2002 - 2005)|
+52001XC1228(04)|va|2003|NA|u|Papst Johannes Paul II. (2002 - 2005)|
+52001XC1228(04)|va|2004|NA|u|Papst Johannes Paul II. (2002 - 2005)|
+52001XC1228(04)|va|2005|NA|u|Papst Johannes Paul II. (2002 - 2005)|
 C2005/308/08|va|2005|NA|u|Sedisvakanz 2005 (2005)|
 C2007/233/08|va|2006|NA|u|Papst Benedikt XVI. (2006 - 2013)|
 C2007/233/08|va|2007|NA|u|Papst Benedikt XVI. (2006 - 2013)|
