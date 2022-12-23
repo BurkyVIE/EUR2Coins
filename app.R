@@ -34,7 +34,7 @@ form_quali <- function(x) {
 
 ## Funktion zur Darstellung Land ----
 form_land <- function(txt) {
-  txt <- tolower(txt)
+  txt <- tolower(txt) # jedenfalls Kleinbuchstaben
   paste0("<img src='https://www.crwflags.com/fotw/images/", substr(txt, 1, 1), "/", txt, ".gif', height='14', alt='", toupper(txt), "'/>(", toupper(txt), ")")
 }
 
@@ -45,8 +45,8 @@ form_stat <- function(val, von, bis) {
             by = "Grp") |> 
     transmute(Erfolg = paste0(coalesce(n.y, 0L), " / ", n.x),
               vH = Erfolg |> (\(x) eval(parse(text = x)) * 100)(),
-              Graph = c(rep(HTML("&#9608;"), as.integer(vH %/% 10)), if((vH %% 10) >= 5) HTML("&#9612;")) |>  paste(collapse = "")) %>%
-    ungroup() |> 
+              Graph = c(rep(HTML("&#9608;"), as.integer(vH %/% 10)), if((vH %% 10) >= 5) HTML("&#9612;")) |>  paste(collapse = "")) |> 
+    # ungroup() |> 
     rename(!!val := Grp) |> 
     mutate(Graph = paste0("<div class='bar'>", Graph, "</div>"))
 }
