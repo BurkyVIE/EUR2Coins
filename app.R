@@ -7,8 +7,7 @@ source("eur2coins.r")
 source("eur2collection.r")
 
 ## JS Funktion um Markierung zu kopieren ----
-highlight <- '
-function getSelectionText() {
+highlight <- 'function getSelectionText() {
 var text = "";
 if (window.getSelection) {
 text = window.getSelection().toString();
@@ -21,8 +20,8 @@ return text;
 document.onmouseup = document.onkeyup = document.onselectionchange = function() {
 var selection = getSelectionText();
 Shiny.onInputChange("myselection", selection);
-};
-'
+};'
+
 ## Funktion zum Formatieren Qualität ----
 form_quali <- function(x) {
   case_when(is.na(x) ~ "",
@@ -35,7 +34,21 @@ form_quali <- function(x) {
 
 ## Funktion zur Darstellung Land ----
 form_land <- function(txt) {
-  paste0("<img src='https://www.crwflags.com/fotw/images/", tolower(substr(txt, 1, 1)), "/", tolower(txt), ".gif', height='14', alt='", toupper(txt), "'/>(", toupper(txt), ")")
+  txt <- tolower(txt)
+  paste0("<img src='https://www.crwflags.com/fotw/images/", substr(txt, 1, 1), "/", txt, ".gif', height='14', alt='", toupper(txt), "'/>(", toupper(txt), ")")
+}
+
+## Funktion zur Darstellung Statistik ----
+form_stat <- function(val, von, bis) {
+  left_join(coins |> group_by(Grp = str_sub(ID, von, bis)) |> count(),
+            collection |> group_by(Grp = str_sub(ID, von, bis)) |> count(),
+            by = "Grp") |> 
+    transmute(Erfolg = paste0(coalesce(n.y, 0L), " / ", n.x),
+              vH = Erfolg |> (\(x) eval(parse(text = x)) * 100)(),
+              Graph = c(rep(HTML("&#9608;"), as.integer(vH %/% 10)), if((vH %% 10) >= 5) HTML("&#9612;")) |>  paste(collapse = "")) %>%
+    ungroup() |> 
+    rename(!!val := Grp) |> 
+    mutate(Graph = paste0("<div class='bar'>", Graph, "</div>"))
 }
 
 ## Funktion zum Erzeugen der Serien-Darstellung ----
@@ -46,9 +59,10 @@ displ_serie <- function(df, variation) {
     mutate(Jahr = str_sub(ID, 1, 4),
            Ablage = coalesce(Ablage, ""),
            Qualität = form_quali(Qualität),
-           ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) %>% 
+           ID = paste0(Qualität, "<div class='mono'>", Ablage, "<br></div>")) |>  
     select(Jahr, Münzzeichen, Beschreibung, ID)
   
+  # Variation Standard
   if(variation == "std") {
   res <- cbind(paste0("<b>", pull(tmp, Jahr), "</b>"),
                pull(tmp, Beschreibung), 
@@ -57,6 +71,7 @@ displ_serie <- function(df, variation) {
     matrix(ncol = 4, dimnames = list(NULL, c("Jahr", "Bezeichnung", "Mzz", " ")))
   }
   
+  # Variation Deutschland
   if(variation == "de") {
   res <-     cbind(paste0("<b>", tmp |> filter(Münzzeichen == "A") |> pull(Jahr), "</b>"),
                    tmp |> filter(Münzzeichen == "A") |> pull(Beschreibung),
@@ -329,28 +344,14 @@ server <- function(input, output, session) {
   ## Ausgabe Zusammenfassung Jahr ----
   output$zsf_jahr <- renderTable(spacing = "xs", align = c("rrrl"), {zsf_tbl_jahr()}, sanitize.text.function = function(x) x)
   zsf_tbl_jahr <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    left_join(coins %>% group_by(Jahr = str_sub(ID, 1, 4)) %>% count(),
-              collection %>% group_by(Jahr = str_sub(ID, 1, 4)) %>% count(),
-              by = "Jahr") %>%
-      transmute(Erfolg = paste0(coalesce(n.y, 0L), " / ", n.x),
-                vH = Erfolg %>% parse(text = .) %>% eval() %>% "*"(100),
-                Graph = rep(HTML("&#9608;"), as.integer(vH %/% 12.5)) %>% paste(collapse = "")) %>% 
-      ungroup() %>% 
-      mutate(Graph = paste0("<div class='bar'>", Graph, "</div>"))
+    form_stat("Jahr", 1, 4)
   }, ignoreNULL = FALSE)
   
   ## Ausgabe Zusammenfassung Land ----
   output$zsf_land <- renderTable(spacing = "xs", align = c("lrrl"), {zsf_tbl_land()}, sanitize.text.function = function(x) x)
   zsf_tbl_land <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    left_join(coins %>% group_by(Land = str_sub(ID, 5, 6)) %>% count(),
-              collection %>% group_by(Land = str_sub(ID, 5, 6)) %>% count(),
-              by = "Land") %>%
-      transmute(Erfolg = paste0(coalesce(n.y, 0L), " / ", n.x),
-                vH = Erfolg %>% parse(text = .) %>% eval() %>% "*"(100),
-                Graph = rep(HTML("&#9608;"), as.integer(vH %/% 12.5)) %>% paste(collapse = "")) %>% 
-      ungroup() %>% 
-      mutate(Land = form_land(Land),
-             Graph = paste0("<div class='bar'>", Graph, "</div>"))
+    form_stat("Land", 5, 6) |> 
+      mutate(Land = form_land(Land))
   }, ignoreNULL = FALSE)
   
   ## Ausgabe Zusammenfassung Qualität ----
@@ -416,54 +417,48 @@ server <- function(input, output, session) {
   ### Deutschland - Bundesländerserie I ----
   output$debl1_tab <- renderTable({debl1_tab()}, bordered = T, spacing = "l", align = "clccccc", rownames = FALSE, sanitize.text.function = function(x) x)
   debl1_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    debl1 <- tibble(Amtsblatt = c('C2006/033/04', 'C2007/076/02', 'C2008/013/02', 'C2009/031/06', 'C2010/012/05',
-                                 'C2011/024/04', 'C2012/010/02', 'C2013/379/08', 'C2014/417/04', 'C2015/143/05',
-                                 'C2015/428/04', 'C2017/023/04', 'C2018/400/05', 'C2018/466/08', 'C2020/049/11',
-                                 'C2021/020/04', NA),
-                   Beschreibung = c('<b>Schleswig-Holstein</b><br>(Lübecker Holstentor)',
-                                    '<b>Mecklenburg-Vorpommern</b><br>(Schloss Schwerin)',
-                                    '<b>Hamburg</b><br>(Hamburger Sankt-Michaelis-Kirche)',
-                                    '<b>Saarland</b><br>(Saarbrücker Ludwigskirche)',
-                                    '<b>Bremen</b><br>(Bremer Roland und Rathaus)',
-                                    '<b>Nordrhein-Westfalen</b><br>(Kölner Dom)',
-                                    '<b>Bayern</b><br>(Schloss Neuschwanstein)',
-                                    '<b>Baden-Württemberg</b><br>(Kloster Maulbronn)',
-                                    '<b>Niedersachsen</b><br>(St.-Michaelis-Kirche zu Hildesheim)',
-                                    '<b>Hessen</b><br>(Frankfurter Paulskirche)',
-                                    '<b>Sachsen</b><br>(Dresdner Zwinger)',
-                                    '<b>Rheinland-Pfalz</b><br>(Porta Nigra)',
-                                    '<b>Berlin</b><br>(Schloss Charlottenburg)',
-                                    '<b>Sitz des Bundesrates</b><br>(Preußisches Herrenhaus, Sitz des Bundesrates)',
-                                    '<b>Brandenburg</b><br>(Schloss Sanssouci)',
-                                    '<b>Sachsen-Anhalt</b><br>(Magdeburger Dom)',
-                                    '<b>Thüringen</b><br>(Wartburg)'))
-    
+    debl1 <- tribble(~Amtsblatt, ~Beschreibung,
+                     'C2006/033/04', '<b>Schleswig-Holstein</b><br>(Lübecker Holstentor)',
+                     'C2007/076/02', '<b>Mecklenburg-Vorpommern</b><br>(Schloss Schwerin)',
+                     'C2008/013/02', '<b>Hamburg</b><br>(Hamburger Sankt-Michaelis-Kirche)',
+                     'C2009/031/06', '<b>Saarland</b><br>(Saarbrücker Ludwigskirche)',
+                     'C2010/012/05', '<b>Bremen</b><br>(Bremer Roland und Rathaus)',
+                     'C2011/024/04', '<b>Nordrhein-Westfalen</b><br>(Kölner Dom)',
+                     'C2012/010/02', '<b>Bayern</b><br>(Schloss Neuschwanstein)',
+                     'C2013/379/08', '<b>Baden-Württemberg</b><br>(Kloster Maulbronn)',
+                     'C2014/417/04', '<b>Niedersachsen</b><br>(St.-Michaelis-Kirche zu Hildesheim)',
+                     'C2015/143/05', '<b>Hessen</b><br>(Frankfurter Paulskirche)',
+                     'C2015/428/04', '<b>Sachsen</b><br>(Dresdner Zwinger)',
+                     'C2017/023/04', '<b>Rheinland-Pfalz</b><br>(Porta Nigra)',
+                     'C2018/400/05', '<b>Berlin</b><br>(Schloss Charlottenburg)',
+                     'C2018/466/08', '<b>Sitz des Bundesrates</b><br>(Preußisches Herrenhaus, Sitz des Bundesrates)',
+                     'C2020/049/11', '<b>Brandenburg</b><br>(Schloss Sanssouci)',
+                     'C2021/020/04', '<b>Sachsen-Anhalt</b><br>(Magdeburger Dom)',
+                     NA, '<b>Thüringen</b><br>(Wartburg)')
+
     displ_serie(debl1, "de")
     }, ignoreNULL = FALSE)
   
   ### Deutschland - Bundesländerserie II ----
   # output$debl2_tab <- renderTable({debl2_tab()}, bordered = T, spacing = "l", align = "clccccc", rownames = FALSE, sanitize.text.function = function(x) x)
   # debl2_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-  #   debl2 <- tibble(Amtsblatt = c(NA, NA, NA, NA, NA,
-  #                                 NA, NA, NA, NA, NA,
-  #                                 NA, NA, NA, NA, NA,
-  #                                 NA),
-  #                  Beschreibung = c('<b>Hamburg</b><br>(Elbphilharmonie)',
-  #                                   '<b>Mecklenburg-Vorpommern</b><br>(Königsstuhl)',
-  #                                   '<b>Saarland</b><br>(Saarschleife)',
-  #                                   '<b>Unbekannt</b><br>()',
-  #                                   '<b>Unbekannt</b><br>()',
-  #                                   '<b>Unbekannt</b><br>()',
-  #                                   '<b>Unbekannt</b><br>()',
-  #                                   '<b>Unbekannt</b><br>()',
-  #                                   '<b>Unbekannt</b><br>()',
-  #                                   '<b>Unbekannt</b><br>()',
-  #                                   '<b>Unbekannt</b><br>()',
-  #                                   '<b>Unbekannt</b><br>()',
-  #                                   '<b>Unbekannt</b><br>()',
-  #                                   '<b>Unbekannt</b><br>()',
-  #                                   '<b>Unbekannt</b><br>()',
-  #                                   '<b>Unbekannt</b><br>()'))
+    # debl2 <- tribble(~Amtsblatt, ~Beschreibung,
+    #                  NA, '<b>Hamburg</b><br>(Elbphilharmonie)',
+    #                  NA, '<b>Mecklenburg-Vorpommern</b><br>(Königsstuhl)',
+    #                  NA, '<b>Saarland</b><br>(Saarschleife)',
+    #                  NA, '<b>Unbekannt</b><br>()',
+    #                  NA, '<b>Unbekannt</b><br>()',
+    #                  NA, '<b>Unbekannt</b><br>()',
+    #                  NA, '<b>Unbekannt</b><br>()',
+    #                  NA, '<b>Unbekannt</b><br>()',
+    #                  NA, '<b>Unbekannt</b><br>()',
+    #                  NA, '<b>Unbekannt</b><br>()',
+    #                  NA, '<b>Unbekannt</b><br>()',
+    #                  NA, '<b>Unbekannt</b><br>()',
+    #                  NA, '<b>Unbekannt</b><br>()',
+    #                  NA, '<b>Unbekannt</b><br>()',
+    #                  NA, '<b>Unbekannt</b><br>()',
+    #                  NA, '<b>Unbekannt</b><br>()')
   #   
   #   displ_serie(debl1, "de")
   #   }, ignoreNULL = FALSE)
@@ -471,67 +466,62 @@ server <- function(input, output, session) {
     ### Frankreich - Olympische Sommerspiele 2024 ----
   output$fros_tab <- renderTable({fros_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   fros_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    fros <- tibble(Amtsblatt = c('C2021/470/07', NA, NA, NA),
-                   Beschreibung =c('<b>Die sprintende Marianne</b>',
-                                   '<b>Der Genius und das Diskuswerfen - Arc de Triomphe</b>',
-                                   '<b>Die Säerin und der Faustkampf – Pont Neuf</b>',
-                                   '<b>Herkules und der Ringkampf</b>'))
-    
+    fros <- tribble(~Amtsblatt, ~Beschreibung,
+                    'C2021/470/07', '<b>Die sprintende Marianne</b>',
+                    NA, '<b>Der Genius und das Diskuswerfen - Arc de Triomphe</b>',
+                    NA, '<b>Die Säerin und der Faustkampf – Pont Neuf</b>',
+                    NA, '<b>Herkules und der Ringkampf</b>')
+
     displ_serie(fros, "std")
     }, ignoreNULL = FALSE)
   
   ### Litauen - Ethnografische Regionen ----
   output$lter_tab <- renderTable({lter_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   lter_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    lter <- tibble(Amtsblatt = c('C2019/351/10', 'C2020/053/04', 'C2021/473/05', 'C2022/484/25', NA),
-                   Beschreibung =c('<b>Žemaitija</b><br>(Niederlittauen)',
-                                   '<b>Aukschtaiten</b><br>(Oberlitauen)',
-                                   '<b>Dzukija</b><br>(Mittellitauen)',
-                                   '<b>Suvalkija</b><br>(Sudauen)',
-                                   '<b>Mažoji Lietuva</b><br>(Kleinlitauen)'))
-    
+    lter <- tribble(~Amtsblatt, ~Beschreibung,
+                    'C2019/351/10', '<b>Žemaitija</b><br>(Niederlittauen)',
+                    'C2020/053/04', '<b>Aukschtaiten</b><br>(Oberlitauen)',
+                    'C2021/473/05', '<b>Dzukija</b><br>(Mittellitauen)',
+                    'C2022/484/25', '<b>Suvalkija</b><br>(Sudauen)',
+                    NA, '<b>Mažoji Lietuva</b><br>(Kleinlitauen)')
+
     displ_serie(lter, "std")
     }, ignoreNULL = FALSE)
   
   ### Luxemburg - Dynastieserie ----
   output$ludy_tab <- renderTable({ludy_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   ludy_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    ludy <- tibble(Amtsblatt = c('C2004/243/05', 'C2005/011/03', 'C2006/020/10', 'C2007/053/02', 'C2008/021/09',
-                                 'C2009/005/02', 'C2009/311/06', 'C2010/349/03', 'C2011/373/06', 'C2013/021/05',
-                                 'C2013/219/06', 'C2014/020/06', 'C2014/262/05', 'C2015/086/03', 'C2015/232/05',
-                                 'C2016/028/04', 'C2017/023/07', 'C2017/320/04', 'C2017/438/10', 'C2018/305/06',
-                                 'C2018/466/11', 'C2019/352/13', 'C2020/049/13', 'C2020/381/03', 'C2020/444/04',
-                                 'C2021/020/06', 'C2022/145/10', 'C2022/484/21', NA, NA),
-                   Beschreibung =c('<b>Monogramm Großherzog Henris</b>',
-                                   '<b>50. Geburtstag und 5. Jahrestag der Thronbesteigung Großherzog Henris,<br>100. Todestag Großherzog Adolphs</b>',
-                                   '<b>25. Geburtstag Erbgroßherzog Guillaumes</b>',
-                                   '<b>Großherzoglicher Palast</b>',
-                                   '<b>Schloss von Berg</b>',
-                                   '<b>90. Jahrestag der Thronbesteigung Großherzogin Charlottes</b>',
-                                   '<b>Wappen Großherzog Henris</b>',
-                                   '<b>50. Jahrestag der Ernennung ihres Sohnes Jean zum Statthalter durch<br>Großherzogin Charlotte</b>',
-                                   '<b>100. Todestag Großherzog Wilhelms IV.</b>',
-                                   '<b>Hochzeit Erbgroßherzog Guillaumes mit Gräfin Stéphanie de Lannoy</b>',
-                                   '<b>Nationalhymne des Großherzogtums Luxemburg</b>',
-                                   '<b>175 Jahre Unabhängigkeit des Großherzogtums Luxemburg</b>',
-                                   '<b>50. Jahrestag der Thronbesteigung Großherzog Jeans</b>',
-                                   '<b>15. Jahrestag der Thronbesteigung Großherzog Henris</b>',
-                                   '<b>125. Jahrestag der Luxemburger Dynastie Nassau-Weilburg</b>',
-                                   '<b>50-jähriges Bestehen der Großherzogin-Charlotte-Brücke</b>',
-                                   '<b>50. Jahrestag der Gründung der Luxemburger Freiwilligenarmee</b>',
-                                   '<b>200. Geburtstag Großherzog Wilhelms III.</b>',
-                                   '<b>150 Jahre Luxemburgische Verfassung</b>',
-                                   '<b>175. Todestag Großherzog Wilhelms I.</b>',
-                                   '<b>100. Jahrestag der Thronbesteigung Großherzogin Charlottes</b>',
-                                   '<b>100. Jahrestag der Einführung des allgemeinen Wahlrechts</b>',
-                                   '<b>200. Geburtstag Heinrichs von Oranien-Nassau</b>',
-                                   '<b>Geburt von Prinz Charles von Luxemburg</b>',
-                                   '<b>100. Geburtstag Großherzog Jeans</b>',
-                                   '<b>40. Hochzeitstag Großherzog Henris und Großherzogin Maria Teresas</b>',
-                                   '<b>50. Jahrestag der Flagge Luxemburgs</b>',
-                                   '<b>10. Hochzeitstag von Erbgroßherzog Guillaume und<br>Erbgroßherzogin Stéphanie</b>',
-                                   '<b>175. Jahrestag der Abgeordnetenkammer und der ersten Verfassung (1848)</b>',
-                                   '<b>25. Jahrestag der Aufnahme von Großherzog Henri als Mitglied des<br>Internationalen Olympischen Komitees</b>'))
+    ludy <- tribble(~Amtsblatt, ~Beschreibung,
+                    'C2004/243/05', '<b>Monogramm Großherzog Henris</b>',
+                    'C2005/011/03', '<b>50. Geburtstag und 5. Jahrestag der Thronbesteigung Großherzog Henris, 100. Todestag Großherzog Adolphs</b>',
+                    'C2006/020/10', '<b>25. Geburtstag Erbgroßherzog Guillaumes</b>',
+                    'C2007/053/02', '<b>Großherzoglicher Palast</b>',
+                    'C2008/021/09', '<b>Schloss von Berg</b>',
+                    'C2009/005/02', '<b>90. Jahrestag der Thronbesteigung Großherzogin Charlottes</b>',
+                    'C2009/311/06', '<b>Wappen Großherzog Henris</b>',
+                    'C2010/349/03', '<b>50. Jahrestag der Ernennung ihres Sohnes Jean zum Statthalter durch Großherzogin Charlotte</b>',
+                    'C2011/373/06', '<b>100. Todestag Großherzog Wilhelms IV.</b>',
+                    'C2013/021/05', '<b>Hochzeit Erbgroßherzog Guillaumes mit Gräfin Stéphanie de Lannoy</b>',
+                    'C2013/219/06', '<b>Nationalhymne des Großherzogtums Luxemburg</b>',
+                    'C2014/020/06', '<b>175 Jahre Unabhängigkeit des Großherzogtums Luxemburg</b>',
+                    'C2014/262/05', '<b>50. Jahrestag der Thronbesteigung Großherzog Jeans</b>',
+                    'C2015/086/03', '<b>15. Jahrestag der Thronbesteigung Großherzog Henris</b>',
+                    'C2015/232/05', '<b>125. Jahrestag der Luxemburger Dynastie Nassau-Weilburg</b>',
+                    'C2016/028/04', '<b>50-jähriges Bestehen der Großherzogin-Charlotte-Brücke</b>',
+                    'C2017/023/07', '<b>50. Jahrestag der Gründung der Luxemburger Freiwilligenarmee</b>',
+                    'C2017/320/04', '<b>200. Geburtstag Großherzog Wilhelms III.</b>',
+                    'C2017/438/10', '<b>150 Jahre Luxemburgische Verfassung</b>',
+                    'C2018/305/06', '<b>175. Todestag Großherzog Wilhelms I.</b>',
+                    'C2018/466/11', '<b>100. Jahrestag der Thronbesteigung Großherzogin Charlottes</b>',
+                    'C2019/352/13', '<b>100. Jahrestag der Einführung des allgemeinen Wahlrechts</b>',
+                    'C2020/049/13', '<b>200. Geburtstag Heinrichs von Oranien-Nassau</b>',
+                    'C2020/381/03', '<b>Geburt von Prinz Charles von Luxemburg</b>',
+                    'C2020/444/04', '<b>100. Geburtstag Großherzog Jeans</b>',
+                    'C2021/020/06', '<b>40. Hochzeitstag Großherzog Henris und Großherzogin Maria Teresas</b>',
+                    'C2022/145/10', '<b>50. Jahrestag der Flagge Luxemburgs</b>',
+                    'C2022/484/21', '<b>10. Hochzeitstag von Erbgroßherzog Guillaume und Erbgroßherzogin Stéphanie</b>',
+                    NA, '<b>175. Jahrestag der Abgeordnetenkammer und der ersten Verfassung (1848)</b>',
+                    NA, '<b>25. Jahrestag der Aufnahme von Großherzog Henri als Mitglied des Internationalen Olympischen Komitees</b>')
     
     displ_serie(ludy, "std")
     }, ignoreNULL = FALSE)
@@ -539,81 +529,77 @@ server <- function(input, output, session) {
   ### Lettland - Historische Regionen ----
   output$lvhr_tab <- renderTable({lvhr_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   lvhr_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    lvhr <- tibble(Amtsblatt = c('C2016/146/07', 'C2017/066/02', 'C2017/066/03', 'C2018/234/03'),
-                   Beschreibung =c('<b>Vidzeme</b><br>(Zentral-Livland)',
-                                   '<b>Kurzemen</b><br>(Kurland)',
-                                   '<b>Latgale</b><br>(Lettgallen)',
-                                   '<b>Zemgale</b><br>(Semgallen)'))
-    
+    lvhr <- tribble(~Amtsblatt, ~Beschreibung,
+                    'C2016/146/07', '<b>Vidzeme</b><br>(Zentral-Livland)',
+                    'C2017/066/02', '<b>Kurzemen</b><br>(Kurland)',
+                    'C2017/066/03', '<b>Latgale</b><br>(Lettgallen)',
+                    'C2018/234/03', '<b>Zemgale</b><br>(Semgallen)')
+
     displ_serie(lvhr, "std")
     }, ignoreNULL = FALSE)
   
   ### Malta - Verfassungsgeschichte ----
   output$mtvg_tab <- renderTable({mtvg_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   mtvg_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    mtvg <- tibble(Amtsblatt = c('C2011/299/08', 'C2012/375/06', 'C2013/379/09', 'C2014/383/05', 'C2015/150/03'),
-                   Beschreibung =c('<b>Wahl der ersten Abgeordneten 1849</b>',
-                                   '<b>Mehrheitswahlrecht 1887</b>',
-                                   '<b>Einrichtung der Selbstverwaltung 1921</b>',
-                                   '<b>Unabhängigkeit von Großbritannien 1964</b>',
-                                   '<b>Ausrufung der Republik Malta 1974</b>'))
-    
+    mtvg <- tribble(~Amtsblatt, ~Beschreibung,
+                    'C2011/299/08', '<b>Wahl der ersten Abgeordneten 1849</b>',
+                    'C2012/375/06', '<b>Mehrheitswahlrecht 1887</b>',
+                    'C2013/379/09', '<b>Einrichtung der Selbstverwaltung 1921</b>',
+                    'C2014/383/05', '<b>Unabhängigkeit von Großbritannien 1964</b>',
+                    'C2015/150/03', '<b>Ausrufung der Republik Malta 1974</b>')
+
     displ_serie(mtvg, "std")
     }, ignoreNULL = FALSE)
   
   ### Malta - Prähistorische Stätten ----
   output$mtps_tab <- renderTable({mtps_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   mtps_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    mtps <- tibble(Amtsblatt = c('C2016/281/10', 'C2017/111/10', 'C2018/174/08', 'C2019/352/15', 'C2020/166/02',
-                                 'C2021/473/08', 'C2022/484/22'),
-                   Beschreibung =c('<b>Tempel von Ggantija</b>',
-                                   '<b>Tempel von Hagar Qim</b>',
-                                   '<b>Tempel von Mnajdra</b>',
-                                   '<b>Tempel von Ta’ Hagrat</b>',
-                                   '<b>Tempel von Skorba</b>',
-                                   '<b>Tempel von Tarxien</b>',
-                                   '<b>Ħal-Saflieni-Hypogäum</b>'))
-    
+    mtps <- tribble(~Amtsblatt, ~Beschreibung,
+                    'C2016/281/10', '<b>Tempel von Ggantija</b>',
+                    'C2017/111/10', '<b>Tempel von Hagar Qim</b>',
+                    'C2018/174/08', '<b>Tempel von Mnajdra</b>',
+                    'C2019/352/15', '<b>Tempel von Ta’ Hagrat</b>',
+                    'C2020/166/02', '<b>Tempel von Skorba</b>',
+                    'C2021/473/08', '<b>Tempel von Tarxien</b>',
+                    'C2022/484/22', '<b>Ħal-Saflieni-Hypogäum</b>')
+
     displ_serie(mtps, "std")
     }, ignoreNULL = FALSE)
   
   ### Malta - Von Kindern mit Solidarität ----
   output$mtks_tab <- renderTable({mtks_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   mtks_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    mtks <- tibble(Amtsblatt = c('C2016/396/03', 'C2017/386/03', 'C2018/401/07', 'C2019/352/16', 'C2020/380/04'),
-                   Beschreibung =c('<b>Solidarität durch Liebe</b>',
-                                   '<b>Frieden</b>',
-                                   '<b>Kulturelles Erbe</b>',
-                                   '<b>Natur / Umwelt</b>',
-                                   '<b>Kinderspiele</b>'))
-    
+    mtks <- tribble(~Amtsblatt, ~Beschreibung,
+                    'C2016/396/03', '<b>Solidarität durch Liebe</b>',
+                    'C2017/386/03', '<b>Frieden</b>',
+                    'C2018/401/07', '<b>Kulturelles Erbe</b>',
+                    'C2019/352/16', '<b>Natur / Umwelt</b>',
+                    'C2020/380/04', '<b>Kinderspiele</b>')
+
     displ_serie(mtks, "std")
     }, ignoreNULL = FALSE)
   
   ### Spanien - UNESCO Welterbestätten ----
   output$esun_tab <- renderTable({esun_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   esun_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    esun <- tibble(Amtsblatt = c('C2010/047/07', 'C2011/050/02', 'C2012/057/03', 'C2013/050/04', 'C2014/051/05',
-                                 'C2014/397/04', 'C2015/425/10', 'C2016/236/06', 'C2018/014/04', 'C2018/466/09',
-                                 'C2020/049/12', 'C2021/096/08', 'C2022/484/10', NA, NA,
-                                 NA),
-                   Beschreibung =c('<b>Altstadt von Córdoba</b><br>(Innenraum der Mezquita de Córdoba)',
-                                   '<b>Alhambra, Generalife und Albaicín in Granada</b><br>(Löwenhof der Alhambra)',
-                                   '<b>Kathedrale von Burgos</b><br>(Obere Westfassade und Vierungsturm)',
-                                   '<b>Königlicher Sitz Sankt Laurentius von El Escorial</b><br>(Südansicht der Klosterresidenz auf Glockentürme und Kirchenkuppel)',
-                                   '<b>Arbeiten von Antoni Gaudí</b><br>(Park Güell in Barcelona)',
-                                   '<b>Höhle von Altamira / Paläolithische Höhlenmalerei im Norden Spaniens</b><br>(Wisent, Wandmalerei in der Höhle von Altamira)',
-                                   '<b>Altstadt und Aquädukt von Segovia</b><br>(Aquädukt von Segovia)',
-                                   '<b>Monumente von Oviedo und des Fürstentums Asturien</b><br>(Santa María del Naranco)',
-                                   '<b>Altstadt von Santiago de Compostela</b><br>(Detail der Westfassade der Kathedrale von Santiago de Compostela)',
-                                   '<b>Altstadt von Ávila und Kirchen außerhalb der Stadtmauer</b><br>(Drei Wehrtürme der Stadtmauer Ávilas)',
-                                   '<b>Architektur der Mudéjares in Aragon</b><br>(Turm von El Salvador in Teruel)',
-                                   '<b>Historische Altstadt von Toledo</b><br>(Puerta del Sol und Detail der Synagoge El Tránsito in Toledo)',
-                                   '<b>Nationalpark Garajonay auf La Gomera</b><br>(Roque de Agando mit Lorbeerwald)',
-                                   '<b>Altstadt von Cáceres</b><br>(Plaza Mayor)',
-                                   '<b>Kathedrale, Alcázar und Indienarchiv in Sevilla</b><br>()',
-                                   '<b>Altstadt von Salamanca</b><br>()'))
-    
+    esun <- tribble(~Amtsblatt, ~Beschreibung,
+                    'C2010/047/07', '<b>Altstadt von Córdoba</b><br>(Innenraum der Mezquita de Córdoba)',
+                    'C2011/050/02', '<b>Alhambra, Generalife und Albaicín in Granada</b><br>(Löwenhof der Alhambra)',
+                    'C2012/057/03', '<b>Kathedrale von Burgos</b><br>(Obere Westfassade und Vierungsturm)',
+                    'C2013/050/04', '<b>Königlicher Sitz Sankt Laurentius von El Escorial</b><br>(Südansicht der Klosterresidenz auf Glockentürme und Kirchenkuppel)',
+                    'C2014/051/05', '<b>Arbeiten von Antoni Gaudí</b><br>(Park Güell in Barcelona)',
+                    'C2014/397/04', '<b>Höhle von Altamira / Paläolithische Höhlenmalerei im Norden Spaniens</b><br>(Wisent, Wandmalerei in der Höhle von Altamira)',
+                    'C2015/425/10', '<b>Altstadt und Aquädukt von Segovia</b><br>(Aquädukt von Segovia)',
+                    'C2016/236/06', '<b>Monumente von Oviedo und des Fürstentums Asturien</b><br>(Santa María del Naranco)',
+                    'C2018/014/04', '<b>Altstadt von Santiago de Compostela</b><br>(Detail der Westfassade der Kathedrale von Santiago de Compostela)',
+                    'C2018/466/09', '<b>Altstadt von Ávila und Kirchen außerhalb der Stadtmauer</b><br>(Drei Wehrtürme der Stadtmauer Ávilas)',
+                    'C2020/049/12', '<b>Architektur der Mudéjares in Aragon</b><br>(Turm von El Salvador in Teruel)',
+                    'C2021/096/08', '<b>Historische Altstadt von Toledo</b><br>(Puerta del Sol und Detail der Synagoge El Tránsito in Toledo)',
+                    'C2022/484/10', '<b>Nationalpark Garajonay auf La Gomera</b><br>(Roque de Agando mit Lorbeerwald)',
+                    NA, '<b>Altstadt von Cáceres</b><br>(Plaza Mayor)',
+                    NA, '<b>Kathedrale, Alcázar und Indienarchiv in Sevilla</b><br>()',
+                    NA, '<b>Altstadt von Salamanca</b><br>()')
+
     displ_serie(esun, "std")
     }, ignoreNULL = FALSE)
   
