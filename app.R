@@ -45,14 +45,12 @@ form_amtsbl <- function(txt) {
   paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:", txt, "', target = '_blank'>", txt, "</a>")
 }
 
-## Funktion zum ergänzen und behübschen der Daten ----
-exp_data <- function() {
-  left_join(coins,
+## Ergänzen und behübschen der Daten ----
+all_data <- left_join(coins,
             collection %>% select(ID, Qualität, Ablage),
             by = 'ID') |> 
     mutate(Jahr = Prägejahr,
            Ablage = coalesce(Ablage, " "))
-}
 
 ## Funktion zur Darstellung der Daten ----
 displ_data <- function(df, variation) {
@@ -377,7 +375,7 @@ server <- function(input, output, session) {
   ## Ausgabe Gedenkmünzen ----
   output$suche_g <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_g()}, sanitize.text.function = function(x) x)
   tbl_g <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    he <- exp_data() |> 
+    he <- all_data |> 
       filter((!is.na(Ablage) | !input$sammlung), Münzart == "Gedenkmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) |>
       displ_data(variation = "ident")
     
@@ -385,7 +383,7 @@ server <- function(input, output, session) {
   ## Ausgabe Umlaufmünzen ----
   output$suche_u <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_u()}, sanitize.text.function = function(x) x)
   tbl_u <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    he <- exp_data() |>
+    he <- all_data |>
       filter((!is.na(Ablage) | !input$sammlung), Münzart == "Umlaufmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) |>
       displ_data(variation = "ident")
   })
@@ -484,7 +482,7 @@ server <- function(input, output, session) {
                      'C2020/049/11', '<b>Brandenburg</b><br>(Schloss Sanssouci)',
                      'C2021/020/04', '<b>Sachsen-Anhalt</b><br>(Magdeburger Dom)',
                      NA, '<b>Thüringen</b><br>(Wartburg)') |>
-      left_join(exp_data(), by = "Amtsblatt") |> 
+      left_join(all_data, by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
     displ_data(debl1, "serde")
@@ -510,7 +508,7 @@ server <- function(input, output, session) {
   #                  NA, '<b>Unbekannt</b><br>()',
   #                  NA, '<b>Unbekannt</b><br>()',
   #                  NA, '<b>Unbekannt</b><br>()') |>
-  #   left_join(exp_data(), by = "Amtsblatt") |> 
+  #   left_join(all_data, by = "Amtsblatt") |> 
   #   filter(!is.na(Amtsblatt))
   # 
   # displ_data(debl2, "serde")
@@ -524,7 +522,7 @@ server <- function(input, output, session) {
                     NA, '<b>Der Genius und das Diskuswerfen - Arc de Triomphe</b>',
                     NA, '<b>Die Säerin und der Faustkampf – Pont Neuf</b>',
                     NA, '<b>Herkules und der Ringkampf</b>') |>
-      left_join(exp_data(), by = "Amtsblatt") |> 
+      left_join(all_data, by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
     displ_data(fros, "ser")
@@ -539,7 +537,7 @@ server <- function(input, output, session) {
                     'C2021/473/05', '<b>Dzukija</b><br>(Mittellitauen)',
                     'C2022/484/25', '<b>Suvalkija</b><br>(Sudauen)',
                     NA, '<b>Mažoji Lietuva</b><br>(Kleinlitauen)') |>
-      left_join(exp_data(), by = "Amtsblatt") |> 
+      left_join(all_data, by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
     displ_data(lter, "ser")
@@ -579,7 +577,7 @@ server <- function(input, output, session) {
                     'C2022/484/21', '<b>10. Hochzeitstag von Erbgroßherzog Guillaume und Erbgroßherzogin Stéphanie</b>',
                     NA, '<b>175. Jahrestag der Abgeordnetenkammer und der ersten Verfassung (1848)</b>',
                     NA, '<b>25. Jahrestag der Aufnahme von Großherzog Henri als Mitglied des Internationalen Olympischen Komitees</b>') |>
-      left_join(exp_data(), by = "Amtsblatt") |> 
+      left_join(all_data, by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
     displ_data(ludy, "ser")
@@ -593,7 +591,7 @@ server <- function(input, output, session) {
                     'C2017/066/02', '<b>Kurzemen</b><br>(Kurland)',
                     'C2017/066/03', '<b>Latgale</b><br>(Lettgallen)',
                     'C2018/234/03', '<b>Zemgale</b><br>(Semgallen)') |>
-      left_join(exp_data(), by = "Amtsblatt") |> 
+      left_join(all_data, by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
     displ_data(lvhr, "ser")
@@ -608,7 +606,7 @@ server <- function(input, output, session) {
                     'C2013/379/09', '<b>Einrichtung der Selbstverwaltung 1921</b>',
                     'C2014/383/05', '<b>Unabhängigkeit von Großbritannien 1964</b>',
                     'C2015/150/03', '<b>Ausrufung der Republik Malta 1974</b>') |>
-      left_join(exp_data(), by = "Amtsblatt") |> 
+      left_join(all_data, by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
     displ_data(mtvg, "ser")
@@ -625,7 +623,7 @@ server <- function(input, output, session) {
                     'C2020/166/02', '<b>Tempel von Skorba</b>',
                     'C2021/473/08', '<b>Tempel von Tarxien</b>',
                     'C2022/484/22', '<b>Ħal-Saflieni-Hypogäum</b>') |>
-      left_join(exp_data(), by = "Amtsblatt") |> 
+      left_join(all_data, by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
     displ_data(mtps, "ser")
@@ -640,7 +638,7 @@ server <- function(input, output, session) {
                     'C2018/401/07', '<b>Kulturelles Erbe</b>',
                     'C2019/352/16', '<b>Natur / Umwelt</b>',
                     'C2020/380/04', '<b>Kinderspiele</b>') |>
-      left_join(exp_data(), by = "Amtsblatt") |> 
+      left_join(all_data, by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
     displ_data(mtks, "ser")
@@ -666,7 +664,7 @@ server <- function(input, output, session) {
                     NA, '<b>Altstadt von Cáceres</b><br>(Plaza Mayor)',
                     NA, '<b>Kathedrale, Alcázar und Indienarchiv in Sevilla</b><br>()',
                     NA, '<b>Altstadt von Salamanca</b><br>()') |>
-      left_join(exp_data(), by = "Amtsblatt") |> 
+      left_join(all_data, by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
     displ_data(esun, "ser")
@@ -677,7 +675,7 @@ server <- function(input, output, session) {
   vvr_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     vvr <- tribble(~Amtsblatt, ~Beschreibung,
                     'C2007/065/04', '...') |>
-      left_join(exp_data(), by = "Amtsblatt") |> 
+      left_join(all_data, by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
     displ_data(vvr, "gem")
@@ -688,7 +686,7 @@ server <- function(input, output, session) {
   wwu_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     wwu <- tribble(~Amtsblatt, ~Beschreibung,
                    'C2008/315/04', '...') |>
-      left_join(exp_data(), by = "Amtsblatt") |> 
+      left_join(all_data, by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
     displ_data(wwu, "gem")
@@ -699,7 +697,7 @@ server <- function(input, output, session) {
   eur_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     eur <- tribble(~Amtsblatt, ~Beschreibung,
                    'C2012/017/05', '...') |>
-      left_join(exp_data(), by = "Amtsblatt") |> 
+      left_join(all_data, by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
     displ_data(eur, "gem")
@@ -728,7 +726,7 @@ server <- function(input, output, session) {
                    'C2015/327/07', '...',
                    'C2015/356/05', '...',
                    'C2015/356/07', '...') |>
-      left_join(exp_data(), by = "Amtsblatt") |> 
+      left_join(all_data, by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
     displ_data(euf, "gem")
@@ -739,7 +737,7 @@ server <- function(input, output, session) {
   era_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     era <- tribble(~Amtsblatt, ~Beschreibung,
                    'C2022/012/03', '...') |>
-      left_join(exp_data(), by = "Amtsblatt") |> 
+      left_join(all_data, by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
     displ_data(era, "gem")
