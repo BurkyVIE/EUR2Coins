@@ -489,14 +489,40 @@ C2022/484/23|mt|2022|2022-11-17|g|22. Jahrestag der Resolution 1325 des Sicherhe
 C2022/484/24|lt|2022|2022-4-21|g|100 Jahre Basketball in Litauen|
 C2022/484/26|lv|2022|2022-4-12|g|Hundertjähriges Bestehen der lettischen Zentralbank „Latvijas Banka“ – Finanzwissen|
 
+C2022/484/14|ad|2022|NA|g|Die Legende von Karl dem Großen|
+C2022/484/15|ad|2022|NA|g|10. Jahrestag des Inkrafttretens der Währungsvereinbarung zwischen Andorra und der Europäischen Union|
+C2022/484/25|lt|2022|NA|g|Ethnographische Regionen Litauens – Suvalkija|
+
 NA|sm|2022|2022-4-28|g|530. Todestag Piero della Francescas|
 NA|mc|2022|2022-9-7|g|100. Todestag Albert I.|
 NA|fr|2022|2022-9-22|g|Der Genius und das Diskuswerfen - Arc de Triomphe|
 NA|sm|2022|2022-10-4|g|200. Todestag Antonio Canovas|
 
-C2022/484/14|ad|2022|NA|g|Die Legende von Karl dem Großen|
-C2022/484/15|ad|2022|NA|g|10. Jahrestag des Inkrafttretens der Währungsvereinbarung zwischen Andorra und der Europäischen Union|
-C2022/484/25|lt|2022|NA|g|Ethnographische Regionen Litauens – Suvalkija|
+
+
+NA|de|2023|NA|g|1275. Geburtstag Karls des Großen|A,D,F,G,J
+NA|de|2023|NA|g|Hamburg|A,D,F,G,J
+NA|ee|2023|NA|g|Rauchschwalbe|
+NA|fi|2023|NA|g|Naturschutz|
+NA|fi|2023|NA|g|Sozial- und GEsundheitsdienste|
+NA|fr|2023|NA|g|Die Säerin und der Faustkampf – Pont Neuf|
+NA|fr|2023|NA|g|Rugby-Union-Weltmeisterschaft 2023|
+NA|gr|2023|NA|g|100. Geburtstag der Sopranistin Maria Callas|
+NA|gr|2023|NA|g|150. Geburtstag des Mathematikers Constantin Carathéodory|
+NA|it|2023|NA|g|150. Todestag Alessandro Manzonis|
+NA|it|2023|NA|g|Hundertjähriges Bestehen der Luftstreitkräfte Italiens|
+NA|lv|2023|NA|g|Ukrainische Sonnenblume „Slava Ukrainai!“|
+NA|li|2023|NA|g|Mažoji Lietuva (Kleinlitauen)|
+NA|li|2023|NA|g|Together with Ukraine|
+NA|lu|2023|NA|g|175. Jahrestag der Abgeordnetenkammer und der ersten Verfassung|
+NA|lu|2023|NA|g|25. Jahrestag der Aufnahme von Großherzog Henri als Mitglied des Internationalen Olympischen Komitees|
+NA|pt|2023|NA|g|Freiden|
+NA|pt|2023|NA|g|Weltjugendtag 2023 Lissabon|
+NA|sm|2023|NA|g|500. Todestag von Pietro Perugino|
+NA|sm|2023|NA|g|500. Todestag von Luca Signorelli|
+NA|sk|2023|NA|g|100. Jahrestag der ersten Bluttransfusion in der Slowakei|
+NA|sk|2023|NA|g|200. Jahrestag der Einführung einer fahrplanmäßigen Pferde-Eilpost Wien – Bratislava|
+NA|es|2023|NA|g|Altstadt von Cáceres|
 
 
 
