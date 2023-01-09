@@ -487,11 +487,11 @@ C2022/484/21|lu|2022|2022-7-1|g|10. Hochzeitstag von Erbgroßherzog Guillaume un
 C2022/484/22|mt|2022|2022-11-17|g|UNESCO-Weltkulturerbe: Ħal-Saflieni-Hypogäum|
 C2022/484/23|mt|2022|2022-11-17|g|22. Jahrestag der Resolution 1325 des Sicherheitsrates der Vereinten Nationen zu Frauen, Frieden und Sicherheit|
 C2022/484/24|lt|2022|2022-4-21|g|100 Jahre Basketball in Litauen|
+C2022/484/25|lt|2022|2022-12-20|g|Ethnographische Regionen Litauens – Suvalkija|
 C2022/484/26|lv|2022|2022-4-12|g|Hundertjähriges Bestehen der lettischen Zentralbank „Latvijas Banka“ – Finanzwissen|
 
 C2022/484/14|ad|2022|NA|g|Die Legende von Karl dem Großen|
 C2022/484/15|ad|2022|NA|g|10. Jahrestag des Inkrafttretens der Währungsvereinbarung zwischen Andorra und der Europäischen Union|
-C2022/484/25|lt|2022|NA|g|Ethnographische Regionen Litauens – Suvalkija|
 
 NA|sm|2022|2022-4-28|g|530. Todestag Piero della Francescas|
 NA|mc|2022|2022-9-7|g|100. Todestag Albert I.|
