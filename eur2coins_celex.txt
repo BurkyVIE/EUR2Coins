@@ -489,13 +489,13 @@ C2022/484/23|mt|2022|2022-11-17|g|22. Jahrestag der Resolution 1325 des Sicherhe
 C2022/484/24|lt|2022|2022-4-21|g|100 Jahre Basketball in Litauen|
 C2022/484/25|lt|2022|2022-12-20|g|Ethnographische Regionen Litauens – Suvalkija|
 C2022/484/26|lv|2022|2022-4-12|g|Hundertjähriges Bestehen der lettischen Zentralbank „Latvijas Banka“ – Finanzwissen|
+C2023/014/04|fr|2022|2022-9-22|g|Olympische Spiele 2024|
 
 C2022/484/14|ad|2022|NA|g|Die Legende von Karl dem Großen|
 C2022/484/15|ad|2022|NA|g|10. Jahrestag des Inkrafttretens der Währungsvereinbarung zwischen Andorra und der Europäischen Union|
 
 NA|sm|2022|2022-4-28|g|530. Todestag Piero della Francescas|
 NA|mc|2022|2022-9-7|g|100. Todestag Albert I.|
-NA|fr|2022|2022-9-22|g|Der Genius und das Diskuswerfen - Arc de Triomphe|
 NA|sm|2022|2022-10-4|g|200. Todestag Antonio Canovas|
 
 
