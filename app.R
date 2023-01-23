@@ -519,7 +519,7 @@ server <- function(input, output, session) {
   fros_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     fros <- tribble(~Amtsblatt, ~Beschreibung,
                     'C2021/470/07', '<b>Die sprintende Marianne</b>',
-                    NA, '<b>Der Genius und das Diskuswerfen - Arc de Triomphe</b>',
+                    'C2023/014/04', '<b>Der Genius und das Diskuswerfen - Arc de Triomphe</b>',
                     NA, '<b>Die Säerin und der Faustkampf – Pont Neuf</b>',
                     NA, '<b>Herkules und der Ringkampf</b>') |>
       left_join(all_data, by = "Amtsblatt") |> 
