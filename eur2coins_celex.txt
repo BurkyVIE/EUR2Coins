@@ -478,6 +478,8 @@ C2022/484/10|es|2022|2022-3-23|g|UNESCO-Welterbe – Nationalpark Garajonay|
 C2022/484/11|ee|2022|2022-3-9|g|150. Jahrestag der Gründung der Estnischen Literaturgesellschaft|
 C2022/484/12|pt|2022|2022-3-30|g|100. Jahrestag der Erstüberquerung des Südatlantiks mit dem Flugzeug durch Gago Coutinho und Sacadura Cabral im Jahr 1922|
 C2022/484/13|sk|2022|2022-10-5|g|300. Jahrestag des Baus der ersten Dampfmaschine für den Bergbau auf dem europäischen Festland|
+C2022/484/14|ad|2022|2023-1-16|g|Die Legende von Karl dem Großen|
+C2022/484/15|ad|2022|2023-1-16|g|10. Jahrestag des Inkrafttretens der Währungsvereinbarung zwischen Andorra und der Europäischen Union|
 C2022/484/16|va|2022|2022-9-6|g|125. Geburtstag von Papst Paul VI.|
 C2022/484/17|va|2022|2022-9-6|g|25. Todestag von Mutter Teresa von Kalkutta|
 C2022/484/18|ee|2022|2022-7-8|g|Ukraine und Freiheit|
@@ -491,21 +493,19 @@ C2022/484/25|lt|2022|2022-12-20|g|Ethnographische Regionen Litauens – Suvalkij
 C2022/484/26|lv|2022|2022-4-12|g|Hundertjähriges Bestehen der lettischen Zentralbank „Latvijas Banka“ – Finanzwissen|
 C2023/014/04|fr|2022|2022-9-22|g|Olympische Spiele 2024|
 
-C2022/484/14|ad|2022|NA|g|Die Legende von Karl dem Großen|
-C2022/484/15|ad|2022|NA|g|10. Jahrestag des Inkrafttretens der Währungsvereinbarung zwischen Andorra und der Europäischen Union|
-
 NA|sm|2022|2022-4-28|g|530. Todestag Piero della Francescas|
 NA|mc|2022|2022-9-7|g|100. Todestag Albert I.|
 NA|sm|2022|2022-10-4|g|200. Todestag Antonio Canovas|
 
 
 
+NA|fr|2023|2022-1-10|g|Die Säerin und der Faustkampf – Pont Neuf|
+
 NA|de|2023|NA|g|1275. Geburtstag Karls des Großen|A,D,F,G,J
 NA|de|2023|NA|g|Hamburg|A,D,F,G,J
 NA|ee|2023|NA|g|Rauchschwalbe|
 NA|fi|2023|NA|g|Naturschutz|
-NA|fi|2023|NA|g|Sozial- und GEsundheitsdienste|
-NA|fr|2023|NA|g|Die Säerin und der Faustkampf – Pont Neuf|
+NA|fi|2023|NA|g|Sozial- und Gesundheitsdienste|
 NA|fr|2023|NA|g|Rugby-Union-Weltmeisterschaft 2023|
 NA|gr|2023|NA|g|100. Geburtstag der Sopranistin Maria Callas|
 NA|gr|2023|NA|g|150. Geburtstag des Mathematikers Constantin Carathéodory|
