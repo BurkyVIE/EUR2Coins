@@ -492,10 +492,9 @@ C2022/484/24|lt|2022|2022-4-21|g|100 Jahre Basketball in Litauen|
 C2022/484/25|lt|2022|2022-12-20|g|Ethnographische Regionen Litauens – Suvalkija|
 C2022/484/26|lv|2022|2022-4-12|g|Hundertjähriges Bestehen der lettischen Zentralbank „Latvijas Banka“ – Finanzwissen|
 C2023/014/04|fr|2022|2022-9-22|g|Olympische Spiele 2024|
-
-NA|sm|2022|2022-4-28|g|530. Todestag Piero della Francescas|
-NA|mc|2022|2022-9-7|g|100. Todestag Albert I.|
-NA|sm|2022|2022-10-4|g|200. Todestag Antonio Canovas|
+C2023/034/04|sm|2022|2022-10-4|g|Der 200. Todestag von Antonio Canova|
+C2023/034/05|sm|2022|2022-4-28|g|530. Todestag von Piero della Francesca|
+C2023/034/06|mc|2022|2022-9-7|g|100. Todestag von Fürst Albert I.|
 
 
 
