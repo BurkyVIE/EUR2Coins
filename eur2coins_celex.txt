@@ -498,10 +498,10 @@ C2023/034/06|mc|2022|2022-9-7|g|100. Todestag von Fürst Albert I.|
 
 
 
-NA|fr|2023|2022-1-10|g|Die Säerin und der Faustkampf – Pont Neuf|
+NA|fr|2023|2023-1-10|g|Die Säerin und der Faustkampf – Pont Neuf|
+NA|de|2023|2023-1-24|g|Hamburg|A,D,F,G,J
 
 NA|de|2023|NA|g|1275. Geburtstag Karls des Großen|A,D,F,G,J
-NA|de|2023|NA|g|Hamburg|A,D,F,G,J
 NA|ee|2023|NA|g|Rauchschwalbe|
 NA|fi|2023|NA|g|Naturschutz|
 NA|fi|2023|NA|g|Sozial- und Gesundheitsdienste|
