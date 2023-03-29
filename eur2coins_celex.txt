@@ -502,16 +502,16 @@ NA|fr|2023|2023-1-10|g|Die Säerin und der Faustkampf – Pont Neuf|
 NA|de|2023|2023-1-24|g|Hamburg (Elbphilharmonie)|A,D,F,G,J
 NA|sk|2023|2023-3-2|g|100 Jahre Erste Bluttransfusion in der Slowakei|
 NA|li|2023|2023-3-16|g|Zusammen mit der Ukraine|
+NA|fi|2023|2023-3-21|g|Naturschutz|
+NA|it|2023|2023-3-21|g|100 Jahre Italienische Luftstreitkräfte|
 
 NA|de|2023|NA|g|1275. Geburtstag Karls des Großen|A,D,F,G,J
 NA|ee|2023|NA|g|Rauchschwalbe|
-NA|fi|2023|NA|g|Naturschutz|
 NA|fi|2023|NA|g|Sozial- und Gesundheitsdienste|
 NA|fr|2023|NA|g|Rugby-Union-Weltmeisterschaft 2023|
 NA|gr|2023|NA|g|100. Geburtstag der Sopranistin Maria Callas|
 NA|gr|2023|NA|g|150. Geburtstag des Mathematikers Constantin Carathéodory|
 NA|it|2023|NA|g|150. Todestag Alessandro Manzonis|
-NA|it|2023|NA|g|Hundertjähriges Bestehen der Luftstreitkräfte Italiens|
 NA|lv|2023|NA|g|Ukrainische Sonnenblume „Slava Ukrainai!“|
 NA|li|2023|NA|g|Mažoji Lietuva (Kleinlitauen)|
 NA|lu|2023|NA|g|175. Jahrestag der Abgeordnetenkammer und der ersten Verfassung|
