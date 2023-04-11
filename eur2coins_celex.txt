@@ -516,7 +516,7 @@ NA|fi|2023|NA|g|Sozial- und Gesundheitsdienste|
 NA|fr|2023|NA|g|Rugby-Union-Weltmeisterschaft 2023|
 NA|gr|2023|NA|g|100. Geburtstag der Sopranistin Maria Callas|
 NA|gr|2023|NA|g|150. Geburtstag des Mathematikers Constantin Carathéodory|
-NA|lv|2023|NA|g|Ukrainische Sonnenblume „Slava Ukrainai!“ - oder lt???|
+NA|lv|2023|NA|g|Ukrainische Sonnenblume „Slava Ukrainai!“|
 NA|li|2023|NA|g|Mažoji Lietuva (Kleinlitauen)|
 NA|pt|2023|NA|g|Freiden|
 NA|pt|2023|NA|g|Weltjugendtag 2023 Lissabon|
