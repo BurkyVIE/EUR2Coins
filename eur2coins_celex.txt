@@ -502,14 +502,15 @@ C2023/116/11|sk|2023|2023-3-2|g|100. Jahrestag der ersten Bluttransfusion in der
 C2023/116/12|fr|2023|2023-1-10|g|Olympische Spiele Paris 2024|
 C2023/122/02|it|2023|2023-3-21|g|100 Jahre Italienische Luftstreitkräfte|
 C2023/123/06|de|2023|2023-1-24|g|Bundesländer-Serie – Hamburg|A,D,F,G,J
+C2023/123/05|lu|2023|2023-4-24|g|175. Jahrestag des Bestehens der luxemburgischen Abgeordnetenkammer|
+C2023/122/06|lu|2023|2023-4-24|g|25. Jahrestag der Mitgliedschaft von Großherzog Henri im Internationalen Olympischen Komitee|
 C2023/123/07|de|2023|2023-3-30|g|1275. Jahrestag der Geburt Karls des Großen (748–814), König über das Frankenreich und römischer Kaiser|A,D,F,G,J
 
 C2023/122/02|lt|2023|NA|g|Gemeinsam mit der Ukraine|
 C2023/122/04|it|2023|NA|g|150. Todestag von Alessandro Manzoni|
-C2023/122/06|lu|2023|NA|g|25. Jahrestag der Mitgliedschaft von Großherzog Henri im Internationalen Olympischen Komitee|
-C2023/123/05|lu|2023|NA|g|175. Jahrestag des Bestehens der luxemburgischen Abgeordnetenkammer|
 
 NA|li|2023|2023-3-16|g|Zusammen mit der Ukraine|
+NA|sm|2023|2023-4-24|g|500. Todestag von Pietro Perugino|
 
 NA|ee|2023|NA|g|Rauchschwalbe|
 NA|fi|2023|NA|g|Sozial- und Gesundheitsdienste|
@@ -520,7 +521,6 @@ NA|lv|2023|NA|g|Ukrainische Sonnenblume „Slava Ukrainai!“|
 NA|li|2023|NA|g|Mažoji Lietuva (Kleinlitauen)|
 NA|pt|2023|NA|g|Freiden|
 NA|pt|2023|NA|g|Weltjugendtag 2023 Lissabon|
-NA|sm|2023|NA|g|500. Todestag von Pietro Perugino|
 NA|sm|2023|NA|g|500. Todestag von Luca Signorelli|
 NA|sk|2023|NA|g|200. Jahrestag der Einführung einer fahrplanmäßigen Pferde-Eilpost Wien – Bratislava|
 
