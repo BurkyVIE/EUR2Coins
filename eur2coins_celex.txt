@@ -512,6 +512,7 @@ C2023/204/06|be|2023|2023-6-20|g|„Jahr des Jugendstils“ (Art Nouveau), das 2
 C2023/204/10|sm|2023|2023-4-24|g|500. Todestag von Pietro Perugino|
 C2023/262/04|fr|2023|2023-7-4|g|Rugby-Weltmeisterschaft Frankreich 2023|
 C2023/262/05|gr|2023|2023-6-27|g|100. Geburtstag von Maria Callas|
+C2023/264/07|ee|2023|2023-5-12|g|Estnischer Nationalvogel – die Rauchschwalbe|
 
 C2023/166/04|va|2023|NA|g|150. Todestag von Alessandro Manzoni|
 C2023/174/08|es|2023|NA|g|Vorsitz Spaniens im Rat der EU|
@@ -523,7 +524,6 @@ C2023/262/02|fi|2023|NA|g|Sozial- und Gesundheitsdienste|
 C2023/262/03|gr|2023|NA|g|150. Geburtstag des Mathematikers Constantin Carathéodory|
 
 NA|li|2023|2023-3-16|g|Zusammen mit der Ukraine|
-NA|ee|2023|2023-5-12|g|Rauchschwalbe|
 NA|mc|2023|2023-6-1|g|100. Geburtstag von Fürst Rainier III|
 NA|ie|2023|2023-6-22|g|50. Jahrestag des EU-Beitritts|
 NA|pt|2023|2023-7-6|g|Weltjugendtag 2023 Lissabon|
