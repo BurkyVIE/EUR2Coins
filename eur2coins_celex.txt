@@ -522,6 +522,7 @@ C2023/204/09|mt|2023|NA|g|Ankunft der Franzosen in Malta im Jahr 1798|
 C2023/204/11|mt|2023|NA|g|550. Geburtstag von Nikolaus Kopernikus|
 C2023/262/02|fi|2023|NA|g|Sozial- und Gesundheitsdienste|
 C2023/262/03|gr|2023|NA|g|150. Geburtstag des Mathematikers Constantin Carathéodory|
+C2023/275/12|hr|2023|NA|g|Einführung des Euro als offizielle Währung Kroatiens am 1. Januar 2023|
 
 NA|li|2023|2023-3-16|g|Zusammen mit der Ukraine|
 NA|mc|2023|2023-6-1|g|100. Geburtstag von Fürst Rainier III|
