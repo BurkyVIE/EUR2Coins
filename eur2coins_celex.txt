@@ -531,10 +531,10 @@ NA|mc|2023|2023-6-1|g|100. Geburtstag von Fürst Rainier III|
 NA|pt|2023|2023-7-6|g|Weltjugendtag 2023 Lissabon|
 NA|sk|2023|2023-10-11|g|200. Jahrestag der Einführung einer fahrplanmäßigen Pferde-Eilpost Wien – Bratislava|
 NA|be|2023|2023-10-25|g|75 Jahre Frauenwahlrecht in Belgien|
+NA|pt|2023|2023-11-15|g|Friede|
+NA|ad|2023|2023-11-27|g|30. Jahrestag des Beitritts Andorras zu den Vereinten Nationen|
+NA|ad|2023|2023-11-27|g|Falles - Feste der Sommersonnenwende|
 
-NA|pt|2023|NA|g|Frieden|
-NA|ad|2023|NA|g|30. Jahrestag des Beitritts Andorras zu den Vereinten Nationen|
-NA|ad|2023|NA|g|Feste der Sommersonnenwende (Falles)|
 NA|si|2023|NA|g|150. Geburtstages von Josip Plemelj|
 
 
