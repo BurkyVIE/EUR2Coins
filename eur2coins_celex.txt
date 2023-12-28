@@ -526,16 +526,15 @@ C2023/295/05|ie|2023|2023-6-22|g|50. Jahrestag des Beitritts Irlands zur Europä
 C2023/1620|pt|2023|2023-11-15|g|Friede|
 C2023/1621|lv|2023|2023-5-30|g|Ukrainische Sonnenblume|
 C2023/1622|mc|2023|2023-6-1|g|100. Geburtstag von Fürst Rainier III.|
+C2023/1623|ad|2023|2023-11-27|g|Feuerfeste zur Sommersonnenwende in den Pyrenäen|
+C2023/1625|ad|2023|2023-11-27|g|30 Jahrestag des Beitritts des Fürstentums Andorra zu den Vereinten Nationen|
 C2023/1626|sk|2023|2023-10-11|g|200-jähriges Bestehen der Pferde-Expresspost Wien – Bratislava|
+C2023/1627|be|2023|2023-10-25|g|75 Jahre Frauenwahlrecht in Belgien|
+C2023/1629|pt|2023|2023-7-6|g|Weltjugendtag|
 
 
 
-NA|pt|2023|2023-7-6|g|Weltjugendtag 2023 Lissabon|
-NA|be|2023|2023-10-25|g|75 Jahre Frauenwahlrecht in Belgien|
-NA|ad|2023|2023-11-27|g|30. Jahrestag des Beitritts Andorras zu den Vereinten Nationen|
-NA|ad|2023|2023-11-27|g|Falles - Feste der Sommersonnenwende|
-
-NA|si|2023|NA|g|150. Geburtstages von Josip Plemelj|
+C2023/1628|si|2023|NA|g|150. Geburtstag des Mathematikers und Astronomen Josip Plemelj|
 
 
 
