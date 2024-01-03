@@ -522,10 +522,10 @@ server <- function(input, output, session) {
   output$fros_tab <- renderTable({fros_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   fros_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     fros <- tribble(~Amtsblatt, ~Beschreibung,
-                    'C2021/470/07', '<b>Die sprintende Marianne</b>',
-                    'C2023/014/04', '<b>Der Genius und das Diskuswerfen - Arc de Triomphe</b>',
+                    'C2021/470/07', '<b>Marianne und der Wettlauf - Eiffelturm</b>',
+                    'C2023/014/04', '<b>Der Genius und der Diskuswurf - Arc de Triomphe</b>',
                     NA, '<b>Die Säerin und der Faustkampf – Pont Neuf</b>',
-                    NA, '<b>Herkules und der Ringkampf</b>') |>
+                    NA, '<b>Herkules und der Ringkampf - Nortre Dame</b>') |>
       left_join(all_data(), by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
