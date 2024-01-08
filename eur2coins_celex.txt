@@ -531,10 +531,7 @@ C2023/1625|ad|2023|2023-11-27|g|30 Jahrestag des Beitritts des Fürstentums Ando
 C2023/1626|sk|2023|2023-10-11|g|200-jähriges Bestehen der Pferde-Expresspost Wien – Bratislava|
 C2023/1627|be|2023|2023-10-25|g|75 Jahre Frauenwahlrecht in Belgien|
 C2023/1629|pt|2023|2023-7-6|g|Weltjugendtag|
-
-
-
-C2023/1628|si|2023|NA|g|150. Geburtstag des Mathematikers und Astronomen Josip Plemelj|
+C2023/1628|si|2023|2024-12-19|g|150. Geburtstag des Mathematikers und Astronomen Josip Plemelj|
 
 
 
