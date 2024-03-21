@@ -535,6 +535,21 @@ C2023/1628|si|2023|2024-12-19|g|150. Geburtstag des Mathematikers und Astronomen
 
 
 
+C2024/2355|de|2024|2024-1-30|g|Mecklenburg-Vorpommern|A,D,F,G,J
+
+C2024/2352|es|2024||g|200. Jubiläum der Gründung der Policia Nacional, der für die Sicherheit auf dem gesamten Staatsgebiet zuständigen Nationalpolizei|
+C2024/2353|de|2024||g|175. Jubiläum der Frankfurter Verfassung (oder „Paulskirchenverfassung“, des ersten Versuchs einer gesamtstaatlichen Verfassung für ein vereintes Deutschland)|A,D,F,G,J
+C2024/2354|es|2024||g|Anerkennung von Sevilla (Archivo de Indias, Real Alcázar und Kathedrale von Sevilla) als UNESCO-Weltkulturerbe
+C2024/2356|be|2024||g|Belgischer EU-Ratsvorsitz|
+
+NA|fr|2024|2024-1-9|g|Herkules und der Ringkampf – Notre Dame|
+NA|lu|2024|2024-1-29|g|175. Todestag von Großherzog Guillaume II.|
+NA|lu|2024|2024-1-29|g|100. Jahrestag der Einführung der Franc-Münzen mit dem Feierstëppler|
+NA|it|2024|2024-3-12|g|250. Jahrestag der Gründung der Guardia di Finanza|
+NA|fi|2024|2024-3-14|g|Wahlen und Demokratie|
+
+
+
 C2014/062/07|ad|2014|NA|u|Staatswappen von Andorra (2014 -)|
 C2014/062/07|ad|2015|NA|u|Staatswappen von Andorra (2014 -)|
 C2014/062/07|ad|2016|NA|u|Staatswappen von Andorra (2014 -)|
