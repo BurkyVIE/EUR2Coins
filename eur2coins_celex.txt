@@ -500,10 +500,10 @@ C2023/116/09|fi|2023|2023-3-21|g|Erstes Naturschutzgesetz Finnlands|
 C2023/116/10|es|2023|2023-3-28|g|UNESCO: Cáceres|
 C2023/116/11|sk|2023|2023-3-2|g|100. Jahrestag der ersten Bluttransfusion in der Slowakei|
 C2023/116/12|fr|2023|2023-1-10|g|Olympische Spiele Paris 2024|
-C2023/122/02|it|2023|2023-3-21|g|100 Jahre Italienische Luftstreitkräfte|
 C2023/122/02|lt|2023|2023-3-16|g|Gemeinsam mit der Ukraine|
+C2023/122/03|it|2023|2023-3-21|g|100 Jahre Italienische Luftstreitkräfte|
 C2023/122/04|it|2023|2023-5-15|g|150. Todestag von Alessandro Manzoni|
-C2023/122/06|lu|2023|2023-4-24|g|25. Jahrestag der Mitgliedschaft von Großherzog Henri im Internationalen Olympischen Komitee|
+C2023/122/05|lu|2023|2023-4-24|g|25. Jahrestag der Mitgliedschaft von Großherzog Henri im Internationalen Olympischen Komitee|
 C2023/123/05|lu|2023|2023-4-24|g|175. Jahrestag des Bestehens der luxemburgischen Abgeordnetenkammer|
 C2023/123/06|de|2023|2023-1-24|g|Bundesländer-Serie – Hamburg|A,D,F,G,J
 C2023/123/07|de|2023|2023-3-30|g|1275. Jahrestag der Geburt Karls des Großen (748–814), König über das Frankenreich und römischer Kaiser|A,D,F,G,J
