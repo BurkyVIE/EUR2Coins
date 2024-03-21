@@ -285,7 +285,11 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                             h2("Prähistorische Stätten"),
                                                             tableOutput(outputId = "mtps_tab"),
                                                             h2("Von Kindern mit Solidarität"),
-                                                            tableOutput(outputId = "mtks_tab")
+                                                            tableOutput(outputId = "mtks_tab"),
+                                                            h2("Einheimische Arten Maltas"),
+                                                            tableOutput(outputId = "mtea_tab"),
+                                                            h2("Maltesische Städte mit Stadtmauern"),
+                                                            tableOutput(outputId = "mtsm_tab"),
                                                             )
                                                           )#,
                                                  #tabPanel("...")
@@ -493,30 +497,30 @@ server <- function(input, output, session) {
     }, ignoreNULL = FALSE)
   
   ### Deutschland - Bundesländerserie II ----
-  # output$debl2_tab <- renderTable({debl2_tab()}, bordered = T, spacing = "l", align = "clccccc", rownames = FALSE, sanitize.text.function = function(x) x)
-  # debl2_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-  # debl2 <- tribble(~Amtsblatt, ~Beschreibung,
-  #                  NA, '<b>Hamburg</b><br>(Elbphilharmonie)',
-  #                  NA, '<b>Mecklenburg-Vorpommern</b><br>(Königsstuhl)',
-  #                  NA, '<b>Saarland</b><br>(Saarschleife)',
-  #                  NA, '<b>Unbekannt</b><br>()',
-  #                  NA, '<b>Unbekannt</b><br>()',
-  #                  NA, '<b>Unbekannt</b><br>()',
-  #                  NA, '<b>Unbekannt</b><br>()',
-  #                  NA, '<b>Unbekannt</b><br>()',
-  #                  NA, '<b>Unbekannt</b><br>()',
-  #                  NA, '<b>Unbekannt</b><br>()',
-  #                  NA, '<b>Unbekannt</b><br>()',
-  #                  NA, '<b>Unbekannt</b><br>()',
-  #                  NA, '<b>Unbekannt</b><br>()',
-  #                  NA, '<b>Unbekannt</b><br>()',
-  #                  NA, '<b>Unbekannt</b><br>()',
-  #                  NA, '<b>Unbekannt</b><br>()') |>
-  #   left_join(all_data(), by = "Amtsblatt") |> 
-  #   filter(!is.na(Amtsblatt))
-  # 
-  # displ_data(debl2, "serde")
-  # }, ignoreNULL = FALSE)
+  output$debl2_tab <- renderTable({debl2_tab()}, bordered = T, spacing = "l", align = "clccccc", rownames = FALSE, sanitize.text.function = function(x) x)
+  debl2_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+  debl2 <- tribble(~Amtsblatt, ~Beschreibung,
+                   'C2023/123/06', '<b>Hamburg</b><br>(Elbphilharmonie)',
+                   'C2024/2355', '<b>Mecklenburg-Vorpommern</b><br>(Königsstuhl)',
+                   NA, '<b>Saarland</b><br>(Saarschleife)',
+                   NA, '<b>Unbekannt</b><br>()',
+                   NA, '<b>Unbekannt</b><br>()',
+                   NA, '<b>Unbekannt</b><br>()',
+                   NA, '<b>Unbekannt</b><br>()',
+                   NA, '<b>Unbekannt</b><br>()',
+                   NA, '<b>Unbekannt</b><br>()',
+                   NA, '<b>Unbekannt</b><br>()',
+                   NA, '<b>Unbekannt</b><br>()',
+                   NA, '<b>Unbekannt</b><br>()',
+                   NA, '<b>Unbekannt</b><br>()',
+                   NA, '<b>Unbekannt</b><br>()',
+                   NA, '<b>Unbekannt</b><br>()',
+                   NA, '<b>Unbekannt</b><br>()') |>
+    left_join(all_data(), by = "Amtsblatt") |>
+    filter(!is.na(Amtsblatt))
+
+  displ_data(debl2, "serde")
+  }, ignoreNULL = FALSE)
 
     ### Frankreich - Olympische Sommerspiele 2024 ----
   output$fros_tab <- renderTable({fros_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
@@ -524,7 +528,7 @@ server <- function(input, output, session) {
     fros <- tribble(~Amtsblatt, ~Beschreibung,
                     'C2021/470/07', '<b>Marianne und der Wettlauf - Eiffelturm</b>',
                     'C2023/014/04', '<b>Der Genius und der Diskuswurf - Arc de Triomphe</b>',
-                    NA, '<b>Die Säerin und der Faustkampf – Pont Neuf</b>',
+                    'C2023/116/12', '<b>Die Säerin und der Faustkampf – Pont Neuf</b>',
                     NA, '<b>Herkules und der Ringkampf - Nortre Dame</b>') |>
       left_join(all_data(), by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
@@ -539,8 +543,7 @@ server <- function(input, output, session) {
                     'C2019/351/10', '<b>Žemaitija</b><br>(Niederlittauen)',
                     'C2020/053/04', '<b>Aukschtaiten</b><br>(Oberlitauen)',
                     'C2021/473/05', '<b>Dzukija</b><br>(Mittellitauen)',
-                    'C2022/484/25', '<b>Suvalkija</b><br>(Sudauen)',
-                    NA, '<b>Mažoji Lietuva</b><br>(Kleinlitauen)') |>
+                    'C2022/484/25', '<b>Suvalkija</b><br>(Sudauen)') |>
       left_join(all_data(), by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
@@ -579,8 +582,9 @@ server <- function(input, output, session) {
                     'C2021/020/06', '<b>40. Hochzeitstag Großherzog Henris und Großherzogin Maria Teresas</b>',
                     'C2022/145/10', '<b>50. Jahrestag der Flagge Luxemburgs</b>',
                     'C2022/484/21', '<b>10. Hochzeitstag von Erbgroßherzog Guillaume und Erbgroßherzogin Stéphanie</b>',
-                    NA, '<b>175. Jahrestag der Abgeordnetenkammer und der ersten Verfassung (1848)</b>',
-                    NA, '<b>25. Jahrestag der Aufnahme von Großherzog Henri als Mitglied des Internationalen Olympischen Komitees</b>') |>
+                    'C2023/123/05', '<b>175. Jahrestag der Abgeordnetenkammer und der ersten Verfassung (1848)</b>',
+                    'C2023/122/05', '<b>25. Jahrestag der Aufnahme von Großherzog Henri als Mitglied des Internationalen Olympischen Komitees</b>',
+                    NA, '<b>175. Todestag von Großherzog Guillaume II.</b>') |>
       left_join(all_data(), by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
@@ -616,6 +620,21 @@ server <- function(input, output, session) {
     displ_data(mtvg, "ser")
     }, ignoreNULL = FALSE)
   
+  ### Malta - Verfassungsgeschichte ----
+  output$mtvg_tab <- renderTable({mtvg_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
+  mtvg_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    mtvg <- tribble(~Amtsblatt, ~Beschreibung,
+                    'C2011/299/08', '<b>Wahl der ersten Abgeordneten 1849</b>',
+                    'C2012/375/06', '<b>Mehrheitswahlrecht 1887</b>',
+                    'C2013/379/09', '<b>Einrichtung der Selbstverwaltung 1921	</b>',
+                    'C2014/383/05', '<b>Unabhängigkeit von Großbritannien 1964	</b>',
+                    'C2015/150/03', '<b>Ausrufung der Republik Malta 1974</b>') |>
+      left_join(all_data(), by = "Amtsblatt") |> 
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(mtvg, "ser")
+  }, ignoreNULL = FALSE)
+  
   ### Malta - Prähistorische Stätten ----
   output$mtps_tab <- renderTable({mtps_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   mtps_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
@@ -648,6 +667,28 @@ server <- function(input, output, session) {
     displ_data(mtks, "ser")
     }, ignoreNULL = FALSE)
   
+  ### Malta - Einheimische Arten Maltas ----
+  output$mtea_tab <- renderTable({mtea_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
+  mtea_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    mtea <- tribble(~Amtsblatt, ~Beschreibung,
+                    NA, '<b>Die maltesische Honigbiene</b>') |>
+      left_join(all_data(), by = "Amtsblatt") |> 
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(mtea, "ser")
+  }, ignoreNULL = FALSE)
+  
+  ### Malta - Maltesische Städte mit Stadtmauern ----
+  output$mtsm_tab <- renderTable({mtsm_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
+  mtsm_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    mtsm <- tribble(~Amtsblatt, ~Beschreibung,
+                    NA, '<b>Cittadella Gozo</b>') |>
+      left_join(all_data(), by = "Amtsblatt") |> 
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(mtsm, "ser")
+  }, ignoreNULL = FALSE)
+  
   ### Spanien - UNESCO Welterbestätten ----
   output$esun_tab <- renderTable({esun_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   esun_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
@@ -665,8 +706,8 @@ server <- function(input, output, session) {
                     'C2020/049/12', '<b>Architektur der Mudéjares in Aragon</b><br>(Turm von El Salvador in Teruel)',
                     'C2021/096/08', '<b>Historische Altstadt von Toledo</b><br>(Puerta del Sol und Detail der Synagoge El Tránsito in Toledo)',
                     'C2022/484/10', '<b>Nationalpark Garajonay auf La Gomera</b><br>(Roque de Agando mit Lorbeerwald)',
-                    NA, '<b>Altstadt von Cáceres</b><br>(Plaza Mayor)',
-                    NA, '<b>Kathedrale, Alcázar und Indienarchiv in Sevilla</b><br>()',
+                    'C2023/116/10', '<b>Altstadt von Cáceres</b><br>(Plaza Mayor)',
+                    'C2024/2354', '<b>Kathedrale, Alcázar und Indienarchiv in Sevilla</b><br>(Jungfrauenhof des Alcázar von Sevilla)',
                     NA, '<b>Altstadt von Salamanca</b><br>()') |>
       left_join(all_data(), by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
