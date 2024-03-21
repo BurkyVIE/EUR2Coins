@@ -503,19 +503,19 @@ server <- function(input, output, session) {
                    'C2023/123/06', '<b>Hamburg</b><br>(Elbphilharmonie)',
                    'C2024/2355', '<b>Mecklenburg-Vorpommern</b><br>(Königsstuhl)',
                    NA, '<b>Saarland</b><br>(Saarschleife)',
-                   NA, '<b>Unbekannt</b><br>()',
-                   NA, '<b>Unbekannt</b><br>()',
-                   NA, '<b>Unbekannt</b><br>()',
-                   NA, '<b>Unbekannt</b><br>()',
-                   NA, '<b>Unbekannt</b><br>()',
-                   NA, '<b>Unbekannt</b><br>()',
-                   NA, '<b>Unbekannt</b><br>()',
-                   NA, '<b>Unbekannt</b><br>()',
-                   NA, '<b>Unbekannt</b><br>()',
-                   NA, '<b>Unbekannt</b><br>()',
-                   NA, '<b>Unbekannt</b><br>()',
-                   NA, '<b>Unbekannt</b><br>()',
-                   NA, '<b>Unbekannt</b><br>()') |>
+                   NA, '<b>Bremen</b><br>(Klimahaus Bremerhaven)',
+                   NA, '<b>Nordrhein-Westfalen</b><br>()',
+                   NA, '<b>Bayern</b><br>()',
+                   NA, '<b>Baden-Württemberg</b><br>()',
+                   NA, '<b>Niedersachsen</b><br>()',
+                   NA, '<b>Hessen</b><br>()',
+                   NA, '<b>Sachsen</b><br>()',
+                   NA, '<b>Rheinland-Pfalz</b><br>()',
+                   NA, '<b>Berlin</b><br>()',
+                   NA, '<b>Schleswig-Holstein</b><br>()',
+                   NA, '<b>Brandenburg</b><br>()',
+                   NA, '<b>Sachsen-Anhalt</b><br>()',
+                   NA, '<b>Thüringen</b><br>()') |>
     left_join(all_data(), by = "Amtsblatt") |>
     filter(!is.na(Amtsblatt))
 
