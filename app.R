@@ -242,6 +242,13 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                             tableOutput(outputId = "debl2_tab")
                                                             )
                                                           ),
+                                                 tabPanel("EE",
+                                                          fluidPage(
+                                                            h1("Estland"),
+                                                            h2("Nationale Symbole"),
+                                                            tableOutput(outputId = "eens_tab")
+                                                          )
+                                                 ),
                                                  tabPanel("ES",
                                                           fluidPage(
                                                             h1("Spanien"),
@@ -522,7 +529,19 @@ server <- function(input, output, session) {
   displ_data(debl2, "serde")
   }, ignoreNULL = FALSE)
 
-    ### Frankreich - Olympische Sommerspiele 2024 ----
+  ### Estland - Nationale Symbole ----
+  output$eens_tab <- renderTable({eens_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
+  eens_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    eens <- tribble(~Amtsblatt, ~Beschreibung,
+                    'C2021/059/05', '<b>Der Wolf, das Nationaltier</b>',
+                    'C2023/264/07', '<b>Die Rauchschwalbe, der Nationalvogel</b>',
+                    NA, '<b>Die Kornblume, die Nationalblume</b>') |>
+      left_join(all_data(), by = "Amtsblatt") |> 
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(eens, "ser")
+  }, ignoreNULL = FALSE)
+  ### Frankreich - Olympische Sommerspiele 2024 ----
   output$fros_tab <- renderTable({fros_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   fros_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     fros <- tribble(~Amtsblatt, ~Beschreibung,
