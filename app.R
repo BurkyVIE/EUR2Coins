@@ -508,7 +508,7 @@ server <- function(input, output, session) {
   debl2_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
   debl2 <- tribble(~Amtsblatt, ~Beschreibung,
                    'C2023/123/06', '<b>Hamburg</b><br>(Elbphilharmonie)',
-                   'C2024/2355', '<b>Mecklenburg-Vorpommern</b><br>(Königsstuhl)',
+                   'C/2024/02355', '<b>Mecklenburg-Vorpommern</b><br>(Königsstuhl)',
                    NA, '<b>Saarland</b><br>(Saarschleife)',
                    NA, '<b>Bremen</b><br>(Klimahaus Bremerhaven)',
                    NA, '<b>Nordrhein-Westfalen</b><br>()',
@@ -727,7 +727,7 @@ server <- function(input, output, session) {
                     'C2021/096/08', '<b>Historische Altstadt von Toledo</b><br>(Puerta del Sol und Detail der Synagoge El Tránsito in Toledo)',
                     'C2022/484/10', '<b>Nationalpark Garajonay auf La Gomera</b><br>(Roque de Agando mit Lorbeerwald)',
                     'C2023/116/10', '<b>Altstadt von Cáceres</b><br>(Plaza Mayor)',
-                    'C2024/2354', '<b>Kathedrale, Alcázar und Indienarchiv in Sevilla</b><br>(Jungfrauenhof des Alcázar von Sevilla)',
+                    'C/2024/02354', '<b>Kathedrale, Alcázar und Indienarchiv in Sevilla</b><br>(Jungfrauenhof des Alcázar von Sevilla)',
                     NA, '<b>Altstadt von Salamanca</b><br>()') |>
       left_join(all_data(), by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
