@@ -496,7 +496,7 @@ server <- function(input, output, session) {
                      'C2018/466/08', '<b>Sitz des Bundesrates</b><br>(Preußisches Herrenhaus, Sitz des Bundesrates)',
                      'C2020/049/11', '<b>Brandenburg</b><br>(Schloss Sanssouci)',
                      'C2021/020/04', '<b>Sachsen-Anhalt</b><br>(Magdeburger Dom)',
-                     NA, '<b>Thüringen</b><br>(Wartburg)') |>
+                     'C2022/145/08', '<b>Thüringen</b><br>(Wartburg)') |>
       left_join(all_data(), by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
