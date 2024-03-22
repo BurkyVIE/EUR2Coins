@@ -472,7 +472,7 @@ C2022/145/08|de|2022|2022-1-25|g|Bundesländer-Serie – Thüringen|A,D,F,G,J
 C2020/145/09|it|2022|2022-5-17|g|30. Todestag von Giovanni Falcone und Paolo Borsellino|
 C2022/145/10|lu|2022|2022-7-1|g|50 Jahre gesetzlicher Schutz der luxemburgischen Flagge|
 C2022/484/07|be|2022|2022-5-11|g|Gesundheitswesen – Würdigung des außergewöhnlichen Engagements in der COVID-19-Pandemie|
-C2022/484/08|gr|2022|2022-7-1|g| 200. Jahrestag der ersten griechischen Verfassung|
+C2022/484/08|gr|2022|2022-7-1|g|200. Jahrestag der ersten griechischen Verfassung|
 C2022/484/09|es|2022|2022-3-23|g|500. Jahrestag der ersten Weltumrundung|
 C2022/484/10|es|2022|2022-3-23|g|UNESCO-Welterbe – Nationalpark Garajonay|
 C2022/484/11|ee|2022|2022-3-9|g|150. Jahrestag der Gründung der Estnischen Literaturgesellschaft|
