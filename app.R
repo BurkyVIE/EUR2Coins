@@ -548,7 +548,8 @@ server <- function(input, output, session) {
                     'C2021/470/07', '<b>Marianne und der Wettlauf - Eiffelturm</b>',
                     'C2023/014/04', '<b>Der Genius und der Diskuswurf - Arc de Triomphe</b>',
                     'C2023/116/12', '<b>Die Säerin und der Faustkampf – Pont Neuf</b>',
-                    NA, '<b>Herkules und der Ringkampf - Nortre Dame</b>') |>
+                    NA, '<b>Herkules und der Ringkampf - Nortre Dame</b>',
+                    NA, '<b>Olympische und Paralympische Spiele 2024 in Paris</b>') |>
       left_join(all_data(), by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
