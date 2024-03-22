@@ -533,9 +533,9 @@ C/2023/01627|be|2023|2023-10-25|g|75 Jahre Frauenwahlrecht in Belgien|
 C/2023/01629|pt|2023|2023-7-6|g|Weltjugendtag|
 C/2023/01628|si|2023|2024-12-19|g|150. Geburtstag des Mathematikers und Astronomen Josip Plemelj|
 
-
-
 C/2024/02355|de|2024|2024-1-30|g|Mecklenburg-Vorpommern|A,D,F,G,J
+
+
 
 C/2024/02352|es|2024||g|200. Jubiläum der Gründung der Policia Nacional, der für die Sicherheit auf dem gesamten Staatsgebiet zuständigen Nationalpolizei|
 C/2024/02353|de|2024||g|175. Jubiläum der Frankfurter Verfassung (oder „Paulskirchenverfassung“, des ersten Versuchs einer gesamtstaatlichen Verfassung für ein vereintes Deutschland)|A,D,F,G,J
