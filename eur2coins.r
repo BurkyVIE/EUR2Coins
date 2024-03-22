@@ -19,7 +19,7 @@ import_celex <- function(file) {
 
 # IMPORT ----
 ## get list of files ----
-filelist <- dir(directory)
+filelist <- dir()
 filelist <- filelist[startsWith(filelist, "eur2coins_celex")]
 
 ## do import
