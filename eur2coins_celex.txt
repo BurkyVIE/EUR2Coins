@@ -451,7 +451,7 @@ C2022/012/03|de|2022|2022-7-1|g|35 Jahre Erasmus-Programm|A,D,F,G,J
 C2022/012/03|ee|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/012/03|fi|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/012/03|gr|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/012/03|ir|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|ie|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/012/03|it|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/012/03|lv|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/012/03|lt|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
