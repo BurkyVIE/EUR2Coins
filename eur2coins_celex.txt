@@ -523,24 +523,24 @@ C2023/262/05|gr|2023|2023-6-27|g|100. Geburtstag von Maria Callas|
 C2023/264/07|ee|2023|2023-5-12|g|Estnischer Nationalvogel – die Rauchschwalbe|
 C2023/275/12|hr|2023|2023-9-15|g|Einführung des Euro als offizielle Währung Kroatiens am 1. Januar 2023|
 C2023/295/05|ie|2023|2023-6-22|g|50. Jahrestag des Beitritts Irlands zur Europäischen Union|
-C2023/1620|pt|2023|2023-11-15|g|Friede|
-C2023/1621|lv|2023|2023-5-30|g|Ukrainische Sonnenblume|
-C2023/1622|mc|2023|2023-6-1|g|100. Geburtstag von Fürst Rainier III.|
-C2023/1623|ad|2023|2023-11-27|g|Feuerfeste zur Sommersonnenwende in den Pyrenäen|
-C2023/1625|ad|2023|2023-11-27|g|30 Jahrestag des Beitritts des Fürstentums Andorra zu den Vereinten Nationen|
-C2023/1626|sk|2023|2023-10-11|g|200-jähriges Bestehen der Pferde-Expresspost Wien – Bratislava|
-C2023/1627|be|2023|2023-10-25|g|75 Jahre Frauenwahlrecht in Belgien|
-C2023/1629|pt|2023|2023-7-6|g|Weltjugendtag|
-C2023/1628|si|2023|2024-12-19|g|150. Geburtstag des Mathematikers und Astronomen Josip Plemelj|
+C/2023/01620|pt|2023|2023-11-15|g|Friede|
+C/2023/01621|lv|2023|2023-5-30|g|Ukrainische Sonnenblume|
+C/2023/01622|mc|2023|2023-6-1|g|100. Geburtstag von Fürst Rainier III.|
+C/2023/01623|ad|2023|2023-11-27|g|Feuerfeste zur Sommersonnenwende in den Pyrenäen|
+C/2023/01625|ad|2023|2023-11-27|g|30 Jahrestag des Beitritts des Fürstentums Andorra zu den Vereinten Nationen|
+C/2023/01626|sk|2023|2023-10-11|g|200-jähriges Bestehen der Pferde-Expresspost Wien – Bratislava|
+C/2023/01627|be|2023|2023-10-25|g|75 Jahre Frauenwahlrecht in Belgien|
+C/2023/01629|pt|2023|2023-7-6|g|Weltjugendtag|
+C/2023/01628|si|2023|2024-12-19|g|150. Geburtstag des Mathematikers und Astronomen Josip Plemelj|
 
 
 
-C2024/2355|de|2024|2024-1-30|g|Mecklenburg-Vorpommern|A,D,F,G,J
+C72024/02355|de|2024|2024-1-30|g|Mecklenburg-Vorpommern|A,D,F,G,J
 
-C2024/2352|es|2024||g|200. Jubiläum der Gründung der Policia Nacional, der für die Sicherheit auf dem gesamten Staatsgebiet zuständigen Nationalpolizei|
-C2024/2353|de|2024||g|175. Jubiläum der Frankfurter Verfassung (oder „Paulskirchenverfassung“, des ersten Versuchs einer gesamtstaatlichen Verfassung für ein vereintes Deutschland)|A,D,F,G,J
-C2024/2354|es|2024||g|Anerkennung von Sevilla (Archivo de Indias, Real Alcázar und Kathedrale von Sevilla) als UNESCO-Weltkulturerbe
-C2024/2356|be|2024||g|Belgischer EU-Ratsvorsitz|
+C72024/02352|es|2024||g|200. Jubiläum der Gründung der Policia Nacional, der für die Sicherheit auf dem gesamten Staatsgebiet zuständigen Nationalpolizei|
+C72024/02353|de|2024||g|175. Jubiläum der Frankfurter Verfassung (oder „Paulskirchenverfassung“, des ersten Versuchs einer gesamtstaatlichen Verfassung für ein vereintes Deutschland)|A,D,F,G,J
+C72024/02354|es|2024||g|Anerkennung von Sevilla (Archivo de Indias, Real Alcázar und Kathedrale von Sevilla) als UNESCO-Weltkulturerbe
+C72024/02356|be|2024||g|Belgischer EU-Ratsvorsitz|
 
 NA|fr|2024|2024-1-9|g|Herkules und der Ringkampf – Notre Dame|
 NA|lu|2024|2024-1-29|g|175. Todestag von Großherzog Guillaume II.|
