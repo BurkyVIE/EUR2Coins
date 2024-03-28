@@ -3,7 +3,7 @@ library(tidyverse)
 
 # GLOBAL ----
 ## where is directory ----
-directory <- "/celex"
+directory <- ""
 
 ## import celex_*.txt ----
 import_celex <- function(file) {
