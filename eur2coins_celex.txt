@@ -533,6 +533,8 @@ C/2023/01627|be|2023|2023-10-25|g|75 Jahre Frauenwahlrecht in Belgien|
 C/2023/01629|pt|2023|2023-7-6|g|Weltjugendtag|
 C/2023/01628|si|2023|2024-12-19|g|150. Geburtstag des Mathematikers und Astronomen Josip Plemelj|
 
+C/2024/02352|es|2024|2024-2-2|g|200. Jubiläum der Gründung der Policia Nacional, der für die Sicherheit auf dem gesamten Staatsgebiet zuständigen Nationalpolizei|
+C/2024/02354|es|2024|2024-2-2|g|Anerkennung von Sevilla (Archivo de Indias, Real Alcázar und Kathedrale von Sevilla) als UNESCO-Weltkulturerbe
 C/2024/02355|de|2024|2024-1-30|g|Mecklenburg-Vorpommern|A,D,F,G,J
 C/2024/02356|be|2024|2024-1-15|g|Belgischer EU-Ratsvorsitz|
 C/2024/02466|lu|2024|2024-1-29|175. Todestag von Großherzog Wilhelm II.|
@@ -542,13 +544,9 @@ C/2024/02473|it|2024|2024-3-12|g|250. Jahrestag der Gründung der Guardia di Fin
 
 
 
-C/2024/02352|es|2024||g|200. Jubiläum der Gründung der Policia Nacional, der für die Sicherheit auf dem gesamten Staatsgebiet zuständigen Nationalpolizei|
 C/2024/02353|de|2024||g|175. Jubiläum der Frankfurter Verfassung (oder „Paulskirchenverfassung“, des ersten Versuchs einer gesamtstaatlichen Verfassung für ein vereintes Deutschland)|A,D,F,G,J
-C/2024/02354|es|2024||g|Anerkennung von Sevilla (Archivo de Indias, Real Alcázar und Kathedrale von Sevilla) als UNESCO-Weltkulturerbe
 C/2024/02464|it|2024||g|Rita Levi-Montalcini|
 
-NA|es|2024|2024-2-2|g|Nationales Polizeikorps|
-NA|es|2024|2024-2-2|g|UNESCO-Weltkulturerbe – Kathedrale von Sevilla, Königlicher Alcázar und Archivo de Indias|
 NA|fi|2024|2024-3-14|g|Wahlen und Demokratie|
 NA|de|2024|2024-3-21|g|175. Jubiläum Paulskirchenverfassung|
 
