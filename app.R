@@ -604,7 +604,7 @@ server <- function(input, output, session) {
                     'C2022/484/21', '<b>10. Hochzeitstag von Erbgroßherzog Guillaume und Erbgroßherzogin Stéphanie</b>',
                     'C2023/123/05', '<b>175. Jahrestag der Abgeordnetenkammer und der ersten Verfassung (1848)</b>',
                     'C2023/122/05', '<b>25. Jahrestag der Aufnahme von Großherzog Henri als Mitglied des Internationalen Olympischen Komitees</b>',
-                    NA, '<b>175. Todestag von Großherzog Guillaume II.</b>') |>
+                    'C/2024/02466', '<b>175. Todestag von Großherzog Guillaume II.</b>') |>
       left_join(all_data(), by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
