@@ -535,31 +535,33 @@ C/2023/01628|si|2023|2024-12-19|g|150. Geburtstag des Mathematikers und Astronom
 
 C/2024/02352|es|2024|2024-2-2|g|200. Jubiläum der Gründung der Policia Nacional, der für die Sicherheit auf dem gesamten Staatsgebiet zuständigen Nationalpolizei|
 C/2024/02353|de|2024|2024-3-21|g|175. Jubiläum der Frankfurter Verfassung (oder „Paulskirchenverfassung“, des ersten Versuchs einer gesamtstaatlichen Verfassung für ein vereintes Deutschland)|A,D,F,G,J
-C/2024/02354|es|2024|2024-2-2|g|Anerkennung von Sevilla (Archivo de Indias, Real Alcázar und Kathedrale von Sevilla) als UNESCO-Weltkulturerbe
+C/2024/02354|es|2024|2024-2-2|g|Anerkennung von Sevilla (Archivo de Indias, Real Alcázar und Kathedrale von Sevilla) als UNESCO-Weltkulturerbe|
 C/2024/02355|de|2024|2024-1-30|g|Mecklenburg-Vorpommern|A,D,F,G,J
 C/2024/02356|be|2024|2024-1-15|g|Belgischer EU-Ratsvorsitz|
-C/2024/02466|lu|2024|2024-1-29|175. Todestag von Großherzog Wilhelm II.|
+C/2024/02464|it|2024|2024-4-22|g|Rita Levi-Montalcini|
+C/2024/02466|lu|2024|2024-1-29|g|175. Todestag von Großherzog Wilhelm II.|
 C/2024/02467|lu|2024|2024-1-29|g|100. Jubiläum der Unterzeichnung des Großherzoglichen Erlasses über die Ausgabe der „Feierstëppler“-Scheidemünze aus Nickel durch Großherzogin Charlotte|
 C/2024/02468|fr|2024|2024-1-9|g|Olympische Spiele 2024 – Ringkampf|
 C/2024/02473|it|2024|2024-3-12|g|250. Jahrestag der Gründung der Guardia di Finanza|
+C/2024/03943|gr|2024|2024-6-17|g|Geburt von Penelope Delta vor 150 Jahren|
+C/2024/03944|be|2024|2024-5-13|g|Der Kampf gegen Krebs in Belgien|
 C/2024/03945|fi|2024|2024-3-14|g|Wahlen und Demokratie|
+C/2024/03948|sm|2024|2024-4-23|g|50. Jahrestag der Erklärung der Bürgerrechte und der Grundprinzipien der Rechtsordnung von San Marino|
+C/2024/03950|hr|2024|2024-7-2|g|Varaždin (Stari Grad Varaždin – die Festung von Varaždin)|
+C/2024/03951|pt|2024|2024-7-4|g|Die Teilnahme Portugals an den 33. Olympischen Spielen|
+C/2024/03959|fr|2024|2024-6-4|g|Der Eiffelturm|
+C/2024/03962|pt|2024|2024-4-22|g|Das 50. Jubiläum des 25. April 1974|
+C/2024/03963|mc|2024|2024-6-17|g|500 Jahre Vertrag mit Karl V.|
+C/2024/03964|gr|2024|2024-6-17|g|50-jähriges Jubiläum der Wiederherstellung der Demokratie in Griechenland|
+C/2024/03965|ee|2024|2024-5-21|g|Die Kornblume – estnische Nationalblume|
 
 
 
-C/2024/02464|it|2024||g|Rita Levi-Montalcini|
-C/2024/03943|gr|2024||Geburt von Penelope Delta vor 150 Jahren|
-C/2024/03944|be|2024||Der Kampf gegen Krebs in Belgien|
-C/2024/03946|mt|2024||Iċ-Ċittadella (Die Zitadelle)|
-C/2024/03947|va|2024||150. Geburtstag von Guglielmo Marconi|
-C/2024/03948|sm|2024||50. Jahrestag der Erklärung der Bürgerrechte und der Grundprinzipien der Rechtsordnung von San Marino|
-C/2024/03949|mt|2024||Die maltesische Honigbiene|
-C/2024/03950|hr|2024||Varaždin (Stari Grad Varaždin – die Festung von Varaždin)|
-C/2024/03951|pt|2024||Die Teilnahme Portugals an den 33. Olympischen Spielen|
-C/2024/03959|fr|2024||Der Eiffelturm|
-C/2024/03962|pt|2024||Das 50. Jubiläum des 25. April 1974|
-C/2024/03963|mc|2024||500 Jahre Vertrag mit Karl V.|
-C/2024/03964|gr|2024||50-jähriges Jubiläum der Wiederherstellung der Demokratie in Griechenland|
-C/2024/03965|ee|2024||Die Kornblume – estnische Nationalblume|
+C/2024/03946|mt|2024||g|Iċ-Ċittadella (Die Zitadelle)|
+C/2024/03947|va|2024||g|150. Geburtstag von Guglielmo Marconi|
+C/2024/03949|mt|2024||g|Die maltesische Honigbiene|
+
+NA|va|2024|2024-7-3|g|750. Todestag von Thomas von Aquin|
 
 
 C2014/062/07|ad|2014|NA|u|Staatswappen von Andorra (2014 -)|
