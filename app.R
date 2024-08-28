@@ -42,7 +42,10 @@ form_land <- function(txt) {
 
 ## Funktion zum Formatieren Amtsblatt ----
 form_amtsbl <- function(txt) {
-  paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:", txt, "', target = '_blank'>", txt, "</a>")
+  url <- paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:", txt, "', target = '_blank'>", txt, "</a>")
+  url <- str_replace(url, "\\(", "%28")
+  url <- str_replace(url, "\\)", "%29")
+  return(url)
 }
 
 ## Funktion zum laden der Daten, nach Änderung
