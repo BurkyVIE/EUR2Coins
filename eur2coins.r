@@ -3,7 +3,7 @@ library(tidyverse)
 
 # GLOBAL ----
 ## where is directory ----
-directory <- ""
+directory <- paste0(getwd(), "/") # oder für die Weiterentwicklung (= Teilung der CELEX-Daten): "celex/"
 
 ## import celex_*.txt ----
 import_celex <- function(file) {
@@ -19,8 +19,7 @@ import_celex <- function(file) {
 
 # IMPORT ----
 ## get list of files ----
-filelist <- dir()
-# filelist <- dir(directory)
+filelist <- dir(directory)
 filelist <- filelist[startsWith(filelist, "eur2coins_celex")]
 
 ## do import
