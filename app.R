@@ -394,7 +394,7 @@ server <- function(input, output, session) {
   output$suche_g <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_g()}, sanitize.text.function = function(x) x)
   tbl_g <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     he <- all_data() |> 
-      filter((!is.na(Ablage) | !input$sammlung), Münzart == "Gedenkmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) |>
+      filter((Ablage != " " | !input$sammlung), Münzart == "Gedenkmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) |>
       displ_data(variation = "ident")
     
   })
@@ -402,7 +402,7 @@ server <- function(input, output, session) {
   output$suche_u <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_u()}, sanitize.text.function = function(x) x)
   tbl_u <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     he <- all_data() |>
-      filter((!is.na(Ablage) | !input$sammlung), Münzart == "Umlaufmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) |>
+      filter((Ablage != " " | !input$sammlung), Münzart == "Umlaufmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) |>
       displ_data(variation = "ident")
   })
   
