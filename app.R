@@ -37,7 +37,7 @@ form_quali <- function(x) {
 ## Funktion zur Darstellung Land ----
 form_land <- function(txt) {
   txt <- tolower(txt) # jedenfalls Kleinbuchstaben
-  paste0("<img src='https://www.crwflags.com/fotw/images/", substr(txt, 1, 1), "/", txt, ".gif', height='14', alt='", toupper(txt), "'/>(", toupper(txt), ")")
+  paste0("<nobr><img src='https://www.crwflags.com/fotw/images/", substr(txt, 1, 1), "/", txt, ".gif', height='14', alt='", toupper(txt), "'/>&nbsp;<font size = -3>(", toupper(txt), ")</font></nobr>")
 }
 
 ## Funktion zum Formatieren Amtsblatt ----
@@ -137,8 +137,11 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                        fluidRow(
                                          column(width = 3,
                                                 h2("Anzeige"),
-                                                h3("Sammlung"),
-                                                checkboxInput(inputId = "sammlung", label = "nur Sammlung"),
+                                                h3("Münzen"),
+                                                radioButtons(inputId = "samlg", label = NULL, inline = TRUE,
+                                                             choices = c("Alle" = "alle",
+                                                                         "Vorhandene" = "ja",
+                                                                         "Fehlende" = "nein")),
                                                 h3("Münz ID"),
                                                 fluidRow(
                                                   column(9, textInput(inputId = "id", value = "", label = NULL)),
@@ -392,17 +395,17 @@ server <- function(input, output, session) {
   
   ## Ausgabe Gedenkmünzen ----
   output$suche_g <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_g()}, sanitize.text.function = function(x) x)
-  tbl_g <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+  tbl_g <- eventReactive(c(input$samlg, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     he <- all_data() |> 
-      filter((Ablage != " " | !input$sammlung), Münzart == "Gedenkmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) |>
+      filter((Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), Münzart == "Gedenkmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) |>
       displ_data(variation = "ident")
     
   })
   ## Ausgabe Umlaufmünzen ----
   output$suche_u <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_u()}, sanitize.text.function = function(x) x)
-  tbl_u <- eventReactive(c(input$sammlung, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+  tbl_u <- eventReactive(c(input$samlg, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     he <- all_data() |>
-      filter((Ablage != " " | !input$sammlung), Münzart == "Umlaufmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) |>
+      filter((Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), Münzart == "Umlaufmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) |>
       displ_data(variation = "ident")
   })
   
