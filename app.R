@@ -489,7 +489,7 @@ server <- function(input, output, session) {
       mutate(znr = as.numeric(str_sub(Ablage, 6, 9))) %>%
       filter(znr == input$znr)
       
-    paste0("Münze Nr. <b>",he$znr, "</b> mit Adresse <b>", he$Ablage, "</b> ist eine <b>", he$Prägejahr, "</b>er ", he$Münzart, " aus <b>", he$Land, "</b> mit Abbildung:<br><b>",
+    paste0("Münze Nr. <b>",he$znr, "</b> mit ID <b>",  he$ID, "</b> und Adresse <b>", he$Ablage, "</b> ist eine <b>", he$Prägejahr, "</b>er ", he$Münzart, " aus <b>", he$Land, "</b> mit Abbildung:<br><b>",
            he$Abbildung, "</b>")
     })
   
