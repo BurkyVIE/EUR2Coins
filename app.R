@@ -128,7 +128,7 @@ form_stat <- function(val, von, bis) {
 
 
 # UI (User Interface) ----
-ui <- fluidPage(includeCSS(path = "style.css"),
+ui <- fluidPage(includeCSS(path = "style_orig.css"),
                 tabsetPanel(id = "EUR2",
                             tabPanel("Identifikation",
                                      tags$script(highlight),
@@ -208,7 +208,8 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                                                 fluidRow(
                                                   column(9, textInput(inputId = "znr", label = NULL, value = pull(count(collection)))),
                                                   column(3, actionButton(inputId = "gehe_znr", label = ">>"))
-                                                )
+                                                ),
+                                                htmlOutput(outputId = "mnzname")
                                          ),
                                          column(width = 9,
                                                 h2("Ansicht"),
@@ -481,6 +482,17 @@ server <- function(input, output, session) {
     )
   }, ignoreNULL = FALSE)
   
+  ## Ausgabe Münzbeschreibung ----
+  output$mnzname <- renderText({abbi()})
+  abbi <- eventReactive(c(input$gehe_znr), {
+    he <- all_data() %>%
+      mutate(znr = as.numeric(str_sub(Ablage, 6, 9))) %>%
+      filter(znr == input$znr)
+      
+    paste0("Münze Nr. <b>",he$znr, "</b> mit Adresse <b>", he$Ablage, "</b> ist eine <b>", he$Prägejahr, "</b>er ", he$Münzart, " aus <b>", he$Land, "</b> mit Abbildung:<br><b>",
+           he$Abbildung, "</b>")
+    })
+  
   ## Darstellung Serien ----
   ### Deutschland - Bundesländerserie I ----
   output$debl1_tab <- renderTable({debl1_tab()}, bordered = T, spacing = "l", align = "clccccc", rownames = FALSE, sanitize.text.function = function(x) x)
@@ -547,6 +559,7 @@ server <- function(input, output, session) {
     
     displ_data(eens, "ser")
   }, ignoreNULL = FALSE)
+                                 
   ### Frankreich - Olympische Sommerspiele 2024 ----
   output$fros_tab <- renderTable({fros_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   fros_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
