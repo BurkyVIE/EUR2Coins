@@ -37,7 +37,7 @@ form_quali <- function(x) {
 ## Funktion zur Darstellung Land ----
 form_land <- function(txt) {
   txt <- tolower(txt) # jedenfalls Kleinbuchstaben
-  paste0("<nobr><img src='https://www.crwflags.com/fotw/images/", substr(txt, 1, 1), "/", txt, ".gif', height='14', alt='", toupper(txt), "'/>&nbsp;<font size = -3>(", toupper(txt), ")</font></nobr>")
+  paste0("<nobr><img src='https://www.crwflags.com/fotw/images/", substr(txt, 1, 1), "/", txt, ".gif', height='14', alt='", toupper(txt), "'/>&nbsp;<font size = -3>/ ", toupper(txt), "</font></nobr>")
 }
 
 ## Funktion zum Formatieren Amtsblatt ----
@@ -144,8 +144,8 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                                          "Fehlende" = "nein")),
                                                 h3("Münz ID"),
                                                 fluidRow(
-                                                  column(9, textInput(inputId = "id", value = "", label = NULL)),
-                                                  column(3, offset = 0, actionButton(inputId = "id_reset", label = "X"))
+                                                  column(width = 9, textInput(inputId = "id", value = "", label = NULL)),
+                                                  column(width = 3, offset = 0, actionButton(inputId = "id_reset", label = "X"))
                                                 ),
                                                 p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld", 
                                                   em("ID"), "; Aufbau ID: ", code("JJJJLLA00"), ", wobei ", code("JJJJ"),
@@ -154,8 +154,8 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                   " als Joker ist zulässig.", HTML('</div>')),
                                                 h3("Abbildung"),
                                                 fluidRow(
-                                                  column(9, textInput(inputId = "abb", value = "", label = NULL)),
-                                                  column(3, actionButton(inputId = "abb_reset", label = "X"))
+                                                  column(width = 9, textInput(inputId = "abb", value = "", label = NULL)),
+                                                  column(width = 3, actionButton(inputId = "abb_reset", label = "X"))
                                                 ),
                                                 p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld Abbildung. Groß-/ Kleinschreibung wird ignoriert.",
                                                   HTML('</div>')),
@@ -196,25 +196,20 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                 h3("Tableau"),
                                                 sliderInput(inputId = "tableau", label = NULL, min = 1, max = 6, step = 1,  value = 1),
                                                 h2("Schnellwahl"),
-                                                h3("Box, Tableau"),
+                                                h3("Ablagenummer"),
                                                 fluidRow(
-                                                  column(9, textInput(inputId = "boxtab", label = NULL, value = pull(count(collection)))),
-                                                  column(3, actionButton(inputId = "gehe_boxtab", label = ">>"))
-                                                ),
-                                                p(HTML("<div class = 'beschr'>"), "Eingabe von Box und Tableau; Aufbau: ",
-                                                  code("BT"), ", wobei ", code("B"), " = Box und", code("T"), " = Tableau.",
-                                                  HTML('</div>')),
-                                                h3("Zeilennummer"),
-                                                fluidRow(
-                                                  column(9, textInput(inputId = "znr", label = NULL, value = pull(count(collection)))),
-                                                  column(3, actionButton(inputId = "gehe_znr", label = ">>"))
-                                                ),
-                                                htmlOutput(outputId = "mnzname")
+                                                  column(width = 2, actionButton(inputId = "minus", label = "<")),
+                                                  column(width = 6, textInput(inputId = "znr", value = pull(count(collection)), label = NULL)),
+                                                  column(width = 2, actionButton(inputId = "get", label = "get")),
+                                                  column(width = 2, actionButton(inputId = "plus", label = ">"))
+                                                )
                                          ),
                                          column(width = 9,
                                                 h2("Ansicht"),
                                                 h3(textOutput(outputId = "adresse")),
-                                                tableOutput(outputId = "tableau")
+                                                tableOutput(outputId = "tableau"),
+                                                h3("Gewählte Ablagenummer"),
+                                                tableOutput(outputId = "suche_abl")
                                          )
                                        )
                                      )
@@ -400,8 +395,8 @@ server <- function(input, output, session) {
     he <- all_data() |> 
       filter((Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), Münzart == "Gedenkmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) |>
       displ_data(variation = "ident")
-    
   })
+  
   ## Ausgabe Umlaufmünzen ----
   output$suche_u <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_u()}, sanitize.text.function = function(x) x)
   tbl_u <- eventReactive(c(input$samlg, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
@@ -437,28 +432,42 @@ server <- function(input, output, session) {
   observeEvent(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     updateSliderInput(session, inputId = "box", value = (pull(count(collection)) -1) %/% 144 + 1)
     updateSliderInput(session, inputId = "tableau", value = (pull(count(collection)) -1) %/% 24 %% 6 + 1)
-    updateTextInput(session, inputId = "boxtab", value = paste0(tail(collection$Box, 1), tail(collection$Tableau, 1)))
     updateTextInput(session, inputId = "znr", value = tail(collection$Zeilennummer, 1))
   })
   
-  observeEvent(input$gehe_boxtab, {
-    updateSliderInput(session, inputId = "box", value = as.integer(str_sub(input$boxtab, 1, 1)))
-    updateSliderInput(session, inputId = "tableau", value = as.integer(str_sub(input$boxtab, 2, 2)))
-    updateTextInput(session, inputId = "boxtab", value = paste0(tail(collection$Box, 1), tail(collection$Tableau, 1)))
-    updateTextInput(session, inputId = "znr", value = tail(collection$Zeilennummer, 1))
-  })
-  
-  observeEvent(input$gehe_znr, {
+  observeEvent(c(input$znr, input$gehe_znr), {
     updateSliderInput(session, inputId = "box", value = as.integer(input$znr) %/% 145 + 1)
     updateSliderInput(session, inputId = "tableau", value = (as.integer(input$znr) - 1) %% 144 %/% 24 + 1)
-    updateTextInput(session, inputId = "boxtab", value = paste0(tail(collection$Box, 1), tail(collection$Tableau, 1)))
-    updateTextInput(session, inputId = "znr", value = tail(collection$Zeilennummer, 1))
+    updateTextInput(session, inputId = "znr", value = min(as.integer(input$znr), tail(collection$Zeilennummer, 1)))
   })
   
+  ## Ausgabe Schnellwahl Ablage ----
+  output$suche_abl <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_g()}, sanitize.text.function = function(x) x)
+  tbl_g <- eventReactive(c(input$znr), {
+    he <- all_data() |> 
+      mutate(Zeile = as.integer(str_sub(Ablage, 6, 9))) |> 
+      filter(Ablage != " ", Zeile == input$znr) |>
+      displ_data(variation = "ident")
+  })
+  
+  ## Schnellwahl Schritte ----
+  observeEvent(c(input$minus), {
+    updateTextInput(session, inputId = "znr", value = as.integer(input$znr) - 1)
+  })
+
+  observeEvent(c(input$plus), {
+    updateTextInput(session, inputId = "znr", value = as.integer(input$znr) + 1)
+  })
+  
+  ## Schnellwahl Markierung übernehmen ----
+  observeEvent(input$get, {
+    updateTextInput(session, inputId = "znr", value = input$myselection)
+  })
+  
+  ## Adressbereich - Überschrift ----
   output$adresse <- renderText({
-    paste0(input$box, input$tableau, "11x", sprintf("%04d", (input$box - 1) * 144 + (input$tableau - 1) * 24 + 1),
-           " bis ",
-           input$box, input$tableau, "64x", sprintf("%04d", (input$box - 1) * 144 + input$tableau * 24))
+  paste0("Box ", input$box, ", Tableau ", input$tableau, ": Ablagenummern ", (input$box - 1) * 144 + (input$tableau - 1) * 24 + 1,
+         " bis ", (input$box - 1) * 144 + input$tableau * 24)
   })
   
   ## Ausgabe Ablage ----
@@ -466,32 +475,20 @@ server <- function(input, output, session) {
   erst_tab <- eventReactive(c(input$box, input$tableau, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     collection %>% 
       filter(Zeilennummer >= (input$box - 1) * 144 + (input$tableau - 1) * 24 + 1,
-             Zeilennummer <= (input$box - 1) * 144 + input$tableau * 24) %>% 
-      arrange(Zeilennummer) %>%
+             Zeilennummer <= (input$box - 1) * 144 + input$tableau * 24) |> 
+      arrange(Zeilennummer) |>
       mutate(Qualität = form_quali(Qualität),
-             ID = paste0("<div class='mono'>", str_sub(ID, 1, 4), " ", toupper(str_sub(ID, 5, 6)), "<br>", toupper(str_sub(ID, 7, 7)), " ", str_sub(ID, 8, 9), "<br></div>", Qualität)) %>% 
+             ID = paste0("<div class='mono'>", str_sub(Ablage, 1, 9 - nchar(Zeilennummer)), "&thinsp;<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u><br>",
+                         "<b>", str_sub(ID, 1, 4), "&thinsp;", toupper(str_sub(ID, 5, 6)), "&thinsp;", toupper(str_sub(ID, 7, 7)), "</b>&thinsp;", str_sub(ID, 8, 9), "</div>",
+                         Qualität)) %>% 
       pull(ID) -> tmp
     if(length(tmp) < 24) tmp <- c(tmp, rep("", 24 - length(tmp)))
     matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE,
-           dimnames = list(
-             paste0("<b>..", 1:4, "<br>x<br>",
-                    sprintf("%04d", (input$box - 1) * 144 + (input$tableau - 1) * 24 + (0:3) * 6), "</b>"
-             ),
-             paste0(input$box, input$tableau, 1:6, "..<br>x<br>+", 1:6)
+           dimnames = list(paste0("<br><b>..", 1:4, "</b>"),
+             paste0(input$box, input$tableau, "&thinsp;", 1:6, "..")
            )
     )
   }, ignoreNULL = FALSE)
-  
-  ## Ausgabe Münzbeschreibung ----
-  output$mnzname <- renderText({abbi()})
-  abbi <- eventReactive(c(input$gehe_znr), {
-    he <- all_data() %>%
-      mutate(znr = as.numeric(str_sub(Ablage, 6, 9))) %>%
-      filter(znr == input$znr)
-      
-    paste0("Münze Nr. <b>",he$znr, "</b> mit ID <b>",  he$ID, "</b> und Adresse <b>", he$Ablage, "</b> ist eine <b>", he$Prägejahr, "</b>er ", he$Münzart, " aus <b>", he$Land, "</b> mit Abbildung:<br><b>",
-           he$Abbildung, "</b>")
-    })
   
   ## Darstellung Serien ----
   ### Deutschland - Bundesländerserie I ----
@@ -559,7 +556,7 @@ server <- function(input, output, session) {
     
     displ_data(eens, "ser")
   }, ignoreNULL = FALSE)
-                                 
+
   ### Frankreich - Olympische Sommerspiele 2024 ----
   output$fros_tab <- renderTable({fros_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   fros_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
