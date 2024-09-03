@@ -368,25 +368,25 @@ server <- function(input, output, session) {
   observeEvent(input$q0, {
     tmp <- paste0(input$myselection, "-0")
     write(tmp, file = "eur2collection.txt", append = TRUE)
-    Sys.sleep(1.5)
+    Sys.sleep(1)
   })
   
   observeEvent(input$q1, {
     tmp <- paste0(input$myselection, "-1")
     write(tmp, file = "eur2collection.txt", append = TRUE)
-    Sys.sleep(1.5)
+    Sys.sleep(1)
   })
   
   observeEvent(input$q2, {
     tmp <- paste0(input$myselection, "-2")
     write(tmp, file = "eur2collection.txt", append = TRUE)
-    Sys.sleep(1.5)
+    Sys.sleep(1)
   })
   
   observeEvent(input$q3, {
     tmp <- paste0(input$myselection, "-3")
     write(tmp, file = "eur2collection.txt", append = TRUE)
-    Sys.sleep(1.5)
+    Sys.sleep(1)
   })
   
   ## Reload ----
@@ -553,7 +553,7 @@ server <- function(input, output, session) {
     eens <- tribble(~Amtsblatt, ~Beschreibung,
                     'C2021/059/05', '<b>Der Wolf, das Nationaltier</b>',
                     'C2023/264/07', '<b>Die Rauchschwalbe, der Nationalvogel</b>',
-                    NA, '<b>Die Kornblume, die Nationalblume</b>') |>
+                    'C/2024/03965', '<b>Die Kornblume, die Nationalblume</b>') |>
       left_join(all_data(), by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
@@ -567,8 +567,8 @@ server <- function(input, output, session) {
                     'C2021/470/07', '<b>Marianne und der Wettlauf - Eiffelturm</b>',
                     'C2023/014/04', '<b>Der Genius und der Diskuswurf - Arc de Triomphe</b>',
                     'C2023/116/12', '<b>Die Säerin und der Faustkampf – Pont Neuf</b>',
-                    NA, '<b>Herkules und der Ringkampf - Nortre Dame</b>',
-                    NA, '<b>Olympische und Paralympische Spiele 2024 in Paris</b>') |>
+                    'C/2024/02468', '<b>Herkules und der Ringkampf - Nortre Dame</b>',
+                    'C/2024/03959', '<b>Olympische und Paralympische Spiele 2024 in Paris – Notre-Dame de la Garde</b>') |>
       left_join(all_data(), by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
@@ -623,7 +623,8 @@ server <- function(input, output, session) {
                     'C2022/484/21', '<b>10. Hochzeitstag von Erbgroßherzog Guillaume und Erbgroßherzogin Stéphanie</b>',
                     'C2023/123/05', '<b>175. Jahrestag der Abgeordnetenkammer und der ersten Verfassung (1848)</b>',
                     'C2023/122/05', '<b>25. Jahrestag der Aufnahme von Großherzog Henri als Mitglied des Internationalen Olympischen Komitees</b>',
-                    'C/2024/02466', '<b>175. Todestag von Großherzog Guillaume II.</b>') |>
+                    'C/2024/02466', '<b>175. Todestag von Großherzog Guillaume II.</b>',
+                    'C/2024/02467', '<b>100. Jahrestag der Unterzeichnung des Erlasses über die Ausgabe der „Feierstëppler“-Scheidemünze durch Großherzogin Charlotte</b>') |>
       left_join(all_data(), by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
@@ -710,7 +711,7 @@ server <- function(input, output, session) {
   output$mtea_tab <- renderTable({mtea_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   mtea_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     mtea <- tribble(~Amtsblatt, ~Beschreibung,
-                    NA, '<b>Die maltesische Honigbiene</b>') |>
+                    'C/2024/03949', '<b>Die maltesische Honigbiene</b>') |>
       left_join(all_data(), by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
@@ -721,7 +722,7 @@ server <- function(input, output, session) {
   output$mtsm_tab <- renderTable({mtsm_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   mtsm_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     mtsm <- tribble(~Amtsblatt, ~Beschreibung,
-                    NA, '<b>Cittadella Gozo</b>') |>
+                    'C/2024/03946', '<b>Cittadella Gozo</b>') |>
       left_join(all_data(), by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
@@ -747,7 +748,8 @@ server <- function(input, output, session) {
                     'C2022/484/10', '<b>Nationalpark Garajonay auf La Gomera</b><br>(Roque de Agando mit Lorbeerwald)',
                     'C2023/116/10', '<b>Altstadt von Cáceres</b><br>(Plaza Mayor)',
                     'C/2024/02354', '<b>Kathedrale, Alcázar und Indienarchiv in Sevilla</b><br>(Jungfrauenhof des Alcázar von Sevilla)',
-                    NA, '<b>Altstadt von Salamanca</b><br>()') |>
+                    NA, '<b>Altstadt von Salamanca</b><br>()',
+                    NA, '<b>Kloster Poblet</b><br>()') |>
       left_join(all_data(), by = "Amtsblatt") |> 
       filter(!is.na(Amtsblatt))
     
