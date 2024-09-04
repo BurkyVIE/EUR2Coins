@@ -358,135 +358,139 @@ server <- function(input, output, session) {
   })
   
   ## Bewertungs Buttons ----
-  observeEvent(input$q0, {
-    tmp <- paste0(input$myselection, "-0")
-    write(tmp, file = "eur2collection.txt", append = TRUE)
-    Sys.sleep(1)
-  })
+  observeEvent(eventExpr = input$q0, 
+               handlerExpr = {
+                 tmp <- paste0(input$myselection, "-0")
+                 write(tmp, file = "eur2collection.txt", append = TRUE)
+                 Sys.sleep(1)
+                 })
   
-  observeEvent(input$q1, {
-    tmp <- paste0(input$myselection, "-1")
-    write(tmp, file = "eur2collection.txt", append = TRUE)
-    Sys.sleep(1)
-  })
+  observeEvent(eventExpr = input$q1,
+               handlerExpr = {
+                 tmp <- paste0(input$myselection, "-1")
+                 write(tmp, file = "eur2collection.txt", append = TRUE)
+                 Sys.sleep(1)
+                 })
   
-  observeEvent(input$q2, {
-    tmp <- paste0(input$myselection, "-2")
-    write(tmp, file = "eur2collection.txt", append = TRUE)
-    Sys.sleep(1)
-  })
+  observeEvent(eventExpr = input$q2,
+               handlerExpr = {
+                 tmp <- paste0(input$myselection, "-2")
+                 write(tmp, file = "eur2collection.txt", append = TRUE)
+                 Sys.sleep(1)
+                 })
   
-  observeEvent(input$q3, {
-    tmp <- paste0(input$myselection, "-3")
-    write(tmp, file = "eur2collection.txt", append = TRUE)
-    Sys.sleep(1)
-  })
+  observeEvent(eventExpr = input$q3,
+               handlerExpr = {
+                 tmp <- paste0(input$myselection, "-3")
+                 write(tmp, file = "eur2collection.txt", append = TRUE)
+                 Sys.sleep(1)
+                 })
   
   ## Reload ----
-  observeEvent(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    source("eur2collection.r")
-  })
+  observeEvent(eventExpr = c(input$q0, input$q1, input$q2, input$q3, input$aenderung), 
+               handlerExpr = source("eur2collection.r"))
+  
+  ## Funktion zur Anzeige Listendarstellung ----
+  data_list <- function(page = NULL, art = NULL) {
+    data <- all_data()
+    
+    if(page == "Ident")
+      data <- filter(data, (Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), Münzart == art, grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung)))
+    
+    if(page == "Ablage")
+      data <- mutate(data, Zeile = as.integer(str_sub(Ablage, 6, 9))) |> 
+        filter(Ablage != " ", Zeile == input$znr)
+    
+    displ_data(data, variation = "ident")
+  }
   
   ## Ausgabe Gedenkmünzen ----
-  output$suche_g <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_g()}, sanitize.text.function = function(x) x)
-  tbl_g <- eventReactive(c(input$samlg, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    he <- all_data() |> 
-      filter((Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), Münzart == "Gedenkmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) |>
-      displ_data(variation = "ident")
-  })
+  output$suche_g <- renderTable(expr = tbl_g(), spacing = "xs", width = "100%", align = c("llllllll"), sanitize.text.function = function(x) x)
+  tbl_g <- eventReactive(eventExpr = c(input$samlg, input$id, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
+                         valueExpr = data_list(page = "Ident", art = "Gedenkmünze"))
   
   ## Ausgabe Umlaufmünzen ----
-  output$suche_u <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_u()}, sanitize.text.function = function(x) x)
-  tbl_u <- eventReactive(c(input$samlg, input$id, input$abb, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    he <- all_data() |>
-      filter((Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), Münzart == "Umlaufmünze", grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung))) |>
-      displ_data(variation = "ident")
-  })
-  
-  ## Ausgabe Zusammenfassung Jahr ----
-  output$zsf_jahr <- renderTable(spacing = "xs", align = c("rrrl"), {zsf_tbl_jahr()}, sanitize.text.function = function(x) x)
-  zsf_tbl_jahr <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    form_stat("Jahr", 1, 4)
-  }, ignoreNULL = FALSE)
-  
-  ## Ausgabe Zusammenfassung Land ----
-  output$zsf_land <- renderTable(spacing = "xs", align = c("lrrl"), {zsf_tbl_land()}, sanitize.text.function = function(x) x)
-  zsf_tbl_land <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    form_stat("Land", 5, 6) |> 
-      mutate(Land = form_land(Land))
-  }, ignoreNULL = FALSE)
-  
-  ## Ausgabe Zusammenfassung Qualität ----
-  output$zsf_qual <- renderTable(spacing = "xs", align = c("lrr"), {zsf_tbl_qual()}, sanitize.text.function = function(x) x)
-  zsf_tbl_qual <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    collection %>%
-      group_by(Qualität = Qualität %>% ordered(levels = 0:3, labels = form_quali(0:3)), .drop = FALSE) %>%
-      count() %>%
-      transmute(Anzahl = n,
-                Anteil = Anzahl / dim(collection)[1] * 100)
-  }, ignoreNULL = FALSE)
+  output$suche_u <- renderTable(expr = tbl_u(), spacing = "xs", width = "100%", align = c("llllllll"), sanitize.text.function = function(x) x)
+  tbl_u <- eventReactive(eventExpr = c(input$samlg, input$id, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
+                         valueExpr = data_list(page = "Ident", art = "Umlaufmünze"))
   
   ## Auswahl Ablage ----
-  observeEvent(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    updateSliderInput(session, inputId = "box", value = (pull(count(collection)) -1) %/% 144 + 1)
-    updateSliderInput(session, inputId = "tableau", value = (pull(count(collection)) -1) %/% 24 %% 6 + 1)
-    updateTextInput(session, inputId = "znr", value = tail(collection$Zeilennummer, 1))
-  })
+  observeEvent(eventExpr = c(input$aenderung, input$q0, input$q1, input$q2, input$q3), 
+               handlerExpr = {
+                 updateSliderInput(session, inputId = "box", value = (pull(count(collection)) -1) %/% 144 + 1)
+                 updateSliderInput(session, inputId = "tableau", value = (pull(count(collection)) -1) %/% 24 %% 6 + 1)
+                 updateTextInput(session, inputId = "znr", value = tail(collection$Zeilennummer, 1))
+                 })
   
-  observeEvent(c(input$znr, input$gehe_znr), {
-    updateSliderInput(session, inputId = "box", value = as.integer(input$znr) %/% 145 + 1)
-    updateSliderInput(session, inputId = "tableau", value = (as.integer(input$znr) - 1) %% 144 %/% 24 + 1)
-    updateTextInput(session, inputId = "znr", value = min(as.integer(input$znr), tail(collection$Zeilennummer, 1)))
-  })
+  observeEvent(eventExpr = c(input$znr, input$gehe_znr), 
+               handlerExpr = {
+                 updateSliderInput(session, inputId = "box", value = as.integer(input$znr) %/% 145 + 1)
+                 updateSliderInput(session, inputId = "tableau", value = (as.integer(input$znr) - 1) %% 144 %/% 24 + 1)
+                 updateTextInput(session, inputId = "znr", value = min(as.integer(input$znr), tail(collection$Zeilennummer, 1)))
+                 })
   
   ## Ausgabe Schnellwahl Ablage ----
-  output$suche_abl <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_abl()}, sanitize.text.function = function(x) x)
-  tbl_abl <- eventReactive(c(input$znr), {
-    he <- all_data() |> 
-      mutate(Zeile = as.integer(str_sub(Ablage, 6, 9))) |> 
-      filter(Ablage != " ", Zeile == input$znr) |>
-      displ_data(variation = "ident")
-  })
+  output$suche_abl <- renderTable(expr = tbl_abl(), spacing = "xs", width = "100%", align = c("llllllll"), sanitize.text.function = function(x) x)
+  tbl_abl <- eventReactive(eventExpr = input$znr, valueExpr = data_list(page = "Ablage"))
   
   ## Schnellwahl Schritte ----
-  observeEvent(c(input$minus), {
-    updateTextInput(session, inputId = "znr", value = as.integer(input$znr) - 1)
-  })
-
-  observeEvent(c(input$plus), {
-    updateTextInput(session, inputId = "znr", value = as.integer(input$znr) + 1)
-  })
+  observeEvent(eventExpr = input$minus, handlerExpr = updateTextInput(session, inputId = "znr", value = as.integer(input$znr) - 1))
+  observeEvent(eventExpr = input$plus, handlerExpr = updateTextInput(session, inputId = "znr", value = as.integer(input$znr) + 1))
   
   ## Schnellwahl Markierung übernehmen ----
-  observeEvent(input$get, {
-    updateTextInput(session, inputId = "znr", value = input$myselection)
-  })
+  observeEvent(eventExpr = input$get, handlerExpr = updateTextInput(session, inputId = "znr", value = input$myselection))
   
   ## Adressbereich - Überschrift ----
   output$adresse <- renderText({
-  paste0("Box ", input$box, ", Tableau ", input$tableau, ": Ablagenummern ", (input$box - 1) * 144 + (input$tableau - 1) * 24 + 1,
-         " bis ", (input$box - 1) * 144 + input$tableau * 24)
+    paste0("Box ", input$box, ", Tableau ", input$tableau, ": Ablagenummern ", (input$box - 1) * 144 + (input$tableau - 1) * 24 + 1,
+           " bis ", (input$box - 1) * 144 + input$tableau * 24)
   })
   
   ## Ausgabe Ablage ----
-  output$tableau <- renderTable({erst_tab()}, bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
-  erst_tab <- eventReactive(c(input$box, input$tableau, input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    collection %>% 
-      filter(Zeilennummer >= (input$box - 1) * 144 + (input$tableau - 1) * 24 + 1,
-             Zeilennummer <= (input$box - 1) * 144 + input$tableau * 24) |> 
-      arrange(Zeilennummer) |>
-      mutate(Qualität = form_quali(Qualität),
-             ID = paste0("<div class='mono'>", str_sub(Ablage, 1, 9 - nchar(Zeilennummer)), "&thinsp;<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u><br>",
-                         "<b>", str_sub(ID, 1, 4), "&thinsp;", toupper(str_sub(ID, 5, 6)), "&thinsp;", toupper(str_sub(ID, 7, 7)), "</b>&thinsp;", str_sub(ID, 8, 9), "</div>",
-                         Qualität)) %>% 
-      pull(ID) -> tmp
-    if(length(tmp) < 24) tmp <- c(tmp, rep("", 24 - length(tmp)))
-    matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE,
-           dimnames = list(paste0("<br><b>..", 1:4, "</b>"),
-             paste0(input$box, input$tableau, "&thinsp;", 1:6, "..")
-           )
-    )
-  }, ignoreNULL = FALSE)
+  output$tableau <- renderTable(expr = erst_tab(), bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
+  erst_tab <- eventReactive(eventExpr = c(input$box, input$tableau, input$aenderung, input$q0, input$q1, input$q2, input$q3),
+                            valueExpr = {
+                              collection |> 
+                                filter(Zeilennummer >= (input$box - 1) * 144 + (input$tableau - 1) * 24 + 1,
+                                       Zeilennummer <= (input$box - 1) * 144 + input$tableau * 24) |> 
+                                arrange(Zeilennummer) |>
+                                mutate(Qualität = form_quali(Qualität),
+                                       ID = paste0("<div class='mono'>", str_sub(Ablage, 1, 9 - nchar(Zeilennummer)), "&thinsp;<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u><br>",
+                                                   "<b>", str_sub(ID, 1, 4), "&thinsp;", toupper(str_sub(ID, 5, 6)), "&thinsp;", toupper(str_sub(ID, 7, 7)), "</b>&thinsp;", str_sub(ID, 8, 9), "</div>",
+                                                   Qualität)) |>  
+                                pull(ID) -> tmp
+                              if(length(tmp) < 24) tmp <- c(tmp, rep("", 24 - length(tmp)))
+                              matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE,
+                                     dimnames = list(paste0("<br><b>..", 1:4, "</b>"),
+                                                     paste0(input$box, input$tableau, "&thinsp;", 1:6, "..")
+                                                     )
+                                     )
+                              }, ignoreNULL = FALSE)
+  
+  ## Ausgabe Zusammenfassung Jahr ----
+  output$zsf_jahr <- renderTable(expr = zsf_tbl_jahr(), spacing = "xs", align = c("rrrl"), sanitize.text.function = function(x) x)
+  zsf_tbl_jahr <- eventReactive(eventExpr = c(input$q0, input$q1, input$q2, input$q3, input$aenderung),
+                                valueExpr = form_stat("Jahr", 1, 4),
+                                ignoreNULL = FALSE)
+  
+  ## Ausgabe Zusammenfassung Land ----
+  output$zsf_land <- renderTable(expr = zsf_tbl_land(), spacing = "xs", align = c("lrrl"), sanitize.text.function = function(x) x)
+  zsf_tbl_land <- eventReactive(eventExpr = c(input$q0, input$q1, input$q2, input$q3, input$aenderung),
+                                valueExpr = form_stat("Land", 5, 6) |> 
+                                  mutate(Land = form_land(Land)),
+                                ignoreNULL = FALSE)
+  
+  ## Ausgabe Zusammenfassung Qualität ----
+  output$zsf_qual <- renderTable(expr = zsf_tbl_qual(), spacing = "xs", align = c("lrr"), sanitize.text.function = function(x) x)
+  zsf_tbl_qual <- eventReactive(eventExpr = c(input$aenderung, input$q0, input$q1, input$q2, input$q3),
+                                valueExpr = {
+                                  collection|> 
+                                    group_by(Qualität = Qualität |>  ordered(levels = 0:3, labels = form_quali(0:3)), .drop = FALSE) |> 
+                                    count() |> 
+                                    transmute(Anzahl = n,
+                                              Anteil = Anzahl / dim(collection)[1] * 100)
+                                  },
+                                ignoreNULL = FALSE)
   
   ## Darstellung Serien ----
   ### Deutschland - Bundesländerserie I ----
