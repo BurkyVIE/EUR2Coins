@@ -3,8 +3,8 @@
 library(shiny)
 
 ## Externe Daten ----
-source("eur2coins.r")
-source("eur2collection.r")
+source("eur2coins.r")      #coins
+source("eur2collection.r") #collection
 
 ## JS Funktion um Markierung zu kopieren ----
 highlight <- '
@@ -47,8 +47,6 @@ form_amtsbl <- function(txt) {
   url <- str_replace(url, "\\)", "%29")
   return(url)
 }
-
-## Funktion zum laden der Daten, nach Änderung
 
 ## Ergänzen und behübschen der Daten ----
 all_data <- function() {
