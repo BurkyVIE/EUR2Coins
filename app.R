@@ -451,8 +451,7 @@ server <- function(input, output, session) {
   erst_tab <- eventReactive(eventExpr = c(input$box, input$tableau, input$aenderung, input$q0, input$q1, input$q2, input$q3),
                             valueExpr = {
                               collection |> 
-                                filter(Zeilennummer >= (input$box - 1) * 144 + (input$tableau - 1) * 24 + 1,
-                                       Zeilennummer <= (input$box - 1) * 144 + input$tableau * 24) |> 
+                                filter(Zeilennummer %in% (((input$box - 1) * 144 + (input$tableau - 1) * 24 + 1) + 0:23)) |> 
                                 arrange(Zeilennummer) |>
                                 mutate(Qualität = form_quali(Qualität),
                                        ID = paste0("<div class='mono'>", str_sub(Ablage, 1, 9 - nchar(Zeilennummer)), "&thinsp;<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u><br>",
