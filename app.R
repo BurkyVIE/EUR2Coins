@@ -414,6 +414,15 @@ server <- function(input, output, session) {
   tbl_u <- eventReactive(eventExpr = c(input$samlg, input$id, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
                          valueExpr = data_list(page = "Ident", art = "Umlaufmünze"))
   
+  ## Funktuion zur Gültigkeitsprüfung Eingabe Ablagenummer
+  check_znr <- function(x) {
+    x <- as.integer(x)
+    maxi <- as.integer(tail(collection$Zeilennummer, 1))
+    
+    if(is.na(x)) x <- maxi
+    x <- max(1, min(x, maxi))
+  }
+  
   ## Auswahl Ablage ----
   observeEvent(eventExpr = c(input$aenderung, input$q0, input$q1, input$q2, input$q3), 
                handlerExpr = {
@@ -426,7 +435,7 @@ server <- function(input, output, session) {
                handlerExpr = {
                  updateSliderInput(session, inputId = "box", value = as.integer(input$znr) %/% 145 + 1)
                  updateSliderInput(session, inputId = "tableau", value = (as.integer(input$znr) - 1) %% 144 %/% 24 + 1)
-                 updateTextInput(session, inputId = "znr", value = min(as.integer(input$znr), tail(collection$Zeilennummer, 1)))
+                 updateTextInput(session, inputId = "znr", value = check_znr(input$znr))
                  })
   
   ## Ausgabe Schnellwahl Ablage ----
