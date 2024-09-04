@@ -442,8 +442,8 @@ server <- function(input, output, session) {
   })
   
   ## Ausgabe Schnellwahl Ablage ----
-  output$suche_abl <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_g()}, sanitize.text.function = function(x) x)
-  tbl_g <- eventReactive(c(input$znr), {
+  output$suche_abl <- renderTable(spacing = "xs", align = c("rllllrlr"), {tbl_abl()}, sanitize.text.function = function(x) x)
+  tbl_abl <- eventReactive(c(input$znr), {
     he <- all_data() |> 
       mutate(Zeile = as.integer(str_sub(Ablage, 6, 9))) |> 
       filter(Ablage != " ", Zeile == input$znr) |>
