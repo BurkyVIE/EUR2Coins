@@ -430,16 +430,18 @@ server <- function(input, output, session) {
   
   ## Ausgabe Ablage ----
   output$tableau <- renderTable(expr = erst_tab(), bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
-  erst_tab <- eventReactive(eventExpr = c(input$box, input$tableau),
+  erst_tab <- eventReactive(eventExpr = c(input$box, input$tableau, input$znr),
                             valueExpr = {
                               collection |> 
                                 filter(Zeilennummer %in% (((input$box - 1) * 144 + (input$tableau - 1) * 24 + 1) + 0:23)) |> 
                                 arrange(Zeilennummer) |>
                                 mutate(Qualität = form_quali(Qualität),
-                                       ID = paste0("<div class='mono'>", str_sub(Ablage, 1, 9 - nchar(Zeilennummer)), "&thinsp;<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u><br>",
+                                       This = case_when(input$znr == Zeilennummer ~ "<font color = 'red'><b>&#9679;</b></font>",
+                                                        TRUE ~ ""),
+                                       Res = paste0("<div class='mono'>", str_sub(Ablage, 1, 9 - nchar(Zeilennummer)), "&thinsp;", This, "<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u>", This, "<br>",
                                                    "<b>", str_sub(ID, 1, 4), "&thinsp;", toupper(str_sub(ID, 5, 6)), "&thinsp;", toupper(str_sub(ID, 7, 7)), "</b>&thinsp;", str_sub(ID, 8, 9), "</div>",
                                                    Qualität)) |>  
-                                pull(ID) -> tmp
+                                pull(Res) -> tmp
                               if(length(tmp) < 24) tmp <- c(tmp, rep("", 24 - length(tmp)))
                               matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE,
                                      dimnames = list(paste0("<br><b>", input$box, input$tableau, "&thinsp;", 1:4, "..", "</b>"),
