@@ -446,7 +446,7 @@ server <- function(input, output, session) {
   
   ## Ausgabe Ablage ----
   output$tableau <- renderTable(expr = erst_tab(), bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
-  erst_tab <- eventReactive(eventExpr = c(input$box, input$tableau, input$aenderung, input$q0, input$q1, input$q2, input$q3),
+  erst_tab <- eventReactive(eventExpr = c(input$box, input$tableau),
                             valueExpr = {
                               collection |> 
                                 filter(Zeilennummer %in% (((input$box - 1) * 144 + (input$tableau - 1) * 24 + 1) + 0:23)) |> 
@@ -458,8 +458,8 @@ server <- function(input, output, session) {
                                 pull(ID) -> tmp
                               if(length(tmp) < 24) tmp <- c(tmp, rep("", 24 - length(tmp)))
                               matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE,
-                                     dimnames = list(paste0("<br><b>..", 1:4, "</b>"),
-                                                     paste0(input$box, input$tableau, "&thinsp;", 1:6, "..")
+                                     dimnames = list(paste0("<br><b>", input$box, input$tableau, "&thinsp;", 1:4, "..", "</b>"),
+                                                     paste0("..", 1:6)
                                                      )
                                      )
                               }, ignoreNULL = FALSE)
