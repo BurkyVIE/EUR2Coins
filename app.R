@@ -352,34 +352,18 @@ server <- function(input, output, session) {
   observeEvent(eventExpr = input$id_reset, handlerExpr = updateTextInput(session, inputId = "id", value = ""))
   observeEvent(eventExpr = input$abb_reset, handlerExpr = updateTextInput(session, inputId = "abb", value = ""))
   
+  ## Funktion zum Schreiben der Bewertung
+  add_bew <- function(qu) {
+    tmp <- paste(input$myselection, qu, sep = "-")
+    write(tmp, file = "eur2collection.txt", append = TRUE)
+    Sys.sleep(1)
+  }
+  
   ## Bewertungs Buttons ----
-  observeEvent(eventExpr = input$q0, 
-               handlerExpr = {
-                 tmp <- paste0(input$myselection, "-0")
-                 write(tmp, file = "eur2collection.txt", append = TRUE)
-                 Sys.sleep(1)
-                 })
-  
-  observeEvent(eventExpr = input$q1,
-               handlerExpr = {
-                 tmp <- paste0(input$myselection, "-1")
-                 write(tmp, file = "eur2collection.txt", append = TRUE)
-                 Sys.sleep(1)
-                 })
-  
-  observeEvent(eventExpr = input$q2,
-               handlerExpr = {
-                 tmp <- paste0(input$myselection, "-2")
-                 write(tmp, file = "eur2collection.txt", append = TRUE)
-                 Sys.sleep(1)
-                 })
-  
-  observeEvent(eventExpr = input$q3,
-               handlerExpr = {
-                 tmp <- paste0(input$myselection, "-3")
-                 write(tmp, file = "eur2collection.txt", append = TRUE)
-                 Sys.sleep(1)
-                 })
+  observeEvent(eventExpr = input$q0, handlerExpr = add_bew(0))
+  observeEvent(eventExpr = input$q1, handlerExpr = add_bew(1))
+  observeEvent(eventExpr = input$q2, handlerExpr = add_bew(2))
+  observeEvent(eventExpr = input$q3, handlerExpr = add_bew(3))
   
   ## Reload ----
   observeEvent(eventExpr = c(input$q0, input$q1, input$q2, input$q3, input$aenderung), 
