@@ -349,13 +349,8 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
 server <- function(input, output, session) {
 
   ## Reset Buttons ----  
-  observeEvent(input$id_reset, {
-    updateTextInput(session, inputId = "id", value = "")
-  })
-  
-  observeEvent(input$abb_reset, {
-    updateTextInput(session, inputId = "abb", value = "")
-  })
+  observeEvent(eventExpr = input$id_reset, handlerExpr = updateTextInput(session, inputId = "id", value = ""))
+  observeEvent(eventExpr = input$abb_reset, handlerExpr = updateTextInput(session, inputId = "abb", value = ""))
   
   ## Bewertungs Buttons ----
   observeEvent(eventExpr = input$q0, 
@@ -421,17 +416,14 @@ server <- function(input, output, session) {
     
     if(is.na(x)) x <- maxi
     x <- max(1, min(x, maxi))
+    return(x)
   }
   
   ## Auswahl Ablage ----
-  observeEvent(eventExpr = c(input$aenderung, input$q0, input$q1, input$q2, input$q3), 
-               handlerExpr = {
-                 updateSliderInput(session, inputId = "box", value = (pull(count(collection)) -1) %/% 144 + 1)
-                 updateSliderInput(session, inputId = "tableau", value = (pull(count(collection)) -1) %/% 24 %% 6 + 1)
-                 updateTextInput(session, inputId = "znr", value = tail(collection$Zeilennummer, 1))
-                 })
-  
-  observeEvent(eventExpr = c(input$znr, input$gehe_znr), 
+  observeEvent(eventExpr = c(input$box, input$tableau), 
+               handlerExpr = updateTextInput(session, inputId = "znr", value = (input$box - 1) * 144 + (input$tableau) * 24))
+                 
+  observeEvent(eventExpr = input$znr, 
                handlerExpr = {
                  updateSliderInput(session, inputId = "box", value = as.integer(input$znr) %/% 145 + 1)
                  updateSliderInput(session, inputId = "tableau", value = (as.integer(input$znr) - 1) %% 144 %/% 24 + 1)
@@ -450,10 +442,9 @@ server <- function(input, output, session) {
   observeEvent(eventExpr = input$get, handlerExpr = updateTextInput(session, inputId = "znr", value = input$myselection))
   
   ## Adressbereich - Überschrift ----
-  output$adresse <- renderText({
-    paste0("Box ", input$box, ", Tableau ", input$tableau, ": Ablagenummern ", (input$box - 1) * 144 + (input$tableau - 1) * 24 + 1,
-           " bis ", (input$box - 1) * 144 + input$tableau * 24)
-  })
+  output$adresse <- renderText(expr = paste0("Box ", input$box, ", Tableau ", input$tableau, ": Ablagenummern ",
+                                             (input$box - 1) * 144 + (input$tableau - 1) * 24 + 1, " bis ", (input$box - 1) * 144 + input$tableau * 24)
+                               )
   
   ## Ausgabe Ablage ----
   output$tableau <- renderTable(expr = erst_tab(), bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
