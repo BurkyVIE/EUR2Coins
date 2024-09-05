@@ -413,21 +413,19 @@ server <- function(input, output, session) {
   check_znr <- function(x) {
     x <- as.integer(x)
     maxi <- as.integer(tail(collection$Zeilennummer, 1))
+    nachk <- is.na(x)
     
-    if(is.na(x)) x <- maxi
+    if(nachk) x <- maxi
     x <- max(1, min(x, maxi))
-    return(x)
+    return(list(x, !nachk))
   }
   
   ## Auswahl Ablage ----
-  observeEvent(eventExpr = c(input$box, input$tableau), 
-               handlerExpr = updateTextInput(session, inputId = "znr", value = (input$box - 1) * 144 + (input$tableau) * 24))
-                 
   observeEvent(eventExpr = input$znr, 
                handlerExpr = {
-                 updateSliderInput(session, inputId = "box", value = as.integer(input$znr) %/% 145 + 1)
-                 updateSliderInput(session, inputId = "tableau", value = (as.integer(input$znr) - 1) %% 144 %/% 24 + 1)
-                 updateTextInput(session, inputId = "znr", value = check_znr(input$znr))
+                 if(check_znr(input$znr)[[2]]) updateSliderInput(session, inputId = "box", value = as.integer(input$znr) %/% 145 + 1)
+                 if(check_znr(input$znr)[[2]]) updateSliderInput(session, inputId = "tableau", value = (as.integer(input$znr) - 1) %% 144 %/% 24 + 1)
+                 updateTextInput(session, inputId = "znr", value = check_znr(input$znr)[[1]])
                  })
   
   ## Ausgabe Schnellwahl Ablage ----
