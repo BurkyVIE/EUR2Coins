@@ -190,7 +190,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                          column(width = 3,
                                                 h2("Auswahl"),
                                                 h3("Box"),
-                                                sliderInput(inputId = "box", label = NULL, min = 1, max = 3, step = 1, value = 1),
+                                                sliderInput(inputId = "box", label = NULL, min = 1, max = 4, step = 1, value = 1),
                                                 h3("Tableau"),
                                                 sliderInput(inputId = "tableau", label = NULL, min = 1, max = 6, step = 1,  value = 1),
                                                 h2("Schnellwahl"),
@@ -407,7 +407,7 @@ server <- function(input, output, session) {
   ## Auswahl Ablage ----
   observeEvent(eventExpr = input$znr, 
                handlerExpr = {
-                 if(check_znr(input$znr)[[2]]) updateSliderInput(session, inputId = "box", value = as.integer(input$znr) %/% 145 + 1)
+                 if(check_znr(input$znr)[[2]]) updateSliderInput(session, inputId = "box", value = (as.integer(input$znr) - 1) %/% 144 + 1)
                  if(check_znr(input$znr)[[2]]) updateSliderInput(session, inputId = "tableau", value = (as.integer(input$znr) - 1) %% 144 %/% 24 + 1)
                  updateTextInput(session, inputId = "znr", value = check_znr(input$znr)[[1]])
                  })
