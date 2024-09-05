@@ -688,14 +688,14 @@ C2014/410/06|es|2022|NA|u|König Felipe VI. (2015 -)|
 C2014/410/06|es|2023|NA|u|König Felipe VI. (2015 -)|
 C2014/410/06|es|2024|NA|u|König Felipe VI. (2015 -)|
 
-52001XC1228(04)|fi|1999|NA|u|Moltebeere (1999 -2006)|
-52001XC1228(04)|fi|2000|NA|u|Moltebeere (1999 -2006)|
-52001XC1228(04)|fi|2001|NA|u|Moltebeere (1999 -2006)|
-52001XC1228(04)|fi|2002|NA|u|Moltebeere (1999 -2006)|
-52001XC1228(04)|fi|2003|NA|u|Moltebeere (1999 -2006)|
-52001XC1228(04)|fi|2004|NA|u|Moltebeere (1999 -2006)|
-52001XC1228(04)|fi|2005|NA|u|Moltebeere (1999 -2006)|
-52001XC1228(04)|fi|2006|NA|u|Moltebeere (1999 -2006)|
+52001XC1228(04)|fi|1999|NA|u|Moltebeere (1999 - 2006)|
+52001XC1228(04)|fi|2000|NA|u|Moltebeere (1999 - 2006)|
+52001XC1228(04)|fi|2001|NA|u|Moltebeere (1999 - 2006)|
+52001XC1228(04)|fi|2002|NA|u|Moltebeere (1999 - 2006)|
+52001XC1228(04)|fi|2003|NA|u|Moltebeere (1999 - 2006)|
+52001XC1228(04)|fi|2004|NA|u|Moltebeere (1999 - 2006)|
+52001XC1228(04)|fi|2005|NA|u|Moltebeere (1999 - 2006)|
+52001XC1228(04)|fi|2006|NA|u|Moltebeere (1999 - 2006)|
 52001XC1228(04)|fi|2007|NA|u|Moltebeere (2007 -)|
 52001XC1228(04)|fi|2008|NA|u|Moltebeere (2007 -)|
 52001XC1228(04)|fi|2009|NA|u|Moltebeere (2007 -)|
