@@ -157,6 +157,13 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                 ),
                                                 p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld Abbildung. Groß-/ Kleinschreibung wird ignoriert.",
                                                   HTML('</div>')),
+                                                h3("Münzzeichen"),
+                                                fluidRow(
+                                                  column(width = 9, textInput(inputId = "mzz", value = "", label = NULL)),
+                                                  column(width = 3, actionButton(inputId = "mzz_reset", label = "X"))
+                                                ),
+                                                p(HTML("<div class = 'beschr'>"), "Genaue Übereinstimmung mit Feld Münzzeichen.",
+                                                  HTML('</div>')),
                                                 h2("Anlage"),
                                                 h3("Qualität"),
                                                 fluidRow(
@@ -165,8 +172,6 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                   column(width = 3, actionButton(inputId = "q2", label = "2")),
                                                   column(width = 3, actionButton(inputId = "q3", label = "3"))
                                                 ),
-                                                p(HTML("<div class = 'beschr'>"), "Stelle Markierung ergänzt um Qualität ans Ende von ",em("eur2collection.txt"),
-                                                  HTML('</div>')),
                                                 h2("Änderung"),
                                                 h3("eur2collection.txt"),
                                                 actionButton(inputId = "aenderung", label = "Änderung durchgeführt"),
@@ -351,6 +356,7 @@ server <- function(input, output, session) {
   ## Reset Buttons ----  
   observeEvent(eventExpr = input$id_reset, handlerExpr = updateTextInput(session, inputId = "id", value = ""))
   observeEvent(eventExpr = input$abb_reset, handlerExpr = updateTextInput(session, inputId = "abb", value = ""))
+  observeEvent(eventExpr = input$mzz_reset, handlerExpr = updateTextInput(session, inputId = "mzz", value = ""))
   
   ## Funktion zum Schreiben der Bewertung
   add_bew <- function(qu) {
@@ -374,7 +380,7 @@ server <- function(input, output, session) {
     data <- all_data()
     
     if(page == "Ident")
-      data <- filter(data, (Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), Münzart == art, grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung)))
+      data <- filter(data, (Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), Münzart == art, grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung)), Münzzeichen == input$mzz)
     
     if(page == "Ablage")
       data <- mutate(data, Zeile = as.integer(str_sub(Ablage, 6, 9))) |> 
@@ -385,12 +391,12 @@ server <- function(input, output, session) {
   
   ## Ausgabe Gedenkmünzen ----
   output$suche_g <- renderTable(expr = tbl_g(), spacing = "xs", width = "100%", align = c("llllllll"), sanitize.text.function = function(x) x)
-  tbl_g <- eventReactive(eventExpr = c(input$samlg, input$id, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
+  tbl_g <- eventReactive(eventExpr = c(input$samlg, input$id, input$abb, input$mzz, input$q0, input$q1, input$q2, input$q3, input$aenderung),
                          valueExpr = data_list(page = "Ident", art = "Gedenkmünze"))
   
   ## Ausgabe Umlaufmünzen ----
   output$suche_u <- renderTable(expr = tbl_u(), spacing = "xs", width = "100%", align = c("llllllll"), sanitize.text.function = function(x) x)
-  tbl_u <- eventReactive(eventExpr = c(input$samlg, input$id, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
+  tbl_u <- eventReactive(eventExpr = c(input$samlg, input$id, input$abb, input$mzz, input$q0, input$q1, input$q2, input$q3, input$aenderung),
                          valueExpr = data_list(page = "Ident", art = "Umlaufmünze"))
   
   ## Funktuion zur Gültigkeitsprüfung Eingabe Ablagenummer
