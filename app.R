@@ -380,7 +380,7 @@ server <- function(input, output, session) {
     data <- all_data()
     
     if(page == "Ident")
-      data <- filter(data, (Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), Münzart == art, grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung)), Münzzeichen == input$mzz)
+      data <- filter(data, (Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), Münzart == art, grepl(tolower(input$id), ID), grepl(tolower(input$abb), tolower(Abbildung)), grepl(Münzzeichen, input$mzz))
     
     if(page == "Ablage")
       data <- mutate(data, Zeile = as.integer(str_sub(Ablage, 6, 9))) |> 
