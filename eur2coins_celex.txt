@@ -546,7 +546,9 @@ C/2024/02473|it|2024|2024-3-12|g|250. Jahrestag der Gründung der Guardia di Fin
 C/2024/03943|gr|2024|2024-6-17|g|Geburt von Penelope Delta vor 150 Jahren|
 C/2024/03944|be|2024|2024-5-13|g|Der Kampf gegen Krebs in Belgien|
 C/2024/03945|fi|2024|2024-3-14|g|Wahlen und Demokratie|
+C/2024/03946|mt|2024|2024-8-26|g|Iċ-Ċittadella (Die Zitadelle)|
 C/2024/03948|sm|2024|2024-4-23|g|50. Jahrestag der Erklärung der Bürgerrechte und der Grundprinzipien der Rechtsordnung von San Marino|
+C/2024/03949|mt|2024|2024-8-26|g|Die maltesische Honigbiene|
 C/2024/03950|hr|2024|2024-7-2|g|Varaždin (Stari Grad Varaždin – die Festung von Varaždin)|
 C/2024/03951|pt|2024|2024-7-4|g|Die Teilnahme Portugals an den 33. Olympischen Spielen|
 C/2024/03959|fr|2024|2024-6-4|g|Der Eiffelturm|
@@ -557,9 +559,7 @@ C/2024/03965|ee|2024|2024-5-21|g|Die Kornblume – estnische Nationalblume|
 
 
 
-C/2024/03946|mt|2024||g|Iċ-Ċittadella (Die Zitadelle)|
 C/2024/03947|va|2024||g|150. Geburtstag von Guglielmo Marconi|
-C/2024/03949|mt|2024||g|Die maltesische Honigbiene|
 
 NA|va|2024|2024-7-3|g|750. Todestag von Thomas von Aquin|
 
