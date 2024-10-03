@@ -362,7 +362,7 @@ server <- function(input, output, session) {
   add_bew <- function(qu) {
     tmp <- paste(input$myselection, qu, sep = "-")
     write(tmp, file = "eur2collection.txt", append = TRUE)
-    Sys.sleep(1)
+    Sys.sleep(2)
   }
   
   ## Bewertungs Buttons ----
