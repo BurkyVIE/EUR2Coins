@@ -33,6 +33,7 @@ df <- left_join(coins,
 gt::gt(df) |> 
   gt::cols_align(align = "right", columns = "Qualität") |> 
   gt::tab_options(row_group.background.color = "grey67",
+                  row_group.font.weight = "bold",
                   row_group.padding = 2,
                   data_row.padding = 1)
 ```
