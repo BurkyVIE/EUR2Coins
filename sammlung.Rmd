@@ -1,0 +1,38 @@
+---
+title: "EUR2 Sammlung"
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+## Libraries
+library(tidyverse)
+
+## Externe Daten ----
+source("eur2coins.r", local = knitr::knit_global())      #coins
+source("eur2collection.r", local = knitr::knit_global()) #collection
+```
+
+```{r data, echo=FALSE}
+df <- left_join(coins,
+          collection %>% select(ID, Qualität, Ablage),
+          by = 'ID') |>
+  filter(!is.na(Qualität)) |> # nur noch nicht gesammelte
+  transmute(Jahr = Prägejahr, Land, Bild = str_sub(Abbildung, 1, 75), Mz = Münzzeichen, Qualität) |>
+  mutate(Qualität = case_when(Qualität == 0 ~ "★★★ (0)",
+                              Qualität == 1 ~ "★★ (1)",
+                              Qualität == 2 ~ "✓✓ (2)",
+                              Qualität == 3 ~ "✓ (3)",)) |> 
+  arrange(Jahr, Land, Bild, Mz) |> 
+  group_by(Jahr)
+```
+
+```{r table}
+gt::gt(df) |> 
+  gt::cols_align(align = "right", columns = "Qualität") |> 
+  gt::tab_options(row_group.background.color = "grey67",
+                  row_group.padding = 2,
+                  data_row.padding = 1)
+```
