@@ -21,23 +21,21 @@ df <- left_join(coins,
           by = 'ID') |>
   filter(!is.na(Qualität)) |> # nur noch nicht gesammelte
   transmute(Jahr = Prägejahr, Land, Bild = str_sub(Abbildung, 1, 75), Mz = Münzzeichen, Qualität) |>
-  mutate(Qualität = case_when(Qualität == 0 ~ "★★★ (0)",
-                              Qualität == 1 ~ "★★ (1)",
-                              Qualität == 2 ~ "✓✓ (2)",
-                              Qualität == 3 ~ "✓ (3)")) |> 
+  mutate(Qualität = case_when(Qualität == 0 ~ "(0) ★★★",
+                              Qualität == 1 ~ "(1) ★★",
+                              Qualität == 2 ~ "(2) ✓✓",
+                              Qualität == 3 ~ "(3) ✓")) |> 
   arrange(Jahr, Land, Bild, Mz) |> 
   group_by(Jahr)
 ```
 
 ```{r table}
 gt::gt(df) |> 
-  gt::cols_align(align = "right", columns = "Qualität") |> 
-  gt::data_color(columns = "Qualität", target_columns = everything(), palette = "Greens", alpha = .33, reverse = TRUE, method = "factor", levels = c("★★★ (0)", 
-                                                                                                                     "★★ (1)", 
-                                                                                                                     "✓✓ (2)", 
-                                                                                                                     "✓ (3)")) |>  
+  gt::data_color(columns = "Qualität", target_columns = everything(),
+                 palette = "Greens", alpha = .5, reverse = TRUE, method = "factor",
+                 contrast_algo = "wcag") |>  
   gt::tab_options(table.font.size = 11,
-                  row_group.background.color = "grey67",
+                  row_group.background.color = "grey50",
                   row_group.font.weight = "bold",
                   row_group.padding = 2,
                   data_row.padding = 1)
