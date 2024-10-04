@@ -20,7 +20,9 @@ df <- left_join(coins,
           collection %>% select(ID, Qualität, Ablage),
           by = 'ID') |>
   filter(!is.na(Qualität)) |> # nur noch nicht gesammelte
-  transmute(Jahr = Prägejahr, Land, Bild = str_sub(Abbildung, 1, 75), Mz = Münzzeichen, Qualität) |>
+  transmute(Jahr = Prägejahr, Land,
+            Bild = str_sub(Abbildung, 1, nchar(coins$Abbildung) |> quantile(.95)), Mz = Münzzeichen, # Absolute Länge der Bildbeschreibung war ursprünglich 75
+            Qualität) |> 
   mutate(Qualität = case_when(Qualität == 0 ~ "(0) ★★★",
                               Qualität == 1 ~ "(1) ★★",
                               Qualität == 2 ~ "(2) ✓✓",
