@@ -123,7 +123,8 @@ form_stat <- function(val, von, bis) {
     mutate(Graph = paste0("<div class='bar'>", Graph, "</div>"))
 }
 
-
+## Userpath für Sammlung (extern)
+addResourcePath("tmpuser", getwd())
 
 # UI (User Interface) ----
 ui <- fluidPage(includeCSS(path = "style_orig.css"),
@@ -339,6 +340,12 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                             tableOutput(outputId = "era_tab")
                                                             )
                                                           )
+                                                 )
+                            ),
+                            tabPanel("Sammelerfolg (extern)",
+                                     fluidPage(
+                                       h2("Sammelerfolg"),
+                                       htmlOutput(outputId = "samml_ext")
                                      )
                             )#,
                             #tabPanel("Test",
@@ -820,9 +827,10 @@ server <- function(input, output, session) {
     
     displ_data(era, "gem")
   }, ignoreNULL = FALSE)
+
+  ## Sammlung (extern) ----
+  output$samml_ext <- renderUI(tags$iframe(seamless = "seamless", src = "tmpuser/sammlung.html", width = "500", height = "750"))
 }
-
-
 
 # Run the application ----
 shinyApp(ui = ui, server = server)
