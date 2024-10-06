@@ -1,5 +1,5 @@
 ---
-title: "EUR2 Sammlung"
+title: ""
 output: html_document
 date: "`r Sys.Date()`"
 ---
