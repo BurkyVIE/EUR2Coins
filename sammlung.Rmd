@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Gesammelte EUR2 Münzen"
 output: html_document
 date: "`r Sys.Date()`"
 ---
