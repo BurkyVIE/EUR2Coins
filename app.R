@@ -183,7 +183,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                 h2("Ergebnisse"),
                                                 h3("Gedenkmünzen"),
                                                 tableOutput(outputId = "suche_g"),
-                                                h3("Umlaufmünzen"),
+                                                h3("Kursmünzen"),
                                                 tableOutput(outputId = "suche_u")
                                          )
                                        )
@@ -405,10 +405,10 @@ server <- function(input, output, session) {
   tbl_g <- eventReactive(eventExpr = c(input$samlg, input$id, input$abb, input$mzz, input$q0, input$q1, input$q2, input$q3, input$aenderung),
                          valueExpr = data_list(page = "Ident", art = "Gedenkmünze"))
   
-  ## Ausgabe Umlaufmünzen ----
-  output$suche_u <- renderTable(expr = tbl_u(), spacing = "xs", width = "100%", align = c("llllllll"), sanitize.text.function = function(x) x)
-  tbl_u <- eventReactive(eventExpr = c(input$samlg, input$id, input$abb, input$mzz, input$q0, input$q1, input$q2, input$q3, input$aenderung),
-                         valueExpr = data_list(page = "Ident", art = "Umlaufmünze"))
+  ## Ausgabe Kursmünzen ----
+  output$suche_k <- renderTable(expr = tbl_k(), spacing = "xs", width = "100%", align = c("llllllll"), sanitize.text.function = function(x) x)
+  tbl_k <- eventReactive(eventExpr = c(input$samlg, input$id, input$abb, input$mzz, input$q0, input$q1, input$q2, input$q3, input$aenderung),
+                         valueExpr = data_list(page = "Ident", art = "Kursmünze"))
   
   ## Funktuion zur Gültigkeitsprüfung Eingabe Ablagenummer
   check_znr <- function(x) {
