@@ -184,7 +184,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                 h3("Gedenkmünzen"),
                                                 tableOutput(outputId = "suche_g"),
                                                 h3("Kursmünzen"),
-                                                tableOutput(outputId = "suche_u")
+                                                tableOutput(outputId = "suche_k")
                                          )
                                        )
                                      )
