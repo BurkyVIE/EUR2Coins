@@ -28,7 +28,7 @@ raw <- map_df(filelist, ~import_celex(.))
 # TIDY ----
 ## do tidy ----
 raw %>% 
-  mutate(Münzart = factor(Münzart, levels = c("g", "u"), labels = c("Gedenkmünze", "Umlaufmünze")),
+  mutate(Münzart = factor(Münzart, levels = c("g", "k"), labels = c("Gedenkmünze", "Kursmünze")),
          Münzzeichen = str_split(Münzzeichen, pattern = ",")) %>% 
   unnest(Münzzeichen) %>% # Erweitern um die Münzzeichen
   add_column(cs = 1) %>% # Hilfsvariable für Durchnumerierung (ID)
