@@ -3,7 +3,7 @@ library(tidyverse)
 
 # GLOBAL ----
 ## where is directory ----
-directory <- paste0(getwd(), "/") # oder für die Weiterentwicklung (= Teilung der CELEX-Daten): "celex/"
+directory <- paste0(getwd(), "/") # "getwd()" oder für die Weiterentwicklung (= Teilung der CELEX-Daten): "celex"
 
 ## import celex_*.txt ----
 import_celex <- function(file) {
