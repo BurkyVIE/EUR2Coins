@@ -141,29 +141,35 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                              choices = c("Alle" = "alle",
                                                                          "Vorhandene" = "ja",
                                                                          "Fehlende" = "nein")),
-                                                h3("Münz ID"),
                                                 fluidRow(
-                                                  column(width = 9, textInput(inputId = "id", value = "", label = NULL)),
-                                                  column(width = 3, offset = 0, actionButton(inputId = "id_reset", label = "X"))
-                                                ),
-                                                p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld", 
-                                                  em("ID"), "; Aufbau ID: ", code("JJJJLLA00"), ", wobei ", code("JJJJ"),
-                                                  " = Prägejahr", ", ", code("LL"), " = Land", ", ", code("A"),
-                                                  " = Münzart", " und ", code("0"), " = fortlaufende Nummer.", code("."),
-                                                  " als Joker ist zulässig.", HTML('</div>')),
+                                                  column(width = 6,
+                                                         h3("Münz ID"),
+                                                         fluidRow(
+                                                           column(width = 9, textInput(inputId = "id", value = "", label = NULL)),
+                                                           column(width = 3, offset = 0, actionButton(inputId = "id_reset", label = "X"))
+                                                           ),
+                                                         p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld", 
+                                                           em("ID"), "; Aufbau ID: ", code("JJJJLLA00"), ", wobei ", code("JJJJ"),
+                                                           " = Prägejahr", ", ", code("LL"), " = Land", ", ", code("A"),
+                                                           " = Münzart", " und ", code("0"), " = fortlaufende Nummer.", code("."),
+                                                           " als Joker ist zulässig.", HTML('</div>'))
+                                                         ),
+                                                  column(width = 6,
+                                                         h3("Münzzeichen"),
+                                                         fluidRow(
+                                                           column(width = 9, selectInput(inputId = "mzz", choices = unique(all_data()$Münzzeichen), selected = NULL, label = NULL)),
+                                                           column(width = 3, actionButton(inputId = "mzz_reset", label = "X"))
+                                                           ),
+                                                         p(HTML("<div class = 'beschr'>"), "Genaue Übereinstimmung mit Feld Münzzeichen.",
+                                                           HTML('</div>'))
+                                                         )
+                                                  ),
                                                 h3("Abbildung"),
                                                 fluidRow(
                                                   column(width = 9, textInput(inputId = "abb", value = "", label = NULL)),
                                                   column(width = 3, actionButton(inputId = "abb_reset", label = "X"))
                                                 ),
                                                 p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld Abbildung. Groß-/ Kleinschreibung wird ignoriert.",
-                                                  HTML('</div>')),
-                                                h3("Münzzeichen"),
-                                                fluidRow(
-                                                  column(width = 9, textInput(inputId = "mzz", value = "", label = NULL)),
-                                                  column(width = 3, actionButton(inputId = "mzz_reset", label = "X"))
-                                                ),
-                                                p(HTML("<div class = 'beschr'>"), "Genaue Übereinstimmung mit Feld Münzzeichen.",
                                                   HTML('</div>')),
                                                 h2("Anlage"),
                                                 h3("Qualität"),
