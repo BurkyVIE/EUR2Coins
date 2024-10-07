@@ -146,7 +146,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                          h3("Münz ID"),
                                                          fluidRow(
                                                            column(width = 9, textInput(inputId = "id", value = "", label = NULL)),
-                                                           column(width = 3, offset = 0, actionButton(inputId = "id_reset", label = "X"))
+                                                           column(width = 3, offset = 0, actionButton(inputId = "id_reset", label = "✗"))
                                                            ),
                                                          p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit", 
                                                            em("Münz ID"), "; Aufbau: ", code("JJJJLLA00"), ", wobei ", code("JJJJ"),
@@ -158,7 +158,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                          h3("Münzzeichen"),
                                                          fluidRow(
                                                            column(width = 9, selectInput(inputId = "mzz", choices = unique(all_data()$Münzzeichen), selected = NULL, label = NULL)),
-                                                           column(width = 3, actionButton(inputId = "mzz_reset", label = "X"))
+                                                           column(width = 3, actionButton(inputId = "mzz_reset", label = "✗"))
                                                            ),
                                                          p(HTML("<div class = 'beschr'>"), "Genaue Übereinstimmung mit Feld", em("Mzz"),".",
                                                            HTML('</div>'))
@@ -167,19 +167,19 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                 h3("Abbildung"),
                                                 fluidRow(
                                                   column(width = 9, textInput(inputId = "abb", value = "", label = NULL)),
-                                                  column(width = 3, actionButton(inputId = "abb_reset", label = "X"))
-                                                ),
+                                                  column(width = 3, actionButton(inputId = "abb_reset", label = "✗"))
+                                                  ),
                                                 p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld Abbildung. Groß-/ Kleinschreibung wird ignoriert.",
                                                   HTML('</div>')),
-                                                h2("Anlage"),
+                                                h2("Anlage / Änderung"),
                                                 h3("Qualität"),
                                                 fluidRow(
-                                                  column(width = 3, actionButton(inputId = "q0", label = "0")),
-                                                  column(width = 3, actionButton(inputId = "q1", label = "1")),
-                                                  column(width = 3, actionButton(inputId = "q2", label = "2")),
-                                                  column(width = 3, actionButton(inputId = "q3", label = "3"))
+                                                  column(width = 3, actionButton(inputId = "q0", label = "(0) ★★★")),
+                                                  column(width = 3, actionButton(inputId = "q1", label = "(1) ★★")),
+                                                  column(width = 3, actionButton(inputId = "q2", label = "(2) ✓✓")),
+                                                  column(width = 3, actionButton(inputId = "q3", label = "(3) ✓"))
                                                 ),
-                                                h2("Änderung"),
+                                                # h2("Änderung"),
                                                 h3("eur2collection.txt"),
                                                 actionButton(inputId = "aenderung", label = "Änderung durchgeführt"),
                                                 p(HTML("<div class = 'beschr'>"), "Manuelle Änderung von ", em("eur2collection.txt"), ", zB Münztausch",
