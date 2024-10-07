@@ -459,10 +459,12 @@ server <- function(input, output, session) {
                                 filter(Zeilennummer %in% (((input$box - 1) * 144 + (input$tableau - 1) * 24 + 1) + 0:23)) |> 
                                 arrange(Zeilennummer) |>
                                 mutate(Qualität = form_quali(Qualität),
-                                       This = case_when(input$znr == Zeilennummer ~ "<font color = 'red'><b>&#9679;</b></font>",
-                                                        TRUE ~ ""),
-                                       Res = paste0("<div class='mono'>", str_sub(Ablage, 1, 9 - nchar(Zeilennummer)), "&thinsp;", This, "<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u>", This, "<br>",
-                                                   "<b>", str_sub(ID, 1, 4), "&thinsp;", toupper(str_sub(ID, 5, 6)), "&thinsp;", toupper(str_sub(ID, 7, 7)), "</b>&thinsp;", str_sub(ID, 8, 9), "</div>",
+                                       This_left = case_when(input$znr == Zeilennummer ~ "<font color = 'red'><b>&FilledSmallSquare;&thinsp;</b></font>",
+                                                             TRUE ~ ""),
+                                       This_right = case_when(input$znr == Zeilennummer ~ "<font color = 'red'><b>&thinsp;&FilledSmallSquare;</b></font>",
+                                                              TRUE ~ ""),
+                                       Res = paste0("<div class='mono'>", str_sub(Ablage, 1, 9 - nchar(Zeilennummer)), "&thinsp;", "<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u>", "<br>",
+                                                   "<b>", This_left, str_sub(ID, 1, 4), "&thinsp;", toupper(str_sub(ID, 5, 6)), "&thinsp;", toupper(str_sub(ID, 7, 7)), "</b>&thinsp;", str_sub(ID, 8, 9), This_right, "</div>",
                                                    Qualität)) |>  
                                 pull(Res) -> tmp
                               if(length(tmp) < 24) tmp <- c(tmp, rep("", 24 - length(tmp)))
