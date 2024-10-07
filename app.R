@@ -148,11 +148,11 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                            column(width = 9, textInput(inputId = "id", value = "", label = NULL)),
                                                            column(width = 3, offset = 0, actionButton(inputId = "id_reset", label = "X"))
                                                            ),
-                                                         p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld", 
-                                                           em("ID"), "; Aufbau ID: ", code("JJJJLLA00"), ", wobei ", code("JJJJ"),
+                                                         p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit", 
+                                                           em("Münz ID"), "; Aufbau: ", code("JJJJLLA00"), ", wobei ", code("JJJJ"),
                                                            " = Prägejahr", ", ", code("LL"), " = Land", ", ", code("A"),
-                                                           " = Münzart", " und ", code("0"), " = fortlaufende Nummer.", code("."),
-                                                           " als Joker ist zulässig.", HTML('</div>'))
+                                                           " = Münzart", " und ", code("0"), " = fortlaufende Nummer;", code("."),
+                                                           " = Jokerzeichen.", HTML('</div>'))
                                                          ),
                                                   column(width = 6,
                                                          h3("Münzzeichen"),
@@ -160,7 +160,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                            column(width = 9, selectInput(inputId = "mzz", choices = unique(all_data()$Münzzeichen), selected = NULL, label = NULL)),
                                                            column(width = 3, actionButton(inputId = "mzz_reset", label = "X"))
                                                            ),
-                                                         p(HTML("<div class = 'beschr'>"), "Genaue Übereinstimmung mit Feld Münzzeichen.",
+                                                         p(HTML("<div class = 'beschr'>"), "Genaue Übereinstimmung mit Feld", em("Mzz"),".",
                                                            HTML('</div>'))
                                                          )
                                                   ),
