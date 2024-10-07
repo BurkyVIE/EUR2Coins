@@ -561,7 +561,7 @@ C/2024/03965|ee|2024|2024-5-21|g|Die Kornblume – estnische Nationalblume|
 
 C/2024/03947|va|2024||g|150. Geburtstag von Guglielmo Marconi|
 
-NA|va|2024|2024-7-3|g|750. Todestag von Thomas von Aquin|
+NA|va|2024|2024-7-3|g|~750. Todestag von Thomas von Aquin|
 
 
 C2014/062/07|ad|2014|NA|k|Staatswappen von Andorra (2014 -)|
