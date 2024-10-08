@@ -132,7 +132,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                             tabPanel("Identifikation",
                                      tags$script(highlight),
                                      fluidPage(
-                                       h1("EUR 2 Münzen"),
+                                       h1("Identifikation"),
                                        fluidRow(
                                          column(width = 3,
                                                 h2("Anzeige"),
@@ -197,7 +197,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                             ),
                             tabPanel("Ablage",
                                      fluidPage(
-                                       h1("EUR 2 Münzen - Ablage"),
+                                       h1("Ablage"),
                                        fluidRow(
                                          column(width = 3,
                                                 h2("Auswahl"),
@@ -224,9 +224,9 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                        )
                                      )
                             ),
-                            tabPanel("Zusammenfassung",
+                            tabPanel("Statistik",
                                      fluidPage(
-                                       h1("EUR 2 Münzen - Sammelerfolg"),
+                                       h1("Statistik"),
                                        fluidRow(
                                          column(width = 4,
                                                 h2("Prägejahr"),
@@ -244,70 +244,71 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                      )
                             ),
                             tabPanel("Nat. Serien",
+                                     h1("Nationale Serien"),
                                      tabsetPanel(id = "Serien",
                                                  tabPanel("DE",
                                                           fluidPage(
-                                                            h1("Deutschland"),
-                                                            h2("Bundesländerserie I (2006-2022)"),
+                                                            h2("Deutschland"),
+                                                            h3("Bundesländerserie I (2006-2022)"),
                                                             tableOutput(outputId = "debl1_tab"),
-                                                            h2("Bundesländerserie II (2023-2038)"),
+                                                            h3("Bundesländerserie II (2023-2038)"),
                                                             tableOutput(outputId = "debl2_tab")
                                                             )
                                                           ),
                                                  tabPanel("EE",
                                                           fluidPage(
-                                                            h1("Estland"),
-                                                            h2("Nationale Symbole"),
+                                                            h2("Estland"),
+                                                            h3("Nationale Symbole"),
                                                             tableOutput(outputId = "eens_tab")
                                                           )
                                                  ),
                                                  tabPanel("ES",
                                                           fluidPage(
-                                                            h1("Spanien"),
-                                                            h2("UNESCO-Welterbestätten"),
+                                                            h2("Spanien"),
+                                                            h3("UNESCO-Welterbestätten"),
                                                             tableOutput(outputId = "esun_tab")
                                                             )
                                                           ),
                                                  tabPanel("FR",
                                                           fluidPage(
-                                                            h1("Frankreich"),
-                                                            h2("Olympische Sommerspiele 2024"),
+                                                            h2("Frankreich"),
+                                                            h3("Olympische Sommerspiele 2024"),
                                                             tableOutput(outputId = "fros_tab")
                                                             )
                                                           ),
                                                  tabPanel("LT",
                                                           fluidPage(
-                                                            h1("Litauen"),
-                                                            h2("Ethnographische Regionen"),
+                                                            h2("Litauen"),
+                                                            h3("Ethnographische Regionen"),
                                                             tableOutput(outputId = "lter_tab")
                                                             )
                                                           ),
                                                  tabPanel("LU",
                                                           fluidPage(
-                                                            h1("Luxemburg"),
-                                                            h2("Dynastieserie"),
+                                                            h2("Luxemburg"),
+                                                            h3("Dynastieserie"),
                                                             tableOutput(outputId = "ludy_tab")
                                                             )
                                                           ),
                                                  tabPanel("LV",
                                                           fluidPage(
-                                                            h1("Lettland"),
-                                                            h2("Historische Regionen"),
+                                                            h2("Lettland"),
+                                                            h3("Historische Regionen"),
                                                             tableOutput(outputId = "lvhr_tab")
                                                             )
                                                           ),
                                                  tabPanel("MT",
                                                           fluidPage(
-                                                            h1("Malta"),
-                                                            h2("Verfassungsgeschichte"),
+                                                            h2("Malta"),
+                                                            h3("Verfassungsgeschichte"),
                                                             tableOutput(outputId = "mtvg_tab"),
-                                                            h2("Prähistorische Stätten"),
+                                                            h3("Prähistorische Stätten"),
                                                             tableOutput(outputId = "mtps_tab"),
-                                                            h2("Von Kindern mit Solidarität"),
+                                                            h3("Von Kindern mit Solidarität"),
                                                             tableOutput(outputId = "mtks_tab"),
-                                                            h2("Einheimische Arten Maltas"),
+                                                            h3("Einheimische Arten Maltas"),
                                                             tableOutput(outputId = "mtea_tab"),
-                                                            h2("Maltesische Städte mit Stadtmauern"),
+                                                            h3("Maltesische Städte mit Stadtmauern"),
                                                             tableOutput(outputId = "mtsm_tab"),
                                                             )
                                                           )#,
@@ -315,9 +316,9 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                      )
                             ),
                             tabPanel("Gemeinschaftsausgaben",
+                                     h1("Gemeinschaftsausgaben"),
                                      tabsetPanel(id = "Gemeinschaftsausgaben",
                                                  tabPanel("Vertrag v. Rom",
-                                                          h1("Gemeinschaftsausgabe"),
                                                           fluidPage(
                                                             h2("50. Jahrestag der Unterzeichnung des Vertrags von Rom - 2007"),
                                                             tableOutput(outputId = "vvr_tab")
@@ -349,9 +350,9 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                           )
                                                  )
                             ),
-                            tabPanel("Verzeichnis",
+                            tabPanel("Liste",
                                      fluidPage(
-                                       h1("Verzeichnis"),
+                                       h1("Liste"),
                                        h2("Gesammelte Münzen"),
                                        htmlOutput(outputId = "samml_ext")
                                      )
