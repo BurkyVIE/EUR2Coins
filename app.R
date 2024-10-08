@@ -837,7 +837,7 @@ server <- function(input, output, session) {
   }, ignoreNULL = FALSE)
 
   ## Sammlung (extern) ----
-  output$samml_ext <- renderUI(tags$iframe(seamless = "seamless", src = "tmpuser/sammlung.html", width = "500", height = "750"))
+  output$samml_ext <- renderUI(tags$iframe(src = "tmpuser/sammlung.html", width = "500", height = "750"))
 }
 
 # Run the application ----
