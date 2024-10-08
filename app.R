@@ -571,10 +571,10 @@ server <- function(input, output, session) {
   output$fros_tab <- renderTable({fros_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   fros_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     fros <- tribble(~Amtsblatt, ~Beschreibung,
-                    'C2021/470/07', '<b>Marianne und der Wettlauf - Eiffelturm</b>',
-                    'C2023/014/04', '<b>Der Genius und der Diskuswurf - Arc de Triomphe</b>',
+                    'C2021/470/07', '<b>Marianne und der Wettlauf – Eiffelturm</b>',
+                    'C2023/014/04', '<b>Der Genius und der Diskuswurf – Arc de Triomphe</b>',
                     'C2023/116/12', '<b>Die Säerin und der Faustkampf – Pont Neuf</b>',
-                    'C/2024/02468', '<b>Herkules und der Ringkampf - Nortre Dame</b>',
+                    'C/2024/02468', '<b>Herkules und der Ringkampf – Nortre Dame</b>',
                     'C/2024/03959', '<b>Olympische und Paralympische Spiele 2024 in Paris – Notre-Dame de la Garde</b>') |>
       left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
       filter(!is.na(Amtsblatt))
