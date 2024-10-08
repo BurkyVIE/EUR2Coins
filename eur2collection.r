@@ -8,5 +8,5 @@ read_lines(file = "eur2collection.txt", lazy = FALSE) |>
     Tableau = (Zeilennummer - 1) %/% 24 %% 6 + 1,
     Zeile = (Zeilennummer - 1) %/% 6 %% 4 + 1,
     Spalte = (Zeilennummer - 1) %% 6 + 1,
-    Ablage = paste0(Box, Tableau, Zeile, Spalte, "x", sprintf("%04d", Zeilennummer))) |>
+    Ablage = paste0(Box, Tableau, Zeile, Spalte, "×", sprintf("%04d", Zeilennummer))) |> # &times; = Alt+0215
   left_join(coins %>% select(ID, Abbildung, Münzzeichen), by = "ID") -> collection

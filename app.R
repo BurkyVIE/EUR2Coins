@@ -27,11 +27,11 @@ document.onmouseup = document.onkeyup = document.onselectionchange = function() 
 ## Funktion zum Formatieren Qualität ----
 form_quali <- function(x) {
   case_when(is.na(x) ~ "",
-            x == 0 ~ "<div style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</div>",
-            x == 1 ~ "<div style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</div>",
-            x == 2 ~ "<div style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</div>",
-            x == 3 ~ "<div style='color: #0e4c92;'>(3)&nbsp;&#10004;</div>",
-            TRUE ~ "<div style='color: red;'>FEHLER</div>")
+            x == 0 ~ "<span style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</span>",
+            x == 1 ~ "<span style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</span>",
+            x == 2 ~ "<span style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</span>",
+            x == 3 ~ "<span style='color: #0e4c92;'>(3)&nbsp;&#10004;</span>",
+            TRUE ~ "<span style ='color: red;'>FEHLER</span>")
 }
 
 ## Funktion zur Darstellung Land ----
@@ -146,9 +146,9 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                          h3("Münz ID"),
                                                          fluidRow(
                                                            column(width = 9, textInput(inputId = "id", value = "", label = NULL)),
-                                                           column(width = 3, offset = 0, actionButton(inputId = "id_reset", label = "✗"))
+                                                           column(width = 3, offset = 0, actionButton(inputId = "id_reset", label = "✗")) # &cross;
                                                            ),
-                                                         p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit", 
+                                                         div(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit", 
                                                            em("Münz ID"), "; Aufbau: ", code("JJJJLLA00"), ", wobei ", code("JJJJ"),
                                                            " = Prägejahr", ", ", code("LL"), " = Land", ", ", code("A"),
                                                            " = Münzart", " und ", code("0"), " = fortlaufende Nummer;", code("."),
@@ -158,32 +158,31 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                          h3("Münzzeichen"),
                                                          fluidRow(
                                                            column(width = 9, selectInput(inputId = "mzz", choices = unique(all_data()$Münzzeichen), selected = NULL, label = NULL)),
-                                                           column(width = 3, actionButton(inputId = "mzz_reset", label = "✗"))
+                                                           column(width = 3, actionButton(inputId = "mzz_reset", label = "✗")) # &cross;
                                                            ),
-                                                         p(HTML("<div class = 'beschr'>"), "Genaue Übereinstimmung mit Feld", em("Mzz"),".",
-                                                           HTML('</div>'))
+                                                         div(HTML("<div class = 'beschr'>"), "Genaue Übereinstimmung mit Feld ", em("Mzz"), ".", HTML('</div>'))
                                                          )
                                                   ),
                                                 h3("Abbildung"),
                                                 fluidRow(
                                                   column(width = 9, textInput(inputId = "abb", value = "", label = NULL)),
-                                                  column(width = 3, actionButton(inputId = "abb_reset", label = "✗"))
+                                                  column(width = 3, actionButton(inputId = "abb_reset", label = "✗")) # &cross;
                                                   ),
-                                                p(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld Abbildung. Groß-/ Kleinschreibung wird ignoriert.",
-                                                  HTML('</div>')),
+                                                div(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld Abbildung. Groß-/ Kleinschreibung wird ignoriert.", HTML('</div>')),
                                                 h2("Anlage / Änderung"),
                                                 h3("Qualität"),
                                                 fluidRow(
-                                                  column(width = 3, actionButton(inputId = "q0", label = "(0) ★★★")),
-                                                  column(width = 3, actionButton(inputId = "q1", label = "(1) ★★")),
-                                                  column(width = 3, actionButton(inputId = "q2", label = "(2) ✓✓")),
-                                                  column(width = 3, actionButton(inputId = "q3", label = "(3) ✓"))
-                                                ),
-                                                # h2("Änderung"),
+                                                  column(width = 3, actionButton(inputId = "q0", label = "(0) ★★★")), # &starf;
+                                                  column(width = 3, actionButton(inputId = "q1", label = "(1) ★★")), # &starf;
+                                                  column(width = 3, actionButton(inputId = "q2", label = "(2) ✓✓")), # &check;
+                                                  column(width = 3, actionButton(inputId = "q3", label = "(3) ✓")) # &check;
+                                                  ),
+                                                p(HTML("<div class = 'beschr'>"), "Übernimmt Markierung aus Feld ", em("Münz ID"), ".", HTML('</div>')),
                                                 h3("eur2collection.txt"),
-                                                actionButton(inputId = "aenderung", label = "Änderung durchgeführt"),
-                                                p(HTML("<div class = 'beschr'>"), "Manuelle Änderung von ", em("eur2collection.txt"), ", zB Münztausch",
-                                                  HTML('</div>'))
+                                                fluidRow(
+                                                  column(width = 12, actionButton(inputId = "aenderung", label = "Änderung durchgeführt")),
+                                                  ),
+                                                p(HTML("<div class = 'beschr'>"), "Manuelle Änderung von ", em("eur2collection.txt"), ", zB Münztausch", HTML('</div>'))
                                          ),
                                          column(width = 9,
                                                 h2("Ergebnisse"),
@@ -208,11 +207,13 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                 h2("Schnellwahl"),
                                                 h3("Ablagenummer"),
                                                 fluidRow(
-                                                  column(width = 2, actionButton(inputId = "minus", label = "<")),
-                                                  column(width = 6, textInput(inputId = "znr", value = pull(count(collection)), label = NULL)),
                                                   column(width = 2, actionButton(inputId = "get", label = "get")),
-                                                  column(width = 2, actionButton(inputId = "plus", label = ">"))
-                                                )
+                                                  column(width = 6, textInput(inputId = "znr", value = pull(count(collection)), label = NULL)),
+                                                  column(width = 2, actionButton(inputId = "minus", label = "≺")), # &prec;
+                                                  column(width = 2, actionButton(inputId = "plus", label = "≻"))
+                                                ),
+                                                div(HTML("<div class = 'beschr'>"), em("get"), " übernimmt Markierung des unterstrichenen Teils im Tableau. ", em("≺"), " und ", em("≻"), " navigieren ± 1.", HTML('</div>')),
+                                                
                                          ),
                                          column(width = 9,
                                                 h2("Ansicht"),
@@ -462,13 +463,13 @@ server <- function(input, output, session) {
                                 filter(Zeilennummer %in% (((input$box - 1) * 144 + (input$tableau - 1) * 24 + 1) + 0:23)) |> 
                                 arrange(Zeilennummer) |>
                                 mutate(Qualität = form_quali(Qualität),
-                                       This_left = case_when(input$znr == Zeilennummer ~ "<font color = 'red'><b>&FilledSmallSquare;&thinsp;</b></font>",
+                                       This_left = case_when(input$znr == Zeilennummer ~ "<font color = 'red'><b>&#10715;&VeryThinSpace;</b></font>",
                                                              TRUE ~ ""),
-                                       This_right = case_when(input$znr == Zeilennummer ~ "<font color = 'red'><b>&thinsp;&FilledSmallSquare;</b></font>",
+                                       This_right = case_when(input$znr == Zeilennummer ~ "<font color = 'red'><b>&VeryThinSpace;&#10714;</b></font>",
                                                               TRUE ~ ""),
-                                       Res = paste0("<div class='mono'>", str_sub(Ablage, 1, 9 - nchar(Zeilennummer)), "&thinsp;", "<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u>", "<br>",
-                                                   "<b>", This_left, str_sub(ID, 1, 4), "&thinsp;", toupper(str_sub(ID, 5, 6)), "&thinsp;", toupper(str_sub(ID, 7, 7)), "</b>&thinsp;", str_sub(ID, 8, 9), This_right, "</div>",
-                                                   Qualität)) |>  
+                                       Res = paste0("<div class='mono', align = 'center'>", This_left, str_sub(Ablage, 1, 4), "&VeryThinSpace;&times;&VeryThinSpace;", str_sub(Ablage, 6, 9 - nchar(Zeilennummer)), "&VeryThinSpace;", "<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u>", This_right, "</div>",
+                                                    "<div class='mono', align = 'center'><b>", This_left, str_sub(ID, 1, 4), "&VeryThinSpace;", (str_sub(ID, 5, 6)), "&VeryThinSpace;", (str_sub(ID, 7, 7)), "</b>&VeryThinSpace;", str_sub(ID, 8, 9), This_right, "</div>",
+                                                    "<div align = 'center'>", Qualität, "</div>")) |>  
                                 pull(Res) -> tmp
                               if(length(tmp) < 24) tmp <- c(tmp, rep("", 24 - length(tmp)))
                               matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE,
