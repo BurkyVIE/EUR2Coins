@@ -317,36 +317,32 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                             tabPanel("Gemeinschaftsausgaben",
                                      tabsetPanel(id = "Gemeinschaftsausgaben",
                                                  tabPanel("Vertrag v. Rom",
+                                                          h1("Gemeinschaftsausgabe"),
                                                           fluidPage(
-                                                            h1("Gemeinschaftsausgabe"),
                                                             h2("50. Jahrestag der Unterzeichnung des Vertrags von Rom - 2007"),
                                                             tableOutput(outputId = "vvr_tab")
                                                             )
                                                           ),
                                                  tabPanel("WWU",
                                                           fluidPage(
-                                                            h1("Gemeinschaftsausgabe"),
                                                             h2("Zehnjähriges Bestehen der Wirtschafts- und Währungsunion (WWU) - 2009"),
                                                             tableOutput(outputId = "wwu_tab")
                                                             )
                                                           ),
                                                  tabPanel("Euro-Einführung",
                                                           fluidPage(
-                                                            h1("Gemeinschaftsausgabe"),
                                                             h2("10. Jahrestag der Einführung des Euro-Bargelds - 2012"),
                                                             tableOutput(outputId = "eur_tab")
                                                             )
                                                           ),
                                                  tabPanel("EU-Flagge",
                                                           fluidPage(
-                                                            h1("Gemeinschaftsausgabe"),
                                                             h2("Dreißigjähriges Bestehen der EU-Flagge - 2015"),
                                                             tableOutput(outputId = "euf_tab")
                                                             )
                                                           ),
                                                  tabPanel("Erasmus-Programm",
                                                           fluidPage(
-                                                            h1("Gemeinschaftsausgabe"),
                                                             h2("35-jähriges Bestehen des Erasmus-Programms - 2022"),
                                                             tableOutput(outputId = "era_tab")
                                                             )
