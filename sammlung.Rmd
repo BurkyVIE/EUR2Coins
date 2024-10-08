@@ -15,6 +15,13 @@ source("eur2coins.r", local = knitr::knit_global())      #coins
 source("eur2collection.r", local = knitr::knit_global()) #collection
 ```
 
+<style type="text/css">
+h1.title {
+  font-size: 22px;
+  color: DarkGreen;
+}
+</style>
+
 ```{r data, echo=FALSE}
 df <- left_join(coins,
           collection %>% select(ID, Qualität, Ablage),
