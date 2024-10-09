@@ -1011,14 +1011,14 @@ C2017/066/04|sm|2024|NA|k|Heiliger Marinus (2017 -)|
 52001XC1228(04)|va|2004|NA|k|Papst Johannes Paul II. (2002 - 2005)|
 52001XC1228(04)|va|2005|NA|k|Papst Johannes Paul II. (2002 - 2005)|
 C2005/308/08|va|2005|NA|k|Sedisvakanz 2005 (2005)|
-C2007/233/08|va|2006|NA|k|Papst Benedikt XVI. (2006 - 2013)|
-C2007/233/08|va|2007|NA|k|Papst Benedikt XVI. (2006 - 2013)|
-C2007/233/08|va|2008|NA|k|Papst Benedikt XVI. (2006 - 2013)|
-C2007/233/08|va|2009|NA|k|Papst Benedikt XVI. (2006 - 2013)|
-C2007/233/08|va|2010|NA|k|Papst Benedikt XVI. (2006 - 2013)|
-C2007/233/08|va|2011|NA|k|Papst Benedikt XVI. (2006 - 2013)|
-C2007/233/08|va|2012|NA|k|Papst Benedikt XVI. (2006 - 2013)|
-C2007/233/08|va|2013|NA|k|Papst Benedikt XVI. (2006 - 2013)|
+C2006/186/02|va|2006|NA|k|Papst Benedikt XVI. (2006 - 2013)|
+C2006/186/02|va|2007|NA|k|Papst Benedikt XVI. (2006 - 2013)|
+C2006/186/02|va|2008|NA|k|Papst Benedikt XVI. (2006 - 2013)|
+C2006/186/02|va|2009|NA|k|Papst Benedikt XVI. (2006 - 2013)|
+C2006/186/02|va|2010|NA|k|Papst Benedikt XVI. (2006 - 2013)|
+C2006/186/02|va|2011|NA|k|Papst Benedikt XVI. (2006 - 2013)|
+C2006/186/02|va|2012|NA|k|Papst Benedikt XVI. (2006 - 2013)|
+C2006/186/02|va|2013|NA|k|Papst Benedikt XVI. (2006 - 2013)|
 C2013/379/11|va|2014|NA|k|Papst Franziskus (2014 - 2016)|
 C2013/379/11|va|2015|NA|k|Papst Franziskus (2014 - 2016)|
 C2013/379/11|va|2016|NA|k|Papst Franziskus (2014 - 2016)|
