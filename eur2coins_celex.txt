@@ -562,6 +562,16 @@ C/2024/03965|ee|2024|2024-5-21|g|Die Kornblume – estnische Nationalblume|
 C/2024/03947|va|2024||g|150. Geburtstag von Guglielmo Marconi|
 
 NA|va|2024|2024-7-3|g|~750. Todestag von Thomas von Aquin|
+NA|ad|2024|NA|g|~100 Jahre Skisport in Andorra|
+NA|ad|2024|NA|g|~UCI Mountainbike-Weltmeisterschaften 2024|
+NA|fi|2024|NA|g|~Architektur Finnlands – Gesellius, Lindgren, Saarinen|
+NA|lv|2024|NA|g|~Puzurs genannten Stroh-Ornamenten|
+NA|li|2024|NA|g|~immateriellen Kulturerbe der Sodai genannten Stroh-Ornamente|
+NA|sm|2024|NA|g|~530. Todestag von Ghirlandaio|
+NA|sk|2024|NA|g|~100 Jahre internationaler Košice-Marathon|
+NA|si|2024|NA|g|~250 Jahre National- und Universitätsbibliothek|
+NA|cy|2024|NA|g|~20 Jahre EU-Beitritt|
+
 
 
 C2014/062/07|ad|2014|NA|k|Staatswappen von Andorra (2014 -)|
