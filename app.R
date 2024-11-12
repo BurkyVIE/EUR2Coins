@@ -207,10 +207,10 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                 h2("Schnellwahl"),
                                                 h3("Ablagenummer"),
                                                 fluidRow(
-                                                  column(width = 2, actionButton(inputId = "get", label = "get")),
-                                                  column(width = 6, textInput(inputId = "znr", value = pull(count(collection)), label = NULL)),
                                                   column(width = 2, actionButton(inputId = "minus", label = "≺")), # &prec;
-                                                  column(width = 2, actionButton(inputId = "plus", label = "≻")) # &succ;
+                                                  column(width = 2, actionButton(inputId = "plus", label = "≻")), # &succ;
+                                                  column(width = 6, textInput(inputId = "znr", value = pull(count(collection)), label = NULL)),
+                                                  column(width = 2, actionButton(inputId = "get", label = "get"))
                                                 ),
                                                 div(HTML("<div class = 'beschr'>"), em("get"), " übernimmt Markierung des unterstrichenen Teils im Tableau. ", em("≺"), " und ", em("≻"), " navigieren ± 1.", HTML('</div>')),
                                                 
