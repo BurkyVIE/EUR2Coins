@@ -10,7 +10,7 @@ import_celex <- function(file) {
   read_delim(paste0(directory, file), delim ="|", locale = locale(encoding = "UTF-8"), lazy = FALSE, comment = "#",
              col_types = cols(Amtsblatt = col_character(),
                               Land = col_character(),
-                              Prägejahr = col_integer(),
+                              Prägejahr = col_character(),
                               Ausgabe = col_date(format = "%F"),
                               Münzart = col_character(),
                               Abbildung = col_character(),
@@ -28,15 +28,18 @@ raw <- map_df(filelist, ~import_celex(.))
 # TIDY ----
 ## do tidy ----
 raw %>% 
-  mutate(Münzart = factor(Münzart, levels = c("g", "k"), labels = c("Gedenkmünze", "Kursmünze")),
-         Münzzeichen = str_split(Münzzeichen, pattern = ",")) %>% 
-  unnest(Münzzeichen) %>% # Erweitern um die Münzzeichen
-  add_column(cs = 1) %>% # Hilfsvariable für Durchnumerierung (ID)
-  group_by(Land, Münzart, Prägejahr) %>% 
-  mutate(ID = paste0(Prägejahr, Land, tolower(substr(Münzart, 1, 1)), cumsum(cs) %>% sprintf("%02d", .))) %>% 
-  ungroup() %>% 
+  mutate(Prägejahr =str_split(Prägejahr, pattern = ",")) |> 
+  unnest(Prägejahr) |>
+  mutate(Prägejahr = as.integer(Prägejahr),
+         Münzart = factor(Münzart, levels = c("g", "k"), labels = c("Gedenkmünze", "Kursmünze")),
+         Münzzeichen = str_split(Münzzeichen, pattern = ",")) |> 
+  unnest(Münzzeichen) |> # Erweitern um die Münzzeichen
+  add_column(cs = 1) |> # Hilfsvariable für Durchnumerierung (ID)
+  group_by(Land, Münzart, Prägejahr) |> 
+  mutate(ID = paste0(Prägejahr, Land, tolower(substr(Münzart, 1, 1)), cumsum(cs) |> str_pad(2, pad = "0"))) |>
+  ungroup() |> 
   mutate(Land = toupper(Land), 
-         Münzzeichen = coalesce(Münzzeichen, "")) %>% 
+         Münzzeichen = coalesce(Münzzeichen, "")) |> 
   select(Ausgabe, Münzart, Prägejahr, Land, Abbildung, Münzzeichen, Amtsblatt, ID) -> coins
 
 # CLEAN UP ----

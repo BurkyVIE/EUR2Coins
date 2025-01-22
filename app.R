@@ -401,7 +401,7 @@ server <- function(input, output, session) {
                      Münzart == art,                                                                       # Münzart - als Input
                      grepl(tolower(input$id), ID),                                                         # ID
                      grepl(tolower(input$abb), tolower(Abbildung)),                                        # Abbildung
-                     grepl(input$mzz, Münzzeichen))                                                        # Münzzeichen
+                     grepl(paste0("\\b", input$mzz, "\\b"), Münzzeichen))                                  # Münzzeichen - exakte Übereinstimmung ('\\b', - Regex word boundary)
     
     if(page == "Ablage")
       data <- mutate(data, Zeile = as.integer(str_sub(Ablage, 6, 9))) |> 
