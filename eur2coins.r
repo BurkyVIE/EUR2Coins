@@ -7,7 +7,7 @@ directory <- paste0(getwd(), "/") # "getwd()" oder für die Weiterentwicklung (=
 
 ## import celex_*.txt ----
 import_celex <- function(file) {
-  read_delim(paste0(directory, file), delim ="|", locale = locale(encoding = "UTF-8"), lazy = FALSE,
+  read_delim(paste0(directory, file), delim ="|", locale = locale(encoding = "UTF-8"), lazy = FALSE, comment = "#",
              col_types = cols(Amtsblatt = col_character(),
                               Land = col_character(),
                               Prägejahr = col_integer(),
