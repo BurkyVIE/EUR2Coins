@@ -221,7 +221,7 @@ C2015/093/05|pt|2015|2015-4-25|g|150. Jahrestag der Gründung des portugiesische
 C2015/093/06|pt|2015|2015-7-15|g|Erste Kontakte mit Timor, heute ein unabhängiges portugiesischsprachiges Land (Timor-Leste), vor nunmehr 500 Jahren|
 C2015/143/05|de|2015|2015-1-30|g|Hessen aus der Reihe „Bundesländer“|A,D,F,G,J
 C2015/143/06|sm|2015|2015-4-8|g|750. Geburtstag von Dante Alighieri|
-C2015/143/07|mt|2015|2015-5-25|g|Erster Flug von Malta|,N
+C2015/143/07|mt|2015|2015-5-25|g|Erster Flug von Malta|,Utrecht
 C2015/150/03|mt|2015|2015-6-23|g|Republik Malta 1974|
 C2015/215/04|fr|2015|2015-7-22|g|225. Jahrestag des Föderationsfestes|
 C2015/220/03|be|2015|2015-9-17|g|2015 — Europäisches Jahr für Entwicklung|
@@ -283,7 +283,7 @@ C2016/146/08|sm|2016|2016-4-5|g|550. Todestag von Donatello|
 C2016/146/09|va|2016|2016-6-2|g|200 Jahre Gendarmeriekorps der Vatikanstadt|
 C2016/146/10|va|2016|2016-10-13|g|Heiliges Jahr der Barmherzigkeit|
 C2016/153/05|sm|2016|2016-9-22|g|400. Todestag von William Shakespeare|
-C2016/281/10|mt|2016|2016-8-22|g|Tempel von Ggantija|,Yves Sampo,F
+C2016/281/10|mt|2016|2016-8-22|g|Tempel von Ggantija|,Pessac & Yves Sampo,F
 C2016/396/02|gr|2016|2016-12-16|g|150. Jahrestag der Brandstiftung im Arkadi-Kloster|
 C2016/396/03|mt|2016|2016-12-5|g|Die gesellschaftliche Bedeutung des „Malta Community Chest Fund“|
 C2016/396/04|gr|2016|2016-12-16|g|120. Geburtstag von Dimitri Mitropoulos|
@@ -302,7 +302,7 @@ C2017/066/03|lv|2017|2017-11-14|g|Latgale|
 C2017/111/08|it|2017|2017-3-22|g|400. Jahrestag der Fertigstellung der Basilica di San Marco in Venedig|
 C2017/120/06|sm|2017|2017-3-30|g|750. Jahrestag der Geburt von Giotto|
 C2017/111/06|be|2017|2017-4-21|g|200. Jahrestag der Gründung der Universität Lüttich|
-C2017/111/10|mt|2017|2017-5-31|g|Weltkulturerbe der Unesco: die prähistorischen maltesischen Tempel von Hagar Qim|,Yves Sampo,F
+C2017/111/10|mt|2017|2017-5-31|g|Weltkulturerbe der Unesco: die prähistorischen maltesischen Tempel von Hagar Qim|,Pessac & Yves Sampo,F
 C2017/111/07|fi|2017|2017-6-1|g|100 Jahre unabhängiges Finnland|
 C2017/120/07|va|2017|2017-6-1|g|1950. Jahrestag des Martyriums der Heiligen Petrus und Paulus|
 C2017/111/09|it|2017|2017-6-23|g|Zweitausendster Todestag von Titus Livius|
@@ -349,7 +349,7 @@ C2018/155/02|be|2018|2018-6-19|g|50. Jahrestag der Ereignisse vom Mai 1968 in Be
 C2018/155/03|fr|2018|2018-6-26|g|Simone Veil|
 C2018/173/04|gr|2018|2018-10-25|g|70. Jahrestag der Vereinigung des Dodekanes mit Griechenland|
 C2018/173/05|gr|2018|2018-10-25|g|75. Todestag von Kostis Palamas|
-C2018/174/08|mt|2018|2018-6-21|g|Weltkulturerbe der UNESCO — Tempel von Mnajdra|,Yves Sampo,F
+C2018/174/08|mt|2018|2018-6-21|g|Weltkulturerbe der UNESCO — Tempel von Mnajdra|,Pessac & Yves Sampo,F
 C2018/234/03|lv|2018|2018-9-26|g|Zemgale|
 C2018/234/04|pt|2018|2018-7-25|g|250 Jahre Botanischer Garten Ajuda („Jardim Botânico da Ajuda“)|
 C2018/234/05|pt|2018|2018-5-22|g|250 Jahre Nationale Druckerei („Imprensa Nacional“)|
@@ -386,7 +386,7 @@ C2019/351/10|lt|2019|2019-9-10|g|Samogitien (ethnografische Region Litauens)|
 C2019/351/11|lt|2019|2019-6-10|g|Sutartinės (litauische mehrteilige Lieder — aufgenommen in die Repräsentative Liste des Immateriellen Kulturerbes der Menschheit der Unesco)|
 C2019/352/13|lu|2019|2019-9-19|g|100. Jahrestag der Einführung des allgemeinen Wahlrechts|
 C2019/352/14|lv|2019|2019-9-17|g|Aufgehende Sonne (Wappen)|
-C2019/352/15|mt|2019|2019-5-13|g|Unesco-Weltkulturerbe — prähistorische Tempel Ta‘ Haġrat|,Yves Sampo,F
+C2019/352/15|mt|2019|2019-5-13|g|Unesco-Weltkulturerbe — prähistorische Tempel Ta‘ Haġrat|,Pessac & Yves Sampo,F
 C2019/352/16|mt|2019|2019-10-21|g|Natur und Umwelt|
 C2019/352/17|si|2019|2019-11-25|g|100. Geburtstag der Gründung der Universität Ljubljana|
 C2019/356/03|pt|2019|2019-6-6|g|600 Jahre der Entdeckung des Archipels von Madeira durch die portugiesischen Seefahrer Bartolomeu Perestrelo und Tristão Vaz|
@@ -411,7 +411,7 @@ C2020/150/05|be|2020|2020-10-15|g|Jan van Eyck|
 C2020/163/04|va|2020|2020-6-23|g|100. Jahrestag der Geburt von Papst Johannes Paul II.|
 C2020/163/05|ad|2020|2020-12-09|g|Das 27. Iberoamerikanische Gipfeltreffen in Andorra|
 C2020/163/06|pt|2020|2020-10-7|g|75. Jahrestag der Vereinten Nationen|
-C2020/166/02|mt|2020|2020-7-24|g|Unesco — Weltkulturerbe prähistorische Tempel von Skorba|,Yves Sampo,F
+C2020/166/02|mt|2020|2020-7-24|g|Unesco — Weltkulturerbe prähistorische Tempel von Skorba|,Pessac & Yves Sampo,F
 C2020/167/15|mc|2020|2020-10-20|g|300. Geburtstag von Prince Honoré III.|
 C2020/210/05|sm|2020|2020-3-5|g|500. Todestag Raffaels|
 C2020/256/02|fr|2020|2020-1-31|g|Charles de Gaulle|
