@@ -1,4 +1,5 @@
 Amtsblatt|Land|Prägejahr|Ausgabe|Münzart|Abbildung|Münzzeichen
+
 # Gedenkmünzen ----
 ## 2004 ----
 C2004/091/06|gr|2004|2004-5-14|g|Olympische Spiele 2004 in Athen|
@@ -7,6 +8,7 @@ C2004/243/05|lu|2004|2004-7-26|g|Bildnis und Monogramm des Großherzogs Henri|
 C2004/298/02|sm|2004|2004-12-16|g|Bartolomeo Borghesi (Historiker, Numismatiker)|
 C2004/313/03|it|2004|2004-12-13|g|Fünftes Jahrzehnt des Bestehens des Welternährungsprogramms|
 C2004/321/03|va|2004|2004-12-16|g|75. Jahrestag der Gründung des Staates Vatikanstadt|
+
 ## 2005 ----
 C2005/011/03|lu|2005|2005-2-15|g|50. Geburtstag von Großherzog Henri, 5. Jahrestag seines Amtsantritts und 100. Todestag von Großherzog Adolphe|
 C2005/061/07|at|2005|2005-5-11|g|50. Jahrestag der Unterzeichnung des Österreichischen Staatsvertrages|
@@ -16,6 +18,7 @@ C2005/244/03|sm|2005|2005-10-14|g|Internationales Jahr der Physik 2005|
 C2005/244/04|fi|2005|2005-10-25|g|60 Jahre Vereinte Nationen und 50 Jahre UN-Mitgliedschaft Finnlands|
 C2005/283/06|it|2005|2005-10-29|g|1. Jahrestag der Unterzeichnung der Europäischen Verfassung|
 C2005/283/07|va|2005|2005-12-6|g|20. Weltjugendtag in Köln (August 2005)|
+
 ## 2006 ----
 C2006/020/10|lu|2006|2006-2-1|g|25. Geburtstag von Erbgroßherzog Guillaume|
 C2006/033/04|de|2006|2006-2-3|g|Schleswig-Holstein|A,D,F,G,J
@@ -24,6 +27,7 @@ C2006/053/03|be|2006|2006-4-10|g|Atomium|
 C2006/248/02|fi|2006|2006-10-4|g|100 Jahre allgemeine, gleiche, geheime und freie Wahlen|
 C2006/248/03|sm|2006|2006-10-17|g|500. Todestag von Christoph Kolumbus|
 C2006/260/06|va|2006|2006-11-9|g|500 Jahre Päpstliche Schweizergarde|
+
 ## 2007 ----
 C2007/053/02|lu|2007|2007-2-2|g|Großherzoglicher Palast|
 C2007/065/04|be|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
@@ -45,6 +49,7 @@ C2007/172/06|mc|2007|2007-7-12|g|25. Todestag von Fürstin Gracia Patricia|
 C2007/233/07|sm|2007|2007-10-9|g|Zweihundertster Geburtstag von Giuseppe Garibaldi|
 C2007/233/08|va|2007|2007-10-23|g|80. Geburtstag von Papst Benedikt XVI.|
 C2007/289/10|fi|2007|2007-12-3|g|90. Jahrestag der Unabhängigkeitserklärung|
+
 ## 2008 ----
 C2008/013/02|de|2008|2008-2-1|g|Hamburg|A,D,F,G,J
 C2008/021/09|lu|2008|2008-2-1|g|Großherzog Henri und die Residenz Schlossberg|
@@ -56,6 +61,7 @@ C2008/165/03|fr|2008|2008-7-1|g|Französischer Ratsvorsitz der Europäischen Uni
 C2008/165/04|pt|2008|2008-9-15|g|60. Jahrestag der Annahme der Allgemeinen Erklärung der Menschenrechte|
 C2008/228/06|va|2008|2008-10-16|g|Paulusjahr 2008|
 C2008/246/06|fi|2008|2008-10-24|g|60. Jahrestag der Allgemeinen Erklärung der Menschenrechte|
+
 ## 2009 ----
 C2008/315/04|be|2009|2009-1-27|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|
 C2008/315/04|de|2009|2009-1-2|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|A,D,F,G,J
@@ -82,6 +88,7 @@ C2009/196/07|sk|2009|2009-11-10|g|20. Jahrestag des Tags der Freiheit und der De
 C2009/196/08|it|2009|2009-10-15|g|Zweihundertster Geburtstag der Geburt von Louis Braille (1809—1852)|
 C2009/204/05|va|2009|2009-11-18|g|Internationales Jahr der Astronomie|
 C2009/227/03|fi|2009|2009-10-23|g|200. Jahrestag des ersten finnischen Landtags und der Gründung zentraler staatlicher Einrichtungen in Finnland|
+
 ## 2010 ----
 C2009/311/05|si|2010|2010-5-10|g|200-jähriges Bestehen des Botanischen Gartens in Ljubljana|
 C2009/311/06|lu|2010|2010-1-14|g|Das Wappen des Großherzogs|
@@ -95,6 +102,7 @@ C2010/212/02|sm|2010|2010-9-7|g|500. Todestag von Sandro Botticelli|
 C2010/212/03|va|2010|2010-10-12|g|Priesterjahr|
 C2010/256/04|fi|2010|2010-11-11|g|Währungserlass von 1860, durch den Finnland das Recht gewährt wurde, Banknoten und Münzen auszugeben|
 C2010/270/04|gr|2010|2010-10-25|g|Der 2 500. Jahrestag der Schlacht von Marathon|
+
 ## 2011 ----
 C2010/349/03|lu|2011|2011-2-3|g|50. Jahrestag der Ernennung ihres Sohnes Jean zum „lieutenant-représentant“ durch Großherzogin Charlotte|
 C2011/005/06|sk|2011|2011-1-10|g|20. Jahrestag der Gründung der Visegrád-Gruppe|
@@ -112,6 +120,7 @@ C2011/273/04|pt|2011|2011-9-15|g|500. Geburtstag des portugiesischen Entdeckers 
 C2011/291/03|fi|2011|2011-10-17|g|200 Jahre Finnische Nationalbank|
 C2011/299/08|mt|2011|2011-10-17|g|Erste gewählte Vertreter|
 C2011/301/06|va|2011|2011-10-18|g|26. Weltjugendtag|
+
 ## 2012 ----
 C2011/373/06|lu|2012|2012-2-9|g|Großherzog Henri und Großherzog Wilhem IV. der Reihe „Großherzogliche Dynastie“|
 C2012/010/02|de|2012|2012-2-3|g|Bayern aus der Serie „Bundesländer“|A,D,F,G,J
@@ -143,6 +152,7 @@ C2012/313/04|va|2012|2012-10-16|g|7. Weltfamilientag|
 C2012/375/06|mt|2012|2012-8-20|g|Mehrheitswahlrecht 1887|
 C2013/021/05|lu|2012|2012-12-20|g|Hochzeit von Erbgroßherzog Guillaume mit Gräfin Stéphanie de Lannoy|
 C2013/102/03|it|2012|2012-7-18|g|100. Todestag von Giovanni PASCOLI|
+
 ## 2013 ----
 C2013/018/05|fr|2013|2013-1-21|g|50. Jahrestag der Unterzeichnung des Élysée-Vertrags|
 C2013/021/04|de|2013|2013-1-22|g|50. Jahrestag der Unterzeichnung des Élysée-Vertrags|A,D,F,G,J
@@ -167,6 +177,7 @@ C2013/366/05|fi|2013|2013-11-4|g|125. Geburtstag des Literaturnobelpreisträgers
 C2013/379/08|de|2013|2013-2-1|g|„Länderserie“ — Baden-Württemberg|A,D,F,G,J
 C2013/379/09|mt|2013|2013-6-24|g|Selbstverwaltung — Verfassung von 1921|
 C2013/379/10|nl|2013|2013-11-25|g|200 Jahre Königreich der Niederlande|
+
 ## 2014 ----
 C2014/020/06|lu|2014|2014-1-6|g|175. Jahrestag der Unabhängigkeit des Großherzogtums Luxemburg|
 C2014/051/05|es|2014|2014-2-7|g|Stätten des UNESCO-Weltkultur- und Weltnaturerbes — Park Güell|
@@ -195,6 +206,7 @@ C2014/417/04|de|2014|2014-2-6|g|„Länderserie“ — Niedersachsen|A,D,F,G,J
 C2015/084/04|sm|2014|2014-9-29|g|90. Todestag von Giacomo Puccini|
 C2015/086/02|sm|2014|2014-6-23|g|500. Todestag von Bramante Lazzari delle Penne di San Marino|
 C2016/105/08|ad|2014|2016-2-16|g|20 Jahre Mitgliedschaft im Europarat|
+
 ## 2015 ----
 C2014/374/03|lv|2015|2015-2-10|g|Vorsitz Lettlands im Rat der EU|
 C2014/397/04|es|2015|2015-1-30|g|Unesco-Weltkultur- und -naturerbe — Höhle von Altamira|
@@ -243,6 +255,7 @@ C2015/357/02|mc|2015|2015-11-14|g|800. Jahrestag der Grundsteinlegung der ersten
 C2015/357/03|lt|2015|2015-12-14|g|Die litauische Sprache|
 C2015/380/04|ad|2015|2016-7-18|g|25. Jahrestag der Unterzeichnung des Zollabkommens mit der Europäischen Union|
 C2015/380/05|ad|2015|2016-7-18|g|30. Jahrestag der gesetzlichen Festlegung des Volljährigkeitsalters auf 18 Jahre und der damit einhergehenden politischen Rechte für Männer und Frauen|
+
 ## 2016 ----
 C2015/186/03|at|2016|2015-12-2|g|200 Jahre Oesterreichische Nationalbank|
 C2015/425/10|es|2016|2016-2-5|g|UNESCO-Weltkultur- und -naturerbe — Segovia|
@@ -276,6 +289,7 @@ C2016/396/03|mt|2016|2016-12-5|g|Die gesellschaftliche Bedeutung des „Malta Co
 C2016/396/04|gr|2016|2016-12-16|g|120. Geburtstag von Dimitri Mitropoulos|
 C2016/409/04|ad|2016|2017-6-1|g|25 Jahre öffentlich-rechtlicher Rundfunk in Andorra|
 C2016/409/05|ad|2016|2017-6-1|g|150-jähriges Jubiläum der Neuen Reform von 1866|
+
 ## 2017 ----
 C2016/236/06|es|2017|2017-2-3|g|Unesco-Weltkultur- und -naturerbe — Kirchen des Königreichs Asturien|
 C2017/023/07|lu|2017|2017-1-2|g|50-jähriges Jubiläum der Freiwilligkeit der luxemburgischen Armee|
@@ -309,6 +323,7 @@ C2017/329/09|lt|2017|2017-8-31|g|Vilnius|
 C2017/386/03|mt|2017|2017-11-13|g|Solidarität und Frieden|
 C2017/386/02|mc|2017|2017-11-13|g|Carabiniers du Prince („Carabiniers“ des Prinzen)|
 C2017/386/04|pt|2017|2017-11-21|g|150. Jahrestag der Geburt des Schriftstellers Raul Brandão|
+
 ## 2018 ----
 C2017/388/06|at|2018|2017-12-6|g|100. Jahrestag der Republik Österreich|
 C2017/438/10|lu|2018|2017-12-27|g|150. Jahrestag der luxemburgischen Verfassung|
@@ -346,6 +361,7 @@ C2018/400/07|va|2018|2018-10-4|g|50. Todestag von Pater Pio|
 C2018/401/06|be|2018|2018-9-20|g|50. Jahrestag des Starts des Forschungssatelliten ESRO 2B|
 C2018/401/07|mt|2018|2018-11-7|g|Kulturerbe|
 C2018/422/05|mc|2018|2018-6-25|g|François Joseph Bosio|
+
 ## 2019 ----
 C2018/466/06|be|2019|2019-1-24|g|450. Todestag von Pieter Bruegel dem Älteren|
 C2018/466/07|be|2019|2019-5-9|g|25-jähriges Bestehen des Europäischen Währungsinstituts (EWI)|
@@ -379,6 +395,7 @@ C2019/356/05|sm|2019|2019-8-29|g|550. Todestag von Filippo Lippi|
 C2019/356/06|va|2019|2019-10-1|g|Sixtinische Kapelle — Ende der Restaurierung 1994-2019|
 C2019/409/06|ad|2019|2019-11-11|g|600 Jahre Landesrat|
 C2019/409/07|ee|2019|2019-11-19|g|Der 100. Jahrestag der Universität Tartu|
+
 ## 2020 ----
 C2020/049/10|be|2020|2020-3-5|g|Internationales Jahr der Pflanzengesundheit 2020 (IYPH 2020)|
 C2020/049/11|de|2020|2020-1-28|g|Brandenburg (Bundesländer-Serie)|A,D,F,G,J
@@ -414,6 +431,7 @@ C2020/393/05|de|2020|2020-10-8|g|50. Jahrestag des Kniefalls von Willy Brandt in
 C2020/395/03|fr|2020|2020-10-27|g|Medizinische Forschung|
 C2020/417/05|gr|2020|2020-6-30|g|2500. Jahrestag der Schlacht bei den Thermopylen|
 C2020/417/06|gr|2020|2020-7-16|g|100. Jahrestag der Vereinigung Thrakiens mit Griechenland|
+
 ## 2021 ----
 C2020/444/04|lu|2021|2021-4-19|g|Der 100. Geburtstag von Großherzog Jean|
 C2020/444/05|pt|2021|2021-1-4|g|Portugiesischer Vorsitz im Rat der Europäischen Union|
@@ -446,6 +464,7 @@ C2021/480/07|va|2021|2021-10-26|g|700. Todestag von Dante Alighieri|
 C2021/480/08|va|2021|2021-6-25|g|450. Geburtstag von Caravaggio|
 C2021/482/02|sm|2021|2021-8-27|g|550. Geburtstag von Albrecht Dürer|
 C2021/482/03|sm|2021|2021-3-1|g|450. Geburtstag von Caravaggio|
+
 ## 2022 ----
 C2022/012/03|be|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/012/03|de|2022|2022-7-1|g|35 Jahre Erasmus-Programm|A,D,F,G,J
@@ -496,6 +515,7 @@ C2023/014/04|fr|2022|2022-9-22|g|Olympische Spiele 2024|
 C2023/034/04|sm|2022|2022-10-4|g|Der 200. Todestag von Antonio Canova|
 C2023/034/05|sm|2022|2022-4-28|g|530. Todestag von Piero della Francesca|
 C2023/034/06|mc|2022|2022-9-7|g|100. Todestag von Fürst Albert I.|
+
 ## 2023 ----
 C2023/116/09|fi|2023|2023-3-21|g|Erstes Naturschutzgesetz Finnlands|
 C2023/116/10|es|2023|2023-3-28|g|UNESCO: Cáceres|
@@ -533,6 +553,7 @@ C/2023/01626|sk|2023|2023-10-11|g|200-jähriges Bestehen der Pferde-Expresspost 
 C/2023/01627|be|2023|2023-10-25|g|75 Jahre Frauenwahlrecht in Belgien|
 C/2023/01629|pt|2023|2023-7-6|g|Weltjugendtag|
 C/2023/01628|si|2023|2024-12-19|g|150. Geburtstag des Mathematikers und Astronomen Josip Plemelj|
+
 ## 2024 ----
 C/2024/02352|es|2024|2024-2-2|g|200. Jubiläum der Gründung der Policia Nacional, der für die Sicherheit auf dem gesamten Staatsgebiet zuständigen Nationalpolizei|
 C/2024/02353|de|2024|2024-3-21|g|175. Jubiläum der Frankfurter Verfassung (oder „Paulskirchenverfassung“, des ersten Versuchs einer gesamtstaatlichen Verfassung für ein vereintes Deutschland)|A,D,F,G,J
@@ -570,71 +591,95 @@ NA|sm|2024|2024-9-5|g|~530. Todestag von Ghirlandaio|
 NA|sk|2024|2024-9-19|g|~100 Jahre internationaler Košice-Marathon|
 NA|si|2024|2024-12-18|g|~250 Jahre National- und Universitätsbibliothek|
 NA|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
+
 ## 2025 ----
 
 # Kursmünzen ----
-## AD ----
+## AD (Andorra, de: Andorra, en: Andorra) ----
 C2014/062/07|ad|2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024|NA|k|Staatswappen von Andorra (2014 -)|
-## AT ----
+
+## AT (Österreich, de: Österreich, en:  Austria) ----
 52001XC1228(04)|at|2002,2003,2004,2006,2008,2010,2011,2012,2013,2014,2015,2017,2019,2020,2021,2022,2023,2024,2025|NA|k|Bertha Freifrau von Suttner (2002 -)|
-## BE ----
+
+## BE (België/Belgique, de: Belgien, en: Belgium) ----
 52001XC1228(04)|be|1999,2000,2001,2002,2003,2004,2005,2006,2007|NA|k|König Albert II. (1999 - 2007)|
 C2007/302/08|be|2008|NA|k|König Albert II. (2008)|
 C2007/302/08|be|2009,2010,2011,2012,2013|NA|k|König Albert II. (2009 - 2013)|
 C2014/075/02|be|2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024|NA|k|König Philippe (2014 -)|
-## CY ----
+
+## CY (Kypros, de: Zypern, en: Cyprus) ----
 C2007/248/07|cy|2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024|NA|k|Idol von Pomos (2008 -)|
-## DE ----
+
+## DE (Deutschland, de: Deutschland, en: Germany)----
 52001XC1228(04)|de|2002,2003,2004,2005,2006,2008,2010,2011,2014,2016,2017,2019,2020,2021,2022,2023,2024,2025|NA|k|Bundesadler (2002 -)|A,D,F,G,J
-## EE ----
+
+## EE (Eesti, de: Estland, en: Estonia) ----
 C2010/309/04|ee|2011,2016,2018,2022|NA|k|Landesumriss (2011 -)|
-## ES ----
+
+## ES (España, de: Spanien, en: Spain) ----
 52001XC1228(04)|es|1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009|NA|k|König Juan Carlos I. (1999 - 2009)|
 C2009/300/02|es|2010,2011,2012,2013,2014|NA|k|König Juan Carlos I. (2010 - 2014)|
 C2014/410/06|es|2015,2016,2017,2018,2019,2020,2021,2022,2023,2024|NA|k|König Felipe VI. (2015 -)|
-## FI ----
+
+## FI (Suomi, de: Finnland, en: Finland) ----
 52001XC1228(04)|fi|1999,2000,2001,2002,2003,2004,2005,2006|NA|k|Moltebeere (1999 - 2006)|
 52001XC1228(04)|fi|2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024|NA|k|Moltebeere (2007 -)|
-## FR ----
+
+## FR (France, de: Frankreich, en: France)----
 52001XC1228(04)|fr|1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021|NA|k|Stilisierter Baum (1999 - 2021)|
 C2021/507/05|fr|2022,2023,2024|NA|k|Stilisierter Baum – moderne Fassung (2022 -)|
-## GR ----
+
+## GR (Elláda, de: Griechenland, en: Greece)----
 52001XC1228(04)|gr|2002|NA|k|Entführung der Europa durch Zeus (2002 -)|,S
 52001XC1228(04)|gr|2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024|NA|k|Entführung der Europa durch Zeus (2002 -)|
-## HR ----
+
+## HR (Hrvatska, de: Kroatien, en: Croatia)----
 C2022/364/03|hr|2023,2024|NA|k|Geografische Landkarte Kroatiens (2023 -)|
-## IE ----
+
+## IE (Éire/Ireland, de: Irland, en: Ireland) ----
 52001XC1228(04)|ie|2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024|NA|k|Keltische Harfe (2002 -)|
-## IT ----
+
+## IT (Italia, de: Italien, en: Italy) ----
 52001XC1228(04)|it|2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024|NA|k|Dante Alighieri (2002 -)|
-## LT ----
+
+## LT (Lietuva, de: Litauen, en: Lithuania)----
 C2014/385/05|lt|2015,2017,2018,2019,2020,2021,2022,2023,2024|NA|k|Vytis (2015 -)|
-## LU ----
+
+## LU (Lëtzebuerg/Luxembourg, de: Luxemburg, en: Luxemborg)----
 52001XC1228(04)|lu|2002,2003,2024,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024|NA|k|Großherzog Henri (2002 -)|
-## LV ----
+
+## LV (Latvija, de: Lettland, en: Latvia) ----
 C2013/309/03|lv|2014,2015,2016,2018,2019,2020,2021,2022,2023,2024|NA|k|Trachtenmädchen (2014 - )|
-## MC ----
+
+## MC /(Munegu/Monaco, de: Monaco, en: Monaco) ----
 52001XC1228(04)|mc|2001,2002,2003,2004|NA|k|Fürst Rainier III. (2001 - 2004)|
 C2006/316/09|mc|2006,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024|NA|k|Fürst Albert II. (2006 -)|
-## MT ----
+
+## MT (Malta, de: Malta, en: Malta) ----
 C2007/248/08|mt|2008,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025|NA|k|Malteserkreuz (2008 -)|
-## NL ----
+
+## NL (Nederland, de: Niederlande, en: Netherlands) ----
 52001XC1228(04)|nl|1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013|NA|k|Königin Beatrix (1999 - 2013)|
 C2014/046/08|nl|2014|NA|k|König Willem-Alexander (2014 -)|
 C2014/046/08|nl|2015|NA|k|König Willem-Alexander (2014 -)|,Stern
 C2014/046/08|nl|2016|NA|k|König Willem-Alexander (2014 -)|
 C2014/046/08|nl|2017|NA|k|König Willem-Alexander (2014 -)|,Brücke
 C2014/046/08|nl|2018,2019,2020,2021,2022,2023,2024|NA|k|König Willem-Alexander (2014 -)|
-## PT ----
+
+## PT (Portugal, de: Portugal, en: Portugal) ----
 52001XC1228(04)|pt|2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024|NA|k|Königliches Siegel von 1144 (2002 -)|
-## SI ----
+
+## SI (Slovenija, de: Slowenien, en: Slovenia) ----
 C2006/254/04|si|2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024|NA|k|France Prešeren (2007 -)|
-## SK ----
+
+## SK (Slovensko, de: Slowakei, en: Slovakia) ----
 C2008/273/06|sk|2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024|NA|k|Doppelkreuz auf drei Bergen (2009 -)|
-## SM ----
+
+## SM (San Marino, de: San Marino, en: San Marino) ----
 52001XC1228(04)|sm|2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016|NA|k|Regierungspalast (2002 - 2016)|
 C2017/066/04|sm|2017,2018,2019,2020,2021,2022,2023,2024|NA|k|Heiliger Marinus (2017 -)|
-## VA ----
+
+## VA (Stato della Città del Vaticano, de: Vatikanstadt, en: Vatican City) ----
 52001XC1228(04)|va|2002,2003,2004,2005|NA|k|Papst Johannes Paul II. (2002 - 2005)|
 C2005/308/08|va|2005|NA|k|Sedisvakanz 2005 (2005)|
 C2006/186/02|va|2006,2007,2008,2009,2010,2011,2012,2013|NA|k|Papst Benedikt XVI. (2006 - 2013)|
