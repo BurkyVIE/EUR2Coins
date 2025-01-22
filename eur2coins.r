@@ -27,7 +27,7 @@ raw <- map_df(filelist, ~import_celex(.))
 
 # TIDY ----
 ## do tidy ----
-raw %>% 
+raw |> 
   mutate(Prägejahr =str_split(Prägejahr, pattern = ",")) |> 
   unnest(Prägejahr) |>
   mutate(Prägejahr = as.integer(Prägejahr),
