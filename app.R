@@ -135,7 +135,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                        h1("Identifikation"),
                                        fluidRow(
                                          column(width = 3,
-                                                h2("Anzeige"),
+                                                h2("Filter"),
                                                 h3("Münzen"),
                                                 radioButtons(inputId = "samlg", label = NULL, inline = TRUE,
                                                              choices = c("Alle" = "alle",
