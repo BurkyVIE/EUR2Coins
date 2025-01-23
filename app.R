@@ -117,7 +117,7 @@ form_stat <- function(val, von, bis) {
             by = "Grp") |> 
     transmute(Erfolg = paste0(coalesce(n.y, 0L), " / ", n.x),
               vH = Erfolg |> (\(x) eval(parse(text = x)) * 100)(),
-              Graph = c(rep(HTML("&#9608;"), as.integer(vH %/% 10)), if((vH %% 10) >= 5) HTML("&#9612;")) |>  paste(collapse = "")) |> 
+              Graph = c(rep(HTML("&#9608;"), as.integer(vH %/% 5)), if((vH %% 5) >= 2.5) HTML("&#9612;")) |>  paste(collapse = "")) |> 
     # ungroup() |> 
     rename(!!val := Grp) |> 
     mutate(Graph = paste0("<div class='bar'>", Graph, "</div>"))
@@ -201,9 +201,9 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                          column(width = 3,
                                                 h2("Auswahl"),
                                                 h3("Box"),
-                                                sliderInput(inputId = "box", label = NULL, min = 1, max = 4, step = 1, value = 1),
+                                                sliderInput(inputId = "box", label = NULL, min = 1, max = 4, value = 1, step = 1, width = "100%"),
                                                 h3("Tableau"),
-                                                sliderInput(inputId = "tableau", label = NULL, min = 1, max = 6, step = 1,  value = 1),
+                                                sliderInput(inputId = "tableau", label = NULL, min = 1, max = 6, value = 1, step = 1, width = "100%"),
                                                 h2("Schnellwahl"),
                                                 h3("Ablagenummer"),
                                                 fluidRow(
