@@ -145,8 +145,8 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                   column(width = 6,
                                                          h3("Münz ID"),
                                                          fluidRow(
-                                                           column(width = 9, textInput(inputId = "id", value = "", label = NULL)),
-                                                           column(width = 3, offset = 0, actionButton(inputId = "id_reset", label = "✗")) # &cross;
+                                                           column(width = 8, textInput(inputId = "id", label = NULL, value = "", width = "100%")),
+                                                           column(width = 4, offset = 0, actionButton(inputId = "id_reset", label = "✗", width = "100%")) # &cross;
                                                            ),
                                                          div(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit", 
                                                            em("Münz ID"), "; Aufbau: ", code("JJJJLLA00"), ", wobei ", code("JJJJ"),
@@ -157,32 +157,35 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                                                   column(width = 6,
                                                          h3("Münzzeichen"),
                                                          fluidRow(
-                                                           column(width = 9, selectInput(inputId = "mzz", choices = unique(all_data()$Münzzeichen), selected = NULL, label = NULL)),
-                                                           column(width = 3, actionButton(inputId = "mzz_reset", label = "✗")) # &cross;
+                                                           column(width = 8, selectInput(inputId = "mzz", label = NULL, choices = unique(all_data()$Münzzeichen), selected = NULL, width = "100%")),
+                                                           column(width = 4, actionButton(inputId = "mzz_reset", label = "✗", width = "100%")) # &cross;
                                                            ),
                                                          div(HTML("<div class = 'beschr'>"), "Genaue Übereinstimmung mit Feld ", em("Mzz"), ".", HTML('</div>'))
                                                          )
                                                   ),
                                                 h3("Abbildung"),
                                                 fluidRow(
-                                                  column(width = 9, textInput(inputId = "abb", value = "", label = NULL)),
-                                                  column(width = 3, actionButton(inputId = "abb_reset", label = "✗")) # &cross;
+                                                  column(width = 10, textInput(inputId = "abb", label = NULL, value = "", width = "100%")),
+                                                  column(width = 2, actionButton(inputId = "abb_reset", label = "✗", width = "100%")) # &cross;
                                                   ),
                                                 div(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld Abbildung. Groß-/ Kleinschreibung wird ignoriert.", HTML('</div>')),
                                                 h2("Anlage / Änderung"),
                                                 h3("Qualität"),
                                                 fluidRow(
-                                                  column(width = 3, actionButton(inputId = "q0", label = "(0) ★★★")), # &starf;
-                                                  column(width = 3, actionButton(inputId = "q1", label = "(1) ★★")), # &starf;
-                                                  column(width = 3, actionButton(inputId = "q2", label = "(2) ✓✓")), # &check;
-                                                  column(width = 3, actionButton(inputId = "q3", label = "(3) ✓")) # &check;
+                                                  column(width = 3, actionButton(inputId = "q0", label = "(0) ★★★", width = "100%")), # &starf;
+                                                  column(width = 3, actionButton(inputId = "q1", label = "(1) ★★", width = "100%")), # &starf;
+                                                  column(width = 3, actionButton(inputId = "q2", label = "(2) ✓✓", width = "100%")), # &check;
+                                                  column(width = 3, actionButton(inputId = "q3", label = "(3) ✓", width = "100%")) # &check;
                                                   ),
                                                 p(HTML("<div class = 'beschr'>"), "Übernimmt Markierung aus Feld ", em("Münz ID"), ".", HTML('</div>')),
                                                 h3("eur2collection.txt"),
                                                 fluidRow(
-                                                  column(width = 12, actionButton(inputId = "aenderung", label = "Änderung durchgeführt")),
-                                                  ),
-                                                p(HTML("<div class = 'beschr'>"), "Manuelle Änderung von ", em("eur2collection.txt"), ", zB Münztausch", HTML('</div>'))
+                                                  column(width = 6,
+                                                         actionButton(inputId = "aenderung", label = "Änderung durchgeführt", width = "100%"),
+                                                         p(HTML("<div class = 'beschr'>"), "Manuelle Änderung von ", em("eur2collection.txt"), ", zB Münztausch", HTML('</div>'))
+                                                         ),
+                                                  column(width = 6),
+                                                ),
                                          ),
                                          column(width = 9,
                                                 h2("Ergebnisse"),
