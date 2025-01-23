@@ -117,7 +117,7 @@ form_stat <- function(val, von, bis) {
             by = "Grp") |> 
     transmute(Erfolg = paste0(coalesce(n.y, 0L), " / ", n.x),
               vH = Erfolg |> (\(x) eval(parse(text = x)) * 100)(),
-              Graph = c(rep(HTML("&#9608;"), as.integer(vH %/% 8)), if((vH %% 8) >= 4) HTML("&#9612;")) |>  paste(collapse = "")) |> 
+              Graph = c(rep(HTML("&#9608;"), as.integer(vH %/% 10)), if((vH %% 10) >= 5) HTML("&#9612;")) |>  paste(collapse = "")) |> 
     # ungroup() |> 
     rename(!!val := Grp) |> 
     mutate(Graph = paste0("<div class='bar'>", Graph, "</div>"))
