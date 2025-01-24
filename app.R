@@ -433,8 +433,8 @@ server <- function(input, output, session) {
   ## Überwachung MünzID ----
   observeEvent(eventExpr = input$id,
                handlerExpr = {
-                 if(substr(input$id, 7, 7) == "g") updateTabsetPanel(inputId = "Ausgabe", selected = "Gedenkmünzen")
-                 if(substr(input$id, 7, 7) == "k") updateTabsetPanel(inputId = "Ausgabe", selected = "Kursmünzen")
+                 if(grepl("[a-z|\\.{2}]{2}g", input$id, ignore.case = TRUE)) updateTabsetPanel(inputId = "Ausgabe", selected = "Gedenkmünzen")
+                 if(grepl("[a-z|\\.{2}]{2}k", input$id, ignore.case = TRUE)) updateTabsetPanel(inputId = "Ausgabe", selected = "Kursmünzen")
                })
                                 
   ## Funktuion zur Gültigkeitsprüfung Eingabe Ablagenummer
