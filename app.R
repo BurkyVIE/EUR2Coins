@@ -177,7 +177,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                     tabsetPanel(id = "Ausgabe", type = "pills",
                         tabPanel("Alle Münzen",
                             h3("Alle Münzen"),
-                            tableOutput(outputId = "suche_"),
+                            tableOutput(outputId = "suche_")
                             ),
                         tabPanel("Gedenkmünzen",
                             h3("Gedenkmünzen"),
@@ -384,7 +384,7 @@ server <- function(input, output, session) {
   add_bew <- function(qu) {
     tmp <- paste(input$myselection, qu, sep = "-")
     write(tmp, file = "eur2collection.txt", append = TRUE)
-    Sys.sleep(2)
+    Sys.sleep(2.5)
   }
   
   ## Bewertungs Buttons ----
