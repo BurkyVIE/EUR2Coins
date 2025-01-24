@@ -174,7 +174,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                     ),
                 column(width = 9,
                     h2("Ergebnisse"),
-                    tabsetPanel(id = "Ausgabe", type = "pills",
+                    tabsetPanel(id = "Ausgabe", type = "hidden",
                         tabPanel("Alle Münzen",
                             h3("Alle Münzen"),
                             tableOutput(outputId = "suche_")
