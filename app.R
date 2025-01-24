@@ -373,7 +373,10 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
 server <- function(input, output, session) {
   
   ## Reset Buttons ----  
-  observeEvent(eventExpr = input$id_reset, handlerExpr = updateTextInput(session, inputId = "id", value = ""))
+  observeEvent(eventExpr = input$id_reset, handlerExpr = {
+    updateTextInput(session, inputId = "id", value = "")
+    updateTabsetPanel(inputId = "Ausgabe", selected = "Alle Münzen")
+    })
   observeEvent(eventExpr = input$abb_reset, handlerExpr = updateTextInput(session, inputId = "abb", value = ""))
   observeEvent(eventExpr = input$mzz_reset, handlerExpr = updateTextInput(session, inputId = "mzz", value = ""))
   
@@ -427,6 +430,13 @@ server <- function(input, output, session) {
   tbl_k <- eventReactive(eventExpr = c(input$samlg, input$id, input$abb, input$mzz, input$q0, input$q1, input$q2, input$q3, input$aenderung),
                          valueExpr = data_list(page = "Ident", art = "Kursmünze"))
   
+  ## Überwachung MünzID ----
+  observeEvent(eventExpr = input$id,
+               handlerExpr = {
+                 if(substr(input$id, 7, 7) == "g") updateTabsetPanel(inputId = "Ausgabe", selected = "Gedenkmünzen")
+                 if(substr(input$id, 7, 7) == "k") updateTabsetPanel(inputId = "Ausgabe", selected = "Kursmünzen")
+               })
+                                
   ## Funktuion zur Gültigkeitsprüfung Eingabe Ablagenummer
   check_znr <- function(x) {
     x <- as.integer(x)
