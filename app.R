@@ -68,46 +68,30 @@ displ_data <- function(df, variation) {
                AQ = paste0(Ablage, Qualität)) |> 
     arrange(ID)
   
-  # Darstellung identifikation
-  if(variation == "ident") {
-    res <- df |> 
-      transmute(Jahr,
-                Land,
-                Abbildung,
-                Mzz = Münzzeichen,
-                Amtsblatt,
-                'Münz ID' = ID,
-                Qualität,
-                Ablage)
-  }
-  
-  # Darstellung Serien - Standard
-  if(variation == "ser") {
-    res <- cbind(paste0("<b>", pull(df, Jahr), "</b>"),
-                 pull(df, Beschreibung), 
-                 pull(df, Münzzeichen),
-                 pull(df, AQ)) |>  
-      matrix(ncol = 4, dimnames = list(NULL, c("Jahr", "Bezeichnung", "Mzz", " ")))
-  }
-  
-  # Darstellung serien - Deutschland
-  if(variation == "serde") {
-    res <- cbind(paste0("<b>", df |> filter(Münzzeichen == "A") |> pull(Jahr), "</b>"),
-                 df |> filter(Münzzeichen == "A") |> pull(Beschreibung),
-                 matrix(df |> pull(AQ), ncol = 5, byrow = TRUE)) |> 
-      matrix(ncol = 7, dimnames = list(NULL, c("Jahr", "Bezeichnung", "A (Berlin)", "D (München)", "F (Stuttgart)", "G (Karlsruhe)", "J (Hamburg)")))  
-  }
-  
-  # Variation Gemeinschaftsausgabe
-  if(variation == "gem") {
-    res <- cbind(pull(df, Land), 
-                 pull(df, Münzzeichen),
-                 pull(df, ID),
-                 pull(df, AQ)) |>  
-      matrix(ncol = 4, dimnames = list(NULL, c("Land", "Mzz", "Münz ID", " ")))
-  }
-  
-  return(res)
+  switch(variation,
+         ident = df |> transmute(Jahr,
+                                 Land,
+                                 Abbildung,
+                                 Mzz = Münzzeichen,
+                                 Amtsblatt,
+                                 'Münz ID' = ID,
+                                 Qualität,
+                                 Ablage),
+         ser = cbind(paste0("<b>", pull(df, Jahr), "</b>"),
+                     pull(df, Beschreibung), 
+                     pull(df, Münzzeichen),
+                     pull(df, AQ)) |>
+           matrix(ncol = 4, dimnames = list(NULL, c("Jahr", "Bezeichnung", "Mzz", " "))),
+         serde = cbind(paste0("<b>", df |> filter(Münzzeichen == "A") |> pull(Jahr), "</b>"),
+                       df |> filter(Münzzeichen == "A") |> pull(Beschreibung),
+                       matrix(df |> pull(AQ), ncol = 5, byrow = TRUE)) |> 
+           matrix(ncol = 7, dimnames = list(NULL, c("Jahr", "Bezeichnung", "A (Berlin)", "D (München)", "F (Stuttgart)", "G (Karlsruhe)", "J (Hamburg)"))),
+         gem = cbind(pull(df, Land), 
+                     pull(df, Münzzeichen),
+                     pull(df, ID),
+                     pull(df, AQ)) |>  
+           matrix(ncol = 4, dimnames = list(NULL, c("Land", "Mzz", "Münz ID", " ")))
+         )
 }
 
 ## Funktion zur Darstellung Statistik ----
@@ -117,7 +101,7 @@ form_stat <- function(val, von, bis) {
             by = "Grp") |> 
     transmute(Erfolg = paste0(coalesce(n.y, 0L), " / ", n.x),
               vH = Erfolg |> (\(x) eval(parse(text = x)) * 100)(),
-              Graph = c(rep(HTML("&#9608;"), as.integer(vH %/% 5)), if((vH %% 5) >= 2.5) HTML("&#9612;")) |>  paste(collapse = "")) |> 
+              Graph = c(rep(HTML("&#9608;"), vH %/% 5), if((vH %% 5) >= 2.5) HTML("&#9612;")) |>  paste(collapse = "")) |> 
     # ungroup() |> 
     rename(!!val := Grp) |> 
     mutate(Graph = paste0("<div class='bar'>", Graph, "</div>"))
@@ -128,7 +112,7 @@ addResourcePath("tmpuser", getwd())
 
 # UI (User Interface) ----
 ui <- fluidPage(includeCSS(path = "style_orig.css"),
-    tabsetPanel(id = "EUR2",
+    tabsetPanel(id = "Main", type = "pills",
         ## Identifikation ----
         tabPanel("Identifikation",
             tags$script(highlight),
@@ -190,10 +174,20 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                     ),
                 column(width = 9,
                     h2("Ergebnisse"),
-                    h3("Gedenkmünzen"),
-                    tableOutput(outputId = "suche_g"),
-                    h3("Kursmünzen"),
-                    tableOutput(outputId = "suche_k")
+                    tabsetPanel(id = "Ausgabe", type = "pills",
+                        tabPanel("ALLE",
+                            h3("Alle Münzen"),
+                            tableOutput(outputId = "suche_"),
+                            ),
+                        tabPanel("Gedenkmünzen",
+                            h3("Gedenkmünzen"),
+                            tableOutput(outputId = "suche_g")
+                            ),
+                        tabPanel("Kursmünzen",
+                            h3("Kursmünzen"),
+                            tableOutput(outputId = "suche_k")
+                            )
+                        )
                     )
                 )
             )
@@ -252,7 +246,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
         ## Nationale Serien ----
         tabPanel("Nat. Serien",
             h1("~ Nationale Serien ~"),
-            tabsetPanel(id = "Serien",
+            tabsetPanel(id = "Serien", type = "pills",
                 tabPanel("DE",
                     fluidPage(
                         h2("Deutschland"),
@@ -325,7 +319,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
         ## Gemeinschaftsausgaben ----
         tabPanel("Gemeinschaftsausgaben",
             h1("~ Gemeinschaftsausgaben ~"),
-            tabsetPanel(id = "Gemeinschaftsausgaben",
+            tabsetPanel(id = "Gemeinschaftsausgaben", type = "pills",
                 tabPanel("Vertrag v. Rom",
                     fluidPage(
                         h2("50. Jahrestag der Unterzeichnung des Vertrags von Rom - 2007"),
@@ -377,7 +371,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
 
 # Server ---
 server <- function(input, output, session) {
-
+  
   ## Reset Buttons ----  
   observeEvent(eventExpr = input$id_reset, handlerExpr = updateTextInput(session, inputId = "id", value = ""))
   observeEvent(eventExpr = input$abb_reset, handlerExpr = updateTextInput(session, inputId = "abb", value = ""))
@@ -400,13 +394,14 @@ server <- function(input, output, session) {
   observeEvent(eventExpr = c(input$q0, input$q1, input$q2, input$q3, input$aenderung), 
                handlerExpr = source("eur2collection.r"))
   
-  ## Funktion zur Anzeige Listendarstellung ----
+  ## Funktion zur Auswahl Daten für Anzeige Listendarstellung ----
   data_list <- function(page = NULL, art = NULL) {
     data <- all_data()
     
+    if(!is.null(art)) data <- filter(data, Münzart == art)                                                 # Münzart - als Input
+    
     if(page == "Ident")
       data <- filter(data, (Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), # Sammlung
-                     Münzart == art,                                                                       # Münzart - als Input
                      grepl(tolower(input$id), ID),                                                         # ID
                      grepl(tolower(input$abb), tolower(Abbildung)),                                        # Abbildung
                      grepl(paste0("\\b", input$mzz, "\\b"), Münzzeichen))                                  # Münzzeichen - exakte Übereinstimmung ('\\b', - Regex word boundary)
@@ -418,6 +413,10 @@ server <- function(input, output, session) {
     displ_data(data, variation = "ident")
   }
   
+  ## Ausgabe Alle Münzen ----
+  output$suche_ <- renderTable(expr = tbl_(), spacing = "xs", width = "100%", align = c("llllllll"), sanitize.text.function = function(x) x)
+  tbl_ <- eventReactive(eventExpr = c(input$samlg, input$id, input$abb, input$mzz, input$q0, input$q1, input$q2, input$q3, input$aenderung),
+                         valueExpr = data_list(page = "Ident", art = NULL))
   ## Ausgabe Gedenkmünzen ----
   output$suche_g <- renderTable(expr = tbl_g(), spacing = "xs", width = "100%", align = c("llllllll"), sanitize.text.function = function(x) x)
   tbl_g <- eventReactive(eventExpr = c(input$samlg, input$id, input$abb, input$mzz, input$q0, input$q1, input$q2, input$q3, input$aenderung),
@@ -445,7 +444,7 @@ server <- function(input, output, session) {
                  if(check_znr(input$znr)[[2]]) updateSliderInput(session, inputId = "box", value = (as.integer(input$znr) - 1) %/% 144 + 1)
                  if(check_znr(input$znr)[[2]]) updateSliderInput(session, inputId = "tableau", value = (as.integer(input$znr) - 1) %% 144 %/% 24 + 1)
                  updateTextInput(session, inputId = "znr", value = check_znr(input$znr)[[1]])
-                 })
+               })
   
   ## Ausgabe Schnellwahl Ablage ----
   output$suche_abl <- renderTable(expr = tbl_abl(), spacing = "xs", width = "100%", align = c("llllllll"), sanitize.text.function = function(x) x)
@@ -461,7 +460,7 @@ server <- function(input, output, session) {
   ## Adressbereich - Überschrift ----
   output$adresse <- renderText(expr = paste0("Box ", input$box, ", Tableau ", input$tableau, ": Ablagenummern ",
                                              (input$box - 1) * 144 + (input$tableau - 1) * 24 + 1, " bis ", (input$box - 1) * 144 + input$tableau * 24)
-                               )
+  )
   
   ## Ausgabe Ablage ----
   output$tableau <- renderTable(expr = erst_tab(), bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
@@ -483,9 +482,9 @@ server <- function(input, output, session) {
                               matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE,
                                      dimnames = list(paste0("<br><b>", input$box, input$tableau, "&thinsp;", 1:4, "..", "</b>"),
                                                      paste0("..", 1:6)
-                                                     )
                                      )
-                              }, ignoreNULL = FALSE)
+                              )
+                            }, ignoreNULL = FALSE)
   
   ## Ausgabe Zusammenfassung Jahr ----
   output$zsf_jahr <- renderTable(expr = zsf_tbl_jahr(), spacing = "xs", align = c("rrrl"), sanitize.text.function = function(x) x)
@@ -509,7 +508,7 @@ server <- function(input, output, session) {
                                     count() |> 
                                     transmute(Anzahl = n,
                                               Anteil = Anzahl / dim(collection)[1] * 100)
-                                  },
+                                },
                                 ignoreNULL = FALSE)
   
   ## Darstellung Serien ----
@@ -538,34 +537,34 @@ server <- function(input, output, session) {
       filter(!is.na(Amtsblatt))
     
     displ_data(debl1, "serde")
-    }, ignoreNULL = FALSE)
+  }, ignoreNULL = FALSE)
   
   ### Deutschland - Bundesländerserie II ----
   output$debl2_tab <- renderTable({debl2_tab()}, bordered = T, spacing = "l", align = "clccccc", rownames = FALSE, sanitize.text.function = function(x) x)
   debl2_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-  debl2 <- tribble(~Amtsblatt, ~Beschreibung,
-                   'C2023/123/06', '<b>Hamburg</b><br>(Elbphilharmonie)',
-                   'C/2024/02355', '<b>Mecklenburg-Vorpommern</b><br>(Königsstuhl)',
-                   NA, '<b>Saarland</b><br>(Saarschleife)',
-                   NA, '<b>Bremen</b><br>(Klimahaus Bremerhaven)',
-                   NA, '<b>Nordrhein-Westfalen</b><br>()',
-                   NA, '<b>Bayern</b><br>()',
-                   NA, '<b>Baden-Württemberg</b><br>()',
-                   NA, '<b>Niedersachsen</b><br>()',
-                   NA, '<b>Hessen</b><br>()',
-                   NA, '<b>Sachsen</b><br>()',
-                   NA, '<b>Rheinland-Pfalz</b><br>()',
-                   NA, '<b>Berlin</b><br>()',
-                   NA, '<b>Schleswig-Holstein</b><br>()',
-                   NA, '<b>Brandenburg</b><br>()',
-                   NA, '<b>Sachsen-Anhalt</b><br>()',
-                   NA, '<b>Thüringen</b><br>()') |>
-    left_join(all_data(), by = "Amtsblatt", na_matches = "never") |>
-    filter(!is.na(Amtsblatt))
-
-  displ_data(debl2, "serde")
+    debl2 <- tribble(~Amtsblatt, ~Beschreibung,
+                     'C2023/123/06', '<b>Hamburg</b><br>(Elbphilharmonie)',
+                     'C/2024/02355', '<b>Mecklenburg-Vorpommern</b><br>(Königsstuhl)',
+                     NA, '<b>Saarland</b><br>(Saarschleife)',
+                     NA, '<b>Bremen</b><br>(Klimahaus Bremerhaven)',
+                     NA, '<b>Nordrhein-Westfalen</b><br>()',
+                     NA, '<b>Bayern</b><br>()',
+                     NA, '<b>Baden-Württemberg</b><br>()',
+                     NA, '<b>Niedersachsen</b><br>()',
+                     NA, '<b>Hessen</b><br>()',
+                     NA, '<b>Sachsen</b><br>()',
+                     NA, '<b>Rheinland-Pfalz</b><br>()',
+                     NA, '<b>Berlin</b><br>()',
+                     NA, '<b>Schleswig-Holstein</b><br>()',
+                     NA, '<b>Brandenburg</b><br>()',
+                     NA, '<b>Sachsen-Anhalt</b><br>()',
+                     NA, '<b>Thüringen</b><br>()') |>
+      left_join(all_data(), by = "Amtsblatt", na_matches = "never") |>
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(debl2, "serde")
   }, ignoreNULL = FALSE)
-
+  
   ### Estland - Nationale Symbole ----
   output$eens_tab <- renderTable({eens_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   eens_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
@@ -578,7 +577,7 @@ server <- function(input, output, session) {
     
     displ_data(eens, "ser")
   }, ignoreNULL = FALSE)
-
+  
   ### Frankreich - Olympische Sommerspiele 2024 ----
   output$fros_tab <- renderTable({fros_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   fros_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
@@ -592,7 +591,7 @@ server <- function(input, output, session) {
       filter(!is.na(Amtsblatt))
     
     displ_data(fros, "ser")
-    }, ignoreNULL = FALSE)
+  }, ignoreNULL = FALSE)
   
   ### Litauen - Ethnografische Regionen ----
   output$lter_tab <- renderTable({lter_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
@@ -606,7 +605,7 @@ server <- function(input, output, session) {
       filter(!is.na(Amtsblatt))
     
     displ_data(lter, "ser")
-    }, ignoreNULL = FALSE)
+  }, ignoreNULL = FALSE)
   
   ### Luxemburg - Dynastieserie ----
   output$ludy_tab <- renderTable({ludy_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
@@ -648,7 +647,7 @@ server <- function(input, output, session) {
       filter(!is.na(Amtsblatt))
     
     displ_data(ludy, "ser")
-    }, ignoreNULL = FALSE)
+  }, ignoreNULL = FALSE)
   
   ### Lettland - Historische Regionen ----
   output$lvhr_tab <- renderTable({lvhr_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
@@ -662,7 +661,7 @@ server <- function(input, output, session) {
       filter(!is.na(Amtsblatt))
     
     displ_data(lvhr, "ser")
-    }, ignoreNULL = FALSE)
+  }, ignoreNULL = FALSE)
   
   ### Malta - Verfassungsgeschichte ----
   output$mtvg_tab <- renderTable({mtvg_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
@@ -677,7 +676,7 @@ server <- function(input, output, session) {
       filter(!is.na(Amtsblatt))
     
     displ_data(mtvg, "ser")
-    }, ignoreNULL = FALSE)
+  }, ignoreNULL = FALSE)
   
   ### Malta - Verfassungsgeschichte ----
   output$mtvg_tab <- renderTable({mtvg_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
@@ -709,7 +708,7 @@ server <- function(input, output, session) {
       filter(!is.na(Amtsblatt))
     
     displ_data(mtps, "ser")
-    }, ignoreNULL = FALSE)
+  }, ignoreNULL = FALSE)
   
   ### Malta - Von Kindern mit Solidarität ----
   output$mtks_tab <- renderTable({mtks_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
@@ -724,7 +723,7 @@ server <- function(input, output, session) {
       filter(!is.na(Amtsblatt))
     
     displ_data(mtks, "ser")
-    }, ignoreNULL = FALSE)
+  }, ignoreNULL = FALSE)
   
   ### Malta - Einheimische Arten Maltas ----
   output$mtea_tab <- renderTable({mtea_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
@@ -773,19 +772,19 @@ server <- function(input, output, session) {
       filter(!is.na(Amtsblatt))
     
     displ_data(esun, "ser")
-    }, ignoreNULL = FALSE)
+  }, ignoreNULL = FALSE)
   
   ### Gemeinschaftsausgabe - Vertrag von Rom ----
   output$vvr_tab <- renderTable({vvr_tab()}, bordered = T, spacing = "l", align = "lccc", rownames = FALSE, sanitize.text.function = function(x) x)
   vvr_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     vvr <- tribble(~Amtsblatt, ~Beschreibung,
-                    'C2007/065/04', '...') |>
+                   'C2007/065/04', '...') |>
       left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
       filter(!is.na(Amtsblatt))
     
     displ_data(vvr, "gem")
   }, ignoreNULL = FALSE)
-
+  
   ### Gemeinschaftsausgabe - WWU ----
   output$wwu_tab <- renderTable({wwu_tab()}, bordered = T, spacing = "l", align = "lccc", rownames = FALSE, sanitize.text.function = function(x) x)
   wwu_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
@@ -836,7 +835,7 @@ server <- function(input, output, session) {
     
     displ_data(euf, "gem")
   }, ignoreNULL = FALSE)
-
+  
   ### Gemeinschaftsausgabe - Erasmus-Programm ----
   output$era_tab <- renderTable({era_tab()}, bordered = T, spacing = "l", align = "lccc", rownames = FALSE, sanitize.text.function = function(x) x)
   era_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
@@ -847,7 +846,7 @@ server <- function(input, output, session) {
     
     displ_data(era, "gem")
   }, ignoreNULL = FALSE)
-
+  
   ## Sammlung (extern) ----
   output$samml_ext <- renderUI(tags$iframe(src = "tmpuser/sammlung.html", width = "500", height = "750"))
 }
