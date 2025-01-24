@@ -112,10 +112,10 @@ addResourcePath("tmpuser", getwd())
 
 # UI (User Interface) ----
 ui <- fluidPage(includeCSS(path = "style_orig.css"),
+    tags$script(highlight),
     tabsetPanel(id = "Main", type = "pills",
         ## Identifikation ----
         tabPanel("Identifikation",
-            tags$script(highlight),
             fluidPage(
             h1("~ Identifikation ~"),
             fluidRow(
