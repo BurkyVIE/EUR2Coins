@@ -28,9 +28,11 @@ raw <- map_df(filelist, ~import_celex(.))
 # TIDY ----
 ## do tidy ----
 raw |> 
-  mutate(Prägejahr =str_split(Prägejahr, pattern = ",")) |> 
+  mutate(Prägejahr = str_split(Prägejahr, pattern = ",")) |> 
   unnest(Prägejahr) |>
   mutate(Prägejahr = as.integer(Prägejahr),
+         Art = case_when(Münzart == "g" ~ "Ⓖ",
+                         Münzart == "k" ~ "Ⓚ"),
          Münzart = factor(Münzart, levels = c("g", "k"), labels = c("Gedenkmünze", "Kursmünze")),
          Münzzeichen = str_split(Münzzeichen, pattern = ",")) |> 
   unnest(Münzzeichen) |> # Erweitern um die Münzzeichen
@@ -40,7 +42,7 @@ raw |>
   ungroup() |> 
   mutate(Land = toupper(Land), 
          Münzzeichen = coalesce(Münzzeichen, "")) |> 
-  select(Ausgabe, Münzart, Prägejahr, Land, Abbildung, Münzzeichen, Amtsblatt, ID) -> coins
+  select(Ausgabe, Münzart, Prägejahr, Land, Art, Abbildung, Münzzeichen, Amtsblatt, ID) -> coins
 
 # CLEAN UP ----
 ##do clean up ----
