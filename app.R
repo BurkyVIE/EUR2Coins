@@ -117,7 +117,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
         ## Identifikation ----
         tabPanel("Identifikation",
             fluidPage(
-            h1("~ Identifikation ~"),
+            h1("🙤 Identifikation 🙧"),
             fluidRow(
                 column(width = 3,
                     h2("Filter"),
@@ -195,7 +195,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
         ## Ablage ----
         tabPanel("Ablage",
             fluidPage(
-                h1("~ Ablage ~"),
+                h1("🙤 Ablage 🙧"),
                 fluidRow(
                     column(width = 3,
                         h2("Auswahl"),
@@ -226,7 +226,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
         ## Statistik ----
         tabPanel("Statistik",
             fluidPage(
-                h1("~ Statistik ~"),
+                h1("🙤 Statistik 🙧"),
                 fluidRow(
                     column(width = 4,
                         h2("Prägejahr"),
@@ -245,7 +245,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
             ),
         ## Nationale Serien ----
         tabPanel("Nat. Serien",
-            h1("~ Nationale Serien ~"),
+            h1("🙤 Nationale Serien 🙧"),
             tabsetPanel(id = "Serien", type = "pills",
                 tabPanel("DE",
                     fluidPage(
@@ -318,7 +318,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
             ),
         ## Gemeinschaftsausgaben ----
         tabPanel("Gemeinschaftsausgaben",
-            h1("~ Gemeinschaftsausgaben ~"),
+            h1("🙤 Gemeinschaftsausgaben 🙧"),
             tabsetPanel(id = "Gemeinschaftsausgaben", type = "pills",
                 tabPanel("Vertrag v. Rom",
                     fluidPage(
@@ -355,7 +355,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
         ## Liste ----
         tabPanel("Liste",
             fluidPage(
-                h1("~ Liste ~"),
+                h1("🙤 Liste 🙧"),
                 h2("Gesammelte Münzen"),
                 htmlOutput(outputId = "samml_ext")
                 )
