@@ -587,9 +587,9 @@ C/2025/00596|lt|2024|2024-9-25|g|Aufnahme der litauischen Tradition der Strohgä
 C/2025/00625|lv|2024|2024-11-21|g|Himmeli|
 C/2025/00630|si|2024|2024-12-18|g|250-jähriges Bestehen der National- und Universitätsbibliothek (Narodna in univerzitetna knjižnica)|
 C/2025/00657|sk|2024|2024-9-19|g|100. Jahrestag des Friedensmarathons von Košice|
+C/2025/00676|sm|2024|2024-9-5|g|530. Todestag von Ghirlandaio|
 
 NA|va|2024|2024-7-3|g|~750. Todestag von Thomas von Aquin|
-NA|sm|2024|2024-9-5|g|~530. Todestag von Ghirlandaio|
 NA|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 
 ## 2025 ----
