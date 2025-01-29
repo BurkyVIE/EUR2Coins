@@ -44,5 +44,5 @@ raw |>
   select(Ausgabe, Münzart, Prägejahr, Land, Art, Abbildung, Münzzeichen, Amtsblatt, ID) -> coins
 
 # CLEAN UP ----
-##do clean up ----
+## do clean up ----
 rm(directory, import_celex, filelist, raw)
