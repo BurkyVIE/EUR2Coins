@@ -601,7 +601,7 @@ NA|de|2025|NA|g|~35 Jahre Duetsche Einheit|A,D,F,G,J
 NA|de|2025|NA|g|~Saarland|A,D,F,G,J
 NA|si|2025|NA|g|~100. Geburtstag von Miki Muster|
 NA|ee|2025|NA|g|~500 Jahre erster Textdruck in esthnischer Sprache|
-NA|it|2025|NA|g|~Juniläum 2025|
+NA|it|2025|NA|g|~Jubiläum 2025|
 NA|it|2025|NA|g|~Weltreise des Amerigo-Vespucci-Segelschulschiffes 2023,2025|
 NA|lt|2025|NA|g|~Für die Verteidigung|
 NA|sm|2025|NA|g|~Heiliges Jahr 2025 - Pilger der Hoffnung|
