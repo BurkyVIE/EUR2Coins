@@ -28,14 +28,14 @@ raw <- map_df(filelist, ~import_celex(.))
 # TIDY ----
 ## do tidy ----
 raw |> 
-  mutate(Prägejahr = str_split(Prägejahr, pattern = ",")) |> 
-  unnest(Prägejahr) |>
-  mutate(Prägejahr = as.integer(Prägejahr),
-         Art = case_when(Münzart == "g" ~ "Ⓖ",
-                         Münzart == "k" ~ "Ⓚ"),
-         Münzart = factor(Münzart, levels = c("g", "k"), labels = c("Gedenkmünze", "Kursmünze")),
+  # Unnest Prägejahr and Münzzeichen
+  mutate(Prägejahr = str_split(Prägejahr, pattern = ","),
          Münzzeichen = str_split(Münzzeichen, pattern = ",")) |> 
-  unnest(Münzzeichen) |> # Erweitern um die Münzzeichen
+  unnest(Prägejahr) |>
+  unnest(Münzzeichen) |>
+  mutate(Art = case_when(Münzart == "g" ~ "Ⓖ",
+                         Münzart == "k" ~ "Ⓚ"),
+         Münzart = factor(Münzart, levels = c("g", "k"), labels = c("Gedenkmünze", "Kursmünze"))) |> 
   add_column(cs = 1) |> # Hilfsvariable für Durchnumerierung (ID)
   group_by(Land, Münzart, Prägejahr) |> 
   mutate(ID = paste0(Prägejahr, Land, tolower(substr(Münzart, 1, 1)), cumsum(cs) |> str_pad(2, pad = "0"))) |>
