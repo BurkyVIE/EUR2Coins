@@ -598,7 +598,6 @@ NA|sk|2025|2025-1-20|g|~100. Jahrestag des ersten internationalen Sportturniers 
 NA|be|2025|2025-1-23|g|~Nationallotterie Belgien|
 
 NA|de|2025|NA|g|~35 Jahre Duetsche Einheit|A,D,F,G,J
-NA|de|2025|NA|g|~Saarland|A,D,F,G,J
 NA|si|2025|NA|g|~100. Geburtstag von Miki Muster|
 NA|ee|2025|NA|g|~500 Jahre erster Textdruck in esthnischer Sprache|
 NA|it|2025|NA|g|~Jubiläum 2025|
@@ -616,10 +615,7 @@ NA|gr|2025|NA|g|~100. Geburtstag von Mikis Theodorakis|
 NA|pt|2025|NA|g|~Nachhaltige Entwicklung|
 NA|pt|2025|NA|g|~Weltpfadfinder- und Jugendbewegung|
 
-## 2026 ----
-NA|de|2026|NA|g|~Bremen|A,D,F,G,J
-
-## 28. Januar 2025 zwei.euro.com News
+## 28. Januar 2025 zwei.euro.com News  - Aufnahme alles wo Bild vorhanden - Check Kursmünzen 15. Januar 2025
 
 # Kursmünzen ----
 ## AD (Andorra, de: Andorra, en: Andorra) ----
