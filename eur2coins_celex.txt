@@ -610,11 +610,11 @@ NA|es|2025|NA|g|~Altstadt von Salamanca|
 NA|lu|2025|NA|g|~25. Jahrestag der Thronbesteigung von Großherzog Henri|
 NA|lu|2025|NA|g|~75. Jahrestag der Schuman-ERklärung|
 NA|mt|2025|NA|g|~Der maltesische Ochse|
-NA|mt|2025|NA|g|~Mdina~
+NA|mt|2025|NA|g|~Mdina|
 NA|gr|2025|NA|g|~100. Geburtstag von Manos Chatzidakis|
 NA|gr|2025|NA|g|~100. Geburtstag von Mikis Theodorakis|
-NA|pt|2025|NA|g|~Nachhaltige Entwicklung
-NA|pt|2025|NA|g|~Weltpfadfinder- und Jugendbewegung
+NA|pt|2025|NA|g|~Nachhaltige Entwicklung|
+NA|pt|2025|NA|g|~Weltpfadfinder- und Jugendbewegung|
 
 ## 2026 ----
 NA|de|2026|NA|g|~Bremen|A,D,F,G,J
