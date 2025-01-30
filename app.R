@@ -397,7 +397,7 @@ server <- function(input, output, session) {
   
   ## Wert: welche Münzarte(n) werden angezeigt ----
   tmp <- reactiveValues()
-  tmp[["art"]] <- "_"
+  tmp$art <- "_"
 
   ## Funktion (Expression) zur Auswahl Daten für Anzeige Listendarstellung ----
   data_list <- function(page = NULL, art = NULL) {
@@ -414,10 +414,10 @@ server <- function(input, output, session) {
                     filter(Ablage != " ", Zeile == input$znr)
                   )
     
-    tmp[["art"]] <- "_"
-    if(all(ret$Münzart == "Gedenkmünze")) tmp[["art"]] <- "g"
-    if(all(ret$Münzart == "Kursmünze")) tmp[["art"]] <- "k"
-    if(length(ret$Münzart) == 0) tmp[["art"]] <- "0"
+    tmp$art <- "_"
+    if(all(ret$Münzart == "Gedenkmünze")) tmp$art <- "g"
+    if(all(ret$Münzart == "Kursmünze")) tmp$art <- "k"
+    if(length(ret$Münzart) == 0) tmp$art <- "0"
     
     displ_data(ret, variation = "ident")
   }
@@ -430,13 +430,13 @@ server <- function(input, output, session) {
   ## Überwachung MünzID für Suchergebnis ----
   observeEvent(eventExpr = c(input$samlg, input$id, input$mzz, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
                handlerExpr = {
-                 if(tmp[["art"]] == "_") updateTabsetPanel(inputId = "Ausgabe", selected = "Alle Münzen")
-                 if(tmp[["art"]] == "g") updateTabsetPanel(inputId = "Ausgabe", selected = "Gedenkmünzen")
-                 if(tmp[["art"]] == "k") updateTabsetPanel(inputId = "Ausgabe", selected = "Kursmünzen")
-                 if(tmp[["art"]] == "0") updateTabsetPanel(inputId = "Ausgabe", selected = "Kein Ergebnis")
+                 if(tmp$art == "_") updateTabsetPanel(inputId = "Ausgabe", selected = "Alle Münzen")
+                 if(tmp$art == "g") updateTabsetPanel(inputId = "Ausgabe", selected = "Gedenkmünzen")
+                 if(tmp$art == "k") updateTabsetPanel(inputId = "Ausgabe", selected = "Kursmünzen")
+                 if(tmp$art == "0") updateTabsetPanel(inputId = "Ausgabe", selected = "Kein Ergebnis")
                })
   
-  output$art <- renderText(tmp[["art"]])
+  output$art <- renderText(tmp$art)
   
   ## Funktuion zur Gültigkeitsprüfung Eingabe Ablagenummer
   check_znr <- function(x) {
