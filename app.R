@@ -176,21 +176,19 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                     h2("Ergebnisse"),
                     tabsetPanel(id = "Ausgabe", type = "hidden",
                         tabPanel("Alle Münzen",
-                            # h3("Alle Münzen Ⓚ + Ⓖ")
-                            htmlOutput(outputId = "alle_m")
+                            h3("Alle Münzen (K + G)")
                             ),
                         tabPanel("Gedenkmünzen",
-                            # h3("Gedenkmünzen Ⓖ")
-                            htmlOutput(outputId = "gedenkm")
+                            h3("Gedenkmünzen (G)")
                             ),
                         tabPanel("Kursmünzen",
-                            # h3("Kursmünzen Ⓚ")
-                            htmlOutput(outputId = "kursm")
+                            h3("Kursmünzen (K)")
                             ),
                         tabPanel("Kein Ergebnis",
                             h3("Leider kein Suchergebnis!"),
                         ),
-                        footer = tableOutput(outputId = "suche_")
+                        footer = list(htmlOutput(outputId = "n_münzen"),
+                            tableOutput(outputId = "suche_"))
                         )
                     )
                 )
@@ -385,7 +383,7 @@ server <- function(input, output, session) {
   add_bew <- function(qu) {
     tmp <- paste(input$myselection, qu, sep = "-")
     write(tmp, file = "eur2collection.txt", append = TRUE)
-    Sys.sleep(2.5)
+    Sys.sleep(3.5)
   }
   
   ## Bewertungs Buttons ----
@@ -429,9 +427,7 @@ server <- function(input, output, session) {
   }
   
   ## Überschriften für Ergebnisse inkl n (Fall n = 0 in UI geregelt)
-  output$alle_m <- renderText(paste0("<h3>Alle Münzen (K + G)&emsp;&emsp;✻&emsp;&emsp;(", tmp$filtern, " Münzen)"))
-  output$gedenkm <- renderText(paste0("<h3>Gedenkmünzen(G)&emsp;&emsp;✻&emsp;&emsp;(", tmp$filtern, " Münzen)"))
-  output$kursm <- renderText(paste0("<h3>Kursmünzen(K)&emsp;&emsp;✻&emsp;&emsp;(", tmp$filtern, " Münzen)"))
+  output$n_münzen <- renderText(paste0("<p><i>&emsp;&emsp;(", format(tmp$filtern, big.mark = "&VeryThinSpace;"), " Münzen)</i></p>"))
   
   ## Ausgabe  Ergebnisse Münzen ----
   output$suche_ <- renderTable(expr = tbl_(), spacing = "xs", width = "100%", align = c("lllllllll"), sanitize.text.function = function(x) x)
