@@ -176,13 +176,16 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                     h2("Ergebnisse"),
                     tabsetPanel(id = "Ausgabe", type = "hidden",
                         tabPanel("Alle Münzen",
-                            h3("Alle Münzen Ⓚ + Ⓖ"),
+                            # h3("Alle Münzen Ⓚ + Ⓖ")
+                            htmlOutput(outputId = "alle_m")
                             ),
                         tabPanel("Gedenkmünzen",
-                            h3("Gedenkmünzen Ⓖ"),
+                            # h3("Gedenkmünzen Ⓖ")
+                            htmlOutput(outputId = "gedenkm")
                             ),
                         tabPanel("Kursmünzen",
-                            h3("Kursmünzen Ⓚ"),
+                            # h3("Kursmünzen Ⓚ")
+                            htmlOutput(outputId = "kursm")
                             ),
                         tabPanel("Kein Ergebnis",
                             h3("Leider kein Suchergebnis!"),
@@ -398,6 +401,7 @@ server <- function(input, output, session) {
   ## Wert: welche Münzarte(n) werden angezeigt ----
   tmp <- reactiveValues()
   tmp$art <- "_"
+  tmp$filtern <- dim(coins)[1]
 
   ## Funktion (Expression) zur Auswahl Daten für Anzeige Listendarstellung ----
   data_list <- function(page = NULL, art = NULL) {
@@ -419,10 +423,17 @@ server <- function(input, output, session) {
     if(all(ret$Münzart == "Kursmünze")) tmp$art <- "k"
     if(length(ret$Münzart) == 0) tmp$art <- "0"
     
+    tmp$filtern <- length(ret$Münzart)
+    
     displ_data(ret, variation = "ident")
   }
   
-  ## Ausgabe  Münzen ----
+  ## Überschriften für Ergebnisse inkl n (Fall n = 0 in UI geregelt)
+  output$alle_m <- renderText(paste0("<h3>Alle Münzen (K + G)&emsp;&emsp;✻&emsp;&emsp;(", tmp$filtern, " Münzen)"))
+  output$gedenkm <- renderText(paste0("<h3>Gedenkmünzen(G)&emsp;&emsp;✻&emsp;&emsp;(", tmp$filtern, " Münzen)"))
+  output$kursm <- renderText(paste0("<h3>Kursmünzen(K)&emsp;&emsp;✻&emsp;&emsp;(", tmp$filtern, " Münzen)"))
+  
+  ## Ausgabe  Ergebnisse Münzen ----
   output$suche_ <- renderTable(expr = tbl_(), spacing = "xs", width = "100%", align = c("lllllllll"), sanitize.text.function = function(x) x)
   tbl_ <- eventReactive(eventExpr = c(input$samlg, input$id, input$mzz, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
                          valueExpr = data_list(page = "Ident"))
