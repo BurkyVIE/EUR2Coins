@@ -596,10 +596,10 @@ NA|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 NA|de|2025|2025-1-16|g|~Saarland|A,D,F,G,J
 NA|sk|2025|2025-1-20|g|~100. Jahrestag des ersten internationalen Sportturniers in der Slowakei (Eishockey-Europameisterschaft in Starý Smokovec / Štrbské Pleso)|
 NA|be|2025|2025-1-23|g|~Nationallotterie Belgien|
+NA|ee|2025|2025-1-30|g|~500 Jahre erster Textdruck in esthnischer Sprache|
 
 NA|de|2025|NA|g|~35 Jahre Duetsche Einheit|A,D,F,G,J
 NA|si|2025|NA|g|~100. Geburtstag von Miki Muster|
-NA|ee|2025|NA|g|~500 Jahre erster Textdruck in esthnischer Sprache|
 NA|it|2025|NA|g|~Jubiläum 2025|
 NA|it|2025|NA|g|~Weltreise des Amerigo-Vespucci-Segelschulschiffes 2023-2025|
 NA|lt|2025|NA|g|~Für die Verteidigung|
@@ -607,7 +607,7 @@ NA|sm|2025|NA|g|~Heiliges Jahr 2025 - Pilger der Hoffnung|
 NA|sm|2025|NA|g|~550. Geburtstag von Michelangelo|
 NA|es|2025|NA|g|~Altstadt von Salamanca|
 NA|lu|2025|NA|g|~25. Jahrestag der Thronbesteigung von Großherzog Henri|
-NA|lu|2025|NA|g|~75. Jahrestag der Schuman-ERklärung|
+NA|lu|2025|NA|g|~75. Jahrestag der Schuman-Erklärung|
 NA|mt|2025|NA|g|~Der maltesische Ochse|
 NA|mt|2025|NA|g|~Mdina|
 NA|gr|2025|NA|g|~100. Geburtstag von Manos Chatzidakis|

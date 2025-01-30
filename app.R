@@ -113,7 +113,7 @@ addResourcePath("tmpuser", getwd())
 # UI (User Interface) ----
 ui <- fluidPage(includeCSS(path = "style_orig.css"),
     tags$script(highlight),
-    tabsetPanel(id = "Main", type = "pills",
+    tabsetPanel(id = "Hauptmenu", type = "pills",
         ## Identifikation ----
         tabPanel("Identifikation",
             fluidPage(
@@ -176,17 +176,18 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                     h2("Ergebnisse"),
                     tabsetPanel(id = "Ausgabe", type = "hidden",
                         tabPanel("Alle Münzen",
-                            h3("Alle Münzen"),
-                            tableOutput(outputId = "suche_")
+                            h3("Alle Münzen Ⓚ + Ⓖ"),
                             ),
                         tabPanel("Gedenkmünzen",
-                            h3("Gedenkmünzen"),
-                            tableOutput(outputId = "suche_g")
+                            h3("Gedenkmünzen Ⓖ"),
                             ),
                         tabPanel("Kursmünzen",
-                            h3("Kursmünzen"),
-                            tableOutput(outputId = "suche_k")
-                            )
+                            h3("Kursmünzen Ⓚ"),
+                            ),
+                        tabPanel("Kein Ergebnis",
+                            h3("Leider kein Suchergebnis!"),
+                        ),
+                        footer = tableOutput(outputId = "suche_")
                         )
                     )
                 )
@@ -373,10 +374,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
 server <- function(input, output, session) {
   
   ## Reset Buttons ----  
-  observeEvent(eventExpr = input$id_reset, handlerExpr = {
-    updateTextInput(session, inputId = "id", value = "")
-    updateTabsetPanel(inputId = "Ausgabe", selected = "Alle Münzen")
-    })
+  observeEvent(eventExpr = input$id_reset, handlerExpr = updateTextInput(session, inputId = "id", value = ""))
   observeEvent(eventExpr = input$abb_reset, handlerExpr = updateTextInput(session, inputId = "abb", value = ""))
   observeEvent(eventExpr = input$mzz_reset, handlerExpr = updateTextInput(session, inputId = "mzz", value = ""))
   
@@ -394,17 +392,20 @@ server <- function(input, output, session) {
   observeEvent(eventExpr = input$q3, handlerExpr = add_bew(3))
   
   ## Reload ----
-  observeEvent(eventExpr = c(input$q0, input$q1, input$q2, input$q3, input$aenderung), 
+  observeEvent(eventExpr = c(input$q0, input$q1, input$q2, input$q3, input$aenderung, input$Hauptmenu), 
                handlerExpr = source("eur2collection.r"))
   
+  ## Wert: welche Münzarte(n) werden angezeigt ----
+  tmp <- reactiveValues()
+  tmp[["art"]] <- "_"
+
   ## Funktion (Expression) zur Auswahl Daten für Anzeige Listendarstellung ----
   data_list <- function(page = NULL, art = NULL) {
     data <- all_data()
 
     ret <- switch(page,
                   Ident = {
-                    if(!is.null(art)) he <- filter(data, Münzart == art) else he <- data                       # Münzart - als Input
-                    filter(he, (Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), # Sammlung
+                    filter(data, (Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), # Sammlung
                            grepl(tolower(input$id), ID),                                                       # ID
                            grepl(tolower(input$abb), tolower(Abbildung)),                                      # Abbildung
                            grepl(paste0("\\b", input$mzz, "\\b"), Münzzeichen))                                # Münzzeichen - exakte Übereinstimmung ('\\b', - Regex word boundary)
@@ -413,29 +414,29 @@ server <- function(input, output, session) {
                     filter(Ablage != " ", Zeile == input$znr)
                   )
     
+    tmp[["art"]] <- "_"
+    if(all(ret$Münzart == "Gedenkmünze")) tmp[["art"]] <- "g"
+    if(all(ret$Münzart == "Kursmünze")) tmp[["art"]] <- "k"
+    if(length(ret$Münzart) == 0) tmp[["art"]] <- "0"
+    
     displ_data(ret, variation = "ident")
   }
   
-  ## Ausgabe Alle Münzen ----
+  ## Ausgabe  Münzen ----
   output$suche_ <- renderTable(expr = tbl_(), spacing = "xs", width = "100%", align = c("lllllllll"), sanitize.text.function = function(x) x)
-  tbl_ <- eventReactive(eventExpr = c(input$samlg, input$id, input$abb, input$mzz, input$q0, input$q1, input$q2, input$q3, input$aenderung),
-                         valueExpr = data_list(page = "Ident", art = NULL))
-  ## Ausgabe Gedenkmünzen ----
-  output$suche_g <- renderTable(expr = tbl_g(), spacing = "xs", width = "100%", align = c("lllllllll"), sanitize.text.function = function(x) x)
-  tbl_g <- eventReactive(eventExpr = c(input$samlg, input$id, input$abb, input$mzz, input$q0, input$q1, input$q2, input$q3, input$aenderung),
-                         valueExpr = data_list(page = "Ident", art = "Gedenkmünze"))
-  
-  ## Ausgabe Kursmünzen ----
-  output$suche_k <- renderTable(expr = tbl_k(), spacing = "xs", width = "100%", align = c("lllllllll"), sanitize.text.function = function(x) x)
-  tbl_k <- eventReactive(eventExpr = c(input$samlg, input$id, input$abb, input$mzz, input$q0, input$q1, input$q2, input$q3, input$aenderung),
-                         valueExpr = data_list(page = "Ident", art = "Kursmünze"))
-  
-  ## Überwachung MünzID ----
-  observeEvent(eventExpr = input$id,
+  tbl_ <- eventReactive(eventExpr = c(input$samlg, input$id, input$mzz, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
+                         valueExpr = data_list(page = "Ident"))
+
+  ## Überwachung MünzID für Suchergebnis ----
+  observeEvent(eventExpr = c(input$samlg, input$id, input$mzz, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
                handlerExpr = {
-                 if(grepl("[a-z|\\.]{2}g", input$id, ignore.case = TRUE)) updateTabsetPanel(inputId = "Ausgabe", selected = "Gedenkmünzen")
-                 if(grepl("[a-z|\\.]{2}k", input$id, ignore.case = TRUE)) updateTabsetPanel(inputId = "Ausgabe", selected = "Kursmünzen")
+                 if(tmp[["art"]] == "_") updateTabsetPanel(inputId = "Ausgabe", selected = "Alle Münzen")
+                 if(tmp[["art"]] == "g") updateTabsetPanel(inputId = "Ausgabe", selected = "Gedenkmünzen")
+                 if(tmp[["art"]] == "k") updateTabsetPanel(inputId = "Ausgabe", selected = "Kursmünzen")
+                 if(tmp[["art"]] == "0") updateTabsetPanel(inputId = "Ausgabe", selected = "Kein Ergebnis")
                })
+  
+  output$art <- renderText(tmp[["art"]])
   
   ## Funktuion zur Gültigkeitsprüfung Eingabe Ablagenummer
   check_znr <- function(x) {
