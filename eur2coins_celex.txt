@@ -588,8 +588,8 @@ C/2025/00625|lv|2024|2024-11-21|g|Himmeli|
 C/2025/00630|si|2024|2024-12-18|g|250-jähriges Bestehen der National- und Universitätsbibliothek (Narodna in univerzitetna knjižnica)|
 C/2025/00657|sk|2024|2024-9-19|g|100. Jahrestag des Friedensmarathons von Košice|
 C/2025/00676|sm|2024|2024-9-5|g|530. Todestag von Ghirlandaio|
+C/2025/00756|va|2024|2024-7-3|g|750. Todestag von Thomas von Aquin|
 
-NA|va|2024|2024-7-3|g|~750. Todestag von Thomas von Aquin|
 NA|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 
 ## 2025 ----
@@ -597,6 +597,8 @@ NA|de|2025|2025-1-16|g|~Saarland|A,D,F,G,J
 NA|sk|2025|2025-1-20|g|~100. Jahrestag des ersten internationalen Sportturniers in der Slowakei (Eishockey-Europameisterschaft in Starý Smokovec / Štrbské Pleso)|
 NA|be|2025|2025-1-23|g|~Nationallotterie Belgien|
 NA|ee|2025|2025-1-30|g|~500 Jahre erster Textdruck in esthnischer Sprache|
+NA|fr|2025|2025-1-30|g|~Louvre Museum|
+NA|es|2025|2015-1-30|g|~Altstadt von Salamanca|
 
 NA|de|2025|NA|g|~35 Jahre Duetsche Einheit|A,D,F,G,J
 NA|si|2025|NA|g|~100. Geburtstag von Miki Muster|
@@ -605,7 +607,6 @@ NA|it|2025|NA|g|~Weltreise des Amerigo-Vespucci-Segelschulschiffes 2023-2025|
 NA|lt|2025|NA|g|~Für die Verteidigung|
 NA|sm|2025|NA|g|~Heiliges Jahr 2025 - Pilger der Hoffnung|
 NA|sm|2025|NA|g|~550. Geburtstag von Michelangelo|
-NA|es|2025|NA|g|~Altstadt von Salamanca|
 NA|lu|2025|NA|g|~25. Jahrestag der Thronbesteigung von Großherzog Henri|
 NA|lu|2025|NA|g|~75. Jahrestag der Schuman-Erklärung|
 NA|mt|2025|NA|g|~Der maltesische Ochse|
