@@ -482,7 +482,7 @@ server <- function(input, output, session) {
   
   ## Ausgabe Ablage ----
   output$tableau <- renderTable(expr = erst_tab(), bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
-  erst_tab <- eventReactive(eventExpr = c(input$box, input$tableau, input$znr),
+  erst_tab <- eventReactive(eventExpr = c(input$box, input$tableau, input$znr, input$q0, input$q1, input$q2, input$q3, input$aenderung, input$Hauptmenu),
                             valueExpr = {
                               collection |> 
                                 filter(Zeilennummer %in% (((input$box - 1) * 144 + (input$tableau - 1) * 24 + 1) + 0:23)) |> 
