@@ -92,7 +92,7 @@ displ_data <- function(df, variation) {
                      pull(df, ID),
                      pull(df, AQ)) |>  
            matrix(ncol = 4, dimnames = list(NULL, c("Land", "Mzz", "Münz ID", " ")))
-         )
+  )
 }
 
 ## Funktion zur Darstellung Statistik ----
@@ -112,263 +112,285 @@ addResourcePath("tmpuser", getwd())
 
 # UI (User Interface) ----
 ui <- fluidPage(includeCSS(path = "style_orig.css"),
-    tags$script(highlight),
-    tabsetPanel(id = "Hauptmenu", type = "pills",
-        ## Identifikation ----
-        tabPanel("Identifikation",
-            fluidPage(
-            h1("🙤 Identifikation 🙧"),
-            fluidRow(
-                column(width = 3,
-                    h2("Filter"),
-                    h3("Münzen"),
-                    radioButtons(inputId = "samlg", label = NULL, inline = TRUE,
-                                 choices = c("Alle" = "alle",
-                                             "Vorhandene" = "ja",
-                                             "Fehlende" = "nein")),
-                    fluidRow(
-                        column(width = 6,
-                            h3("Münz ID"),
-                            fluidRow(
-                                column(width = 8, textInput(inputId = "id", label = NULL, value = "", width = "100%")),
-                                column(width = 4, offset = 0, actionButton(inputId = "id_reset", label = "✗", width = "100%")) # &cross;
-                                ),
-                            div(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit", 
-                                em("Münz ID"), "; Aufbau: ", code("JJJJLLA00"), ", wobei ", code("JJJJ"),
-                                " = Prägejahr", ", ", code("LL"), " = Land", ", ", code("A"),
-                                " = Münzart", " und ", code("0"), " = fortlaufende Nummer;", code("."),
-                                " = Jokerzeichen.", HTML('</div>'))
+                tags$script(highlight),
+                tabsetPanel(id = "Hauptmenu", type = "pills",
+                            ## Identifikation ----
+                            tabPanel("Identifikation",
+                                     fluidPage(
+                                       h1("🙤 Identifikation 🙧"),
+                                       fluidRow(
+                                         column(width = 3,
+                                                h2("Filter"),
+                                                h3("Münzen"),
+                                                radioButtons(inputId = "samlg", label = NULL, inline = TRUE,
+                                                             choices = c("Alle" = "alle",
+                                                                         "Vorhandene" = "ja",
+                                                                         "Fehlende" = "nein")),
+                                                fluidRow(
+                                                  column(width = 6,
+                                                         h3("Münz ID"),
+                                                         fluidRow(
+                                                           column(width = 8, textInput(inputId = "id", label = NULL, value = "", width = "100%")),
+                                                           column(width = 4, offset = 0, actionButton(inputId = "id_reset", label = "✗", width = "100%")) # &cross;
+                                                         ),
+                                                         div(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit", 
+                                                             em("Münz ID"), "; Aufbau: ", code("JJJJLLA00"), ", wobei ", code("JJJJ"),
+                                                             " = Prägejahr", ", ", code("LL"), " = Land", ", ", code("A"),
+                                                             " = Münzart", " und ", code("0"), " = fortlaufende Nummer;", code("."),
+                                                             " = Jokerzeichen.", HTML('</div>'))
+                                                  ),
+                                                  column(width = 6,
+                                                         h3("Münzzeichen"),
+                                                         fluidRow(
+                                                           column(width = 8, selectInput(inputId = "mzz", label = NULL, choices = unique(all_data()$Münzzeichen), selected = NULL, width = "100%")),
+                                                           column(width = 4, actionButton(inputId = "mzz_reset", label = "✗", width = "100%")) # &cross;
+                                                         ),
+                                                         div(HTML("<div class = 'beschr'>"), "Genaue Übereinstimmung mit Feld ", em("Mzz"), ".", HTML('</div>'))
+                                                  )
+                                                ),
+                                                h3("Abbildung"),
+                                                fluidRow(
+                                                  column(width = 10, textInput(inputId = "abb", label = NULL, value = "", width = "100%")),
+                                                  column(width = 2, actionButton(inputId = "abb_reset", label = "✗", width = "100%")) # &cross;
+                                                ),
+                                                div(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld Abbildung. Groß-/ Kleinschreibung wird ignoriert.", HTML('</div>')),
+                                                h2("Anlage / Änderung"),
+                                                h3("Qualität"),
+                                                fluidRow(
+                                                  column(width = 3, actionButton(inputId = "q0", label = "(0) ★★★", width = "100%")), # &starf;
+                                                  column(width = 3, actionButton(inputId = "q1", label = "(1) ★★", width = "100%")), # &starf;
+                                                  column(width = 3, actionButton(inputId = "q2", label = "(2) ✓✓", width = "100%")), # &check;
+                                                  column(width = 3, actionButton(inputId = "q3", label = "(3) ✓", width = "100%")) # &check;
+                                                ),
+                                                p(HTML("<div class = 'beschr'>"), "Übernimmt Markierung aus Feld ", em("Münz ID"), ".", HTML('</div>')),
+                                                h3("eur2collection.txt"),
+                                                fluidRow(
+                                                  column(width = 6,
+                                                         actionButton(inputId = "aenderung", label = "Änderung durchgeführt", width = "100%"),
+                                                         p(HTML("<div class = 'beschr'>"), "Manuelle Änderung von ", em("eur2collection.txt"), ", zB Münztausch", HTML('</div>'))
+                                                  ),
+                                                  column(width = 6),
+                                                ),
+                                         ),
+                                         column(width = 9,
+                                                h2("Ergebnisse"),
+                                                tabsetPanel(id = "Ausgabe", type = "hidden",
+                                                            tabPanel("Alle Münzen",
+                                                                     h3("Alle Münzen (K + G)")
+                                                            ),
+                                                            tabPanel("Gedenkmünzen",
+                                                                     h3("Gedenkmünzen (G)")
+                                                            ),
+                                                            tabPanel("Kursmünzen",
+                                                                     h3("Kursmünzen (K)")
+                                                            ),
+                                                            tabPanel("Kein Ergebnis",
+                                                                     h3("Leider kein Suchergebnis!"),
+                                                            ),
+                                                            footer = list(htmlOutput(outputId = "n_münzen"),
+                                                                          tableOutput(outputId = "suche_"))
+                                                )
+                                         )
+                                       )
+                                     )
                             ),
-                        column(width = 6,
-                            h3("Münzzeichen"),
-                            fluidRow(
-                                column(width = 8, selectInput(inputId = "mzz", label = NULL, choices = unique(all_data()$Münzzeichen), selected = NULL, width = "100%")),
-                                column(width = 4, actionButton(inputId = "mzz_reset", label = "✗", width = "100%")) # &cross;
-                                ),
-                            div(HTML("<div class = 'beschr'>"), "Genaue Übereinstimmung mit Feld ", em("Mzz"), ".", HTML('</div>'))
-                            )
-                        ),
-                    h3("Abbildung"),
-                    fluidRow(
-                        column(width = 10, textInput(inputId = "abb", label = NULL, value = "", width = "100%")),
-                        column(width = 2, actionButton(inputId = "abb_reset", label = "✗", width = "100%")) # &cross;
-                        ),
-                    div(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld Abbildung. Groß-/ Kleinschreibung wird ignoriert.", HTML('</div>')),
-                    h2("Anlage / Änderung"),
-                    h3("Qualität"),
-                    fluidRow(
-                        column(width = 3, actionButton(inputId = "q0", label = "(0) ★★★", width = "100%")), # &starf;
-                        column(width = 3, actionButton(inputId = "q1", label = "(1) ★★", width = "100%")), # &starf;
-                        column(width = 3, actionButton(inputId = "q2", label = "(2) ✓✓", width = "100%")), # &check;
-                        column(width = 3, actionButton(inputId = "q3", label = "(3) ✓", width = "100%")) # &check;
-                        ),
-                    p(HTML("<div class = 'beschr'>"), "Übernimmt Markierung aus Feld ", em("Münz ID"), ".", HTML('</div>')),
-                    h3("eur2collection.txt"),
-                    fluidRow(
-                        column(width = 6,
-                            actionButton(inputId = "aenderung", label = "Änderung durchgeführt", width = "100%"),
-                            p(HTML("<div class = 'beschr'>"), "Manuelle Änderung von ", em("eur2collection.txt"), ", zB Münztausch", HTML('</div>'))
+                            ## Ablage ----
+                            tabPanel("Ablage",
+                                     fluidPage(
+                                       h1("🙤 Ablage 🙧"),
+                                       fluidRow(
+                                         column(width = 3,
+                                                h2("Auswahl"),
+                                                h3("Box"),
+                                                sliderInput(inputId = "box", label = NULL, min = 1, max = 4, value = 1, step = 1, width = "100%"),
+                                                h3("Tableau"),
+                                                sliderInput(inputId = "tableau", label = NULL, min = 1, max = 6, value = 1, step = 1, width = "100%"),
+                                                h2("Schnellwahl"),
+                                                h3("Ablagenummer"),
+                                                fluidRow(
+                                                  column(width = 2, actionButton(inputId = "minus", label = "≺")), # &prec;
+                                                  column(width = 2, actionButton(inputId = "plus", label = "≻")), # &succ;
+                                                  column(width = 6, textInput(inputId = "znr", value = pull(count(collection)), label = NULL)),
+                                                  column(width = 2, actionButton(inputId = "get", label = "get"))
+                                                ),
+                                                div(HTML("<div class = 'beschr'>"), em("get"), " übernimmt Markierung des unterstrichenen Teils im Tableau. ", em("≺"), " und ", em("≻"), " navigieren ± 1.", HTML('</div>')),
+                                         ),
+                                         column(width = 9,
+                                                h2("Ansicht"),
+                                                h3(textOutput(outputId = "adresse")),
+                                                tableOutput(outputId = "tableau"),
+                                                h3("Gewählte Ablagenummer"),
+                                                tableOutput(outputId = "suche_abl")
+                                         )
+                                       )
+                                     )
                             ),
-                        column(width = 6),
-                        ),
-                    ),
-                column(width = 9,
-                    h2("Ergebnisse"),
-                    tabsetPanel(id = "Ausgabe", type = "hidden",
-                        tabPanel("Alle Münzen",
-                            h3("Alle Münzen (K + G)")
+                            ## Statistik ----
+                            tabPanel("Statistik",
+                                     fluidPage(
+                                       h1("🙤 Statistik 🙧"),
+                                       fluidRow(
+                                         column(width = 4,
+                                                h2("Prägejahr"),
+                                                tableOutput(outputId = "zsf_jahr")
+                                         ),
+                                         column(width = 4,
+                                                h2("Land"),
+                                                tableOutput(outputId = "zsf_land")
+                                         ),
+                                         column(width = 4,
+                                                h2("Qualität"),
+                                                tableOutput(outputId = "zsf_qual")
+                                         )
+                                       )
+                                     )
                             ),
-                        tabPanel("Gedenkmünzen",
-                            h3("Gedenkmünzen (G)")
+                            ## Nationale Serien ----
+                            tabPanel("Nat. Serien",
+                                h1("🙤 Nationale Serien 🙧"),
+                                tabsetPanel(id = "Serien", type = "pills",
+                                    tabPanel("DE",
+                                        fluidPage(
+                                            h2("Deutschland"),
+                                            tabsetPanel(id = "Serien_DE", type = "pills",
+                                                tabPanel("Bundesländerserie I",
+                                                    h3("Bundesländerserie I (2006-2022)"),
+                                                    tableOutput(outputId = "debl1_tab")
+                                                ),
+                                                tabPanel("Bundesländerserie II",
+                                                    h3("Bundesländerserie II (2023-2038)"),
+                                                    tableOutput(outputId = "debl2_tab")
+                                                ),
+                                                tabPanel("Einigkeit und Recht und Freiheit",
+                                                    h3("Einigkeit und Recht und Freiheit (2025 - )"),
+                                                    tableOutput(outputId = "deerf_tab")
+                                                )
+                                            )
+                                        )
+                                    ),
+                                    tabPanel("EE",
+                                        fluidPage(
+                                            h2("Estland"),
+                                            h3("Nationale Symbole (2021 - )"),
+                                                tableOutput(outputId = "eens_tab")
+                                        )
+                                    ),
+                                    tabPanel("ES",
+                                        fluidPage(
+                                            h2("Spanien"),
+                                            h3("UNESCO-Welterbestätten (2010 - )"),
+                                            tableOutput(outputId = "esun_tab")
+                                        )
+                                    ),
+                                    tabPanel("FR",
+                                        fluidPage(
+                                            h2("Frankreich"),
+                                            h3("Olympische Sommerspiele 2024 (2021 - 2024)"),
+                                            tableOutput(outputId = "fros_tab")
+                                        )
+                                    ),
+                                    tabPanel("LT",
+                                        fluidPage(
+                                            h2("Litauen"),
+                                            h3("Ethnographische Regionen (2019 - 2022)"),
+                                            tableOutput(outputId = "lter_tab")
+                                        )
+                                    ),
+                                    tabPanel("LU",
+                                        fluidPage(
+                                            h2("Luxemburg"),
+                                            h3("Dynastieserie (2004 - )"),
+                                            tableOutput(outputId = "ludy_tab")
+                                        )
+                                    ),
+                                    tabPanel("LV",
+                                        fluidPage(
+                                            h2("Lettland"),
+                                            h3("Historische Regionen (2016 - 2018)"),
+                                            tableOutput(outputId = "lvhr_tab")
+                                        )
+                                    ),
+                                    tabPanel("MT",
+                                        fluidPage(
+                                            h2("Malta"),
+                                            tabsetPanel(id = "Serien_MT", type = "pills",
+                                                tabPanel("Verfassungsgeschichte",
+                                                    h3("Verfassungsgeschichte (2011- 2015)"),
+                                                    tableOutput(outputId = "mtvg_tab"),
+                                                ),
+                                                tabPanel("Prähistorische Stätten",
+                                                    h3("Prähistorische Stätten (2016 - 2022)"),
+                                                    tableOutput(outputId = "mtps_tab"),
+                                                ),
+                                                tabPanel("Von Kindern mit Solidarität",
+                                                    h3("Von Kindern mit Solidarität 2016 - 2020)"),
+                                                    tableOutput(outputId = "mtks_tab"),
+                                                ),
+                                                tabPanel("Einheimische Arten Maltas",
+                                                    h3("Einheimische Arten Maltas (2024 - )"),
+                                                    tableOutput(outputId = "mtea_tab"),
+                                                ),
+                                                tabPanel("Maltesische Städte mit Stadtmauern",
+                                                    h3("Maltesische Städte mit Stadtmauern (2024 - )"),
+                                                    tableOutput(outputId = "mtsm_tab"),
+                                                )
+                                            )
+                                        )
+                                    )#,
+                                                 #tabPanel("...")
+                                )
                             ),
-                        tabPanel("Kursmünzen",
-                            h3("Kursmünzen (K)")
+                            ## Gemeinschaftsausgaben ----
+                            tabPanel("Gemeinschaftsausgaben",
+                                     h1("🙤 Gemeinschaftsausgaben 🙧"),
+                                     tabsetPanel(id = "Gemeinschaftsausgaben", type = "pills",
+                                                 tabPanel("Vertrag v. Rom",
+                                                          fluidPage(
+                                                            h2("50. Jahrestag der Unterzeichnung des Vertrags von Rom - 2007"),
+                                                            tableOutput(outputId = "vvr_tab")
+                                                          )
+                                                 ),
+                                                 tabPanel("WWU",
+                                                          fluidPage(
+                                                            h2("Zehnjähriges Bestehen der Wirtschafts- und Währungsunion (WWU) - 2009"),
+                                                            tableOutput(outputId = "wwu_tab")
+                                                          )
+                                                 ),
+                                                 tabPanel("Euro-Einführung",
+                                                          fluidPage(
+                                                            h2("10. Jahrestag der Einführung des Euro-Bargelds - 2012"),
+                                                            tableOutput(outputId = "eur_tab")
+                                                          )
+                                                 ),
+                                                 tabPanel("EU-Flagge",
+                                                          fluidPage(
+                                                            h2("Dreißigjähriges Bestehen der EU-Flagge - 2015"),
+                                                            tableOutput(outputId = "euf_tab")
+                                                          )
+                                                 ),
+                                                 tabPanel("Erasmus-Programm",
+                                                          fluidPage(
+                                                            h2("35-jähriges Bestehen des Erasmus-Programms - 2022"),
+                                                            tableOutput(outputId = "era_tab")
+                                                          )
+                                                 )
+                                     )
                             ),
-                        tabPanel("Kein Ergebnis",
-                            h3("Leider kein Suchergebnis!"),
-                        ),
-                        footer = list(htmlOutput(outputId = "n_münzen"),
-                            tableOutput(outputId = "suche_"))
-                        )
-                    )
+                            ## Liste ----
+                            tabPanel("Liste",
+                                     fluidPage(
+                                       h1("🙤 Liste 🙧"),
+                                       h2("Gesammelte Münzen"),
+                                       htmlOutput(outputId = "samml_ext")
+                                     )
+                            )#,
+                            #tabPanel("Test",
+                            #    fluidPage(
+                            #       h1("Test")
+                            #    )
+                            #)
                 )
-            )
-            ),
-        ## Ablage ----
-        tabPanel("Ablage",
-            fluidPage(
-                h1("🙤 Ablage 🙧"),
-                fluidRow(
-                    column(width = 3,
-                        h2("Auswahl"),
-                        h3("Box"),
-                        sliderInput(inputId = "box", label = NULL, min = 1, max = 4, value = 1, step = 1, width = "100%"),
-                        h3("Tableau"),
-                        sliderInput(inputId = "tableau", label = NULL, min = 1, max = 6, value = 1, step = 1, width = "100%"),
-                        h2("Schnellwahl"),
-                        h3("Ablagenummer"),
-                        fluidRow(
-                            column(width = 2, actionButton(inputId = "minus", label = "≺")), # &prec;
-                            column(width = 2, actionButton(inputId = "plus", label = "≻")), # &succ;
-                            column(width = 6, textInput(inputId = "znr", value = pull(count(collection)), label = NULL)),
-                            column(width = 2, actionButton(inputId = "get", label = "get"))
-                            ),
-                        div(HTML("<div class = 'beschr'>"), em("get"), " übernimmt Markierung des unterstrichenen Teils im Tableau. ", em("≺"), " und ", em("≻"), " navigieren ± 1.", HTML('</div>')),
-                        ),
-                    column(width = 9,
-                        h2("Ansicht"),
-                        h3(textOutput(outputId = "adresse")),
-                        tableOutput(outputId = "tableau"),
-                        h3("Gewählte Ablagenummer"),
-                        tableOutput(outputId = "suche_abl")
-                        )
-                    )
-                )
-            ),
-        ## Statistik ----
-        tabPanel("Statistik",
-            fluidPage(
-                h1("🙤 Statistik 🙧"),
-                fluidRow(
-                    column(width = 4,
-                        h2("Prägejahr"),
-                        tableOutput(outputId = "zsf_jahr")
-                        ),
-                    column(width = 4,
-                        h2("Land"),
-                        tableOutput(outputId = "zsf_land")
-                        ),
-                    column(width = 4,
-                        h2("Qualität"),
-                        tableOutput(outputId = "zsf_qual")
-                        )
-                    )
-                )
-            ),
-        ## Nationale Serien ----
-        tabPanel("Nat. Serien",
-            h1("🙤 Nationale Serien 🙧"),
-            tabsetPanel(id = "Serien", type = "pills",
-                tabPanel("DE",
-                    fluidPage(
-                        h2("Deutschland"),
-                        h3("Bundesländerserie I (2006-2022)"),
-                        tableOutput(outputId = "debl1_tab"),
-                        h3("Bundesländerserie II (2023-2038)"),
-                        tableOutput(outputId = "debl2_tab")
-                        )
-                    ),
-                tabPanel("EE",
-                    fluidPage(
-                        h2("Estland"),
-                        h3("Nationale Symbole"),
-                        tableOutput(outputId = "eens_tab")
-                        )
-                    ),
-                tabPanel("ES",
-                    fluidPage(
-                        h2("Spanien"),
-                        h3("UNESCO-Welterbestätten"),
-                        tableOutput(outputId = "esun_tab")
-                        )
-                    ),
-                tabPanel("FR",
-                    fluidPage(
-                        h2("Frankreich"),
-                        h3("Olympische Sommerspiele 2024"),
-                        tableOutput(outputId = "fros_tab")
-                        )
-                    ),
-                tabPanel("LT",
-                    fluidPage(
-                        h2("Litauen"),
-                        h3("Ethnographische Regionen"),
-                        tableOutput(outputId = "lter_tab")
-                        )
-                    ),
-                tabPanel("LU",
-                    fluidPage(
-                        h2("Luxemburg"),
-                        h3("Dynastieserie"),
-                        tableOutput(outputId = "ludy_tab")
-                        )
-                    ),
-                tabPanel("LV",
-                    fluidPage(
-                        h2("Lettland"),
-                        h3("Historische Regionen"),
-                        tableOutput(outputId = "lvhr_tab")
-                        )
-                    ),
-                tabPanel("MT",
-                    fluidPage(
-                        h2("Malta"),
-                        h3("Verfassungsgeschichte"),
-                        tableOutput(outputId = "mtvg_tab"),
-                        h3("Prähistorische Stätten"),
-                        tableOutput(outputId = "mtps_tab"),
-                        h3("Von Kindern mit Solidarität"),
-                        tableOutput(outputId = "mtks_tab"),
-                        h3("Einheimische Arten Maltas"),
-                        tableOutput(outputId = "mtea_tab"),
-                        h3("Maltesische Städte mit Stadtmauern"),
-                        tableOutput(outputId = "mtsm_tab"),
-                        )
-                    )#,
-                #tabPanel("...")
-                )
-            ),
-        ## Gemeinschaftsausgaben ----
-        tabPanel("Gemeinschaftsausgaben",
-            h1("🙤 Gemeinschaftsausgaben 🙧"),
-            tabsetPanel(id = "Gemeinschaftsausgaben", type = "pills",
-                tabPanel("Vertrag v. Rom",
-                    fluidPage(
-                        h2("50. Jahrestag der Unterzeichnung des Vertrags von Rom - 2007"),
-                        tableOutput(outputId = "vvr_tab")
-                        )
-                    ),
-                tabPanel("WWU",
-                    fluidPage(
-                        h2("Zehnjähriges Bestehen der Wirtschafts- und Währungsunion (WWU) - 2009"),
-                        tableOutput(outputId = "wwu_tab")
-                        )
-                    ),
-                tabPanel("Euro-Einführung",
-                    fluidPage(
-                        h2("10. Jahrestag der Einführung des Euro-Bargelds - 2012"),
-                        tableOutput(outputId = "eur_tab")
-                        )
-                    ),
-                tabPanel("EU-Flagge",
-                    fluidPage(
-                        h2("Dreißigjähriges Bestehen der EU-Flagge - 2015"),
-                        tableOutput(outputId = "euf_tab")
-                        )
-                    ),
-                tabPanel("Erasmus-Programm",
-                    fluidPage(
-                        h2("35-jähriges Bestehen des Erasmus-Programms - 2022"),
-                        tableOutput(outputId = "era_tab")
-                        )
-                    )
-                )
-            ),
-        ## Liste ----
-        tabPanel("Liste",
-            fluidPage(
-                h1("🙤 Liste 🙧"),
-                h2("Gesammelte Münzen"),
-                htmlOutput(outputId = "samml_ext")
-                )
-            )#,
-        #tabPanel("Test",
-        #    fluidPage(
-        #       h1("Test")
-        #    )
-        #)
-        )
-    )
+)
 
 
 # Server ---
@@ -400,21 +422,21 @@ server <- function(input, output, session) {
   tmp <- reactiveValues()
   tmp$art <- "_"
   tmp$filtern <- dim(coins)[1]
-
+  
   ## Funktion (Expression) zur Auswahl Daten für Anzeige Listendarstellung ----
   data_list <- function(page = NULL, art = NULL) {
     data <- all_data()
-
+    
     ret <- switch(page,
                   Ident = {
                     filter(data, (Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), # Sammlung
                            grepl(tolower(input$id), ID),                                                       # ID
                            grepl(tolower(input$abb), tolower(Abbildung)),                                      # Abbildung
                            grepl(paste0("\\b", input$mzz, "\\b"), Münzzeichen))                                # Münzzeichen - exakte Übereinstimmung ('\\b', - Regex word boundary)
-                    },
+                  },
                   Ablage = mutate(data, Zeile = as.integer(str_sub(Ablage, 6, 9))) |> 
                     filter(Ablage != " ", Zeile == input$znr)
-                  )
+    )
     
     tmp$art <- "_"
     if(all(ret$Münzart == "Gedenkmünze")) tmp$art <- "g"
@@ -432,8 +454,8 @@ server <- function(input, output, session) {
   ## Ausgabe  Ergebnisse Münzen ----
   output$suche_ <- renderTable(expr = tbl_(), spacing = "xs", width = "100%", align = c("lllllllll"), sanitize.text.function = function(x) x)
   tbl_ <- eventReactive(eventExpr = c(input$samlg, input$id, input$mzz, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
-                         valueExpr = data_list(page = "Ident"))
-
+                        valueExpr = data_list(page = "Ident"))
+  
   ## Überwachung MünzID für Suchergebnis ----
   observeEvent(eventExpr = c(input$samlg, input$id, input$mzz, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
                handlerExpr = {
@@ -581,6 +603,18 @@ server <- function(input, output, session) {
       filter(!is.na(Amtsblatt))
     
     displ_data(debl2, "serde")
+  }, ignoreNULL = FALSE)
+  
+  ### Deutschland - Einigkeit und Recht und Freiheit ----
+  output$erf_tab <- renderTable({deerf_tab()}, bordered = T, spacing = "l", align = "clccccc", rownames = FALSE, sanitize.text.function = function(x) x)
+  deerf_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    deerf <- tribble(~Amtsblatt, ~Beschreibung,
+                     NA, '<b>35 Jahre Deutsche Einheit</b>',
+                     NA, '<b>Konrad Adenauer</b>') |>
+      left_join(all_data(), by = "Amtsblatt", na_matches = "never") |>
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(deerf, "serde")
   }, ignoreNULL = FALSE)
   
   ### Estland - Nationale Symbole ----
@@ -784,7 +818,7 @@ server <- function(input, output, session) {
                     'C2022/484/10', '<b>Nationalpark Garajonay auf La Gomera</b><br>(Roque de Agando mit Lorbeerwald)',
                     'C2023/116/10', '<b>Altstadt von Cáceres</b><br>(Plaza Mayor)',
                     'C/2024/02354', '<b>Kathedrale, Alcázar und Indienarchiv in Sevilla</b><br>(Jungfrauenhof des Alcázar von Sevilla)',
-                    NA, '<b>Altstadt von Salamanca</b><br>()',
+                    NA, '<b>Altstadt von Salamanca</b>(Kirche und Kloster San Esteban)<br>()',
                     NA, '<b>Kloster Poblet</b><br>()') |>
       left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
       filter(!is.na(Amtsblatt))
