@@ -599,10 +599,10 @@ NA|be|2025|2025-1-23|g|~Nationallotterie Belgien|
 NA|ee|2025|2025-1-30|g|~500 Jahre erster Textdruck in esthnischer Sprache|
 NA|fr|2025|2025-1-30|g|~Louvre Museum|
 NA|es|2025|2015-1-30|g|~Altstadt von Salamanca|
+NA|it|2025|2025-2-5|g|~Jubiläum 2025|
 
 NA|de|2025|NA|g|~35 Jahre Duetsche Einheit|A,D,F,G,J
 NA|si|2025|NA|g|~100. Geburtstag von Miki Muster|
-NA|it|2025|NA|g|~Jubiläum 2025|
 NA|it|2025|NA|g|~Weltreise des Amerigo-Vespucci-Segelschulschiffes 2023-2025|
 NA|lt|2025|NA|g|~Für die Verteidigung|
 NA|sm|2025|NA|g|~Heiliges Jahr 2025 - Pilger der Hoffnung|
@@ -616,7 +616,7 @@ NA|gr|2025|NA|g|~100. Geburtstag von Mikis Theodorakis|
 NA|pt|2025|NA|g|~Nachhaltige Entwicklung|
 NA|pt|2025|NA|g|~Weltpfadfinder- und Jugendbewegung|
 
-## Gedenkmünzen: 30. Januar 2025 zwei.euro.com News - Aufnahme alles wo Bild vorhanden
+## Gedenkmünzen: 5. Februar 2025 zwei.euro.com News - Aufnahme alles wo Bild vorhanden
 ## Kursmünzen: 30. Januar 2025 zwei.euro.com
 
 # Kursmünzen ----
