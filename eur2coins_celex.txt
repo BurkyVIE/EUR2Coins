@@ -617,7 +617,10 @@ NA|pt|2025|NA|g|~Nachhaltige Entwicklung|
 NA|pt|2025|NA|g|~Weltpfadfinder- und Jugendbewegung|
 NA|lv|2025|NA|g|~Sēlija|
 
-## Gedenkmünzen: 8. Februar 2025 zwei.euro.com News - Aufnahme alles wo Bild vorhanden
+## 2026 ----
+NA|de|2026|NA|g|~Bremen|A,D,F,G,J
+
+## Gedenkmünzen: 12. Februar 2025 zwei.euro.com News - Aufnahme alles wo Bild vorhanden
 ## Kursmünzen: 30. Januar 2025 zwei.euro.com
 
 # Kursmünzen ----
