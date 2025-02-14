@@ -641,7 +641,8 @@ server <- function(input, output, session) {
                     'C2019/351/10', '<b>Žemaitija</b><br>(Niederlittauen)',
                     'C2020/053/04', '<b>Aukschtaiten</b><br>(Oberlitauen)',
                     'C2021/473/05', '<b>Dzukija</b><br>(Mittellitauen)',
-                    'C2022/484/25', '<b>Suvalkija</b><br>(Sudauen)') |>
+                    'C2022/484/25', '<b>Suvalkija</b><br>(Sudauen)',
+                    NA, '<b>Mažoji Lietuva</b><br>(Preußisch Litauen)') |>
       left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
       filter(!is.na(Amtsblatt))
     
@@ -683,7 +684,9 @@ server <- function(input, output, session) {
                     'C2023/123/05', '<b>175. Jahrestag der Abgeordnetenkammer und der ersten Verfassung (1848)</b>',
                     'C2023/122/05', '<b>25. Jahrestag der Aufnahme von Großherzog Henri als Mitglied des Internationalen Olympischen Komitees</b>',
                     'C/2024/02466', '<b>175. Todestag von Großherzog Guillaume II.</b>',
-                    'C/2024/02467', '<b>100. Jahrestag der Unterzeichnung des Erlasses über die Ausgabe der „Feierstëppler“-Scheidemünze durch Großherzogin Charlotte</b>') |>
+                    'C/2024/02467', '<b>100. Jahrestag der Unterzeichnung des Erlasses über die Ausgabe der „Feierstëppler“-Scheidemünze durch Großherzogin Charlotte</b>',
+                    NA, '<b>25. Jahrestag der Thronbesteigung von Großherzog Henri</b>',
+                    NA, '<b>75. Jahrestag der Schuman-Erklärung</b>') |>
       left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
       filter(!is.na(Amtsblatt))
     
@@ -697,7 +700,8 @@ server <- function(input, output, session) {
                     'C2016/146/07', '<b>Vidzeme</b><br>(Zentral-Livland)',
                     'C2017/066/02', '<b>Kurzemen</b><br>(Kurland)',
                     'C2017/066/03', '<b>Latgale</b><br>(Lettgallen)',
-                    'C2018/234/03', '<b>Zemgale</b><br>(Semgallen)') |>
+                    'C2018/234/03', '<b>Zemgale</b><br>(Semgallen)',
+                    NA, '<b>Sēlija</b><br>(Selonien)') |>
       left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
       filter(!is.na(Amtsblatt))
     
@@ -781,7 +785,8 @@ server <- function(input, output, session) {
   output$mtsm_tab <- renderTable({mtsm_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   mtsm_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     mtsm <- tribble(~Amtsblatt, ~Beschreibung,
-                    'C/2024/03946', '<b>Cittadella Gozo</b>') |>
+                    'C/2024/03946', '<b>Cittadella Gozo</b>',
+                    NA, '<b>Mdina</b>') |>
       left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
       filter(!is.na(Amtsblatt))
     
@@ -807,7 +812,7 @@ server <- function(input, output, session) {
                     'C2022/484/10', '<b>Nationalpark Garajonay auf La Gomera</b><br>(Roque de Agando mit Lorbeerwald)',
                     'C2023/116/10', '<b>Altstadt von Cáceres</b><br>(Plaza Mayor)',
                     'C/2024/02354', '<b>Kathedrale, Alcázar und Indienarchiv in Sevilla</b><br>(Jungfrauenhof des Alcázar von Sevilla)',
-                    NA, '<b>Altstadt von Salamanca</b>(Kirche und Kloster San Esteban)<br>()',
+                    NA, '<b>Altstadt von Salamanca</b>(Kirche und Kloster San Esteban des Dominikanerordens)<br>()',
                     NA, '<b>Kloster Poblet</b><br>()') |>
       left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
       filter(!is.na(Amtsblatt))
