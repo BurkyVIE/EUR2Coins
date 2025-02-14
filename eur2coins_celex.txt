@@ -589,8 +589,7 @@ C/2025/00630|si|2024|2024-12-18|g|250-jähriges Bestehen der National- und Unive
 C/2025/00657|sk|2024|2024-9-19|g|100. Jahrestag des Friedensmarathons von Košice|
 C/2025/00676|sm|2024|2024-9-5|g|530. Todestag von Ghirlandaio|
 C/2025/00756|va|2024|2024-7-3|g|750. Todestag von Thomas von Aquin|
-
-NA|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
+C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 
 ## 2025 ----
 NA|de|2025|2025-1-16|g|~Saarland|A,D,F,G,J
