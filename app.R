@@ -502,7 +502,7 @@ server <- function(input, output, session) {
                                        This_left = case_when(input$znr == Zeilennummer ~ "<font color = 'red'><b>&#10715;&VeryThinSpace;</b></font>",
                                                              TRUE ~ "<b>&nbsp;&VeryThinSpace;</b>"),
                                        This_right = case_when(input$znr == Zeilennummer ~ "<font color = 'red'><b>&VeryThinSpace;&#10714;</b></font>",
-                                                              TRUE ~ "<b>&VeryThinSpace;&nbsp;</b>"),
+                                                              TRUE ~ "<b>&VeryThinSpace;&ensp;</b>"), # kein nbsp wegen doppelklick-markierung
                                        Res = paste0("<div class='mono', align = 'center'>", This_left, str_sub(Ablage, 1, 4), "&VeryThinSpace;&times;&VeryThinSpace;", str_sub(Ablage, 6, 9 - nchar(Zeilennummer)), "&VeryThinSpace;", "<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u>", This_right, "</div>",
                                                     "<div class='mono', align = 'center'><b>", This_left, str_sub(ID, 1, 4), "&VeryThinSpace;", (str_sub(ID, 5, 6)), "&VeryThinSpace;", (str_sub(ID, 7, 7)), "</b>&VeryThinSpace;", str_sub(ID, 8, 9), This_right, "</div>",
                                                     "<div align = 'center'>", Qualität, "</div>")) |>  
