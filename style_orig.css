@@ -26,6 +26,11 @@ code {
   color: #440154;
 }
 
+tr:nth-child(5n) {
+  background-color: #f8ebdd;
+  
+}
+
 .beschr {
   font-size: 85%;
 }
