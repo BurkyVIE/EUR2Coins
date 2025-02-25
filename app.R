@@ -36,7 +36,7 @@ document.onmouseup = document.onkeyup = document.onselectionchange = function() 
 addResourcePath("tmpuser", getwd())
 
 # UI (User Interface) ----
-ui <- fluidPage(includeCSS(path = "style_fwd.css"),
+ui <- fluidPage(includeCSS(path = "style_orig.css"),
   tags$script(highlight),
     tabsetPanel(id = "Hauptmenu", type = "pills",
       ## Identifikation ----
@@ -44,7 +44,7 @@ ui <- fluidPage(includeCSS(path = "style_fwd.css"),
         h1("🙤 Identifikation 🙧"),
         fluidRow(
           column(width = 4,
-          h2(" Filter"),
+          h2("Filter"),
           h3("Münzen"),
           radioButtons(inputId = "samlg", label = NULL, inline = TRUE,
                        choices = c("Alle" = "alle",
@@ -78,7 +78,7 @@ ui <- fluidPage(includeCSS(path = "style_fwd.css"),
             column(width = 2, actionButton(inputId = "abb_reset", label = "✗", width = "100%")) # &cross;
             ),
           div(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld Abbildung. Groß-/ Kleinschreibung wird ignoriert.", HTML('</div>')),
-          h2(" Anlage / Änderung"),
+          h2("Anlage / Änderung"),
           h3("Qualität"),
           fluidRow(
             column(width = 3, actionButton(inputId = "q0", label = "(0) ★★★", width = "100%")), # &starf;
@@ -97,7 +97,7 @@ ui <- fluidPage(includeCSS(path = "style_fwd.css"),
             )
           ),
           column(width = 8,
-            h2(" Ergebnisse"),
+            h2("Ergebnisse"),
             htmlOutput(outputId = "n_münzen"),
             tableOutput(outputId = "suche_")
             )
