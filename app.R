@@ -6,6 +6,14 @@ library(shiny)
 source("eur2coins.r")      #coins
 source("eur2collection.r") #collection
 
+## Ergänzen und behübschen der Daten ----
+all_data <- function() {
+  left_join(coins,
+            collection %>% select(ID, Qualität, Ablage),
+            by = 'ID') |> 
+    mutate(Ablage = coalesce(Ablage, " "))
+}
+
 ## JS Funktion um Markierung zu kopieren ----
 highlight <- '
 function getSelectionText() {
@@ -24,102 +32,19 @@ document.onmouseup = document.onkeyup = document.onselectionchange = function() 
 };
 '
 
-## Funktion zum Formatieren Qualität ----
-form_quali <- function(x) {
-  case_when(is.na(x) ~ "",
-            x == 0 ~ "<span style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</span>",
-            x == 1 ~ "<span style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</span>",
-            x == 2 ~ "<span style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</span>",
-            x == 3 ~ "<span style='color: #0e4c92;'>(3)&nbsp;&#10004;</span>",
-            TRUE ~ "<span style ='color: red;'>FEHLER</span>")
-}
-
-## Funktion zur Darstellung Land ----
-form_land <- function(txt) {
-  txt <- tolower(txt) # jedenfalls Kleinbuchstaben
-  paste0("<nobr><img src='https://www.crwflags.com/fotw/images/", substr(txt, 1, 1), "/", txt, ".gif', height='14', alt='", toupper(txt), "'/>&nbsp;<font size = -3>/ ", toupper(txt), "</font></nobr>")
-}
-
-## Funktion zum Formatieren Amtsblatt ----
-form_amtsbl <- function(txt) {
-  url <- paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:", txt, "', target = '_blank'>", txt, "</a>")
-  url <- str_replace(url, "\\(", "%28")
-  url <- str_replace(url, "\\)", "%29")
-  return(url)
-}
-
-## Ergänzen und behübschen der Daten ----
-all_data <- function() {
-  left_join(coins,
-            collection %>% select(ID, Qualität, Ablage),
-            by = 'ID') |> 
-    mutate(Ablage = coalesce(Ablage, " "))
-}
-
-## Funktion zur Darstellung der Daten ----
-displ_data <- function(df, variation) {
-  df <- mutate(df,
-               Jahr = Prägejahr,
-               Land = form_land(Land),
-               Amtsblatt = form_amtsbl(Amtsblatt),
-               ID = paste0("<div class='mono'>", ID, "</div>"),
-               Qualität = form_quali(Qualität),
-               Ablage = paste0("<div class='mono'>", Ablage, "</div>"),
-               AQ = paste0(Ablage, Qualität)) |> 
-    arrange(ID)
-  
-  switch(variation,
-         ident = df |> transmute(Jahr,
-                                 Land,
-                                 Art,
-                                 Abbildung,
-                                 Mzz = Münzzeichen,
-                                 Amtsblatt,
-                                 'Münz ID' = ID,
-                                 Qualität,
-                                 Ablage),
-         ser = cbind(paste0("<b>", pull(df, Jahr), "</b>"),
-                     pull(df, Beschreibung), 
-                     pull(df, Münzzeichen),
-                     pull(df, AQ)) |>
-           matrix(ncol = 4, dimnames = list(NULL, c("Jahr", "Bezeichnung", "Mzz", " "))),
-         serde = cbind(paste0("<b>", df |> filter(Münzzeichen == "A") |> pull(Jahr), "</b>"),
-                       df |> filter(Münzzeichen == "A") |> pull(Beschreibung),
-                       matrix(df |> pull(AQ), ncol = 5, byrow = TRUE)) |> 
-           matrix(ncol = 7, dimnames = list(NULL, c("Jahr", "Bezeichnung", "A (Berlin)", "D (München)", "F (Stuttgart)", "G (Karlsruhe)", "J (Hamburg)"))),
-         gem = cbind(pull(df, Land), 
-                     pull(df, Münzzeichen),
-                     pull(df, ID),
-                     pull(df, AQ)) |>  
-           matrix(ncol = 4, dimnames = list(NULL, c("Land", "Mzz", "Münz ID", " ")))
-  )
-}
-
-## Funktion zur Darstellung Statistik ----
-form_stat <- function(val, von, bis) {
-  left_join(coins |> group_by(Grp = str_sub(ID, von, bis)) |> count(),
-            collection |> group_by(Grp = str_sub(ID, von, bis)) |> count(),
-            by = "Grp") |> 
-    transmute(Erfolg = paste0(coalesce(n.y, 0L), " / ", n.x),
-              vH = Erfolg |> (\(x) eval(parse(text = x)) * 100)(),
-              Graph = c(rep(HTML("&#9608;"), vH %/% 5), if((vH %% 5) >= 2.5) HTML("&#9612;")) |>  paste(collapse = "")) |> 
-    rename(!!val := Grp) |> 
-    mutate(Graph = paste0("<div class='bar'>", Graph, "</div>"))
-}
-
 ## Userpath für Sammlung (extern)
 addResourcePath("tmpuser", getwd())
 
 # UI (User Interface) ----
-ui <- fluidPage(includeCSS(path = "style_orig.css"),
+ui <- fluidPage(includeCSS(path = "style_fwd.css"),
   tags$script(highlight),
     tabsetPanel(id = "Hauptmenu", type = "pills",
       ## Identifikation ----
       tabPanel("Identifikation",
         h1("🙤 Identifikation 🙧"),
         fluidRow(
-          column(width = 3,
-          h2("Filter"),
+          column(width = 4,
+          h2(" Filter"),
           h3("Münzen"),
           radioButtons(inputId = "samlg", label = NULL, inline = TRUE,
                        choices = c("Alle" = "alle",
@@ -153,7 +78,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
             column(width = 2, actionButton(inputId = "abb_reset", label = "✗", width = "100%")) # &cross;
             ),
           div(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld Abbildung. Groß-/ Kleinschreibung wird ignoriert.", HTML('</div>')),
-          h2("Anlage / Änderung"),
+          h2(" Anlage / Änderung"),
           h3("Qualität"),
           fluidRow(
             column(width = 3, actionButton(inputId = "q0", label = "(0) ★★★", width = "100%")), # &starf;
@@ -171,24 +96,10 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
             column(width = 6),
             )
           ),
-          column(width = 9,
-            h2("Ergebnisse"),
-            tabsetPanel(id = "Ausgabe", type = "hidden",
-              tabPanel("Alle Münzen",
-                h3("Alle Münzen (K + G)")
-                ),
-              tabPanel("Gedenkmünzen",
-                h3("Gedenkmünzen (G)")
-                ),
-              tabPanel("Kursmünzen",
-                h3("Kursmünzen (K)")
-                ),
-              tabPanel("Kein Ergebnis",
-                h3("Leider kein Suchergebnis!"),
-                ),
-              footer = list(htmlOutput(outputId = "n_münzen"),
-                            tableOutput(outputId = "suche_"))
-              )
+          column(width = 8,
+            h2(" Ergebnisse"),
+            htmlOutput(outputId = "n_münzen"),
+            tableOutput(outputId = "suche_")
             )
           )
         ),
@@ -196,7 +107,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
       tabPanel("Ablage",
         h1("🙤 Ablage 🙧"),
         fluidRow(
-          column(width = 3,
+          column(width = 4,
             h2("Auswahl"),
             h3("Box"),
             sliderInput(inputId = "box", label = NULL, min = 1, max = 4, value = 1, step = 1, width = "100%"),
@@ -212,7 +123,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
               ),
             div(HTML("<div class = 'beschr'>"), em("get"), " übernimmt Markierung des unterstrichenen Teils im Tableau. ", em("≺"), " und ", em("≻"), " navigieren ± 1.", HTML('</div>')),
             ),
-          column(width = 9,
+          column(width = 8,
             h2("Ansicht"),
             h3(textOutput(outputId = "adresse")),
             tableOutput(outputId = "tableau"),
@@ -387,6 +298,81 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
 # Server ---
 server <- function(input, output, session) {
   
+  ## Funktion zum Formatieren Qualität ----
+  form_quali <- function(x) {
+    case_when(is.na(x) ~ "",
+              x == 0 ~ "<span style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</span>",
+              x == 1 ~ "<span style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</span>",
+              x == 2 ~ "<span style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</span>",
+              x == 3 ~ "<span style='color: #0e4c92;'>(3)&nbsp;&#10004;</span>",
+              TRUE ~ "<span style ='color: red;'>FEHLER</span>")
+  }
+  
+  ## Funktion zur Darstellung Land ----
+  form_land <- function(txt) {
+    txt <- tolower(txt) # jedenfalls Kleinbuchstaben
+    paste0("<nobr><img src='https://www.crwflags.com/fotw/images/", substr(txt, 1, 1), "/", txt, ".gif', height='14', alt='", toupper(txt), "'/>&nbsp;<font size = -3>/ ", toupper(txt), "</font></nobr>")
+  }
+  
+  ## Funktion zum Formatieren Amtsblatt ----
+  form_amtsbl <- function(txt) {
+    url <- paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:", txt, "', target = '_blank'>", txt, "</a>")
+    url <- str_replace(url, "\\(", "%28")
+    url <- str_replace(url, "\\)", "%29")
+    return(url)
+  }
+  
+  ## Funktion zur Darstellung der Daten ----
+  displ_data <- function(df, variation) {
+    df <- mutate(df,
+                 Jahr = Prägejahr,
+                 Land = form_land(Land),
+                 Amtsblatt = form_amtsbl(Amtsblatt),
+                 ID = paste0("<div class='mono'>", ID, "</div>"),
+                 Qualität = form_quali(Qualität),
+                 Ablage = paste0("<div class='mono'>", Ablage, "</div>"),
+                 AQ = paste0(Ablage, Qualität)) |> 
+      arrange(ID)
+    
+    switch(variation,
+           ident = df |> transmute(Jahr,
+                                   Land,
+                                   Art,
+                                   Abbildung,
+                                   Mzz = Münzzeichen,
+                                   Amtsblatt,
+                                   'Münz ID' = ID,
+                                   Qualität,
+                                   Ablage),
+           ser = cbind(paste0("<b>", pull(df, Jahr), "</b>"),
+                       pull(df, Beschreibung), 
+                       pull(df, Münzzeichen),
+                       pull(df, AQ)) |>
+             matrix(ncol = 4, dimnames = list(NULL, c("Jahr", "Bezeichnung", "Mzz", " "))),
+           serde = cbind(paste0("<b>", df |> filter(Münzzeichen == "A") |> pull(Jahr), "</b>"),
+                         df |> filter(Münzzeichen == "A") |> pull(Beschreibung),
+                         matrix(df |> pull(AQ), ncol = 5, byrow = TRUE)) |> 
+             matrix(ncol = 7, dimnames = list(NULL, c("Jahr", "Bezeichnung", "A (Berlin)", "D (München)", "F (Stuttgart)", "G (Karlsruhe)", "J (Hamburg)"))),
+           gem = cbind(pull(df, Land), 
+                       pull(df, Münzzeichen),
+                       pull(df, ID),
+                       pull(df, AQ)) |>  
+             matrix(ncol = 4, dimnames = list(NULL, c("Land", "Mzz", "Münz ID", " ")))
+    )
+  }
+  
+  ## Funktion zur Darstellung Statistik ----
+  form_stat <- function(val, von, bis) {
+    left_join(coins |> group_by(Grp = str_sub(ID, von, bis)) |> count(),
+              collection |> group_by(Grp = str_sub(ID, von, bis)) |> count(),
+              by = "Grp") |> 
+      transmute(Erfolg = paste0(coalesce(n.y, 0L), " / ", n.x),
+                vH = Erfolg |> (\(x) eval(parse(text = x)) * 100)(),
+                Graph = c(rep(HTML("&#9608;"), vH %/% 5), if((vH %% 5) >= 2.5) HTML("&#9612;")) |>  paste(collapse = "")) |> 
+      rename(!!val := Grp) |> 
+      mutate(Graph = paste0("<div class='bar'>", Graph, "</div>"))
+  }
+  
   ## Reset Buttons ----  
   observeEvent(eventExpr = input$id_reset, handlerExpr = updateTextInput(session, inputId = "id", value = ""))
   observeEvent(eventExpr = input$abb_reset, handlerExpr = updateTextInput(session, inputId = "abb", value = ""))
@@ -409,52 +395,22 @@ server <- function(input, output, session) {
   observeEvent(eventExpr = c(input$q0, input$q1, input$q2, input$q3, input$aenderung, input$Hauptmenu), 
                handlerExpr = source("eur2collection.r"))
   
-  ## Wert: welche Münzarte(n) werden angezeigt, wieviele Münzen werden angezeigt ----
-  tmp <- reactiveValues()
-  tmp$art <- "_"
-  tmp$filtern <- dim(coins)[1]
-  
-  ## Funktion (Expression) zur Auswahl Daten für Anzeige Listendarstellung ----
-  data_list <- function(page = NULL, art = NULL) {
-    data <- all_data()
-    
-    ret <- switch(page,
-                  Ident = {
-                    filter(data, (Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), # Sammlung
-                           grepl(tolower(input$id), ID),                                                         # ID
-                           grepl(tolower(input$abb), tolower(Abbildung)),                                        # Abbildung
-                           grepl(paste0("\\b", input$mzz, "\\b"), Münzzeichen))                                  # Münzzeichen - exakte Übereinstimmung ('\\b', - Regex word boundary)
-                  },
-                  Ablage = mutate(data, Zeile = as.integer(str_sub(Ablage, 6, 9))) |> 
-                    filter(Ablage != " ", Zeile == input$znr)
-    )
-    
-    tmp$art <- "_"
-    if(all(ret$Münzart == "Gedenkmünze")) tmp$art <- "g"
-    if(all(ret$Münzart == "Kursmünze")) tmp$art <- "k"
-    if(length(ret$Münzart) == 0) tmp$art <- "0"
-    
-    tmp$filtern <- length(ret$Münzart)
-    
-    displ_data(ret, variation = "ident")
-  }
-  
-  ## Anzahl Münzen n (Überschriften und n = 0 sind in UI geregelt)
-  output$n_münzen <- renderText(paste0("<p><i>&emsp;&emsp;(", format(tmp$filtern, big.mark = "&VeryThinSpace;"), " Münzen)</i></p>"))
-  
-  ## Ausgabe  Ergebnisse Münzen ----
+  ## Ausgabe Ergebnisse Münzen ----
   output$suche_ <- renderTable(expr = tbl_(), spacing = "xs", width = "100%", align = c("lllllllll"), sanitize.text.function = function(x) x)
-  tbl_ <- eventReactive(eventExpr = c(input$samlg, input$id, input$mzz, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
-                        valueExpr = data_list(page = "Ident"))
-  
-  ## Überwachung MünzID für Suchergebnis ----
-  observeEvent(eventExpr = c(input$samlg, input$id, input$mzz, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
-               handlerExpr = {
-                 if(tmp$art == "_") updateTabsetPanel(inputId = "Ausgabe", selected = "Alle Münzen")
-                 if(tmp$art == "g") updateTabsetPanel(inputId = "Ausgabe", selected = "Gedenkmünzen")
-                 if(tmp$art == "k") updateTabsetPanel(inputId = "Ausgabe", selected = "Kursmünzen")
-                 if(tmp$art == "0") updateTabsetPanel(inputId = "Ausgabe", selected = "Kein Ergebnis")
-               })
+  tbl_ <- eventReactive(eventExpr = c(input$samlg, input$id, input$mzz, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung, input$Hauptmenu),
+                        valueExpr = {
+                          # Anzuzeigende Münzen
+                          show <- filter(all_data(), (Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), # Sammlung
+                                         grepl(tolower(input$id), ID),                                                                     # ID
+                                         grepl(tolower(input$abb), tolower(Abbildung)),                                                    # Abbildung
+                                         grepl(paste0("\\b", input$mzz, "\\b"), Münzzeichen))                                              # Münzzeichen - exakte Übereinstimmung ('\\b', - Regex word boundary)
+                          # Anzahl Münzen n (Überschrift inkl Plural)
+                          output$n_münzen <- renderText(paste0("<h3>", format(dim(show)[1], big.mark = "&VeryThinSpace;"), " Münze", if(dim(show)[1] > 1) "n " else " ",
+                                                               "&emsp;", paste(unique(show$Art), collapse = ' + '), "</h3>"))
+                          # Ausgabe Ergebnisse Münzen
+                          displ_data(df = show, variation = "ident")
+                          }
+                        )
   
   ## Funktuion zur Gültigkeitsprüfung Eingabe Ablagenummer
   check_znr <- function(x) {
@@ -466,18 +422,21 @@ server <- function(input, output, session) {
     x <- max(1, min(x, maxi))
     return(list(x, !nachk))
   }
-  
-  ## Auswahl Ablage ----
-  observeEvent(eventExpr = input$znr, 
-               handlerExpr = {
-                 if(check_znr(input$znr)[[2]]) updateSliderInput(session, inputId = "box", value = (as.integer(input$znr) - 1) %/% 144 + 1)
-                 if(check_znr(input$znr)[[2]]) updateSliderInput(session, inputId = "tableau", value = (as.integer(input$znr) - 1) %% 144 %/% 24 + 1)
-                 updateTextInput(session, inputId = "znr", value = check_znr(input$znr)[[1]])
-               })
+  eventReactive(eventExpr = input$Hauptmenu, valueExpr = check_znr())
   
   ## Ausgabe Schnellwahl Ablage ----
   output$suche_abl <- renderTable(expr = tbl_abl(), spacing = "xs", width = "100%", align = c("lllllllll"), sanitize.text.function = function(x) x)
-  tbl_abl <- eventReactive(eventExpr = input$znr, valueExpr = data_list(page = "Ablage"))
+  tbl_abl <- eventReactive(eventExpr = c(input$znr, input$Hauptmenu),
+                           valueExpr = {
+                             if(check_znr(input$znr)[[2]]) updateSliderInput(session, inputId = "box", value = (as.integer(input$znr) - 1) %/% 144 + 1)
+                             if(check_znr(input$znr)[[2]]) updateSliderInput(session, inputId = "tableau", value = (as.integer(input$znr) - 1) %% 144 %/% 24 + 1)
+                             updateTextInput(session, inputId = "znr", value = check_znr(input$znr)[[1]])
+                             ## Anzuzeigende Münzdetails
+                             show <- all_data() |> mutate(Zeile = as.integer(str_sub(Ablage, 6, 9))) |> filter(Ablage != " ", Zeile == input$znr)
+                             # Ausgabe
+                             displ_data(df = show, variation = "ident")
+                             }
+                           )
   
   ## Schnellwahl Schritte ----
   observeEvent(eventExpr = input$minus, handlerExpr = updateTextInput(session, inputId = "znr", value = as.integer(input$znr) - 1))
