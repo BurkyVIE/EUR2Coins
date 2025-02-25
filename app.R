@@ -377,12 +377,17 @@ server <- function(input, output, session) {
   observeEvent(eventExpr = input$id_reset, handlerExpr = updateTextInput(session, inputId = "id", value = ""))
   observeEvent(eventExpr = input$abb_reset, handlerExpr = updateTextInput(session, inputId = "abb", value = ""))
   observeEvent(eventExpr = input$mzz_reset, handlerExpr = updateTextInput(session, inputId = "mzz", value = ""))
+
+  ## Reload ----
+  reload <- function() source("eur2collection.r")
+  observeEvent(eventExpr = input$aenderung, handlerExpr = reload())
   
   ## Funktion zum Schreiben der Bewertung
   add_bew <- function(qu) {
     tmp <- paste(input$myselection, qu, sep = "-")
     write(tmp, file = "eur2collection.txt", append = TRUE)
-    Sys.sleep(3.5)
+    Sys.sleep(2.5)
+    reload()
   }
   
   ## Bewertungs Buttons ----
@@ -391,13 +396,10 @@ server <- function(input, output, session) {
   observeEvent(eventExpr = input$q2, handlerExpr = add_bew(2))
   observeEvent(eventExpr = input$q3, handlerExpr = add_bew(3))
   
-  ## Reload ----
-  observeEvent(eventExpr = c(input$q0, input$q1, input$q2, input$q3, input$aenderung, input$Hauptmenu), 
-               handlerExpr = source("eur2collection.r"))
   
   ## Ausgabe Ergebnisse Münzen ----
   output$suche_ <- renderTable(expr = tbl_(), spacing = "xs", width = "100%", align = c("lllllllll"), sanitize.text.function = function(x) x)
-  tbl_ <- eventReactive(eventExpr = c(input$samlg, input$id, input$mzz, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung, input$Hauptmenu),
+  tbl_ <- eventReactive(eventExpr = c(input$samlg, input$id, input$mzz, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
                         valueExpr = {
                           # Anzuzeigende Münzen
                           show <- filter(all_data(), (Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), # Sammlung
@@ -422,7 +424,7 @@ server <- function(input, output, session) {
     x <- max(1, min(x, maxi))
     return(list(x, !nachk))
   }
-  eventReactive(eventExpr = input$Hauptmenu, valueExpr = check_znr())
+  observeEvent(eventExpr = c(input$q0, input$q1, input$q2, input$q3, input$aenderung), handlerExpr = check_znr(0))
   
   ## Ausgabe Schnellwahl Ablage ----
   output$suche_abl <- renderTable(expr = tbl_abl(), spacing = "xs", width = "100%", align = c("lllllllll"), sanitize.text.function = function(x) x)
