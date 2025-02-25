@@ -50,6 +50,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                        choices = c("Alle" = "alle",
                                    "Vorhandene" = "ja",
                                    "Fehlende" = "nein")),
+          p(HTML("<div class = 'beschr'>"), "Auswahl einer Option; Genaue Übereinstimmung mit Feld", em("Qualität/Ablage"), "im Sinne von egal / vorhanden / leer", HTML('</div>')),
           fluidRow(
             column(width = 6,
               h3("Münz ID"),
@@ -58,7 +59,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                 column(width = 4, offset = 0, actionButton(inputId = "id_reset", label = "✗", width = "100%")) # &cross;
                 ),
               div(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit", 
-                  em("Münz ID"), "; Aufbau: ", code("JJJJLLA00"), ", wobei ", code("JJJJ"),
+                  em("Münz ID;"), " Aufbau: ", code("JJJJLLA00"), ", wobei ", code("JJJJ"),
                   " = Prägejahr", ", ", code("LL"), " = Land", ", ", code("A"),
                   " = Münzart", " und ", code("0"), " = fortlaufende Nummer;", code("."),
                   " = Jokerzeichen.", HTML('</div>'))
@@ -69,7 +70,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
                 column(width = 8, selectInput(inputId = "mzz", label = NULL, choices = unique(all_data()$Münzzeichen), selected = NULL, width = "100%")),
                 column(width = 4, actionButton(inputId = "mzz_reset", label = "✗", width = "100%")) # &cross;
                 ),
-              div(HTML("<div class = 'beschr'>"), "Genaue Übereinstimmung mit Feld ", em("Mzz"), ".", HTML('</div>'))
+              div(HTML("<div class = 'beschr'>"), "Auswahl aus Liste; Genaue Übereinstimmung mit Feld ", em("Mzz."), HTML('</div>'))
               )
             ),
           h3("Abbildung"),
@@ -77,7 +78,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
             column(width = 10, textInput(inputId = "abb", label = NULL, value = "", width = "100%")),
             column(width = 2, actionButton(inputId = "abb_reset", label = "✗", width = "100%")) # &cross;
             ),
-          div(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld Abbildung. Groß-/ Kleinschreibung wird ignoriert.", HTML('</div>')),
+          div(HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld ", em("Abbildung."), " Groß-/ Kleinschreibung wird ignoriert.", HTML('</div>')),
           h2("Anlage / Änderung"),
           h3("Qualität"),
           fluidRow(
@@ -86,15 +87,13 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
             column(width = 3, actionButton(inputId = "q2", label = "(2) ✓✓", width = "100%")), # &check;
             column(width = 3, actionButton(inputId = "q3", label = "(3) ✓", width = "100%")) # &check;
             ),
-          p(HTML("<div class = 'beschr'>"), "Übernimmt Markierung aus Feld ", em("Münz ID"), ".", HTML('</div>')),
+          p(HTML("<div class = 'beschr'>"), "Übernimmt Markierung aus Feld ", em("Münz ID."), HTML('</div>')),
           h3("eur2collection.txt"),
           fluidRow(
-            column(width = 6,
-              actionButton(inputId = "aenderung", label = "Änderung durchgeführt", width = "100%"),
-              p(HTML("<div class = 'beschr'>"), "Manuelle Änderung von ", em("eur2collection.txt"), ", zB Münztausch", HTML('</div>'))
-              ),
-            column(width = 6),
-            )
+            column(width = 5, actionButton(inputId = "aenderung", label = "Änderung durchgeführt", width = "100%")),
+            column(width = 7)
+            ),
+          p(HTML("<div class = 'beschr'>"), "Manuelle Änderung von ", em("eur2collection.txt,"), " zB Münztausch", HTML('</div>')),
           ),
           column(width = 8,
             h2("Ergebnisse"),
@@ -295,7 +294,7 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
       )
   )
 
-# Server ---
+# Server ----
 server <- function(input, output, session) {
   
   ## Funktion zum Formatieren Qualität ----

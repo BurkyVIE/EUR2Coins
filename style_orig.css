@@ -5,39 +5,41 @@ body {
 h1 {
   color: #3f4788;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 1.8em;
   text-align: center;
   text-transform: capitalize;
+  letter-spacing: 0.1em;
 }
 
 h2 {
   color: #277e8e;
   font-weight: bold;
-  font-size: 21px;
+  font-size: 1.4em;
 }
 
 h3 {
   color: #2bb17f;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1.2em;
 }
 
 code {
   color: #440154;
+  background-color: #fbebff;
 }
 
 tr:nth-child(5n) {
-  background-color: #f8ebdd;
+  background-color: #f5e0cc;
   
 }
 
 .beschr {
-  font-size: 85%;
+  font-size: 0.85em;
 }
 
 .mono {
   font-family: monospace, sans-serif;
-  font-size: 105%;
+  font-size: 1.1em;
 }
 
 .bar {
