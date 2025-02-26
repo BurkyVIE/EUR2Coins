@@ -378,7 +378,8 @@ server <- function(input, output, session) {
                 vH = Erfolg |> (\(x) eval(parse(text = x)) * 100)(),
                 Graph = c(rep(HTML("&#9608;"), vH %/% 5), if((vH %% 5) >= 2.5) HTML("&#9612;")) |>  paste(collapse = "")) |> 
       rename(!!val := Grp) |> 
-      mutate(Graph = paste0("<div class='bar'>", Graph, "</div>"))
+      mutate(vH = formatC(vH, 2, format = "f", decimal.mark = ","),
+             Graph = paste0("<div class='bar'>", Graph, "</div>"))
   }
   
   ## Reset Buttons ----  
@@ -506,7 +507,8 @@ server <- function(input, output, session) {
                                     group_by(Qualität = Qualität |>  ordered(levels = 0:3, labels = form_quali(0:3)), .drop = FALSE) |> 
                                     count() |> 
                                     transmute(Anzahl = n,
-                                              Anteil = Anzahl / dim(collection)[1] * 100)
+                                              Anteil = formatC(Anzahl / dim(collection)[1] * 100, 2, format = "f", decimal.mark = ",")
+                                              )
                                 },
                                 ignoreNULL = FALSE)
   
