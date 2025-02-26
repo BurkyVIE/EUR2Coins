@@ -310,8 +310,8 @@ server <- function(input, output, session) {
   form_quali <- function(x) {
     case_when(is.na(x) ~ "",
               x == 0 ~ "<span style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</span>",
-              x == 1 ~ "<span style='color: #958746;'>(1)&nbsp;&#9733;&#9733;</span>",
-              x == 2 ~ "<span style='color: #51696c;'>(2)&nbsp;&#10004;&#10004;</span>",
+              x == 1 ~ "<span style='color: #5f9321;'>(1)&nbsp;&#9733;&#9733;</span>", # #958746;
+              x == 2 ~ "<span style='color: #1b7547;'>(2)&nbsp;&#10004;&#10004;</span>", # #51696c;
               x == 3 ~ "<span style='color: #0e4c92;'>(3)&nbsp;&#10004;</span>",
               TRUE ~ "<span style ='color: red;'>FEHLER</span>")
   }
