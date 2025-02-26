@@ -28,6 +28,10 @@ code {
   background-color: #fbebff;
 }
 
+div.row {
+  border-width: 0px;
+}
+
 tr:nth-child(5n) {
   background-color: #f5e0cc;
   

@@ -107,20 +107,29 @@ ui <- fluidPage(includeCSS(path = "style_orig.css"),
         h1("🙤 Ablage 🙧"),
         fluidRow(
           column(width = 4,
-            h2("Auswahl"),
-            h3("Box"),
-            sliderInput(inputId = "box", label = NULL, min = 1, max = 4, value = 1, step = 1, width = "100%"),
-            h3("Tableau"),
-            sliderInput(inputId = "tableau", label = NULL, min = 1, max = 6, value = 1, step = 1, width = "100%"),
-            h2("Schnellwahl"),
+          h2("Auswahl Box und Tableau"),
+            fluidRow(
+              column(width = 6,
+                h3("Box"),
+                sliderInput(inputId = "box", label = NULL, min = 1, max = 4, value = 1, step = 1, width = "100%"),
+                div(HTML("<div class = 'beschr'>"), "Auswahl der Ablagebox.", HTML('</div>'))
+                ),
+              column(width = 6,
+                h3("Tableau"),
+                sliderInput(inputId = "tableau", label = NULL, min = 1, max = 6, value = 1, step = 1, width = "100%"),
+                p(HTML("<div class = 'beschr'>"), "Auswahl des Tableaus in der gewählten Ablagebox.", HTML('</div>'))
+              )
+            ),
+            h2("Auswahl Münze"),
             h3("Ablagenummer"),
             fluidRow(
-              column(width = 2, actionButton(inputId = "minus", label = "≺")), # &prec;
-              column(width = 2, actionButton(inputId = "plus", label = "≻")), # &succ;
-              column(width = 6, textInput(inputId = "znr", value = pull(count(collection)), label = NULL)),
-              column(width = 2, actionButton(inputId = "get", label = "get"))
+              column(width = 2, actionButton(inputId = "minus", label = "≺", width = "100%")), # &prec;
+              column(width = 2, actionButton(inputId = "plus", label = "≻", width = "100%")), # &succ;
+              column(width = 5, textInput(inputId = "znr", value = "", label = NULL, width = "100%")), #pull(count(collection))
+              column(width = 3, actionButton(inputId = "get", label = "zu #", width = "100%"))
               ),
-            div(HTML("<div class = 'beschr'>"), em("get"), " übernimmt Markierung des unterstrichenen Teils im Tableau. ", em("≺"), " und ", em("≻"), " navigieren ± 1.", HTML('</div>')),
+            div(HTML("<div class = 'beschr'>"), em("zu #"), " übernimmt Markierung des unterstrichenen Teils im Tableau oder springt zur letzten abgelegten Münze. ",
+                em("≺"), " navigiert zur vorherigen (-1), ", em("≻"), " zur nächsten (+1) Münze.", HTML('</div>')),
             ),
           column(width = 8,
             h2("Ansicht"),
@@ -377,15 +386,17 @@ server <- function(input, output, session) {
   observeEvent(eventExpr = input$abb_reset, handlerExpr = updateTextInput(session, inputId = "abb", value = ""))
   observeEvent(eventExpr = input$mzz_reset, handlerExpr = updateTextInput(session, inputId = "mzz", value = ""))
 
-  ## Reload ----
-  reload <- function() source("eur2collection.r")
+  ## Reload (für Bewertungsbuttons über Funktion 'add_bew' oder bei Button Änderung direkt hier) ----
+  reload <- function() {
+    source("eur2collection.r")
+    }
   observeEvent(eventExpr = input$aenderung, handlerExpr = reload())
   
   ## Funktion zum Schreiben der Bewertung
   add_bew <- function(qu) {
     tmp <- paste(input$myselection, qu, sep = "-")
     write(tmp, file = "eur2collection.txt", append = TRUE)
-    Sys.sleep(2.5)
+    Sys.sleep(1.5)
     reload()
   }
   
@@ -413,32 +424,6 @@ server <- function(input, output, session) {
                           }
                         )
   
-  ## Funktuion zur Gültigkeitsprüfung Eingabe Ablagenummer
-  check_znr <- function(x) {
-    x <- as.integer(x)
-    maxi <- as.integer(tail(collection$Zeilennummer, 1))
-    nachk <- is.na(x)
-    
-    if(nachk) x <- maxi
-    x <- max(1, min(x, maxi))
-    return(list(x, !nachk))
-  }
-  observeEvent(eventExpr = c(input$q0, input$q1, input$q2, input$q3, input$aenderung), handlerExpr = check_znr(0))
-  
-  ## Ausgabe Schnellwahl Ablage ----
-  output$suche_abl <- renderTable(expr = tbl_abl(), spacing = "xs", width = "100%", align = c("lllllllll"), sanitize.text.function = function(x) x)
-  tbl_abl <- eventReactive(eventExpr = c(input$znr, input$Hauptmenu),
-                           valueExpr = {
-                             if(check_znr(input$znr)[[2]]) updateSliderInput(session, inputId = "box", value = (as.integer(input$znr) - 1) %/% 144 + 1)
-                             if(check_znr(input$znr)[[2]]) updateSliderInput(session, inputId = "tableau", value = (as.integer(input$znr) - 1) %% 144 %/% 24 + 1)
-                             updateTextInput(session, inputId = "znr", value = check_znr(input$znr)[[1]])
-                             ## Anzuzeigende Münzdetails
-                             show <- all_data() |> mutate(Zeile = as.integer(str_sub(Ablage, 6, 9))) |> filter(Ablage != " ", Zeile == input$znr)
-                             # Ausgabe
-                             displ_data(df = show, variation = "ident")
-                             }
-                           )
-  
   ## Schnellwahl Schritte ----
   observeEvent(eventExpr = input$minus, handlerExpr = updateTextInput(session, inputId = "znr", value = as.integer(input$znr) - 1))
   observeEvent(eventExpr = input$plus, handlerExpr = updateTextInput(session, inputId = "znr", value = as.integer(input$znr) + 1))
@@ -453,7 +438,7 @@ server <- function(input, output, session) {
   
   ## Ausgabe Ablage ----
   output$tableau <- renderTable(expr = erst_tab(), bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
-  erst_tab <- eventReactive(eventExpr = c(input$box, input$tableau, input$znr, input$q0, input$q1, input$q2, input$q3, input$aenderung, input$Hauptmenu),
+  erst_tab <- eventReactive(eventExpr = c(input$box, input$tableau, input$znr, input$q0, input$q1, input$q2, input$q3, input$aenderung),
                             valueExpr = {
                               collection |> 
                                 filter(Zeilennummer %in% (((input$box - 1) * 144 + (input$tableau - 1) * 24 + 1) + 0:23)) |> 
@@ -474,6 +459,31 @@ server <- function(input, output, session) {
                                      )
                               )
                             }, ignoreNULL = FALSE)
+  
+  ## Funktuion zur Gültigkeitsprüfung Eingabe Ablagenummer
+  check_znr <- function(x) {
+    x <- as.integer(x)
+    na_chk <- is.na(x)
+    maxi <- pull(count(collection))
+    
+    if(na_chk) x <- maxi
+    x <- max(1, min(x, maxi))
+    return(list(x, !na_chk))
+  }
+  
+  ## Ausgabe Schnellwahl Ablage ----
+  output$suche_abl <- renderTable(expr = tbl_abl(), spacing = "xs", width = "100%", align = c("lllllllll"), sanitize.text.function = function(x) x)
+  tbl_abl <- eventReactive(eventExpr = c(input$znr),
+                           valueExpr = {
+                             if(check_znr(input$znr)[[2]]) updateSliderInput(session, inputId = "box", value = (as.integer(input$znr) - 1) %/% 144 + 1)
+                             if(check_znr(input$znr)[[2]]) updateSliderInput(session, inputId = "tableau", value = (as.integer(input$znr) - 1) %% 144 %/% 24 + 1)
+                             updateTextInput(session, inputId = "znr", value = check_znr(input$znr)[[1]])
+                             ## Anzuzeigende Münzdetails
+                             show <- all_data() |> mutate(Zeile = as.integer(str_sub(Ablage, 6, 9))) |> filter(Ablage != " ", Zeile == input$znr)
+                             # Ausgabe
+                             displ_data(df = show, variation = "ident")
+                           }
+  )
   
   ## Ausgabe Zusammenfassung Jahr ----
   output$zsf_jahr <- renderTable(expr = zsf_tbl_jahr(), spacing = "xs", align = c("rrrl"), sanitize.text.function = function(x) x)
