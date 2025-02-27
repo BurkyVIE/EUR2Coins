@@ -36,7 +36,7 @@ document.onmouseup = document.onkeyup = document.onselectionchange = function() 
 addResourcePath("tmpuser", getwd())
 
 # UI (User Interface) ----
-ui <- fluidPage(includeCSS(path = "style_orig.css"),
+ui <- fluidPage(includeCSS(path = "style.css"),
   tags$script(highlight),
     tabsetPanel(id = "Hauptmenu", type = "pills",
       ## Identifikation ----
