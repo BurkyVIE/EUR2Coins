@@ -296,7 +296,17 @@ ui <- fluidPage(includeCSS(path = "style.css"),
         h1("🙤 Liste 🙧"),
         h2("Gesammelte Münzen"),
         htmlOutput(outputId = "samml_ext")
-        )#,
+      ),
+      tabPanel("Auflage",
+        h1("🙤 Auflage 🙧"),
+        fluidRow(
+          column(width = 4),
+          column(width = 8,
+            h2("Unbekannte Auflagestärke"),
+            htmlOutput(outputId = "n_aufl"),
+            tableOutput(outputId = "unbek_aufl"))
+        )
+      )#,
       #tabPanel("Test",
       #    fluidPage(
       #       h1("Test")
@@ -386,7 +396,8 @@ server <- function(input, output, session) {
                        pull(df, Münzzeichen),
                        pull(df, ID),
                        pull(df, AQ)) |>  
-             matrix(ncol = 4, dimnames = list(NULL, c("Land", "Mzz", "Münz ID", " ")))
+             matrix(ncol = 4, dimnames = list(NULL, c("Land", "Mzz", "Münz ID", " "))),
+           aufl = df |> transmute('Münz ID' = ID, Jahr, Land, Art, Abbildung, Mzz = Münzzeichen)
     )
   }
   
@@ -888,6 +899,20 @@ server <- function(input, output, session) {
   
   ## Sammlung (extern) ----
   output$samml_ext <- renderUI(tags$iframe(src = "tmpuser/sammlung.html", width = "50%", height = "750"))
+  
+  ## Ausgabe Unbekannte Auflage ----
+  output$unbek_aufl <- renderTable(expr = aufl_(), spacing = "xs", width = "100%", align = c("llllll"), sanitize.text.function = function(x) x)
+  aufl_ <- eventReactive(eventExpr = c(input$samlg, input$id, input$mzz, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
+                        valueExpr = {
+                          # Anzuzeigende Münzen
+                          show <- filter(all_data(), is.na(Hfgkt))                                        # Münzzeichen - exakte Übereinstimmung ('\\b', - Regex word boundary)
+                          # Anzahl Münzen n (Überschrift inkl Plural)
+                          output$n_aufl <- renderText(paste0("<h3>", format(dim(show)[1], big.mark = "&VeryThinSpace;"), " Münze", if(dim(show)[1] > 1) "n " else " ", "</h3>"))
+                          # Ausgabe Ergebnisse Münzen
+                          displ_data(df = show, variation = "aufl")
+                        }
+  )
+  
 }
 
 # Run the application ----
