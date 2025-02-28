@@ -32,8 +32,9 @@ raw |>
          Münzzeichen = str_split(Münzzeichen, pattern = ",")) |> 
   unnest(Prägejahr) |>
   unnest(Münzzeichen) |>
-  mutate(Art = case_when(Münzart == "g" ~ "Ⓖ", # Description for Münzart
-                         Münzart == "k" ~ "Ⓚ"),
+  mutate(#Art = case_when(Münzart == "g" ~ "Ⓖ", # Description for Münzart
+         #                Münzart == "k" ~ "Ⓚ"),
+         Art = toupper(Münzart),
          Münzart = factor(Münzart, levels = c("g", "k"), labels = c("Gedenkmünze", "Kursmünze"))) |> 
   add_column(cs = 1) |> # Hilfsvariable für Durchnumerierung (ID)
   group_by(Land, Münzart, Prägejahr) |> 

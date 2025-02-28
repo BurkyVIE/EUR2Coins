@@ -3,15 +3,17 @@
 library(shiny)
 
 ## Externe Daten ----
-source("eur2coins.r")      #coins
-source("eur2collection.r") #collection
+source("eur2coins.r")       #coins
+source("eur2collection.r")  #collection
+source("eur2circulation.r") #circulation
 
 ## Ergänzen und behübschen der Daten ----
 all_data <- function() {
   left_join(coins,
             collection %>% select(ID, Qualität, Ablage),
             by = 'ID') |> 
-    mutate(Ablage = coalesce(Ablage, " "))
+    mutate(Ablage = coalesce(Ablage, " ")) |> 
+    left_join(circulation, by = join_by(ID))
 }
 
 ## JS Funktion um Markierung zu kopieren ----
@@ -319,7 +321,7 @@ server <- function(input, output, session) {
   ## Funktion zur Darstellung Land ----
   form_land <- function(txt) {
     txt <- tolower(txt) # jedenfalls Kleinbuchstaben
-    paste0("<nobr><img src='https://www.crwflags.com/fotw/images/", substr(txt, 1, 1), "/", txt, ".gif', height='14', alt='", toupper(txt), "'/>&nbsp;<font size = -3>/ ", toupper(txt), "</font></nobr>")
+    paste0("<nobr style='font-size: 0.75em'><img src='https://www.crwflags.com/fotw/images/", substr(txt, 1, 1), "/", txt, ".gif', height='14', alt='", toupper(txt), "'>&nbsp;&nbsp;/&nbsp;", toupper(txt), "</nobr>")
   }
   
   ## Funktion zum Formatieren Amtsblatt ----
@@ -328,6 +330,22 @@ server <- function(input, output, session) {
     url <- str_replace(url, "\\(", "%28")
     url <- str_replace(url, "\\)", "%29")
     return(url)
+  }
+  
+  ## Funktion zu Formatieren der Art (Münzart) ----
+  form_art <- function(txt) {
+    txt[txt == "G"] <- "<span style='font-size: 1.1em'>Ⓖ</span>"
+    txt[txt == "K"] <- "<span style='font-size: 1.1em'>Ⓚ</span>"
+    return(txt)
+  }
+  
+  ## Funktion zum Formatieren der Häufigkeit ----
+  form_hfgkt <- function(txt) {
+    c("<div style='font-size: 1.1em; background-color: #b22222; color: white'>⇓</div>",
+      "<div style='font-size: 1.1em; background-color: #c56320; color: white'>↓</div>", # ⇘
+      "<div style='font-size: 1.1em; background-color: #daa520; color: white'>-</div>", # ⇒
+      "<div style='font-size: 1.1em; background-color: #7d9820; color: white'>↑</div>", # ⇗
+      "<div style='font-size: 1.1em; background-color: #228b22; color: white'>⇑</div>")[txt]
   }
   
   ## Funktion zur Darstellung der Daten ----
@@ -339,13 +357,16 @@ server <- function(input, output, session) {
                  ID = paste0("<div class='mono'>", ID, "</div>"),
                  Qualität = form_quali(Qualität),
                  Ablage = paste0("<div class='mono'>", Ablage, "</div>"),
-                 AQ = paste0(Ablage, Qualität)) |> 
+                 AQ = paste0(Ablage, Qualität),
+                 Art = form_art(Art),
+                 Hfgkt = form_hfgkt(Hfgkt)) |> 
       arrange(ID)
     
     switch(variation,
            ident = df |> transmute(Jahr,
                                    Land,
                                    Art,
+                                   Hfgkt,
                                    Abbildung,
                                    Mzz = Münzzeichen,
                                    Amtsblatt,
@@ -409,17 +430,17 @@ server <- function(input, output, session) {
   
   
   ## Ausgabe Ergebnisse Münzen ----
-  output$suche_ <- renderTable(expr = tbl_(), spacing = "xs", width = "100%", align = c("lllllllll"), sanitize.text.function = function(x) x)
+  output$suche_ <- renderTable(expr = tbl_(), spacing = "xs", width = "100%", align = c("lllcllllll"), sanitize.text.function = function(x) x)
   tbl_ <- eventReactive(eventExpr = c(input$samlg, input$id, input$mzz, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
                         valueExpr = {
                           # Anzuzeigende Münzen
                           show <- filter(all_data(), (Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), # Sammlung
-                                         grepl(tolower(input$id), ID),                                                                     # ID
-                                         grepl(tolower(input$abb), tolower(Abbildung)),                                                    # Abbildung
-                                         grepl(paste0("\\b", input$mzz, "\\b"), Münzzeichen))                                              # Münzzeichen - exakte Übereinstimmung ('\\b', - Regex word boundary)
+                                         grepl(tolower(input$id), ID),                                                               # ID
+                                         grepl(tolower(input$abb), tolower(Abbildung)),                                              # Abbildung
+                                         grepl(paste0("\\b", input$mzz, "\\b"), Münzzeichen))                                        # Münzzeichen - exakte Übereinstimmung ('\\b', - Regex word boundary)
                           # Anzahl Münzen n (Überschrift inkl Plural)
                           output$n_münzen <- renderText(paste0("<h3>", format(dim(show)[1], big.mark = "&VeryThinSpace;"), " Münze", if(dim(show)[1] > 1) "n " else " ",
-                                                               "&emsp;", paste(unique(show$Art), collapse = ' + '), "</h3>"))
+                                                               "&emsp;(", paste(unique(show$Art), collapse = ' + '), ")</h3>"))
                           # Ausgabe Ergebnisse Münzen
                           displ_data(df = show, variation = "ident")
                           }
@@ -473,7 +494,7 @@ server <- function(input, output, session) {
   }
   
   ## Ausgabe Schnellwahl Ablage ----
-  output$suche_abl <- renderTable(expr = tbl_abl(), spacing = "xs", width = "100%", align = c("lllllllll"), sanitize.text.function = function(x) x)
+  output$suche_abl <- renderTable(expr = tbl_abl(), spacing = "xs", width = "100%", align = c("lllcllllll"), sanitize.text.function = function(x) x)
   tbl_abl <- eventReactive(eventExpr = c(input$znr),
                            valueExpr = {
                              if(check_znr(input$znr)[[2]]) updateSliderInput(session, inputId = "box", value = (as.integer(input$znr) - 1) %/% 144 + 1)
