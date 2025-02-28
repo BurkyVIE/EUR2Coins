@@ -4,7 +4,7 @@ Amtsblatt|Land|Prägejahr|Ausgabe|Münzart|Abbildung|Münzzeichen
 ## 2004 ----
 C2004/091/06|gr|2004|2004-5-14|g|Olympische Spiele 2004 in Athen|
 C2004/243/03|fi|2004|2004-6-24|g|Erweiterung der Europäischen Union um zehn neue Mitgliedstaaten|
-C2004/243/05|lu|2004|2004-7-26|g|Bildnis und Monogramm des Großherzogs Henri|
+C2004/243/05|lu|2004|2004-7-26|g|Bildnis und Monogramm des Großherzogs Henri|H links geneigt,H rechts geneigt
 C2004/298/02|sm|2004|2004-12-16|g|Bartolomeo Borghesi (Historiker, Numismatiker)|
 C2004/313/03|it|2004|2004-12-13|g|Fünftes Jahrzehnt des Bestehens des Welternährungsprogramms|
 C2004/321/03|va|2004|2004-12-16|g|75. Jahrestag der Gründung des Staates Vatikanstadt|
