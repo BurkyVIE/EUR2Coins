@@ -299,13 +299,18 @@ ui <- fluidPage(includeCSS(path = "style.css"),
       ),
       tabPanel("Auflage",
         h1("🙤 Auflage 🙧"),
-        fluidRow(
-          column(width = 4),
+        column(width = 4,
+          h2("Erfassen"),
+            fluidRow(
+              column(width = 8, textAreaInput(inputId = "aufl_erf", label = NULL, width = "100%")),
+              column(width = 4, actionButton(inputId = "aufl_reset", label = "✗", width = "100%")) # &cross;
+            )
+          ),
           column(width = 8,
             h2("Unbekannte Auflagestärke"),
             htmlOutput(outputId = "n_aufl"),
-            tableOutput(outputId = "unbek_aufl"))
-        )
+            tableOutput(outputId = "unbek_aufl")
+            )
       )#,
       #tabPanel("Test",
       #    fluidPage(
