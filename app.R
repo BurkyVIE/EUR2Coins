@@ -300,10 +300,17 @@ ui <- fluidPage(includeCSS(path = "style.css"),
       tabPanel("Auflage",
         h1("🙤 Auflage 🙧"),
         column(width = 4,
-          h2("Erfassen"),
+          h2("Hilfstools"),
+          h3("Erfassen"),
             fluidRow(
-              column(width = 8, textAreaInput(inputId = "aufl_erf", label = NULL, width = "100%")),
-              column(width = 4, actionButton(inputId = "aufl_reset", label = "✗", width = "100%")) # &cross;
+              column(width = 8, textAreaInput(inputId = "aufl_erf", label = NULL, rows = 7, resize = "none", width = "100%")),
+              column(width = 4, 
+                     actionButton(inputId = "aufl_A", label = "✗ A", width = "100%"), #  &cross;
+                     HTML("&nbsp;"),
+                     actionButton(inputId = "aufl_B", label = "✗ B" , width = "100%"),
+                     HTML("&nbsp;"),
+                     actionButton(inputId = "aufl_C", label = "✗ C" , width = "100%")
+              )
             )
           ),
           column(width = 8,
