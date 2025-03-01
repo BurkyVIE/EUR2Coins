@@ -304,12 +304,12 @@ ui <- fluidPage(includeCSS(path = "style.css"),
           h3("Erfassen"),
             fluidRow(
               column(width = 8, textAreaInput(inputId = "aufl_erf", label = NULL, rows = 7, resize = "none", width = "100%")),
-              column(width = 4, 
-                     actionButton(inputId = "aufl_A", label = "✗ A", width = "100%"), #  &cross;
+              column(width = 4,
+                     textInput(inputId = "aufl_zahl", label = NULL, value = "", width = "100%"),
+                     htmlOutput(outputId = "zahl_form"),
+                     actionButton(inputId = "aufl_uber", label = "Übernehmen", width = "100%"),
                      HTML("&nbsp;"),
-                     actionButton(inputId = "aufl_B", label = "✗ B" , width = "100%"),
-                     HTML("&nbsp;"),
-                     actionButton(inputId = "aufl_C", label = "✗ C" , width = "100%")
+                     actionButton(inputId = "aufl_B", label = "✗ B" , width = "100%"), #  &cross;
               )
             )
           ),
@@ -911,6 +911,14 @@ server <- function(input, output, session) {
   
   ## Sammlung (extern) ----
   output$samml_ext <- renderUI(tags$iframe(src = "tmpuser/sammlung.html", width = "50%", height = "750"))
+  
+  ## Auflage  Buttons ----  
+  observeEvent(eventExpr = input$aufl_uber, handlerExpr = updateTextInput(session, inputId = "aufl_erf", value = paste0(input$aufl_erf, input$myselection, "-", input$aufl_zahl, "\n")))
+  observeEvent(eventExpr = input$aufl_B, handlerExpr = NULL)
+  
+  ## Ausgabe formtierte Zahl ----
+  output$zahl_form <- renderText(expr = zahl_form())
+  zahl_form <- eventReactive(eventExpr = input$aufl_zahl, valueExpr = paste0("<div style='text-align: center'>= ",format(as.numeric(input$aufl_zahl), big.mark = " ", scientific = FALSE), "</div>"))
   
   ## Ausgabe Unbekannte Auflage ----
   output$unbek_aufl <- renderTable(expr = aufl_(), spacing = "xs", width = "100%", align = c("llllll"), sanitize.text.function = function(x) x)
