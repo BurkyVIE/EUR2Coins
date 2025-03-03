@@ -926,10 +926,9 @@ server <- function(input, output, session) {
   ## Auflage  Buttons ----
   observeEvent(eventExpr = input$aufl_uber, handlerExpr = updateTextInput(session, inputId = "aufl_erf", value = paste0(input$aufl_erf, input$myselection, "-", input$aufl_zahl, "\n")))
   observeEvent(eventExpr = input$aufl_schrb, handlerExpr = {
-    write(
-      if(str_sub(input$aufl_erf, -1) == "\n") str_sub(input$aufl_erf, 1, -2) else # Auslassen der letzten (= leeren) Zeile wenn es so ist
-        input$aufl_erf,
-      file = "eur2coins_circulation.txt", append = TRUE)
+    out <- input$aufl_erf
+    while(str_sub(out, -1) == "\n") out <- str_sub(out, 1, -2)
+    write(out, file = "eur2coins_circulation.txt", append = TRUE)
     Sys.sleep(1.5)
     source("eur2circulation.r")
     reload()
