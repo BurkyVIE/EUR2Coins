@@ -118,7 +118,7 @@ C2011/091/04|sm|2011|2011-6-4|g|500. Geburtstag des italienischen Malers Giorgio
 C2011/189/07|mc|2011|2011-7-2|g|Hochzeit von Prinz Albert und Charlene|
 C2011/273/04|pt|2011|2011-9-15|g|500. Geburtstag des portugiesischen Entdeckers Fernão Mendes Pinto, der die Meere und Länder Asiens erforschte|
 C2011/291/03|fi|2011|2011-10-17|g|200 Jahre Finnische Nationalbank|
-C2011/299/08|mt|2011|2011-10-17|g|Erste gewählte Vertreter|
+C2011/299/08|mt|2011|2011-10-17|g|Erste gewählte Vertreter|unebener Hintergrund,glatter Hintergrund
 C2011/301/06|va|2011|2011-10-18|g|26. Weltjugendtag|
 
 ## 2012 ----
@@ -149,7 +149,7 @@ C2012/223/02|mc|2012|2012-6-28|g|500. Jahrestag der Unabhängigkeit Monacos, Ehr
 C2012/231/02|be|2012|2012-6-6|g|75 Jahre „Concours Reine Elisabeth“ („Königin-Elisabeth-Wettbewerb“)|
 C2012/231/03|fi|2012|2012-10-5|g|150. Geburtstag der Künstlerin Helene SCHJERFBECK|
 C2012/313/04|va|2012|2012-10-16|g|7. Weltfamilientag|
-C2012/375/06|mt|2012|2012-8-20|g|Mehrheitswahlrecht 1887|
+C2012/375/06|mt|2012|2012-8-20|g|Mehrheitswahlrecht 1887|,Utrecht
 C2013/021/05|lu|2012|2012-12-20|g|Hochzeit von Erbgroßherzog Guillaume mit Gräfin Stéphanie de Lannoy|
 C2013/102/03|it|2012|2012-7-18|g|100. Todestag von Giovanni PASCOLI|
 
@@ -175,7 +175,7 @@ C2013/272/05|gr|2013|2013-10-1|g|2 400. Jahrestag der Gründung der Platonischen
 C2013/363/08|fi|2013|2013-9-4|g|150 Jahre Sitzung des Parlaments|
 C2013/366/05|fi|2013|2013-11-4|g|125. Geburtstag des Literaturnobelpreisträgers F. E. SILLANPÄÄ|
 C2013/379/08|de|2013|2013-2-1|g|„Länderserie“ — Baden-Württemberg|A,D,F,G,J
-C2013/379/09|mt|2013|2013-6-24|g|Selbstverwaltung — Verfassung von 1921|
+C2013/379/09|mt|2013|2013-6-24|g|Selbstverwaltung — Verfassung von 1921|,Utrecht
 C2013/379/10|nl|2013|2013-11-25|g|200 Jahre Königreich der Niederlande|
 
 ## 2014 ----
@@ -199,7 +199,7 @@ C2014/262/03|gr|2014|2014-9-24|g|150. Jahrestag der Vereinigung der Ionischen In
 C2014/262/04|gr|2014|2014-9-24|g|400. Todestag von Dominikos Theotokopoulos (1614-2014)|
 C2014/262/05|lu|2014|2014-11-6|g|50. Jahrestag der Thronbesteigung von Großherzog Jean|
 C2014/360/03|va|2014|2014-10-14|g|25. Jahrestag des Falls der Berliner Mauer|
-C2014/383/05|mt|2014|2014-6-3|g|Unabhängigkeit Maltas im Jahr 1964|
+C2014/383/05|mt|2014|2014-6-3|g|Unabhängigkeit Maltas im Jahr 1964|,Utrecht
 C2014/396/04|es|2014|2014-12-10|g|Thronwechsel|
 C2014/397/05|fi|2014|2014-11-10|g|100. Geburtstag des Designers und Innenarchitekten Ilmari Tapiovaara|
 C2014/417/04|de|2014|2014-2-6|g|„Länderserie“ — Niedersachsen|A,D,F,G,J
