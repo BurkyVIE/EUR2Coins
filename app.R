@@ -309,7 +309,7 @@ ui <- fluidPage(includeCSS(path = "style.css"),
                      htmlOutput(outputId = "zahl_form"),
                      actionButton(inputId = "aufl_uber", label = "Übernehmen", width = "100%"),
                      HTML("&nbsp;"),
-                     actionButton(inputId = "aufl_B", label = "✗ B" , width = "100%"), #  &cross;
+                     actionButton(inputId = "aufl_schrb", label = "Schreiben" , width = "100%"),
               )
             )
           ),
@@ -912,9 +912,15 @@ server <- function(input, output, session) {
   ## Sammlung (extern) ----
   output$samml_ext <- renderUI(tags$iframe(src = "tmpuser/sammlung.html", width = "50%", height = "750"))
   
-  ## Auflage  Buttons ----  
+  ## Auflage  Buttons ----
   observeEvent(eventExpr = input$aufl_uber, handlerExpr = updateTextInput(session, inputId = "aufl_erf", value = paste0(input$aufl_erf, input$myselection, "-", input$aufl_zahl, "\n")))
-  observeEvent(eventExpr = input$aufl_B, handlerExpr = NULL)
+  observeEvent(eventExpr = input$aufl_schrb, handlerExpr = {
+    write(str_sub(input$aufl_erf, 1, -2), file = "eur2coins_circulation.txt", append = TRUE) # Auslassen der letzten (= leeren) Zeile
+    Sys.sleep(1.5)
+    source("eur2circulation.r")
+    reload()
+    updateTextInput(session, inputId = "aufl_erf", value = "")
+  })
   
   ## Ausgabe formtierte Zahl ----
   output$zahl_form <- renderText(expr = zahl_form())
@@ -922,7 +928,7 @@ server <- function(input, output, session) {
   
   ## Ausgabe Unbekannte Auflage ----
   output$unbek_aufl <- renderTable(expr = aufl_(), spacing = "xs", width = "100%", align = c("llllll"), sanitize.text.function = function(x) x)
-  aufl_ <- eventReactive(eventExpr = c(input$samlg, input$id, input$mzz, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
+  aufl_ <- eventReactive(eventExpr = c(input$aufl_schrb),
                         valueExpr = {
                           # Anzuzeigende Münzen
                           show <- filter(all_data(), is.na(Hfgkt))                                        # Münzzeichen - exakte Übereinstimmung ('\\b', - Regex word boundary)
