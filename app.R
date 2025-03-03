@@ -300,16 +300,27 @@ ui <- fluidPage(includeCSS(path = "style.css"),
       tabPanel("Auflage",
         h1("🙤 Auflage 🙧"),
         column(width = 4,
-          h2("Hilfstools"),
+          h2("Bearbeiten"),
           h3("Erfassen"),
             fluidRow(
-              column(width = 8, textAreaInput(inputId = "aufl_erf", label = NULL, rows = 7, resize = "none", width = "100%")),
+              column(width = 8, textAreaInput(inputId = "aufl_erf", label = NULL, rows = 11, resize = "none", width = "100%")),
               column(width = 4,
-                     textInput(inputId = "aufl_zahl", label = NULL, value = "", width = "100%"),
-                     htmlOutput(outputId = "zahl_form"),
-                     actionButton(inputId = "aufl_uber", label = "Übernehmen", width = "100%"),
-                     HTML("&nbsp;"),
-                     actionButton(inputId = "aufl_B", label = "✗ B" , width = "100%"), #  &cross;
+                textInput(inputId = "aufl_zahl", label = NULL, value = "", width = "100%"),
+                htmlOutput(outputId = "zahl_form", inline = TRUE),
+                actionButton(inputId = "aufl_uber", label = "Übernehmen", width = "100%"),
+                p(HTML("<div class = 'beschr'>"), "Die oben eingegeben Auflagenstärke wird gemeinsam mit der markierten ",
+                    em("Münz ID"), ", in das Textfeld übernommen.", HTML('</div>'))
+              ),
+            ),
+            h3("Verwalten"),
+            fluidRow(
+              column(width = 4,
+                actionButton(inputId = "aufl_schrb", label = "Schreiben", width = "100%"),
+                p(HTML("<div class = 'beschr'>"), "Die Eingaben aus dem Textfeld werden ins File ",
+                  em("eur2coins_circulation.txt"), "übernommen.", HTML('</div>'))
+                ),
+              column(width = 4,
+                # actionButton(inputId = "aufl_sort", label = "Sortieren", width = "100%")
               )
             )
           ),
@@ -409,7 +420,7 @@ server <- function(input, output, session) {
                        pull(df, ID),
                        pull(df, AQ)) |>  
              matrix(ncol = 4, dimnames = list(NULL, c("Land", "Mzz", "Münz ID", " "))),
-           aufl = df |> transmute('Münz ID' = ID, Jahr, Land, Art, Abbildung, Mzz = Münzzeichen)
+           aufl = df |> transmute('Münz ID' = ID, Jahr, Land, Art, Mzz = Münzzeichen, Abbildung)
     )
   }
   
@@ -912,20 +923,29 @@ server <- function(input, output, session) {
   ## Sammlung (extern) ----
   output$samml_ext <- renderUI(tags$iframe(src = "tmpuser/sammlung.html", width = "50%", height = "750"))
   
-  ## Auflage  Buttons ----  
+  ## Auflage  Buttons ----
   observeEvent(eventExpr = input$aufl_uber, handlerExpr = updateTextInput(session, inputId = "aufl_erf", value = paste0(input$aufl_erf, input$myselection, "-", input$aufl_zahl, "\n")))
-  observeEvent(eventExpr = input$aufl_B, handlerExpr = NULL)
+  observeEvent(eventExpr = input$aufl_schrb, handlerExpr = {
+    write(
+      if(str_sub(input$aufl_erf, -1) == "\n") str_sub(input$aufl_erf, 1, -2) else # Auslassen der letzten (= leeren) Zeile wenn es so ist
+        input$aufl_erf,
+      file = "eur2coins_circulation.txt", append = TRUE)
+    Sys.sleep(1.5)
+    source("eur2circulation.r")
+    reload()
+    updateTextInput(session, inputId = "aufl_erf", value = "")
+  })
   
   ## Ausgabe formtierte Zahl ----
   output$zahl_form <- renderText(expr = zahl_form())
-  zahl_form <- eventReactive(eventExpr = input$aufl_zahl, valueExpr = paste0("<div style='text-align: center'>= ",format(as.numeric(input$aufl_zahl), big.mark = " ", scientific = FALSE), "</div>"))
+  zahl_form <- eventReactive(eventExpr = input$aufl_zahl, valueExpr = paste0("<div style='text-align: center'>= ",format(as.numeric(input$aufl_zahl), big.mark = " ", scientific = FALSE), "<br>&nbsp;</div>"))
   
   ## Ausgabe Unbekannte Auflage ----
   output$unbek_aufl <- renderTable(expr = aufl_(), spacing = "xs", width = "100%", align = c("llllll"), sanitize.text.function = function(x) x)
-  aufl_ <- eventReactive(eventExpr = c(input$samlg, input$id, input$mzz, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
+  aufl_ <- eventReactive(eventExpr = c(input$aufl_schrb),
                         valueExpr = {
                           # Anzuzeigende Münzen
-                          show <- filter(all_data(), is.na(Hfgkt))                                        # Münzzeichen - exakte Übereinstimmung ('\\b', - Regex word boundary)
+                          show <- filter(all_data(), is.na(Hfgkt))
                           # Anzahl Münzen n (Überschrift inkl Plural)
                           output$n_aufl <- renderText(paste0("<h3>", format(dim(show)[1], big.mark = "&VeryThinSpace;"), " Münze", if(dim(show)[1] > 1) "n " else " ", "</h3>"))
                           # Ausgabe Ergebnisse Münzen

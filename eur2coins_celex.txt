@@ -118,7 +118,7 @@ C2011/091/04|sm|2011|2011-6-4|g|500. Geburtstag des italienischen Malers Giorgio
 C2011/189/07|mc|2011|2011-7-2|g|Hochzeit von Prinz Albert und Charlene|
 C2011/273/04|pt|2011|2011-9-15|g|500. Geburtstag des portugiesischen Entdeckers Fernão Mendes Pinto, der die Meere und Länder Asiens erforschte|
 C2011/291/03|fi|2011|2011-10-17|g|200 Jahre Finnische Nationalbank|
-C2011/299/08|mt|2011|2011-10-17|g|Erste gewählte Vertreter|
+C2011/299/08|mt|2011|2011-10-17|g|Erste gewählte Vertreter|unebener Hintergrund,glatter Hintergrund
 C2011/301/06|va|2011|2011-10-18|g|26. Weltjugendtag|
 
 ## 2012 ----

@@ -7,4 +7,10 @@ read_lines(file = "eur2coins_circulation.txt", lazy = FALSE) |>
   arrange(ID) -> circulation
 
 # Sortieren der Einträge
-# read_lines(file = "eur2coins_circulation.txt", lazy = FALSE) |> sort() |> write(file = "test.txt")
+# read_lines(file = "eur2coins_circulation.txt", lazy = FALSE) |> sort() |> writeClipboard()
+
+# Einträge die nicht in Coins sind
+# anti_join(circulation, coins)
+
+# Doppelte IDs
+# which(duplicated(circulation$ID))
