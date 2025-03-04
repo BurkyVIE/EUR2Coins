@@ -592,32 +592,32 @@ C/2025/00756|va|2024|2024-7-3|g|750. Todestag von Thomas von Aquin|
 C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 
 ## 2025 ----
-NA|de|2025|2025-1-16|g|~Saarland|A,D,F,G,J
-NA|sk|2025|2025-1-20|g|~100. Jahrestag des ersten internationalen Sportturniers in der Slowakei (Eishockey-Europameisterschaft in Starý Smokovec / Štrbské Pleso)|
-NA|be|2025|2025-1-23|g|~Nationallotterie Belgien|
-NA|ee|2025|2025-1-30|g|~500 Jahre erster Textdruck in esthnischer Sprache|
-NA|fr|2025|2025-1-30|g|~Louvre Museum|
-NA|es|2025|2015-1-30|g|~Altstadt von Salamanca|
-NA|it|2025|2025-2-5|g|~Jubiläum 2025|
-
-NA|de|2025|NA|g|~35 Jahre Duetsche Einheit|A,D,F,G,J
-NA|si|2025|NA|g|~100. Geburtstag von Miki Muster|
-NA|it|2025|NA|g|~Weltreise des Amerigo-Vespucci-Segelschulschiffes 2023-2025|
-NA|lt|2025|NA|g|~Für die Verteidigung|
-NA|sm|2025|NA|g|~Heiliges Jahr 2025 - Pilger der Hoffnung|
-NA|sm|2025|NA|g|~550. Geburtstag von Michelangelo|
-NA|lu|2025|NA|g|~25. Jahrestag der Thronbesteigung von Großherzog Henri|
-NA|lu|2025|NA|g|~75. Jahrestag der Schuman-Erklärung|
-NA|mt|2025|NA|g|~Der maltesische Ochse|
-NA|mt|2025|NA|g|~Mdina|
-NA|gr|2025|NA|g|~100. Geburtstag von Manos Chatzidakis|
-NA|gr|2025|NA|g|~100. Geburtstag von Mikis Theodorakis|
-NA|pt|2025|NA|g|~Nachhaltige Entwicklung|
-NA|pt|2025|NA|g|~Weltpfadfinder- und Jugendbewegung|
-NA|lv|2025|NA|g|~Sēlija|
+#NA|de|2025|2025-1-16|g|~Saarland|A,D,F,G,J
+#NA|sk|2025|2025-1-20|g|~100. Jahrestag des ersten internationalen Sportturniers in der Slowakei (Eishockey-Europameisterschaft in Starý Smokovec / Štrbské Pleso)|
+#NA|be|2025|2025-1-23|g|~Nationallotterie Belgien|
+#NA|ee|2025|2025-1-30|g|~500 Jahre erster Textdruck in esthnischer Sprache|
+#NA|fr|2025|2025-1-30|g|~Louvre Museum|
+#NA|es|2025|2015-1-30|g|~Altstadt von Salamanca|
+#NA|it|2025|2025-2-5|g|~Jubiläum 2025|
+#
+#NA|de|2025|NA|g|~35 Jahre Duetsche Einheit|A,D,F,G,J
+#NA|si|2025|NA|g|~100. Geburtstag von Miki Muster|
+#NA|it|2025|NA|g|~Weltreise des Amerigo-Vespucci-Segelschulschiffes 2023-2025|
+#NA|lt|2025|NA|g|~Für die Verteidigung|
+#NA|sm|2025|NA|g|~Heiliges Jahr 2025 - Pilger der Hoffnung|
+#NA|sm|2025|NA|g|~550. Geburtstag von Michelangelo|
+#NA|lu|2025|NA|g|~25. Jahrestag der Thronbesteigung von Großherzog Henri|
+#NA|lu|2025|NA|g|~75. Jahrestag der Schuman-Erklärung|
+#NA|mt|2025|NA|g|~Der maltesische Ochse|
+#NA|mt|2025|NA|g|~Mdina|
+#NA|gr|2025|NA|g|~100. Geburtstag von Manos Chatzidakis|
+#NA|gr|2025|NA|g|~100. Geburtstag von Mikis Theodorakis|
+#NA|pt|2025|NA|g|~Nachhaltige Entwicklung|
+#NA|pt|2025|NA|g|~Weltpfadfinder- und Jugendbewegung|
+#NA|lv|2025|NA|g|~Sēlija|
 
 ## 2026 ----
-NA|de|2026|NA|g|~Bremen|A,D,F,G,J
+#NA|de|2026|NA|g|~Bremen|A,D,F,G,J
 
 ## Gedenkmünzen: 12. Februar 2025 zwei.euro.com News - Aufnahme alles wo Bild vorhanden
 ## Kursmünzen: 30. Januar 2025 zwei.euro.com
@@ -636,7 +636,7 @@ C2007/302/08|be|2009,2010,2011,2012,2013|NA|k|König Albert II. (2009 - 2013)|
 C2014/075/02|be|2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025|NA|k|König Philippe (2014 -)|
 
 ## BG (Bulgaria, de: Bulgarien, en: Bulgaria) ----
-NA|bg|2026|NA|k|Paisii von Hilandar (2026 - )|
+#NA|bg|2026|NA|k|Paisii von Hilandar (2026 - )|
 
 ## CY (Kypros, de: Zypern, en: Cyprus) ----
 C2007/248/07|cy|2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025|NA|k|Idol von Pomos (2008 -)|
