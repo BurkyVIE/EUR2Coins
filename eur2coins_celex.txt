@@ -222,7 +222,7 @@ C2015/093/06|pt|2015|2015-7-15|g|Erste Kontakte mit Timor, heute ein unabhängig
 C2015/143/05|de|2015|2015-1-30|g|Hessen aus der Reihe „Bundesländer“|A,D,F,G,J
 C2015/143/06|sm|2015|2015-4-8|g|750. Geburtstag von Dante Alighieri|
 C2015/143/07|mt|2015|2015-5-25|g|Erster Flug von Malta|,Utrecht
-C2015/150/03|mt|2015|2015-6-23|g|Republik Malta 1974|
+C2015/150/03|mt|2015|2015-6-23|g|Republik Malta 1974|,Utrecht
 C2015/215/04|fr|2015|2015-7-22|g|225. Jahrestag des Föderationsfestes|
 C2015/220/03|be|2015|2015-9-17|g|2015 — Europäisches Jahr für Entwicklung|
 C2015/232/05|lu|2015|2015-10-15|g|125. Jahrestag der Dynastie Nassau-Weilburg|
@@ -285,7 +285,7 @@ C2016/146/10|va|2016|2016-10-13|g|Heiliges Jahr der Barmherzigkeit|
 C2016/153/05|sm|2016|2016-9-22|g|400. Todestag von William Shakespeare|
 C2016/281/10|mt|2016|2016-8-22|g|Tempel von Ggantija|,Pessac & Yves Sampo,F
 C2016/396/02|gr|2016|2016-12-16|g|150. Jahrestag der Brandstiftung im Arkadi-Kloster|
-C2016/396/03|mt|2016|2016-12-5|g|Die gesellschaftliche Bedeutung des „Malta Community Chest Fund“|
+C2016/396/03|mt|2016|2016-12-5|g|Die gesellschaftliche Bedeutung des „Malta Community Chest Fund“|,Pessac & Yves Sampo
 C2016/396/04|gr|2016|2016-12-16|g|120. Geburtstag von Dimitri Mitropoulos|
 C2016/409/04|ad|2016|2017-6-1|g|25 Jahre öffentlich-rechtlicher Rundfunk in Andorra|
 C2016/409/05|ad|2016|2017-6-1|g|150-jähriges Jubiläum der Neuen Reform von 1866|
@@ -320,7 +320,7 @@ C2017/327/03|fi|2017|2017-10-23|g|Die finnische Natur|
 C2017/320/04|lu|2017|2017-10-26|g|200. Geburtstag des Großherzogs Guillaume III.|
 C2017/327/04|cy|2017|2017-11-3|g|Paphos 2017 — Kulturhauptstadt Europas|
 C2017/329/09|lt|2017|2017-8-31|g|Vilnius|
-C2017/386/03|mt|2017|2017-11-13|g|Solidarität und Frieden|
+C2017/386/03|mt|2017|2017-11-13|g|Solidarität und Frieden|,Pessac & Yves Sampo
 C2017/386/02|mc|2017|2017-11-13|g|Carabiniers du Prince („Carabiniers“ des Prinzen)|
 C2017/386/04|pt|2017|2017-11-21|g|150. Jahrestag der Geburt des Schriftstellers Raul Brandão|
 
@@ -359,7 +359,7 @@ C2018/400/05|de|2018|2018-1-30|g|Berlin („Bundesländer-Reihe“)|A,D,F,G,J
 C2018/400/06|sm|2018|2018-9-20|g|420. Jahrestag der Geburt von Gian Lorenzo Bernini|
 C2018/400/07|va|2018|2018-10-4|g|50. Todestag von Pater Pio|
 C2018/401/06|be|2018|2018-9-20|g|50. Jahrestag des Starts des Forschungssatelliten ESRO 2B|
-C2018/401/07|mt|2018|2018-11-7|g|Kulturerbe|
+C2018/401/07|mt|2018|2018-11-7|g|Kulturerbe|,Pessac & Yves Sampo
 C2018/422/05|mc|2018|2018-6-25|g|François Joseph Bosio|
 
 ## 2019 ----
@@ -387,7 +387,7 @@ C2019/351/11|lt|2019|2019-6-10|g|Sutartinės (litauische mehrteilige Lieder — 
 C2019/352/13|lu|2019|2019-9-19|g|100. Jahrestag der Einführung des allgemeinen Wahlrechts|
 C2019/352/14|lv|2019|2019-9-17|g|Aufgehende Sonne (Wappen)|
 C2019/352/15|mt|2019|2019-5-13|g|Unesco-Weltkulturerbe — prähistorische Tempel Ta‘ Haġrat|,Pessac & Yves Sampo,F
-C2019/352/16|mt|2019|2019-10-21|g|Natur und Umwelt|
+C2019/352/16|mt|2019|2019-10-21|g|Natur und Umwelt|,Pessac & Yves Sampo
 C2019/352/17|si|2019|2019-11-25|g|100. Geburtstag der Gründung der Universität Ljubljana|
 C2019/356/03|pt|2019|2019-6-6|g|600 Jahre der Entdeckung des Archipels von Madeira durch die portugiesischen Seefahrer Bartolomeu Perestrelo und Tristão Vaz|
 C2019/356/04|pt|2019|2019-5-8|g|500 Jahre der ersten Weltumsegelung, die vom portugiesischen Entdecker und Navigator Fernão De Magalhães organisiert und geleitet wurde|
@@ -423,7 +423,7 @@ C2020/301/14|va|2020|2020-10-16|g|500. Jahrestag des Todes von Raphael Sanzio|
 C2020/377/12|sk|2020|2020-11-11|g|20. Jahrestag des Beitritts der Slowakei zur Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD)|
 C2020/380/04|mt|2020|2020-12-11|g|Kinderspiele|
 C2020/380/05|pt|2020|2020-9-1|g|730-jähriges Bestehen der Universität Coimbra|
-C2020/381/03|lu|2020|2020-12-23|g|Die Geburt von Prinz Charles|
+C2020/381/03|lu|2020|2020-12-23|g|Die Geburt von Prinz Charles|Relief,Foto
 C2020/389/03|cy|2020|2020-12-14|g|30. Jahrestag des zyprischen Instituts für Neurologie und Genetik|
 C2020/393/03|lt|2020|2020-11-4|g|UNESCO-Kulturerbe – Kryžių kalnas (Berg der Kreuze)|
 C2020/393/04|fi|2020|2020-11-15|g|Väinö Linna 100 Jahre|
@@ -433,11 +433,11 @@ C2020/417/05|gr|2020|2020-6-30|g|2500. Jahrestag der Schlacht bei den Thermopyle
 C2020/417/06|gr|2020|2020-7-16|g|100. Jahrestag der Vereinigung Thrakiens mit Griechenland|
 
 ## 2021 ----
-C2020/444/04|lu|2021|2021-4-19|g|Der 100. Geburtstag von Großherzog Jean|
+C2020/444/04|lu|2021|2021-4-19|g|Der 100. Geburtstag von Großherzog Jean|Relief,Foto
 C2020/444/05|pt|2021|2021-1-4|g|Portugiesischer Vorsitz im Rat der Europäischen Union|
 C2021/020/04|de|2021|2021-1-26|g|Sachsen-Anhalt (Bundesländer-Serie)|A,D,F,G,J
 C2021/020/05|lv|2021|2021-1-20|g|100. Jahrestag der völkerrechtlichen Anerkennung Lettlands|
-C2021/020/06|lu|2021|2021-4-19|g|der 40. Hochzeitstag von Großherzog Henri|
+C2021/020/06|lu|2021|2021-4-19|g|der 40. Hochzeitstag von Großherzog Henri|Relief,Foto
 C2021/036/04|it|2021|2021-1-26|g|150. Jahrestag der Erklärung Roms zur Hauptstadt Italiens|
 C2021/036/05|it|2021|2021-6-22|g|Angehörige der Gesundheitsberufe|
 C2021/059/05|ee|2021|2021-10-20|g|Der Wolf als estnisches Nationaltier|
