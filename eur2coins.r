@@ -37,7 +37,7 @@ raw |>
          Art = toupper(Münzart),
          Münzart = factor(Münzart, levels = c("g", "k"), labels = c("Gedenkmünze", "Kursmünze"))) |>
   add_column(cs = 1) |> # Hilfsvariable für Durchnumerierung (ID)
-  arrange(Art, Prägejahr, Land, Amtsblatt) |>
+  arrange(Art, Prägejahr, Land, Amtsblatt) |> # garantiert immer gleiche Nummerierung für ID
   group_by(Land, Münzart, Prägejahr) |> 
   mutate(ID = paste0(Prägejahr, Land, tolower(substr(Münzart, 1, 1)), cumsum(cs) |> str_pad(2, pad = "0"))) |>
   ungroup() |> 
