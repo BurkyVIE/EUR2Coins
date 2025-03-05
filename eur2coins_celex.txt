@@ -170,8 +170,8 @@ C2013/265/06|va|2013|2013-6-3|g|Sedisvakanz 2013|
 C2013/266/02|it|2013|2013-7-25|g|700. Jahrestag der Geburt von Giovanni BOCCACCIO|
 C2013/266/03|it|2013|2013-5-20|g|200. Jahrestag der Geburt von Giuseppe VERDI|
 C2013/266/04|mc|2013|2013-6-17|g|20. Jahrestag des UNO-Beitritts|
-C2013/272/06|gr|2013|2013-10-1|g|100. Jahrestag der Vereinigung Kretas mit Griechenland|
 C2013/272/05|gr|2013|2013-10-1|g|2 400. Jahrestag der Gründung der Platonischen Akademie|
+C2013/272/06|gr|2013|2013-10-1|g|100. Jahrestag der Vereinigung Kretas mit Griechenland|
 C2013/363/08|fi|2013|2013-9-4|g|150 Jahre Sitzung des Parlaments|
 C2013/366/05|fi|2013|2013-11-4|g|125. Geburtstag des Literaturnobelpreisträgers F. E. SILLANPÄÄ|
 C2013/379/08|de|2013|2013-2-1|g|„Länderserie“ — Baden-Württemberg|A,D,F,G,J
@@ -183,8 +183,8 @@ C2014/020/06|lu|2014|2014-1-6|g|175. Jahrestag der Unabhängigkeit des Großherz
 C2014/051/05|es|2014|2014-2-7|g|Stätten des UNESCO-Weltkultur- und Weltnaturerbes — Park Güell|
 C2014/062/08|si|2014|2014-11-17|g|600. Jahrestag der Krönung von Barbara Celjska|
 C2014/088/03|lv|2014|2014-8-12|g|Riga — Kulturhauptstadt Europas 2014|
-C2014/088/05|pt|2014|2014-10-31|g|Internationales Jahr der familienbetriebenen Landwirtschaft|
 C2014/088/04|pt|2014|2014-4-23|g|40. Jahrestag der Nelkenrevolution|
+C2014/088/05|pt|2014|2014-10-31|g|Internationales Jahr der familienbetriebenen Landwirtschaft|
 C2014/089/04|sk|2014|2014-4-1|g|10. Jahrestag des Beitritts der Slowakischen Republik zur Europäischen Union|
 C2014/160/03|it|2014|2014-3-25|g|200. Jahrestag der Gründung der Arma dei Carabinieri|
 C2014/160/04|it|2014|2014-6-17|g|450. Geburtstag von Galileo Galilei (geboren 1564)|
@@ -192,9 +192,9 @@ C2014/160/05|be|2014|2014-4-24|g|100 Jahre Beginn des Ersten Weltkrieges (1914-1
 C2014/163/06|fi|2014|2014-6-16|g|100. Geburtstag der Schriftstellerin und Künstlerin Tove Jansson|
 C2014/168/02|fr|2014|2014-6-11|g|70. Jahrestag der Landung der Alliierten in der Normandie am 6. Juni 1944|
 C2014/185/04|fr|2014|2014-11-24|g|Kampf gegen Aids anlässlich des Welt-Aids-Tages|
+C2014/225/06|mt|2014|2014-7-16|g|Zweihundertjähriges Bestehen der maltesischen Polizei|
 C2014/252/03|nl|2014|2014-5-22|g|Offizielle Abschiedsfeier zu Ehren der früheren Königin Beatrix|
 C2014/262/02|be|2014|2014-9-18|g|150 Jahre Belgisches Rotes Kreuz|
-C2014/225/06|mt|2014|2014-7-16|g|Zweihundertjähriges Bestehen der maltesischen Polizei|
 C2014/262/03|gr|2014|2014-9-24|g|150. Jahrestag der Vereinigung der Ionischen Inseln mit Griechenland (1864-2014)|
 C2014/262/04|gr|2014|2014-9-24|g|400. Todestag von Dominikos Theotokopoulos (1614-2014)|
 C2014/262/05|lu|2014|2014-11-6|g|50. Jahrestag der Thronbesteigung von Großherzog Jean|
@@ -260,8 +260,8 @@ C2015/380/05|ad|2015|2016-7-18|g|30. Jahrestag der gesetzlichen Festlegung des V
 C2015/186/03|at|2016|2015-12-2|g|200 Jahre Oesterreichische Nationalbank|
 C2015/425/10|es|2016|2016-2-5|g|UNESCO-Weltkultur- und -naturerbe — Segovia|
 C2015/425/11|ee|2016|2016-1-7|g|100. Geburtstag des berühmten estnischen Schachgroßmeisters Paul Keres|
-C2015/428/05|ie|2016|2016-1-20|g|Hundertster Jahrestag des Osteraufstands 1916 in Irland|
 C2015/428/04|de|2016|2016-2-5|g|Sachsen („Bundesländer-Reihe“)|A,D,F,G,J
+C2015/428/05|ie|2016|2016-1-20|g|Hundertster Jahrestag des Osteraufstands 1916 in Irland|
 C2016/023/05|sk|2016|2016-3-7|g|Erster slowakischer Vorsitz des Rates der Europäischen Union|
 C2016/023/06|fr|2016|2016-2-5|g|UEFA-Europameisterschaft 2016|
 C2016/026/04|be|2016|2016-3-24|g|Olympische Spiele|
@@ -292,36 +292,36 @@ C2016/409/05|ad|2016|2017-6-1|g|150-jähriges Jubiläum der Neuen Reform von 186
 
 ## 2017 ----
 C2016/236/06|es|2017|2017-2-3|g|Unesco-Weltkultur- und -naturerbe — Kirchen des Königreichs Asturien|
+C2017/021/02|si|2017|2017-2-2|g|10. Jahrestag der Einführung des Euro in Slowenien|
 C2017/023/07|lu|2017|2017-1-2|g|50-jähriges Jubiläum der Freiwilligkeit der luxemburgischen Armee|
 C2017/023/03|sk|2017|2017-1-4|g|550. Jahrestag der Gründung der Universität Istropolitana|
-C2017/021/02|si|2017|2017-2-2|g|10. Jahrestag der Einführung des Euro in Slowenien|
 C2017/023/04|de|2017|2017-2-3|g|Rheinland-Pfalz (Bundesländerserie)|A,D,F,G,J
 C2017/023/05|fr|2017|2017-2-3|g|Hundertster Todestag Auguste Rodins|
 C2017/066/02|lv|2017|2017-11-14|g|Kurzeme|
 C2017/066/03|lv|2017|2017-11-14|g|Latgale|
 C2017/111/08|it|2017|2017-3-22|g|400. Jahrestag der Fertigstellung der Basilica di San Marco in Venedig|
-C2017/120/06|sm|2017|2017-3-30|g|750. Jahrestag der Geburt von Giotto|
 C2017/111/06|be|2017|2017-4-21|g|200. Jahrestag der Gründung der Universität Lüttich|
 C2017/111/10|mt|2017|2017-5-31|g|Weltkulturerbe der Unesco: die prähistorischen maltesischen Tempel von Hagar Qim|,Pessac & Yves Sampo,F
 C2017/111/07|fi|2017|2017-6-1|g|100 Jahre unabhängiges Finnland|
-C2017/120/07|va|2017|2017-6-1|g|1950. Jahrestag des Martyriums der Heiligen Petrus und Paulus|
 C2017/111/09|it|2017|2017-6-23|g|Zweitausendster Todestag von Titus Livius|
+C2017/120/06|sm|2017|2017-3-30|g|750. Jahrestag der Geburt von Giotto|
+C2017/120/07|va|2017|2017-6-1|g|1950. Jahrestag des Martyriums der Heiligen Petrus und Paulus|
+C2017/120/08|pt|2017|2017-7-13|g|150-jähriges Bestehen der portugiesischen Polizei, der Polícia de Segurança Pública|
 C2017/206/08|ee|2017|2017-6-26|g|Unabhängigkeit Estlands|
 C2017/206/09|gr|2017|2017-7-10|g|60 Jahre des Gedenkens an Nikos Kazantzakis|
-C2017/120/08|pt|2017|2017-7-13|g|150-jähriges Bestehen der portugiesischen Polizei, der Polícia de Segurança Pública|
-C2017/329/08|sm|2017|2017-8-31|g|Internationales Jahr des nachhaltigen Tourismus für Entwicklung|
+C2017/206/10|gr|2017|2017-10-12|g|Archäologische Ausgrabungsstätte Philippi|
 C2017/312/03|fr|2017|2017-9-25|g|25. Jahrestag der Rosa Schleife, des Symbols für die Bekämpfung von Brustkrebs|
-C2017/329/07|be|2017|2017-9-29|g|200. Jahrestag der Gründung der Universität Gent|
+C2017/320/04|lu|2017|2017-10-26|g|200. Geburtstag des Großherzogs Guillaume III.|
 C2017/320/05|ad|2017|2018-2-8|g|100 Jahre Hymne Andorras|
 C2017/321/05|ad|2017|2018-2-8|g|Andorra — Das Land in den Pyrenäen|
 C2017/321/06|va|2017|2017-10-12|g|Hundertster Jahrestag der Erscheinungen von Fatima|
-C2017/206/10|gr|2017|2017-10-12|g|Archäologische Ausgrabungsstätte Philippi|
-C2017/327/03|fi|2017|2017-10-23|g|Die finnische Natur|
-C2017/320/04|lu|2017|2017-10-26|g|200. Geburtstag des Großherzogs Guillaume III.|
-C2017/327/04|cy|2017|2017-11-3|g|Paphos 2017 — Kulturhauptstadt Europas|
+C2017/329/08|sm|2017|2017-8-31|g|Internationales Jahr des nachhaltigen Tourismus für Entwicklung|
+C2017/329/07|be|2017|2017-9-29|g|200. Jahrestag der Gründung der Universität Gent|
 C2017/329/09|lt|2017|2017-8-31|g|Vilnius|
-C2017/386/03|mt|2017|2017-11-13|g|Solidarität und Frieden|,Pessac & Yves Sampo
+C2017/327/03|fi|2017|2017-10-23|g|Die finnische Natur|
+C2017/327/04|cy|2017|2017-11-3|g|Paphos 2017 — Kulturhauptstadt Europas|
 C2017/386/02|mc|2017|2017-11-13|g|Carabiniers du Prince („Carabiniers“ des Prinzen)|
+C2017/386/03|mt|2017|2017-11-13|g|Solidarität und Frieden|,Pessac & Yves Sampo
 C2017/386/04|pt|2017|2017-11-21|g|150. Jahrestag der Geburt des Schriftstellers Raul Brandão|
 
 ## 2018 ----
@@ -466,30 +466,30 @@ C2021/482/02|sm|2021|2021-8-27|g|550. Geburtstag von Albrecht Dürer|
 C2021/482/03|sm|2021|2021-3-1|g|450. Geburtstag von Caravaggio|
 
 ## 2022 ----
+C2022/012/03|at|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/012/03|be|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|cy|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/012/03|de|2022|2022-7-1|g|35 Jahre Erasmus-Programm|A,D,F,G,J
 C2022/012/03|ee|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|es|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/012/03|fi|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|fr|2022|2022-7-6|g|35 Jahre Erasmus-Programm|
 C2022/012/03|gr|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/012/03|ie|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/012/03|it|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/012/03|lv|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/012/03|lt|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/012/03|lu|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/012/03|nl|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/012/03|at|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/012/03|pt|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/012/03|sk|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/012/03|si|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/012/03|es|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/012/03|cy|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
-C2022/012/03|fr|2022|2022-7-6|g|35 Jahre Erasmus-Programm|
+C2022/012/03|lv|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/012/03|mt|2022|2022-11-17|g|35 Jahre Erasmus-Programm|
+C2022/012/03|nl|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|pt|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|si|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
+C2022/012/03|sk|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/100/04|fr|2022|2022-1-25|g|90. Jahrestag der Geburt des ehemaligen Staatspräsidenten Jacques Chirac|
 C2022/145/06|it|2022|2022-4-6|g|170. Jahrestag der Gründung der Italienischen Nationalpolizei|
 C2022/145/07|si|2022|2022-3-2|g|150. Geburtstag des Architekten Jože Plečnik|
 C2022/145/08|de|2022|2022-1-25|g|Bundesländer-Serie – Thüringen|A,D,F,G,J
-C2020/145/09|it|2022|2022-5-17|g|30. Todestag von Giovanni Falcone und Paolo Borsellino|
+C2022/145/09|it|2022|2022-5-17|g|30. Todestag von Giovanni Falcone und Paolo Borsellino|
 C2022/145/10|lu|2022|2022-7-1|g|50 Jahre gesetzlicher Schutz der luxemburgischen Flagge|
 C2022/484/07|be|2022|2022-5-11|g|Gesundheitswesen – Würdigung des außergewöhnlichen Engagements in der COVID-19-Pandemie|
 C2022/484/08|gr|2022|2022-7-1|g|200. Jahrestag der ersten griechischen Verfassung|
@@ -599,7 +599,7 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|fr|2025|2025-1-30|g|~Louvre Museum|
 #NA|es|2025|2015-1-30|g|~Altstadt von Salamanca|
 #NA|it|2025|2025-2-5|g|~Jubiläum 2025|
-#
+
 #NA|de|2025|NA|g|~35 Jahre Duetsche Einheit|A,D,F,G,J
 #NA|si|2025|NA|g|~100. Geburtstag von Miki Muster|
 #NA|it|2025|NA|g|~Weltreise des Amerigo-Vespucci-Segelschulschiffes 2023-2025|

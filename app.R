@@ -325,7 +325,7 @@ ui <- fluidPage(includeCSS(path = "style.css"),
             )
           ),
           column(width = 8,
-            h2("Unbekannte Auflagestärke"),
+            h2("Unbekannte Auflagenstärke"),
             htmlOutput(outputId = "n_aufl"),
             tableOutput(outputId = "unbek_aufl")
             )
