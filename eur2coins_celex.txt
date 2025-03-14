@@ -600,7 +600,7 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|es|2025|2015-1-30|g|~Altstadt von Salamanca|
 #NA|it|2025|2025-2-5|g|~Jubiläum 2025|
 
-#NA|de|2025|NA|g|~35 Jahre Duetsche Einheit|A,D,F,G,J
+#NA|de|2025|NA|g|~35 Jahre Deutsche Einheit|A,D,F,G,J
 #NA|si|2025|NA|g|~100. Geburtstag von Miki Muster|
 #NA|it|2025|NA|g|~Weltreise des Amerigo-Vespucci-Segelschulschiffes 2023-2025|
 #NA|lt|2025|NA|g|~Für die Verteidigung|
@@ -616,10 +616,28 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|pt|2025|NA|g|~Weltpfadfinder- und Jugendbewegung|
 #NA|lv|2025|NA|g|~Sēlija|
 
+#NA|lt|2025|NA|g|?Mažoji Lietuva
+#NA|fi|2025|NA|g|?Staatsbesuche Finnlands - Diplomatie und Außenpolitik|
+#NA|fi|2025|NA|g|?100 Jahre Finnalnd-Schweden Leichtathletikspiele|
+#NA|be|2025|NA|g|?Rennstrecke Spa-Francorchamps|
+#NA|hr|2025|NA|g|?1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
+#NA|hr|2025|NA|g|?Pula Arena|
+#NA|fr|2025|NA|g|?Notre Dame|
+
+
 ## 2026 ----
 #NA|de|2026|NA|g|~Bremen|A,D,F,G,J
 
-## Gedenkmünzen: 12. Februar 2025 zwei.euro.com News - Aufnahme alles wo Bild vorhanden
+#NA|lt|2026|NA|g|?Unabhängigkeit Litauens in der Energieversorgung|
+#NA|lt|2026|NA|g|?Die Stadt Kaunas|
+#NA|sk|2026|NA|g|?Trencin - Kulturhauptstadt Euriopas 2026|
+#NA|si|2026|NA|g|?150. Geburtstag von Ivan Cankar|
+#NA|lu|2026|NA|g|?Verleihung des Intzernationalen Karlspreis an das luxemburgische Volk|
+#NA|lu|2026|NA|g|?Luxemburgischer BNationalfeiertga/Groussherzogsgebuertsdag|
+#NA|fr|2026|NA|g|?Antoine de Saint-Exupéry|
+#NA|de|2026|NA|g|?Konrad Adenauer|
+
+## Gedenkmünzen: 10. März 2025 zwei.euro.com News
 ## Kursmünzen: 30. Januar 2025 zwei.euro.com
 
 # Kursmünzen ----

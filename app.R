@@ -175,6 +175,13 @@ ui <- fluidPage(includeCSS(path = "style.css"),
               )
             )
           ),
+        tabPanel("HR",
+          fluidPage(
+            h2("Kroatien"),
+            h3("Kroatische Städte (2025 - )"),
+            tableOutput(outputId = "hrks_tab")
+            )
+          ),
         tabPanel("EE",
           fluidPage(
             h2("Estland"),
@@ -199,7 +206,7 @@ ui <- fluidPage(includeCSS(path = "style.css"),
         tabPanel("LT",
           fluidPage(
             h2("Litauen"),
-            h3("Ethnographische Regionen (2019 - 2022)"),
+            h3("Ethnographische Regionen (2019 - 2022, 2025)"),
             tableOutput(outputId = "lter_tab")
             )
           ),
@@ -628,9 +635,9 @@ server <- function(input, output, session) {
   output$eens_tab <- renderTable({eens_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   eens_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     eens <- tribble(~Amtsblatt, ~Beschreibung,
-                    'C2021/059/05', '<b>Der Wolf, das Nationaltier</b>',
-                    'C2023/264/07', '<b>Die Rauchschwalbe, der Nationalvogel</b>',
-                    'C/2024/03965', '<b>Die Kornblume, die Nationalblume</b>') |>
+                    'C2021/059/05', '<b>Der Wolf</b>, das Nationaltier',
+                    'C2023/264/07', '<b>Die Rauchschwalbe</b>, der Nationalvogel',
+                    'C/2024/03965', '<b>Die Kornblume</b>, die Nationalblume') |>
       left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
       filter(!is.na(Amtsblatt))
     
@@ -652,6 +659,17 @@ server <- function(input, output, session) {
     displ_data(fros, "ser")
   }, ignoreNULL = FALSE)
   
+  ### Kroatien - Kroatische Städte ----
+  output$hrks_tab <- renderTable({hrks_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
+  hrks_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
+    hrks <- tribble(~Amtsblatt, ~Beschreibung,
+                    NA, '<b>Pula</b><br>(Arena)') |>
+      left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
+      filter(!is.na(Amtsblatt))
+    
+    displ_data(hrks, "ser")
+  }, ignoreNULL = FALSE)
+  
   ### Litauen - Ethnografische Regionen ----
   output$lter_tab <- renderTable({lter_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   lter_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
@@ -660,7 +678,7 @@ server <- function(input, output, session) {
                     'C2020/053/04', '<b>Aukschtaiten</b><br>(Oberlitauen)',
                     'C2021/473/05', '<b>Dzukija</b><br>(Mittellitauen)',
                     'C2022/484/25', '<b>Suvalkija</b><br>(Sudauen)',
-                    NA, '<b>Mažoji Lietuva</b><br>(Preußisch Litauen)') |>
+                    NA, '<b>Mažoji Lietuva</b><br>(Kleinlitauen)') |>
       left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
       filter(!is.na(Amtsblatt))
     
@@ -704,7 +722,9 @@ server <- function(input, output, session) {
                     'C/2024/02466', '<b>175. Todestag von Großherzog Guillaume II.</b>',
                     'C/2024/02467', '<b>100. Jahrestag der Unterzeichnung des Erlasses über die Ausgabe der „Feierstëppler“-Scheidemünze durch Großherzogin Charlotte</b>',
                     NA, '<b>25. Jahrestag der Thronbesteigung von Großherzog Henri</b>',
-                    NA, '<b>75. Jahrestag der Schuman-Erklärung</b>') |>
+                    NA, '<b>75. Jahrestag der Schuman-Erklärung</b>',
+                    NA, '<b>Verleihung des Internationalen Karlspreises an das luxemburgische Volk</b>',
+                    NA, '<b>Luxemburgischer Nationalfeiertag / Groussherzogsgebuertsdag</b>') |>
       left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
       filter(!is.na(Amtsblatt))
     
@@ -792,7 +812,8 @@ server <- function(input, output, session) {
   output$mtea_tab <- renderTable({mtea_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   mtea_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     mtea <- tribble(~Amtsblatt, ~Beschreibung,
-                    'C/2024/03949', '<b>Die maltesische Honigbiene</b>') |>
+                    'C/2024/03949', 'Die maltesische <b>Honigbiene</b>',
+                    NA, 'Der maltessiche <b>Ochse</b>') |>
       left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
       filter(!is.na(Amtsblatt))
     
