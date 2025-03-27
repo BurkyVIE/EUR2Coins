@@ -599,12 +599,12 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|fr|2025|2025-1-30|g|~Louvre Museum|
 #NA|es|2025|2015-1-30|g|~Altstadt von Salamanca|
 #NA|it|2025|2025-2-5|g|~Jubiläum 2025|
+#NA|sm|2025|2025-3-27|g|~Heiliges Jahr 2025 - Pilger der Hoffnung|
+#NA|lt|2025|2025-3-27|g|~Für die Verteidigung|
 
 #NA|de|2025|NA|g|~35 Jahre Deutsche Einheit|A,D,F,G,J
 #NA|si|2025|NA|g|~100. Geburtstag von Miki Muster|
 #NA|it|2025|NA|g|~Weltreise des Amerigo-Vespucci-Segelschulschiffes 2023-2025|
-#NA|lt|2025|NA|g|~Für die Verteidigung|
-#NA|sm|2025|NA|g|~Heiliges Jahr 2025 - Pilger der Hoffnung|
 #NA|sm|2025|NA|g|~550. Geburtstag von Michelangelo|
 #NA|lu|2025|NA|g|~25. Jahrestag der Thronbesteigung von Großherzog Henri|
 #NA|lu|2025|NA|g|~75. Jahrestag der Schuman-Erklärung|
@@ -637,7 +637,7 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|fr|2026|NA|g|?Antoine de Saint-Exupéry|
 #NA|de|2026|NA|g|?Konrad Adenauer|
 
-## Gedenkmünzen: 10. März 2025 zwei.euro.com News
+## Gedenkmünzen: 27. März 2025 zwei.euro.com News
 ## Kursmünzen: 30. Januar 2025 zwei.euro.com
 
 # Kursmünzen ----
