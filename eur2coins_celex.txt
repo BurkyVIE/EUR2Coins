@@ -1,7 +1,7 @@
 Amtsblatt|Land|Prägejahr|Ausgabe|Münzart|Abbildung|Münzzeichen
 
-# Gedenkmünzen ----
-## 2004 ----
+# GEDENKMÜNZEN ----
+## 2004 - 2004 - 2004 - 2004 - 2004 ----
 C2004/091/06|gr|2004|2004-5-14|g|Olympische Spiele 2004 in Athen|
 C2004/243/03|fi|2004|2004-6-24|g|Erweiterung der Europäischen Union um zehn neue Mitgliedstaaten|
 C2004/243/05|lu|2004|2004-7-26|g|Bildnis und Monogramm des Großherzogs Henri|H links geneigt,H rechts geneigt
@@ -9,7 +9,7 @@ C2004/298/02|sm|2004|2004-12-16|g|Bartolomeo Borghesi (Historiker, Numismatiker)
 C2004/313/03|it|2004|2004-12-13|g|Fünftes Jahrzehnt des Bestehens des Welternährungsprogramms|
 C2004/321/03|va|2004|2004-12-16|g|75. Jahrestag der Gründung des Staates Vatikanstadt|
 
-## 2005 ----
+## 2005 - 2005 - 2005 - 2005 - 2005 ----
 C2005/011/03|lu|2005|2005-2-15|g|50. Geburtstag von Großherzog Henri, 5. Jahrestag seines Amtsantritts und 100. Todestag von Großherzog Adolphe|
 C2005/061/07|at|2005|2005-5-11|g|50. Jahrestag der Unterzeichnung des Österreichischen Staatsvertrages|
 C2005/061/08|be|2005|2005-5-20|g|Belgisch-Luxemburgische Wirtschaftsunion|
@@ -19,7 +19,7 @@ C2005/244/04|fi|2005|2005-10-25|g|60 Jahre Vereinte Nationen und 50 Jahre UN-Mit
 C2005/283/06|it|2005|2005-10-29|g|1. Jahrestag der Unterzeichnung der Europäischen Verfassung|
 C2005/283/07|va|2005|2005-12-6|g|20. Weltjugendtag in Köln (August 2005)|
 
-## 2006 ----
+## 2006 - 2006 - 2006 - 2006 - 2006 ----
 C2006/020/10|lu|2006|2006-2-1|g|25. Geburtstag von Erbgroßherzog Guillaume|
 C2006/033/04|de|2006|2006-2-3|g|Schleswig-Holstein|A,D,F,G,J
 C2006/033/05|it|2006|2006-2-10|g|XX. Olympische Winterspiele — Turin 2006|
@@ -28,7 +28,7 @@ C2006/248/02|fi|2006|2006-10-4|g|100 Jahre allgemeine, gleiche, geheime und frei
 C2006/248/03|sm|2006|2006-10-17|g|500. Todestag von Christoph Kolumbus|
 C2006/260/06|va|2006|2006-11-9|g|500 Jahre Päpstliche Schweizergarde|
 
-## 2007 ----
+## 2007 - 2007 - 2007 - 2007 - 2007 ----
 C2007/053/02|lu|2007|2007-2-2|g|Großherzoglicher Palast|
 C2007/065/04|be|2007|2007-3-26|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|
 C2007/065/04|de|2007|2007-3-25|g|50. Jahrestag der Unterzeichnung des Vertrags von Rom|A,D,F,G,J
@@ -50,7 +50,7 @@ C2007/233/07|sm|2007|2007-10-9|g|Zweihundertster Geburtstag von Giuseppe Garibal
 C2007/233/08|va|2007|2007-10-23|g|80. Geburtstag von Papst Benedikt XVI.|
 C2007/289/10|fi|2007|2007-12-3|g|90. Jahrestag der Unabhängigkeitserklärung|
 
-## 2008 ----
+## 2008 - 2008 - 2008 - 2008 - 2008 ----
 C2008/013/02|de|2008|2008-2-1|g|Hamburg|A,D,F,G,J
 C2008/021/09|lu|2008|2008-2-1|g|Großherzog Henri und die Residenz Schlossberg|
 C2008/089/04|it|2008|2008-12-10|g|60. Jahrestag der Annahme der Allgemeinen Erklärung der Menschenrechte|
@@ -62,7 +62,7 @@ C2008/165/04|pt|2008|2008-9-15|g|60. Jahrestag der Annahme der Allgemeinen Erkl�
 C2008/228/06|va|2008|2008-10-16|g|Paulusjahr 2008|
 C2008/246/06|fi|2008|2008-10-24|g|60. Jahrestag der Allgemeinen Erklärung der Menschenrechte|
 
-## 2009 ----
+## 2009 - 2009 - 2009 - 2009 - 2009 ----
 C2008/315/04|be|2009|2009-1-27|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|
 C2008/315/04|de|2009|2009-1-2|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|A,D,F,G,J
 C2008/315/04|ie|2009|2009-1-1|g|Zehn Jahre Wirtschafts- und Währungsunion (WWU) und die Schaffung des Euro|
@@ -89,7 +89,7 @@ C2009/196/08|it|2009|2009-10-15|g|Zweihundertster Geburtstag der Geburt von Loui
 C2009/204/05|va|2009|2009-11-18|g|Internationales Jahr der Astronomie|
 C2009/227/03|fi|2009|2009-10-23|g|200. Jahrestag des ersten finnischen Landtags und der Gründung zentraler staatlicher Einrichtungen in Finnland|
 
-## 2010 ----
+## 2010 - 2010 - 2010 - 2010 - 2010 ----
 C2009/311/05|si|2010|2010-5-10|g|200-jähriges Bestehen des Botanischen Gartens in Ljubljana|
 C2009/311/06|lu|2010|2010-1-14|g|Das Wappen des Großherzogs|
 C2010/012/05|de|2010|2010-1-29|g|Bremen|A,D,F,G,J
@@ -103,7 +103,7 @@ C2010/212/03|va|2010|2010-10-12|g|Priesterjahr|
 C2010/256/04|fi|2010|2010-11-11|g|Währungserlass von 1860, durch den Finnland das Recht gewährt wurde, Banknoten und Münzen auszugeben|
 C2010/270/04|gr|2010|2010-10-25|g|Der 2 500. Jahrestag der Schlacht von Marathon|
 
-## 2011 ----
+## 2011 - 2011 - 2011 - 2011 - 2011 ----
 C2010/349/03|lu|2011|2011-2-3|g|50. Jahrestag der Ernennung ihres Sohnes Jean zum „lieutenant-représentant“ durch Großherzogin Charlotte|
 C2011/005/06|sk|2011|2011-1-10|g|20. Jahrestag der Gründung der Visegrád-Gruppe|
 C2011/019/04|nl|2011|2011-1-24|g|500. Jahrestag des Erscheinens des weltbekannten Buchs „Laus Stultitiae“ (Lob der Torheit) des niederländischen Philosophen, Humanisten und Theologen Desiderus Erasmus|
@@ -121,7 +121,7 @@ C2011/291/03|fi|2011|2011-10-17|g|200 Jahre Finnische Nationalbank|
 C2011/299/08|mt|2011|2011-10-17|g|Erste gewählte Vertreter|unebener Hintergrund,glatter Hintergrund
 C2011/301/06|va|2011|2011-10-18|g|26. Weltjugendtag|
 
-## 2012 ----
+## 2012 - 2012 - 2012 - 2012 - 2012 ----
 C2011/373/06|lu|2012|2012-2-9|g|Großherzog Henri und Großherzog Wilhem IV. der Reihe „Großherzogliche Dynastie“|
 C2012/010/02|de|2012|2012-2-3|g|Bayern aus der Serie „Bundesländer“|A,D,F,G,J
 C2012/017/05|be|2012|2012-1-30|g|Zehnter Jahrestag der Einführung des Euro|
@@ -153,7 +153,7 @@ C2012/375/06|mt|2012|2012-8-20|g|Mehrheitswahlrecht 1887|,Utrecht
 C2013/021/05|lu|2012|2012-12-20|g|Hochzeit von Erbgroßherzog Guillaume mit Gräfin Stéphanie de Lannoy|
 C2013/102/03|it|2012|2012-7-18|g|100. Todestag von Giovanni PASCOLI|
 
-## 2013 ----
+## 2013 - 2013 - 2013 - 2013 - 2013 ----
 C2013/018/05|fr|2013|2013-1-21|g|50. Jahrestag der Unterzeichnung des Élysée-Vertrags|
 C2013/021/04|de|2013|2013-1-22|g|50. Jahrestag der Unterzeichnung des Élysée-Vertrags|A,D,F,G,J
 C2013/023/06|si|2013|2013-2-4|g|800. Jahrestag des ersten Besuchs der Höhlen von Postojna|
@@ -178,7 +178,7 @@ C2013/379/08|de|2013|2013-2-1|g|„Länderserie“ — Baden-Württemberg|A,D,F,
 C2013/379/09|mt|2013|2013-6-24|g|Selbstverwaltung — Verfassung von 1921|,Utrecht
 C2013/379/10|nl|2013|2013-11-25|g|200 Jahre Königreich der Niederlande|
 
-## 2014 ----
+## 2014 - 2014 - 2014 - 2014 - 2014 ----
 C2014/020/06|lu|2014|2014-1-6|g|175. Jahrestag der Unabhängigkeit des Großherzogtums Luxemburg|
 C2014/051/05|es|2014|2014-2-7|g|Stätten des UNESCO-Weltkultur- und Weltnaturerbes — Park Güell|
 C2014/062/08|si|2014|2014-11-17|g|600. Jahrestag der Krönung von Barbara Celjska|
@@ -207,7 +207,7 @@ C2015/084/04|sm|2014|2014-9-29|g|90. Todestag von Giacomo Puccini|
 C2015/086/02|sm|2014|2014-6-23|g|500. Todestag von Bramante Lazzari delle Penne di San Marino|
 C2016/105/08|ad|2014|2016-2-16|g|20 Jahre Mitgliedschaft im Europarat|
 
-## 2015 ----
+## 2015 - 2015 - 2015 - 2015 - 2015 ----
 C2014/374/03|lv|2015|2015-2-10|g|Vorsitz Lettlands im Rat der EU|
 C2014/397/04|es|2015|2015-1-30|g|Unesco-Weltkultur- und -naturerbe — Höhle von Altamira|
 C2014/410/05|si|2015|2015-11-9|g|Emona-Ljubljana|
@@ -256,7 +256,7 @@ C2015/357/03|lt|2015|2015-12-14|g|Die litauische Sprache|
 C2015/380/04|ad|2015|2016-7-18|g|25. Jahrestag der Unterzeichnung des Zollabkommens mit der Europäischen Union|
 C2015/380/05|ad|2015|2016-7-18|g|30. Jahrestag der gesetzlichen Festlegung des Volljährigkeitsalters auf 18 Jahre und der damit einhergehenden politischen Rechte für Männer und Frauen|
 
-## 2016 ----
+## 2016 - 2016 - 2016 - 2016 - 2016 ----
 C2015/186/03|at|2016|2015-12-2|g|200 Jahre Oesterreichische Nationalbank|
 C2015/425/10|es|2016|2016-2-5|g|UNESCO-Weltkultur- und -naturerbe — Segovia|
 C2015/425/11|ee|2016|2016-1-7|g|100. Geburtstag des berühmten estnischen Schachgroßmeisters Paul Keres|
@@ -290,7 +290,7 @@ C2016/396/04|gr|2016|2016-12-16|g|120. Geburtstag von Dimitri Mitropoulos|
 C2016/409/04|ad|2016|2017-6-1|g|25 Jahre öffentlich-rechtlicher Rundfunk in Andorra|
 C2016/409/05|ad|2016|2017-6-1|g|150-jähriges Jubiläum der Neuen Reform von 1866|
 
-## 2017 ----
+## 2017 - 2017 - 2017 - 2017 - 2017 ----
 C2016/236/06|es|2017|2017-2-3|g|Unesco-Weltkultur- und -naturerbe — Kirchen des Königreichs Asturien|
 C2017/021/02|si|2017|2017-2-2|g|10. Jahrestag der Einführung des Euro in Slowenien|
 C2017/023/07|lu|2017|2017-1-2|g|50-jähriges Jubiläum der Freiwilligkeit der luxemburgischen Armee|
@@ -324,7 +324,7 @@ C2017/386/02|mc|2017|2017-11-13|g|Carabiniers du Prince („Carabiniers“ des P
 C2017/386/03|mt|2017|2017-11-13|g|Solidarität und Frieden|,Pessac & Yves Sampo
 C2017/386/04|pt|2017|2017-11-21|g|150. Jahrestag der Geburt des Schriftstellers Raul Brandão|
 
-## 2018 ----
+## 2018 - 2018 - 2018 - 2018 - 2018 ----
 C2017/388/06|at|2018|2017-12-6|g|100. Jahrestag der Republik Österreich|
 C2017/438/10|lu|2018|2017-12-27|g|150. Jahrestag der luxemburgischen Verfassung|
 C2017/444/05|de|2018|2018-1-30|g|100. Jahrestag der Geburt des deutschen Staatsmannes und Kanzlers Helmut Schmidt (1918-2015)|A,D,F,G,J
@@ -362,7 +362,7 @@ C2018/401/06|be|2018|2018-9-20|g|50. Jahrestag des Starts des Forschungssatellit
 C2018/401/07|mt|2018|2018-11-7|g|Kulturerbe|,Pessac & Yves Sampo
 C2018/422/05|mc|2018|2018-6-25|g|François Joseph Bosio|
 
-## 2019 ----
+## 2019 - 2019 - 2019 - 2019 - 2019 ----
 C2018/466/06|be|2019|2019-1-24|g|450. Todestag von Pieter Bruegel dem Älteren|
 C2018/466/07|be|2019|2019-5-9|g|25-jähriges Bestehen des Europäischen Währungsinstituts (EWI)|
 C2018/466/08|de|2019|2019-1-29|g|70. Jahrestag der Gründung des Bundesrates|A,D,F,G,J
@@ -396,7 +396,7 @@ C2019/356/06|va|2019|2019-10-1|g|Sixtinische Kapelle — Ende der Restaurierung 
 C2019/409/06|ad|2019|2019-11-11|g|600 Jahre Landesrat|
 C2019/409/07|ee|2019|2019-11-19|g|Der 100. Jahrestag der Universität Tartu|
 
-## 2020 ----
+## 2020 - 2020 - 2020 - 2020 - 2020 ----
 C2020/049/10|be|2020|2020-3-5|g|Internationales Jahr der Pflanzengesundheit 2020 (IYPH 2020)|
 C2020/049/11|de|2020|2020-1-28|g|Brandenburg (Bundesländer-Serie)|A,D,F,G,J
 C2020/049/12|es|2020|2020-1-31|g|UNESCO-Weltkulturerbe – Aragón und seine Mudéjar-Architektur|
@@ -432,7 +432,7 @@ C2020/395/03|fr|2020|2020-10-27|g|Medizinische Forschung|
 C2020/417/05|gr|2020|2020-6-30|g|2500. Jahrestag der Schlacht bei den Thermopylen|
 C2020/417/06|gr|2020|2020-7-16|g|100. Jahrestag der Vereinigung Thrakiens mit Griechenland|
 
-## 2021 ----
+## 2021 - 2021 - 2021 - 2021 - 2021 ----
 C2020/444/04|lu|2021|2021-4-19|g|Der 100. Geburtstag von Großherzog Jean|Relief,Foto
 C2020/444/05|pt|2021|2021-1-4|g|Portugiesischer Vorsitz im Rat der Europäischen Union|
 C2021/020/04|de|2021|2021-1-26|g|Sachsen-Anhalt (Bundesländer-Serie)|A,D,F,G,J
@@ -465,7 +465,7 @@ C2021/480/08|va|2021|2021-6-25|g|450. Geburtstag von Caravaggio|
 C2021/482/02|sm|2021|2021-8-27|g|550. Geburtstag von Albrecht Dürer|
 C2021/482/03|sm|2021|2021-3-1|g|450. Geburtstag von Caravaggio|
 
-## 2022 ----
+## 2022 - 2022 - 2022 - 2022 - 2022 ----
 C2022/012/03|at|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/012/03|be|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
 C2022/012/03|cy|2022|2022-7-1|g|35 Jahre Erasmus-Programm|
@@ -516,7 +516,7 @@ C2023/034/04|sm|2022|2022-10-4|g|Der 200. Todestag von Antonio Canova|
 C2023/034/05|sm|2022|2022-4-28|g|530. Todestag von Piero della Francesca|
 C2023/034/06|mc|2022|2022-9-7|g|100. Todestag von Fürst Albert I.|
 
-## 2023 ----
+## 2023 - 2023 - 2023 - 2023 - 2023 ----
 C2023/116/09|fi|2023|2023-3-21|g|Erstes Naturschutzgesetz Finnlands|
 C2023/116/10|es|2023|2023-3-28|g|UNESCO: Cáceres|
 C2023/116/11|sk|2023|2023-3-2|g|100. Jahrestag der ersten Bluttransfusion in der Slowakei|
@@ -554,7 +554,7 @@ C/2023/01627|be|2023|2023-10-25|g|75 Jahre Frauenwahlrecht in Belgien|
 C/2023/01629|pt|2023|2023-7-6|g|Weltjugendtag|
 C/2023/01628|si|2023|2024-12-19|g|150. Geburtstag des Mathematikers und Astronomen Josip Plemelj|
 
-## 2024 ----
+## 2024 - 2024 - 2024 - 2024 - 2024 ----
 C/2024/02352|es|2024|2024-2-2|g|200. Jubiläum der Gründung der Policia Nacional, der für die Sicherheit auf dem gesamten Staatsgebiet zuständigen Nationalpolizei|
 C/2024/02353|de|2024|2024-3-21|g|175. Jubiläum der Frankfurter Verfassung (oder „Paulskirchenverfassung“, des ersten Versuchs einer gesamtstaatlichen Verfassung für ein vereintes Deutschland)|A,D,F,G,J
 C/2024/02354|es|2024|2024-2-2|g|Anerkennung von Sevilla (Archivo de Indias, Real Alcázar und Kathedrale von Sevilla) als UNESCO-Weltkulturerbe|
@@ -591,7 +591,9 @@ C/2025/00676|sm|2024|2024-9-5|g|530. Todestag von Ghirlandaio|
 C/2025/00756|va|2024|2024-7-3|g|750. Todestag von Thomas von Aquin|
 C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 
-## 2025 ----
+## 2025 - 2025 - 2025 - 2025 - 2025 ----
+
+
 #NA|de|2025|2025-1-16|g|~Saarland|A,D,F,G,J
 #NA|sk|2025|2025-1-20|g|~100. Jahrestag des ersten internationalen Sportturniers in der Slowakei (Eishockey-Europameisterschaft in Starý Smokovec / Štrbské Pleso)|
 #NA|be|2025|2025-1-23|g|~Nationallotterie Belgien|
@@ -616,7 +618,7 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|pt|2025|NA|g|~Weltpfadfinder- und Jugendbewegung|
 #NA|lv|2025|NA|g|~Sēlija|
 
-#NA|lt|2025|NA|g|?Mažoji Lietuva
+#NA|lt|2025|NA|g|?Mažoji Lietuva|
 #NA|fi|2025|NA|g|?Staatsbesuche Finnlands - Diplomatie und Außenpolitik|
 #NA|fi|2025|NA|g|?100 Jahre Finnalnd-Schweden Leichtathletikspiele|
 #NA|be|2025|NA|g|?Rennstrecke Spa-Francorchamps|
@@ -625,7 +627,9 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|fr|2025|NA|g|?Notre Dame|
 
 
-## 2026 ----
+## 2026 - 2026 - 2026 - 2026 - 2026 ----
+
+
 #NA|de|2026|NA|g|~Bremen|A,D,F,G,J
 
 #NA|lt|2026|NA|g|?Unabhängigkeit Litauens in der Energieversorgung|
@@ -637,10 +641,10 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|fr|2026|NA|g|?Antoine de Saint-Exupéry|
 #NA|de|2026|NA|g|?Konrad Adenauer|
 
-## Gedenkmünzen: 27. März 2025 zwei.euro.com News
-## Kursmünzen: 30. Januar 2025 zwei.euro.com
+# STAND Gedenkmünzen: 27. März 2025 zwei.euro.com News
+# STAND   Kursmünzen: 30. Januar 2025 zwei.euro.com
 
-# Kursmünzen ----
+# KURSMÜNZEN ----
 ## AD (Andorra, de: Andorra, en: Andorra) ----
 C2014/062/07|ad|2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025|NA|k|Staatswappen von Andorra (2014 -)|
 
