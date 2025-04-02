@@ -625,7 +625,7 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|hr|2025|NA|g|?1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
 #NA|hr|2025|NA|g|?Pula Arena|
 #NA|fr|2025|NA|g|?Notre Dame|
-
+#NA|es|2026|NA|g|?Kloster Poblet|
 
 ## 2026 - 2026 - 2026 - 2026 - 2026 ----
 
