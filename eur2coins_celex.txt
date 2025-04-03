@@ -625,7 +625,6 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|hr|2025|NA|g|?1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
 #NA|hr|2025|NA|g|?Pula Arena|
 #NA|fr|2025|NA|g|?Notre Dame|
-#NA|es|2026|NA|g|?Kloster Poblet|
 
 ## 2026 - 2026 - 2026 - 2026 - 2026 ----
 
@@ -640,8 +639,9 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|lu|2026|NA|g|?Luxemburgischer BNationalfeiertga/Groussherzogsgebuertsdag|
 #NA|fr|2026|NA|g|?Antoine de Saint-Exupéry|
 #NA|de|2026|NA|g|?Konrad Adenauer|
+#NA|es|2026|NA|g|?Kloster Poblet|
 
-# STAND Gedenkmünzen: 27. März 2025 zwei.euro.com News
+# STAND Gedenkmünzen: 31. März 2025 zwei.euro.com News
 # STAND   Kursmünzen: 30. Januar 2025 zwei.euro.com
 
 # KURSMÜNZEN ----
