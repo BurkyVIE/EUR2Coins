@@ -67,7 +67,7 @@ ui <- fluidPage(includeCSS(path = "style.css"),
           column(width = 6,
             h3("Münzzeichen"),
             fluidRow(
-              column(width = 8, selectInput(inputId = "mzz", label = NULL, choices = unique(all_data()$Münzzeichen), selected = NULL, width = "100%")),
+              column(width = 8, selectInput(inputId = "mzz", label = NULL, choices = unique(c(c("", "A", "D", "F", "G", "J", "S"), all_data()$Münzzeichen)), selected = NULL, width = "100%")),
               column(width = 4, actionButton(inputId = "mzz_reset", label = "✗", width = "100%")) # &cross;
               ),
             HTML("<div class = 'beschr'>"), "Auswahl aus Liste; Genaue Übereinstimmung mit Feld ", em("Mzz."), HTML('</div>'))
