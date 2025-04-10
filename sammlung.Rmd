@@ -13,6 +13,7 @@ library(tidyverse)
 ## Externe Daten ----
 source("eur2coins.r", local = knitr::knit_global())      #coins
 source("eur2collection.r", local = knitr::knit_global()) #collection
+source("eur2circulation.r", local = knitr::knit_global()) #circulation
 ```
 
 <style type="text/css">
@@ -24,16 +25,18 @@ h1.title {
 
 ```{r data, echo=FALSE}
 df <- left_join(coins,
-          collection %>% select(ID, Qualität, Ablage),
-          by = 'ID') |>
+          collection |> select(ID, Qualität, Ablage), by = 'ID') |>
+  left_join(circulation, by = 'ID') |> 
   filter(!is.na(Qualität)) |> # nur noch nicht gesammelte
   transmute(Jahr = Prägejahr, Land,
             Bild = str_sub(Abbildung, 1, nchar(coins$Abbildung) |> quantile(.95)), Mz = Münzzeichen, # Absolute Länge der Bildbeschreibung war ursprünglich 75
-            Qualität) |> 
+            Qualität, Hfgkt) |> 
   mutate(Qualität = case_when(Qualität == 0 ~ "(0) ★★★", # Geschütztes Leerzeichen (Alt + 0160)
                               Qualität == 1 ~ "(1) ★★",
                               Qualität == 2 ~ "(2) ✓✓",
-                              Qualität == 3 ~ "(3) ✓")) |> 
+                              Qualität == 3 ~ "(3) ✓"),
+         Hf = c("⇓", "↓", "-", "↑", "⇑")[Hfgkt]) |>
+  select(-Hfgkt) |> 
   arrange(Jahr, Land, Bild, Mz) |> 
   group_by(Jahr)
 ```
