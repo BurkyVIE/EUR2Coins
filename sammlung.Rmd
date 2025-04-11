@@ -27,8 +27,11 @@ h1.title {
 df <- left_join(coins, collection |> select(ID, Qualität, Ablage), by = 'ID') |>
   left_join(circulation, by = 'ID') |> 
   filter(!is.na(Qualität)) |> # nur noch nicht gesammelte
-  transmute(Jahr = Prägejahr, Land,
-            Bild = str_sub(Abbildung, 1, nchar(coins$Abbildung) |> quantile(.95)), Mz = Münzzeichen, # Absolute Länge der Bildbeschreibung war ursprünglich 75
+  transmute(Jahr = Prägejahr,
+            Land,
+            Bild = case_when(nchar(Abbildung) > 70 ~ paste0(str_sub(Abbildung, 1, 70), "..."),
+                             TRUE ~ Abbildung),
+            Mz = abbreviate(Münzzeichen, 5), 
             Qualität, Hfgkt) |> 
   mutate(Qualität = case_when(Qualität == 0 ~ "(0) ★★★", # Geschütztes Leerzeichen (Alt + 0160)
                               Qualität == 1 ~ "(1) ★★",
