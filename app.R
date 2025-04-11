@@ -371,11 +371,11 @@ server <- function(input, output, session) {
   
   ## Funktion zum Formatieren der Häufigkeit ----
   form_hfgkt <- function(txt) {
-    c("<div style='font-size: 1.1em; background-color: #b22222; color: white'>⇓</div>",
-      "<div style='font-size: 1.1em; background-color: #c56320; color: white'>↓</div>", # ⇘
-      "<div style='font-size: 1.1em; background-color: #daa520; color: white'>-</div>", # ⇒
-      "<div style='font-size: 1.1em; background-color: #7d9820; color: white'>↑</div>", # ⇗
-      "<div style='font-size: 1.1em; background-color: #228b22; color: white'>⇑</div>")[txt]
+    c("<div style='font-size: 1.1em; background-color: #b22222; color: white'>⩔</div>",
+      "<div style='font-size: 1.1em; background-color: #c56320; color: white'>˅</div>",
+      "<div style='font-size: 1.1em; background-color: #daa520; color: white'>-</div>",
+      "<div style='font-size: 1.1em; background-color: #7d9820; color: white'>˄</div>",
+      "<div style='font-size: 1.1em; background-color: #228b22; color: white'>⩓</div>")[txt]
   }
   
   ## Funktion zur Darstellung der Daten ----
