@@ -24,8 +24,7 @@ h1.title {
 </style>
 
 ```{r data, echo=FALSE}
-df <- left_join(coins,
-          collection |> select(ID, Qualität, Ablage), by = 'ID') |>
+df <- left_join(coins, collection |> select(ID, Qualität, Ablage), by = 'ID') |>
   left_join(circulation, by = 'ID') |> 
   filter(!is.na(Qualität)) |> # nur noch nicht gesammelte
   transmute(Jahr = Prägejahr, Land,
