@@ -46,6 +46,7 @@ gt::gt(df) |>
   gt::data_color(columns = "Qualität", target_columns = everything(),
                  palette = "Greens", alpha = .5, reverse = TRUE, method = "factor",
                  contrast_algo = "wcag") |>  
+  gt::cols_align(align = "center", columns = "Hf") |> 
   gt::tab_options(table.font.size = 11,
                   row_group.background.color = "grey50",
                   row_group.font.weight = "bold",
