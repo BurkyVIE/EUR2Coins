@@ -630,10 +630,10 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 
 
 #NA|de|2026|NA|g|~Bremen|A,D,F,G,J
+#NA|sk|2026|NA|g|~Trencin - Kulturhauptstadt Euriopas 2026|
 
 #NA|lt|2026|NA|g|?Unabhängigkeit Litauens in der Energieversorgung|
 #NA|lt|2026|NA|g|?Die Stadt Kaunas|
-#NA|sk|2026|NA|g|?Trencin - Kulturhauptstadt Euriopas 2026|
 #NA|si|2026|NA|g|?150. Geburtstag von Ivan Cankar|
 #NA|lu|2026|NA|g|?Verleihung des Intzernationalen Karlspreis an das luxemburgische Volk|
 #NA|lu|2026|NA|g|?Luxemburgischer BNationalfeiertga/Groussherzogsgebuertsdag|
