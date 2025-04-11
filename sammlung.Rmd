@@ -35,7 +35,7 @@ df <- left_join(coins,
                               Qualität == 1 ~ "(1) ★★",
                               Qualität == 2 ~ "(2) ✓✓",
                               Qualität == 3 ~ "(3) ✓"),
-         Hf = c("⇓", "↓", "-", "↑", "⇑")[Hfgkt]) |>
+         Hf = c("⩔", "˅", "-", "˄", "⩓")[Hfgkt]) |>
   select(-Hfgkt) |> 
   arrange(Jahr, Land, Bild, Mz) |> 
   group_by(Jahr)
