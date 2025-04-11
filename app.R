@@ -9,11 +9,9 @@ source("eur2collection.r")  #collection
 
 ## Ergänzen und behübschen der Daten ----
 all_data <- function() {
-  left_join(coins,
-            collection %>% select(ID, Qualität, Ablage),
-            by = 'ID') |> 
+  left_join(coins, collection %>% select(ID, Qualität, Ablage), by = 'ID') |> 
     mutate(Ablage = coalesce(Ablage, " ")) |> 
-    left_join(circulation, by = join_by(ID))
+    left_join(circulation, by = 'ID')
 }
 
 ## JS Funktion um Markierung zu kopieren ----
