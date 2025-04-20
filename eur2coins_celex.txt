@@ -617,9 +617,9 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|pt|2025|NA|g|~Nachhaltige Entwicklung|
 #NA|pt|2025|NA|g|~Weltpfadfinder- und Jugendbewegung|
 #NA|lv|2025|NA|g|~Sēlija|
+#NA|fi|2025|NA|g|~Staatsbesuche Finnlands - Diplomatie und Außenpolitik|
 
 #NA|lt|2025|NA|g|?Mažoji Lietuva|
-#NA|fi|2025|NA|g|?Staatsbesuche Finnlands - Diplomatie und Außenpolitik|
 #NA|fi|2025|NA|g|?100 Jahre Finnalnd-Schweden Leichtathletikspiele|
 #NA|be|2025|NA|g|?Rennstrecke Spa-Francorchamps|
 #NA|hr|2025|NA|g|?1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
@@ -641,7 +641,7 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|de|2026|NA|g|?Konrad Adenauer|
 #NA|es|2026|NA|g|?Kloster Poblet|
 
-# STAND Gedenkmünzen: 31. März 2025 zwei.euro.com News
+# STAND Gedenkmünzen: 14. April 2025 zwei.euro.com News
 # STAND   Kursmünzen: 30. Januar 2025 zwei.euro.com
 
 # KURSMÜNZEN ----
