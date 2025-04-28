@@ -1,5 +1,5 @@
 ---
-title: "EUR2 Münzen"
+title: "Gesammelte EUR2 Münzen"
 output: html_document
 date: "`r Sys.Date()`"
 ---
@@ -11,9 +11,9 @@ knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
 
 ## Externe Daten ----
-source("eur2coins.r", local = knitr::knit_global())      #coins
-source("eur2collection.r", local = knitr::knit_global()) #collection
-source("eur2circulation.r", local = knitr::knit_global()) #circulation
+source("rd_celex.r", local = knitr::knit_global())       #celex
+source("rd_collection.r", local = knitr::knit_global())  #collection
+source("rd_circulation.r", local = knitr::knit_global()) #circulation
 ```
 
 <style type="text/css">

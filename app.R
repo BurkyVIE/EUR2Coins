@@ -3,9 +3,9 @@
 library(shiny)
 
 ## Externe Daten ----
-source("eur2coins.r")       #coins
-source("eur2circulation.r") #circulation
-source("eur2collection.r")  #collection
+source("rd_celex.r")       #celex
+source("rd_circulation.r") #circulation
+source("rd_collection.r")  #collection
 
 ## Ergänzen und behübschen der Daten ----
 all_data <- function() {
@@ -440,14 +440,14 @@ server <- function(input, output, session) {
 
   ## Reload (für Bewertungsbuttons über Funktion 'add_bew' oder bei Button Änderung direkt hier) ----
   reload <- function() {
-    source("eur2collection.r")
+    source("rd_collection.r")
     }
   observeEvent(eventExpr = input$aenderung, handlerExpr = reload())
   
   ## Funktion zum Schreiben der Bewertung
   add_bew <- function(qu) {
     tmp <- paste(input$myselection, qu, sep = "-")
-    write(tmp, file = "eur2collection.txt", append = TRUE)
+    write(tmp, file = "eur2coins_collection.txt", append = TRUE)
     Sys.sleep(1.5)
     reload()
   }
