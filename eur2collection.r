@@ -1,6 +1,6 @@
 library(tidyverse)
 
-read_lines(file = "eur2collection.txt", lazy = FALSE) |>
+read_lines(file = "eur2coins_collection.txt", lazy = FALSE) |>
   enframe(name = "Zeilennummer", value = "Sammlung") |>
   separate(Sammlung, into = c("ID", "Qualität"), sep = "-", convert = TRUE) |>
   mutate(
