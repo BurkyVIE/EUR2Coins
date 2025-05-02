@@ -666,6 +666,7 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|pt|2025|NA|g|~Weltpfadfinder- und Jugendbewegung|
 #NA|lv|2025|NA|g|~Sēlija|
 #NA|fi|2025|NA|g|~Staatsbesuche Finnlands - Diplomatie und Außenpolitik|
+#NA|ad|2025|NA|g|~Spiele der kleinen Staaten von Europa|
 
 #NA|lt|2025|NA|g|?Mažoji Lietuva|
 #NA|fi|2025|NA|g|?100 Jahre Finnalnd-Schweden Leichtathletikspiele|
@@ -673,6 +674,7 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|hr|2025|NA|g|?1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
 #NA|hr|2025|NA|g|?Pula Arena|
 #NA|fr|2025|NA|g|?Notre Dame|
+#NA|ad|2025|NA|g|?Der Bartgeier|
 # ___   ___  ___    __ 
 #  ) ) / / \  ) )  / / 
 # /_/_ \_\_/ /_/_ (_)_)
