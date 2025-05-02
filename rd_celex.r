@@ -23,11 +23,11 @@ filelist <- dir(directory)
 filelist <- filelist[startsWith(filelist, "eur2coins_celex")]
 
 ## do import
-raw <- map_df(filelist, ~import_celex(.))
+celex <- map_df(filelist, ~import_celex(.))
 
 # TIDY ----
 ## do tidy ----
-raw |> 
+celex |> 
   mutate(Prägejahr = str_split(Prägejahr, pattern = ","), # Expand Prägejahr and Münzzeichen
          Münzzeichen = str_split(Münzzeichen, pattern = ",")) |> 
   unnest(Prägejahr) |>
@@ -47,4 +47,4 @@ raw |>
 
 # CLEAN UP ----
 ## do clean up ----
-rm(directory, import_celex, filelist, raw)
+rm(directory, import_celex, filelist, celex)
