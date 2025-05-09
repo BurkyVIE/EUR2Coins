@@ -940,7 +940,7 @@ server <- function(input, output, session) {
     while(str_sub(out, -1) == "\n") out <- str_sub(out, 1, -2)
     write(out, file = "eur2coins_circulation.txt", append = TRUE)
     Sys.sleep(1.5)
-    source("eur2circulation.r")
+    source("rd_circulation.r")
     reload()
     updateTextInput(session, inputId = "aufl_erf", value = "")
   })
