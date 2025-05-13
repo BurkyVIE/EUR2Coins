@@ -652,6 +652,7 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|sm|2025|2025-3-27|g|~Heiliges Jahr 2025 - Pilger der Hoffnung|
 #NA|lt|2025|2025-3-27|g|~Für die Verteidigung|
 #NA|it|2025|2025-5-9|g|~Weltreise des Amerigo-Vespucci-Segelschulschiffes 2023-2025|
+#NA|fi|2025|2025-5-13|g|~Staatsbesuche Finnlands - Diplomatie und Außenpolitik|
 
 #NA|de|2025|NA|g|~35 Jahre Deutsche Einheit|A,D,F,G,J
 #NA|si|2025|NA|g|~100. Geburtstag von Miki Muster|
@@ -665,7 +666,6 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|pt|2025|NA|g|~Nachhaltige Entwicklung|
 #NA|pt|2025|NA|g|~Weltpfadfinder- und Jugendbewegung|
 #NA|lv|2025|NA|g|~Sēlija|
-#NA|fi|2025|NA|g|~Staatsbesuche Finnlands - Diplomatie und Außenpolitik|
 #NA|ad|2025|NA|g|~Spiele der kleinen Staaten von Europa|
 
 #NA|lt|2025|NA|g|?Mažoji Lietuva|
@@ -693,7 +693,7 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|de|2026|NA|g|?Konrad Adenauer|
 #NA|es|2026|NA|g|?Kloster Poblet|
 
-# STAND Gedenkmünzen: 09. Mai 2025 zwei.euro.com News
+# STAND Gedenkmünzen: 13. Mai 2025 zwei.euro.com News
 # STAND   Kursmünzen: 09. Mai 2025 zwei.euro.com
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
