@@ -3,7 +3,7 @@
 library(shiny)
 
 ## Externe Daten ----
-source("rd_celex.r")       #celex
+source("rd_celex.r")       #coins
 source("rd_circulation.r") #circulation
 source("rd_collection.r")  #collection
 
