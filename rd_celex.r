@@ -43,7 +43,7 @@ celex |>
   ungroup() |> 
   mutate(Land = toupper(Land),
          Münzzeichen = coalesce(Münzzeichen, "")) |> 
-  select(Ausgabe, Münzart, Prägejahr, Land, Art, Abbildung, Münzzeichen, Amtsblatt, ID) -> coins
+  select(Ausgabe, Prägejahr, Land, Münzart, Art, Abbildung, Münzzeichen, Amtsblatt, ID) -> coins
 
 # CLEAN UP ----
 ## do clean up ----
