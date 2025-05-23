@@ -9,9 +9,12 @@ source("rd_collection.r")  #collection
 
 ## Ergänzen und behübschen der Daten ----
 all_data <- function() {
-  left_join(coins, collection %>% select(ID, Qualität, Ablage), by = 'ID') |> 
-    mutate(Ablage = coalesce(Ablage, " ")) |> 
-    left_join(circulation, by = 'ID')
+#   left_join(coins, collection %>% select(ID, Qualität, Ablage), by = 'ID') |>
+#     mutate(Ablage = coalesce(Ablage, " ")) |>
+#     left_join(circulation, by = 'ID')
+Reduce(function(...) merge(..., by = "ID", all.x = TRUE, no.dups = TRUE), list(coins, collection |> select(ID, Qualität, Ablage), circulation)) |> 
+  as.tibble() |>
+  mutate(Ablage = coalesce(Ablage, " "))
 }
 
 ## JS Funktion um Markierung zu kopieren ----
