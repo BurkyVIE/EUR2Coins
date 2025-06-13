@@ -693,8 +693,9 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|de|2026|NA|g|?Konrad Adenauer|
 #NA|es|2026|NA|g|?Kloster Poblet|
 #NA|sk|2026|NA|g|?50. Jahrestag des Sieges der tschechoslowakischen Fußballmannschaft bei der EM1976|
+#NA|ee|2026|NA|g|?Sipsik|
 
-# STAND Gedenkmünzen: 05. Juni 2025 zwei.euro.com News
+# STAND Gedenkmünzen: 13. Juni 2025 zwei.euro.com News
 # STAND   Kursmünzen: 09. Mai 2025 zwei.euro.com
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
