@@ -11,8 +11,8 @@ Amtsblatt|Land|Prägejahr|Ausgabe|Münzart|Abbildung|Münzzeichen
 C2004/091/06|gr|2004|2004-5-14|g|Olympische Spiele 2004 in Athen|
 C2004/243/03|fi|2004|2004-6-24|g|Erweiterung der Europäischen Union um zehn neue Mitgliedstaaten|
 C2004/243/05|lu|2004|2004-7-26|g|Bildnis und Monogramm des Großherzogs Henri|H links geneigt,H rechts geneigt
-C2004/298/02|sm|2004|2004-12-16|g|Bartolomeo Borghesi (Historiker, Numismatiker)|
 C2004/313/03|it|2004|2004-12-13|g|Fünftes Jahrzehnt des Bestehens des Welternährungsprogramms|
+C2004/298/02|sm|2004|2004-12-16|g|Bartolomeo Borghesi (Historiker, Numismatiker)|
 C2004/321/03|va|2004|2004-12-16|g|75. Jahrestag der Gründung des Staates Vatikanstadt|
 # ___   ___   ___   ___
 #  ) ) / / \ / / \ | | 
@@ -642,21 +642,21 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 ## 2025 ----
 
 
-#NA|de|2025|2025-1-16|g|~Saarland|A,D,F,G,J
-#NA|sk|2025|2025-1-20|g|~100. Jahrestag des ersten internationalen Sportturniers in der Slowakei (Eishockey-Europameisterschaft in Starý Smokovec / Štrbské Pleso)|
-#NA|be|2025|2025-1-23|g|~Nationallotterie Belgien|
-#NA|ee|2025|2025-1-30|g|~500 Jahre erster Textdruck in esthnischer Sprache|
-#NA|fr|2025|2025-1-30|g|~Louvre Museum|
-#NA|es|2025|2015-1-30|g|~Altstadt von Salamanca|
-#NA|it|2025|2025-2-5|g|~Jubiläum 2025|
-#NA|sm|2025|2025-3-27|g|~Heiliges Jahr 2025 - Pilger der Hoffnung|
-#NA|lt|2025|2025-3-27|g|~Für die Verteidigung|
-#NA|it|2025|2025-5-9|g|~Weltreise des Amerigo-Vespucci-Segelschulschiffes 2023-2025|
-#NA|fi|2025|2025-5-13|g|~Staatsbesuche Finnlands - Diplomatie und Außenpolitik|
-#NA|mt|2025|2025-5-15|g|~Der maltesische Ochse|
-#NA|mt|2025|2025-5-15|g|~Mdina|
-#NA|mc|2025|2025-6-16|g|~Das alte Lehen der Familie Grimaldi: Carladès|
-#NA|pt|2025|2025-6-24|g|~Weltpfadfinder- und Jugendbewegung|
+NA|de|2025|2025-1-16|g|~Saarland|A,D,F,G,J
+NA|sk|2025|2025-1-20|g|~100. Jahrestag des ersten internationalen Sportturniers in der Slowakei (Eishockey-Europameisterschaft in Starý Smokovec / Štrbské Pleso)|
+NA|be|2025|2025-1-23|g|~Nationallotterie Belgien|
+NA|ee|2025|2025-1-30|g|~500 Jahre erster Textdruck in esthnischer Sprache|
+NA|fr|2025|2025-1-30|g|~Louvre Museum|
+NA|es|2025|2015-1-30|g|~Altstadt von Salamanca|
+NA|it|2025|2025-2-5|g|~Jubiläum 2025|
+NA|sm|2025|2025-3-27|g|~Heiliges Jahr 2025 - Pilger der Hoffnung|
+NA|lt|2025|2025-3-27|g|~Für die Verteidigung|
+NA|it|2025|2025-5-9|g|~Weltreise des Amerigo-Vespucci-Segelschulschiffes 2023-2025|
+NA|fi|2025|2025-5-13|g|~Staatsbesuche Finnlands - Diplomatie und Außenpolitik|
+NA|mt|2025|2025-5-15|g|~Der maltesische Ochse|
+NA|mt|2025|2025-5-15|g|~Mdina|
+NA|mc|2025|2025-6-16|g|~Das alte Lehen der Familie Grimaldi: Carladès|
+NA|pt|2025|2025-6-24|g|~Weltpfadfinder- und Jugendbewegung|
 
 #NA|de|2025|NA|g|~35 Jahre Deutsche Einheit|A,D,F,G,J
 #NA|si|2025|NA|g|~100. Geburtstag von Miki Muster|
@@ -696,7 +696,7 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|sk|2026|NA|g|?50. Jahrestag des Sieges der tschechoslowakischen Fußballmannschaft bei der EM1976|
 #NA|ee|2026|NA|g|?Sipsik|
 
-# STAND Gedenkmünzen: 16. Juni 2025 zwei.euro.com News
+# STAND Gedenkmünzen: 24. Juni 2025 zwei.euro.com News
 # STAND   Kursmünzen: 23. Juni 2025 zwei.euro.com
 
 #  _     _     ___   __   _      _     _     ____  ____  _    

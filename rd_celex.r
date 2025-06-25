@@ -3,7 +3,7 @@ library(tidyverse)
 
 # GLOBAL ----
 ## where is directory ----
-directory <- paste0(getwd(), "/") # "getwd()" oder für die Weiterentwicklung (= Teilung der CELEX-Daten): "celex"
+directory <- paste0(getwd(), "/") # 'getwd()' oder für die Weiterentwicklung (= Teilung der CELEX-Daten): '"celex"'
 
 ## import celex_*.txt ----
 import_celex <- function(file) {
@@ -37,7 +37,7 @@ celex |>
          Art = toupper(Münzart),
          Münzart = factor(Münzart, levels = c("g", "k"), labels = c("Gedenkmünze", "Kursmünze"))) |>
   add_column(cs = 1) |> # Hilfsvariable für Durchnumerierung (ID)
-  arrange(Art, Prägejahr, Land, Amtsblatt) |> # garantiert immer gleiche Nummerierung für ID
+  arrange(Art, Prägejahr, Land, Ausgabe) |> # garantiert immer gleiche Nummerierung für ID
   group_by(Land, Münzart, Prägejahr) |> 
   mutate(ID = paste0(Prägejahr, Land, tolower(substr(Münzart, 1, 1)), cumsum(cs) |> str_pad(2, pad = "0"))) |>
   ungroup() |> 
@@ -47,4 +47,4 @@ celex |>
 
 # CLEAN UP ----
 ## do clean up ----
-rm(directory, import_celex, filelist, celex)
+rm(directory, import_celex, filelist)
