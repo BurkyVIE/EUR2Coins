@@ -656,6 +656,7 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|mt|2025|2025-5-15|g|~Der maltesische Ochse|
 #NA|mt|2025|2025-5-15|g|~Mdina|
 #NA|mc|2025|2025-6-16|g|~Das alte Lehen der Familie Grimaldi: Carladès|
+#NA|pt|2025|2025-6-24|g|~Weltpfadfinder- und Jugendbewegung|
 
 #NA|de|2025|NA|g|~35 Jahre Deutsche Einheit|A,D,F,G,J
 #NA|si|2025|NA|g|~100. Geburtstag von Miki Muster|
@@ -665,14 +666,13 @@ C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
 #NA|gr|2025|NA|g|~100. Geburtstag von Manos Chatzidakis|
 #NA|gr|2025|NA|g|~100. Geburtstag von Mikis Theodorakis|
 #NA|pt|2025|NA|g|~Nachhaltige Entwicklung|
-#NA|pt|2025|NA|g|~Weltpfadfinder- und Jugendbewegung|
 #NA|lv|2025|NA|g|~Sēlija|
 #NA|ad|2025|NA|g|~Spiele der kleinen Staaten von Europa|
+#NA|hr|2025|NA|g|~1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
+#NA|lt|2025|NA|g|~Mažoji Lietuva|
 
-#NA|lt|2025|NA|g|?Mažoji Lietuva|
 #NA|fi|2025|NA|g|?100 Jahre Finnalnd-Schweden Leichtathletikspiele|
 #NA|be|2025|NA|g|?Rennstrecke Spa-Francorchamps|
-#NA|hr|2025|NA|g|?1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
 #NA|hr|2025|NA|g|?Pula Arena|
 #NA|fr|2025|NA|g|?Notre Dame|
 #NA|ad|2025|NA|g|?Der Bartgeier|
