@@ -954,7 +954,7 @@ server <- function(input, output, session) {
   aufl_ <- eventReactive(eventExpr = c(input$aufl_schrb),
                         valueExpr = {
                           # Anzuzeigende Münzen
-                          show <- filter(all_data(), is.na(Hfgkt), !str_starts(Abbildung, "~"))
+                          show <- filter(all_data(), is.na(Hfgkt)) # !str_starts(Abbildung, "~")
                           # Anzahl Münzen n (Überschrift inkl Plural)
                           output$n_aufl <- renderText(paste0("<h3>", format(dim(show)[1], big.mark = "&VeryThinSpace;"), " Münze", if(dim(show)[1] > 1) "n " else " ", "</h3>"))
                           # Ausgabe Ergebnisse Münzen
