@@ -646,11 +646,11 @@ NA|de|2025|2025-1-16|g|~Saarland|A,D,F,G,J
 NA|sk|2025|2025-1-20|g|~100. Jahrestag des ersten internationalen Sportturniers in der Slowakei (Eishockey-Europameisterschaft in Starý Smokovec / Štrbské Pleso)|
 NA|be|2025|2025-1-23|g|~Nationallotterie Belgien|
 NA|ee|2025|2025-1-30|g|~500 Jahre erster Textdruck in esthnischer Sprache|
-NA|fr|2025|2025-1-30|g|~Louvre Museum|
 NA|es|2025|2015-1-30|g|~Altstadt von Salamanca|
+NA|fr|2025|2025-1-30|g|~Louvre Museum|
 NA|it|2025|2025-2-5|g|~Jubiläum 2025|
-NA|sm|2025|2025-3-27|g|~Heiliges Jahr 2025 - Pilger der Hoffnung|
 NA|lt|2025|2025-3-27|g|~Für die Verteidigung|
+NA|sm|2025|2025-3-27|g|~Heiliges Jahr 2025 - Pilger der Hoffnung|
 NA|it|2025|2025-5-9|g|~Weltreise des Amerigo-Vespucci-Segelschulschiffes 2023-2025|
 NA|fi|2025|2025-5-13|g|~Staatsbesuche Finnlands - Diplomatie und Außenpolitik|
 NA|mt|2025|2025-5-15|g|~Der maltesische Ochse|
