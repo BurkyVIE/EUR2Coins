@@ -640,7 +640,9 @@ C/2025/00630|si|2024|2024-12-18|g|250-jähriges Bestehen der National- und Unive
 #  ) ) / / \  ) ) | | 
 # /_/_ \_\_/ /_/_ _)_)
 ## 2025 ----
+C/2025/3823|pt|2025|2025-6-24|g|Weltpfadfinderbewegung|
 
+#C/2025/3822|va|2025|NA|g|Sedisvakanz 2025|
 
 NA|de|2025|2025-1-16|g|~Saarland|A,D,F,G,J
 NA|sk|2025|2025-1-20|g|~100. Jahrestag des ersten internationalen Sportturniers in der Slowakei (Eishockey-Europameisterschaft in Starý Smokovec / Štrbské Pleso)|
@@ -656,7 +658,6 @@ NA|fi|2025|2025-5-13|g|~Staatsbesuche Finnlands - Diplomatie und Außenpolitik|
 NA|mt|2025|2025-5-15|g|~Der maltesische Ochse|
 NA|mt|2025|2025-5-15|g|~Mdina|
 NA|mc|2025|2025-6-16|g|~Das alte Lehen der Familie Grimaldi: Carladès|
-NA|pt|2025|2025-6-24|g|~Weltpfadfinder- und Jugendbewegung|
 NA|sm|2025|2025-7-3|g|~550. Geburtstag von Michelangelo|
 
 #NA|de|2025|NA|g|~35 Jahre Deutsche Einheit|A,D,F,G,J
