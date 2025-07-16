@@ -600,7 +600,7 @@ server <- function(input, output, session) {
     debl2 <- tribble(~Amtsblatt, ~Beschreibung,
                      'C2023/123/06', '<b>Hamburg</b><br>(Elbphilharmonie)',
                      'C/2024/02355', '<b>Mecklenburg-Vorpommern</b><br>(Königsstuhl)',
-                     NA, '<b>Saarland</b><br>(Saarschleife)',
+                     'C/2025/3838', '<b>Saarland</b><br>(Saarschleife)',
                      NA, '<b>Bremen</b><br>(Klimahaus Bremerhaven)',
                      NA, '<b>Nordrhein-Westfalen</b><br>()',
                      NA, '<b>Bayern</b><br>()',
@@ -722,7 +722,7 @@ server <- function(input, output, session) {
                     'C2023/122/05', '<b>25. Jahrestag der Aufnahme von Großherzog Henri als Mitglied des Internationalen Olympischen Komitees</b>',
                     'C/2024/02466', '<b>175. Todestag von Großherzog Guillaume II.</b>',
                     'C/2024/02467', '<b>100. Jahrestag der Unterzeichnung des Erlasses über die Ausgabe der „Feierstëppler“-Scheidemünze durch Großherzogin Charlotte</b>',
-                    NA, '<b>25. Jahrestag der Thronbesteigung von Großherzog Henri</b>',
+                    'C/2025/3832', '<b>25. Jahrestag der Thronbesteigung von Großherzog Henri</b>',
                     NA, '<b>75. Jahrestag der Schuman-Erklärung</b>',
                     NA, '<b>Verleihung des Internationalen Karlspreises an das luxemburgische Volk</b>',
                     NA, '<b>Luxemburgischer Nationalfeiertag / Groussherzogsgebuertsdag</b>') |>
@@ -814,7 +814,7 @@ server <- function(input, output, session) {
   mtea_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     mtea <- tribble(~Amtsblatt, ~Beschreibung,
                     'C/2024/03949', 'Die maltesische <b>Honigbiene</b>',
-                    NA, 'Der maltessiche <b>Ochse</b>') |>
+                    'C/2025/3828', 'Der maltessiche <b>Ochse</b>') |>
       left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
       filter(!is.na(Amtsblatt))
     
@@ -852,7 +852,7 @@ server <- function(input, output, session) {
                     'C2022/484/10', '<b>Nationalpark Garajonay auf La Gomera</b><br>(Roque de Agando mit Lorbeerwald)',
                     'C2023/116/10', '<b>Altstadt von Cáceres</b><br>(Plaza Mayor)',
                     'C/2024/02354', '<b>Kathedrale, Alcázar und Indienarchiv in Sevilla</b><br>(Jungfrauenhof des Alcázar von Sevilla)',
-                    NA, '<b>Altstadt von Salamanca</b>(Kirche und Kloster San Esteban des Dominikanerordens)<br>()',
+                    'C/2025/3839', '<b>Altstadt von Salamanca</b>(Kirche und Kloster San Esteban des Dominikanerordens)<br>()',
                     NA, '<b>Kloster Poblet</b><br>()') |>
       left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
       filter(!is.na(Amtsblatt))
