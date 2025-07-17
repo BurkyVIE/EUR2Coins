@@ -640,32 +640,32 @@ C/2025/00630|si|2024|2024-12-18|g|250-jähriges Bestehen der National- und Unive
 #  ) ) / / \  ) ) | | 
 # /_/_ \_\_/ /_/_ _)_)
 ## 2025 ----
-C/2025/3838|de|2025|2025-1-16|g|Bundesland Saarland|A,D,F,G,J
-C/2025/3824|sk|2025|2025-1-20|g|100. Jahrestag des ersten internationalen Sportturniers im Hoheitsgebiet der Slowakischen Republik – Eis-Hockey-Europameisterschaft|
-C/2025/3842|be|2025|2025-1-23|g|Belgische Nationallotterie|
-C/2025/3839|es|2025|2015-1-30|g|Anerkennung von Salamanca als UNESCO-Welterbestätte|
-C/2025/3841|fr|2025|2025-1-30|g|Louvre|
-C/2025/3840|it|2025|2025-2-5|g|Jubiläum 2025|
-C/2025/3825|sm|2025|2025-3-27|g|Heiliges Jahr 2025 – Pilger der Hoffnung|
-C/2025/3845|lt|2025|2025-3-27|g|Verteidigung|
-C/2025/3844|fi|2025|2025-5-13|g|Finnische Staatsbesuche – Diplomatie und Außenpolitik|
-C/2025/3828|mt|2025|2025-5-15|g|Maltesischer Ochse (il-gendus Malti)|
-C/2025/3831|mc|2025|2025-6-16|g|Comté de Carladès|
-C/2025/3823|pt|2025|2025-6-24|g|Weltpfadfinderbewegung|
-C/2025/3846|sm|2025|2025-7-3|g|550. Geburtstag von Michelangelo|
-
-#C/2025/3822|va|2025|NA|g|Sedisvakanz 2025|
-#C/2025/3829|mc|2025|NA|g|Marquisat des Baux|
-#C/2025/3832|lu|2025|NA|g|25. Jahrestag der Thronbesteigung von Großherzog Henri|
-#C/2025/3834|lu|2025|NA|g|75. Jahrestag der Schuman-Erklärung vom 9. Mai 1950|
-#C/2025/3843|va|2025|NA|g|Jubiläum 2025|
-#C/2025/3847|pt|2025|NA|g|Nachhaltige Entwicklung|
-#C/2025/3848|va|2025|NA|g|550. Geburtstag von Michelangelo|
+C/2025/03838|de|2025|2025-1-16|g|Bundesland Saarland|A,D,F,G,J
+C/2025/03824|sk|2025|2025-1-20|g|100. Jahrestag des ersten internationalen Sportturniers im Hoheitsgebiet der Slowakischen Republik – Eis-Hockey-Europameisterschaft|
+C/2025/03842|be|2025|2025-1-23|g|Belgische Nationallotterie|
+C/2025/03839|es|2025|2015-1-30|g|Anerkennung von Salamanca als UNESCO-Welterbestätte|
+C/2025/03841|fr|2025|2025-1-30|g|Louvre|
+C/2025/03840|it|2025|2025-2-5|g|Jubiläum 2025|
+C/2025/03825|sm|2025|2025-3-27|g|Heiliges Jahr 2025 – Pilger der Hoffnung|
+C/2025/03845|lt|2025|2025-3-27|g|Verteidigung|
+C/2025/04005|it|2025|2025-5-9|g|Amerigo Vespucci Tour Mondiale 2023-2025|
+C/2025/03844|fi|2025|2025-5-13|g|Finnische Staatsbesuche – Diplomatie und Außenpolitik|
+C/2025/03828|mt|2025|2025-5-15|g|Maltesischer Ochse (il-gendus Malti)|
+C/2025/03831|mc|2025|2025-6-16|g|Comté de Carladès|
+C/2025/03823|pt|2025|2025-6-24|g|Weltpfadfinderbewegung|
+C/2025/03846|sm|2025|2025-7-3|g|550. Geburtstag von Michelangelo|
 
 NA|ee|2025|2025-1-30|g|~500 Jahre erster Textdruck in esthnischer Sprache|
-NA|it|2025|2025-5-9|g|~Weltreise des Amerigo-Vespucci-Segelschulschiffes 2023-2025|
 NA|mt|2025|2025-5-15|g|~Mdina|
 NA|hr|2025|2025-7-4|g|~1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
+
+#C/2025/03822|va|2025|NA|g|Sedisvakanz 2025|
+#C/2025/03829|mc|2025|NA|g|Marquisat des Baux|
+#C/2025/03832|lu|2025|NA|g|25. Jahrestag der Thronbesteigung von Großherzog Henri|
+#C/2025/03834|lu|2025|NA|g|75. Jahrestag der Schuman-Erklärung vom 9. Mai 1950|
+#C/2025/03843|va|2025|NA|g|Jubiläum 2025|
+#C/2025/03847|pt|2025|NA|g|Nachhaltige Entwicklung|
+#C/2025/03848|va|2025|NA|g|550. Geburtstag von Michelangelo|
 
 #NA|de|2025|NA|g|~35 Jahre Deutsche Einheit|A,D,F,G,J
 #NA|si|2025|NA|g|~100. Geburtstag von Miki Muster|
