@@ -686,7 +686,7 @@ NA|hr|2025|2025-7-4|g|~1100 Jahre Königreich Kroatien und Krönung von König T
 ## 2026 ----
 
 #NA|de|2026|NA|g|~Bremen|A,D,F,G,J
-#NA|sk|2026|NA|g|~Trencin - Kulturhauptstadt Euriopas 2026|
+#NA|sk|2026|NA|g|~Trencin - Kulturhauptstadt Europas 2026|
 
 #NA|lt|2026|NA|g|?Unabhängigkeit Litauens in der Energieversorgung|
 #NA|lt|2026|NA|g|?Die Stadt Kaunas|
