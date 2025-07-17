@@ -600,7 +600,7 @@ server <- function(input, output, session) {
     debl2 <- tribble(~Amtsblatt, ~Beschreibung,
                      'C2023/123/06', '<b>Hamburg</b><br>(Elbphilharmonie)',
                      'C/2024/02355', '<b>Mecklenburg-Vorpommern</b><br>(Königsstuhl)',
-                     'C/2025/3838', '<b>Saarland</b><br>(Saarschleife)',
+                     'C/2025/03838', '<b>Saarland</b><br>(Saarschleife)',
                      NA, '<b>Bremen</b><br>(Klimahaus Bremerhaven)',
                      NA, '<b>Nordrhein-Westfalen</b><br>()',
                      NA, '<b>Bayern</b><br>()',
@@ -722,8 +722,8 @@ server <- function(input, output, session) {
                     'C2023/122/05', '<b>25. Jahrestag der Aufnahme von Großherzog Henri als Mitglied des Internationalen Olympischen Komitees</b>',
                     'C/2024/02466', '<b>175. Todestag von Großherzog Guillaume II.</b>',
                     'C/2024/02467', '<b>100. Jahrestag der Unterzeichnung des Erlasses über die Ausgabe der „Feierstëppler“-Scheidemünze durch Großherzogin Charlotte</b>',
-                    'C/2025/3832', '<b>25. Jahrestag der Thronbesteigung von Großherzog Henri</b>',
-                    NA, '<b>75. Jahrestag der Schuman-Erklärung</b>',
+                    'C/2025/03832', '<b>25. Jahrestag der Thronbesteigung von Großherzog Henri</b>',
+                    'C/2025/03834', '<b>75. Jahrestag der Schuman-Erklärung</b>',
                     NA, '<b>Verleihung des Internationalen Karlspreises an das luxemburgische Volk</b>',
                     NA, '<b>Luxemburgischer Nationalfeiertag / Groussherzogsgebuertsdag</b>') |>
       left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
@@ -761,22 +761,7 @@ server <- function(input, output, session) {
     
     displ_data(mtvg, "ser")
   }, ignoreNULL = FALSE)
-  
-  ### Malta - Verfassungsgeschichte ----
-  output$mtvg_tab <- renderTable({mtvg_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
-  mtvg_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
-    mtvg <- tribble(~Amtsblatt, ~Beschreibung,
-                    'C2011/299/08', '<b>Wahl der ersten Abgeordneten 1849</b>',
-                    'C2012/375/06', '<b>Mehrheitswahlrecht 1887</b>',
-                    'C2013/379/09', '<b>Einrichtung der Selbstverwaltung 1921	</b>',
-                    'C2014/383/05', '<b>Unabhängigkeit von Großbritannien 1964	</b>',
-                    'C2015/150/03', '<b>Ausrufung der Republik Malta 1974</b>') |>
-      left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
-      filter(!is.na(Amtsblatt))
-    
-    displ_data(mtvg, "ser")
-  }, ignoreNULL = FALSE)
-  
+ 
   ### Malta - Prähistorische Stätten ----
   output$mtps_tab <- renderTable({mtps_tab()}, bordered = T, spacing = "l", align = "clcc", rownames = FALSE, sanitize.text.function = function(x) x)
   mtps_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
@@ -852,7 +837,7 @@ server <- function(input, output, session) {
                     'C2022/484/10', '<b>Nationalpark Garajonay auf La Gomera</b><br>(Roque de Agando mit Lorbeerwald)',
                     'C2023/116/10', '<b>Altstadt von Cáceres</b><br>(Plaza Mayor)',
                     'C/2024/02354', '<b>Kathedrale, Alcázar und Indienarchiv in Sevilla</b><br>(Jungfrauenhof des Alcázar von Sevilla)',
-                    'C/2025/3839', '<b>Altstadt von Salamanca</b>(Kirche und Kloster San Esteban des Dominikanerordens)<br>()',
+                    'C/2025/03839', '<b>Altstadt von Salamanca</b>(Kirche und Kloster San Esteban des Dominikanerordens)<br>()',
                     NA, '<b>Kloster Poblet</b><br>()') |>
       left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
       filter(!is.na(Amtsblatt))
