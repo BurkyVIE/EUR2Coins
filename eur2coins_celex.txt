@@ -692,7 +692,7 @@ NA|hr|2025|2025-7-4|g|~1100 Jahre Königreich Kroatien und Krönung von König T
 #NA|lt|2026|NA|g|?Die Stadt Kaunas|
 #NA|si|2026|NA|g|?150. Geburtstag von Ivan Cankar|
 #NA|lu|2026|NA|g|?Verleihung des Intzernationalen Karlspreis an das luxemburgische Volk|
-#NA|lu|2026|NA|g|?Luxemburgischer BNationalfeiertga/Groussherzogsgebuertsdag|
+#NA|lu|2026|NA|g|?Luxemburgischer Nationalfeiertag/Groussherzogsgebuertsdag|
 #NA|fr|2026|NA|g|?Antoine de Saint-Exupéry|
 #NA|de|2026|NA|g|?Konrad Adenauer|
 #NA|es|2026|NA|g|?Kloster Poblet|
