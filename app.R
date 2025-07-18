@@ -799,7 +799,7 @@ server <- function(input, output, session) {
   mtea_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     mtea <- tribble(~Amtsblatt, ~Beschreibung,
                     'C/2024/03949', 'Die maltesische <b>Honigbiene</b>',
-                    'C/2025/3828', 'Der maltessiche <b>Ochse</b>') |>
+                    'C/2025/03828', 'Der maltessiche <b>Ochse</b>') |>
       left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
       filter(!is.na(Amtsblatt))
     
