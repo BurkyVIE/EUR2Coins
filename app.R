@@ -811,7 +811,7 @@ server <- function(input, output, session) {
   mtsm_tab <- eventReactive(c(input$aenderung, input$q0, input$q1, input$q2, input$q3), {
     mtsm <- tribble(~Amtsblatt, ~Beschreibung,
                     'C/2024/03946', '<b>Cittadella Gozo</b>',
-                    NA, '<b>Mdina</b>') |>
+                    'C/2025/04012', '<b>Mdina</b>') |>
       left_join(all_data(), by = "Amtsblatt", na_matches = "never") |> 
       filter(!is.na(Amtsblatt))
     

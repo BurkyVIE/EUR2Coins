@@ -651,12 +651,12 @@ C/2025/03845|lt|2025|2025-3-27|g|Verteidigung|
 C/2025/04005|it|2025|2025-5-9|g|Amerigo Vespucci Tour Mondiale 2023-2025|
 C/2025/03844|fi|2025|2025-5-13|g|Finnische Staatsbesuche – Diplomatie und Außenpolitik|
 C/2025/03828|mt|2025|2025-5-15|g|Maltesischer Ochse (il-gendus Malti)|
+C/2025/04012|mt|2025|2025-5-15|g|Die Stadt Mdina|
 C/2025/03831|mc|2025|2025-6-16|g|Comté de Carladès|
 C/2025/03823|pt|2025|2025-6-24|g|Weltpfadfinderbewegung|
 C/2025/03846|sm|2025|2025-7-3|g|550. Geburtstag von Michelangelo|
 
 NA|ee|2025|2025-1-30|g|~500 Jahre erster Textdruck in esthnischer Sprache|
-NA|mt|2025|2025-5-15|g|~Mdina|
 NA|hr|2025|2025-7-4|g|~1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
 
 #C/2025/03822|va|2025|NA|g|Sedisvakanz 2025|
@@ -707,6 +707,15 @@ NA|hr|2025|2025-7-4|g|~1100 Jahre Königreich Kroatien und Krönung von König T
 
 #NA|sk|2027|NA|g|?50. Jahrestag der Charta 77|
 #NA|sk|2027|NA|g|?250. Jahrestag der Ratio Educationis|
+# ___   ___  ___   ___ 
+#  ) ) / / \  ) ) ( (_)
+# /_/_ \_\_/ /_/_ (_(_)
+## 2028 ----
+
+# ___   ___  ___   ___ 
+#  ) ) / / \  ) ) ( ( )
+# /_/_ \_\_/ /_/_  /_/ 
+## 2029 ----
 
 # STAND Gedenkmünzen: 14. Juli 2025 zwei.euro.com News
 # STAND   Kursmünzen: 23. Juni 2025 zwei.euro.com
@@ -737,7 +746,7 @@ C2014/075/02|be|2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025|NA|k
 # | |_) | | | | |   / /`_  / /\  | |_) | | | |_  | |\ |
 # |_|_) \_\_/ |_|__ \_\_/ /_/--\ |_| \ |_| |_|__ |_| \|
 ## BG (Bulgaria, de: Bulgarien, en: Bulgaria) ----
-#NA|bg|2026|NA|k|Paisii von Hilandar (2026 - )|
+NA|bg|2026|NA|k|Paisii von Hilandar (2026 - )|
 # ____  _     ___   ____  ___   _    
 #  / / \ \_/ | |_) | |_  | |_) | |\ |
 # /_/_  |_|  |_|   |_|__ |_| \ |_| \|
