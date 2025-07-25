@@ -658,6 +658,7 @@ C/2025/03846|sm|2025|2025-7-3|g|550. Geburtstag von Michelangelo|
 
 NA|ee|2025|2025-1-30|g|~500 Jahre erster Textdruck in esthnischer Sprache|
 NA|hr|2025|2025-7-4|g|~1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
+NA|be|2025|2025-7-25|g|?Rennstrecke Spa-Francorchamps|
 
 #C/2025/03822|va|2025|NA|g|Sedisvakanz 2025|
 #C/2025/03829|mc|2025|NA|g|Marquisat des Baux|
@@ -676,7 +677,6 @@ NA|hr|2025|2025-7-4|g|~1100 Jahre Königreich Kroatien und Krönung von König T
 #NA|lt|2025|NA|g|~Mažoji Lietuva|
 #NA|fi|2025|NA|g|~100 Jahre Finnalnd-Schweden Leichtathletikspiele|
 
-#NA|be|2025|NA|g|?Rennstrecke Spa-Francorchamps|
 #NA|hr|2025|NA|g|?Pula Arena|
 #NA|fr|2025|NA|g|?Notre Dame|
 #NA|ad|2025|NA|g|?Der Bartgeier|
@@ -717,8 +717,8 @@ NA|hr|2025|2025-7-4|g|~1100 Jahre Königreich Kroatien und Krönung von König T
 # /_/_ \_\_/ /_/_  /_/ 
 ## 2029 ----
 
-# STAND Gedenkmünzen: 14. Juli 2025 zwei.euro.com News
-# STAND   Kursmünzen: 23. Juni 2025 zwei.euro.com
+# STAND Gedenkmünzen: 25. Juli 2025 zwei.euro.com News
+# STAND   Kursmünzen: 25. Juli 2025 zwei.euro.com
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
