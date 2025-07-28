@@ -658,7 +658,7 @@ C/2025/03846|sm|2025|2025-7-3|g|550. Geburtstag von Michelangelo|
 
 NA|ee|2025|2025-1-30|g|~500 Jahre erster Textdruck in esthnischer Sprache|
 NA|hr|2025|2025-7-4|g|~1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
-NA|be|2025|2025-7-25|g|?Rennstrecke Spa-Francorchamps|
+NA|be|2025|2025-7-25|g|~Rennstrecke Spa-Francorchamps|
 
 #C/2025/03822|va|2025|NA|g|Sedisvakanz 2025|
 #C/2025/03829|mc|2025|NA|g|Marquisat des Baux|
@@ -676,9 +676,9 @@ NA|be|2025|2025-7-25|g|?Rennstrecke Spa-Francorchamps|
 #NA|ad|2025|NA|g|~Spiele der kleinen Staaten von Europa|
 #NA|lt|2025|NA|g|~Mažoji Lietuva|
 #NA|fi|2025|NA|g|~100 Jahre Finnalnd-Schweden Leichtathletikspiele|
+#NA|fr|2025|NA|g|~Notre Dame|
 
 #NA|hr|2025|NA|g|?Pula Arena|
-#NA|fr|2025|NA|g|?Notre Dame|
 #NA|ad|2025|NA|g|?Der Bartgeier|
 # ___   ___  ___    __ 
 #  ) ) / / \  ) )  / / 
@@ -690,7 +690,7 @@ NA|be|2025|2025-7-25|g|?Rennstrecke Spa-Francorchamps|
 
 #NA|lt|2026|NA|g|?Unabhängigkeit Litauens in der Energieversorgung|
 #NA|lt|2026|NA|g|?Die Stadt Kaunas|
-#NA|si|2026|NA|g|?150. Geburtstag von Ivan Cankar|
+#NA|si|2026|NA|g|~150. Geburtstag von Ivan Cankar|
 #NA|lu|2026|NA|g|?Verleihung des Intzernationalen Karlspreis an das luxemburgische Volk|
 #NA|lu|2026|NA|g|?Luxemburgischer Nationalfeiertag/Groussherzogsgebuertsdag|
 #NA|fr|2026|NA|g|?Antoine de Saint-Exupéry|
