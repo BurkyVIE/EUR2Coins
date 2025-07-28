@@ -676,9 +676,9 @@ NA|be|2025|2025-7-25|g|~Rennstrecke Spa-Francorchamps|
 #NA|ad|2025|NA|g|~Spiele der kleinen Staaten von Europa|
 #NA|lt|2025|NA|g|~Mažoji Lietuva|
 #NA|fi|2025|NA|g|~100 Jahre Finnalnd-Schweden Leichtathletikspiele|
+#NA|fr|2025|NA|g|~Notre Dame|
 
 #NA|hr|2025|NA|g|?Pula Arena|
-#NA|fr|2025|NA|g|?Notre Dame|
 #NA|ad|2025|NA|g|?Der Bartgeier|
 # ___   ___  ___    __ 
 #  ) ) / / \  ) )  / / 
