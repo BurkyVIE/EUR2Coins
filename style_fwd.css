@@ -1,0 +1,49 @@
+body {
+  background-color: #faf0e6;
+}
+
+h1 {
+  color: #a48165;
+  font-weight: bold;
+  font-size: 26px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+h2 {
+  color: #9a775b;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+h3 {
+  color: #8E6E53;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+code {
+  color: #337ab7;
+}
+
+div.row {
+  border-width: 0px;
+}
+
+tr:nth-child(5n) {
+  background-color: #f8ebdd;
+  
+}
+
+.beschr {
+  font-size: 85%;
+}
+
+.mono {
+  font-family: monospace, sans-serif;
+  font-size: 105%;
+}
+
+.bar {
+  color: #337ab7;
+}
