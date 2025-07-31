@@ -1,9 +1,9 @@
 body {
-  background-color: #faf0e6;
+  background-color: #ffffed;
 }
 
 h1 {
-  color: #a48165;
+  color: #b22222;
   font-weight: bold;
   font-size: 26px;
   text-align: center;
@@ -11,28 +11,23 @@ h1 {
 }
 
 h2 {
-  color: #9a775b;
+  color: #ff6f3c;
   font-weight: bold;
   font-size: 21px;
 }
 
 h3 {
-  color: #8E6E53;
+  color: #ffc107;
   font-weight: bold;
   font-size: 16px;
 }
 
 code {
-  color: #337ab7;
+  color: #347433;
 }
 
 div.row {
   border-width: 0px;
-}
-
-tr:nth-child(5n) {
-  background-color: #f8ebdd;
-  
 }
 
 .beschr {
@@ -45,5 +40,5 @@ tr:nth-child(5n) {
 }
 
 .bar {
-  color: #337ab7;
+  color: #347433;
 }

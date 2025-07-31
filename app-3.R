@@ -148,6 +148,7 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
     nav_panel(title = "Statistik",
       ## Statistik ----
       h1("🙤 Statistik 🙧"),
+      h2(HTML("&nbsp;")),
       fluidRow(
         column(width = 4,
                h2("Prägejahr"),
