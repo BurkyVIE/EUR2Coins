@@ -720,7 +720,9 @@ NA|be|2025|2025-7-25|g|~Rennstrecke Spa-Francorchamps|
 # /_/_ \_\_/ /_/_  /_/ 
 ## 2029 ----
 
-# STAND Gedenkmünzen: 29. Juli 2025 zwei.euro.com News
+#NA|..|2029|NA|?25. Jahrestag der EU-Erweiterung 2004|
+
+# STAND Gedenkmünzen: 31. Juli 2025 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
