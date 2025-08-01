@@ -298,7 +298,7 @@ server <- function(input, output, session) {
   
   ## Ausgabe Ergebnisse Münzen ----
   output$suche_ <- renderTable(expr = tbl_(), spacing = "xs", width = "100%", align = c("lllcllllll"), sanitize.text.function = function(x) x)
-  tbl_ <- eventReactive(eventExpr = c(input$samlg, input$id, input$mzz, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
+  tbl_ <- eventReactive(eventExpr = c(input$samlg, input$id, input$mzz, input$abb, input$aenderung), #, input$q0, input$q1, input$q2, input$q3
                         valueExpr = {
                           # Anzuzeigende Münzen
                           show <- filter(all_data(), (Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), # Sammlung
@@ -350,8 +350,8 @@ server <- function(input, output, session) {
   observeEvent(eventExpr = input$get, handlerExpr = updateTextInput(session, inputId = "znr", value = input$myselection))
   
   ## Ausgabe Ablage ----
-  output$tableau <- renderTable(expr = erst_tab(), bordered = T, spacing = "l", width = "80%", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
-  erst_tab <- eventReactive(eventExpr = c(input$box, input$tableau, input$znr, input$q0, input$q1, input$q2, input$q3, input$aenderung),
+  output$tableau <- renderTable(expr = erst_tab(), spacing = "l", width = "95%", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
+  erst_tab <- eventReactive(eventExpr = c(input$box, input$tableau, input$znr, input$aenderung), #, input$q0, input$q1, input$q2, input$q3
                             valueExpr = {
                               # Anzeige Tableau
                               tmp <-collection |> 
