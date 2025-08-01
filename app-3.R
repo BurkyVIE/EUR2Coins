@@ -176,11 +176,11 @@ server <- function(input, output, session) {
   ## Funktion zum Formatieren Qualität ----
   form_quali <- function(x) {
     case_when(is.na(x) ~ "",
-              x == 0 ~ "<span style='color: #daa520;'>(0)&nbsp;&#9733;&#9733;&#9733;</span>",
-              x == 1 ~ "<span style='color: #5f9321;'>(1)&nbsp;&#9733;&#9733;</span>", # #958746;
-              x == 2 ~ "<span style='color: #1b7547;'>(2)&nbsp;&#10004;&#10004;</span>", # #51696c;
-              x == 3 ~ "<span style='color: #0e4c92;'>(3)&nbsp;&#10004;</span>",
-              TRUE ~ "<span style ='color: red;'>FEHLER</span>")
+              x == 0 ~ "<span style='color: #daa520'>(0)&nbsp;&#9733;&#9733;&#9733;</span>",
+              x == 1 ~ "<span style='color: #5f9321'>(1)&nbsp;&#9733;&#9733;</span>", # #958746;
+              x == 2 ~ "<span style='color: #1b7547'>(2)&nbsp;&#10004;&#10004;</span>", # #51696c;
+              x == 3 ~ "<span style='color: #0e4c92'>(3)&nbsp;&#10004;</span>",
+              TRUE ~ "<span style ='color: red'>FEHLER</span>")
   }
   
   ## Funktion zur Darstellung Land ----
@@ -206,11 +206,11 @@ server <- function(input, output, session) {
   
   ## Funktion zum Formatieren der Häufigkeit ----
   form_hfgkt <- function(txt) {
-    c("<div style='background-color: #b22222b5; color: #faf0e6ff'>▼</div>",
-      "<div style='background-color: #c56320b5; color: #faf0e6ff'>▽</div>",
-      "<div style='background-color: #daa520b5; color: #faf0e6ff'>♢</div>",
-      "<div style='background-color: #7d9820b5; color: #faf0e6ff'>△</div>",
-      "<div style='background-color: #228b22b5; color: #faf0e6ff'>▲</div>")[txt]
+    c("<div class='rare' style='background-color: #b22222b5'>▼</div>",
+      "<div class='rare' style='background-color: #c56320b5'>▽</div>",
+      "<div class='rare' style='background-color: #daa520b5'>♢</div>",
+      "<div class='rare' style='background-color: #7d9820b5'>△</div>",
+      "<div class='rare' style='background-color: #228b22b5'>▲</div>")[txt]
   }
   
   ## Funktion zur Darstellung der Daten ----

@@ -2,6 +2,19 @@ body {
   background-color: #f7efe0;
 }
 
+.rare {
+  color: #f7efe0;
+}
+
+table, th, td {
+  /*border: 1px dotted black;*/
+  background-color: transparent !important;
+}
+
+tr:nth-child(5n) {
+  background-color: #ded7ca !important;
+}
+
 h1 {
   color: #02acd6;
   font-weight: bold;
@@ -22,16 +35,11 @@ h3 {
   font-size: 16px;
 }
 
-table, th, td {
-  /*border: 1px dotted black;*/
-  background-color: transparent !important;
-}
-
-tr:nth-child(5n) {
-  background-color: #ded7ca !important;
-}
-
 code {
+  color: #ed0000;
+}
+
+.bar {
   color: #ed0000;
 }
 
@@ -48,6 +56,25 @@ div.row {
   font-size: 105%;
 }
 
-.bar {
-  color: #ed0000;
+  {
+  /*Seite*/
+  #f7efe0
+  #ded7ca
+  #02acd6
+  #01aad4
+  #018eb0
+  #ed0000
+  
+  /*Qualität*/
+  #daa520
+  #5f9321
+  #1b7547
+  #0e4c92
+  
+  /*Häufigkeit*/
+  #b22222
+  #c56320
+  #daa520
+  #7d9820
+  #228b22
 }
