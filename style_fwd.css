@@ -1,29 +1,38 @@
 body {
-  background-color: #ffffed;
+  background-color: #f7efe0;
 }
 
 h1 {
-  color: #b22222;
+  color: #02acd6;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 28px;
   text-align: center;
   text-transform: capitalize;
 }
 
 h2 {
-  color: #ff6f3c;
+  color: #01aad4;
   font-weight: bold;
   font-size: 21px;
 }
 
 h3 {
-  color: #ffc107;
+  color: #018eb0;
   font-weight: bold;
   font-size: 16px;
 }
 
+table, th, td {
+  /*border: 1px dotted black;*/
+  background-color: transparent !important;
+}
+
+tr:nth-child(5n) {
+  background-color: #ded7ca !important;
+}
+
 code {
-  color: #347433;
+  color: #ed0000;
 }
 
 div.row {
@@ -40,5 +49,5 @@ div.row {
 }
 
 .bar {
-  color: #347433;
+  color: #ed0000;
 }

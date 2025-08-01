@@ -41,6 +41,7 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
     nav_panel(title = "Identifikation",
       ## Identifikation ----
       h1("🙤 Identifikation 🙧"),
+      ### Ident Side ----
       page_sidebar(
         sidebar = sidebar(width = "30%", position = "left", open = "always",
           h2("Filter"),
@@ -60,18 +61,18 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
                      column(width = 4, actionButton(inputId = "id_reset", label = "✗", width = "100%", style = "padding:6px;"))), # &cross;
                    HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit", em("Münz ID;"), " Aufbau: ", code("JJJJLLA00"),
                    ", wobei ", code("JJJJ"), " = Prägejahr", ", ", code("LL"), " = Land", ", ", code("A"), " = Münzart", " und ", 
-                   code("0"), " = fortlaufende Nummer;", code("."), " = Jokerzeichen.", HTML('</div>')),
+                   code("0"), " = fortlaufende Nummer;", code("."), " = Jokerzeichen", HTML('</div>')),
             column(width = 6,
                    h3("Münzzeichen"),
                    fluidRow(
-                     column(width = 8, selectInput(inputId = "mzz", label = NULL, choices = unique(all_data()$Münzzeichen), selected = NULL, width = "100%")),
+                     column(width = 8, selectInput(inputId = "mzz", label = NULL, choices = unique(c(c("", "A", "D", "F", "G", "J"), all_data()$Münzzeichen)), selected = NULL, width = "100%")),
                      column(width = 4, actionButton(inputId = "mzz_reset", label = "✗", width = "100%", style = "padding:6px;"))), # &cross;
                    HTML("<div class = 'beschr'>"), "Auswahl aus Liste; Genaue Übereinstimmung mit Feld ", em("Mzz."), HTML('</div>'))),
           fluidRow(
             h3("Abbildung"),
               column(width = 10, textInput(inputId = "abb", label = NULL, value = "", width = "100%")),
               column(width = 2, actionButton(inputId = "abb_reset", label = "✗", width = "100%", style = "padding:6px;")), # &cross;
-            HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld ", em("Abbildung."), " Groß-/ Kleinschreibung wird ignoriert.", HTML('</div>')),
+            HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld ", em("Abbildung."), " Groß-/ Kleinschreibung wird ignoriert", HTML('</div>')),
           h2("Anlage / Änderung"),
           fluidRow(
             h3("Qualität"),
@@ -84,13 +85,15 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
             h3("eur2collection.txt"),
               column(width = 5, actionButton(inputId = "aenderung", label = "Änderung durchgeführt", width = "100%", style = "padding:6px;")),
             p(HTML("<div class = 'beschr'>"), "Manuelle Änderung von ", em("eur2collection.txt,"), " zB Münztausch", HTML('</div>')))),
-          h2("Ergebnisse"),
+          ### Ident Main ----
+          h2("Ergebnisse", .noWS = "before"),
           fluidRow(
             htmlOutput(outputId = "n_münzen"),
             tableOutput(outputId = "suche_")))),
     nav_panel(title = "Auflage",
       ## Auflage ----
       h1("🙤 Auflage 🙧"),
+      ### Aufl Side ----
       page_sidebar(
         sidebar = sidebar(width = "30%", position = "left", open = "always",
           h2("Bearbeiten"),
@@ -102,21 +105,23 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
               htmlOutput(outputId = "zahl_form", inline = TRUE),
               actionButton(inputId = "aufl_uber", label = "Übernehmen", width = "100%", style = "padding:6px;"),
               p(HTML("<div class = 'beschr'>"), "Die obige Auflagenstärke wird gemeinsam mit der markierten ",
-              em("Münz ID"), " in das Textfeld übernommen.", HTML('</div>')))),
+              em("Münz ID"), " in das Textfeld übernommen", HTML('</div>')))),
           fluidRow(
             h3("Verwalten"),
             column(width = 6,
               actionButton(inputId = "aufl_schrb", label = "Schreiben", width = "100%", style = "padding:6px;"),
               p(HTML("<div class = 'beschr'>"), "Die Eingaben aus dem Textfeld werden ins File ",
-              em("eur2coins_circulation.txt"), "übernommen.", HTML('</div>'))),
+              em("eur2coins_circulation.txt"), "übernommen", HTML('</div>'))),
             column(width = 6))),
-        h2("Unbekannte Auflagenstärke"),
+        ### Aufl Main ----
+        h2("Unbekannte Auflagenstärke", .noWS = "before"),
         fluidRow(
           htmlOutput(outputId = "n_aufl"),
           tableOutput(outputId = "unbek_aufl")))),
     nav_panel(title = "Ablage",
       ## Ablage ----
       h1("🙤 Ablage 🙧"),
+      # Ablage Side
       page_sidebar(
         sidebar = sidebar(width = "30%", position = "left", open = "always",
           h2("Auswahl Box und Tableau"),
@@ -124,11 +129,11 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
             column(width = 6,
               h3("Box"),
               sliderInput(inputId = "box", label = NULL, min = 1, max = 4, value = 1, step = 1, width = "100%"),
-              div(HTML("<div class = 'beschr'>"), "Auswahl der Ablagebox.", HTML('</div>'))),
+              div(HTML("<div class = 'beschr'>"), "Auswahl der Ablagebox", HTML('</div>'))),
             column(width = 6,
               h3("Tableau"),
               sliderInput(inputId = "tableau", label = NULL, min = 1, max = 6, value = 1, step = 1, width = "100%"),
-              p(HTML("<div class = 'beschr'>"), "Auswahl des Tableaus in der gewählten Ablagebox.", HTML('</div>')))),
+              p(HTML("<div class = 'beschr'>"), "Auswahl des Tableaus in der gewählten Ablagebox", HTML('</div>')))),
           h2("Auswahl Münze"),
           fluidRow(
             h3("Ablagenummer"),
@@ -137,13 +142,15 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
             column(width = 5, textInput(inputId = "znr", value = "", label = NULL, width = "100%")), #pull(count(collection))
             column(width = 3, actionButton(inputId = "get", label = "gehe zu", width = "100%", style = "padding:6px;")),
             div(HTML("<div class = 'beschr'>"), em("gehe zu"), " übernimmt Markierung des unterstrichenen Teils im Tableau oder springt zur letzten abgelegten Münze. ",
-              em("≺"), " navigiert zur vorherigen (-1), ", em("≻"), " zur nächsten (+1) Münze.", HTML('</div>')),)),
-        h2("Ansicht"),
+              em("≺"), " navigiert zur vorherigen (-1), ", em("≻"), " zur nächsten (+1) Münze", HTML('</div>')),)),
+        # Ablage Main
+        h2("Ansicht aktives Tableau", .noWS = "before"),
         fluidRow(
-          h3(textOutput(outputId = "adresse")),
-          tableOutput(outputId = "tableau"),),
+          htmlOutput(outputId = "adresse"),
+          tableOutput(outputId = "tableau")),
+        h2("Ansicht aktive Münze", .noWS = "before"),
         fluidRow(
-          h3("Gewählte Ablagenummer"),
+          htmlOutput(outputId = "ablnr"),
           tableOutput(outputId = "suche_abl")))),
     nav_panel(title = "Statistik",
       ## Statistik ----
@@ -151,17 +158,20 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
       h2(HTML("&nbsp;")),
       fluidRow(
         column(width = 4,
-               h2("Prägejahr"),
+               h3("Prägejahr"),
                tableOutput(outputId = "zsf_jahr")),
         column(width = 4,
-               h2("Land"),
+               h3("Land"),
                tableOutput(outputId = "zsf_land")),
         column(width = 4,
-               h2("Qualität"),
+               h3("Qualität"),
                tableOutput(outputId = "zsf_qual"))))))
 
 # Server ----
 server <- function(input, output, session) {
+  
+  ## Funktion zum Formatieren Zahlen > 1k, v.a. in den Unter-Überschriften
+  form_num <- function (x) format(as.numeric(x), big.mark = "&nbsp;", scientific = FALSE)
   
   ## Funktion zum Formatieren Qualität ----
   form_quali <- function(x) {
@@ -296,7 +306,7 @@ server <- function(input, output, session) {
                                          grepl(tolower(input$abb), tolower(Abbildung)),                                              # Abbildung
                                          grepl(paste0("\\b", input$mzz, "\\b"), Münzzeichen))                                        # Münzzeichen - exakte Übereinstimmung ('\\b', - Regex word boundary)
                           # Anzahl Münzen n (Überschrift inkl Plural)
-                          output$n_münzen <- renderText(paste0("<h3>", format(dim(show)[1], big.mark = "&nbsp;"), " Münze", if(dim(show)[1] > 1) "n " else " ",
+                          output$n_münzen <- renderText(paste0("<h3>", form_num(dim(show)[1]), " Münze", if(dim(show)[1] > 1) "n " else " ",
                                                                "&nbsp;(", paste(unique(show$Art), collapse = ' + '), ")</h3>"))
                           # Ausgabe Ergebnisse Münzen
                           displ_data(df = show, variation = "ident")
@@ -305,7 +315,7 @@ server <- function(input, output, session) {
   
   ## Ausgabe formatierte Zahl ----
   output$zahl_form <- renderText(expr = zahl_form())
-  zahl_form <- eventReactive(eventExpr = input$aufl_zahl, valueExpr = paste0("<div style='text-align: center'>= ",format(as.numeric(input$aufl_zahl), big.mark = " ", scientific = FALSE), "<br>&nbsp;</div>"))
+  zahl_form <- eventReactive(eventExpr = input$aufl_zahl, valueExpr = paste0("<div style='text-align: center'>= ",form_num(input$aufl_zahl), "<br>&nbsp;</div>"))
   
   ## Auflage  Buttons ----
   observeEvent(eventExpr = input$aufl_uber, handlerExpr = updateTextInput(session, inputId = "aufl_erf", value = paste0(input$aufl_erf, input$myselection, "-", input$aufl_zahl, "\n")))
@@ -326,7 +336,7 @@ server <- function(input, output, session) {
                            # Anzuzeigende Münzen
                            show <- filter(all_data(), is.na(Hfgkt)) # !str_starts(Abbildung, "~")
                            # Anzahl Münzen n (Überschrift inkl Plural)
-                           output$n_aufl <- renderText(paste0("<h3>", format(dim(show)[1], big.mark = "&nbsp;"), " Münze", if(dim(show)[1] > 1) "n " else " ", "</h3>"))
+                           output$n_aufl <- renderText(paste0("<h3>", form_num(dim(show)[1]), " Münze", if(dim(show)[1] > 1) "n " else " ", "</h3>"))
                            # Ausgabe Ergebnisse Münzen
                            displ_data(df = show, variation = "aufl")
                          }
@@ -339,16 +349,12 @@ server <- function(input, output, session) {
   ## Schnellwahl Markierung übernehmen ----
   observeEvent(eventExpr = input$get, handlerExpr = updateTextInput(session, inputId = "znr", value = input$myselection))
   
-  ## Adressbereich - Überschrift ----
-  output$adresse <- renderText(expr = paste0("Box ", input$box, ", Tableau ", input$tableau, ": Ablagenummern ",
-                                             (input$box - 1) * 144 + (input$tableau - 1) * 24 + 1, " bis ", (input$box - 1) * 144 + input$tableau * 24)
-  )
-  
   ## Ausgabe Ablage ----
-  output$tableau <- renderTable(expr = erst_tab(), bordered = T, spacing = "l", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
+  output$tableau <- renderTable(expr = erst_tab(), bordered = T, spacing = "l", width = "80%", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
   erst_tab <- eventReactive(eventExpr = c(input$box, input$tableau, input$znr, input$q0, input$q1, input$q2, input$q3, input$aenderung),
                             valueExpr = {
-                              collection |> 
+                              # Anzeige Tableau
+                              tmp <-collection |> 
                                 filter(Zeilennummer %in% (((input$box - 1) * 144 + (input$tableau - 1) * 24 + 1) + 0:23)) |> 
                                 arrange(Zeilennummer) |>
                                 mutate(Qualität = form_quali(Qualität),
@@ -359,8 +365,14 @@ server <- function(input, output, session) {
                                        Res = paste0("<div class='mono', align = 'center'>", This_left, str_sub(Ablage, 1, 4), "&VeryThinSpace;&times;&VeryThinSpace;", str_sub(Ablage, 6, 9 - nchar(Zeilennummer)), "&VeryThinSpace;", "<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u>", This_right, "</div>",
                                                     "<div class='mono', align = 'center'><b>", This_left, str_sub(ID, 1, 4), "&VeryThinSpace;", (str_sub(ID, 5, 6)), "&VeryThinSpace;", (str_sub(ID, 7, 7)), "</b>&VeryThinSpace;", str_sub(ID, 8, 9), This_right, "</div>",
                                                     "<div align = 'center'>", Qualität, "</div>")) |>  
-                                pull(Res) -> tmp
-                              if(length(tmp) < 24) tmp <- c(tmp, rep("", 24 - length(tmp)))
+                                pull(Res)
+                              if(length(tmp) < 24) tmp <- c(tmp, rep("<br><div class='mono'><i>< l e e r ></i></div><br>", 24 - length(tmp)))
+                              # Ablageadresse (Überschrift)
+                              output$adresse <- renderText(expr = paste0("<h3>Box ", input$box, ", Tableau ", input$tableau, ": Ablagenummern ",
+                                                                         (input$box - 1) * 144 + (input$tableau - 1) * 24 + 1, " bis ", (input$box - 1) * 144 + input$tableau * 24, "</h3>"))
+                              # Ablagenummer (Überschrift)
+                              output$ablnr <- renderText(expr = paste0("<h3>Ablagenummer: ", input$znr, "</h3>"))
+                              # Ausgabe
                               matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE,
                                      dimnames = list(paste0("<br><b>", input$box, input$tableau, "&thinsp;", 1:4, "..", "</b>"),
                                                      paste0("..", 1:6)
@@ -379,7 +391,7 @@ server <- function(input, output, session) {
     return(list(x, !na_chk))
   }
   
-  ## Ausgabe Schnellwahl Ablage ----
+  ## Ausgabe Auswahl Zeilennummer ----
   output$suche_abl <- renderTable(expr = tbl_abl(), spacing = "xs", width = "100%", align = c("lllcllllll"), sanitize.text.function = function(x) x)
   tbl_abl <- eventReactive(eventExpr = c(input$znr),
                            valueExpr = {
