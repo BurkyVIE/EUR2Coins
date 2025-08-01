@@ -358,13 +358,20 @@ server <- function(input, output, session) {
                                 filter(Zeilennummer %in% (((input$box - 1) * 144 + (input$tableau - 1) * 24 + 1) + 0:23)) |> 
                                 arrange(Zeilennummer) |>
                                 mutate(Qualität = form_quali(Qualität),
-                                       This_left = case_when(input$znr == Zeilennummer ~ "<span class = 'bar'>&#9612;&VeryThinSpace;</span>",
-                                                             TRUE ~ "<b>&emsp;&VeryThinSpace;</b>"),
-                                       This_right = case_when(input$znr == Zeilennummer ~ "<span class = 'bar'>&VeryThinSpace;&#9616;</span>",
-                                                              TRUE ~ "<b>&VeryThinSpace;&emsp;</b>"), # kein nbsp wegen doppelklick-markierung
-                                       Res = paste0("<div class='mono', align = 'center'>", This_left, str_sub(Ablage, 1, 4), "&VeryThinSpace;&times;&VeryThinSpace;", str_sub(Ablage, 6, 9 - nchar(Zeilennummer)), "&VeryThinSpace;", "<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u>", This_right, "</div>",
-                                                    "<div class='mono', align = 'center'><b>", This_left, str_sub(ID, 1, 4), "&VeryThinSpace;", (str_sub(ID, 5, 6)), "&VeryThinSpace;", (str_sub(ID, 7, 7)), "</b>&VeryThinSpace;", str_sub(ID, 8, 9), This_right, "</div>",
-                                                    "<div align = 'center'>", Qualität, "</div>")) |>  
+                                       # This_left = case_when(input$znr == Zeilennummer ~ "<span class = 'bar'>&#9612;&VeryThinSpace;</span>",
+                                       #                       TRUE ~ "<b>&emsp;&VeryThinSpace;</b>"),
+                                       # This_right = case_when(input$znr == Zeilennummer ~ "<span class = 'bar'>&VeryThinSpace;&#9616;</span>",
+                                       #                        TRUE ~ "<b>&VeryThinSpace;&emsp;</b>"), # kein nbsp wegen doppelklick-markierung
+                                       # Res = paste0("<div class='mono', align = 'center'>", This_left, str_sub(Ablage, 1, 4), "&VeryThinSpace;&times;&VeryThinSpace;", str_sub(Ablage, 6, 9 - nchar(Zeilennummer)), "&VeryThinSpace;", "<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u>", This_right, "</div>",
+                                       #              "<div class='mono', align = 'center'><b>", This_left, str_sub(ID, 1, 4), "&VeryThinSpace;", (str_sub(ID, 5, 6)), "&VeryThinSpace;", (str_sub(ID, 7, 7)), "</b>&VeryThinSpace;", str_sub(ID, 8, 9), This_right, "</div>",
+                                       #              "<div align = 'center'>", Qualität, "</div>")) |>
+                                       This_left = case_when(input$znr == Zeilennummer ~ "<span class = 'bar'>&#9612;&thinsp;</span>",
+                                                             TRUE ~ ""),
+                                       This_right = case_when(input$znr == Zeilennummer ~ "<span class = 'bar'>&thinsp;&#9616;</span>",
+                                                              TRUE ~ ""), # kein nbsp wegen doppelklick-markierung
+                                       Res = paste0("<div class='mono', align = 'center'>", This_left, str_sub(Ablage, 1, 5), str_sub(Ablage, 6, 9 - nchar(Zeilennummer)), "&middot;", "<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u>", This_right, "</div>",
+                                                    "<div class='mono', align = 'center'><b>", This_left, str_sub(ID, 1, 7), "</b>&middot;", str_sub(ID, 8, 9), This_right, "</div>",
+                                                    "<div align = 'center'>", Qualität, "</div>")) |>
                                 pull(Res)
                               if(length(tmp) < 24) tmp <- c(tmp, rep("<br><div class='mono'><i>< l e e r ></i></div><br>", 24 - length(tmp)))
                               # Ablageadresse (Überschrift)
