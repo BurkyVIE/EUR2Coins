@@ -38,8 +38,8 @@ document.onmouseup = document.onkeyup = document.onselectionchange = function() 
 ui <- page_fluid(includeCSS(path = "style_fwd.css"),
   tags$script(highlight),
   navset_pill(
+    ## Identifikation ----
     nav_panel(title = "Identifikation",
-      ## Identifikation ----
       h1("🙤 Identifikation 🙧"),
       ### Ident Side ----
       page_sidebar(
@@ -55,19 +55,19 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
             "im Sinne von egal / vorhanden / leer", HTML('</div>')),
           fluidRow(
             column(width = 6,
-                   h3("Münz ID"),
-                   fluidRow(
-                     column(width = 8, textInput(inputId = "id", label = NULL, value = "", width = "100%")),
-                     column(width = 4, actionButton(inputId = "id_reset", label = "✗", width = "100%", style = "padding:6px;"))), # &cross;
-                   HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit", em("Münz ID;"), " Aufbau: ", code("JJJJLLA00"),
-                   ", wobei ", code("JJJJ"), " = Prägejahr", ", ", code("LL"), " = Land", ", ", code("A"), " = Münzart", " und ", 
-                   code("0"), " = fortlaufende Nummer;", code("."), " = Jokerzeichen", HTML('</div>')),
+              h3("Münz ID"),
+              fluidRow(
+                column(width = 8, textInput(inputId = "id", label = NULL, value = "", width = "100%")),
+                column(width = 4, actionButton(inputId = "id_reset", label = "✗", width = "100%", style = "padding:6px;"))), # &cross;
+              HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit", em("Münz ID;"), " Aufbau: ", code("JJJJLLA00"),
+                ", wobei ", code("JJJJ"), " = Prägejahr", ", ", code("LL"), " = Land", ", ", code("A"), " = Münzart", " und ", 
+                code("0"), " = fortlaufende Nummer;", code("."), " = Jokerzeichen", HTML('</div>')),
             column(width = 6,
-                   h3("Münzzeichen"),
-                   fluidRow(
-                     column(width = 8, selectInput(inputId = "mzz", label = NULL, choices = unique(c(c("", "A", "D", "F", "G", "J"), all_data()$Münzzeichen)), selected = NULL, width = "100%")),
-                     column(width = 4, actionButton(inputId = "mzz_reset", label = "✗", width = "100%", style = "padding:6px;"))), # &cross;
-                   HTML("<div class = 'beschr'>"), "Auswahl aus Liste; Genaue Übereinstimmung mit Feld ", em("Mzz"), HTML('</div>'))),
+              h3("Münzzeichen"),
+              fluidRow(
+                column(width = 8, selectInput(inputId = "mzz", label = NULL, choices = unique(c(c("", "A", "D", "F", "G", "J"), all_data()$Münzzeichen)), selected = NULL, width = "100%")),
+                column(width = 4, actionButton(inputId = "mzz_reset", label = "✗", width = "100%", style = "padding:6px;"))), # &cross;
+              HTML("<div class = 'beschr'>"), "Auswahl aus Liste; Genaue Übereinstimmung mit Feld ", em("Mzz"), HTML('</div>'))),
           fluidRow(
             h3("Abbildung"),
               column(width = 10, textInput(inputId = "abb", label = NULL, value = "", width = "100%")),
@@ -90,36 +90,77 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
           fluidRow(
             htmlOutput(outputId = "n_münzen"),
             tableOutput(outputId = "suche_")))),
-    nav_panel(title = "Auflage",
-      ## Auflage ----
+    ## Auflage ----
+    nav_menu(title = "Auflage",
       h1("🙤 Auflage 🙧"),
-      ### Aufl Side ----
-      page_sidebar(
-        sidebar = sidebar(width = "30%", position = "left", open = "always",
-          h2("Bearbeiten"),
+      nav_panel(title = "Unbekannte Auflagenstärke erfassen",
+        ### Aufl Unbek Side ----
+        page_sidebar(
+          sidebar = sidebar(width = "30%", position = "left", open = "always",
+            h2("Bearbeiten"),
+            fluidRow(
+              h3("Erfassen"),
+              column(width = 7, textAreaInput(inputId = "aufl_erf", label = NULL, rows = 11, resize = "none", width = "100%")),
+              column(width = 5,
+                textInput(inputId = "aufl_zahl", label = NULL, value = "", width = "100%"),
+                htmlOutput(outputId = "zahl_form", inline = TRUE),
+                actionButton(inputId = "aufl_uber", label = "Übernehmen", width = "100%", style = "padding:6px;"),
+                p(HTML("<div class = 'beschr'>"), "Die obige Auflagenstärke wird gemeinsam mit der markierten ",
+                em("Münz ID"), " in das Textfeld übernommen", HTML('</div>')))),
+            fluidRow(
+              h3("Verwalten"),
+              column(width = 6,
+                actionButton(inputId = "aufl_schrb", label = "Schreiben", width = "100%", style = "padding:6px;"),
+                p(HTML("<div class = 'beschr'>"), "Die Eingaben aus dem Textfeld werden ins File ",
+                em("eur2coins_circulation.txt"), "übernommen", HTML('</div>'))),
+              column(width = 6))),
+          ### Aufl Unbek Main ----
+          h2("Unbekannte Auflagenstärke", .noWS = "before"),
           fluidRow(
-            h3("Erfassen"),
-            column(width = 7, textAreaInput(inputId = "aufl_erf", label = NULL, rows = 11, resize = "none", width = "100%")),
-            column(width = 5,
-              textInput(inputId = "aufl_zahl", label = NULL, value = "", width = "100%"),
-              htmlOutput(outputId = "zahl_form", inline = TRUE),
-              actionButton(inputId = "aufl_uber", label = "Übernehmen", width = "100%", style = "padding:6px;"),
-              p(HTML("<div class = 'beschr'>"), "Die obige Auflagenstärke wird gemeinsam mit der markierten ",
-              em("Münz ID"), " in das Textfeld übernommen", HTML('</div>')))),
-          fluidRow(
-            h3("Verwalten"),
-            column(width = 6,
-              actionButton(inputId = "aufl_schrb", label = "Schreiben", width = "100%", style = "padding:6px;"),
-              p(HTML("<div class = 'beschr'>"), "Die Eingaben aus dem Textfeld werden ins File ",
-              em("eur2coins_circulation.txt"), "übernommen", HTML('</div>'))),
-            column(width = 6))),
-        ### Aufl Main ----
-        h2("Unbekannte Auflagenstärke", .noWS = "before"),
+            htmlOutput(outputId = "n_uaufl"),
+            tableOutput(outputId = "unbek_aufl")))),
+      nav_panel(title = "Erfasste Auflagenstärke korrigieren",
+        ### Aufl Erf Side ----
+        page_sidebar(
+          sidebar = sidebar(width = "30%", position = "left", open = "always",
+            h2("Filter"),
+            fluidRow(
+              column(width = 6,
+                h3("Münz ID"),
+                fluidRow(
+                  column(width = 8, textInput(inputId = "id_aufl", label = NULL, value = "", width = "100%")),
+                  column(width = 4, actionButton(inputId = "id_aufl_reset", label = "✗", width = "100%", style = "padding:6px;"))), # &cross;
+                HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit", em("Münz ID;"), " Aufbau: ", code("JJJJLLA00"),
+                  ", wobei ", code("JJJJ"), " = Prägejahr", ", ", code("LL"), " = Land", ", ", code("A"), " = Münzart", " und ", 
+                  code("0"), " = fortlaufende Nummer;", code("."), " = Jokerzeichen", HTML('</div>')),
+              column(width = 6,
+                     h3("Münzzeichen"),
+                     fluidRow(
+                       column(width = 8, selectInput(inputId = "mzz_aufl", label = NULL, choices = unique(c(c("", "A", "D", "F", "G", "J"), all_data()$Münzzeichen)), selected = NULL, width = "100%")),
+                       column(width = 4, actionButton(inputId = "mzz_aufl_reset", label = "✗", width = "100%", style = "padding:6px;"))), # &cross;
+                     HTML("<div class = 'beschr'>"), "Auswahl aus Liste; Genaue Übereinstimmung mit Feld ", em("Mzz"), HTML('</div>'))),
+            fluidRow(
+              h3("Abbildung"),
+              column(width = 10, textInput(inputId = "abb_aufl", label = NULL, value = "", width = "100%")),
+              column(width = 2, actionButton(inputId = "abb_aufl_reset", label = "✗", width = "100%", style = "padding:6px;")), # &cross;
+              HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld ", em("Abbildung"), " Groß-/ Kleinschreibung wird ignoriert", HTML('</div>')),
+            h2("Bearbeiten"),
+            fluidRow(
+              h3("Korrigieren"),
+              column(width = 6,
+                textInput(inputId = "aufl_korr_zahl", label = NULL, value = "", width = "100%"),
+                htmlOutput(outputId = "zahl_korr_form", inline = TRUE)),
+              column(width = 6,
+                actionButton(inputId = "aufl_korr_uber", label = "Übernehmen", width = "100%", style = "padding:6px;")),
+              HTML("<div class = 'beschr'>"), "Die eingegeben Auflagenstärke wird gemeinsam mit der markierten ",
+                em("Münz ID"), " als Korrektur übernommen", HTML('</div>'))),
+        ### Aufl Erf Main ----
+        h2("Erfasste Auflagenstärke", .noWS = "before"),
         fluidRow(
-          htmlOutput(outputId = "n_aufl"),
-          tableOutput(outputId = "unbek_aufl")))),
+          htmlOutput(outputId = "n_eaufl"),
+          tableOutput(outputId = "erf_aufl"))))),
+    ## Ablage ----
     nav_panel(title = "Ablage",
-      ## Ablage ----
       h1("🙤 Ablage 🙧"),
       # Ablage Side
       page_sidebar(
@@ -152,8 +193,8 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
         fluidRow(
           htmlOutput(outputId = "ablnr"),
           tableOutput(outputId = "suche_abl")))),
+    ## Statistik ----
     nav_panel(title = "Statistik",
-      ## Statistik ----
       h1("🙤 Statistik 🙧"),
       h2(HTML("&nbsp;")),
       fluidRow(
@@ -228,14 +269,14 @@ server <- function(input, output, session) {
       arrange(ID)
     
     switch(variation,
-           ident = df |> transmute(Jahr,
+           ident = df |> transmute('Münz ID' = ID,
+                                   Jahr,
                                    Land,
                                    Art,
-                                   Hfgkt,
-                                   Abbildung,
                                    Mzz = Münzzeichen,
+                                   Abbildung,
+                                   Hfgkt,
                                    Amtsblatt,
-                                   'Münz ID' = ID,
                                    Qualität,
                                    Ablage),
            ser = cbind(paste0("<b>", pull(df, Jahr), "</b>"),
@@ -252,8 +293,10 @@ server <- function(input, output, session) {
                        pull(df, ID),
                        pull(df, AQ)) |>  
              matrix(ncol = 4, dimnames = list(NULL, c("Land", "Mzz", "Münz ID", " "))),
-           aufl = df |> transmute('Münz ID' = ID, Jahr, Land, Art, Mzz = Münzzeichen, Abbildung) |> 
-             arrange(Land)
+           uaufl = df |> transmute('Münz ID' = ID, Jahr, Land, Art, Mzz = Münzzeichen, Abbildung) |> 
+             arrange(Land),
+           eaufl = df |> transmute('Münz ID' = ID, Jahr, Land, Art, Mzz = Münzzeichen, Abbildung, Auflage = form_num(Auflage), Hfgkt) |> 
+             arrange('Münz ID')
     )
   }
   
@@ -270,14 +313,11 @@ server <- function(input, output, session) {
              Graph = paste0("<div class='bar'>", Graph, "</div>"))
   }
   
-  ## Reset Buttons ----  
-  observeEvent(eventExpr = input$id_reset, handlerExpr = updateTextInput(session, inputId = "id", value = ""))
-  observeEvent(eventExpr = input$abb_reset, handlerExpr = updateTextInput(session, inputId = "abb", value = ""))
-  observeEvent(eventExpr = input$mzz_reset, handlerExpr = updateTextInput(session, inputId = "mzz", value = ""))
   
   ## Reload (für Bewertungsbuttons über Funktion 'add_bew' oder bei Button Änderung direkt hier) ----
   reload <- function() {
     source("rd_collection.r")
+    source("rd_circulation.r")
   }
   observeEvent(eventExpr = input$aenderung, handlerExpr = reload())
   
@@ -301,6 +341,11 @@ server <- function(input, output, session) {
     reload()
   }
   
+  ## Reset Buttons ----  
+  observeEvent(eventExpr = input$id_reset, handlerExpr = updateTextInput(session, inputId = "id", value = ""))
+  observeEvent(eventExpr = input$mzz_reset, handlerExpr = updateTextInput(session, inputId = "mzz", value = ""))
+  observeEvent(eventExpr = input$abb_reset, handlerExpr = updateTextInput(session, inputId = "abb", value = ""))
+  
   ## Bewertungs Buttons ----
   observeEvent(eventExpr = input$q0, handlerExpr = add_bew(0))
   observeEvent(eventExpr = input$q1, handlerExpr = add_bew(1))
@@ -309,23 +354,22 @@ server <- function(input, output, session) {
   
   
   ## Ausgabe Ergebnisse Münzen ----
-  output$suche_ <- renderTable(expr = tbl_(), spacing = "xs", width = "100%", align = c("lllcllllll"), sanitize.text.function = function(x) x)
+  output$suche_ <- renderTable(expr = tbl_(), spacing = "xs", width = "100%", align = c("lllcrlclll"), sanitize.text.function = function(x) x)
   tbl_ <- eventReactive(eventExpr = c(input$samlg, input$id, input$mzz, input$abb, input$q0, input$q1, input$q2, input$q3, input$aenderung),
                         valueExpr = {
                           # Anzuzeigende Münzen
-                          show <- filter(all_data(), (Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"), # Sammlung
-                                         grepl(tolower(input$id), ID),                                                               # ID
-                                         grepl(tolower(input$abb), tolower(Abbildung)),                                              # Abbildung
-                                         grepl(paste0("\\b", input$mzz, "\\b"), Münzzeichen))                                        # Münzzeichen - exakte Übereinstimmung ('\\b', - Regex word boundary)
+                          show <- filter(all_data(), (Ablage != " " | input$samlg != "ja"), (Ablage == " " | input$samlg != "nein"),
+                                         grepl(tolower(input$id), ID),
+                                         grepl(paste0("\\b", input$mzz, "\\b"), Münzzeichen), #('\\b', - Regex word boundary)
+                                         grepl(tolower(input$abb), tolower(Abbildung)))
                           # Anzahl Münzen n (Überschrift inkl Plural)
-                          output$n_münzen <- renderText(paste0("<h3>", form_num(dim(show)[1]), " Münze", if(dim(show)[1] > 1) "n " else " ",
+                          output$n_münzen <- renderText(paste0("<h3>", form_num(dim(show)[1]), " Münze", if(dim(show)[1] != 1) "n " else " ",
                                                                "&nbsp;(", paste(unique(show$Art), collapse = ' + '), ")</h3>"))
                           # Ausgabe Ergebnisse Münzen
                           displ_data(df = show, variation = "ident")
-                        }
-  )
+                        })
   
-  ## Ausgabe formatierte Zahl ----
+  ## Ausgabe formatierte Zahl für Erfassen ----
   output$zahl_form <- renderText(expr = zahl_form())
   zahl_form <- eventReactive(eventExpr = input$aufl_zahl, valueExpr = paste0("<div style='text-align: center'>= ",form_num(input$aufl_zahl), "<br>&nbsp;</div>"))
   
@@ -335,23 +379,67 @@ server <- function(input, output, session) {
     out <- input$aufl_erf
     while(str_sub(out, -1) == "\n") out <- str_sub(out, 1, -2)
     write_lines(out, file = "eur2coins_circulation.txt", append = TRUE)
-    source("rd_circulation.r")
     reload()
     updateTextInput(session, inputId = "aufl_erf", value = "")
   })
   
-  ## Ausgabe Unbekannte Auflage ----
-  output$unbek_aufl <- renderTable(expr = aufl_(), spacing = "xs", width = "100%", align = c("llllll"), sanitize.text.function = function(x) x)
-  aufl_ <- eventReactive(eventExpr = c(input$aufl_schrb),
+  ## Reset Buttons ----  
+  observeEvent(eventExpr = input$id_aufl_reset, handlerExpr = updateTextInput(session, inputId = "id_aufl", value = ""))
+  observeEvent(eventExpr = input$mzz_aufl_reset, handlerExpr = updateTextInput(session, inputId = "mzz_aufl", value = ""))
+  observeEvent(eventExpr = input$abb_aufl_reset, handlerExpr = updateTextInput(session, inputId = "abb_aufl", value = ""))
+
+  ## Ausgabe unbekannte Auflage ----
+  output$unbek_aufl <- renderTable(expr = uaufl_(), spacing = "xs", width = "100%", align = c("lllcrl"), sanitize.text.function = function(x) x)
+  uaufl_ <- eventReactive(eventExpr = c(input$aufl_schrb),
                          valueExpr = {
                            # Anzuzeigende Münzen
-                           show <- filter(all_data(), is.na(Hfgkt)) # !str_starts(Abbildung, "~")
+                           show <- filter(all_data(), is.na(Hfgkt))
                            # Anzahl Münzen n (Überschrift inkl Plural)
-                           output$n_aufl <- renderText(paste0("<h3>", form_num(dim(show)[1]), " Münze", if(dim(show)[1] > 1) "n " else " ", "</h3>"))
+                           output$n_uaufl <- renderText(paste0("<h3>", form_num(dim(show)[1]), " Münze", if(dim(show)[1] != 1) "n " else " ", "</h3>"))
                            # Ausgabe Ergebnisse Münzen
-                           displ_data(df = show, variation = "aufl")
-                         }
-  )
+                           displ_data(df = show, variation = "uaufl")
+                         })
+  
+  ## Synchonisiere Suche nach ID
+  observeEvent(eventExpr = c(input$id, input$mzz, input$abb),
+               handlerExpr = {
+                 updateTextInput(session = session, inputId = "id_aufl", value = input$id)
+                 updateTextInput(session = session, inputId = "mzz_aufl", value = input$mzz)
+                 updateTextInput(session = session, inputId = "abb_aufl", value = input$abb)
+                 })
+  
+  ## Ausgabe formatierte Zahl für Korrektur ----
+  output$zahl_korr_form <- renderText(expr = zahl_korr_form())
+  zahl_korr_form <- eventReactive(eventExpr = input$aufl_korr_zahl, valueExpr = paste0("<div style='text-align: center'>= ",form_num(input$aufl_korr_zahl), "<br>&nbsp;</div>"))
+
+  ## Schreiben einer korrigierten Auflagenstärke ----
+  observeEvent(eventExpr = input$aufl_korr_uber,
+               handlerExpr = {
+                 # Abbild des Files
+                 tmp <- select(circulation, ID, Auflage)
+                 # Ändern
+                 tmp[tmp$ID == input$myselection, "Auflage"] <- as.numeric(input$aufl_korr_zahl)
+                 # Schreiben
+                 write_lines(
+                   paste(tmp$ID, tmp$Auflage, sep = "-"),
+                   "eur2coins_circulation.txt")
+                 reload()
+               })
+  
+  ## Ausgabe erfasste Auflage ----
+  output$erf_aufl <- renderTable(expr = eaufl_(), spacing = "xs", width = "100%", align = c("lllcrlrc"), sanitize.text.function = function(x) x)
+  eaufl_ <- eventReactive(eventExpr = c(input$id_aufl, input$mzz_aufl, input$abb_aufl, input$aufl_korr_uber),
+                          valueExpr = {
+                            # Anzuzeigende Münzen
+                            show <- filter(all_data(), !is.na(Hfgkt),
+                                           grepl(tolower(input$id_aufl), ID),
+                                           grepl(paste0("\\b", input$mzz_aufl, "\\b"), Münzzeichen),
+                                           grepl(tolower(input$abb_aufl), tolower(Abbildung)))
+                            # Anzahl Münzen n (Überschrift inkl Plural)
+                            output$n_eaufl <- renderText(paste0("<h3>", form_num(dim(show)[1]), " Münze", if(dim(show)[1] != 1) "n " else " ", "</h3>"))
+                            # Ausgabe Ergebnisse Münzen
+                            displ_data(df = show, variation = "eaufl")
+                          })
   
   ## Schnellwahl Schritte ----
   observeEvent(eventExpr = input$minus, handlerExpr = updateTextInput(session, inputId = "znr", value = as.integer(input$znr) - 1))
@@ -369,13 +457,6 @@ server <- function(input, output, session) {
                                 filter(Zeilennummer %in% (((input$box - 1) * 144 + (input$tableau - 1) * 24 + 1) + 0:23)) |> 
                                 arrange(Zeilennummer) |>
                                 mutate(Qualität = form_quali(Qualität),
-                                       # This_left = case_when(input$znr == Zeilennummer ~ "<span class = 'bar'>&#9612;&VeryThinSpace;</span>",
-                                       #                       TRUE ~ "<b>&emsp;&VeryThinSpace;</b>"),
-                                       # This_right = case_when(input$znr == Zeilennummer ~ "<span class = 'bar'>&VeryThinSpace;&#9616;</span>",
-                                       #                        TRUE ~ "<b>&VeryThinSpace;&emsp;</b>"), # kein nbsp wegen doppelklick-markierung
-                                       # Res = paste0("<div class='mono', align = 'center'>", This_left, str_sub(Ablage, 1, 4), "&VeryThinSpace;&times;&VeryThinSpace;", str_sub(Ablage, 6, 9 - nchar(Zeilennummer)), "&VeryThinSpace;", "<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u>", This_right, "</div>",
-                                       #              "<div class='mono', align = 'center'><b>", This_left, str_sub(ID, 1, 4), "&VeryThinSpace;", (str_sub(ID, 5, 6)), "&VeryThinSpace;", (str_sub(ID, 7, 7)), "</b>&VeryThinSpace;", str_sub(ID, 8, 9), This_right, "</div>",
-                                       #              "<div align = 'center'>", Qualität, "</div>")) |>
                                        This_left = case_when(input$znr == Zeilennummer ~ "<span class = 'bar'>&#9612;&thinsp;</span>",
                                                              TRUE ~ ""),
                                        This_right = case_when(input$znr == Zeilennummer ~ "<span class = 'bar'>&thinsp;&#9616;</span>",
