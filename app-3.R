@@ -67,12 +67,12 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
                    fluidRow(
                      column(width = 8, selectInput(inputId = "mzz", label = NULL, choices = unique(c(c("", "A", "D", "F", "G", "J"), all_data()$Münzzeichen)), selected = NULL, width = "100%")),
                      column(width = 4, actionButton(inputId = "mzz_reset", label = "✗", width = "100%", style = "padding:6px;"))), # &cross;
-                   HTML("<div class = 'beschr'>"), "Auswahl aus Liste; Genaue Übereinstimmung mit Feld ", em("Mzz."), HTML('</div>'))),
+                   HTML("<div class = 'beschr'>"), "Auswahl aus Liste; Genaue Übereinstimmung mit Feld ", em("Mzz"), HTML('</div>'))),
           fluidRow(
             h3("Abbildung"),
               column(width = 10, textInput(inputId = "abb", label = NULL, value = "", width = "100%")),
               column(width = 2, actionButton(inputId = "abb_reset", label = "✗", width = "100%", style = "padding:6px;")), # &cross;
-            HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld ", em("Abbildung."), " Groß-/ Kleinschreibung wird ignoriert", HTML('</div>')),
+            HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld ", em("Abbildung"), " Groß-/ Kleinschreibung wird ignoriert", HTML('</div>')),
           h2("Anlage / Änderung"),
           fluidRow(
             h3("Qualität"),
@@ -80,7 +80,7 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
               column(width = 3, actionButton(inputId = "q1", label = "(1) ★★", width = "100%", style = "padding:6px;")), # &starf;
               column(width = 3, actionButton(inputId = "q2", label = "(2) ✓✓", width = "100%", style = "padding:6px;")), # &check;
               column(width = 3, actionButton(inputId = "q3", label = "(3) ✓", width = "100%", style = "padding:6px;")), # &check;
-            p(HTML("<div class = 'beschr'>"), "Übernimmt Markierung aus Feld ", em("Münz ID."), HTML('</div>'))),
+            p(HTML("<div class = 'beschr'>"), "Übernimmt Markierung aus Feld ", em("Münz ID"), "und ändert/ergänzt", HTML('</div>'))),
           fluidRow(
             h3("eur2collection.txt"),
               column(width = 5, actionButton(inputId = "aenderung", label = "Änderung durchgeführt", width = "100%", style = "padding:6px;")),
@@ -281,11 +281,23 @@ server <- function(input, output, session) {
   }
   observeEvent(eventExpr = input$aenderung, handlerExpr = reload())
   
-  ## Funktion zum Schreiben der Bewertung
+  ## Funktion zum Schreiben/Ändern einer Bewertung
   add_bew <- function(qu) {
-    tmp <- paste(input$myselection, qu, sep = "-")
-    write(tmp, file = "eur2coins_collection.txt", append = TRUE)
-    Sys.sleep(1.5)
+    # Abbild des Files
+    tmp <- select(collection, ID, Qualität)
+    # Ändern oder Anfügen
+    if(input$myselection %in% tmp$ID) {
+      tmp[tmp$ID == input$myselection, "Qualität"] <- qu
+      write_lines(
+        paste(tmp$ID, tmp$Qualität, sep = "-"),
+        "eur2coins_collection.txt")
+    }
+    else {
+      tmp <- add_row(tmp, ID = input$myselection, Qualität = qu)
+      write_lines(
+        paste(tmp$ID, tmp$Qualität, sep = "-"),
+        "eur2coins_collection.txt")
+    }
     reload()
   }
   
@@ -322,8 +334,7 @@ server <- function(input, output, session) {
   observeEvent(eventExpr = input$aufl_schrb, handlerExpr = {
     out <- input$aufl_erf
     while(str_sub(out, -1) == "\n") out <- str_sub(out, 1, -2)
-    write(out, file = "eur2coins_circulation.txt", append = TRUE)
-    Sys.sleep(1.5)
+    write_lines(out, file = "eur2coins_circulation.txt", append = TRUE)
     source("rd_circulation.r")
     reload()
     updateTextInput(session, inputId = "aufl_erf", value = "")
@@ -351,7 +362,7 @@ server <- function(input, output, session) {
   
   ## Ausgabe Ablage ----
   output$tableau <- renderTable(expr = erst_tab(), spacing = "l", width = "95%", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
-  erst_tab <- eventReactive(eventExpr = c(input$box, input$tableau, input$znr, input$aenderung), #, input$q0, input$q1, input$q2, input$q3
+  erst_tab <- eventReactive(eventExpr = c(input$box, input$tableau, input$znr, input$aenderung),
                             valueExpr = {
                               # Anzeige Tableau
                               tmp <-collection |> 
