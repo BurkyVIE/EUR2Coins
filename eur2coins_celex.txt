@@ -720,7 +720,27 @@ NA|be|2025|2025-7-25|g|~Rennstrecke Spa-Francorchamps|
 # /_/_ \_\_/ /_/_  /_/ 
 ## 2029 ----
 
-#NA|..|2029|NA|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|be|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|bg|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|de|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|ee|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|fi|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|fr|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|gr|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|ir|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|it|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|hr|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|lv|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|lt|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|lu|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|mt|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|nl|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|at|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|pt|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|sk|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|si|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|es|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|cy|?25. Jahrestag der EU-Erweiterung 2004|
 
 # STAND Gedenkmünzen: 31. Juli 2025 zwei.euro.com News
 
