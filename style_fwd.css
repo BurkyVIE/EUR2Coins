@@ -1,5 +1,6 @@
 body {
   background-color: #f7efe0;
+  font-size: 15px;
 }
 
 .rare {
@@ -18,7 +19,7 @@ tr:nth-child(5n) {
 h1 {
   color: #02acd6;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 30px;
   text-align: center;
   text-transform: capitalize;
 }
@@ -26,13 +27,13 @@ h1 {
 h2 {
   color: #01aad4;
   font-weight: bold;
-  font-size: 21px;
+  font-size: 25px;
 }
 
 h3 {
   color: #018eb0;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 code {

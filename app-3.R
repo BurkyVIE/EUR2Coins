@@ -40,7 +40,7 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
   navset_pill(
     ## Identifikation ----
     nav_panel(title = "Identifikation",
-      h1("🙤 Identifikation 🙧"),
+      # h1("🙤 Identifikation 🙧"),
       ### Identifikation Sidebar ----
       page_sidebar(
         sidebar = sidebar(width = "30%", position = "left", open = "always",
@@ -73,7 +73,7 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
               column(width = 10, textInput(inputId = "in_abb.ident", label = NULL, value = "", width = "100%")),
               column(width = 2, actionButton(inputId = "bt_reset_abb.ident", label = "✗", width = "100%", style = "padding:6px;")), # &cross;
             HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld ", em("Abbildung"), " Groß-/ Kleinschreibung wird ignoriert", HTML('</div>')),
-          h2("Anlage / Änderung"),
+          h2("Bearbeitung"),
           fluidRow(
             h3("Qualität"),
               column(width = 3, actionButton(inputId = "bt_write_q0.ident", label = "(0) ★★★", width = "100%", style = "padding:6px;")), # &starf;
@@ -86,17 +86,17 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
               column(width = 5, actionButton(inputId = "bt_do_aend.ident", label = "Neu laden", width = "100%", style = "padding:6px;")),
             p(HTML("<div class = 'beschr'>"), "Manuelle Änderung von ", em("eur2collection.txt,"), " zB Münztausch", HTML('</div>')))),
           ### Identifikation Main ----
-          h2("Ergebnisse", .noWS = "before"),
+          h2("Ergebniss", .noWS = "before"),
           fluidRow(
             htmlOutput(outputId = "out_h3.ident"),
             tableOutput(outputId = "out_table.ident")))),
     ## Auflagenstärke ----
-    nav_menu(title = "Auflagenstärke",
+    nav_menu(title = "Auflage",
       # h1("🙤 Auflagenstärke 🙧"), # Könnte hier stehen, führt zu Warnung, daher 2x jeweils am Beginn einer page
       nav_panel(title = "Unbekannte Auflagenstärke erfassen",
         ### Unbekannte Auflagenstärke Sidebar ----
         page_sidebar(
-          h1("🙤 Auflagenstärke 🙧"),
+          # h1("🙤 Auflagenstärke 🙧"),
           sidebar = sidebar(width = "30%", position = "left", open = "always",
             h2("Bearbeitung"),
             fluidRow(
@@ -128,7 +128,7 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
       nav_panel(title = "Erfasste Auflagenstärke korrigieren",
         ### Erfasste Auflagenstärke Sidebar ----
         page_sidebar(
-          h1("🙤 Auflagenstärke 🙧"),
+          # h1("🙤 Auflagenstärke 🙧"),
           sidebar = sidebar(width = "30%", position = "left", open = "always",
             h2("Filter"),
             fluidRow(
@@ -171,7 +171,7 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
           tableOutput(outputId = "out_table.erf"))))),
     ## Ablage ----
     nav_panel(title = "Ablage",
-      h1("🙤 Ablage 🙧"),
+      # h1("🙤 Ablage 🙧"),
       ### Ablage Sidebar ----
       page_sidebar(
         sidebar = sidebar(width = "30%", position = "left", open = "always",
@@ -205,7 +205,7 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
           tableOutput(outputId = "out_aktmz.abl")))),
     ## Statistik ----
     nav_panel(title = "Statistik",
-      h1("🙤 Statistik 🙧"),
+      # h1("🙤 Statistik 🙧"),
       h2(HTML("&nbsp;")),
       fluidRow(
         column(width = 4,
@@ -520,22 +520,22 @@ server <- function(input, output, session) {
   ### Ausgabe Zusammenfassung Land ----
   output$out_land.stat <- renderTable(expr = fkt_stat_land(), spacing = "xs", align = c("lrrl"), sanitize.text.function = function(x) x)
   fkt_stat_land <- eventReactive(eventExpr = c(input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
-                                valueExpr = fkt_form_stat("Land", 5, 6) |> 
-                                  mutate(Land = fkt_form_land(Land)),
-                                ignoreNULL = FALSE)
+                                 valueExpr = fkt_form_stat("Land", 5, 6) |> 
+                                   mutate(Land = fkt_form_land(Land)),
+                                 ignoreNULL = FALSE)
   
   ### Ausgabe Zusammenfassung Qualität ----
   output$out_qual.stat <- renderTable(expr = fkt_stat_qual(), spacing = "xs", align = c("lrr"), sanitize.text.function = function(x) x)
   fkt_stat_qual <- eventReactive(eventExpr = c(input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
-                                valueExpr = {
-                                  collection|> 
-                                    group_by(Qualität = Qualität |>  ordered(levels = 0:3, labels = fkt_form_quali(0:3)), .drop = FALSE) |> 
-                                    count() |> 
-                                    transmute(Anzahl = n,
-                                              Anteil = formatC(Anzahl / dim(collection)[1] * 100, 2, format = "f", decimal.mark = ",")
-                                    )
-                                },
-                                ignoreNULL = FALSE)
+                                 valueExpr = {
+                                   collection|> 
+                                     group_by(Qualität = Qualität |>  ordered(levels = 0:3, labels = fkt_form_quali(0:3)), .drop = FALSE) |> 
+                                     count() |> 
+                                     transmute(Anzahl = n,
+                                               Anteil = formatC(Anzahl / dim(collection)[1] * 100, 2, format = "f", decimal.mark = ",")
+                                               )
+                                   },
+                                 ignoreNULL = FALSE)
   
 }
 
