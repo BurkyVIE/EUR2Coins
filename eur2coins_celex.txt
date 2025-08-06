@@ -656,9 +656,9 @@ C/2025/03831|mc|2025|2025-6-16|g|Comté de Carladès|
 C/2025/03823|pt|2025|2025-6-24|g|Weltpfadfinderbewegung|
 C/2025/03846|sm|2025|2025-7-3|g|550. Geburtstag von Michelangelo|
 
-NA|ee|2025|2025-1-30|g|~500 Jahre erster Textdruck in esthnischer Sprache|
-NA|hr|2025|2025-7-4|g|~1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
-NA|be|2025|2025-7-25|g|~Rennstrecke Spa-Francorchamps|
+NA|ee|2025|2025-1-30|g|?? 500 Jahre erster Textdruck in esthnischer Sprache|
+NA|hr|2025|2025-7-4|g|?? 1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
+NA|be|2025|2025-7-25|g|?? Rennstrecke Spa-Francorchamps|
 
 #C/2025/03822|va|2025|NA|g|Sedisvakanz 2025|
 #C/2025/03829|mc|2025|NA|g|Marquisat des Baux|
@@ -668,79 +668,79 @@ NA|be|2025|2025-7-25|g|~Rennstrecke Spa-Francorchamps|
 #C/2025/03847|pt|2025|NA|g|Nachhaltige Entwicklung|
 #C/2025/03848|va|2025|NA|g|550. Geburtstag von Michelangelo|
 
-#NA|de|2025|NA|g|~35 Jahre Deutsche Einheit|A,D,F,G,J
-#NA|si|2025|NA|g|~100. Geburtstag von Miki Muster|
-#NA|gr|2025|NA|g|~100. Geburtstag von Manos Chatzidakis|
-#NA|gr|2025|NA|g|~100. Geburtstag von Mikis Theodorakis|
-#NA|lv|2025|NA|g|~Sēlija|
-#NA|ad|2025|NA|g|~Spiele der kleinen Staaten von Europa|
-#NA|lt|2025|NA|g|~Mažoji Lietuva|
-#NA|fi|2025|NA|g|~100 Jahre Finnalnd-Schweden Leichtathletikspiele|
-#NA|fr|2025|NA|g|~Notre Dame|
+#NA|de|2025|NA|g|?? 35 Jahre Deutsche Einheit|A,D,F,G,J
+#NA|si|2025|NA|g|?? 100. Geburtstag von Miki Muster|
+#NA|gr|2025|NA|g|?? 100. Geburtstag von Manos Chatzidakis|
+#NA|gr|2025|NA|g|?? 100. Geburtstag von Mikis Theodorakis|
+#NA|lv|2025|NA|g|?? Sēlija|
+#NA|ad|2025|NA|g|?? Spiele der kleinen Staaten von Europa|
+#NA|lt|2025|NA|g|?? Mažoji Lietuva|
+#NA|fi|2025|NA|g|?? 100 Jahre Finnalnd-Schweden Leichtathletikspiele|
+#NA|fr|2025|NA|g|?? Notre Dame|
 
-#NA|hr|2025|NA|g|?Pula Arena|
-#NA|ad|2025|NA|g|?Der Bartgeier|
+#NA|hr|2025|NA|g|?? Pula Arena|
+#NA|ad|2025|NA|g|?? Der Bartgeier|
 # ___   ___  ___    __ 
 #  ) ) / / \  ) )  / / 
 # /_/_ \_\_/ /_/_ (_)_)
 ## 2026 ----
 
-#NA|de|2026|NA|g|~Bremen|A,D,F,G,J
-#NA|sk|2026|NA|g|~Trencin - Kulturhauptstadt Europas 2026|
+#NA|de|2026|NA|g|?? Bremen|A,D,F,G,J
+#NA|sk|2026|NA|g|?? Trencin - Kulturhauptstadt Europas 2026|
 
-#NA|lt|2026|NA|g|?Unabhängigkeit Litauens in der Energieversorgung|
-#NA|lt|2026|NA|g|?Die Stadt Kaunas|
-#NA|si|2026|NA|g|~150. Geburtstag von Ivan Cankar|
-#NA|lu|2026|NA|g|?Verleihung des Intzernationalen Karlspreis an das luxemburgische Volk|
-#NA|lu|2026|NA|g|?Luxemburgischer Nationalfeiertag/Groussherzogsgebuertsdag|
-#NA|fr|2026|NA|g|?Antoine de Saint-Exupéry|
-#NA|de|2026|NA|g|?Konrad Adenauer|
-#NA|es|2026|NA|g|?Kloster Poblet|
-#NA|sk|2026|NA|g|?50. Jahrestag des Sieges der tschechoslowakischen Fußballmannschaft bei der EM1976|
-#NA|ee|2026|NA|g|?Sipsik|
-#NA|sm|2026|NA|g|?450. Todestag von Tizian|
-#NA|sm|2026|NA|g|?800. Todestag von Franz von Assisi|
-#NA|bg|2026|NA|g|?150. Geburtstag von Krastjo Sarafow|
+#NA|lt|2026|NA|g|?? Unabhängigkeit Litauens in der Energieversorgung|
+#NA|lt|2026|NA|g|?? Die Stadt Kaunas|
+#NA|si|2026|NA|g|?? 150. Geburtstag von Ivan Cankar|
+#NA|lu|2026|NA|g|?? Verleihung des Intzernationalen Karlspreis an das luxemburgische Volk|
+#NA|lu|2026|NA|g|?? Luxemburgischer Nationalfeiertag/Groussherzogsgebuertsdag|
+#NA|fr|2026|NA|g|?? Antoine de Saint-Exupéry|
+#NA|de|2026|NA|g|?? Konrad Adenauer|
+#NA|es|2026|NA|g|?? Kloster Poblet|
+#NA|sk|2026|NA|g|?? 50. Jahrestag des Sieges der tschechoslowakischen Fußballmannschaft bei der EM1976|
+#NA|ee|2026|NA|g|?? Sipsik|
+#NA|sm|2026|NA|g|?? 450. Todestag von Tizian|
+#NA|sm|2026|NA|g|?? 800. Todestag von Franz von Assisi|
+#NA|bg|2026|NA|g|?? 150. Geburtstag von Krastjo Sarafow|
 # ___   ___  ___  ____
 #  ) ) / / \  ) )  / /
 # /_/_ \_\_/ /_/_ /_/ 
 ## 2027 ----
 
-#NA|sk|2027|NA|g|?50. Jahrestag der Charta 77|
-#NA|sk|2027|NA|g|?250. Jahrestag der Ratio Educationis|
-#NA|bg|2027|NA|g|?125. Jahrestag der Geburt von Angel Karalijtschew|
+#NA|sk|2027|NA|g|?? 50. Jahrestag der Charta 77|
+#NA|sk|2027|NA|g|?? 250. Jahrestag der Ratio Educationis|
+#NA|bg|2027|NA|g|?? 125. Jahrestag der Geburt von Angel Karalijtschew|
 # ___   ___  ___   ___ 
 #  ) ) / / \  ) ) ( (_)
 # /_/_ \_\_/ /_/_ (_(_)
 ## 2028 ----
 
-#NA|bg|2028|NA|g|?150. Geburtstag von andrej Nikolow|
+#NA|bg|2028|NA|g|?? 150. Geburtstag von andrej Nikolow|
 # ___   ___  ___   ___ 
 #  ) ) / / \  ) ) ( ( )
 # /_/_ \_\_/ /_/_  /_/ 
 ## 2029 ----
 
-#NA|..|2029|be|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|bg|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|de|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|ee|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|fi|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|fr|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|gr|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|ir|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|it|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|hr|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|lv|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|lt|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|lu|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|mt|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|nl|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|at|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|pt|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|sk|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|si|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|es|?25. Jahrestag der EU-Erweiterung 2004|
-#NA|..|2029|cy|?25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|be|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|bg|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|de|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|ee|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|fi|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|fr|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|gr|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|ie|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|it|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|hr|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|lv|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|lt|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|lu|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|mt|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|nl|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|at|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|pt|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|sk|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|si|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|es|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|..|2029|cy|?? 25. Jahrestag der EU-Erweiterung 2004|
 
 # STAND Gedenkmünzen: 31. Juli 2025 zwei.euro.com News
 
@@ -770,7 +770,7 @@ C2014/075/02|be|2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025|NA|k
 # | |_) | | | | |   / /`_  / /\  | |_) | | | |_  | |\ |
 # |_|_) \_\_/ |_|__ \_\_/ /_/--\ |_| \ |_| |_|__ |_| \|
 ## BG (Bulgaria, de: Bulgarien, en: Bulgaria) ----
-NA|bg|2026|NA|k|Païssi von Hilandar (2026 -)|
+NA|bg|2026|NA|k|?? Païssi von Hilandar (2026 -)|
 # ____  _     ___   ____  ___   _    
 #  / / \ \_/ | |_) | |_  | |_) | |\ |
 # /_/_  |_|  |_|   |_|__ |_| \ |_| \|

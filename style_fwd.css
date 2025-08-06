@@ -12,8 +12,8 @@ table, th, td {
   background-color: transparent !important;
 }
 
-tr:nth-child(5n) {
-  background-color: #ded7ca !important;
+ .longtab tr:nth-child(3n) {
+  background-color: rgba(32, 32, 32, .05) !important; /*#ded7ca*/
 }
 
 h1 {
