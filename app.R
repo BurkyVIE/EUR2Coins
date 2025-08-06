@@ -18,7 +18,7 @@ all_data <- function() {
 }
 
 ## JS Funktion um Markierung verfügbar zu machen ----
-highlight <- '
+fkt_highlight <- '
 function getSelectionText() {
     var text = "";
     if (window.getSelection) {
@@ -36,7 +36,7 @@ document.onmouseup = document.onkeyup = document.onselectionchange = function() 
 '
 # UI (User Interface) ----
 ui <- page_fluid(includeCSS(path = "style_fwd.css"),
-  tags$script(highlight),
+  tags$script(fkt_highlight),
   navset_pill(
     ## Identifikation ----
     nav_panel(title = "Identifikation",
@@ -93,8 +93,8 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
     ## Auflagenstärke ----
     nav_menu(title = "Auflage",
       # h1("🙤 Auflagenstärke 🙧"), # Könnte hier stehen, führt zu Warnung, daher 2x jeweils am Beginn einer page
-      nav_panel(title = "Unbekannte Auflagenstärke erfassen",
-        ### Unbekannte Auflagenstärke Sidebar ----
+      nav_panel(title = "Auflagenstärke erfassen",
+        ### Auflagenstärke erfassen Sidebar ----
         page_sidebar(
           # h1("🙤 Auflagenstärke 🙧"),
           sidebar = sidebar(width = "30%", position = "left", open = "always",
@@ -102,31 +102,31 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
             fluidRow(
               h3("Auflagenstärke"),
               column(width = 7,
-                textInput(inputId = "in_aufl.unbek", label = NULL, value = "", width = "100%")),
+                textInput(inputId = "in_aufl.erf", label = NULL, value = "", width = "100%")),
               column(width = 5,
-              htmlOutput(outputId = "out_aufl.unbek", inline = TRUE))),
+              htmlOutput(outputId = "out_aufl.erf", inline = TRUE))),
             fluidRow(
               h3("Erfassen"),
               column(width = 6,
-                textAreaInput(inputId = "in_erf.unbek", label = NULL, rows = 11, resize = "none", width = "100%")),
+                textAreaInput(inputId = "in_erf.erf", label = NULL, rows = 11, resize = "none", width = "100%")),
               column(width = 6,
-                actionButton(inputId = "bt_do_erf.unbek", label = "Erfassen", width = "100%", style = "padding:6px;"),
+                actionButton(inputId = "bt_do_erf.erf", label = "Erfassen", width = "100%", style = "padding:6px;"),
                 p(HTML("<div class = 'beschr'>"), "Die oben stehende Auflagenstärke wird gemeinsam mit der markierten ",
                 em("Münz ID"), " im Textfeld erfasst", HTML('</div>')))),
             fluidRow(
               h3("Speichern"),
               column(width = 6,
-                actionButton(inputId = "bt_write_aufl.unbek", label = "Speichern", width = "100%", style = "padding:6px;"),
+                actionButton(inputId = "bt_write_aufl.erf", label = "Speichern", width = "100%", style = "padding:6px;"),
                 p(HTML("<div class = 'beschr'>"), "Die Eingaben aus dem Textfeld werden ins File ",
                 em("eur2coins_circulation.txt"), " übernommen", HTML('</div>'))),
               column(width = 6))),
-          ### Unbekannte Auflagenstärke Main ----
+          ### Auflagenstärke erfassen Main ----
           h2("Unbekannte Auflagenstärke", .noWS = "before"),
           fluidRow(
-            htmlOutput(outputId = "out_h3.unbek"),
-            tableOutput(outputId = "out_table.unbek")))),
-      nav_panel(title = "Erfasste Auflagenstärke korrigieren",
-        ### Erfasste Auflagenstärke Sidebar ----
+            htmlOutput(outputId = "out_h3.erf"),
+            tableOutput(outputId = "out_table.erf")))),
+      nav_panel(title = "Auflagenstärke korrigieren",
+        ### Auflagenstärke korrigieren Sidebar ----
         page_sidebar(
           # h1("🙤 Auflagenstärke 🙧"),
           sidebar = sidebar(width = "30%", position = "left", open = "always",
@@ -135,40 +135,41 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
               column(width = 6,
                 h3("Münz ID"),
                 fluidRow(
-                  column(width = 8, textInput(inputId = "in_id.erf", label = NULL, value = "", width = "100%")),
-                  column(width = 4, actionButton(inputId = "bt_reset_id.erf", label = "✗", width = "100%", style = "padding:6px;"))), # &cross;
+                  column(width = 8, textInput(inputId = "in_id.korr", label = NULL, value = "", width = "100%")),
+                  column(width = 4, actionButton(inputId = "bt_reset_id.korr", label = "✗", width = "100%", style = "padding:6px;"))), # &cross;
                 HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit", em("Münz ID;"), " Aufbau: ", code("JJJJLLA00"),
                   ", wobei ", code("JJJJ"), " = Prägejahr", ", ", code("LL"), " = Land", ", ", code("A"), " = Münzart", " und ", 
                   code("0"), " = fortlaufende Nummer;", code("."), " = Jokerzeichen", HTML('</div>')),
               column(width = 6,
                 h3("Münzzeichen"),
                 fluidRow(
-                  column(width = 8, selectInput(inputId = "in_mzz.erf", label = NULL, choices = unique(c(c("", "A", "D", "F", "G", "J"), all_data()$Münzzeichen)), selected = NULL, width = "100%")),
-                  column(width = 4, actionButton(inputId = "bt_reset_mzz.erf", label = "✗", width = "100%", style = "padding:6px;"))), # &cross;
+                  column(width = 8, selectInput(inputId = "in_mzz.korr", label = NULL, choices = unique(c(c("", "A", "D", "F", "G", "J"), all_data()$Münzzeichen)),
+                                                selected = NULL, width = "100%")),
+                  column(width = 4, actionButton(inputId = "bt_reset_mzz.korr", label = "✗", width = "100%", style = "padding:6px;"))), # &cross;
                 HTML("<div class = 'beschr'>"), "Auswahl aus Liste; Genaue Übereinstimmung mit Feld ", em("Mzz"), HTML('</div>'))),
             fluidRow(
               h3("Abbildung"),
-              column(width = 10, textInput(inputId = "in_abb.erf", label = NULL, value = "", width = "100%")),
-              column(width = 2, actionButton(inputId = "bt_reset_abb.erf", label = "✗", width = "100%", style = "padding:6px;")), # &cross;
+              column(width = 10, textInput(inputId = "in_abb.korr", label = NULL, value = "", width = "100%")),
+              column(width = 2, actionButton(inputId = "bt_reset_abb.korr", label = "✗", width = "100%", style = "padding:6px;")), # &cross;
               HTML("<div class = 'beschr'>"), "Beliebige Übereinstimmung mit Feld ", em("Abbildung"), " Groß-/ Kleinschreibung wird ignoriert", HTML('</div>')),
             h2("Bearbeitung"),
             fluidRow(
               h3("Auflagenstärke"),
               column(width = 7,
-                textInput(inputId = "in_aufl.erf", label = NULL, value = "", width = "100%")),
+                textInput(inputId = "in_aufl.korr", label = NULL, value = "", width = "100%")),
               column(width = 5,
-                htmlOutput(outputId = "out_aufl.erf", inline = TRUE))),
+                htmlOutput(outputId = "out_aufl.korr", inline = TRUE))),
             fluidRow(
               h3("Speichern"),
               column(width = 6,
-                actionButton(inputId = "bt_write_aufl.erf", label = "Speichern", width = "100%", style = "padding:6px;"),
+                actionButton(inputId = "bt_write_aufl.korr", label = "Speichern", width = "100%", style = "padding:6px;"),
                 p(HTML("<div class = 'beschr'>"), "Die eingegeben Auflagenstärke wird gemeinsam mit der markierten ",
                   em("Münz ID"), " als Korrektur übernommen", HTML('</div>'))))),
-        ### Erfasst Auflagenstärke Main ----
-        h2("Erfasste Auflagenstärke", .noWS = "before"),
+        ### Auflagenstärke korrigieren Main ----
+        h2("Auflagenstärke korrigieren", .noWS = "before"),
         fluidRow(
-          htmlOutput(outputId = "out_h3.erf"),
-          tableOutput(outputId = "out_table.erf"))))),
+          htmlOutput(outputId = "out_h3.korr"),
+          tableOutput(outputId = "out_table.korr"))))),
     ## Ablage ----
     nav_panel(title = "Ablage",
       # h1("🙤 Ablage 🙧"),
@@ -228,7 +229,6 @@ server <- function(input, output, session) {
     source("rd_circulation.r")
     source("rd_collection.r")
   }
-  observeEvent(eventExpr = input$bt_do_aend.ident, handlerExpr = fkt_reload())
   
   ### Fkt Formatieren Zahlen > 1k ----
   ### v.a. in den Unter-Überschriften und bei Auflagenstärken
@@ -247,7 +247,8 @@ server <- function(input, output, session) {
   ### Fkt Formatieren Land ----
   fkt_form_land <- function(txt) {
     txt <- tolower(txt) # jedenfalls Kleinbuchstaben
-    paste0("<nobr style='font-size: 0.75em'><img src='https://www.crwflags.com/fotw/images/", substr(txt, 1, 1), "/", txt, ".gif', height='14', alt='", toupper(txt), "'>&nbsp;&nbsp;/&nbsp;", toupper(txt), "</nobr>")
+    paste0("<nobr style='font-size: 0.75em'><img src='https://www.crwflags.com/fotw/images/", substr(txt, 1, 1), "/", txt, ".gif',
+           height='14', alt='", toupper(txt), "'>&nbsp;&nbsp;/&nbsp;", toupper(txt), "</nobr>")
   }
   
   ### Fkt Formatieren Amtsblatt ----
@@ -319,7 +320,7 @@ server <- function(input, output, session) {
   }
   
   
-  ### Fkt Schreiben/Ändern einer Bewertung
+  ### Fkt Schreiben/Ändern einer Bewertung ----
   fkt_write_bewertung <- function(qu) {
     # Abbild des Files
     tmp <- select(collection, ID, Qualität)
@@ -339,11 +340,11 @@ server <- function(input, output, session) {
     fkt_reload()
   }
   
-  ### Fkt Formatieren Auflagenstärke
+  ### Fkt Formatieren Auflagenstärke ----
   form_aufl <- function(x)
     paste0("<div style='text-align: left'>= <b>",fkt_form_tsd(x), "</b><br>&nbsp;</div>")
   
-  ## Fkt Gültigkeitsprüfung Eingabe Ablagenummer
+  ## Fkt Gültigkeitsprüfung Eingabe Ablagenummer ----
   check_znr <- function(x) {
     x <- as.integer(x)
     na_chk <- is.na(x)
@@ -366,96 +367,98 @@ server <- function(input, output, session) {
   observeEvent(eventExpr = input$bt_write_q2.ident, handlerExpr = fkt_write_bewertung(2))
   observeEvent(eventExpr = input$bt_write_q3.ident, handlerExpr = fkt_write_bewertung(3))
   
+  ### Reload Button ----
+  observeEvent(eventExpr = input$bt_do_aend.ident, handlerExpr = fkt_reload())
+  
   ### Ausgabe Filter Münzen ----
-  output$out_table.ident <- renderTable(expr = tbl_(), spacing = "xs", width = "100%", align = c("lllcrlclll"), sanitize.text.function = function(x) x)
-  tbl_ <- eventReactive(eventExpr = c(input$in_smlg.ident, input$in_id.ident, input$in_mzz.ident, input$in_abb.ident, input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
-                        valueExpr = {
-                          # Anzuzeigende Münzen
-                          show <- filter(all_data(), (Ablage != " " | input$in_smlg.ident != "ja"), (Ablage == " " | input$in_smlg.ident != "nein"),
-                                         grepl(tolower(input$in_id.ident), ID),
-                                         grepl(paste0("\\b", input$in_mzz.ident, "\\b"), Münzzeichen), #('\\b', - Regex word boundary)
-                                         grepl(tolower(input$in_abb.ident), tolower(Abbildung)))
-                          # Anzahl Münzen n (Überschrift inkl Plural)
-                          output$out_h3.ident <- renderText(paste0("<h3>", fkt_form_tsd(dim(show)[1]), " Münze", if(dim(show)[1] != 1) "n " else " ",
-                                                               "&nbsp;(", paste(unique(show$Art), collapse = ' + '), ")</h3>"))
-                          # Ausgabe Ergebnisse Münzen
-                          fkt_datadisplay(df = show, variation = "ident")
-                        })
+  output$out_table.ident <- renderTable(expr = er_tabl.ident(), spacing = "xs", width = "100%", align = c("lllcrlclll"), sanitize.text.function = function(x) x)
+  er_tabl.ident <- eventReactive(eventExpr = c(input$in_smlg.ident, input$in_id.ident, input$in_mzz.ident, input$in_abb.ident,
+                                               input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
+                                  valueExpr = {
+                                    # Anzuzeigende Münzen
+                                    show <- filter(all_data(), (Ablage != " " | input$in_smlg.ident != "ja"), (Ablage == " " | input$in_smlg.ident != "nein"),
+                                                   grepl(tolower(input$in_id.ident), ID),
+                                                   grepl(paste0("\\b", input$in_mzz.ident, "\\b"), Münzzeichen), #('\\b', - Regex word boundary)
+                                                   grepl(tolower(input$in_abb.ident), tolower(Abbildung)))
+                                    # Anzahl Münzen n (Überschrift inkl Plural)
+                                    output$out_h3.ident <- renderText(paste0("<h3>", fkt_form_tsd(dim(show)[1]), " Münze", if(dim(show)[1] != 1) "n " else " ",
+                                                                             "&nbsp;(", paste(unique(show$Art), collapse = ' + '), ")</h3>"))
+                                    # Ausgabe Ergebnisse Münzen
+                                    fkt_datadisplay(df = show, variation = "ident")
+                                    })
 
   ## Unbekannte Auflagenstärke ----
   ### Ausgabe Zahl Auflagenstärke ----
-  output$out_aufl.unbek <- renderText(expr = zahl_form())
-  zahl_form <- eventReactive(eventExpr = input$in_aufl.unbek, valueExpr = form_aufl(input$in_aufl.unbek))
+  output$out_aufl.erf <- renderText(expr = er_auf.erf())
+  er_auf.erf <- eventReactive(eventExpr = input$in_aufl.erf, valueExpr = form_aufl(input$in_aufl.erf))
   
   ## Auflage  Buttons ----
-  observeEvent(eventExpr = input$bt_do_erf.unbek,
-               handlerExpr = updateTextInput(session, inputId = "in_erf.unbek", value = paste0(input$in_erf.unbek, input$myselection, "-", input$in_aufl.unbek, "\n")))
-  observeEvent(eventExpr = input$bt_write_aufl.unbek, handlerExpr = {
-    out <- input$in_erf.unbek
+  observeEvent(eventExpr = input$bt_do_erf.erf,
+               handlerExpr = updateTextInput(session, inputId = "in_erf.erf", value = paste0(input$in_erf.erf, input$myselection, "-", input$in_aufl.erf, "\n")))
+  observeEvent(eventExpr = input$bt_write_aufl.erf, handlerExpr = {
+    out <- input$in_erf.erf
     while(str_sub(out, -1) == "\n") out <- str_sub(out, 1, -2)
     write_lines(out, file = "eur2coins_circulation.txt", append = TRUE)
     fkt_reload()
-    updateTextInput(session, inputId = "in_erf.unbek", value = "")
+    updateTextInput(session, inputId = "in_erf.erf", value = "")
   })
   
   ## Ausgabe Unbekannte Auflagenstärke ----
-  output$out_table.unbek <- renderTable(expr = uaufl_(), spacing = "xs", width = "100%", align = c("lllcrl"), sanitize.text.function = function(x) x)
-  uaufl_ <- eventReactive(eventExpr = c(input$bt_write_aufl.unbek, input$bt_do_aend.ident),
-                         valueExpr = {
-                           # Anzuzeigende Münzen
+  output$out_table.erf <- renderTable(expr = er_table.erf(), spacing = "xs", width = "100%", align = c("lllcrl"), sanitize.text.function = function(x) x)
+  er_table.erf <- eventReactive(eventExpr = c(input$bt_write_aufl.erf, input$bt_do_aend.ident),
+                                  valueExpr = {
+                                    # Anzuzeigende Münzen
                            show <- filter(all_data(), is.na(Hfgkt))
                            # Anzahl Münzen n (Überschrift inkl Plural)
-                           output$out_h3.unbek <- renderText(paste0("<h3>", fkt_form_tsd(dim(show)[1]), " Münze", if(dim(show)[1] != 1) "n " else " ", "</h3>"))
+                           output$out_h3.erf <- renderText(paste0("<h3>", fkt_form_tsd(dim(show)[1]), " Münze", if(dim(show)[1] != 1) "n " else " ", "</h3>"))
                            # Ausgabe Ergebnisse Münzen
                            fkt_datadisplay(df = show, variation = "uaufl")
                          })
   
   ## Erfasste AUflagenstärke ----
   ### Reset Buttons ----  
-  observeEvent(eventExpr = input$bt_reset_id.erf, handlerExpr = updateTextInput(session, inputId = "in_id.erf", value = ""))
-  observeEvent(eventExpr = input$bt_reset_mzz.erf, handlerExpr = updateTextInput(session, inputId = "in_mzz.erf", value = ""))
-  observeEvent(eventExpr = input$bt_reset_abb.erf, handlerExpr = updateTextInput(session, inputId = "in_abb.erf", value = ""))
+  observeEvent(eventExpr = input$bt_reset_id.korr, handlerExpr = updateTextInput(session, inputId = "in_id.korr", value = ""))
+  observeEvent(eventExpr = input$bt_reset_mzz.korr, handlerExpr = updateTextInput(session, inputId = "in_mzz.korr", value = ""))
+  observeEvent(eventExpr = input$bt_reset_abb.korr, handlerExpr = updateTextInput(session, inputId = "in_abb.korr", value = ""))
   
   ### Synchonisiere Filter mit Identifikation ----
   observeEvent(eventExpr = c(input$in_id.ident, input$in_mzz.ident, input$in_abb.ident),
                handlerExpr = {
-                 updateTextInput(session = session, inputId = "in_id.erf", value = input$in_id.ident)
-                 updateTextInput(session = session, inputId = "in_mzz.erf", value = input$in_mzz.ident)
-                 updateTextInput(session = session, inputId = "in_abb.erf", value = input$in_abb.ident)
+                 updateTextInput(session = session, inputId = "in_id.korr", value = input$in_id.ident)
+                 updateTextInput(session = session, inputId = "in_mzz.korr", value = input$in_mzz.ident)
+                 updateTextInput(session = session, inputId = "in_abb.korr", value = input$in_abb.ident)
                  })
   
   ### Ausgabe Zahl Auflagenstärke----
-  output$out_aufl.erf <- renderText(expr = zahl_korr_form())
-  zahl_korr_form <- eventReactive(eventExpr = input$in_aufl.erf, valueExpr = form_aufl(input$in_aufl.erf))
+  output$out_aufl.korr <- renderText(expr = er_aufl.korr())
+  er_aufl.korr <- eventReactive(eventExpr = input$in_aufl.korr, valueExpr = form_aufl(input$in_aufl.korr))
 
   ### Schreiben einer neuen/korrigierten Auflagenstärke ----
-  observeEvent(eventExpr = input$bt_write_aufl.erf,
+  observeEvent(eventExpr = input$bt_write_aufl.korr,
                handlerExpr = {
                  # Abbild des Files
                  tmp <- select(circulation, ID, Auflage)
                  # Ändern
-                 tmp[tmp$ID == input$myselection, "Auflage"] <- as.numeric(input$in_aufl.erf)
+                 tmp[tmp$ID == input$myselection, "Auflage"] <- as.numeric(input$in_aufl.korr)
                  # Schreiben
-                 write_lines(
-                   paste(tmp$ID, tmp$Auflage, sep = "-"),
-                   "eur2coins_circulation.txt")
+                 write_lines(paste(tmp$ID, tmp$Auflage, sep = "-"), "eur2coins_circulation.txt")
                  fkt_reload()
-               })
+                 })
   
   ### Ausgabe Erfasste Auflagenstärke ----
-  output$out_table.erf <- renderTable(expr = eaufl_(), spacing = "xs", width = "100%", align = c("lllcrlrc"), sanitize.text.function = function(x) x)
-  eaufl_ <- eventReactive(eventExpr = c(input$in_id.erf, input$in_mzz.erf, input$in_abb.erf, input$bt_write_aufl.erf),
-                          valueExpr = {
-                            # Anzuzeigende Münzen
-                            show <- filter(all_data(), !is.na(Hfgkt),
-                                           grepl(tolower(input$in_id.erf), ID),
-                                           grepl(paste0("\\b", input$in_mzz.erf, "\\b"), Münzzeichen),
-                                           grepl(tolower(input$in_abb.erf), tolower(Abbildung)))
-                            # Anzahl Münzen n (Überschrift inkl Plural)
-                            output$out_h3.erf <- renderText(paste0("<h3>", fkt_form_tsd(dim(show)[1]), " Münze", if(dim(show)[1] != 1) "n " else " ", "</h3>"))
-                            # Ausgabe Ergebnisse Münzen
-                            fkt_datadisplay(df = show, variation = "eaufl")
-                          })
+  output$out_table.korr <- renderTable(expr = er_table.korr(), spacing = "xs", width = "100%", align = c("lllcrlrc"), sanitize.text.function = function(x) x)
+  er_table.korr <- eventReactive(eventExpr = c(input$in_id.korr, input$in_mzz.korr, input$in_abb.korr, input$bt_write_aufl.korr),
+                                valueExpr = {
+                                  # Anzuzeigende Münzen
+                                  show <- filter(all_data(), !is.na(Hfgkt),
+                                                 grepl(tolower(input$in_id.korr), ID),
+                                                 grepl(paste0("\\b", input$in_mzz.korr, "\\b"), Münzzeichen),
+                                                 grepl(tolower(input$in_abb.korr), tolower(Abbildung)))
+                                  # Anzahl Münzen n (Überschrift inkl Plural)
+                                  output$out_h3.korr <- renderText(paste0("<h3>", fkt_form_tsd(dim(show)[1]), " Münze", if(dim(show)[1] != 1) "n " else " ", "</h3>"))
+                                  # Ausgabe Ergebnisse Münzen
+                                  fkt_datadisplay(df = show, variation = "eaufl")
+                                  })
   
   ## Ablage ---
   ### Schnellwahl Schritte ----
@@ -466,35 +469,36 @@ server <- function(input, output, session) {
   observeEvent(eventExpr = input$bt_do_getablnr.abl, handlerExpr = updateTextInput(session, inputId = "in_ablnr.abl", value = input$myselection))
   
   ### Ausgabe Ablage ----
-  output$out_tableau.abl <- renderTable(expr = erst_tab(), spacing = "l", width = "90%", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
-  erst_tab <- eventReactive(eventExpr = c(input$in_box.abl, input$in_tableau.abl, input$in_ablnr.abl, input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
-                            valueExpr = {
-                              # Anzeige Tableau
-                              tmp <- collection |> 
-                                filter(Zeilennummer %in% (((input$in_box.abl - 1) * 144 + (input$in_tableau.abl - 1) * 24 + 1) + 0:23)) |> 
-                                arrange(Zeilennummer) |>
-                                mutate(Qualität = fkt_form_quali(Qualität),
-                                  This_left = case_when(input$in_ablnr.abl == Zeilennummer ~ "<span class = 'bar'>&#9612;&thinsp;</span>",
-                                                        TRUE ~ ""),
-                                  This_right = case_when(input$in_ablnr.abl == Zeilennummer ~ "<span class = 'bar'>&thinsp;&#9616;</span>",
-                                                         TRUE ~ ""), # kein nbsp wegen doppelklick-markierung
-                                  Res = paste0("<div class='mono', align = 'center'>", This_left, str_sub(Ablage, 1, 5), str_sub(Ablage, 6, 9 - nchar(Zeilennummer)), "&middot;", "<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u>", This_right, "</div>",
-                                               "<div class='mono', align = 'center'><b>", This_left, str_sub(ID, 1, 7), "</b>&middot;", str_sub(ID, 8, 9), This_right, "</div>",
-                                               "<div align = 'center'>", Qualität, "</div>")) |>
-                                pull(Res)
-                              if(length(tmp) < 24) tmp <- c(tmp, rep("<br><div class='mono'><i>< l e e r ></i></div><br>", 24 - length(tmp)))
-                              # Ablageadresse (Überschrift)
-                              output$out_h3tableau.abl <- renderText(expr = paste0("<h3>Box ", input$in_box.abl, ", Tableau ", input$in_tableau.abl, ": Ablagenummern ",
-                                                                         (input$in_box.abl - 1) * 144 + (input$in_tableau.abl - 1) * 24 + 1, " bis ", (input$in_box.abl - 1) * 144 + input$in_tableau.abl * 24, "</h3>"))
-                              # Ablagenummer (Überschrift)
-                              output$out_h3aktmz.abl <- renderText(expr = paste0("<h3>Ablagenummer: ", input$in_ablnr.abl, "</h3>"))
-                              # Ausgabe
-                              matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE,
-                                     dimnames = list(paste0("<br><b>", input$in_box.abl, input$in_tableau.abl, "&thinsp;", 1:4, "..", "</b>"),
-                                                     paste0("..", 1:6)
-                                     )
-                              )
-                            }, ignoreNULL = FALSE)
+  output$out_tableau.abl <- renderTable(expr = er_tableau.abl(), spacing = "l", width = "90%", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
+  er_tableau.abl <- eventReactive(eventExpr = c(input$in_box.abl, input$in_tableau.abl, input$in_ablnr.abl,
+                                                input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
+                                  valueExpr = {
+                                    # Anzeige Tableau
+                                    tmp <- collection |> 
+                                      filter(Zeilennummer %in% (((input$in_box.abl - 1) * 144 + (input$in_tableau.abl - 1) * 24 + 1) + 0:23)) |> 
+                                      arrange(Zeilennummer) |>
+                                      mutate(Qualität = fkt_form_quali(Qualität),
+                                             This_left = case_when(input$in_ablnr.abl == Zeilennummer ~ "<span class = 'bar'>&#9612;&thinsp;</span>",
+                                                                   TRUE ~ ""),
+                                             This_right = case_when(input$in_ablnr.abl == Zeilennummer ~ "<span class = 'bar'>&thinsp;&#9616;</span>",
+                                                                    TRUE ~ ""), # kein nbsp wegen doppelklick-markierung
+                                             Res = paste0("<div class='mono', align = 'center'>", This_left, str_sub(Ablage, 1, 5), str_sub(Ablage, 6, 9 - nchar(Zeilennummer)), "&middot;", "<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u>", This_right, "</div>",
+                                                          "<div class='mono', align = 'center'><b>", This_left, str_sub(ID, 1, 7), "</b>&middot;", str_sub(ID, 8, 9), This_right, "</div>",
+                                                          "<div align = 'center'>", Qualität, "</div>")) |>
+                                      pull(Res)
+                                    if(length(tmp) < 24) tmp <- c(tmp, rep("<br><div class='mono'><i>< l e e r ></i></div><br>", 24 - length(tmp)))
+                                    # Ablageadresse (Überschrift)
+                                    output$out_h3tableau.abl <- renderText(expr = paste0("<h3>Box ", input$in_box.abl, ", Tableau ", input$in_tableau.abl, ": Ablagenummern ",
+                                                                                         (input$in_box.abl - 1) * 144 + (input$in_tableau.abl - 1) * 24 + 1, " bis ",
+                                                                                         (input$in_box.abl - 1) * 144 + input$in_tableau.abl * 24, "</h3>"))
+                                    # Ablagenummer (Überschrift)
+                                    output$out_h3aktmz.abl <- renderText(expr = paste0("<h3>Ablagenummer: ", input$in_ablnr.abl, "</h3>"))
+                                    # Ausgabe
+                                    matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE,
+                                           dimnames = list(paste0("<br><b>", input$in_box.abl, input$in_tableau.abl, "&thinsp;", 1:4, "..", "</b>"),
+                                                           paste0("..", 1:6)))
+                                    },
+                                  ignoreNULL = FALSE)
   
   ### Ausgabe Auswahl Zeilennummer ----
   output$out_aktmz.abl <- renderTable(expr = tbl_abl(), spacing = "xs", width = "100%", align = c("lllcrlclll"), sanitize.text.function = function(x) x)
@@ -512,30 +516,29 @@ server <- function(input, output, session) {
 
   ## Statistik ---
   ### Ausgabe Zusammenfassung Jahr ----
-  output$out_jahr.stat <- renderTable(expr = fkt_stat_jahr(), spacing = "xs", align = c("rrrl"), sanitize.text.function = function(x) x)
-  fkt_stat_jahr <- eventReactive(eventExpr = c(input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
+  output$out_jahr.stat <- renderTable(expr = er_jahr.stat(), spacing = "xs", align = c("rrrl"), sanitize.text.function = function(x) x)
+  er_jahr.stat <- eventReactive(eventExpr = c(input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
                                 valueExpr = fkt_form_stat("Jahr", 1, 4),
                                 ignoreNULL = FALSE)
   
   ### Ausgabe Zusammenfassung Land ----
-  output$out_land.stat <- renderTable(expr = fkt_stat_land(), spacing = "xs", align = c("lrrl"), sanitize.text.function = function(x) x)
-  fkt_stat_land <- eventReactive(eventExpr = c(input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
-                                 valueExpr = fkt_form_stat("Land", 5, 6) |> 
-                                   mutate(Land = fkt_form_land(Land)),
-                                 ignoreNULL = FALSE)
+  output$out_land.stat <- renderTable(expr = er_land.stat(), spacing = "xs", align = c("lrrl"), sanitize.text.function = function(x) x)
+  er_land.stat <- eventReactive(eventExpr = c(input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
+                                valueExpr = fkt_form_stat("Land", 5, 6) |> 
+                                  mutate(Land = fkt_form_land(Land)),
+                                ignoreNULL = FALSE)
   
   ### Ausgabe Zusammenfassung Qualität ----
-  output$out_qual.stat <- renderTable(expr = fkt_stat_qual(), spacing = "xs", align = c("lrr"), sanitize.text.function = function(x) x)
-  fkt_stat_qual <- eventReactive(eventExpr = c(input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
-                                 valueExpr = {
-                                   collection|> 
-                                     group_by(Qualität = Qualität |>  ordered(levels = 0:3, labels = fkt_form_quali(0:3)), .drop = FALSE) |> 
-                                     count() |> 
-                                     transmute(Anzahl = n,
-                                               Anteil = formatC(Anzahl / dim(collection)[1] * 100, 2, format = "f", decimal.mark = ",")
-                                               )
-                                   },
-                                 ignoreNULL = FALSE)
+  output$out_qual.stat <- renderTable(expr = er_qual.stat(), spacing = "xs", align = c("lrr"), sanitize.text.function = function(x) x)
+  er_qual.stat <- eventReactive(eventExpr = c(input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
+                                valueExpr = {
+                                  collection|> 
+                                    group_by(Qualität = Qualität |>  ordered(levels = 0:3, labels = fkt_form_quali(0:3)), .drop = FALSE) |> 
+                                    count() |> 
+                                    transmute(Anzahl = n,
+                                              Anteil = formatC(Anzahl / dim(collection)[1] * 100, 2, format = "f", decimal.mark = ","))
+                                  },
+                                ignoreNULL = FALSE)
   
 }
 
