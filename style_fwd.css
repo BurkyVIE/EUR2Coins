@@ -1,19 +1,7 @@
+/* Generelle Anzeige */
 body {
   background-color: #f7efe0;
   font-size: 15px;
-}
-
-.rare {
-  color: #f7efe0;
-}
-
-table, th, td {
-  /*border: 1px dotted black;*/
-  background-color: transparent !important;
-}
-
- .longtab tr:nth-child(3n) {
-  background-color: rgba(32, 32, 32, .05) !important; /*#ded7ca*/
 }
 
 h1 {
@@ -36,20 +24,25 @@ h3 {
   font-size: 20px;
 }
 
+.beschr {
+  font-size: 85%;
+}
+
 code {
   color: #ed0000;
 }
 
-.bar {
-  color: #ed0000;
+.flag {
+  font-size: 75%;
 }
 
-div.row {
-  border-width: 0px;
+dbwert {
+  letter-spacing: 1px;
 }
 
-.beschr {
-  font-size: 85%;
+.herv {
+  border: groove;
+  border-radius: 5px;
 }
 
 .mono {
@@ -57,22 +50,112 @@ div.row {
   font-size: 105%;
 }
 
+.bar {
+  color: #ed0000;
+}
+
+/* Tabellen */
+table, th, td {
+  background-color: transparent !important;
+  vertical-align: middle !important;
+}
+
+.longtab tbody tr:nth-child(3n+1) {
+  background-color: rgba(32, 32, 32, .05);
+}
+
+/* Tableau / Matrix */
+.matrix th:nth-child(7n+1), .matrix td:nth-child(7n+1) {
+  border-right: 1px solid;
+}
+
+.matrix th, .matrix td:nth-child(7n+1) {
+  background-color: rgba(0, 123, 194, .05) !important;
+}
+
+.matrix th, .matrix td {
+  align:  center;
+  vertical-align: middle;
+  border-right: 1px dotted;
+  border-bottom: 1px dotted;
+}
+
+.wahl {
+  border: 2px solid #ed0000;
+  border-radius: 20px;
+  background-color: rgba(237, 0, 0, .05) !important;
+}
+
+/* Qualität */
+.q0 {
+  color: #daa520;
+}
+
+.q1 {
+  color: #5f9321;
+}
+
+.q2 {
+  color: #1b7547;
+}
+
+.q3 {
+  color: #0e4c92;
+}
+
+.qF {
+  color: #b22222;
+}
+
+.q0, .q1, .q2, .q3 {
+  font-size: 105%;
+}
+
+
+/* Häufigkeit */
+.rare1 {
+  background-color: #b22222;
+}
+
+.rare2 {
+  background-color: #c56320;
+}
+
+.rare3 {
+  background-color: #daa520;
+}
+
+.rare4 {
+  background-color: #7d9820;
+}
+
+.rare5 {
+  background-color: #228b22;
+}
+
+.rare1, .rare2, .rare3, .rare4, .rare5 {
+  color:#f7efe0;
+  border-radius: 5px;
+}
+
+
+
+/* Farbbeispiele */
   {
-  /*Seite*/
+  /* Generelle Anzeige */
   #f7efe0
-  #ded7ca
   #02acd6
   #01aad4
   #018eb0
   #ed0000
   
-  /*Qualität*/
+  /* Qualität */
   #daa520
   #5f9321
   #1b7547
   #0e4c92
   
-  /*Häufigkeit*/
+  /* Häufigkeit */
   #b22222
   #c56320
   #daa520

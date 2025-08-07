@@ -13,7 +13,7 @@ all_data <- function() {
   left_join(coins,
             collection %>% select(ID, Qualität, Ablage),
             by = 'ID') |> 
-    mutate(Ablage = coalesce(Ablage, " ")) |> 
+    # mutate(Ablage = coalesce(Ablage, " ")) |> 
     left_join(circulation, by = join_by(ID))
 }
 
@@ -76,9 +76,9 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
           fluidRow(
             h3("Qualität"),
               column(width = 3, actionButton(inputId = "bt_write_q0.ident", label = "(0) ★★★", width = "100%", style = "padding:6px;")), # &starf;
-              column(width = 3, actionButton(inputId = "bt_write_q1.ident", label = "(1) ★★", width = "100%", style = "padding:6px;")), # &starf;
-              column(width = 3, actionButton(inputId = "bt_write_q2.ident", label = "(2) ✓✓", width = "100%", style = "padding:6px;")), # &check;
-              column(width = 3, actionButton(inputId = "bt_write_q3.ident", label = "(3) ✓", width = "100%", style = "padding:6px;")), # &check;
+              column(width = 3, actionButton(inputId = "bt_write_q1.ident", label = "(1) ☆★★", width = "100%", style = "padding:6px;")), # &star; 
+              column(width = 3, actionButton(inputId = "bt_write_q2.ident", label = "(2) ☆☆★", width = "100%", style = "padding:6px;")), 
+              column(width = 3, actionButton(inputId = "bt_write_q3.ident", label = "(3) ☆☆☆", width = "100%", style = "padding:6px;")), 
             p(div(class = 'beschr', "[...] Übernimmt markierte ", em("Münz ID"), "und ändert/ergänzt gewählte Qualität im File eur2collection.txt"))),
           fluidRow(
             h3("eur2collection.txt"),
@@ -197,7 +197,7 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
         h2("Aktives Tableau", .noWS = "before"),
         fluidRow(
           htmlOutput(outputId = "out_h3tableau.abl"),
-          tableOutput(outputId = "out_tableau.abl")),
+          div(class = 'matrix', tableOutput(outputId = "out_tableau.abl"))),
         h2("Aktive Münze", .noWS = "before"),
         fluidRow(
           htmlOutput(outputId = "out_h3aktmz.abl"),
@@ -214,6 +214,9 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
           h3("Land"),
           tableOutput(outputId = "out_land.stat")),
         column(width = 4,
+          h3("Münzart"),
+          tableOutput(outputId = "out_art.stat"),
+          HTML("<br>"),
           h3("Qualität"),
           tableOutput(outputId = "out_qual.stat"),
           HTML("<br>"),
@@ -235,21 +238,11 @@ server <- function(input, output, session) {
   ### v.a. in den Unter-Überschriften und bei Auflagenstärken
   fkt_form_tsd <- function (x) format(as.numeric(x), big.mark = "&nbsp;", scientific = FALSE)
   
-  ### Fkt Formatieren Qualität ----
-  fkt_form_quali <- function(x) {
-    case_when(is.na(x) ~ "",
-              x == 0 ~ "<span style='color: #daa520; background-color: rgba(255, 255, 255, .30'>(0)&nbsp;&#9733;&#9733;&#9733;</span>",
-              x == 1 ~ "<span style='color: #5f9321; background-color: rgba(255, 255, 255, .30'>(1)&nbsp;&#9733;&#9733;</span>",
-              x == 2 ~ "<span style='color: #1b7547; background-color: rgba(255, 255, 255, .30'>(2)&nbsp;&#10004;&#10004;</span>",
-              x == 3 ~ "<span style='color: #0e4c92; background-color: rgba(255, 255, 255, .30'>(3)&nbsp;&#10004;</span>",
-              TRUE ~ "<span style ='color: red'>FEHLER</span>")
-  }
-  
   ### Fkt Formatieren Land ----
   fkt_form_land <- function(txt) {
     txt <- tolower(txt) # jedenfalls Kleinbuchstaben
-    paste0("<nobr style='font-size: 0.75em'><img src='https://www.crwflags.com/fotw/images/", substr(txt, 1, 1), "/", txt, ".gif',
-           height='14', alt='", toupper(txt), "'>&nbsp;&nbsp;/&nbsp;", toupper(txt), "</nobr>")
+    paste0("<nobr class = 'flag'><img src='https://www.crwflags.com/fotw/images/", substr(txt, 1, 1), "/", txt, ".gif',
+           height='15', alt='", toupper(txt), "'>&nbsp;&nbsp;(", toupper(txt), ")</nobr>")
   }
   
   ### Fkt Formatieren Amtsblatt ----
@@ -262,18 +255,28 @@ server <- function(input, output, session) {
   
   ### Fkt Formatieren Art (Münzart) ----
   fkt_form_art <- function(txt) {
-    txt[txt == "G"] <- "<span style='font-size: 1.1em'>Ⓖ</span>"
-    txt[txt == "K"] <- "<span style='font-size: 1.1em'>Ⓚ</span>"
+    txt[txt == "G"] <- "<span>&#10629;&#120022;&#10630;</span>" # Ⓖ
+    txt[txt == "K"] <- "<span>&#10629;&#120026;&#10630;</span>" # Ⓚ
     return(txt)
   }
   
   ### Fkt Formatieren Häufigkeit ----
   fkt_form_hfgkt <- function(txt) {
-    c("<div class='rare' style='background-color: #b22222b5'>▼</div>",
-      "<div class='rare' style='background-color: #c56320b5'>▽</div>",
-      "<div class='rare' style='background-color: #daa520b5'>♢</div>",
-      "<div class='rare' style='background-color: #7d9820b5'>△</div>",
-      "<div class='rare' style='background-color: #228b22b5'>▲</div>")[txt]
+    c("<nobr class='rare1'>&emsp;&#9660;&emsp;</nobr>",
+      "<nobr class='rare2'>&emsp;&#9661;&emsp;</nobr>",
+      "<nobr class='rare3'>&emsp;&#9634;&emsp;</nobr>",
+      "<nobr class='rare4'>&emsp;&#9651;&emsp;</nobr>",
+      "<nobr class='rare5'>&emsp;&#9650;&emsp;</nobr>")[txt]
+  }
+  
+  ### Fkt Formatieren Qualität ----
+  fkt_form_quali <- function(x) {
+    case_when(is.na(x) ~ "",
+              x == 0 ~ "<nobr class = 'q0'>(0)&nbsp;&starf;&starf;&starf;</nobr>",
+              x == 1 ~ "<nobr class = 'q1'>(1)&nbsp;&star;&starf;&starf;</nobr>",
+              x == 2 ~ "<nobr class = 'q2'>(2)&nbsp;&star;&star;&starf;</nobr>",
+              x == 3 ~ "<nobr class = 'q3'>(3)&nbsp;&star;&star;&star;</nobr>",
+              TRUE ~ "<nobr class = 'qF'><i>&nbsp;FEHLER&nbsp;<i></nobr>")
   }
   
   ### Fkt Darstellung Daten (switch)----
@@ -282,9 +285,10 @@ server <- function(input, output, session) {
                  Jahr = Prägejahr,
                  Land = fkt_form_land(Land),
                  Amtsblatt = fkt_form_amtsbl(Amtsblatt),
-                 ID = paste0("<div class='mono'>", ID, "</div>"),
+                 ID = paste0("<dbwert class='mono herv'>", ID, "</dbwert>"),
                  Qualität = fkt_form_quali(Qualität),
-                 Ablage = paste0("<div class='mono'>", Ablage, "</div>"),
+                 Ablage = case_when(is.na(Ablage) ~ "",
+                                    TRUE ~ paste0("<dbwert class='mono herv'>", Ablage, "</dbwert>")),
                  AQ = paste0(Ablage, Qualität),
                  Art = fkt_form_art(Art),
                  Hfgkt = fkt_form_hfgkt(Hfgkt)) |> 
@@ -372,7 +376,7 @@ server <- function(input, output, session) {
   observeEvent(eventExpr = input$bt_do_aend.ident, handlerExpr = fkt_reload())
   
   ### Ausgabe Ergebnis ----
-  output$out_table.ident <- renderTable(expr = er_tabl.ident(), spacing = "xs", width = "100%", align = c("lllcrlclll"), sanitize.text.function = function(x) x)
+  output$out_table.ident <- renderTable(expr = er_tabl.ident(), spacing = "xs", width = "100%", align = c("lllcrlclcl"), sanitize.text.function = function(x) x)
   er_tabl.ident <- eventReactive(eventExpr = c(input$in_smlg.ident, input$in_id.ident, input$in_mzz.ident, input$in_abb.ident,
                                                input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
                                  valueExpr = {
@@ -479,15 +483,13 @@ server <- function(input, output, session) {
                                       filter(Zeilennummer %in% (((input$in_box.abl - 1) * 144 + (input$in_tableau.abl - 1) * 24 + 1) + 0:23)) |> 
                                       arrange(Zeilennummer) |>
                                       mutate(Qualität = fkt_form_quali(Qualität),
-                                             This_left = case_when(input$in_ablnr.abl == Zeilennummer ~ "<span class = 'bar'>&#9612;&thinsp;</span>",
-                                                                   TRUE ~ "&nbsp;&thinsp;"),
-                                             This_right = case_when(input$in_ablnr.abl == Zeilennummer ~ "<span class = 'bar'>&thinsp;&#9616;</span>",
-                                                                    TRUE ~ "&ZeroWidthSpace;&thinsp;&nbsp;"), # zeroWidht wegen Doppelklick-Markierung der ABlagenummer
-                                             Res = paste0("<div class='mono', align = 'center'>", This_left, str_sub(Ablage, 1, 5), str_sub(Ablage, 6, 9 - nchar(Zeilennummer)), "&middot;", "<u><b>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</b></u>", This_right, "</div>",
-                                                          "<div class='mono', align = 'center'><b>", This_left, str_sub(ID, 1, 7), "</b>&middot;", str_sub(ID, 8, 9), This_right, "</div>",
-                                                          "<div align = 'center'>", Qualität, "</div>")) |>
+                                             Mark_start = case_when(input$in_ablnr.abl == Zeilennummer ~ "<div class = 'wahl'>", TRUE ~ ""),
+                                             Mark_ende = case_when(input$in_ablnr.abl == Zeilennummer ~ "</div>", TRUE ~ ""),
+                                             Res = paste0(Mark_start, "<dbwert><nobr class='mono'>", str_sub(Ablage, 1, 9 - nchar(Zeilennummer)), "&ZeroWidthSpace;", "<b><u>", str_sub(Ablage, 9 - nchar(Zeilennummer) + 1, 9), "</u></b>&ZeroWidthSpace;<br>", # zeroWidht wegen Doppelklick-Markierung der Ablagenummer
+                                                          "<b>", str_sub(ID, 1, 7), "</b>", str_sub(ID, 8, 9), "</nobr></dbwert><br>",
+                                                          Qualität, Mark_ende)) |>
                                       pull(Res)
-                                    if(length(tmp) < 24) tmp <- c(tmp, rep("<br><div class='mono'><i>< l e e r ></i></div><br>", 24 - length(tmp)))
+                                    if(length(tmp) < 24) tmp <- c(tmp, rep("<br><div class='mono'><i>l&nbsp;e&nbsp;e&nbsp;r</i></div><br>", 24 - length(tmp)))
                                     # Ablageadresse (Überschrift)
                                     output$out_h3tableau.abl <- renderText(expr = paste0("<h3>Box ", input$in_box.abl, ", Tableau ", input$in_tableau.abl, ": Ablagenummern ",
                                                                                          (input$in_box.abl - 1) * 144 + (input$in_tableau.abl - 1) * 24 + 1, " bis ",
@@ -496,8 +498,8 @@ server <- function(input, output, session) {
                                     output$out_h3aktmz.abl <- renderText(expr = paste0("<h3>Ablagenummer: ", input$in_ablnr.abl, "</h3>"))
                                     # Ausgabe
                                     matrix(tmp, ncol = 6, nrow = 4, byrow = TRUE,
-                                           dimnames = list(paste0("<br><b>", input$in_box.abl, input$in_tableau.abl, "&thinsp;", 1:4, "..", "</b>"),
-                                                           paste0("..", 1:6)))
+                                           dimnames = list(paste0("<b>", input$in_box.abl, input$in_tableau.abl, 1:4, "&#0133;", "</b>"),
+                                                           paste0("&#0133;", 1:6)))
                                     },
                                   ignoreNULL = FALSE)
   
@@ -529,11 +531,23 @@ server <- function(input, output, session) {
                                   mutate(Land = fkt_form_land(Land)),
                                 ignoreNULL = FALSE)
   
+  ### Ausgabe Zusammenfassung Münzart ----
+  output$out_art.stat <- renderTable(expr = er_art.stat(), spacing = "xs", align = c("crr"), sanitize.text.function = function(x) x)
+  er_art.stat <- eventReactive(eventExpr = c(input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
+                               valueExpr = {
+                                 filter(all_data(), !is.na(Ablage)) |> 
+                                   group_by(Art = Art |>  ordered(levels = c("G", "K"), labels = fkt_form_art(c("G", "K"))), .drop = FALSE) |> 
+                                   count() |> 
+                                   transmute(Anzahl = n,
+                                             Anteil = formatC(Anzahl / dim(collection)[1] * 100, 2, format = "f", decimal.mark = ","))
+                               },
+                               ignoreNULL = FALSE)
+
   ### Ausgabe Zusammenfassung Qualität ----
-  output$out_qual.stat <- renderTable(expr = er_qual.stat(), spacing = "xs", align = c("lrr"), sanitize.text.function = function(x) x)
+  output$out_qual.stat <- renderTable(expr = er_qual.stat(), spacing = "xs", align = c("crr"), sanitize.text.function = function(x) x)
   er_qual.stat <- eventReactive(eventExpr = c(input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
                                 valueExpr = {
-                                  filter(all_data(), Ablage != " ") |> 
+                                  filter(all_data(), !is.na(Ablage)) |> 
                                     group_by(Qualität = Qualität |>  ordered(levels = 0:3, labels = fkt_form_quali(0:3)), .drop = FALSE) |> 
                                     count() |> 
                                     transmute(Anzahl = n,
@@ -545,13 +559,14 @@ server <- function(input, output, session) {
   output$out_hfgkt.stat <- renderTable(expr = er_hfgkt.stat(), spacing = "xs", align = c("crr"), sanitize.text.function = function(x) x)
   er_hfgkt.stat <- eventReactive(eventExpr = c(input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
                                  valueExpr = {
-                                   filter(all_data(), Ablage != " ") |> 
-                                     group_by(Häufigkeit = Hfgkt |>  ordered(levels = 1:5, labels = fkt_form_hfgkt(1:5)), .drop = FALSE) |> 
+                                   filter(all_data(), !is.na(Ablage)) |> 
+                                     group_by(Häufigkeit = Hfgkt |>  ordered(levels = 5:1, labels = fkt_form_hfgkt(5:1)), .drop = FALSE) |> 
                                      count() |> 
                                      transmute(Anzahl = n,
                                                Anteil = formatC(Anzahl / dim(collection)[1] * 100, 2, format = "f", decimal.mark = ","))
                                    },
                                  ignoreNULL = FALSE)
+
 }
 
 # Run the application ----
