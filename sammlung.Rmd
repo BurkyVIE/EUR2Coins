@@ -29,16 +29,16 @@ df <- left_join(coins, collection |> select(ID, Qualität, Ablage), by = 'ID') |
   filter(!is.na(Qualität)) |> # nur noch nicht gesammelte
   transmute(Jahr = Prägejahr,
             Land,
-            Bild = case_when(nchar(Abbildung) > 70 ~ paste0(str_sub(Abbildung, 1, 70), "..."),
+            Mzz = abbreviate(Münzzeichen, 7), 
+            Motiv = case_when(nchar(Abbildung) > 70 ~ paste0(str_sub(Abbildung, 1, 70), "..."),
                              TRUE ~ Abbildung),
-            Mz = abbreviate(Münzzeichen, 5), 
             Qualität, Hfgkt) |> 
   mutate(Qualität = case_when(Qualität == 0 ~ "(0) ★★★", # Geschütztes Leerzeichen (Alt + 0160)
-                              Qualität == 1 ~ "(1) ★★",
-                              Qualität == 2 ~ "(2) ✓✓",
-                              Qualität == 3 ~ "(3) ✓"),
-         Hfgkt = c("⩔", "˅", "-", "˄", "⩓")[Hfgkt]) |>
-  arrange(Jahr, Land, Bild, Mz) |> 
+                              Qualität == 1 ~ "(1) ☆★★",
+                              Qualität == 2 ~ "(2) ☆☆★",
+                              Qualität == 3 ~ "(3) ☆☆☆"),
+         Hfgkt = c("▼", "▽", "▢", "△", "▲")[Hfgkt]) |>
+  arrange(Jahr, Land, Motiv, Mzz) |> 
   group_by(Jahr)
 ```
 
