@@ -24,8 +24,9 @@ h1.title {
 </style>
 
 ```{r data, echo=FALSE}
-df <- left_join(coins, collection |> select(ID, Qualität, Ablage), by = 'ID') |>
-  left_join(circulation, by = 'ID') |> 
+df <- Reduce(function(...) merge(..., by = "ID", all.x = TRUE, no.dups = TRUE),
+             list(coins, collection |> select(ID, Qualität, Ablage), circulation)) |> 
+  as_tibble() |> 
   filter(!is.na(Ablage)) |> # nur noch nicht gesammelte
   transmute(Jahr = Prägejahr,
             Land,
@@ -45,11 +46,12 @@ df <- left_join(coins, collection |> select(ID, Qualität, Ablage), by = 'ID') |
 ```{r table}
 gt::gt(df) |> 
   gt::data_color(columns = "Qualität", target_columns = everything(),
-                 palette = "Greens", alpha = .5, reverse = TRUE, method = "factor",
+                 palette = "YlGn", alpha = .5, reverse = TRUE, method = "factor",
                  contrast_algo = "wcag") |>  
+  gt::cols_align(align = "right", columns = "Mzz") |> 
   gt::cols_align(align = "center", columns = "Hfgkt") |> 
   gt::tab_options(table.font.size = 11,
-                  row_group.background.color = "grey50",
+                  row_group.background.color = "grey45",
                   row_group.font.weight = "bold",
                   row_group.padding = 2,
                   data_row.padding = 1)

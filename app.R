@@ -10,11 +10,9 @@ source("rd_collection.r")  #collection
 
 ## Zusammenführen und behübschen der Daten - all_data() ----
 all_data <- function() {
-  left_join(coins,
-            collection %>% select(ID, Qualität, Ablage),
-            by = 'ID') |> 
-    # mutate(Ablage = coalesce(Ablage, " ")) |> 
-    left_join(circulation, by = join_by(ID))
+  Reduce(function(...) merge(..., by = "ID", all.x = TRUE, no.dups = TRUE),
+         list(coins, collection |> select(ID, Qualität, Ablage), circulation)) |> 
+    as_tibble()
 }
 
 ## JS Funktion um Markierung verfügbar zu machen ----
@@ -69,22 +67,22 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
               div(class = 'beschr', "Auswahl aus Liste; Genaue Übereinstimmung mit ", em("Mzz")))),
           fluidRow(
             h3("Abbildung"),
-              column(width = 10, textInput(inputId = "in_abb.ident", label = NULL, value = "", width = "100%")),
-              column(width = 2, actionButton(inputId = "bt_reset_abb.ident", label = "✗", width = "100%", style = "padding:6px;")), # &cross;
+            column(width = 10, textInput(inputId = "in_abb.ident", label = NULL, value = "", width = "100%")),
+            column(width = 2, actionButton(inputId = "bt_reset_abb.ident", label = "✗", width = "100%", style = "padding:6px;")), # &cross;
             div(class = 'beschr', "Beliebige Übereinstimmung mit ", em("Abbildung"), " Groß-/ Kleinschreibung wird ignoriert")),
           h2("Bearbeitung"),
           fluidRow(
             h3("Qualität"),
-              column(width = 3, actionButton(inputId = "bt_write_q0.ident", label = "(0) ★★★", width = "100%", style = "padding:6px;")), # &starf;
-              column(width = 3, actionButton(inputId = "bt_write_q1.ident", label = "(1) ☆★★", width = "100%", style = "padding:6px;")), # &star; 
-              column(width = 3, actionButton(inputId = "bt_write_q2.ident", label = "(2) ☆☆★", width = "100%", style = "padding:6px;")), 
-              column(width = 3, actionButton(inputId = "bt_write_q3.ident", label = "(3) ☆☆☆", width = "100%", style = "padding:6px;")), 
+            column(width = 3, actionButton(inputId = "bt_write_q0.ident", label = "(0) ★★★", width = "100%", style = "padding:6px;")), # &starf;
+            column(width = 3, actionButton(inputId = "bt_write_q1.ident", label = "(1) ☆★★", width = "100%", style = "padding:6px;")), # &star; 
+            column(width = 3, actionButton(inputId = "bt_write_q2.ident", label = "(2) ☆☆★", width = "100%", style = "padding:6px;")), 
+            column(width = 3, actionButton(inputId = "bt_write_q3.ident", label = "(3) ☆☆☆", width = "100%", style = "padding:6px;")), 
             p(div(class = 'beschr', "[...] Übernimmt markierte ", em("Münz ID"), "und ändert/ergänzt gewählte Qualität im File eur2collection.txt"))),
           fluidRow(
             h3("eur2collection.txt"),
-              column(width = 3),
-              column(width = 5, actionButton(inputId = "bt_do_aend.ident", label = "Neu laden", width = "100%", style = "padding:6px;")),
-              column(width = 3),
+            column(width = 3),
+            column(width = 5, actionButton(inputId = "bt_do_aend.ident", label = "Neu laden", width = "100%", style = "padding:6px;")),
+            column(width = 3),
             p(div(class = 'beschr', "[Neu laden] lädt File eur2collection.txt neu, z.B. nach manuellen Änderungen")))),
           ### Identifikation Main ----
           h2("Ergebnis entsprechend Filter", .noWS = "before"),
@@ -276,7 +274,7 @@ server <- function(input, output, session) {
               x == 1 ~ "<nobr class = 'q1'>(1)&nbsp;&star;&starf;&starf;</nobr>",
               x == 2 ~ "<nobr class = 'q2'>(2)&nbsp;&star;&star;&starf;</nobr>",
               x == 3 ~ "<nobr class = 'q3'>(3)&nbsp;&star;&star;&star;</nobr>",
-              TRUE ~ "<nobr class = 'qF'><i>&nbsp;FEHLER&nbsp;<i></nobr>")
+              TRUE ~ "<nobr class = 'qF'><i>&nbsp;FEHLER!&nbsp;<i></nobr>")
   }
   
   ### Fkt Darstellung Daten (switch)----
@@ -324,9 +322,23 @@ server <- function(input, output, session) {
              Graph = paste0("<div class='bar'>", Graph, "</div>"))
   }
   
+  ### Fkt Prüfe Gültigkeit markierter Münz ID und ggf Message ----
+  fkt_do_ungltg.mid <- function()
+    if(str_detect(input$myselection, "\\d{4}[a-z]{2}[g|k]\\d{2}")) return(FALSE)
+  else {
+    showModal(modalDialog(
+    title = "Fehler",
+    paste0("Keine gültige Münz ID markiert."),
+    easyClose = TRUE,
+    footer = NULL,
+    size = "s"))
+    return(TRUE)
+    }
   
   ### Fkt Schreiben/Ändern einer Bewertung ----
   fkt_write_bewertung <- function(qu) {
+    # Gültigkeit Münz ID
+    if(fkt_do_ungltg.mid()) return()
     # Abbild des Files
     tmp <- select(collection, ID, Qualität)
     # Ändern oder Anfügen
@@ -347,9 +359,9 @@ server <- function(input, output, session) {
   
   ### Fkt Formatieren Auflagenstärke ----
   form_aufl <- function(x)
-    paste0("<div style='text-align: left'>= <b>",fkt_form_tsd(x), "</b><br>&nbsp;</div>")
+    paste0("<div style='text-align: left; margin-top: 7px'>=&nbsp;<b>",fkt_form_tsd(x), "</b>&nbsp;</div>")
   
-  ## Fkt Gültigkeitsprüfung Eingabe Ablagenummer ----
+  ### Fkt Gültigkeitsprüfung Eingabe Ablagenummer ----
   check_znr <- function(x) {
     x <- as.integer(x)
     na_chk <- is.na(x)
@@ -398,10 +410,26 @@ server <- function(input, output, session) {
   er_auf.erf <- eventReactive(eventExpr = input$in_aufl.erf, valueExpr = form_aufl(input$in_aufl.erf))
   
   ## Auflage  Buttons ----
+  ### Vorerfassen Auflagenstärke ---
   observeEvent(eventExpr = input$bt_do_erf.erf,
-               handlerExpr = updateTextInput(session, inputId = "in_erf.erf", value = paste0(input$in_erf.erf, input$myselection, "-", input$in_aufl.erf, "\n")))
+               handlerExpr = {
+                 # Gültigkeit Münz ID
+                 if(fkt_do_ungltg.mid()) return()
+                 updateTextInput(session, inputId = "in_erf.erf", value = paste0(input$in_erf.erf, input$myselection, "-", input$in_aufl.erf, "\n"))
+               })
+  
+  ### Schreiben der vorerfassten Werte ----
   observeEvent(eventExpr = input$bt_write_aufl.erf, handlerExpr = {
     out <- input$in_erf.erf
+    if(out == "") {
+      showModal(modalDialog(
+        title = "Fehler",
+        paste0("Keine erfasste(n) Auflagenstärke(n)."),
+        easyClose = TRUE,
+        footer = NULL,
+        size = "s"))
+      return()
+    }
     while(str_sub(out, -1) == "\n") out <- str_sub(out, 1, -2)
     write_lines(out, file = "eur2coins_circulation.txt", append = TRUE)
     fkt_reload()
@@ -420,7 +448,7 @@ server <- function(input, output, session) {
                            fkt_datadisplay(df = show, variation = "uaufl")
                          })
   
-  ## Erfasste AUflagenstärke ----
+  ## Erfasste Auflagenstärke ----
   ### Reset Buttons ----  
   observeEvent(eventExpr = input$bt_reset_id.korr, handlerExpr = updateTextInput(session, inputId = "in_id.korr", value = ""))
   observeEvent(eventExpr = input$bt_reset_mzz.korr, handlerExpr = updateTextInput(session, inputId = "in_mzz.korr", value = ""))
@@ -441,6 +469,8 @@ server <- function(input, output, session) {
   ### Schreiben einer neuen/korrigierten Auflagenstärke ----
   observeEvent(eventExpr = input$bt_write_aufl.korr,
                handlerExpr = {
+                 # Gültigkeit Münz ID
+                 if(fkt_do_ungltg.mid()) return()
                  # Abbild des Files
                  tmp <- select(circulation, ID, Auflage)
                  # Ändern
