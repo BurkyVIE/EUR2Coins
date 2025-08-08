@@ -26,7 +26,7 @@ h1.title {
 ```{r data, echo=FALSE}
 df <- left_join(coins, collection |> select(ID, Qualität, Ablage), by = 'ID') |>
   left_join(circulation, by = 'ID') |> 
-  filter(!is.na(Qualität)) |> # nur noch nicht gesammelte
+  filter(!is.na(Ablage)) |> # nur noch nicht gesammelte
   transmute(Jahr = Prägejahr,
             Land,
             Mzz = abbreviate(Münzzeichen, 7), 
@@ -54,3 +54,4 @@ gt::gt(df) |>
                   row_group.padding = 2,
                   data_row.padding = 1)
 ```
+
