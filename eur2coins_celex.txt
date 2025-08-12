@@ -659,6 +659,7 @@ C/2025/03846|sm|2025|2025-7-3|g|550. Geburtstag von Michelangelo|
 NA|ee|2025|2025-1-30|g|?? 500 Jahre erster Textdruck in esthnischer Sprache|
 NA|hr|2025|2025-7-4|g|?? 1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
 NA|be|2025|2025-7-25|g|?? Rennstrecke Spa-Francorchamps|
+#NA|fi|2025|2025-8-12|g|?? 100 Jahre Finnalnd-Schweden Leichtathletikspiele|
 
 #C/2025/03822|va|2025|NA|g|Sedisvakanz 2025|
 #C/2025/03829|mc|2025|NA|g|Marquisat des Baux|
@@ -675,7 +676,6 @@ NA|be|2025|2025-7-25|g|?? Rennstrecke Spa-Francorchamps|
 #NA|lv|2025|NA|g|?? Sēlija|
 #NA|ad|2025|NA|g|?? Spiele der kleinen Staaten von Europa|
 #NA|lt|2025|NA|g|?? Mažoji Lietuva|
-#NA|fi|2025|NA|g|?? 100 Jahre Finnalnd-Schweden Leichtathletikspiele|
 #NA|fr|2025|NA|g|?? Notre Dame|
 
 #NA|hr|2025|NA|g|?? Pula Arena|
@@ -742,7 +742,7 @@ NA|be|2025|2025-7-25|g|?? Rennstrecke Spa-Francorchamps|
 #NA|..|2029|es|?? 25. Jahrestag der EU-Erweiterung 2004|
 #NA|..|2029|cy|?? 25. Jahrestag der EU-Erweiterung 2004|
 
-# STAND Gedenkmünzen: 31. Juli 2025 zwei.euro.com News
+# STAND Gedenkmünzen: 12. August 2025 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
