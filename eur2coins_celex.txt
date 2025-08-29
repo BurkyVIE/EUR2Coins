@@ -656,10 +656,10 @@ C/2025/03831|mc|2025|2025-6-16|g|Comté de Carladès|
 C/2025/03823|pt|2025|2025-6-24|g|Weltpfadfinderbewegung|
 C/2025/03846|sm|2025|2025-7-3|g|550. Geburtstag von Michelangelo|
 
-NA|ee|2025|2025-1-30|g|?? 500 Jahre erster Textdruck in esthnischer Sprache|
-NA|hr|2025|2025-7-4|g|?? 1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
-NA|be|2025|2025-7-25|g|?? Rennstrecke Spa-Francorchamps|
-NA|fi|2025|2025-8-12|g|?? 100 Jahre Finnalnd-Schweden Leichtathletikspiele|
+NA|ee|2025|2025-1-30|g|? 500 Jahre erster Textdruck in esthnischer Sprache|
+NA|hr|2025|2025-7-4|g|? 1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
+NA|be|2025|2025-7-25|g|? Rennstrecke Spa-Francorchamps|
+NA|fi|2025|2025-8-12|g|? 100 Jahre Finnalnd-Schweden Leichtathletikspiele|
 
 #C/2025/03822|va|2025|NA|g|Sedisvakanz 2025|
 #C/2025/03829|mc|2025|NA|g|Marquisat des Baux|
@@ -892,5 +892,6 @@ C2005/308/08|va|2005|NA|k|Sedisvakanz 2005 (2005)|
 C2006/186/02|va|2006,2007,2008,2009,2010,2011,2012,2013|NA|k|Papst Benedikt XVI. (2006 - 2013)|
 C2013/379/11|va|2014,2015,2016|NA|k|Papst Franziskus (2014 - 2016)|
 C2017/023/06|va|2017,2018,2019,2020,2021,2022,2023,2024,2025|NA|k|Wappen von Papst Franziskus (2017 -)|
+
 
 
