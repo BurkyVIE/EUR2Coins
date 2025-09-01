@@ -393,7 +393,7 @@ server <- function(input, output, session) {
                                                input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
                                  valueExpr = {
                                    # Anzuzeigende Münzen
-                                   show <- filter(all_data(), (Ablage != " " | input$in_smlg.ident != "ja"), (Ablage == " " | input$in_smlg.ident != "nein"),
+                                   show <- filter(all_data(), (Ablage != " " | input$in_smlg.ident != "ja"), (is.na(Ablage) | input$in_smlg.ident != "nein"),
                                                   grepl(tolower(input$in_id.ident), ID),
                                                   grepl(paste0("\\b", input$in_mzz.ident, "\\b"), Münzzeichen), #('\\b', - Regex word boundary)
                                                   grepl(tolower(input$in_abb.ident), tolower(Abbildung)))
@@ -602,3 +602,4 @@ server <- function(input, output, session) {
 # Run the application ----
 
 shinyApp(ui = ui, server = server)
+
