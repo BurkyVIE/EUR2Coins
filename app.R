@@ -176,7 +176,7 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
           fluidRow(
             column(width = 6,
               h3("Box"),
-              sliderInput(inputId = "in_box.abl", label = NULL, min = 1, max = 4, value = 1, step = 1, width = "100%"),
+              sliderInput(inputId = "in_box.abl", label = NULL, min = 1, max = 5, value = 1, step = 1, width = "100%"), # NEUE BOX HIER
               HTML("<div class = 'beschr'>"), "Auswahl Ablagebox", HTML('</div>')),
             column(width = 6,
               h3("Tableau"),
@@ -600,4 +600,5 @@ server <- function(input, output, session) {
 }
 
 # Run the application ----
+
 shinyApp(ui = ui, server = server)
