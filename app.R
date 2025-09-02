@@ -11,7 +11,7 @@ source("rd_collection.r")  #collection
 ## Zusammenführen und behübschen der Daten - all_data() ----
 all_data <- function() {
   Reduce(function(...) merge(..., by = "ID", all.x = TRUE, no.dups = TRUE),
-         list(coins, collection |> select(ID, Qualität, Ablage), circulation)) |> 
+         list(coins, select(collection, ID, Qualität, Ablage), circulation)) |> 
     as_tibble()
 }
 
@@ -602,4 +602,5 @@ server <- function(input, output, session) {
 # Run the application ----
 
 shinyApp(ui = ui, server = server)
+
 
