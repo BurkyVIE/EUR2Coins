@@ -6,7 +6,7 @@ select(coins, Amtsblatt, Land, ID) |>
                        str_sub(Land, 1, 1),
                        str_remove_all(Amtsblatt, "[\\D]"),
                        str_sub(Land, 2, 2),
-                       ".jpg"),
+                       ".png"),
          Exists = map_lgl(PicFile, ~file.exists(.))) |> 
-  filter(Exists) |> 
+  # filter(Exists) |> 
   unnest(cols = IDs) -> cpic

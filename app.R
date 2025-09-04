@@ -12,7 +12,7 @@ source("mk_cpic.r")        #cpic
 ## Zusammenführen und behübschen der Daten - all_data() ----
 all_data <- function() {
   Reduce(function(...) merge(..., by = "ID", all.x = TRUE, no.dups = TRUE),
-         list(coins, select(collection, ID, Qualität, Ablage), circulation, select(cpic, ID, PicFile))) |> 
+         list(coins, select(collection, ID, Qualität, Ablage), circulation, select(filter(cpic, Exists), ID, PicFile))) |> 
     as_tibble()
 }
 
@@ -188,7 +188,7 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
             h3("Ablagenummer"),
             column(width = 2, actionButton(inputId = "bt_do_minus.abl", label = "≺", width = "100%", style = "padding:6px;")), # &prec;
             column(width = 2, actionButton(inputId = "bt_do_plus.abl", label = "≻", width = "100%", style = "padding:6px;")), # &succ;
-            column(width = 5, textInput(inputId = "in_ablnr.abl", value = "", label = NULL, width = "100%")), #pull(count(collection))
+            column(width = 5, textInput(inputId = "in_ablnr.abl", value = pull(count(collection)), label = NULL, width = "100%")), #pull(count(collection))
             column(width = 3, actionButton(inputId = "bt_do_getablnr.abl", label = "gehe zu", width = "100%", style = "padding:6px;")),
             div(class = 'beschr', "[≺] navigiert zur vorherigen (-1), [≻] zur nächsten (+1) Münze; ",
                 "[gehe zu] übernimmt markierten unterstrichenen Teil im Tableau oder springt zur letzten abgelegten Münze"))),
@@ -365,17 +365,6 @@ server <- function(input, output, session) {
   form_aufl <- function(x)
     paste0("<div style='text-align: left; margin-top: 7px'>=&nbsp;<b>",fkt_form_tsd(x), "</b>&nbsp;</div>")
   
-  ### Fkt Gültigkeitsprüfung Eingabe Ablagenummer ----
-  check_ablnr <- function(x) {
-    x <- as.integer(x)
-    na_chk <- is.na(x)
-    maxi <- pull(count(collection))
-    
-    if(na_chk) x <- maxi
-    x <- max(1, min(x, maxi))
-    return(list(x, !na_chk))
-  }
-  
   ## Page Identifikation ----
   ### Reset Buttons ----  
   observeEvent(eventExpr = input$bt_reset_id.ident, handlerExpr = updateTextInput(session, inputId = "in_id.ident", value = ""))
@@ -500,17 +489,37 @@ server <- function(input, output, session) {
                                   })
   
   ## Ablage ----
-  ### Setze Schnellwahl auf letzte abgelegte Münmze ----
-  updateTextInput(session, inputId = "in_ablnr.abl", value = as.integer(count(collection)))
+  ### Fkt Gültigkeitsprüfung Eingabe Ablagenummer ----
+  check_ablnr <- function(x) {
+    maxi <- pull(count(collection))
+    if (x == "bu") return (213L)
+    if (x == "") return(1L)
+    if (str_detect(x, "\\D+")) return (maxi)
+    x <- as.integer(x)
+    
+    return(max(1, min(x, maxi)))
+  }
+  
+  ### Schieberegler anpassen und sichere Ablagenummer erzeugen ----
+  safe_ablnr <- reactiveVal()
+  observeEvent(eventExpr = input$in_ablnr.abl, handlerExpr = {
+    # Sichere Ablagenummer
+    safe_ablnr(check_ablnr(input$in_ablnr.abl))
+    # Schieberegeler
+    updateSliderInput(session, inputId = "in_box.abl", value = (safe_ablnr() - 1) %/% 144 + 1)
+    updateSliderInput(session, inputId = "in_tableau.abl", value = (safe_ablnr() - 1) %% 144 %/% 24 + 1)
+    # Zurückschreiben der sicheren Ablagenummer ins Eingabefeld
+    updateTextInput(session, inputId = "in_ablnr.abl", value = safe_ablnr())
+  })
   
   ### Schnellwahl Schritte ----
-  observeEvent(eventExpr = input$bt_do_minus.abl, handlerExpr = updateTextInput(session, inputId = "in_ablnr.abl", value = check_ablnr(as.integer(input$in_ablnr.abl) - 1)[[1]]))
-  observeEvent(eventExpr = input$bt_do_plus.abl, handlerExpr = updateTextInput(session, inputId = "in_ablnr.abl", value = check_ablnr(as.integer(input$in_ablnr.abl) + 1)[[1]]))
+  observeEvent(eventExpr = input$bt_do_minus.abl, handlerExpr = updateTextInput(session, inputId = "in_ablnr.abl", value = safe_ablnr() - 1))
+  observeEvent(eventExpr = input$bt_do_plus.abl, handlerExpr = updateTextInput(session, inputId = "in_ablnr.abl", value = safe_ablnr() + 1))
   
   ### Schnellwahl Markierung übernehmen ----
-  observeEvent(eventExpr = input$bt_do_getablnr.abl, handlerExpr = updateTextInput(session, inputId = "in_ablnr.abl", value = check_ablnr(input$myselection)[[1]]))
+  observeEvent(eventExpr = input$bt_do_getablnr.abl, handlerExpr = updateTextInput(session, inputId = "in_ablnr.abl", value = check_ablnr(input$myselection)))
   
-  ### Ausgabe Ablage ----
+  ### Ausgabe Ablage inkl Detail f Münze ----
   output$out_tableau.abl <- renderTable(expr = er_tableau.abl(), spacing = "l", width = "90%", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
   er_tableau.abl <- eventReactive(eventExpr = c(input$in_box.abl, input$in_tableau.abl, input$in_ablnr.abl,
                                                 input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
@@ -539,23 +548,24 @@ server <- function(input, output, session) {
                                                            paste0("&#0133;", 1:6)))
                                     },
                                   ignoreNULL = FALSE)
+
+  ### Ausgabe aktive Münze ----
+  output$out_aktmz.abl <- renderTable(expr = er_aktmz.abl(), spacing = "l", width = "90%", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
+  er_aktmz.abl <- eventReactive(eventExpr = c(safe_ablnr(), #input$in_ablnr.abl,
+                                              input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
+                                  valueExpr = {
+                                    # Ablagenummer (Überschrift)
+                                    output$out_h3aktmz.abl <- renderText(expr = paste0("<h3>Ablagenummer: ", safe_ablnr(), "</h3>"))
+                                    # Anzuzeigende Münzdetails
+                                    show <- all_data() |> mutate(Zeile = as.integer(str_sub(Ablage, 6, 9))) |> filter(Zeile == safe_ablnr())
+                                    # Bild
+                                    output$out_cpic.abl <- renderImage(list(src = show$PicFile, contentType = "image/png", width = 150), deleteFile = FALSE)
+                                    # Ausgabe
+                                    fkt_datadisplay(df = show, variation = "ident")
+                                  },
+                                  ignoreNULL = FALSE)
   
-  
-  
-  ### Ausgabe Auswahl Zeilennummer inkl Bild ----
-  observeEvent(eventExpr = c(input$in_ablnr.abl),
-               handlerExpr = {
-                 ## Ändere Schieberegler, wenn notwendig - check_ablnr()[[2]]
-                 if(check_ablnr(input$in_ablnr.abl)[[2]]) updateSliderInput(session, inputId = "in_box.abl", value = (as.integer(input$in_ablnr.abl) - 1) %/% 144 + 1)
-                 if(check_ablnr(input$in_ablnr.abl)[[2]]) updateSliderInput(session, inputId = "in_tableau.abl", value = (as.integer(input$in_ablnr.abl) - 1) %% 144 %/% 24 + 1)
-                 ## Anzuzeigende Münzdetails
-                 show <- all_data() |> mutate(Zeile = as.integer(str_sub(Ablage, 6, 9))) |> filter(Zeile == input$in_ablnr.abl)
-                 # Ausgabe
-                 output$out_aktmz.abl <- renderTable(fkt_datadisplay(df = show, variation = "ident"), spacing = "xs", width = "100%", align = c("lllcrlclll"), sanitize.text.function = function(x) x)
-                 output$out_cpic.abl <- renderImage(list(src = show$PicFile, contentType = "image/png", width = 150), deleteFile = FALSE)
-               })
-  
-  
+    
   ## Statistik ----
   ### Ausgabe Zusammenfassung Jahr ----
   output$out_jahr.stat <- renderTable(expr = er_jahr.stat(), spacing = "xs", align = c("rrrl"), sanitize.text.function = function(x) x)
