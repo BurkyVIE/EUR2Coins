@@ -311,6 +311,14 @@ server <- function(input, output, session) {
                                    Amtsblatt,
                                    Qualität,
                                    Ablage),
+           ablage = df |> transmute(Jahr,
+                                    Land,
+                                    Art,
+                                    Mzz = Münzzeichen,
+                                    Abbildung,
+                                    Hfgkt,
+                                    Amtsblatt,
+                                    Qualität),
            uaufl = df |> transmute('Münz ID' = ID, Jahr, Land, Art, Mzz = Münzzeichen, Abbildung) |> 
              arrange(Land),
            eaufl = df |> transmute('Münz ID' = ID, Jahr, Land, Art, Mzz = Münzzeichen, Abbildung, Auflage = fkt_form_tsd(Auflage), Hfgkt) |> 
@@ -524,7 +532,7 @@ server <- function(input, output, session) {
   observeEvent(eventExpr = input$bt_do_getablnr.abl, handlerExpr = updateTextInput(session, inputId = "in_ablnr.abl", value = check_ablnr(input$myselection)))
   
   ### Ausgabe Ablage inkl Detail f Münze ----
-  output$out_tableau.abl <- renderTable(expr = er_tableau.abl(), spacing = "l", width = "90%", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
+  output$out_tableau.abl <- renderTable(expr = er_tableau.abl(), spacing = "l", width = "90%", align = "c", rownames = FALSE, sanitize.text.function = function(x) x)
   er_tableau.abl <- eventReactive(eventExpr = c(input$in_box.abl, input$in_tableau.abl, input$in_ablnr.abl,
                                                 input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
                                   valueExpr = {
@@ -554,7 +562,7 @@ server <- function(input, output, session) {
                                   ignoreNULL = FALSE)
 
   ### Ausgabe aktive Münze ----
-  output$out_aktmz.abl <- renderTable(expr = er_aktmz.abl(), spacing = "l", width = "90%", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
+  output$out_aktmz.abl <- renderTable(expr = er_aktmz.abl(), spacing = "l", width = "90%", align = "c", rownames = FALSE, sanitize.text.function = function(x) x)
   er_aktmz.abl <- eventReactive(eventExpr = c(safe_ablnr(), #input$in_ablnr.abl,
                                               input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
                                   valueExpr = {
@@ -565,7 +573,7 @@ server <- function(input, output, session) {
                                     # Bild
                                     output$out_cpic.abl <- renderImage(list(src = show$PicFile, contentType = "image/png", width = 125), deleteFile = FALSE)
                                     # Ausgabe
-                                    fkt_datadisplay(df = show, variation = "ident")
+                                    fkt_datadisplay(df = show, variation = "ablage")
                                   },
                                   ignoreNULL = FALSE)
   
