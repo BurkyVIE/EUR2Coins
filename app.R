@@ -198,12 +198,16 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
           htmlOutput(outputId = "out_h3tableau.abl"),
           div(class = 'matrix', tableOutput(outputId = "out_tableau.abl"))),
         h2("Aktive Münze", .noWS = "before"),
+        # fluidRow(
+        #   htmlOutput(outputId = "out_h3aktmz.abl"),
+        #   tableOutput(outputId = "out_aktmz.abl"),
+        #   div(align = "center", imageOutput(outputId = "out_cpic.abl")))
         fluidRow(
-          htmlOutput(outputId = "out_h3aktmz.abl"),
-          tableOutput(outputId = "out_aktmz.abl")),
-        fluidRow(
-          div(align = "center", imageOutput(outputId = "out_cpic.abl"))
-        ))),
+          column(width = 2, div(align = "center", imageOutput(outputId = "out_cpic.abl"))),
+          column(width = 10,
+            htmlOutput(outputId = "out_h3aktmz.abl"),
+            tableOutput(outputId = "out_aktmz.abl")))
+        )),
     ## Statistik ----
     nav_panel(title = "Statistik",
       # h1("🙤 Statistik 🙧"),
@@ -559,7 +563,7 @@ server <- function(input, output, session) {
                                     # Anzuzeigende Münzdetails
                                     show <- all_data() |> mutate(Zeile = as.integer(str_sub(Ablage, 6, 9))) |> filter(Zeile == safe_ablnr())
                                     # Bild
-                                    output$out_cpic.abl <- renderImage(list(src = show$PicFile, contentType = "image/png", width = 150), deleteFile = FALSE)
+                                    output$out_cpic.abl <- renderImage(list(src = show$PicFile, contentType = "image/png", width = 125), deleteFile = FALSE)
                                     # Ausgabe
                                     fkt_datadisplay(df = show, variation = "ident")
                                   },
