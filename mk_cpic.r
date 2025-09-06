@@ -8,7 +8,7 @@ base <- select(coins, Amtsblatt, Land, ID) |>
                           str_sub(Land, 1, 1),
                           str_remove_all(Amtsblatt, "[\\D]"),
                           str_sub(Land, 2, 2),
-                          ".jpg")) |> 
+                          ".gif")) |> 
   nest(IDs = ID) |> 
   mutate(Exists = FALSE)
 
