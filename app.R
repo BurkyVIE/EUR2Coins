@@ -531,7 +531,7 @@ server <- function(input, output, session) {
   ### Schnellwahl Markierung übernehmen ----
   observeEvent(eventExpr = input$bt_do_getablnr.abl, handlerExpr = updateTextInput(session, inputId = "in_ablnr.abl", value = check_ablnr(input$myselection)))
   
-  ### Ausgabe Ablage inkl Detail f Münze ----
+  ### Ausgabe Ablage ----
   output$out_tableau.abl <- renderTable(expr = er_tableau.abl(), spacing = "l", width = "90%", align = "c", rownames = TRUE, sanitize.text.function = function(x) x)
   er_tableau.abl <- eventReactive(eventExpr = c(input$in_box.abl, input$in_tableau.abl, input$in_ablnr.abl,
                                                 input$bt_write_q0.ident, input$bt_write_q1.ident, input$bt_write_q2.ident, input$bt_write_q3.ident, input$bt_do_aend.ident),
@@ -631,4 +631,5 @@ server <- function(input, output, session) {
 }
 
 # Run the application ----
+
 shinyApp(ui = ui, server = server)
