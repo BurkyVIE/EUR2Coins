@@ -44,7 +44,7 @@ df <- Reduce(function(...) merge(..., by = "ID", all.x = TRUE, no.dups = TRUE),
 ```
 
 ```{r table}
-gt::gt(df) |> 
+gt::gt(df, id = "coin_coll") |> 
   gt::data_color(columns = "Qualität", target_columns = everything(),
                  palette = "YlGn", alpha = .5, reverse = TRUE, method = "factor",
                  contrast_algo = "wcag") |>  
