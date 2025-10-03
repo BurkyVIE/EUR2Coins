@@ -75,8 +75,8 @@ ui <- page_fluid(includeCSS(path = "style_fwd.css"),
           fluidRow(
             h3("Qualität"),
             column(width = 3, actionButton(inputId = "bt_write_q0.ident", label = "(0) ★★★", width = "100%", style = "padding:6px;")), # &starf;
-            column(width = 3, actionButton(inputId = "bt_write_q1.ident", label = "(1) ☆★★", width = "100%", style = "padding:6px;")), # &star; 
-            column(width = 3, actionButton(inputId = "bt_write_q2.ident", label = "(2) ☆☆★", width = "100%", style = "padding:6px;")), 
+            column(width = 3, actionButton(inputId = "bt_write_q1.ident", label = "(1) ★★☆", width = "100%", style = "padding:6px;")), # &star; 
+            column(width = 3, actionButton(inputId = "bt_write_q2.ident", label = "(2) ★☆☆", width = "100%", style = "padding:6px;")), 
             column(width = 3, actionButton(inputId = "bt_write_q3.ident", label = "(3) ☆☆☆", width = "100%", style = "padding:6px;")), 
             p(div(class = 'beschr', "[...] Übernimmt markierte ", em("Münz ID"), "und ändert/ergänzt gewählte Qualität im File eur2collection.txt"))),
           fluidRow(
@@ -632,4 +632,5 @@ server <- function(input, output, session) {
 
 # Run the application ----
 shinyApp(ui = ui, server = server)
+
 
