@@ -279,8 +279,8 @@ server <- function(input, output, session) {
   fkt_form_quali <- function(x) {
     case_when(is.na(x) ~ "",
               x == 0 ~ "<nobr class = 'q0'>(0)&nbsp;&starf;&starf;&starf;</nobr>",
-              x == 1 ~ "<nobr class = 'q1'>(1)&nbsp;&star;&starf;&starf;</nobr>",
-              x == 2 ~ "<nobr class = 'q2'>(2)&nbsp;&star;&star;&starf;</nobr>",
+              x == 1 ~ "<nobr class = 'q1'>(1)&nbsp;&starf;&starf;&star;</nobr>",
+              x == 2 ~ "<nobr class = 'q2'>(2)&nbsp;&starf;&star;&star;</nobr>",
               x == 3 ~ "<nobr class = 'q3'>(3)&nbsp;&star;&star;&star;</nobr>",
               TRUE ~ "<nobr class = 'qF'><i>&nbsp;FEHLER!&nbsp;<i></nobr>")
   }
@@ -632,3 +632,4 @@ server <- function(input, output, session) {
 
 # Run the application ----
 shinyApp(ui = ui, server = server)
+
