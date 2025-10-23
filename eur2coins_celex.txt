@@ -677,8 +677,8 @@ NA|lv|2025|2025-10-9|g|? Sēlija|
 #NA|ad|2025|NA|g|? Spiele der kleinen Staaten von Europa|
 #NA|lt|2025|NA|g|? Mažoji Lietuva|
 #NA|fr|2025|NA|g|? Notre Dame|
+#NA|hr|2025|NA|g|? Stadt Pula - Arena|
 
-#NA|hr|2025|NA|g|?? Pula Arena|
 #NA|ad|2025|NA|g|?? Der Bartgeier|
 # ___   ___  ___    __ 
 #  ) ) / / \  ) )  / / 
@@ -896,6 +896,7 @@ C2005/308/08|va|2005|NA|k|Sedisvakanz 2005 (2005)|
 C2006/186/02|va|2006,2007,2008,2009,2010,2011,2012,2013|NA|k|Papst Benedikt XVI. (2006 - 2013)|
 C2013/379/11|va|2014,2015,2016|NA|k|Papst Franziskus (2014 - 2016)|
 C2017/023/06|va|2017,2018,2019,2020,2021,2022,2023,2024,2025|NA|k|Wappen von Papst Franziskus (2017 -)|
+
 
 
 
