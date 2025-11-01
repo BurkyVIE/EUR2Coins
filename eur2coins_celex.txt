@@ -665,6 +665,7 @@ NA|gr|2025|2025-9-10|g|? 100. Geburtstag von Mikis Theodorakis|
 NA|gr|2025|2025-9-10|g|? 200. Todestag von Laskarnia Bouboulina|
 NA|de|2025|2025-9-25|g|? 35 Jahre Deutsche Einheit|A,D,F,G,J
 NA|lv|2025|2025-10-9|g|? Sēlija|
+NA|fr|2025|2025-10-28|g|? Notre Dame|
 
 #C/2025/03822|va|2025|NA|g|Sedisvakanz 2025|
 #C/2025/03829|mc|2025|NA|g|Marquisat des Baux|
@@ -676,7 +677,6 @@ NA|lv|2025|2025-10-9|g|? Sēlija|
 #NA|si|2025|NA|g|? 100. Geburtstag von Miki Muster|
 #NA|ad|2025|NA|g|? Spiele der kleinen Staaten von Europa|
 #NA|lt|2025|NA|g|? Mažoji Lietuva|
-#NA|fr|2025|NA|g|? Notre Dame|
 #NA|hr|2025|NA|g|? Stadt Pula - Arena|
 
 #NA|ad|2025|NA|g|?? Der Bartgeier|
@@ -898,7 +898,4 @@ C2013/379/11|va|2014,2015,2016|NA|k|Papst Franziskus (2014 - 2016)|
 C2017/023/06|va|2017,2018,2019,2020,2021,2022,2023,2024,2025|NA|k|Wappen von Papst Franziskus (2017 -)|
 
 
-
-
-
-
+
