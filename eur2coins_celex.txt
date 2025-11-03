@@ -665,7 +665,7 @@ NA|gr|2025|2025-9-10|g|? 100. Geburtstag von Mikis Theodorakis|
 NA|gr|2025|2025-9-10|g|? 200. Todestag von Laskarnia Bouboulina|
 NA|de|2025|2025-9-25|g|? 35 Jahre Deutsche Einheit|A,D,F,G,J
 NA|lv|2025|2025-10-9|g|? Sēlija|
-NA|hr|2025|2025-10-22|g|? Stadt Pula - Arena|
+NA|hr|2025|2025-10-24|g|? Stadt Pula - Arena|
 NA|fr|2025|2025-10-28|g|? Notre Dame|
 
 #C/2025/03822|va|2025|NA|g|Sedisvakanz 2025|
