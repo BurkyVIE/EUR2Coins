@@ -656,6 +656,7 @@ C/2025/03831|mc|2025|2025-6-16|g|Comté de Carladès|
 C/2025/03823|pt|2025|2025-6-24|g|Weltpfadfinderbewegung|
 C/2025/03846|sm|2025|2025-7-3|g|550. Geburtstag von Michelangelo|
 C/2025/03847|pt|2025|2025-9-24|g|Nachhaltige Entwicklung|
+C/2025/03829|mc|2025|2025-11-4|g|Marquisat des Baux|
 
 NA|ee|2025|2025-1-30|g|? 500 Jahre erster Textdruck in esthnischer Sprache|
 NA|hr|2025|2025-7-4|g|? 1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
@@ -669,7 +670,6 @@ NA|hr|2025|2025-10-24|g|? Stadt Pula - Arena|
 NA|fr|2025|2025-10-28|g|? Notre Dame|
 
 #C/2025/03822|va|2025|NA|g|Sedisvakanz 2025|
-#C/2025/03829|mc|2025|NA|g|Marquisat des Baux|
 #C/2025/03832|lu|2025|NA|g|25. Jahrestag der Thronbesteigung von Großherzog Henri|
 #C/2025/03834|lu|2025|NA|g|75. Jahrestag der Schuman-Erklärung vom 9. Mai 1950|
 #C/2025/03843|va|2025|NA|g|Jubiläum 2025|
