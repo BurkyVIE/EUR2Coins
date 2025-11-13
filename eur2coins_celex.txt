@@ -703,6 +703,7 @@ NA|fr|2025|2025-10-28|g|? Notre Dame|
 #NA|bg|2026|NA|g|?? 150. Geburtstag von Krastjo Sarafow|
 #NA|cy|2026|NA|g|?? EU-Ratspräsidentschaft|
 #NA|ie|2026|NA|g|?? EU-Ratspräsidentschaft|
+#NA|es|2026|NA|g|?? Spanien & Behinderung: Schutz, Rechte und Inklusion|
 # ___   ___  ___  ____
 #  ) ) / / \  ) )  / /
 # /_/_ \_\_/ /_/_ /_/ 
