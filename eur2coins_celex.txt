@@ -700,7 +700,7 @@ NA|fr|2025|2025-10-28|g|? Notre Dame|
 #NA|ee|2026|NA|g|?? Sipsik|
 #NA|sm|2026|NA|g|?? 450. Todestag von Tizian|
 #NA|sm|2026|NA|g|?? 800. Todestag von Franz von Assisi|
-#NA|bg|2026|NA|g|?? 150. Geburtstag von Krastjo Sarafow|
+#NA|bg|2026|NA|g|?? Das Bulgarische Alphabet|
 #NA|cy|2026|NA|g|?? EU-Ratspräsidentschaft|
 #NA|ie|2026|NA|g|?? EU-Ratspräsidentschaft|
 #NA|es|2026|NA|g|?? Spanien & Behinderung: Schutz, Rechte und Inklusion|
@@ -711,13 +711,13 @@ NA|fr|2025|2025-10-28|g|? Notre Dame|
 
 #NA|sk|2027|NA|g|?? 50. Jahrestag der Charta 77|
 #NA|sk|2027|NA|g|?? 250. Jahrestag der Ratio Educationis|
-#NA|bg|2027|NA|g|?? 125. Jahrestag der Geburt von Angel Karalijtschew|
+#NA|bg|2027|NA|g|?? Die Bulgarische Rose|
 # ___   ___  ___   ___ 
 #  ) ) / / \  ) ) ( (_)
 # /_/_ \_\_/ /_/_ (_(_)
 ## 2028 ----
 
-#NA|bg|2028|NA|g|?? 150. Geburtstag von andrej Nikolow|
+#NA|bg|2028|NA|g|?? 150. Jahrestag der Befreiung Bulgariens|
 # ___   ___  ___   ___ 
 #  ) ) / / \  ) ) ( ( )
 # /_/_ \_\_/ /_/_  /_/ 
@@ -745,7 +745,7 @@ NA|fr|2025|2025-10-28|g|? Notre Dame|
 #NA|..|2029|es|?? 25. Jahrestag der EU-Erweiterung 2004|
 #NA|..|2029|cy|?? 25. Jahrestag der EU-Erweiterung 2004|
 
-# STAND Gedenkmünzen: 28. Oktober 2025 zwei.euro.com News
+# STAND Gedenkmünzen: 13. November 2025 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
