@@ -670,6 +670,7 @@ NA|hr|2025|2025-10-24|g|? Stadt Pula - Arena|
 NA|fr|2025|2025-10-28|g|? Notre Dame|
 NA|ad|2025|2025-11-24|g|? Spiele der kleinen Staaten von Europa|
 NA|ad|2025|2025-11-24|g|? Der Bartgeier|
+NA|si|2025|2025-11-26|g|? 100. Geburtstag von Miki Muster|
 
 #C/2025/03822|va|2025|NA|g|Sedisvakanz 2025|
 #C/2025/03832|lu|2025|NA|g|25. Jahrestag der Thronbesteigung von Großherzog Henri|
@@ -677,7 +678,6 @@ NA|ad|2025|2025-11-24|g|? Der Bartgeier|
 #C/2025/03843|va|2025|NA|g|Jubiläum 2025|
 #C/2025/03848|va|2025|NA|g|550. Geburtstag von Michelangelo|
 
-#NA|si|2025|NA|g|? 100. Geburtstag von Miki Muster|
 #NA|lt|2025|NA|g|? Mažoji Lietuva|
 
 # ___   ___  ___    __ 
@@ -745,7 +745,7 @@ NA|ad|2025|2025-11-24|g|? Der Bartgeier|
 #NA|es|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
 #NA|cy|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
 
-# STAND Gedenkmünzen: 24. November 2025 zwei.euro.com News
+# STAND Gedenkmünzen: 26. November 2025 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
