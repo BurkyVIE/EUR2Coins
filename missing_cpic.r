@@ -7,6 +7,6 @@ filter(cpic, !Exists) |>
             Filename = str_extract(PicFile, "[A-Z]\\d*[A-Z]")) |>
   unique() |> 
   group_by(Land, Art, Abbildung, Filename) |> 
-  summarise(Jahr = min(Jahr)) |>
+  summarise(Jahr = min(Jahr), .groups = "drop") |>
   relocate(Jahr, .after = Art) |>
   arrange(Land, Jahr) 
