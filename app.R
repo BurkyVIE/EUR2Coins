@@ -253,10 +253,17 @@ server <- function(input, output, session) {
   
   ### Fkt Formatieren Amtsblatt ----
   fkt_form_amtsbl <- function(txt) {
-    url <- paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:", txt, "', target = '_blank'>", txt, "</a>")
-    url <- str_replace(url, "\\(", "%28")
-    url <- str_replace(url, "\\)", "%29")
-    return(url)
+    # url <- paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:", txt, "', target = '_blank'>", txt, "</a>")
+    # url <- str_replace(url, "\\(", "%28")
+    # url <- str_replace(url, "\\)", "%29")
+    # return(url)
+    lexicon <- c(ORIG = "52001XC1228\\(04\\)", CELEX = "C\\d{4}/\\d{3}/\\d{2}", ELI = "C/\\d{4}/\\d{5}")
+    work <- tibble(input = txt, class = sapply(txt, str_which, lexicon)) |>
+      mutate(output = case_when(class == 1 ~ paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:52001XC1228%2804%29', target = '_blank'>", input, "</a>"),
+                                class == 2 ~ paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:", input, "', target = '_blank'>", input, "</a>"),
+                                class == 3 ~ paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=OJ:C_", str_replace_all(input, "[^0-9]", ""), "', target = '_blank'>", input, "</a>"),
+                                TRUE ~ NA))
+    return(work$output)
   }
   
   ### Fkt Formatieren Art (Münzart) ----
@@ -632,5 +639,6 @@ server <- function(input, output, session) {
 
 # Run the application ----
 shinyApp(ui = ui, server = server)
+
 
 
