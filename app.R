@@ -253,10 +253,6 @@ server <- function(input, output, session) {
   
   ### Fkt Formatieren Amtsblatt ----
   fkt_form_amtsbl <- function(txt) {
-    # url <- paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:", txt, "', target = '_blank'>", txt, "</a>")
-    # url <- str_replace(url, "\\(", "%28")
-    # url <- str_replace(url, "\\)", "%29")
-    # return(url)
     lexicon <- c(ORIG = "52001XC1228\\(04\\)", CELEX = "C\\d{4}/\\d{3}/\\d{2}", ELI = "C/\\d{4}/\\d{5}")
     work <- tibble(input = txt, class = sapply(txt, str_which, lexicon)) |>
       mutate(output = case_when(class == 1 ~ paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:52001XC1228%2804%29', target = '_blank'>", input, "</a>"),
@@ -268,18 +264,18 @@ server <- function(input, output, session) {
   
   ### Fkt Formatieren Art (Münzart) ----
   fkt_form_art <- function(txt) {
-    txt[txt == "G"] <- "<span>&#10629;&#120022;&#10630;</span>" # Ⓖ
-    txt[txt == "K"] <- "<span>&#10629;&#120026;&#10630;</span>" # Ⓚ
+    txt[txt == "G"] <- "<span>&#10629;&#120022;&#10630;</span>" # ⦅𝓖⦆, alternativ: Ⓖ
+    txt[txt == "K"] <- "<span>&#10629;&#120026;&#10630;</span>" # ⦅𝓚⦆, alternativ: Ⓚ
     return(txt)
   }
   
   ### Fkt Formatieren Häufigkeit ----
-  fkt_form_hfgkt <- function(txt) {
+  fkt_form_hfgkt <- function(x) {
     c("<nobr class='rare1'>&emsp;&#9660;&emsp;</nobr>",
       "<nobr class='rare2'>&emsp;&#9661;&emsp;</nobr>",
       "<nobr class='rare3'>&emsp;&#9634;&emsp;</nobr>",
       "<nobr class='rare4'>&emsp;&#9651;&emsp;</nobr>",
-      "<nobr class='rare5'>&emsp;&#9650;&emsp;</nobr>")[txt]
+      "<nobr class='rare5'>&emsp;&#9650;&emsp;</nobr>")[x]
   }
   
   ### Fkt Formatieren Qualität ----
@@ -639,6 +635,7 @@ server <- function(input, output, session) {
 
 # Run the application ----
 shinyApp(ui = ui, server = server)
+
 
 
 
