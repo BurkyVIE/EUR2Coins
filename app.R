@@ -272,11 +272,11 @@ server <- function(input, output, session) {
   
   ### Fkt Formatieren Häufigkeit ----
   fkt_form_hfgkt <- function(x) {
-    c("<nobr class='rare1'>&emsp;&#9660;&emsp;</nobr>",
-      "<nobr class='rare2'>&emsp;&#9661;&emsp;</nobr>",
-      "<nobr class='rare3'>&emsp;&#9634;&emsp;</nobr>",
-      "<nobr class='rare4'>&emsp;&#9651;&emsp;</nobr>",
-      "<nobr class='rare5'>&emsp;&#9650;&emsp;</nobr>")[x]
+    c("<nobr class='rare1'>&emsp;&#9660;&emsp;</nobr>", # ▼
+      "<nobr class='rare2'>&emsp;&#9661;&emsp;</nobr>", # ▽
+      "<nobr class='rare3'>&emsp;&#9634;&emsp;</nobr>", # ▢
+      "<nobr class='rare4'>&emsp;&#9651;&emsp;</nobr>", # △
+      "<nobr class='rare5'>&emsp;&#9650;&emsp;</nobr>")[x] # ▲
   }
   
   ### Fkt Formatieren Qualität ----
@@ -636,6 +636,7 @@ server <- function(input, output, session) {
 
 # Run the application ----
 shinyApp(ui = ui, server = server)
+
 
 
 
