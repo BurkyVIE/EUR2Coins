@@ -253,6 +253,7 @@ server <- function(input, output, session) {
   
   ### Fkt Formatieren Amtsblatt ----
   fkt_form_amtsbl <- function(txt) {
+    if(is_empty(txt)) return(NA) # Notwendig da sonst object Fehler bei ungültigen Suchstrings - gewünscht ist leere Ausgabe
     lexicon <- c(ORIG = "52001XC1228\\(04\\)", CELEX = "C\\d{4}/\\d{3}/\\d{2}", ELI = "C/\\d{4}/\\d{5}")
     work <- tibble(input = txt, class = sapply(txt, str_which, lexicon)) |>
       mutate(output = case_when(class == 1 ~ paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:52001XC1228%2804%29', target = '_blank'>", input, "</a>"),
@@ -260,7 +261,7 @@ server <- function(input, output, session) {
                                 class == 3 ~ paste0("<a href='https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=OJ:C_", str_replace_all(input, "[^0-9]", ""), "', target = '_blank'>", input, "</a>"),
                                 TRUE ~ NA))
     return(work$output)
-  }
+    }
   
   ### Fkt Formatieren Art (Münzart) ----
   fkt_form_art <- function(txt) {
@@ -635,6 +636,7 @@ server <- function(input, output, session) {
 
 # Run the application ----
 shinyApp(ui = ui, server = server)
+
 
 
 
