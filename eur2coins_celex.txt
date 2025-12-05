@@ -133,7 +133,7 @@ C2011/057/05|si|2011|2011-3-21|g|100. Geburtstag des Nationalhelden Franc Rozman
 C2011/085/05|it|2011|2011-4-22|g|150. Jahrestag der Einigung Italiens|
 C2011/057/06|be|2011|2011-5-3|g|100. Jahrestag des Weltfrauentags|
 C2011/091/03|gr|2011|2011-5-30|g|Veranstaltung der Weltsommerspiele der Special Olympics — Athen 2011|
-C2011/091/04|sm|2011|2011-6-4|g|500. Geburtstag des italienischen Malers Giorgio Vasari (30. Juli 1511-27. Juni 1574). Vasari, der sich auch als Schriftsteller, Historiker und Architekt betätigte, war für seine Biografien italienischer Künstler berühmt und gilt mittlerweile als geistiger Gründervater kunsthistorischer Schriften|
+C2011/091/04|sm|2011|2011-6-4|g|500. Geburtstag des italienischen Malers Giorgio Vasari|
 C2011/019/05|fr|2011|2011-6-21|g|30 Jahre Musikfest|
 C2011/189/07|mc|2011|2011-7-2|g|Hochzeit von Prinz Albert und Charlene|
 C2011/273/04|pt|2011|2011-9-15|g|500. Geburtstag des portugiesischen Entdeckers Fernão Mendes Pinto, der die Meere und Länder Asiens erforschte|
