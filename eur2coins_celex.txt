@@ -688,6 +688,8 @@ NA|lt|2025|2025-12-22|g|? Mažoji Lietuva|
 #NA|de|2026|NA|g|? Konrad Adenauer|A,D,F,G,J
 #NA|lt|2026|NA|g|? Unabhängigkeit Litauens in der Energieversorgung|
 #NA|sk|2026|NA|g|? 50. Jahrestag des Sieges der tschechoslowakischen Fußballmannschaft bei der EM1976|
+#NA|it|2026|NA|g|? 800. Todestag des Heiligen Franz von Assisi|
+#NA|it|2026|NA|g|? 200. Geburtstag von Carlo Collodi - Pinocchio|
 
 #NA|lt|2026|NA|g|?? Die Stadt Kaunas|
 #NA|si|2026|NA|g|?? 150. Geburtstag von Ivan Cankar|
@@ -746,7 +748,7 @@ NA|lt|2025|2025-12-22|g|? Mažoji Lietuva|
 #NA|es|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
 #NA|cy|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
 
-# STAND Gedenkmünzen: 17. Dezember 2025 zwei.euro.com News
+# STAND Gedenkmünzen: 18. Dezember 2025 zwei.euro.com News
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
 # |_| \ \_\_/ |_| \ _)_) |_|  | \_\_/ |_| \| /_/_ |_|__ |_| \|
