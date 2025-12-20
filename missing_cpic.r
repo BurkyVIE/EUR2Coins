@@ -1,3 +1,7 @@
+# LIBRARIES ----
+library(tidyverse)
+
+# QUERY ----
 filter(cpic, !Exists) |>
   inner_join(filter(collection, !is.na(Zeilennummer)), by = "ID") |>
   transmute(Land,
