@@ -403,9 +403,9 @@ server <- function(input, output, session) {
                                  valueExpr = {
                                    # Anzuzeigende Münzen
                                    show <- filter(all_data(), (Ablage != " " | input$in_smlg.ident != "ja"), (is.na(Ablage) | input$in_smlg.ident != "nein"),
-                                                  grepl(tolower(input$in_id.ident), ID),
+                                                  grepl(input$in_id.ident, ID, ignore.case = TRUE),
                                                   grepl(paste0("\\b", input$in_mzz.ident, "\\b"), Münzzeichen), #('\\b', - Regex word boundary)
-                                                  grepl(tolower(input$in_abb.ident), tolower(Abbildung)))
+                                                  grepl(input$in_abb.ident, Abbildung, ignore.case = TRUE))
                                    # Anzahl Münzen n (Überschrift inkl Plural)
                                    output$out_h3.ident <- renderText(paste0("<h3>", fkt_form_tsd(dim(show)[1]), " Münze", if(dim(show)[1] != 1) "n " else " ",
                                                                             "&nbsp;(", paste(unique(show$Art), collapse = ' + '), ")</h3>"))
@@ -495,9 +495,9 @@ server <- function(input, output, session) {
                                 valueExpr = {
                                   # Anzuzeigende Münzen
                                   show <- filter(all_data(), !is.na(Hfgkt),
-                                                 grepl(tolower(input$in_id.korr), ID),
+                                                 grepl(input$in_id.korr, ID, ignore.case = TRUE),
                                                  grepl(paste0("\\b", input$in_mzz.korr, "\\b"), Münzzeichen),
-                                                 grepl(tolower(input$in_abb.korr), tolower(Abbildung)))
+                                                 grepl(input$in_abb.korr, tolowerAbbildung, ignore.case = TRUE))
                                   # Anzahl Münzen n (Überschrift inkl Plural)
                                   output$out_h3.korr <- renderText(paste0("<h3>", fkt_form_tsd(dim(show)[1]), " Münze", if(dim(show)[1] != 1) "n " else " ", "</h3>"))
                                   # Ausgabe Ergebnisse Münzen
@@ -636,6 +636,7 @@ server <- function(input, output, session) {
 
 # Run the application ----
 shinyApp(ui = ui, server = server)
+
 
 
 
