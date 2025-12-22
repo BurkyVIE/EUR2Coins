@@ -497,7 +497,7 @@ server <- function(input, output, session) {
                                   show <- filter(all_data(), !is.na(Hfgkt),
                                                  grepl(input$in_id.korr, ID, ignore.case = TRUE),
                                                  grepl(paste0("\\b", input$in_mzz.korr, "\\b"), Münzzeichen),
-                                                 grepl(input$in_abb.korr, tolowerAbbildung, ignore.case = TRUE))
+                                                 grepl(input$in_abb.korr, Abbildung, ignore.case = TRUE))
                                   # Anzahl Münzen n (Überschrift inkl Plural)
                                   output$out_h3.korr <- renderText(paste0("<h3>", fkt_form_tsd(dim(show)[1]), " Münze", if(dim(show)[1] != 1) "n " else " ", "</h3>"))
                                   # Ausgabe Ergebnisse Münzen
@@ -636,6 +636,7 @@ server <- function(input, output, session) {
 
 # Run the application ----
 shinyApp(ui = ui, server = server)
+
 
 
 
