@@ -715,6 +715,8 @@ NA|lt|2025|2025-12-22|g|? Mažoji Lietuva|
 #NA|sk|2027|NA|g|?? 50. Jahrestag der Charta 77|
 #NA|sk|2027|NA|g|?? 250. Jahrestag der Ratio Educationis|
 #NA|bg|2027|NA|g|?? Die Bulgarische Rose|
+#NA|ee|2027|NA|g|?? Kreis Hiiu|
+#NA|ee|2027|NA|g|?? Veteranen der estnischen Verteidigungsstreitkräfte|
 # ___   ___  ___   ___ 
 #  ) ) / / \  ) ) ( (_)
 # /_/_ \_\_/ /_/_ (_(_)
