@@ -13,4 +13,6 @@ filter(cpic, !Exists) |>
   group_by(Land, Art, Abbildung, Filename) |> 
   summarise(Jahr = min(Jahr), .groups = "drop") |>
   relocate(Jahr, .after = Art) |>
-  arrange(Land, Jahr) 
+  arrange(Land, Jahr) |> 
+  mutate(Abbildung = str_sub(Abbildung, 1, 67)) |> 
+  print()
