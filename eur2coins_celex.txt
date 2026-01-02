@@ -690,6 +690,8 @@ NA|lt|2025|2025-12-22|g|? Mažoji Lietuva|
 #NA|sk|2026|NA|g|? 50. Jahrestag des Sieges der tschechoslowakischen Fußballmannschaft bei der EM1976|
 #NA|it|2026|NA|g|? 800. Todestag des Heiligen Franz von Assisi|
 #NA|it|2026|NA|g|? 200. Geburtstag von Carlo Collodi - Pinocchio|
+#NA|sm|2026|NA|g|? 450. Todestag von Tizian|
+#NA|sm|2026|NA|g|? 800. Todestag von Franz von Assisi|
 
 #NA|lt|2026|NA|g|?? Die Stadt Kaunas|
 #NA|si|2026|NA|g|?? 150. Geburtstag von Ivan Cankar|
@@ -698,8 +700,6 @@ NA|lt|2025|2025-12-22|g|? Mažoji Lietuva|
 #NA|fr|2026|NA|g|?? Antoine de Saint-Exupéry|
 #NA|es|2026|NA|g|?? Kloster Poblet|
 #NA|ee|2026|NA|g|?? Sipsik|
-#NA|sm|2026|NA|g|?? 450. Todestag von Tizian|
-#NA|sm|2026|NA|g|?? 800. Todestag von Franz von Assisi|
 #NA|bg|2026|NA|g|?? Das Bulgarische Alphabet|
 #NA|cy|2026|NA|g|?? EU-Ratspräsidentschaft|
 #NA|ie|2026|NA|g|?? EU-Ratspräsidentschaft|
@@ -707,6 +707,7 @@ NA|lt|2025|2025-12-22|g|? Mažoji Lietuva|
 #NA|gr|2026|NA|g|?? 200. Jahrestga des Exodus von Messolonghi|
 #NA|gr|2026|NA|g|?? 100. Jahrestag der Gründung der Akademie von Athen|
 #NA|fr|2026|NA|g|?? Die französische Marine - 400 Jahre Erfahrung|
+#NA|lv|2026|NA|g|?? Weihnachtsmarkt Tradition|
 # ___   ___  ___  ____
 #  ) ) / / \  ) )  / /
 # /_/_ \_\_/ /_/_ /_/ 
