@@ -751,7 +751,7 @@ NA|lt|2025|2025-12-22|g|? Mažoji Lietuva|
 #NA|es|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
 #NA|cy|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
 
-# STAND Gedenkmünzen: 22. Dezember 2025 zwei.euro.com News
+# STAND Gedenkmünzen: 31. Dezember 2025 zwei.euro.com News
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
 # |_| \ \_\_/ |_| \ _)_) |_|  | \_\_/ |_| \| /_/_ |_|__ |_| \|
