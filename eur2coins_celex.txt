@@ -732,28 +732,27 @@ NA|de|2026|2026-1-8|g|? Konrad Adenauer|A,D,F,G,J
 # /_/_ \_\_/ /_/_  /_/ 
 ## 2029 ----
 
-#NA|be|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|bg|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|de|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|ee|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|fi|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|fr|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|gr|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|ie|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|it|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|hr|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|lv|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|lt|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|lu|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|mt|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|nl|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|at|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|pt|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|sk|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|si|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|es|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|cy|2029|NA|?? 25. Jahrestag der EU-Erweiterung 2004|
-#NA|sk|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung von 2004|
+#NA|be|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|bg|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|de|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|ee|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|fi|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|fr|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|gr|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|ie|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|it|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|hr|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|lv|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|lt|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|lu|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|mt|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|nl|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|at|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|pt|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|sk|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|si|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|es|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
+#NA|cy|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
 #NA|sk|2029|NA|g|?? 80. Jubiläum des Slowakischen Volkskunstensembles SL’UK|
 # ___   ___  ___   ___ 
 #  ) ) / / \  ) ) / / \
