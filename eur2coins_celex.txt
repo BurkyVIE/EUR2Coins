@@ -760,7 +760,6 @@ NA|de|2026|2026-1-8|g|? Konrad Adenauer|A,D,F,G,J
 ## 2030 ----
 
 #NA|sk|2030|NA|g|?? 75. Jahrestag des Východná Volksfestes|
-#NA|sk|2030|NA|g|?? |
 
 # STAND Gedenkmünzen: 8. Jänner 2026 zwei.euro.com News
 
