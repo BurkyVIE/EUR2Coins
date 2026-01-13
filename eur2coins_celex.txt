@@ -684,9 +684,9 @@ NA|lt|2025|2025-12-22|g|? Mažoji Lietuva|
 ## 2026 ----
 
 NA|de|2026|2026-1-8|g|? Konrad Adenauer|A,D,F,G,J
+NA|sk|2026|2026-1-13|g|? Trencin - Kulturhauptstadt Europas 2026|
 
 #NA|de|2026|NA|g|? Bremen|A,D,F,G,J
-#NA|sk|2026|NA|g|? Trencin - Kulturhauptstadt Europas 2026|
 #NA|lt|2026|NA|g|? Unabhängigkeit Litauens in der Energieversorgung|
 #NA|sk|2026|NA|g|? 50. Jahrestag des Sieges der tschechoslowakischen Fußballmannschaft bei der EM1976|
 #NA|it|2026|NA|g|? 800. Todestag des Heiligen Franz von Assisi|
@@ -761,7 +761,7 @@ NA|de|2026|2026-1-8|g|? Konrad Adenauer|A,D,F,G,J
 
 #NA|sk|2030|NA|g|?? 75. Jahrestag des Východná Volksfestes|
 
-# STAND Gedenkmünzen: 8. Jänner 2026 zwei.euro.com News
+# STAND Gedenkmünzen: 13. Jänner 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
