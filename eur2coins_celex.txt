@@ -693,12 +693,12 @@ NA|sk|2026|2026-1-13|g|? Trencin - Kulturhauptstadt Europas 2026|
 #NA|it|2026|NA|g|? 200. Geburtstag von Carlo Collodi - Pinocchio|
 #NA|sm|2026|NA|g|? 450. Todestag von Tizian|
 #NA|sm|2026|NA|g|? 800. Todestag von Franz von Assisi|
+#NA|fr|2026|NA|g|? Antoine de Saint-Exupéry - 80. Jahrestag der Veröffentlichung des Kleinen Prinzen|
 
 #NA|lt|2026|NA|g|?? Die Stadt Kaunas|
 #NA|si|2026|NA|g|?? 150. Geburtstag von Ivan Cankar|
 #NA|lu|2026|NA|g|?? Verleihung des Intzernationalen Karlspreis an das luxemburgische Volk|
 #NA|lu|2026|NA|g|?? Luxemburgischer Nationalfeiertag/Groussherzogsgebuertsdag|
-#NA|fr|2026|NA|g|?? Antoine de Saint-Exupéry|
 #NA|es|2026|NA|g|?? Kloster Poblet|
 #NA|ee|2026|NA|g|?? Sipsik|
 #NA|bg|2026|NA|g|?? Das Bulgarische Alphabet|
