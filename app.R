@@ -403,7 +403,7 @@ server <- function(input, output, session) {
                                  valueExpr = {
                                    # Anzuzeigende Münzen
                                    show <- filter(all_data(), (Ablage != " " | input$in_smlg.ident != "ja"), (is.na(Ablage) | input$in_smlg.ident != "nein"),
-                                                  grepl(input$in_id.ident, ID, ignore.case = TRUE),
+                                                  grepl(input$in_id.ident, ID, ignore.case = TRUE, perl = FALSE),
                                                   grepl(paste0("\\b", input$in_mzz.ident, "\\b"), Münzzeichen), #('\\b', - Regex word boundary)
                                                   grepl(input$in_abb.ident, Abbildung, ignore.case = TRUE))
                                    # Anzahl Münzen n (Überschrift inkl Plural)
