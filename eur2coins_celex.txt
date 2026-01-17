@@ -776,6 +776,16 @@ NA|sk|2026|2026-1-13|g|? Trencin - Kulturhauptstadt Europas 2026|
 #NA|de|2031|NA|g|?? Hessen|A,D,F,G,J
 #NA|de|2031|NA|g|?? Regine Hildebrandt|A,D,F,G,J
 
+## 2032 on ----
+#NA|de|2032|NA|g|?? Sachsen|A,D,F,G,J
+#NA|de|2033|NA|g|?? Rheinland-Pfalz|A,D,F,G,J
+#NA|de|2034|NA|g|?? Berlin|A,D,F,G,J
+#NA|de|2035|NA|g|?? Schleswig-Holstein|A,D,F,G,J
+#NA|de|2036|NA|g|?? Brandenburg|A,D,F,G,J
+#NA|de|2037|NA|g|?? Sachsen-Anhalt|A,D,F,G,J
+#NA|de|2038|NA|g|?? Thüringen|A,D,F,G,J
+
+
 # STAND Gedenkmünzen: 15. Jänner 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
