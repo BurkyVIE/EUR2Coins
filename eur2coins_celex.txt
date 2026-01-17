@@ -714,24 +714,29 @@ NA|sk|2026|2026-1-13|g|? Trencin - Kulturhauptstadt Europas 2026|
 # /_/_ \_\_/ /_/_ /_/ 
 ## 2027 ----
 
+#NA|de|2027|NA|g|?? Nordrhein-Westfalen|A,D,F,G,J
 #NA|sk|2027|NA|g|?? 50. Jahrestag der Charta 77|
 #NA|sk|2027|NA|g|?? 250. Jahrestag der Ratio Educationis|
 #NA|bg|2027|NA|g|?? Die Bulgarische Rose|
 #NA|ee|2027|NA|g|?? Kreis Hiiu|
 #NA|ee|2027|NA|g|?? Veteranen der estnischen Verteidigungsstreitkräfte|
+#NA|de|2027|NA|g|?? Hans-Dietrich Genscher|A,D,F,G,J
 # ___   ___  ___   ___ 
 #  ) ) / / \  ) ) ( (_)
 # /_/_ \_\_/ /_/_ (_(_)
 ## 2028 ----
 
+#NA|de|2028|NA|g|?? Bayern|A,D,F,G,J
 #NA|bg|2028|NA|g|?? 150. Jahrestag der Befreiung Bulgariens|
 #NA|sk|2028|NA|g|?? 80. Jubiläum des Künstlerischen Ensembles Lúčnica|
 #NA|sk|2028|NA|g|?? 700. Jubiläum der Münzstätte Kremnica|
+#NA|de|2028|NA|g|?? Richard von Weizsäcker|A,D,F,G,J
 # ___   ___  ___   ___ 
 #  ) ) / / \  ) ) ( ( )
 # /_/_ \_\_/ /_/_  /_/ 
 ## 2029 ----
 
+#NA|de|2029|NA|g|?? Baden-Württemberg|A,D,F,G,J
 #NA|be|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
 #NA|bg|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
 #NA|de|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
@@ -754,14 +759,24 @@ NA|sk|2026|2026-1-13|g|? Trencin - Kulturhauptstadt Europas 2026|
 #NA|es|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
 #NA|cy|2029|NA|g|?? 25. Jahrestag der EU-Erweiterung 2004|
 #NA|sk|2029|NA|g|?? 80. Jubiläum des Slowakischen Volkskunstensembles SL’UK|
+#NA|de|2029|NA|g|?? Annemarie Renger|A,D,F,G,J
 # ___   ___  ___   ___ 
 #  ) ) / / \  ) ) / / \
 # /_/_ \_\_/ _)_) \_\_/
 ## 2030 ----
 
+#NA|de|2030|NA|g|?? Niedersachsen|A,D,F,G,J
 #NA|sk|2030|NA|g|?? 75. Jahrestag des Východná Volksfestes|
+#NA|de|2030|NA|g|?? Helmut Kohl|A,D,F,G,J
+# ___   ___  ___   _ 
+#  ) ) / / \  ) ) / |
+# /_/_ \_\_/ _)_) |_|
+## 2031 ----
 
-# STAND Gedenkmünzen: 13. Jänner 2026 zwei.euro.com News
+#NA|de|2031|NA|g|?? Hessen|A,D,F,G,J
+#NA|de|2031|NA|g|?? Regine Hildebrandt|A,D,F,G,J
+
+# STAND Gedenkmünzen: 15. Jänner 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
