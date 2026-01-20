@@ -710,6 +710,8 @@ NA|sk|2026|2026-1-13|g|? Trencin - Kulturhauptstadt Europas 2026|
 #NA|gr|2026|NA|g|?? 100. Jahrestag der Gründung der Akademie von Athen|
 #NA|fr|2026|NA|g|?? Die französische Marine - 400 Jahre Erfahrung|
 #NA|lv|2026|NA|g|?? Weihnachtsmarkt Tradition|
+#NA|fi|2026|NA|g|?? 100 Jahre Finnischer Rundfunk Yleisradio|
+#NA|fi|2026|NA|g|?? Raili und reima Pietilä|
 # ___   ___  ___  ____
 #  ) ) / / \  ) )  / /
 # /_/_ \_\_/ /_/_ /_/ 
