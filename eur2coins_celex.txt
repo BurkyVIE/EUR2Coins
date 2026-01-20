@@ -648,17 +648,20 @@ C/2025/03841|fr|2025|2025-1-30|g|Louvre|
 C/2025/03840|it|2025|2025-2-5|g|Jubiläum 2025|
 C/2025/03825|sm|2025|2025-3-27|g|Heiliges Jahr 2025 – Pilger der Hoffnung|
 C/2025/03845|lt|2025|2025-3-27|g|Verteidigung|
+C/2025/03832|lu|2025|2025-5-5|g|25. Jahrestag der Thronbesteigung von Großherzog Henri|
+C/2025/03834|lu|2025|2025-5-5|g|75. Jahrestag der Schuman-Erklärung vom 9. Mai 1950|
 C/2025/04005|it|2025|2025-5-9|g|Amerigo Vespucci Tour Mondiale 2023-2025|
 C/2025/03844|fi|2025|2025-5-13|g|Finnische Staatsbesuche – Diplomatie und Außenpolitik|
 C/2025/03828|mt|2025|2025-5-15|g|Maltesischer Ochse (il-gendus Malti)|
 C/2025/04012|mt|2025|2025-5-15|g|Die Stadt Mdina|
 C/2025/03831|mc|2025|2025-6-16|g|Comté de Carladès|
 C/2025/03823|pt|2025|2025-6-24|g|Weltpfadfinderbewegung|
+C/2025/03822|va|2025|2025-6-30|g|Sedisvakanz 2025|
+C/2025/03843|va|2025|2025-6-30|g|Jubiläum 2025|
+C/2025/03848|va|2025|2025-6-30|g|550. Geburtstag von Michelangelo|
 C/2025/03846|sm|2025|2025-7-3|g|550. Geburtstag von Michelangelo|
 C/2025/03847|pt|2025|2025-9-24|g|Nachhaltige Entwicklung|
 C/2025/03829|mc|2025|2025-11-4|g|Marquisat des Baux|
-C/2025/03832|lu|2025|2025-5-5|g|25. Jahrestag der Thronbesteigung von Großherzog Henri|
-C/2025/03834|lu|2025|2025-5-5|g|75. Jahrestag der Schuman-Erklärung vom 9. Mai 1950|
 
 NA|ee|2025|2025-1-30|g|? 500 Jahre erster Textdruck in esthnischer Sprache|
 NA|hr|2025|2025-7-4|g|? 1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
@@ -674,10 +677,6 @@ NA|ad|2025|2025-11-24|g|? Spiele der kleinen Staaten von Europa|
 NA|ad|2025|2025-11-24|g|? Der Bartgeier|
 NA|si|2025|2025-11-26|g|? 100. Geburtstag von Miki Muster|
 NA|lt|2025|2025-12-22|g|? Mažoji Lietuva|
-
-#C/2025/03822|va|2025|NA|g|Sedisvakanz 2025|
-#C/2025/03843|va|2025|NA|g|Jubiläum 2025|
-#C/2025/03848|va|2025|NA|g|550. Geburtstag von Michelangelo|
 # ___   ___  ___    __ 
 #  ) ) / / \  ) )  / / 
 # /_/_ \_\_/ /_/_ (_)_)
