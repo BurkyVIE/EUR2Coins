@@ -645,6 +645,7 @@ C/2025/03824|sk|2025|2025-1-20|g|100. Jahrestag des ersten internationalen Sport
 C/2025/03842|be|2025|2025-1-23|g|Belgische Nationallotterie|
 C/2025/03839|es|2025|2015-1-30|g|Anerkennung von Salamanca als UNESCO-Welterbestätte|
 C/2025/03841|fr|2025|2025-1-30|g|Louvre|
+C/2026/00416|ee|2025|2025-1-30|g|500. Jahrestag der ersten Veröffentlichung mit Worten in estnischer Sprache und der Anfänge der estnischen literarischen Sprache|
 C/2025/03840|it|2025|2025-2-5|g|Jubiläum 2025|
 C/2025/03825|sm|2025|2025-3-27|g|Heiliges Jahr 2025 – Pilger der Hoffnung|
 C/2025/03845|lt|2025|2025-3-27|g|Verteidigung|
@@ -660,23 +661,22 @@ C/2025/03822|va|2025|2025-6-30|g|Sedisvakanz 2025|
 C/2025/03843|va|2025|2025-6-30|g|Jubiläum 2025|
 C/2025/03848|va|2025|2025-6-30|g|550. Geburtstag von Michelangelo|
 C/2025/03846|sm|2025|2025-7-3|g|550. Geburtstag von Michelangelo|
+C/2026/00409|hr|2025|2025-7-4|g|Das 1100-jährige Jubiläum des Königreichs Kroatien und der Krönung von König Tomislav|
+C/2026/00414|fi|2025|2025-8-12|g|Finnkampen|
+C/2026/00413|gr|2025|2025-9-10|g|100. Geburtstag von Mikis Theodorakis|
+C/2026/00415|gr|2025|2025-9-10|g|200. Todestag von Laskarina Bouboulina|
 C/2025/03847|pt|2025|2025-9-24|g|Nachhaltige Entwicklung|
+C/2026/00408|hr|2025|2025-10-24|g|Serie „Kroatische Städte“: Stadt Pula - Arena|
+C/2026/00411|fr|2025|2025-10-28|g|Notre-Dame|
 C/2025/03829|mc|2025|2025-11-4|g|Marquisat des Baux|
+C/2026/00407|ad|2025|2025-11-24|g|Bartgeier|
+C/2026/00412|ad|2025|2025-11-24|g|Spiele der kleinen Staaten von Europa (2025 in Andorra veranstaltet)|
+C/2026/00410|si|2025|2025-11-26|g|100. Geburtstag von Miki Muster|
+C/2026/00406|lt|2025|2025-12-22|g|Serie „Ethnographische Regionen Litauens“: Kleinlitauen|
 
-NA|ee|2025|2025-1-30|g|? 500 Jahre erster Textdruck in esthnischer Sprache|
-NA|hr|2025|2025-7-4|g|? 1100 Jahre Königreich Kroatien und Krönung von König Tomislav|
 NA|be|2025|2025-7-25|g|? Rennstrecke Spa-Francorchamps|
-NA|fi|2025|2025-8-12|g|? 100 Jahre Finnalnd-Schweden Leichtathletikspiele|
-NA|gr|2025|2025-9-10|g|? 100. Geburtstag von Mikis Theodorakis|
-NA|gr|2025|2025-9-10|g|? 200. Todestag von Laskarnia Bouboulina|
 NA|de|2025|2025-9-25|g|? 35 Jahre Deutsche Einheit|A,D,F,G,J
 NA|lv|2025|2025-10-9|g|? Sēlija|
-NA|hr|2025|2025-10-24|g|? Stadt Pula - Arena|
-NA|fr|2025|2025-10-28|g|? Notre Dame|
-NA|ad|2025|2025-11-24|g|? Spiele der kleinen Staaten von Europa|
-NA|ad|2025|2025-11-24|g|? Der Bartgeier|
-NA|si|2025|2025-11-26|g|? 100. Geburtstag von Miki Muster|
-NA|lt|2025|2025-12-22|g|? Mažoji Lietuva|
 # ___   ___  ___    __ 
 #  ) ) / / \  ) )  / / 
 # /_/_ \_\_/ /_/_ (_)_)
