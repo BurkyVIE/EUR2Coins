@@ -673,8 +673,8 @@ C/2026/00407|ad|2025|2025-11-24|g|Bartgeier|
 C/2026/00412|ad|2025|2025-11-24|g|Spiele der kleinen Staaten von Europa (2025 in Andorra veranstaltet)|
 C/2026/00410|si|2025|2025-11-26|g|100. Geburtstag von Miki Muster|
 C/2026/00406|lt|2025|2025-12-22|g|Serie „Ethnographische Regionen Litauens“: Kleinlitauen|
+C/2026/00418|be|2025|2025-7-25|g|Circuit de Spa-Francorchamps (Motorsport-Rennstrecke) in Belgien|
 
-NA|be|2025|2025-7-25|g|? Rennstrecke Spa-Francorchamps|
 NA|de|2025|2025-9-25|g|? 35 Jahre Deutsche Einheit|A,D,F,G,J
 NA|lv|2025|2025-10-9|g|? Sēlija|
 # ___   ___  ___    __ 
@@ -894,7 +894,7 @@ C2013/309/03|lv|2014,2015,2016,2018,2019,2020,2021,2022,2023,2024,2025|NA|k|Trac
 ## MC /(Munegu/Monaco, de: Monaco, en: Monaco) ----
 52001XC1228(04)|mc|2001,2002,2003,2004|NA|k|Fürst Rainier III. (2001 - 2004)|
 C2006/316/09|mc|2006,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024|NA|k|Fürst Albert II. (2006 - 2024)|
-NA|mc|2025|NA|k|? Fürst Albert II. (2025 -)|
+C/2006/00419|mc|2025|NA|k|Fürst Albert II. (2025 -)|
 #  _       __    _    _____   __  
 # | |\/|  / /\  | |    | |   / /\ 
 # |_|  | /_/--\ |_|__  |_|  /_/--\
