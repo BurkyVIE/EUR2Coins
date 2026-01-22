@@ -632,7 +632,7 @@ C/2025/00596|lt|2024|2024-9-25|g|Aufnahme der litauischen Tradition der Strohgä
 C/2025/00595|hr|2024|2024-10-15|g|Ehrung des Vermächtnisses von Marko Marulić anlässlich seines 500. Todestags|
 C/2024/03947|va|2024|2024-11-12|g|150. Geburtstag von Guglielmo Marconi|
 C/2025/00625|lv|2024|2024-11-21|g|Himmeli|
-C/2025/01148|cy|2024|2024-11-27|g|~20 Jahre EU-Beitritt|
+C/2025/01148|cy|2024|2024-11-27|g|20 Jahre seit dem Beitritt Zyperns zur Europäischen Union|
 C/2025/00447|ad|2024|2024-12-9|g|100 Jahre Skifahren in Andorra|
 C/2025/00448|ad|2024|2024-12-9|g|UCI-Mountainbike-Weltmeisterschaft 2024|
 C/2025/00630|si|2024|2024-12-18|g|250-jähriges Bestehen der National- und Universitätsbibliothek (Narodna in univerzitetna knjižnica)|
