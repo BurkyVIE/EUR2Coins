@@ -3,7 +3,7 @@
 library(shiny)
 library(bslib)
 
-## Laden der externe Daten ----
+## Laden der externen Daten ----
 source("rd_celex.r")       #celex
 source("rd_circulation.r") #circulation
 source("rd_collection.r")  #collection
@@ -637,6 +637,7 @@ server <- function(input, output, session) {
 
 # Run the application ----
 shinyApp(ui = ui, server = server)
+
 
 
 
