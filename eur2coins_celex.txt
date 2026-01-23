@@ -723,6 +723,8 @@ NA|sk|2026|2026-1-13|g|? Trencin - Kulturhauptstadt Europas 2026|
 #NA|ee|2027|NA|g|?? Kreis Hiiu|
 #NA|ee|2027|NA|g|?? Veteranen der estnischen Verteidigungsstreitkräfte|
 #NA|de|2027|NA|g|?? Hans-Dietrich Genscher|A,D,F,G,J
+#NA|lt|2027|NA|g|?? Die Stadt Klaipéda|
+#NA|lt|2027|NA|g|?? 100 Jahre Komkordat zwischen Litauen und dem Heiligen Stuhl|
 # ___   ___  ___   ___ 
 #  ) ) / / \  ) ) ( (_)
 # /_/_ \_\_/ /_/_ (_(_)
@@ -788,7 +790,7 @@ NA|sk|2026|2026-1-13|g|? Trencin - Kulturhauptstadt Europas 2026|
 #NA|de|2038|NA|g|?? Thüringen|A,D,F,G,J
 
 
-# STAND Gedenkmünzen: 19. Jänner 2026 zwei.euro.com News
+# STAND Gedenkmünzen: 22. Jänner 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
