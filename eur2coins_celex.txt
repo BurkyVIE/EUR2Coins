@@ -684,15 +684,15 @@ NA|lv|2025|2025-10-9|g|? Sēlija|
 
 NA|de|2026|2026-1-8|g|? Konrad Adenauer|A,D,F,G,J
 NA|sk|2026|2026-1-13|g|? Trencin - Kulturhauptstadt Europas 2026|
+NA|fr|2026|2026-1-29|g|? Antoine de Saint-Exupéry - 80. Jahrestag der Veröffentlichung des Kleinen Prinzen|
+NA|de|2026|2026-1-29|g|? Bremen|A,D,F,G,J
 
-#NA|de|2026|NA|g|? Bremen|A,D,F,G,J
 #NA|lt|2026|NA|g|? Unabhängigkeit Litauens in der Energieversorgung|
 #NA|sk|2026|NA|g|? 50. Jahrestag des Sieges der tschechoslowakischen Fußballmannschaft bei der EM1976|
 #NA|it|2026|NA|g|? 800. Todestag des Heiligen Franz von Assisi|
 #NA|it|2026|NA|g|? 200. Geburtstag von Carlo Collodi - Pinocchio|
 #NA|sm|2026|NA|g|? 450. Todestag von Tizian|
 #NA|sm|2026|NA|g|? 800. Todestag von Franz von Assisi|
-#NA|fr|2026|NA|g|? Antoine de Saint-Exupéry - 80. Jahrestag der Veröffentlichung des Kleinen Prinzen|
 #NA|pt|2026|NA|g|? 100 Jahre Rotary Club in Portugal|
 #NA|mt|2026|NA|g|? Maltesische Städte mit Stadtmauern|
 #NA|mt|2026|NA|g|? "Einheimische Arten": Der Pharaonenhund|
@@ -793,7 +793,7 @@ NA|sk|2026|2026-1-13|g|? Trencin - Kulturhauptstadt Europas 2026|
 #NA|de|2038|NA|g|?? Thüringen|A,D,F,G,J
 
 
-# STAND Gedenkmünzen: 24. Jänner 2026 zwei.euro.com News
+# STAND Gedenkmünzen: 29. Jänner 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
