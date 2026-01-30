@@ -696,6 +696,8 @@ NA|de|2026|2026-1-29|g|? Bremen|A,D,F,G,J
 #NA|pt|2026|NA|g|? 100 Jahre Rotary Club in Portugal|
 #NA|mt|2026|NA|g|? Maltesische Städte mit Stadtmauern|
 #NA|mt|2026|NA|g|? "Einheimische Arten": Der Pharaonenhund|
+#NA|gr|2026|NA|g|? 200. Jahrestga des Exodus von Messolonghi|
+#NA|gr|2026|NA|g|? 100. Jahrestag der Gründung der Akademie von Athen|
 
 #NA|lt|2026|NA|g|?? Die Stadt Kaunas|
 #NA|si|2026|NA|g|?? 150. Geburtstag von Ivan Cankar|
@@ -707,8 +709,6 @@ NA|de|2026|2026-1-29|g|? Bremen|A,D,F,G,J
 #NA|cy|2026|NA|g|?? EU-Ratspräsidentschaft|
 #NA|ie|2026|NA|g|?? EU-Ratspräsidentschaft|
 #NA|es|2026|NA|g|?? Spanien & Behinderung: Schutz, Rechte und Inklusion|
-#NA|gr|2026|NA|g|?? 200. Jahrestga des Exodus von Messolonghi|
-#NA|gr|2026|NA|g|?? 100. Jahrestag der Gründung der Akademie von Athen|
 #NA|fr|2026|NA|g|?? Die französische Marine - 400 Jahre Erfahrung|
 #NA|lv|2026|NA|g|?? Weihnachtsmarkt Tradition|
 #NA|fi|2026|NA|g|?? 100 Jahre Finnischer Rundfunk Yleisradio|
