@@ -674,9 +674,9 @@ C/2026/00412|ad|2025|2025-11-24|g|Spiele der kleinen Staaten von Europa (2025 in
 C/2026/00410|si|2025|2025-11-26|g|100. Geburtstag von Miki Muster|
 C/2026/00406|lt|2025|2025-12-22|g|Serie „Ethnographische Regionen Litauens“: Kleinlitauen|
 C/2026/00418|be|2025|2025-7-25|g|Circuit de Spa-Francorchamps (Motorsport-Rennstrecke) in Belgien|
+C/2026/01302|de|2025|2025-9-25|g|35 Jahre deutsche Einheit|A,D,F,G,J
+C/2026/01304|lv|2025|2025-10-9|g|Sēlija|
 
-NA|de|2025|2025-9-25|g|? 35 Jahre Deutsche Einheit|A,D,F,G,J
-NA|lv|2025|2025-10-9|g|? Sēlija|
 # ___   ___  ___    __ 
 #  ) ) / / \  ) )  / / 
 # /_/_ \_\_/ /_/_ (_)_)
