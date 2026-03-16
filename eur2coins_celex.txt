@@ -658,8 +658,8 @@ C/2025/04012|mt|2025|2025-5-15|g|Die Stadt Mdina|
 C/2025/03831|mc|2025|2025-6-16|g|Comté de Carladès|
 C/2025/03823|pt|2025|2025-6-24|g|Weltpfadfinderbewegung|
 C/2025/03822|va|2025|2026-2-4|g|Sedisvakanz 2025|
-C/2025/03843|va|2025|2025-6-30|g|Jubiläum 2025|
-C/2025/03848|va|2025|2025-6-30|g|550. Geburtstag von Michelangelo|
+C/2025/03843|va|2025|2026-3-13|g|Jubiläum 2025|
+C/2025/03848|va|2025|2026-3-13|g|550. Geburtstag von Michelangelo|
 C/2025/03846|sm|2025|2025-7-3|g|550. Geburtstag von Michelangelo|
 C/2026/00409|hr|2025|2025-7-4|g|Das 1100-jährige Jubiläum des Königreichs Kroatien und der Krönung von König Tomislav|
 C/2026/00418|be|2025|2025-7-25|g|Circuit de Spa-Francorchamps (Motorsport-Rennstrecke) in Belgien|
@@ -795,7 +795,7 @@ NA|it|2026|2026-3-5|g|? 200. Geburtstag von Carlo Collodi - Pinocchio|
 #NA|de|2038|NA|g|?? Thüringen|A,D,F,G,J
 
 
-# STAND Gedenkmünzen: 10. März 2026 zwei.euro.com News
+# STAND Gedenkmünzen: 13. März 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
