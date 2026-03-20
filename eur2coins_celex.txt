@@ -715,6 +715,8 @@ NA|lt|2026|2026-3-18|g|? Unabhängigkeit Litauens in der Energieversorgung|
 #NA|fi|2026|NA|g|?? Raili und reima Pietilä|
 #NA|hr|2026|NA|g|?? Stadt Vukovar|
 #NA|hr|2026|NA|g|?? 100 Jahre Kroatischer Rundfunk|
+#NA|ie|2026|NA|g|?? TBD|
+#NA|be|2026|NA|g|?? 100 Jahre Belgische Staatsbahnen SNCB|
 # ___   ___  ___  ____
 #  ) ) / / \  ) )  / /
 # /_/_ \_\_/ /_/_ /_/ 
@@ -795,7 +797,7 @@ NA|lt|2026|2026-3-18|g|? Unabhängigkeit Litauens in der Energieversorgung|
 #NA|de|2038|NA|g|?? Thüringen|A,D,F,G,J
 
 
-# STAND Gedenkmünzen: 13. März 2026 zwei.euro.com News
+# STAND Gedenkmünzen: 19. März 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
