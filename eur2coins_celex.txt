@@ -688,10 +688,10 @@ NA|fr|2026|2026-1-29|g|? Antoine de Saint-Exupéry - 80. Jahrestag der Veröffen
 NA|de|2026|2026-1-29|g|? Bremen|A,D,F,G,J
 NA|it|2026|2026-3-5|g|? 200. Geburtstag von Carlo Collodi - Pinocchio|
 NA|lt|2026|2026-3-18|g|? Unabhängigkeit Litauens in der Energieversorgung|
+NA|sm|2026|2026-3-31|g|? 450. Todestag von Tizian|
+NA|it|2026|2026-4-1|g|? 800. Todestag des Heiligen Franz von Assisi|
 
 #NA|sk|2026|NA|g|? 50. Jahrestag des Sieges der tschechoslowakischen Fußballmannschaft bei der EM1976|
-#NA|it|2026|NA|g|? 800. Todestag des Heiligen Franz von Assisi|
-#NA|sm|2026|NA|g|? 450. Todestag von Tizian|
 #NA|sm|2026|NA|g|? 800. Todestag von Franz von Assisi|
 #NA|pt|2026|NA|g|? 100 Jahre Rotary Club in Portugal|
 #NA|mt|2026|NA|g|? Maltesische Städte mit Stadtmauern|
@@ -700,6 +700,8 @@ NA|lt|2026|2026-3-18|g|? Unabhängigkeit Litauens in der Energieversorgung|
 #NA|gr|2026|NA|g|? 100. Jahrestag der Gründung der Akademie von Athen|
 #NA|fi|2026|NA|g|? 100 Jahre Finnischer Rundfunk Yleisradio|
 #NA|lv|2026|NA|g|? Weihnachtsmarkt Tradition|
+#NA|lu|2026|NA|g|? Thronbesteigung und 45. Geburtstag des Großherzogs Guillaume|
+#NA|lu|2026|NA|g|? Verleihung des Internationalen Karlspreis an das luxemburgische Volk|
 
 #NA|lt|2026|NA|g|?? Die Stadt Kaunas|
 #NA|si|2026|NA|g|?? 150. Geburtstag von Ivan Cankar|
@@ -717,12 +719,13 @@ NA|lt|2026|2026-3-18|g|? Unabhängigkeit Litauens in der Energieversorgung|
 #NA|hr|2026|NA|g|?? 100 Jahre Kroatischer Rundfunk|
 #NA|ie|2026|NA|g|?? TBD|
 #NA|be|2026|NA|g|?? 100 Jahre Belgische Staatsbahnen SNCB|
+#NA|be|2026|NA|g|?? 50 Jahre Nationales Geographisches Institut und 200 Jahre Königlich Belgische Sternwarte|
 # ___   ___  ___  ____
 #  ) ) / / \  ) )  / /
 # /_/_ \_\_/ /_/_ /_/ 
 ## 2027 ----
 
-#NA|de|2027|NA|g|?? Nordrhein-Westfalen|A,D,F,G,J
+#NA|de|2027|NA|g|?? Nordrhein-Westfalen - Aachener Dom|A,D,F,G,J
 #NA|sk|2027|NA|g|?? 50. Jahrestag der Charta 77|
 #NA|sk|2027|NA|g|?? 250. Jahrestag der Ratio Educationis|
 #NA|bg|2027|NA|g|?? Die Bulgarische Rose|
@@ -796,8 +799,7 @@ NA|lt|2026|2026-3-18|g|? Unabhängigkeit Litauens in der Energieversorgung|
 #NA|de|2037|NA|g|?? Sachsen-Anhalt|A,D,F,G,J
 #NA|de|2038|NA|g|?? Thüringen|A,D,F,G,J
 
-
-# STAND Gedenkmünzen: 19. März 2026 zwei.euro.com News
+# STAND Gedenkmünzen: 1. April 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
