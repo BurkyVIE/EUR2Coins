@@ -725,8 +725,9 @@ NA|it|2026|2026-4-1|g|? 800. Todestag des Heiligen Franz von Assisi|
 # /_/_ \_\_/ /_/_ /_/ 
 ## 2027 ----
 
+#NA|sk|2027|NA|g|? 50. Jahrestag der Charta 77|
+
 #NA|de|2027|NA|g|?? Nordrhein-Westfalen - Aachener Dom|A,D,F,G,J
-#NA|sk|2027|NA|g|?? 50. Jahrestag der Charta 77|
 #NA|sk|2027|NA|g|?? 250. Jahrestag der Ratio Educationis|
 #NA|bg|2027|NA|g|?? Die Bulgarische Rose|
 #NA|ee|2027|NA|g|?? Kreis Hiiu|
@@ -799,7 +800,7 @@ NA|it|2026|2026-4-1|g|? 800. Todestag des Heiligen Franz von Assisi|
 #NA|de|2037|NA|g|?? Sachsen-Anhalt|A,D,F,G,J
 #NA|de|2038|NA|g|?? Thüringen|A,D,F,G,J
 
-# STAND Gedenkmünzen: 5. April 2026 zwei.euro.com News
+# STAND Gedenkmünzen: 11. April 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
