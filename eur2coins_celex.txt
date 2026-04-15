@@ -690,12 +690,12 @@ NA|it|2026|2026-3-5|g|? 200. Geburtstag von Carlo Collodi - Pinocchio|
 NA|lt|2026|2026-3-18|g|? Unabhängigkeit Litauens in der Energieversorgung|
 NA|sm|2026|2026-3-31|g|? 450. Todestag von Tizian|
 NA|it|2026|2026-4-1|g|? 800. Todestag des Heiligen Franz von Assisi|
+NA|mt|2026|2026-4-14|g|? Valetta|
+NA|mt|2026|2026-4-14|g|? Der Pharaonenhund|
 
 #NA|sk|2026|NA|g|? 50. Jahrestag des Sieges der tschechoslowakischen Fußballmannschaft bei der EM1976|
 #NA|sm|2026|NA|g|? 800. Todestag von Franz von Assisi|
 #NA|pt|2026|NA|g|? 100 Jahre Rotary Club in Portugal|
-#NA|mt|2026|NA|g|? Maltesische Städte mit Stadtmauern|
-#NA|mt|2026|NA|g|? "Einheimische Arten": Der Pharaonenhund|
 #NA|gr|2026|NA|g|? 200. Jahrestga des Exodus von Messolonghi|
 #NA|gr|2026|NA|g|? 100. Jahrestag der Gründung der Akademie von Athen|
 #NA|fi|2026|NA|g|? 100 Jahre Finnischer Rundfunk Yleisradio|
@@ -703,13 +703,13 @@ NA|it|2026|2026-4-1|g|? 800. Todestag des Heiligen Franz von Assisi|
 #NA|lu|2026|NA|g|? Thronbesteigung und 45. Geburtstag des Großherzogs Guillaume|
 #NA|lu|2026|NA|g|? Verleihung des Internationalen Karlspreis an das luxemburgische Volk|
 #NA|cy|2026|NA|g|? EU-Ratspräsidentschaft|
+#NA|ee|2026|NA|g|? Sipsik|
 
 #NA|lt|2026|NA|g|?? Die Stadt Kaunas|
 #NA|si|2026|NA|g|?? 150. Geburtstag von Ivan Cankar|
 #NA|lu|2026|NA|g|?? Verleihung des Intzernationalen Karlspreis an das luxemburgische Volk|
 #NA|lu|2026|NA|g|?? Luxemburgischer Nationalfeiertag/Groussherzogsgebuertsdag|
 #NA|es|2026|NA|g|?? Kloster Poblet|
-#NA|ee|2026|NA|g|?? Sipsik|
 #NA|bg|2026|NA|g|?? Das Bulgarische Alphabet|
 #NA|ie|2026|NA|g|?? EU-Ratspräsidentschaft|
 #NA|es|2026|NA|g|?? Spanien & Behinderung: Schutz, Rechte und Inklusion|
@@ -800,7 +800,7 @@ NA|it|2026|2026-4-1|g|? 800. Todestag des Heiligen Franz von Assisi|
 #NA|de|2037|NA|g|?? Sachsen-Anhalt|A,D,F,G,J
 #NA|de|2038|NA|g|?? Thüringen|A,D,F,G,J
 
-# STAND Gedenkmünzen: 11. April 2026 zwei.euro.com News
+# STAND Gedenkmünzen: 14. April 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
