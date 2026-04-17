@@ -720,6 +720,8 @@ NA|mt|2026|2026-4-14|g|? Der Pharaonenhund|
 #NA|ie|2026|NA|g|?? TBD|
 #NA|be|2026|NA|g|?? 100 Jahre Belgische Staatsbahnen SNCB|
 #NA|be|2026|NA|g|?? 50 Jahre Nationales Geographisches Institut und 200 Jahre Königlich Belgische Sternwarte|
+#NA|va|2026|NA|g|?? Magisterium von Papst Leo XIV.|
+#NA|va|2026|NA|g|?? 400. Jahrestag des Petersdoms|
 # ___   ___  ___  ____
 #  ) ) / / \  ) )  / /
 # /_/_ \_\_/ /_/_ /_/ 
@@ -800,7 +802,7 @@ NA|mt|2026|2026-4-14|g|? Der Pharaonenhund|
 #NA|de|2037|NA|g|?? Sachsen-Anhalt|A,D,F,G,J
 #NA|de|2038|NA|g|?? Thüringen|A,D,F,G,J
 
-# STAND Gedenkmünzen: 14. April 2026 zwei.euro.com News
+# STAND Gedenkmünzen: 16. April 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
