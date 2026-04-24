@@ -704,6 +704,7 @@ NA|mt|2026|2026-4-14|g|? Der Pharaonenhund|
 #NA|lu|2026|NA|g|? Verleihung des Internationalen Karlspreis an das luxemburgische Volk|
 #NA|cy|2026|NA|g|? EU-Ratspräsidentschaft|
 #NA|ee|2026|NA|g|? Sipsik|
+#NA|fi|2026|NA|g|? Raili und reima Pietilä|
 
 #NA|lt|2026|NA|g|?? Die Stadt Kaunas|
 #NA|si|2026|NA|g|?? 150. Geburtstag von Ivan Cankar|
@@ -714,7 +715,6 @@ NA|mt|2026|2026-4-14|g|? Der Pharaonenhund|
 #NA|ie|2026|NA|g|?? EU-Ratspräsidentschaft|
 #NA|es|2026|NA|g|?? Spanien & Behinderung: Schutz, Rechte und Inklusion|
 #NA|fr|2026|NA|g|?? Die französische Marine - 400 Jahre Erfahrung|
-#NA|fi|2026|NA|g|?? Raili und reima Pietilä|
 #NA|hr|2026|NA|g|?? Stadt Vukovar|
 #NA|hr|2026|NA|g|?? 100 Jahre Kroatischer Rundfunk|
 #NA|ie|2026|NA|g|?? TBD|
@@ -802,7 +802,7 @@ NA|mt|2026|2026-4-14|g|? Der Pharaonenhund|
 #NA|de|2037|NA|g|?? Sachsen-Anhalt|A,D,F,G,J
 #NA|de|2038|NA|g|?? Thüringen|A,D,F,G,J
 
-# STAND Gedenkmünzen: 16. April 2026 zwei.euro.com News
+# STAND Gedenkmünzen: 23. April 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
