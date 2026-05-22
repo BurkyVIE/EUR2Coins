@@ -693,13 +693,13 @@ NA|it|2026|2026-4-1|g|? 800. Todestag des Heiligen Franz von Assisi|
 NA|mt|2026|2026-4-14|g|? Valetta|
 NA|mt|2026|2026-4-14|g|? Der Pharaonenhund|
 NA|cy|2026|2026-5-20|g|? EU-Ratspräsidentschaft|
+NA|fi|2026|2026-5-21|g|? 100 Jahre Finnischer Rundfunk Yleisradio|
 
 #NA|sk|2026|NA|g|? 50. Jahrestag des Sieges der tschechoslowakischen Fußballmannschaft bei der EM1976|
 #NA|sm|2026|NA|g|? 800. Todestag von Franz von Assisi|
 #NA|pt|2026|NA|g|? 100 Jahre Rotary Club in Portugal|
 #NA|gr|2026|NA|g|? 200. Jahrestga des Exodus von Messolonghi|
 #NA|gr|2026|NA|g|? 100. Jahrestag der Gründung der Akademie von Athen|
-#NA|fi|2026|NA|g|? 100 Jahre Finnischer Rundfunk Yleisradio|
 #NA|lv|2026|NA|g|? Weihnachtsmarkt Tradition|
 #NA|lu|2026|NA|g|? Thronbesteigung und 45. Geburtstag des Großherzogs Guillaume|
 #NA|lu|2026|NA|g|? Verleihung des Internationalen Karlspreis an das luxemburgische Volk|
@@ -802,7 +802,7 @@ NA|cy|2026|2026-5-20|g|? EU-Ratspräsidentschaft|
 #NA|de|2037|NA|g|?? Sachsen-Anhalt|A,D,F,G,J
 #NA|de|2038|NA|g|?? Thüringen|A,D,F,G,J
 
-# STAND Gedenkmünzen: 20. Mai 2026 zwei.euro.com News
+# STAND Gedenkmünzen: 21. Mai 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
