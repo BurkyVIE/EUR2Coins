@@ -708,6 +708,7 @@ NA|fi|2026|2026-5-21|g|? 100 Jahre Finnischer Rundfunk Yleisradio|
 #NA|hr|2026|NA|g|? 100 Jahre Kroatischer Rundfunk und Fernsehen|
 #NA|lt|2026|NA|g|? Die Stadt Kaunas|
 #NA|bg|2026|NA|g|? Das Bulgarische Alphabet|
+#NA|be|2026|NA|g|? 100 Jahre Belgische Staatsbahnen SNCB|
 
 #NA|si|2026|NA|g|?? 150. Geburtstag von Ivan Cankar|
 #NA|lu|2026|NA|g|?? Verleihung des Intzernationalen Karlspreis an das luxemburgische Volk|
@@ -718,7 +719,6 @@ NA|fi|2026|2026-5-21|g|? 100 Jahre Finnischer Rundfunk Yleisradio|
 #NA|fr|2026|NA|g|?? Die französische Marine - 400 Jahre Erfahrung|
 #NA|hr|2026|NA|g|?? Stadt Vukovar|
 #NA|ie|2026|NA|g|?? TBD|
-#NA|be|2026|NA|g|?? 100 Jahre Belgische Staatsbahnen SNCB|
 #NA|be|2026|NA|g|?? 50 Jahre Nationales Geographisches Institut und 200 Jahre Königlich Belgische Sternwarte|
 #NA|va|2026|NA|g|?? Magisterium von Papst Leo XIV.|
 #NA|va|2026|NA|g|?? 400. Jahrestag des Petersdoms|
@@ -804,7 +804,7 @@ NA|fi|2026|2026-5-21|g|? 100 Jahre Finnischer Rundfunk Yleisradio|
 #NA|de|2037|NA|g|?? Sachsen-Anhalt|A,D,F,G,J
 #NA|de|2038|NA|g|?? Thüringen|A,D,F,G,J
 
-# STAND Gedenkmünzen: 26. Mai 2026 zwei.euro.com News
+# STAND Gedenkmünzen: 29. Mai 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
