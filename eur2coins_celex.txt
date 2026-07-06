@@ -742,6 +742,8 @@ NA|si|2026|2026-6-17|g|? 150. Geburtstag von Ivan Cankar|
 #NA|lu|2027|NA|g|?? 75. Jahrestag des Gerichtshofs der Europäischen Union|
 #NA|lu|2027|NA|g|?? 20 Jahre Zivilflagge Roude Léiw|
 #NA|bg|2027|NA|g|?? 20 Jahre Bulgarien in der EU|
+#NA|sm|2027|NA|g|?? 300. Todestag von Isaac Newton|
+#NA|sm|2027|NA|g|?? San Marinao - Land des Friedens|
 # ___   ___  ___   ___ 
 #  ) ) / / \  ) ) ( (_)
 # /_/_ \_\_/ /_/_ (_(_)
@@ -807,7 +809,7 @@ NA|si|2026|2026-6-17|g|? 150. Geburtstag von Ivan Cankar|
 #NA|de|2037|NA|g|?? Sachsen-Anhalt|A,D,F,G,J
 #NA|de|2038|NA|g|?? Thüringen|A,D,F,G,J
 
-# STAND Gedenkmünzen: 24. Juni 2026 zwei.euro.com News
+# STAND Gedenkmünzen: 4. Juli 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
