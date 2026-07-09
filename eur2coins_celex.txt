@@ -701,8 +701,8 @@ NA|be|2026|2026-6-15|g|? 100 Jahre Belgische Staatsbahnen NMBS/SNCB|
 NA|mc|2026|2026-6-16|g|? Herzogtum Valentinois|
 NA|si|2026|2026-6-17|g|? 150. Geburtstag von Ivan Cankar|
 NA|ie|2026|2026-7-6|g|? EU-Ratspräsidentschaft|
+NA|sm|2026|2026-7-9|g|? 800. Todestag von Franz von Assisi|
 
-#NA|sm|2026|NA|g|? 800. Todestag von Franz von Assisi|
 #NA|pt|2026|NA|g|? 100 Jahre Rotary Club in Portugal|
 #NA|gr|2026|NA|g|? 200. Jahrestga des Exodus von Messolonghi|
 #NA|lv|2026|NA|g|? Weihnachtsmarkt Tradition|
