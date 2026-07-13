@@ -744,6 +744,7 @@ NA|sm|2026|2026-7-9|g|? 800. Todestag von Franz von Assisi|
 #NA|bg|2027|NA|g|?? 20 Jahre Bulgarien in der EU|
 #NA|sm|2027|NA|g|?? 300. Todestag von Isaac Newton|
 #NA|sm|2027|NA|g|?? San Marino - Land des Friedens|
+#NA|at|2027|NA|g|?? 200. Todestag von Ludwig van Beethoven|
 # ___   ___  ___   ___ 
 #  ) ) / / \  ) ) ( (_)
 # /_/_ \_\_/ /_/_ (_(_)
