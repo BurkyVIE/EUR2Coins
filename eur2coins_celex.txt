@@ -810,7 +810,7 @@ NA|sm|2026|2026-7-9|g|? 800. Todestag von Franz von Assisi|
 #NA|de|2037|NA|g|?? Sachsen-Anhalt|A,D,F,G,J
 #NA|de|2038|NA|g|?? Thüringen|A,D,F,G,J
 
-# STAND Gedenkmünzen: 6. Juli 2026 zwei.euro.com News
+# STAND Gedenkmünzen: 11. Juli 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
