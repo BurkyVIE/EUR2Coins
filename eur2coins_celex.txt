@@ -702,8 +702,8 @@ NA|mc|2026|2026-6-16|g|? Herzogtum Valentinois|
 NA|si|2026|2026-6-17|g|? 150. Geburtstag von Ivan Cankar|
 NA|ie|2026|2026-7-6|g|? EU-Ratspräsidentschaft|
 NA|sm|2026|2026-7-9|g|? 800. Todestag von Franz von Assisi|
+NA|pt|2026|2026-7-15|g|? 100 Jahre Rotary Club in Portugal|
 
-#NA|pt|2026|NA|g|? 100 Jahre Rotary Club in Portugal|
 #NA|gr|2026|NA|g|? 200. Jahrestga des Exodus von Messolonghi|
 #NA|lv|2026|NA|g|? Weihnachtsmarkt Tradition|
 #NA|lu|2026|NA|g|? Thronbesteigung und 45. Geburtstag des Großherzogs Guillaume|
@@ -810,7 +810,7 @@ NA|sm|2026|2026-7-9|g|? 800. Todestag von Franz von Assisi|
 #NA|de|2037|NA|g|?? Sachsen-Anhalt|A,D,F,G,J
 #NA|de|2038|NA|g|?? Thüringen|A,D,F,G,J
 
-# STAND Gedenkmünzen: 11. Juli 2026 zwei.euro.com News
+# STAND Gedenkmünzen: 15. Juli 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
@@ -904,7 +904,7 @@ C2014/385/05|lt|2015,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026|NA|k|Vyti
 # | |   | | | \ \_/ | |_  | |\/| | |_) | | | | |_) / /`_
 # |_|__ \_\_/ /_/ \ |_|__ |_|  | |_|_) \_\_/ |_| \ \_\_/
 52001XC1228(04)|lu|2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025|NA|k|Großherzog Henri (2002 - 2025)|
-NA|lu|2026|NA|k|Grossherzog Guillaume (2026 -)
+NA|lu|2026|NA|k|Grossherzog Guillaume (2026 -)|
 #  _     ____ _____ _____  _      __    _      ___ 
 # | |   | |_   | |   | |  | |    / /\  | |\ | | | \
 # |_|__ |_|__  |_|   |_|  |_|__ /_/--\ |_| \| |_|_/
