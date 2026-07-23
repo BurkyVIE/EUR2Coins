@@ -29,4 +29,7 @@ cpic |>
   
   # 5. Spaltenanordnung & finale Sortierung
   relocate(Jahr, .after = Art) |> 
-  arrange(Land, Jahr)
+  arrange(Land, Jahr) |> 
+
+  # 6. Ausgabe
+  print()
