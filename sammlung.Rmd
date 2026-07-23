@@ -19,7 +19,7 @@ source("rd_circulation.r", local = knitr::knit_global()) #circulation
 <style type="text/css">
 h1.title {
   font-size: 22px;
-  color: DarkGreen;
+  <!-- color: DarkGreen; -->
 }
 </style>
 
@@ -45,9 +45,9 @@ df <- Reduce(function(...) merge(..., by = "ID", all.x = TRUE, no.dups = TRUE),
 
 ```{r table}
 gt::gt(df, id = "coin_coll") |> 
-  gt::data_color(columns = "Qualität", target_columns = everything(),
-                 palette = "YlGn", alpha = .5, reverse = TRUE, method = "factor",
-                 contrast_algo = "wcag") |>  
+  # gt::data_color(columns = "Qualität", target_columns = everything(),
+  #                palette = "YlGn", alpha = .5, reverse = TRUE, method = "factor",
+  #                contrast_algo = "wcag") |>  
   gt::cols_align(align = "right", columns = "Mzz") |> 
   gt::cols_align(align = "center", columns = "Hfgkt") |> 
   gt::tab_options(table.font.size = 11,
