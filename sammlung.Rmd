@@ -18,8 +18,11 @@ source("rd_circulation.r", local = knitr::knit_global()) #circulation
 
 <style type="text/css">
 h1.title {
-  font-size: 22px;
+  font-size: 22px; text-align: center;
   <!-- color: DarkGreen; -->
+}
+h4.date {
+  text-align: center;
 }
 </style>
 
