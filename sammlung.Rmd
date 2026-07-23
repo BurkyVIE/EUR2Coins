@@ -54,6 +54,7 @@ gt::gt(df, id = "coin_coll") |>
                   row_group.background.color = "grey45",
                   row_group.font.weight = "bold",
                   row_group.padding = 2,
+                  column_labels.padding = 2,
                   data_row.padding = 1)
 ```
 
