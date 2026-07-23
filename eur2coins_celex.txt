@@ -730,8 +730,8 @@ NA|hr|2026|2026-7-16|g|? 100 Jahre Kroatischer Rundfunk und Fernsehen|
 
 #NA|sk|2027|NA|g|? 50. Jahrestag der Charta 77|
 #NA|ee|2027|NA|g|? Veteranen der estnischen Verteidigungsstreitkräfte|
+#NA|de|2027|NA|g|? Nordrhein-Westfalen - Aachener Dom|A,D,F,G,J
 
-#NA|de|2027|NA|g|?? Nordrhein-Westfalen - Aachener Dom|A,D,F,G,J
 #NA|sk|2027|NA|g|?? 250. Jahrestag der Ratio Educationis|
 #NA|bg|2027|NA|g|?? Die Bulgarische Rose|
 #NA|ee|2027|NA|g|?? Kreis Hiiu|
@@ -810,7 +810,7 @@ NA|hr|2026|2026-7-16|g|? 100 Jahre Kroatischer Rundfunk und Fernsehen|
 #NA|de|2037|NA|g|?? Sachsen-Anhalt|A,D,F,G,J
 #NA|de|2038|NA|g|?? Thüringen|A,D,F,G,J
 
-# STAND Gedenkmünzen: 16. Juli 2026 zwei.euro.com News
+# STAND Gedenkmünzen: 23. Juli 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
