@@ -31,7 +31,7 @@ df <- Reduce(function(...) merge(..., by = "ID", all.x = TRUE, no.dups = TRUE),
              list(coins, collection |> select(ID, Qualität, Ablage), circulation)) |> 
   as_tibble() |> 
   filter(!is.na(Ablage)) |> # nur noch nicht gesammelte
-  transmute(Jahr = Prägejahr,
+  transmute(Jahr = paste0(str_dup(paste0(Prägejahr, " · · · "), 2), Prägejahr),
             Land,
             Mzz = abbreviate(Münzzeichen, 7), 
             Motiv = case_when(nchar(Abbildung) > 70 ~ paste0(str_sub(Abbildung, 1, 70), "..."),
