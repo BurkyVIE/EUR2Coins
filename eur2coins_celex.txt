@@ -732,10 +732,10 @@ NA|hr|2026|2026-7-16|g|? 100 Jahre Kroatischer Rundfunk und Fernsehen|
 #NA|ee|2027|NA|g|? Veteranen der estnischen Verteidigungsstreitkräfte|
 #NA|de|2027|NA|g|? Nordrhein-Westfalen - Aachener Dom|A,D,F,G,J
 #NA|si|2027|NA|g|? 100. Geburtstag von Ančka Gošnik Godec|
+#NA|ee|2027|NA|g|? Landkreises Hiiumaa|
 
 #NA|sk|2027|NA|g|?? 250. Jahrestag der Ratio Educationis|
 #NA|bg|2027|NA|g|?? Die Bulgarische Rose|
-#NA|ee|2027|NA|g|?? Kreis Hiiu|
 #NA|de|2027|NA|g|?? Hans-Dietrich Genscher|A,D,F,G,J
 #NA|lt|2027|NA|g|?? Die Stadt Klaipéda|
 #NA|lt|2027|NA|g|?? 100 Jahre Komkordat zwischen Litauen und dem Heiligen Stuhl|
