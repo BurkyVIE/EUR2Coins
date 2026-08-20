@@ -2,6 +2,10 @@
 title: "Gesammelte EUR2 Münzen"
 output: html_document
 date: "`r Sys.Date()`"
+params:
+  coins: NULL
+  collection: NULL
+  circulation: NULL
 ---
 
 ```{r setup, include=FALSE}
@@ -10,10 +14,17 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Libraries
 library(tidyverse)
 
-## Externe Daten ----
-source("rd_celex.r", local = knitr::knit_global())       #celex
-source("rd_collection.r", local = knitr::knit_global())  #collection
-source("rd_circulation.r", local = knitr::knit_global()) #circulation
+## Daten beziehen: Aus Params (aus Shiny) oder Fallback (manuell knitten)
+if (!is.null(params$coins)) {
+  coins <- params$coins
+  collection <- params$collection
+  circulation <- params$circulation
+} else {
+  # Fallback, falls Rmd direkt in RStudio geknittet wird:
+  source("rd_celex.r", local = knitr::knit_global())       #celex
+  source("rd_collection.r", local = knitr::knit_global())  #collection
+  source("rd_circulation.r", local = knitr::knit_global()) #circulation
+}
 ```
 
 <style type="text/css">
