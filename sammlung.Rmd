@@ -35,7 +35,7 @@ if (!is.null(params$coins)) {
 
 <style type="text/css">
 h1.title {
-  font-size: 22px; text-align: center;
+  text-align: center;
 }
 h4.date {
   text-align: center;
