@@ -81,12 +81,16 @@ ui <- page_fluid(
                                     column(width = 3, actionButton(inputId = "bt_write_q2.ident", label = "(2) ★☆☆", width = "100%", style = "padding:6px;")),
                                     column(width = 3, actionButton(inputId = "bt_write_q3.ident", label = "(3) ☆☆☆", width = "100%", style = "padding:6px;")),
                                     p(div(class = 'beschr', "[...] Übernimmt markierte ", em("Münz ID"), "und ändert/ergänzt gewählte Qualität im File eur2collection.txt"))),
-                                    h3("eur2collection.txt"),
                                   fluidRow(
-                                    column(width = 3),
-                                    column(width = 5, actionButton(inputId = "bt_do_aend.ident", label = "Neu laden", width = "100%", style = "padding:6px;")),
-                                    column(width = 3),
-                                    p(div(class = 'beschr', "[Neu laden] lädt Dateien neu von Festplatte, z.B. nach manuellen externen Änderungen")))),
+                                    column(width = 6,
+                                           h3("eur2collection.txt"),
+                                           actionButton(inputId = "bt_do_aend.ident", label = "Neu laden", width = "100%", style = "padding:6px;"),
+                                           div(class = 'beschr', style = "margin-top: 4px;", "[Neu laden] liest Dateien von Festplatte neu ein.")
+                                    ),
+                                    column(width = 6,
+                                           h3("sammlung.html"),
+                                           downloadButton(outputId = "dl_sammlung_report.ident", label = "Erstellen", style = "width: 100%; padding: 6px; font-size: 14px;"),
+                                           div(class = 'beschr', style = "margin-top: 4px;", "[Erstellen] knittet sammlung.Rmd zu HTML.")))),
                 ### Identifikation Main ----
                 h2("Ergebnis entsprechend Filter", .noWS = "before"),
                   htmlOutput(outputId = "out_h3.ident"),
@@ -365,6 +369,32 @@ server <- function(input, output, session) {
       showNotification(paste("Fehler beim Einlesen:", e$message), type = "error", duration = 5)
     })
   })
+  
+  output$dl_sammlung_report.ident <- downloadHandler(
+    filename = function() {
+      paste0("sammlung_", Sys.Date(), ".html")
+    },
+    content = function(file) {
+      # Benachrichtigung anzeigen
+      id <- showNotification("Erstelle sammlung.html...", duration = NULL, closeButton = FALSE)
+      on.exit(removeNotification(id), add = TRUE)
+      
+      # 1. Aktuelles Arbeitsverzeichnis der Shiny-App speichern
+      app_dir <- getwd()
+      
+      # 2. Rmd-Datei in temporäres Verzeichnis kopieren
+      tempReport <- file.path(tempdir(), "sammlung.Rmd")
+      file.copy("sammlung.Rmd", tempReport, overwrite = TRUE)
+      
+      # 3. HTML rendern und explizit den App-Ordner als knit_root_dir festlegen
+      rmarkdown::render(
+        input = tempReport,
+        output_file = file,
+        knit_root_dir = app_dir, # Stellt sicher, dass Quell-Dateien wie mk_cpic.r gefunden werden
+        envir = new.env(parent = globalenv())
+      )
+    }
+  )
   
   output$out_table.ident <- renderTable(expr = er_tabl.ident(), spacing = "xs", width = "100%", align = c("lllcrlclcl"), sanitize.text.function = function(x) x)
   er_tabl.ident <- reactive({
