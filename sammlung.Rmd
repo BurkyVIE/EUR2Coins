@@ -1,12 +1,18 @@
 ---
-title: "Gesammelte EUR2 Münzen"
-output: html_document
-date: "`r Sys.Date()`"
+title: "Gesammelte 2-Euro-Münzen"
+author: "Henning & Thomas"
+date: "erst. `r Sys.Date()`"
+output:
+  html_document:
+    theme: readable
 params:
   coins: NULL
   collection: NULL
   circulation: NULL
 ---
+Willkommen in unserer Sammlung von *2-Euro-Münzen* – einer Chronik der europäischen Kultur, Geschichte und Politik, geprägt in Kupfer, Nickel und Zink.  
+Diese Aufstellung dokumentiert unsere gemeinsame Anstrengung beim Finden neuer Motive im täglichen Umgang mit Münzgeld und bietet damit einen Überblick über die bereits gefundenen und der Sammlung hinzugefügten Stücke.  
+Nicht zuletzt ist sie ein Spiegelbild der europäischen Vielfalt – festgehalten auf dem kleinsten gemeinsamen Nenner unseres Kontinents.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
@@ -30,7 +36,6 @@ if (!is.null(params$coins)) {
 <style type="text/css">
 h1.title {
   font-size: 22px; text-align: center;
-  <!-- color: DarkGreen; -->
 }
 h4.date {
   text-align: center;
