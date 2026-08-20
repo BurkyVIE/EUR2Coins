@@ -75,7 +75,7 @@ table, th, td {
 }
 
 .matrix th, .matrix td {
-  align:  center;
+  text-align:  center;
   vertical-align: middle;
   border-right: 1px dotted;
   border-bottom: 1px dotted;
@@ -137,29 +137,4 @@ table, th, td {
 .rare1, .rare2, .rare3, .rare4, .rare5 {
   color:#f7efe0;
   border-radius: 5px;
-}
-
-
-
-/* Farbbeispiele */
-  {
-  /* Generelle Anzeige */
-  #f7efe0
-  #02acd6
-  #01aad4
-  #018eb0
-  #ed0000
-  
-  /* Qualität */
-  #daa520
-  #5f9321
-  #1b7547
-  #0e4c92
-  
-  /* Häufigkeit */
-  #b22222
-  #c56320
-  #daa520
-  #7d9820
-  #228b22
 }

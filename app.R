@@ -81,16 +81,16 @@ ui <- page_fluid(
                                     column(width = 3, actionButton(inputId = "bt_write_q2.ident", label = "(2) ★☆☆", width = "100%", style = "padding:6px;")),
                                     column(width = 3, actionButton(inputId = "bt_write_q3.ident", label = "(3) ☆☆☆", width = "100%", style = "padding:6px;")),
                                     p(div(class = 'beschr', "[...] Übernimmt markierte ", em("Münz ID"), "und ändert/ergänzt gewählte Qualität im File eur2collection.txt"))),
-                                  fluidRow(
                                     h3("eur2collection.txt"),
+                                  fluidRow(
                                     column(width = 3),
                                     column(width = 5, actionButton(inputId = "bt_do_aend.ident", label = "Neu laden", width = "100%", style = "padding:6px;")),
                                     column(width = 3),
                                     p(div(class = 'beschr', "[Neu laden] lädt Dateien neu von Festplatte, z.B. nach manuellen externen Änderungen")))),
                 ### Identifikation Main ----
                 h2("Ergebnis entsprechend Filter", .noWS = "before"),
-                fluidRow(
                   htmlOutput(outputId = "out_h3.ident"),
+                fluidRow(
                   div(class = 'longtab', tableOutput(outputId = "out_table.ident"))))),
     ## Auflagenstärke ----
     nav_menu(title = "Auflage",
@@ -116,8 +116,8 @@ ui <- page_fluid(
                                              p(div(class = 'beschr', "[Speichern] schreibt Werte aus Eingabebereich ins File eur2coins_circulation.txt")))),
                          ### Auflagenstärke erfassen Main ----
                          h2("Unbekannte Auflagenstärke", .noWS = "before"),
-                         fluidRow(
                            htmlOutput(outputId = "out_h3.erf"),
+                         fluidRow(
                            div(class = 'longtab', tableOutput(outputId = "out_table.erf"))))),
              nav_panel(title = "Auflagenstärke korrigieren",
                        page_sidebar(
@@ -157,8 +157,8 @@ ui <- page_fluid(
                                              p(div(class = 'beschr', "Wert Auflagenstärke wird gemeinsam mit markierter ", em("Münz ID"), " im File eur2coins_circulation.txt geändert")))),
                          ### Auflagenstärke korrigieren Main ----
                          h2("Ergebnis entsprechend Filter", .noWS = "before"),
-                         fluidRow(
                            htmlOutput(outputId = "out_h3.korr"),
+                         fluidRow(
                            div(class = 'longtab', tableOutput(outputId = "out_table.korr")))))),
     ## Ablage ----
     nav_panel(title = "Ablage",
@@ -185,8 +185,8 @@ ui <- page_fluid(
                                         "[gehe zu] übernimmt markierten unterstrichenen Teil im Tableau oder springt zur letzten abgelegten Münze"))),
                 ### Ablage Main ----
                 h2("Aktives Tableau", .noWS = "before"),
-                fluidRow(
                   htmlOutput(outputId = "out_h3tableau.abl"),
+                fluidRow(
                   div(class = 'matrix', tableOutput(outputId = "out_tableau.abl"))),
                 h2("Aktive Münze", .noWS = "before"),
                 fluidRow(
