@@ -90,7 +90,7 @@ ui <- page_fluid(
                                     column(width = 6,
                                            h3("sammlung.html"),
                                            downloadButton(outputId = "dl_sammlung_report.ident", label = "Erstellen", style = "width: 100%; padding: 6px; font-size: 14px;"),
-                                           div(class = 'beschr', style = "margin-top: 4px;", "[Erstellen] knittet sammlung.Rmd zu HTML.")))),
+                                           div(class = 'beschr', style = "margin-top: 4px;", "[Erstellen] knittet sammlung.Rmd in ein HTML-File zum Download.")))),
                 ### Identifikation Main ----
                 h2("Ergebnis entsprechend Filter", .noWS = "before"),
                   htmlOutput(outputId = "out_h3.ident"),
@@ -369,7 +369,8 @@ server <- function(input, output, session) {
       showNotification(paste("Fehler beim Einlesen:", e$message), type = "error", duration = 5)
     })
   })
-  
+                          
+  # Erstelle sammlung.html
   output$dl_sammlung_report.ident <- downloadHandler(
     filename = function() {
       paste0("sammlung_", Sys.Date(), ".html")
