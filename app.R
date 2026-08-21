@@ -336,22 +336,11 @@ server <- function(input, output, session) {
       current_col <- add_row(current_col, ID = input$myselection, Qualität = qu)
     }
     
-    # Analoge Berechnung zu rd_collection.r anstossen
-    current_col <- current_col |> 
-      mutate(
-        Zeilennummer = row_number(),
-        Box = (Zeilennummer - 1) %/% 144 + 1,
-        Tableau = (Zeilennummer - 1) %/% 24 %% 6 + 1,
-        Zeile = (Zeilennummer - 1) %/% 6 %% 4 + 1,
-        Spalte = (Zeilennummer - 1) %% 6 + 1,
-        Ablage = paste0(Box, Tableau, Zeile, Spalte, "×", str_pad(Zeilennummer, 4, pad = "0"))
-      )
-    
-    # 1. Speicher reaktiv updaten (stößt all_data() automatisch an)
     val_collection(current_col)
     
-    # 2. Nur ID und Qualität ins Textfile schreiben (dein bisheriges Format)
     write_lines(paste(current_col$ID, current_col$Qualität, sep = "-"), "eur2coins_collection.txt")
+    
+    showNotification(paste0("Münze ", input$myselection, " mit Qualität (", qu, ") gespeichert."), type = "message", duration = 2)
   }
   
   form_aufl <- function(x) {
@@ -380,7 +369,7 @@ server <- function(input, output, session) {
       showNotification(paste("Fehler beim Einlesen:", e$message), type = "error", duration = 5)
     })
   })
-                          
+  
   # Erstelle sammlung.html
   output$dl_sammlung_report.ident <- downloadHandler(
     filename = function() {
@@ -441,10 +430,12 @@ server <- function(input, output, session) {
     
     write_lines(out, file = "eur2coins_circulation.txt", append = TRUE)
     
-    new_rows <- read.table(text = out, sep = "-", col.names = c("ID", "Auflage"))
-    val_circulation(bind_rows(val_circulation(), new_rows))
+    source("rd_circulation.r")
+    val_circulation(circulation)
     
     updateTextInput(session, inputId = "in_erf.erf", value = "")
+    
+    showNotification("Auflagenstärke erfolgreich erfasst!", type = "message", duration = 3)
   })
   
   output$out_table.erf <- renderTable(expr = er_table.erf(), spacing = "xs", width = "100%", align = c("lllcrl"), sanitize.text.function = function(x) x)
@@ -473,9 +464,13 @@ server <- function(input, output, session) {
     
     tmp <- val_circulation()
     tmp[tmp$ID == input$myselection, "Auflage"] <- as.numeric(input$in_aufl.korr)
-    
-    val_circulation(tmp)
     write_lines(paste(tmp$ID, tmp$Auflage, sep = "-"), "eur2coins_circulation.txt")
+    
+    source("rd_circulation.r")
+    
+    val_circulation(circulation)
+    
+    showNotification("Auflagenstärke und Häufigkeit aktualisiert!", type = "message", duration = 2)
   })
   
   output$out_table.korr <- renderTable(expr = er_table.korr(), spacing = "xs", width = "100%", align = c("lllcrlrc"), sanitize.text.function = function(x) x)
