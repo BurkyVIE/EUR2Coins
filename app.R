@@ -68,7 +68,7 @@ ui <- page_fluid(
                                            h3("Münzzeichen"),
                                            fluidRow(
                                              column(width = 8, selectInput(inputId = "in_mzz.ident", label = NULL, 
-                                                                           choices = unique(c("", "A", "D", "F", "G", "J", celex$Münzzeichen)), 
+                                                                           choices = unique(c("", "A", "D", "F", "G", "J", coins$Münzzeichen)), 
                                                                            selected = NULL, width = "100%")),
                                              column(width = 4, actionButton(inputId = "bt_reset_mzz.ident", label = "✗", width = "100%", style = "padding:6px;"))),
                                            div(class = 'beschr', "Auswahl aus Liste; Genaue Übereinstimmung mit ", em("Mzz")))),
