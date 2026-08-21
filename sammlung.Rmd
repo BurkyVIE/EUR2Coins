@@ -5,6 +5,7 @@ date: "erst. `r Sys.Date()`"
 output:
   html_document:
     theme: readable
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), "sammlung.html")) })
 params:
   coins: NULL
   collection: NULL
@@ -27,9 +28,10 @@ if (!is.null(params$coins)) {
   circulation <- params$circulation
 } else {
   # Fallback, falls Rmd direkt in RStudio geknittet wird:
-  source("rd_celex.r", local = knitr::knit_global())       #celex
-  source("rd_collection.r", local = knitr::knit_global())  #collection
-  source("rd_circulation.r", local = knitr::knit_global()) #circulation
+  # chdir = TRUE stellt sicher, dass das Arbeitsverzeichnis innerhalb der source()-Skripte stimmt
+  source("rd_celex.r", local = FALSE)       # celex
+  source("rd_collection.r", local = FALSE)  # collection
+  source("rd_circulation.r", local = FALSE) # circulation
 }
 ```
 
@@ -37,7 +39,7 @@ if (!is.null(params$coins)) {
 h1.title {
   text-align: center;
 }
-h4.date {
+h4 {
   text-align: center;
 }
 </style>
