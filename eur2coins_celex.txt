@@ -733,6 +733,7 @@ NA|hr|2026|2026-7-16|g|? 100 Jahre Kroatischer Rundfunk und Fernsehen|
 #NA|de|2027|NA|g|? Nordrhein-Westfalen - Aachener Dom|A,D,F,G,J
 #NA|si|2027|NA|g|? 100. Geburtstag von Ančka Gošnik Godec|
 #NA|ee|2027|NA|g|? Landkreises Hiiumaa|
+#NA|at|2027|NA|g|? 200. Todestag von Ludwig van Beethoven|
 
 #NA|sk|2027|NA|g|?? 250. Jahrestag der Ratio Educationis|
 #NA|bg|2027|NA|g|?? Die Bulgarische Rose|
@@ -744,7 +745,6 @@ NA|hr|2026|2026-7-16|g|? 100 Jahre Kroatischer Rundfunk und Fernsehen|
 #NA|bg|2027|NA|g|?? 20 Jahre Bulgarien in der EU|
 #NA|sm|2027|NA|g|?? 300. Todestag von Isaac Newton|
 #NA|sm|2027|NA|g|?? San Marino - Land des Friedens|
-#NA|at|2027|NA|g|?? 200. Todestag von Ludwig van Beethoven|
 # ___   ___  ___   ___ 
 #  ) ) / / \  ) ) ( (_)
 # /_/_ \_\_/ /_/_ (_(_)
