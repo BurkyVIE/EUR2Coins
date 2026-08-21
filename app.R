@@ -1,16 +1,17 @@
 # GLOBAL ----
+
 ## Libraries ----
 library(shiny)
 library(bslib)
 library(tidyverse)
 
-## Laden der externen Daten ----
+## Datenimport ----
 source("rd_celex.r")       # celex
 source("rd_circulation.r") # circulation
 source("rd_collection.r")  # collection
 source("mk_cpic.r")        # cpic
 
-## JS Funktion  ----
+## JS-Funktionen ----
 fkt_highlight <- '
 // =============================================================================
 // 1. TEXTMARKIERUNG IM BROWSER ERFASSEN
@@ -35,12 +36,15 @@ document.onmouseup = document.onkeyup = document.onselectionchange = function() 
 };
 '
 
-# UI (User Interface) ----
+
+# UI (USER INTERFACE) ----
+
 ui <- page_fluid(
   includeCSS(path = "style_fwd.css"),
   tags$script(fkt_highlight),
   navset_pill(
-    ## Identifikation ----
+    
+    ## Tab: Identifikation ----
     nav_panel(title = "Identifikation",
               page_sidebar(
                 sidebar = sidebar(width = "27%", position = "left", open = "always",
@@ -91,13 +95,17 @@ ui <- page_fluid(
                                            h3("sammlung.html"),
                                            downloadButton(outputId = "dl_sammlung_report.ident", label = "Erstellen", style = "width: 100%; padding: 6px; font-size: 14px;"),
                                            div(class = 'beschr', style = "margin-top: 4px;", "[Erstellen] knittet sammlung.Rmd in ein HTML-File zum Download.")))),
-                ### Identifikation Main ----
+                
+                ### Hauptbereich Identifikation ----
                 h2("Ergebnis entsprechend Filter", .noWS = "before"),
-                  htmlOutput(outputId = "out_h3.ident"),
+                htmlOutput(outputId = "out_h3.ident"),
                 fluidRow(
                   div(class = 'longtab', tableOutput(outputId = "out_table.ident"))))),
-    ## Auflagenstärke ----
+    
+    ## Tab: Auflage ----
     nav_menu(title = "Auflage",
+             
+             ### Subtab: Auflagenstärke erfassen ----
              nav_panel(title = "Auflagenstärke erfassen",
                        page_sidebar(
                          sidebar = sidebar(width = "27%", position = "left", open = "always",
@@ -118,11 +126,14 @@ ui <- page_fluid(
                                              column(width = 6, actionButton(inputId = "bt_write_aufl.erf", label = "Speichern", width = "100%", style = "padding:6px;")),
                                              column(width = 3),
                                              p(div(class = 'beschr', "[Speichern] schreibt Werte aus Eingabebereich ins File eur2coins_circulation.txt")))),
-                         ### Auflagenstärke erfassen Main ----
+                         
+                         #### Hauptbereich Erfassen ----
                          h2("Unbekannte Auflagenstärke", .noWS = "before"),
-                           htmlOutput(outputId = "out_h3.erf"),
+                         htmlOutput(outputId = "out_h3.erf"),
                          fluidRow(
                            div(class = 'longtab', tableOutput(outputId = "out_table.erf"))))),
+             
+             ### Subtab: Auflagenstärke korrigieren ----
              nav_panel(title = "Auflagenstärke korrigieren",
                        page_sidebar(
                          sidebar = sidebar(width = "27%", position = "left", open = "always",
@@ -159,12 +170,14 @@ ui <- page_fluid(
                                              column(width = 6, actionButton(inputId = "bt_write_aufl.korr", label = "Speichern", width = "100%", style = "padding:6px;")),
                                              column(width = 3),
                                              p(div(class = 'beschr', "Wert Auflagenstärke wird gemeinsam mit markierter ", em("Münz ID"), " im File eur2coins_circulation.txt geändert")))),
-                         ### Auflagenstärke korrigieren Main ----
+                         
+                         #### Hauptbereich Korrigieren ----
                          h2("Ergebnis entsprechend Filter", .noWS = "before"),
-                           htmlOutput(outputId = "out_h3.korr"),
+                         htmlOutput(outputId = "out_h3.korr"),
                          fluidRow(
                            div(class = 'longtab', tableOutput(outputId = "out_table.korr")))))),
-    ## Ablage ----
+    
+    ## Tab: Ablage ----
     nav_panel(title = "Ablage",
               page_sidebar(
                 sidebar = sidebar(width = "27%", position = "left", open = "always",
@@ -187,9 +200,10 @@ ui <- page_fluid(
                                     column(width = 3, actionButton(inputId = "bt_do_getablnr.abl", label = "gehe zu", width = "100%", style = "padding:6px;")),
                                     div(class = 'beschr', "[≺] navigiert zur vorherigen (-1), [≻] zur nächsten (+1) Münze; ",
                                         "[gehe zu] übernimmt markierten unterstrichenen Teil im Tableau oder springt zur letzten abgelegten Münze"))),
-                ### Ablage Main ----
+                
+                ### Hauptbereich Ablage ----
                 h2("Aktives Tableau", .noWS = "before"),
-                  htmlOutput(outputId = "out_h3tableau.abl"),
+                htmlOutput(outputId = "out_h3tableau.abl"),
                 fluidRow(
                   div(class = 'matrix', tableOutput(outputId = "out_tableau.abl"))),
                 h2("Aktive Münze", .noWS = "before"),
@@ -199,7 +213,8 @@ ui <- page_fluid(
                          htmlOutput(outputId = "out_h3aktmz.abl"),
                          tableOutput(outputId = "out_aktmz.abl")))
               )),
-    ## Statistik ----
+    
+    ## Tab: Statistik ----
     nav_panel(title = "Statistik",
               h2(HTML("&nbsp;")),
               fluidRow(
@@ -219,14 +234,16 @@ ui <- page_fluid(
                        h3("Häufigkeit"),
                        tableOutput(outputId = "out_hfgkt.stat"))))))
 
-# Server ----
+
+# SERVER ----
+
 server <- function(input, output, session) {
   
   ## Reaktive Speicherwerte ----
   val_collection  <- reactiveVal(collection)
   val_circulation <- reactiveVal(circulation)
   
-  ## Reaktives Gecachtes ALL_DATA ----
+  ## Reaktive Datenaufbereitung ----
   all_data <- reactive({
     Reduce(function(...) merge(..., by = "ID", all.x = TRUE, no.dups = TRUE),
            list(coins, 
@@ -236,7 +253,7 @@ server <- function(input, output, session) {
       as_tibble()
   })
   
-  ## Formatierungs- und Hilfsfunktionen ----
+  ## Formatierung & Hilfsfunktionen ----
   fkt_form_tsd <- function (x) format(as.numeric(x), big.mark = "&nbsp;", scientific = FALSE)
   
   fkt_form_land <- function(txt) {
@@ -300,7 +317,7 @@ server <- function(input, output, session) {
            eaufl = df |> transmute('Münz ID' = ID, Jahr, Land, Art, Mzz = Münzzeichen, Abbildung, Auflage = fkt_form_tsd(Auflage), Hfgkt) |> arrange('Münz ID'))
   }
   
-  ### Fkt Darstellung Statistik ----
+  ### Statistik-Darstellung ----
   fkt_form_stat <- function(val, von, bis) {
     left_join(coins |> group_by(Grp = str_sub(ID, von, bis)) |> count(),
               val_collection() |> group_by(Grp = str_sub(ID, von, bis)) |> count(), # MIT KLAMMERN
@@ -313,6 +330,7 @@ server <- function(input, output, session) {
              Graph = paste0("<div class='bar'>", Graph, "</div>"))
   }
   
+  ### ID-Validierung ----
   fkt_do_ungltg.mid <- function() {
     if(str_detect(input$myselection, "\\d{4}[a-z]{2}[g|k]\\d{2}")) return(FALSE)
     else {
@@ -324,7 +342,7 @@ server <- function(input, output, session) {
     }
   }
   
-  ### Fkt Schreiben/Ändern einer Bewertung im Speicher + Hintergrund-File ----
+  ### Schreiben/Ändern einer Bewertung im Speicher + Datei ----
   fkt_write_bewertung <- function(qu) {
     if(fkt_do_ungltg.mid()) return()
     
@@ -347,7 +365,7 @@ server <- function(input, output, session) {
     paste0("<div style='text-align: left; margin-top: 7px'>=&nbsp;<b>", fkt_form_tsd(x), "</b>&nbsp;</div>")
   }
   
-  ## Page Identifikation ----
+  ## Server-Logik: Identifikation ----
   observeEvent(eventExpr = input$bt_reset_id.ident, handlerExpr = updateTextInput(session, inputId = "in_id.ident", value = ""))
   observeEvent(eventExpr = input$bt_reset_mzz.ident, handlerExpr = updateTextInput(session, inputId = "in_mzz.ident", value = ""))
   observeEvent(eventExpr = input$bt_reset_abb.ident, handlerExpr = updateTextInput(session, inputId = "in_abb.ident", value = ""))
@@ -357,7 +375,7 @@ server <- function(input, output, session) {
   observeEvent(eventExpr = input$bt_write_q2.ident, handlerExpr = fkt_write_bewertung(2))
   observeEvent(eventExpr = input$bt_write_q3.ident, handlerExpr = fkt_write_bewertung(3))
   
-  # Neu laden aus externen Dateien (falls außerhalb geändert)
+  # Neu laden aus externen Dateien
   observeEvent(eventExpr = input$bt_do_aend.ident, handlerExpr = {
     tryCatch({
       source("rd_circulation.r")
@@ -376,22 +394,18 @@ server <- function(input, output, session) {
       paste0("sammlung_", Sys.Date(), ".html")
     },
     content = function(file) {
-      # Benachrichtigung anzeigen
       id <- showNotification("Erstelle sammlung.html...", duration = NULL, closeButton = FALSE)
       on.exit(removeNotification(id), add = TRUE)
       
-      # 1. Aktuelles Arbeitsverzeichnis der Shiny-App speichern
       app_dir <- getwd()
       
-      # 2. Rmd-Datei in temporäres Verzeichnis kopieren
       tempReport <- file.path(tempdir(), "sammlung.Rmd")
       file.copy("sammlung.Rmd", tempReport, overwrite = TRUE)
       
-      # 3. HTML rendern und explizit den App-Ordner als knit_root_dir festlegen
       rmarkdown::render(
         input = tempReport,
         output_file = file,
-        knit_root_dir = app_dir, # Stellt sicher, dass Quell-Dateien wie mk_cpic.r gefunden werden
+        knit_root_dir = app_dir,
         envir = new.env(parent = globalenv())
       )
     }
@@ -411,7 +425,7 @@ server <- function(input, output, session) {
     fkt_datadisplay(df = show, variation = "ident")
   })
   
-  ## Unbekannte Auflagenstärke ----
+  ## Server-Logik: Unbekannte Auflagenstärke ----
   output$out_aufl.erf <- renderText(expr = er_auf.erf())
   er_auf.erf <- eventReactive(eventExpr = input$in_aufl.erf, valueExpr = form_aufl(input$in_aufl.erf))
   
@@ -445,7 +459,7 @@ server <- function(input, output, session) {
     fkt_datadisplay(df = show, variation = "uaufl")
   })
   
-  ## Erfasste Auflagenstärke ----
+  ## Server-Logik: Erfasste Auflagenstärke ----
   observeEvent(eventExpr = input$bt_reset_id.korr, handlerExpr = updateTextInput(session, inputId = "in_id.korr", value = ""))
   observeEvent(eventExpr = input$bt_reset_mzz.korr, handlerExpr = updateTextInput(session, inputId = "in_mzz.korr", value = ""))
   observeEvent(eventExpr = input$bt_reset_abb.korr, handlerExpr = updateTextInput(session, inputId = "in_abb.korr", value = ""))
@@ -483,7 +497,7 @@ server <- function(input, output, session) {
     fkt_datadisplay(df = show, variation = "eaufl")
   })
   
-  ## Ablage ----
+  ## Server-Logik: Ablage ----
   check_ablnr <- function(x) {
     maxi <- pull(count(val_collection())) # MIT KLAMMERN
     if (x == "bu") return (213L)
@@ -538,7 +552,7 @@ server <- function(input, output, session) {
     fkt_datadisplay(df = show, variation = "ablage")
   })
   
-  ## Statistik ----
+  ## Server-Logik: Statistik ----
   output$out_jahr.stat <- renderTable(expr = er_jahr.stat(), spacing = "xs", align = c("rrrl"), sanitize.text.function = function(x) x)
   er_jahr.stat <- reactive({ fkt_form_stat("Jahr", 1, 4) })
   
@@ -575,5 +589,7 @@ server <- function(input, output, session) {
   })
 }
 
-# Run the application ----
+
+# APP RUN ----
+
 shinyApp(ui = ui, server = server)
