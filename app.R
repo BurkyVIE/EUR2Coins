@@ -336,10 +336,21 @@ server <- function(input, output, session) {
       current_col <- add_row(current_col, ID = input$myselection, Qualität = qu)
     }
     
-    # 1. Speicher reaktiv updaten
+    # Analoge Berechnung zu rd_collection.r anstossen
+    current_col <- current_col |> 
+      mutate(
+        Zeilennummer = row_number(),
+        Box = (Zeilennummer - 1) %/% 144 + 1,
+        Tableau = (Zeilennummer - 1) %/% 24 %% 6 + 1,
+        Zeile = (Zeilennummer - 1) %/% 6 %% 4 + 1,
+        Spalte = (Zeilennummer - 1) %% 6 + 1,
+        Ablage = paste0(Box, Tableau, Zeile, Spalte, "×", str_pad(Zeilennummer, 4, pad = "0"))
+      )
+    
+    # 1. Speicher reaktiv updaten (stößt all_data() automatisch an)
     val_collection(current_col)
     
-    # 2. File schreiben
+    # 2. Nur ID und Qualität ins Textfile schreiben (dein bisheriges Format)
     write_lines(paste(current_col$ID, current_col$Qualität, sep = "-"), "eur2coins_collection.txt")
   }
   
