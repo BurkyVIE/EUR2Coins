@@ -704,14 +704,16 @@ NA|ie|2026|2026-7-6|g|? EU-Ratspräsidentschaft|
 NA|sm|2026|2026-7-9|g|? 800. Todestag von Franz von Assisi|
 NA|pt|2026|2026-7-15|g|? 100 Jahre Rotary Club in Portugal|
 NA|hr|2026|2026-7-16|g|? 100 Jahre Kroatischer Rundfunk und Fernsehen|
+NA|fi|2026|2026-8-26|g|? Raili und reima Pietilä|
 
 #NA|gr|2026|NA|g|? 200. Jahrestga des Exodus von Messolonghi|
 #NA|lv|2026|NA|g|? Weihnachtsmarkt Tradition|
 #NA|lu|2026|NA|g|? Thronbesteigung und 45. Geburtstag des Großherzogs Guillaume|
 #NA|lu|2026|NA|g|? Verleihung des Internationalen Karlspreis an das luxemburgische Volk|
-#NA|fi|2026|NA|g|? Raili und reima Pietilä|
 #NA|lt|2026|NA|g|? Die Stadt Kaunas|
 #NA|fr|2026|NA|g|? Die französische Marine - 400 Jahre Erfahrung|
+#NA|va|2026|NA|g|? 400. Jahrestag des Petersdoms|
+#NA|va|2026|NA|g|? Magisterium von Papst Leo XIV.|
 
 #NA|lu|2026|NA|g|?? Verleihung des Intzernationalen Karlspreis an das luxemburgische Volk|
 #NA|lu|2026|NA|g|?? Luxemburgischer Nationalfeiertag/Groussherzogsgebuertsdag|
@@ -720,8 +722,6 @@ NA|hr|2026|2026-7-16|g|? 100 Jahre Kroatischer Rundfunk und Fernsehen|
 #NA|hr|2026|NA|g|?? Stadt Vukovar|
 #NA|ie|2026|NA|g|?? TBD|
 #NA|be|2026|NA|g|?? 50 Jahre Nationales Geographisches Institut und 200 Jahre Königlich Belgische Sternwarte|
-#NA|va|2026|NA|g|?? Magisterium von Papst Leo XIV.|
-#NA|va|2026|NA|g|?? 400. Jahrestag des Petersdoms|
 #NA|bg|2026|NA|g|?? Das Bulgarische Alphabet|
 # ___   ___  ___  ____
 #  ) ) / / \  ) )  / /
@@ -810,7 +810,7 @@ NA|hr|2026|2026-7-16|g|? 100 Jahre Kroatischer Rundfunk und Fernsehen|
 #NA|de|2037|NA|g|?? Sachsen-Anhalt|A,D,F,G,J
 #NA|de|2038|NA|g|?? Thüringen|A,D,F,G,J
 
-# STAND Gedenkmünzen: 30. Juli 2026 zwei.euro.com News
+# STAND Gedenkmünzen: 26. August 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
