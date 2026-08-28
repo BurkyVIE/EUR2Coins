@@ -28,9 +28,10 @@ if (!is.null(params$coins)) {
   circulation <- params$circulation
 } else {
   # Fallback, falls Rmd direkt in RStudio geknittet wird:
-  source("rd_celex.r", local = knitr::knit_global())       #celex
-  source("rd_collection.r", local = knitr::knit_global())  #collection
-  source("rd_circulation.r", local = knitr::knit_global()) #circulation
+  # 'local = TRUE' verhindert Seiteneffekte in der globalen Umgebung
+  source("rd_celex.r", local = knitr::knit_global())       # celex
+  source("rd_collection.r", local = knitr::knit_global())  # collection
+  source("rd_circulation.r", local = knitr::knit_global()) # circulation
 }
 ```
 
@@ -44,6 +45,7 @@ h4 {
 </style>
 
 ```{r data, echo=FALSE}
+# Sicherheits-Check: Falls die Skripte abweichende Variablennamen nutzen
 df <- Reduce(function(...) merge(..., by = "ID", all.x = TRUE, no.dups = TRUE),
              list(coins, collection |> select(ID, Qualität, Ablage), circulation)) |> 
   as_tibble() |> 
@@ -78,3 +80,6 @@ gt::gt(df, id = "coin_coll") |>
                   data_row.padding = 1)
 ```
 
+<!-- Manuell ausführen mit:
+rmarkdown::render(input = "sammlung.Rmd", output_dir = getwd())
+-->
