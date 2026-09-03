@@ -723,6 +723,7 @@ NA|fi|2026|2026-8-26|g|? Raili und reima Pietilä|
 #NA|ie|2026|NA|g|?? TBD|
 #NA|be|2026|NA|g|?? 50 Jahre Nationales Geographisches Institut und 200 Jahre Königlich Belgische Sternwarte|
 #NA|bg|2026|NA|g|?? Das Bulgarische Alphabet|
+#NA|ie|2026|NA|g|?? 50 Jahre U2|
 # ___   ___  ___  ____
 #  ) ) / / \  ) )  / /
 # /_/_ \_\_/ /_/_ /_/ 
