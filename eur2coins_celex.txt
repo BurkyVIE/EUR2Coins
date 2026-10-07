@@ -709,7 +709,11 @@ NA|hr|2026|2026-9-21|g|? Stadt Vukovar|
 NA|ie|2026|2026-9-25|g|? 50 Jahre U2|
 NA|be|2026|2026-9-25|g|? 200 Jahre Königlich Belgische Sternwarte und 50 Jahre Nationales Geographisches Institut|
 NA|sm|2026|2026-10-6|g|? 800. Todestag von Franz von Assisi|
+<<<<<<< Updated upstream
 NA|lt|2026|2026-10-1|g|? Die Stadt Kaunas|
+=======
+NA|pt|2026|2026-10-7|g|? 70 Jahre Calouste-Gulbenkian-Stiftung|
+>>>>>>> Stashed changes
 
 #NA|lv|2026|NA|g|? Weihnachtsmarkt Tradition|
 #NA|lu|2026|NA|g|? Thronbesteigung und 45. Geburtstag des Großherzogs Guillaume|
