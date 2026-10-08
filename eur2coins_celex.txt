@@ -736,10 +736,10 @@ NA|pt|2026|2026-10-7|g|? 70 Jahre Calouste-Gulbenkian-Stiftung|
 #NA|si|2027|NA|g|? 100. Geburtstag von Ančka Gošnik Godec|
 #NA|ee|2027|NA|g|? Landkreises Hiiumaa|
 #NA|at|2027|NA|g|? 200. Todestag von Ludwig van Beethoven|
+#NA|de|2027|NA|g|? Hans-Dietrich Genscher|A,D,F,G,J
 
 #NA|sk|2027|NA|g|?? 250. Jahrestag der Ratio Educationis|
 #NA|bg|2027|NA|g|?? Die Bulgarische Rose|
-#NA|de|2027|NA|g|?? Hans-Dietrich Genscher|A,D,F,G,J
 #NA|lt|2027|NA|g|?? Die Stadt Klaipéda|
 #NA|lt|2027|NA|g|?? 100 Jahre Komkordat zwischen Litauen und dem Heiligen Stuhl|
 #NA|lu|2027|NA|g|?? 75. Jahrestag des Gerichtshofs der Europäischen Union|
