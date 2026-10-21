@@ -718,6 +718,8 @@ NA|pt|2026|2026-10-7|g|? 70 Jahre Calouste-Gulbenkian-Stiftung|
 #NA|fr|2026|NA|g|? Die französische Marine - 400 Jahre Erfahrung|
 #NA|va|2026|NA|g|? 400. Jahrestag des Petersdoms|
 #NA|va|2026|NA|g|? Magisterium von Papst Leo XIV.|
+#NA|ad|2026|NA|g|? 50. Jahrestag der Einweihung des neuen Heiligtums von Meritxell|
+#NA|ad|2026|NA|g|? Die Transhumanz|
 
 #NA|lu|2026|NA|g|?? Verleihung des Intzernationalen Karlspreis an das luxemburgische Volk|
 #NA|lu|2026|NA|g|?? Luxemburgischer Nationalfeiertag/Groussherzogsgebuertsdag|
@@ -812,7 +814,7 @@ NA|pt|2026|2026-10-7|g|? 70 Jahre Calouste-Gulbenkian-Stiftung|
 #NA|de|2037|NA|g|?? Sachsen-Anhalt|A,D,F,G,J
 #NA|de|2038|NA|g|?? Thüringen|A,D,F,G,J
 
-# STAND Gedenkmünzen: 7. Oktober 2026 zwei.euro.com News
+# STAND Gedenkmünzen: 20. Oktober 2026 zwei.euro.com News
 
 #  _     _     ___   __   _      _     _     ____  ____  _    
 # | |_/ | | | | |_) ( (` | |\/| | | | | |\ |  / / | |_  | |\ |
