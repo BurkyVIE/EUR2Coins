@@ -681,27 +681,32 @@ C/2025/03848|va|2025|2026-3-13|g|550. Geburtstag von Michelangelo|
 #  ) ) / / \  ) )  / / 
 # /_/_ \_\_/ /_/_ (_)_)
 ## 2026 ----
+C/2026/05650|de|2026|2026-1-8|g|Konrad Adenauer (1876–1967), erster Bundeskanzler der Bundesrepublik Deutschland|A,D,F,G,J
+C/2026/05640|sk|2026|2026-1-13|g|Trenčín – Europäische Kulturhauptstadt 2026|
+C/2026/05636|es|2026|2026-1-29|g|Reform von Artikel 49 der spanischen Verfassung|
+C/2026/05642|de|2026|2026-1-29|g|Stadtstaat Bremen|A,D,F,G,J
+C/2026/05648|es|2026|2026-1-29|g|Anerkennung des Zisterzienserklosters Poblet in Katalonien, eines der größten Spaniens, als UNESCO-Welterbestätte|
+C/2026/05652|fr|2026|2026-1-29|g|80. Jahrestag der Veröffentlichung des Buchs „Der kleine Prinz“ in Frankreich|
+C/2026/05658|it|2026|2026-3-5|g|200. Geburtstag von Carlo Collodi|
+C/2026/05644|lt|2026|2026-3-18|g|Unabhängigkeit Litauens bei der Energieversorgung|
+C/2026/05645|it|2026|2026-4-1|g|800. Todestag des Heiligen Franz von Assisi|
+C/2026/05635|mt|2026|2026-4-14|g|Die Festungsstadt Valletta, die Hauptstadt Maltas|
+C/2026/05662|mt|2026|2026-4-14|g|Il-kelb tal-fenek|
+C/2026/05647|ee|2026|2026-5-5|g|Sipsik, der geliebte estnische Kinderbuchheld – eine Stoffpuppe, die sehr selbstständig sprechen, denken und handeln kann|
+C/2026/05646|cy|2026|2026-5-20|g|EU-Ratsvorsitz Zyperns im Jahr 2026|
+C/2026/05643|fi|2026|2026-5-21|g|100-jähriges Bestehen der finnischen Rundfunkanstalt Yle|
+C/2026/05651|be|2026|2026-6-15|g|100-jähriges Bestehen der nationalen belgischen Eisenbahngesellschaft (NMBS/SNCB)|
+C/2026/05665|sk|2026|2026-6-15|g|50. Jahrestag des Sieges der Tschechoslowakei bei der Fußballeuropameisterschaft|
+C/2026/05661|mc|2026|2026-6-16|g|Herzogtum Valentinois, ein prestigeträchtiges Lehen, das Prinz Honoré II. von Monaco im Jahr 1642 von König Ludwig XIII. überlassen wurde|
+C/2026/05639|si|2026|2026-6-17|g|150. Geburtstag von Ivan Cankar|
+C/2026/05660|fr|2026|2026-6-30|g|400-jähriges Bestehen der französischen Marine|
+C/2026/05659|lu|2026|2026-7-10|g|40. Jahrestag der Verleihung des Karlspreises an das luxemburgische Volk|
+C/2026/05663|lu|2026|2029-7-10|g|45. Geburtstag und Thronbesteigung des Großherzogs Guillaume|
+C/2026/05664|pt|2026|2026-7-15|g|100 Jahre Rotary Club in Portugal|
 
-NA|de|2026|2026-1-8|g|? Konrad Adenauer|A,D,F,G,J
-NA|sk|2026|2026-1-13|g|? Trencin - Kulturhauptstadt Europas 2026|
-NA|fr|2026|2026-1-29|g|? Antoine de Saint-Exupéry - 80. Jahrestag der Veröffentlichung des Kleinen Prinzen|
-NA|de|2026|2026-1-29|g|? Bremen|A,D,F,G,J
-NA|it|2026|2026-3-5|g|? 200. Geburtstag von Carlo Collodi - Pinocchio|
-NA|lt|2026|2026-3-18|g|? Unabhängigkeit Litauens in der Energieversorgung|
 NA|sm|2026|2026-3-31|g|? 450. Todestag von Tizian|
-NA|it|2026|2026-4-1|g|? 800. Todestag des Heiligen Franz von Assisi|
-NA|mt|2026|2026-4-14|g|? Valetta|
-NA|mt|2026|2026-4-14|g|? Der Pharaonenhund|
-NA|cy|2026|2026-5-20|g|? EU-Ratspräsidentschaft|
-NA|fi|2026|2026-5-21|g|? 100 Jahre Finnischer Rundfunk Yleisradio|
-NA|ee|2026|2026-5-5|g|? Sipsik|
-NA|sk|2026|2026-6-15|g|? 50. Jahrestag des Sieges der tschechoslowakischen Fußballmannschaft bei der EM1976|
 NA|gr|2026|2026-6-15|g|? 100. Jahrestag der Gründung der Akademie von Athen|
-NA|be|2026|2026-6-15|g|? 100 Jahre Belgische Staatsbahnen NMBS/SNCB|
-NA|mc|2026|2026-6-16|g|? Herzogtum Valentinois|
-NA|si|2026|2026-6-17|g|? 150. Geburtstag von Ivan Cankar|
 NA|ie|2026|2026-7-6|g|? EU-Ratspräsidentschaft|
-NA|pt|2026|2026-7-15|g|? 100 Jahre Rotary Club in Portugal|
 NA|hr|2026|2026-7-16|g|? 100 Jahre Kroatischer Rundfunk und Fernsehen|
 NA|fi|2026|2026-8-26|g|? Raili und reima Pietilä|
 NA|gr|2026|2026-9-15|g|? 200. Jahrestga des Exodus von Messolonghi|
@@ -713,18 +718,11 @@ NA|lt|2026|2026-10-1|g|? Die Stadt Kaunas|
 NA|pt|2026|2026-10-7|g|? 70 Jahre Calouste-Gulbenkian-Stiftung|
 
 #NA|lv|2026|NA|g|? Weihnachtsmarkt Tradition|
-#NA|lu|2026|NA|g|? Thronbesteigung und 45. Geburtstag des Großherzogs Guillaume|
-#NA|lu|2026|NA|g|? Verleihung des Internationalen Karlspreis an das luxemburgische Volk|
-#NA|fr|2026|NA|g|? Die französische Marine - 400 Jahre Erfahrung|
 #NA|va|2026|NA|g|? 400. Jahrestag des Petersdoms|
 #NA|va|2026|NA|g|? Magisterium von Papst Leo XIV.|
 #NA|ad|2026|NA|g|? 50. Jahrestag der Einweihung des neuen Heiligtums von Meritxell|
 #NA|ad|2026|NA|g|? Die Transhumanz|
 
-#NA|lu|2026|NA|g|?? Verleihung des Intzernationalen Karlspreis an das luxemburgische Volk|
-#NA|lu|2026|NA|g|?? Luxemburgischer Nationalfeiertag/Groussherzogsgebuertsdag|
-#NA|es|2026|NA|g|?? Kloster Poblet|
-#NA|es|2026|NA|g|?? Spanien & Behinderung: Schutz, Rechte und Inklusion|
 #NA|ie|2026|NA|g|?? TBD|
 #NA|bg|2026|NA|g|?? Das Bulgarische Alphabet|
 # ___   ___  ___  ____
@@ -908,7 +906,7 @@ C2014/385/05|lt|2015,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026|NA|k|Vyti
 # | |   | | | \ \_/ | |_  | |\/| | |_) | | | | |_) / /`_
 # |_|__ \_\_/ /_/ \ |_|__ |_|  | |_|_) \_\_/ |_| \ \_\_/
 52001XC1228(04)|lu|2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025|NA|k|Großherzog Henri (2002 - 2025)|
-NA|lu|2026|NA|k|Grossherzog Guillaume (2026 -)|
+C/2026/05637|lu|2026|NA|k|Grossherzog Guillaume (2026 -)|
 #  _     ____ _____ _____  _      __    _      ___ 
 # | |   | |_   | |   | |  | |    / /\  | |\ | | | \
 # |_|__ |_|__  |_|   |_|  |_|__ /_/--\ |_| \| |_|_/
