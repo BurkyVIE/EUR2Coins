@@ -3,12 +3,13 @@ title: "Gesammelte 2-Euro-Münzen"
 author: "Henning & Thomas"
 date: "erst. `r Sys.Date()`"
 output:
+  pdf_document: default
   html_document:
     theme: readable
 params:
-  coins: NULL
-  collection: NULL
-  circulation: NULL
+  coins: null
+  collection: null
+  circulation: null
 ---
 Willkommen in unserer Sammlung von *2-Euro-Münzen* – einer Chronik der europäischen Kultur, Geschichte und Politik, geprägt in Kupfer, Nickel und Zink.  
 Diese Aufstellung dokumentiert unsere gemeinsame Anstrengung beim Finden neuer Motive im täglichen Umgang mit Münzgeld und bietet damit einen Überblick über die bereits gefundenen und der Sammlung hinzugefügten Stücke.  
