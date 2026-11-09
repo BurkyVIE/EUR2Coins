@@ -3,7 +3,6 @@ title: "Gesammelte 2-Euro-Münzen"
 author: "Henning & Thomas"
 date: "erst. `r Sys.Date()`"
 output:
-  pdf_document: default
   html_document:
     theme: readable
 params:
